@@ -22,7 +22,7 @@ A curated list of companies using Elixir in production, organized by industry.
 
 * [Seneca Systems](http://seneca.systems/) ([GitHub](https://github.com/SenecaSystems) - Powerful software for democracy's toughest problems.
 
-#### Marine
+#### Navigation
 
 [Rose Point Navigation Systems](http://www.rosepointnav.com/) - Specializes in navigation software for recreational and professional mariners.
 
