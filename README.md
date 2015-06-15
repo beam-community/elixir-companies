@@ -4,7 +4,11 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### Consulting
 
-+ [Plataformatec](http://plataformatec.com.br/) ([GitHub](https://github.com/plataformatec)) - Project inception, coaching, tailored projects, general consulting.  Sponsor of Elixir, employer to Elixir's BDFL.
+* [Plataformatec](http://plataformatec.com.br/) ([GitHub](https://github.com/plataformatec)) - Project inception, coaching, tailored projects, general consulting.  Sponsor of Elixir, employer to Elixir's BDFL.
+
+#### Communication
+
+* [ProcessOne](https://www.process-one.net) ([GitHub](https://github.com/processone)) - Leader in Instant Messaging and Push Solutions.
 
 #### Enterprise
 
