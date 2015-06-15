@@ -2,10 +2,6 @@
 
 A curated list of companies using Elixir in production, organized by industry.
 
-#### Academia
-
-#### Agriculture
-
 #### Consulting
 
 + [Plataformatec](http://plataformatec.com.br/) ([GitHub](https://github.com/plataformatec)) - Project inception, coaching, tailored projects, general consulting.  Sponsor of Elixir, employer to Elixir's BDFL.
@@ -17,6 +13,8 @@ A curated list of companies using Elixir in production, organized by industry.
 #### Gaming
 
 #### Government
+
+* [Seneca Systems](http://seneca.systems/) ([GitHub](https://github.com/SenecaSystems) - Powerful software for democracy's toughest problems.
 
 #### Sports
 
