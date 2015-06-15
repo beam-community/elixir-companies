@@ -18,6 +18,10 @@ A curated list of companies using Elixir in production, organized by industry.
 
 [Rose Point Navigation Systems](http://www.rosepointnav.com/) - Specializes in navigation software for recreational and professional mariners.
 
+#### Market Research
+
+[icanmakeitbetter](http://icanmakeitbetter.com/) - ([GitHub](https://github.com/icanmakeitbetter)) - All-in-one insight community and customer feedback solution.
+
 #### Social Network
 
 * [RAVIO](rav.io) - Help people connect and share in creative and meaningful ways.
