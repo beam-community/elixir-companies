@@ -10,8 +10,6 @@ A curated list of companies using Elixir in production, organized by industry.
 
 + [Lexmark](https://www.lexmark.com) ([GitHub](https://github.com/OpenAperture)) - Provider of printing and imaging products, software, solutions and services that help customers save time and money.
 
-#### Gaming
-
 #### Government
 
 * [Seneca Systems](http://seneca.systems/) ([GitHub](https://github.com/SenecaSystems) - Powerful software for democracy's toughest problems.
@@ -23,10 +21,14 @@ A curated list of companies using Elixir in production, organized by industry.
 #### Social Network
 
 * [RAVIO](rav.io) - Help people connect and share in creative and meaningful ways.
+
 #### Sports
 
 * [Bleacher Reports](http://bleacherreport.com/) ([GitHub](https://github.com/br)) - Sports media site that is revolutionizing journalism.
 
+#### Video
+
+* [Brightcove](http://brightcove.com) ([GitHub](https://github.com/brightcove)) - A leading global provider of powerful cloud solutions for delivering and monetizing video across connected devices.
 
 ## Contributing
 
