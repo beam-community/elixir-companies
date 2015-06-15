@@ -16,11 +16,11 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### Gaming
 
-* [Undead Labs](http://undeadlabs.com/) ([GitHub](https://github.com/undeadlabs) - Creators of the smash hit survival-fantasy game _State of Decay_ and forthcoming tactical creature battler _Moonrise_.
+* [Undead Labs](http://undeadlabs.com/) ([GitHub](https://github.com/undeadlabs)) - Creators of the smash hit survival-fantasy game _State of Decay_ and forthcoming tactical creature battler _Moonrise_.
 
 #### Government
 
-* [Seneca Systems](http://seneca.systems/) ([GitHub](https://github.com/SenecaSystems) - Powerful software for democracy's toughest problems.
+* [Seneca Systems](http://seneca.systems/) ([GitHub](https://github.com/SenecaSystems)) - Powerful software for democracy's toughest problems.
 
 #### Navigation
 
