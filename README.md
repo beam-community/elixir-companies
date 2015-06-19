@@ -36,7 +36,7 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### Sports
 
-* [Bleacher Reports](http://bleacherreport.com/) ([GitHub](https://github.com/br)) - Sports media site that is revolutionizing journalism.
+* [Bleacher Report](http://bleacherreport.com/) ([GitHub](https://github.com/br)) - Sports media site that is revolutionizing journalism.
 
 #### Video
 
