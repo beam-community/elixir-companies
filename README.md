@@ -5,6 +5,7 @@ A curated list of companies using Elixir in production, organized by industry.
 #### Consulting
 
 * [Plataformatec](http://plataformatec.com.br/) ([GitHub](https://github.com/plataformatec)) - Project inception, coaching, tailored projects, general consulting.  Sponsor of Elixir, employer to Elixir's BDFL.
+* [DockYard](https://dockyard.com) ([GitHub](https://github.com/dockyard)) - Projects, staff augmentation, coaching, & code audits. Organizer of Boston Elixir. Specialize in Phoenix backends with Ember frontends.
 
 #### Communication
 
