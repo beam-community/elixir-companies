@@ -17,7 +17,7 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### Expert Networks
 
-* [AlphaSights](http://www.alphasights.com/) ([GitHub](https://github.com/alphasights)) - Global knowledge broker with regional hubs in Europe, the Americas, Asia and the Middle East.
+* [AlphaSights](https://engineering.alphasights.com) ([GitHub](https://github.com/alphasights)) - Global knowledge broker with regional hubs in Europe, the Americas, Asia and the Middle East.
 
 #### Gaming
 
