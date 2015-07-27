@@ -7,7 +7,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [DockYard](https://dockyard.com) ([GitHub](https://github.com/dockyard)) - Projects, staff augmentation, coaching, & code audits. Organizer of Boston Elixir. Specialize in Phoenix backends with Ember frontends.
 * [Isotope11](http://www.isotope11.com/) ([GitHub](https://github.com/isotope11)) - We provide custom software development and relevant technologies to a wide range of clients.
 * [Plataformatec](http://plataformatec.com.br/) ([GitHub](https://github.com/plataformatec)) - Project inception, coaching, tailored projects, general consulting.  Sponsor of Elixir, employer to Elixir's BDFL.
-* [RokkinCat](http://rokkincat.com) ([GitHub](https://github.com/rokkincat)) - Build projects, consulting, mobile and backend development. Wide range of clients. 
+* [RokkinCat](http://rokkincat.com) ([GitHub](https://github.com/rokkincat)) - Build projects, consulting, mobile and backend development. Wide range of clients.
 
 #### Communication
 
@@ -23,6 +23,7 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### Gaming
 
+* [22cans](http://www.22cans.com/) ([GitHub](https://github.com/22cans)) - 22cans is an independent game studio founded by the industry legend and creator of God Game genre, Peter Molyneux. Creators of Curiosity and Godus.
 * [Undead Labs](http://undeadlabs.com/) ([GitHub](https://github.com/undeadlabs)) - Creators of the smash hit survival-fantasy game _State of Decay_ and forthcoming tactical creature battler _Moonrise_.
 
 #### Government
