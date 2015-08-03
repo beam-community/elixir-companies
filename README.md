@@ -51,6 +51,7 @@ A curated list of companies using Elixir in production, organized by industry.
 #### Video
 
 * [Brightcove](http://brightcove.com) ([GitHub](https://github.com/brightcove)) - A leading global provider of powerful cloud solutions for delivering and monetizing video across connected devices.
+* [Evercam](http://www.evercam.io) ([GitHub](https://github.com/evercam)) - Camera Management Software.
 
 ## Contributing
 
