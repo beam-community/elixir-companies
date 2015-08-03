@@ -44,6 +44,10 @@ A curated list of companies using Elixir in production, organized by industry.
 
 * [icanmakeitbetter](http://icanmakeitbetter.com/) - ([GitHub](https://github.com/icanmakeitbetter)) - All-in-one insight community and customer feedback solution.
 
+#### Sensors
+
+* [Senseware](http://senseware.co) - Senseware supports data-driven decision-making by providing real-time, actionable insight on what is happening around us in buildings and cities.
+
 #### Social Network
 
 * [Pinterest](https://www.pinterest.com/) ([GitHub](https://github.com/pinterest)) - Pinterest is a visual discovery tool that you can use to find ideas for all your projects and interests.
