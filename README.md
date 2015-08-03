@@ -48,6 +48,9 @@ A curated list of companies using Elixir in production, organized by industry.
 
 * [Bleacher Report](http://bleacherreport.com/) ([GitHub](https://github.com/br)) - Sports media site that is revolutionizing journalism.
 
+#### Transportation
+
+* [Tappsi](https://tappsi.co/) ([GitHub](https://github.com/tappsi)) - Taxi calls easier and safer in Columbia.
 #### Video
 
 * [Brightcove](http://brightcove.com) ([GitHub](https://github.com/brightcove)) - A leading global provider of powerful cloud solutions for delivering and monetizing video across connected devices.
