@@ -12,6 +12,7 @@ A curated list of companies using Elixir in production, organized by industry.
 #### Communication
 
 * [ProcessOne](https://www.process-one.net) ([GitHub](https://github.com/processone)) - Leader in Instant Messaging and Push Solutions.
+* [VoiceLayer](https://voicelayer.io) - Integrate realtime Push-to-Talk into your application.
 
 #### Enterprise
 
