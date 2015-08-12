@@ -14,6 +14,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Plataformatec](http://plataformatec.com.br/) ([GitHub](https://github.com/plataformatec)) - Project inception, coaching, tailored projects, general consulting.  Sponsor of Elixir, employer to Elixir's BDFL.
 * [RokkinCat](http://rokkincat.com) ([GitHub](https://github.com/rokkincat)) - Build projects, consulting, mobile and backend development. Wide range of clients.
 * [woumedia](http://woumedia.com) - Software House and Digital Design Agency from Copenhagen.
+* [Fully Forged](http://fullyforged.com) - Software development and training, based in London.
 
 #### Communication
 
