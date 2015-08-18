@@ -37,13 +37,17 @@ A curated list of companies using Elixir in production, organized by industry.
 
 * [Seneca Systems](http://seneca.systems/) ([GitHub](https://github.com/SenecaSystems)) - Powerful software for democracy's toughest problems.
 
-#### Navigation
+#### Marketplaces
 
-* [Rose Point Navigation Systems](http://www.rosepointnav.com/) - Specializes in navigation software for recreational and professional mariners.
+* [Storefront](http://thestorefront.com/) ([GitHub](https://github.com/thestorefront)) - Storefront makes it easy to find and rent short term retail space.
 
 #### Market Research
 
 * [icanmakeitbetter](http://icanmakeitbetter.com/) - ([GitHub](https://github.com/icanmakeitbetter)) - All-in-one insight community and customer feedback solution.
+
+#### Navigation
+
+* [Rose Point Navigation Systems](http://www.rosepointnav.com/) - Specializes in navigation software for recreational and professional mariners.
 
 #### Sensors
 
