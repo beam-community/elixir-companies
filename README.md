@@ -64,6 +64,7 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### Transportation
 
+* [Ride](https://ride.com) ([Github](https://github.com/ride)) - Ride is the hassle-free ridesharing app that simplifies your commute and connects you with neighbors and coworkers.
 * [Tappsi](https://tappsi.co/) ([GitHub](https://github.com/tappsi)) - Taxi calls easier and safer in Columbia.
 
 #### Video
