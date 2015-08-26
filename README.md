@@ -61,6 +61,7 @@ A curated list of companies using Elixir in production, organized by industry.
 #### Sports
 
 * [Bleacher Report](http://bleacherreport.com/) ([GitHub](https://github.com/br)) - Sports media site that is revolutionizing journalism.
+* [Football Addicts](http://www.footballaddicts.com) ([GitHub](https://github.com/elixir-addicts)) - Creators of the well-known *Forza Football* and other leading football-related mobile applications.
 
 #### Transportation
 
