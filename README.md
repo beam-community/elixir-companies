@@ -5,6 +5,7 @@ A curated list of companies using Elixir in production, organized by industry.
 #### Advertising
 
 * [Fyber](http://www.fyber.com) ([GitHub](https://github.com/SponsorPay)) - Fueling the app economy by creating solutions for smarter ad monetization.
+* [icing](http://geticing.com) - Add an advertisement to any webpage and drive inbound traffic.
 
 #### Consulting
 * [Cobenian](https://Cobenian.com) ([GitHub](https://github.com/Cobenian)) - We solve problems with software.
