@@ -29,6 +29,10 @@ A curated list of companies using Elixir in production, organized by industry.
 
 + [Lexmark](https://www.lexmark.com) ([GitHub](https://github.com/OpenAperture)) - Provider of printing and imaging products, software, solutions and services that help customers save time and money.
 
+#### E-Commerce
+
++ [The RealReal](https://www.therealreal.com) ([GitHub](https://github.com/TheRealReal)) - Marketplace for luxury fashion resale products.
+
 #### Expert Networks
 
 * [AlphaSights](https://engineering.alphasights.com) ([GitHub](https://github.com/alphasights)) - Global knowledge broker with regional hubs in Europe, the Americas, Asia and the Middle East.
