@@ -50,6 +50,7 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### Marketplaces
 
+* [SeekPanda](http://www.seekpanda.com) - Premier curated marketplace for hiring translators and interpreters.
 * [Storefront](http://thestorefront.com/) ([GitHub](https://github.com/thestorefront)) - Storefront makes it easy to find and rent short term retail space.
 
 #### Market Research
