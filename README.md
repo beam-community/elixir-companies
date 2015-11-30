@@ -48,6 +48,9 @@ A curated list of companies using Elixir in production, organized by industry.
 
 * [Seneca Systems](http://seneca.systems/) ([GitHub](https://github.com/SenecaSystems)) - Powerful software for democracy's toughest problems.
 
+#### Healthcare
+* [WellMatch](https://wellmatchhealth.com) - Price transparency and a better way to shop for healthcare.
+
 #### Marketplaces
 
 * [SeekPanda](http://www.seekpanda.com) - Premier curated marketplace for hiring translators and interpreters.
