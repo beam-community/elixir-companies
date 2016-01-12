@@ -71,8 +71,8 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### Sensors
 
+* [CargoSense](http://cargosense.com/) - CargoSense is a smart-data and MicroAnalytics Software-as-a-Service (SaaS) company founded to create solutions that optimize logistics networks – in healthcare, food, medical devices and other industries with complex supply chains.
 * [Senseware](http://senseware.co) - Senseware supports data-driven decision-making by providing real-time, actionable insight on what is happening around us in buildings and cities.
-* [CargoSense](http://cargosense.com/) - CargoSense is a smart-data and MicroAnalytics Software-as-a-Service (SaaS) company founded to create solutions that optimize logistics networks – in healthcare, food, medical devices and other industries with complex supply chains. 
 
 #### Social Network
 
