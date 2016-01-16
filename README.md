@@ -17,6 +17,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Isotope11](http://www.isotope11.com/) ([GitHub](https://github.com/isotope11)) - We provide custom software development and relevant technologies to a wide range of clients.  Josh Adams of [ElixirSips](http://elixirsips.com) is the CTO.
 * [Kabisa](http://www.kabisa.nl) - Software crafts(wo)men, passionately committed to exceed our customers expectations in every step we take. We value creativity and flexibility. Co-Organizer of the [Amsterdam Elixir meetup](http://www.meetup.com/Amsterdam-Elixir/).
 * [Plataformatec](http://plataformatec.com.br/) ([GitHub](https://github.com/plataformatec)) - Project inception, coaching, tailored projects, general consulting.  Sponsor of Elixir, employer to Elixir's BDFL.
+* [Red Panthers](http://redpanthers.co) ([Github](http://github.com/redpanthers)) -  We specialize in helping our clients validate, build and expand their business through technology
 * [RokkinCat](http://rokkincat.com) ([GitHub](https://github.com/rokkincat)) - Build projects, consulting, mobile and backend development. Wide range of clients.
 * [thoughtbot](https://thoughtbot.com) ([GitHub](https://github.com/thoughtbot)) - We work with companies to design, develop and grow high quality web and mobile products. We write and maintain open source software like [ExMachina](https://github.com/thoughtbot/ex_machina).
 * [woumedia](http://woumedia.com) - Software House and Digital Design Agency from Copenhagen.
