@@ -8,6 +8,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [icing](http://geticing.com) - Add an advertisement to any webpage and drive inbound traffic.
 
 #### Consulting
+* [AmberBit](https://www.amberbit.com) ([GitHub](https://github.com/amberbit)) - We are polyglot developers (but mostly Ruby, JavaScript, Elixir, Elm).
 * [Cobenian](https://Cobenian.com) ([GitHub](https://github.com/Cobenian)) - We solve problems with software.
 * [Coders51](http://www.coders51.com) ([GitHub](https://github.com/coders51)) - We develop web and mobile solutions for the entire galaxy.
 * [DockYard](https://dockyard.com) ([GitHub](https://github.com/dockyard)) - Projects, staff augmentation, coaching, & code audits. Organizer of Boston Elixir. Specialize in Phoenix backends with Ember frontends. [Chris McCord](https://github.com/chrismccord) is Architectural Engineer and creator of Phoenix.
