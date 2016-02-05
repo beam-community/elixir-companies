@@ -60,6 +60,9 @@ A curated list of companies using Elixir in production, organized by industry.
 #### Healthcare
 * [WellMatch](https://wellmatchhealth.com) - Price transparency and a better way to shop for healthcare.
 
+#### Insurance
+* [prima.it](https://www.prima.it) - Italian insurance company with a focus on cutting edge technologies.
+
 #### Marketplaces
 
 * [SeekPanda](http://www.seekpanda.com) - Premier curated marketplace for hiring translators and interpreters.
