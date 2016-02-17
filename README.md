@@ -78,6 +78,10 @@ A curated list of companies using Elixir in production, organized by industry.
 
 * [Rose Point Navigation Systems](http://www.rosepointnav.com/) - Specializes in navigation software for recreational and professional mariners.
 
+#### Online Marketing
+
+* [Moz](https://moz.com/) - Products to power your online visibility.
+
 #### Real Estate
 
 * [Opendoor](https://www.opendoor.com) - Opendoor buys your home from you, so you can skip months of selling and start your next chapter.
