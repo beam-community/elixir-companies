@@ -80,7 +80,7 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### Online Marketing
 
-* [Moz](https://moz.com/) - Products to power your online visibility.
+* [Moz](https://moz.com/) - ([GitHub](https://github.com/seomoz)) - Products to power your online visibility.
 
 #### Real Estate
 
