@@ -31,6 +31,7 @@ A curated list of companies using Elixir in production, organized by industry.
 #### Communication
 
 * [Badger](http://badger-app.com) - Remind your friends with a delayed text/push.
+* [CrankWheel](http://crankwheel.com/) - Insanely simple freemium screen sharing plus enterprise features.
 * [Discord](https://discordapp.com/) - Free voice and text chat for gamers.
 * [Flow](https://www.getflow.com/) - All your team’s communication, clear and organized.
 * [Mainframe](http://mainframe.co/) - Building the future of email.
