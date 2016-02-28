@@ -13,6 +13,7 @@ A curated list of companies using Elixir in production, organized by industry.
 #### Consulting
 * [Agilion](https://www.agilion.com) ([GitHub](https://github.com/agilionapps)) - Software development and consulting.
 * [AmberBit](https://www.amberbit.com) ([GitHub](https://github.com/amberbit)) - We are polyglot developers (but mostly Ruby, JavaScript, Elixir, Elm).
+* [Bitgamma](http://bitgamma.com) ([GitHub](https://github.com/bitgamma)) - We develop web, desktop and embedded applications. We code Elixir, C, Java/Javacard, Ruby, JS. We love working on embedded and custom boards.
 * [Cobenian](https://Cobenian.com) ([GitHub](https://github.com/Cobenian)) - We solve problems with software.
 * [Coders51](http://www.coders51.com) ([GitHub](https://github.com/coders51)) - We develop web and mobile solutions for the entire galaxy.
 * [Diacode](https://diacode.com) ([GitHub](https://github.com/diacode)) - Former Ruby on Rails development shop now embracing Elixir and Phoenix. Authors of [Phoenix Trello](https://github.com/bigardone/phoenix-trello) clone.
