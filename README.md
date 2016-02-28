@@ -2,6 +2,9 @@
 
 A curated list of companies using Elixir in production, organized by industry.
 
+#### Ad-Hoc Networking
+* [Meshable](https://meshable.io/trucks) - Ad-Hoc mesh networking to support free WiFi at small businesses.
+
 #### Advertising
 
 * [Fyber](http://www.fyber.com) ([GitHub](https://github.com/SponsorPay)) - Fueling the app economy by creating solutions for smarter ad monetization.
