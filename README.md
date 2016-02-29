@@ -100,7 +100,7 @@ A curated list of companies using Elixir in production, organized by industry.
 #### Social Network
 
 * [Pinterest](https://www.pinterest.com/) ([GitHub](https://github.com/pinterest)) - Pinterest is a visual discovery tool that you can use to find ideas for all your projects and interests.
-* [RAVIO](rav.io) - Help people connect and share in creative and meaningful ways.
+* [RAVIO](https://ravio.com/) - Help people connect and share in creative and meaningful ways.
 
 #### Sports
 
