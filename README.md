@@ -92,6 +92,9 @@ A curated list of companies using Elixir in production, organized by industry.
 
 * [Opendoor](https://www.opendoor.com) - Opendoor buys your home from you, so you can skip months of selling and start your next chapter.
 
+#### Security
+* [Wombat Security Technologies](https://www.wombatsecurity.com/) - Wombat Security provides information security awareness and training software to help organizations teach their employees secure behavior. Our Security Education Platform includes integrated knowledge assessments, a library of simulated attacks, and interactive training modules, which have been proven to reduce successful phishing attacks and malware infections by up to 90%.
+
 #### Sensors
 
 * [CargoSense](http://cargosense.com/) - CargoSense is a smart-data and MicroAnalytics Software-as-a-Service (SaaS) company founded to create solutions that optimize logistics networks – in healthcare, food, medical devices and other industries with complex supply chains.
