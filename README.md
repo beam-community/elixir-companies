@@ -47,6 +47,7 @@ A curated list of companies using Elixir in production, organized by industry.
 + [BT](http://www.itservices.bt.com/) - Design & deployment of large-scale network infrastructure. Internal Elixir & Phoenix apps in development and production.
 + [Lexmark](https://www.lexmark.com) ([GitHub](https://github.com/OpenAperture)) - Provider of printing and imaging products, software, solutions and services that help customers save time and money.
 + [Puppet Labs](https://puppetlabs.com) ([GitHub](https://github.com/puppetlabs)) - Leader in IT automation. Host of the [Portland, OR Elixir Meetup](http://www.meetup.com/elixir-pdx/). Internal Elixir and Phoenix apps in production. All new internal development targeted at Elixir.
++ [Stampery](https://stampery.com) ([GitHub](https://github.com/stampery)) - 21st century notarization at your fingertips. We offer an immutable record of existence, integrity and ownership of all your files and email by leveraging the Blockchain technology.
 
 #### E-Commerce
 
