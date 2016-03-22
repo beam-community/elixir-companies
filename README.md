@@ -51,6 +51,7 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### E-Commerce
 
++ [Packlane](https://packlane.com) ([GitHub](https://github.com/packlane)) - Design and order custom printed packaging online.
 + [The RealReal](https://www.therealreal.com) ([GitHub](https://github.com/TheRealReal)) - Marketplace for luxury fashion resale products.
 
 #### Expert Networks
