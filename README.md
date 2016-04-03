@@ -92,6 +92,7 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### Real Estate
 
+* [Housing](https://housing.com/) - Housing.com is an Indian online real estate listing portal that simplifies finding, renting, and selling homes in India.
 * [Opendoor](https://www.opendoor.com) - Opendoor buys your home from you, so you can skip months of selling and start your next chapter.
 
 #### Security
