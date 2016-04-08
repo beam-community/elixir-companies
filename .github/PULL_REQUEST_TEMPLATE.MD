@@ -1,10 +1,9 @@
-Please review our [Contribution Guidelines](https://github.com/avinoth/elixir-companies/blob/master/CONTRIBUTING.md) to ensure your changes abides by it.
+Please review our [Contribution Guidelines](https://github.com/doomspork/elixir-companies/blob/master/CONTRIBUTING.md) to ensure your changes abides by it.
 
-Make sure your changes ticks off the below checklist.
+Review your changes and complete the checklist below.
 
-- [ ] Company Name
-- [ ] Company Description
-- [ ] How Elixir is Used
-
-- [ ] Sorted in alphabetical order
-- [ ] Company added to appropriate Industry
+- [ ] Company name
+- [ ] Company description
+- [ ] GitHub link
+- [ ] How Elixir is used
+- [ ] Sorted alphabetically
