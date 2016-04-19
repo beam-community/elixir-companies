@@ -15,7 +15,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Cobenian](https://Cobenian.com) ([GitHub](https://github.com/Cobenian)) - We solve problems with software.
 * [Coders51](http://www.coders51.com) ([GitHub](https://github.com/coders51)) - We develop web and mobile solutions for the entire galaxy.
 * [code lever](http://codelever.com) ([GitHub](https://github.com/code-lever)) - We develop software for small teams with big goals.  Working to grow the Elixir/Erlang ecosystem in the Midwest, USA.
-* [Diacode](https://diacode.com) ([GitHub](https://github.com/diacode)) - Former Ruby on Rails development shop now embracing Elixir and Phoenix. Authors of [Phoenix Trello](https://github.com/bigardone/phoenix-trello) clone.
+* [Diacode](https://diacode.com) ([GitHub](https://github.com/diacode)) - Former Ruby on Rails development shop now embracing Elixir and Phoenix. Authors of [Phoenix Trello](https://github.com/bigardone/phoenix-trello) clone. Co-Organizer of the [Madrid |> Elixir meetup](http://www.meetup.com/Madrid-Elixir/).
 * [DockYard](https://dockyard.com) ([GitHub](https://github.com/dockyard)) - Projects, staff augmentation, coaching, & code audits. Organizer of Boston Elixir. Specialize in Phoenix backends with Ember frontends. [Chris McCord](https://github.com/chrismccord) is Architectural Engineer and creator of Phoenix.
 * [EL Passion](http://www.elpassion.com) ([GitHub](https://github.com/elpassion)) - Helping startups launch their products since 2010. Coding in Ruby, JS, Elixir, Swift, Kotlin. Organizer of [Elixir Warsaw Meetup](http://www.meetup.com/ElixirWarsaw-Meetup/).
 * [Fully Forged](http://fullyforged.com) - Software development and training, based in London.
