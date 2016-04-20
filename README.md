@@ -69,6 +69,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Seneca Systems](http://seneca.systems/) ([GitHub](https://github.com/SenecaSystems)) - Powerful software for democracy's toughest problems.
 
 #### Healthcare
+* [Pet Partners](http://petpartnersusa.com) ([GitHub](https://github.com/petpartnersllc)) - Own and operate a number of veterinary hospitals across the United States.  Using Elixir for all new development.
 * [WellMatch](https://wellmatchhealth.com) - Price transparency and a better way to shop for healthcare.
 
 #### Insurance
