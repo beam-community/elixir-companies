@@ -14,7 +14,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [AppUnite](https://appunite.com) ([GitHub](https://github.com/appunite)) - We are efficient, goal-oriented software development team of professionals specialized in mobile and web.
 * [Bitgamma](http://bitgamma.com) ([GitHub](https://github.com/bitgamma)) - We develop web, desktop and embedded applications. We code Elixir, C, Java/Javacard, Ruby, JS. We love working on embedded and custom boards.
 * [Carbon Five](http://carbonfive.com) ([blog](http://blog.carbonfive.com)) - Agile Web and Mobile Product Development in San Francisco, NYC, Los Angeles, and Chattanooga. Proud to have Elixir/Phoenix in our toolbox and to support [Wallaby](https://github.com/keathley/wallaby).
-* [Cobenian](https://Cobenian.com) ([GitHub](https://github.com/Cobenian)) - We solve problems with software.
+* [Cobenian](http://cobenian.com) ([GitHub](https://github.com/Cobenian)) - We solve problems with software.
 * [Coders51](http://www.coders51.com) ([GitHub](https://github.com/coders51)) - We develop web and mobile solutions for the entire galaxy.
 * [code lever](http://codelever.com) ([GitHub](https://github.com/code-lever)) - We develop software for small teams with big goals.  Working to grow the Elixir/Erlang ecosystem in the Midwest, USA.
 * [Diacode](https://diacode.com) ([GitHub](https://github.com/diacode)) - Former Ruby on Rails development shop now embracing Elixir and Phoenix. Authors of [Phoenix Trello](https://github.com/bigardone/phoenix-trello) clone. Co-Organizer of the [Madrid |> Elixir meetup](http://www.meetup.com/Madrid-Elixir/).
