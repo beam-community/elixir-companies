@@ -31,6 +31,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Red Panthers](http://redpanthers.co) ([Github](http://github.com/redpanthers)) -  We specialize in helping our clients validate, build and expand their business through technology
 * [RokkinCat](http://rokkincat.com) ([GitHub](https://github.com/rokkincat)) - Build projects, consulting, mobile and backend development. Wide range of clients.
 * [thoughtbot](https://thoughtbot.com) ([GitHub](https://github.com/thoughtbot)) - We work with companies to design, develop and grow high quality web and mobile products. We write and maintain open source software like [ExMachina](https://github.com/thoughtbot/ex_machina).
+* [Vinsol](http://vinsol.com) ([blog](http://vinsol.com/blog)) - Leading Web and Mobile Product Development company with expertise in Ecommerce. Maintainers of [SpreeCommerce(Rails)](https://github.com/spree/spree) and [NectarCommerce(Elixir/Phoneix)](https://github.com/vinsol/nectarcommerce) Open source projects.
 * [woumedia](http://woumedia.com) - Software House and Digital Design Agency from Copenhagen.
 
 #### Communication
