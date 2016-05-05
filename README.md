@@ -74,6 +74,9 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Pet Partners](http://petpartnersusa.com) ([GitHub](https://github.com/petpartnersllc)) - Own and operate a number of veterinary hospitals across the United States.  Using Elixir for all new development.
 * [WellMatch](https://wellmatchhealth.com) - Price transparency and a better way to shop for healthcare.
 
+#### Human Resources
+* [Xerpa](http://www.xerpa.com.br) ([GitHub](https://github.com/Xerpa)) - Xerpa is a SaaS company aiming to simplify and modernize HR, payroll and benefits administration for Brazilian SMBs and their employees. Entire stack is functional: Elixir/Phoenix on the backend with ClojureScript frontend.
+
 #### Insurance
 * [prima.it](https://www.prima.it) - Italian insurance company with a focus on cutting edge technologies.
 
