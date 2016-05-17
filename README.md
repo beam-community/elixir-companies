@@ -44,6 +44,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Flow](https://www.getflow.com/) - All your team’s communication, clear and organized.
 * [Mainframe](http://mainframe.co/) - Building the future of email.
 * [ProcessOne](https://www.process-one.net) ([GitHub](https://github.com/processone)) - Leader in Instant Messaging and Push Solutions.
+* [Pypestream](https://www.pypestream.com) - B2C Messaging Platform
 * [Talkdesk](https://www.talkdesk.com) ([Github](https://github.com/talkdesk)) - Cloud-Based Call Center Software.
 * [VoiceLayer](https://voicelayer.io) - Integrate realtime Push-to-Talk into your application.
 
