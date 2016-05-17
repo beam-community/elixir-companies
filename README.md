@@ -24,6 +24,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Gaslight](http://teamgaslight.com) - Software Development, consulting, coaching, training, Organizer of the Cincinnati Elixir group. Now using Elixir and Phoenix in production.
 * [Icicle Technologies](http://www.icicletech.com)([GitHub](https://github.com/icicletech)) - Provides Consulting, Product Development on Elixir & Phoenix. Organizer of Bangalore Elixir Group, built [ElixirNation.io](http://elixirnation.io).
 * [Isotope11](http://www.isotope11.com/) ([GitHub](https://github.com/isotope11)) - We provide custom software development and relevant technologies to a wide range of clients.  Josh Adams of [ElixirSips](http://elixirsips.com) was the CTO.
+* [Isnor Creative](http://www.isnorcreative.com) - Software development since 2008. Ruby, Elixir, Ember, React 
 * [Kabisa](http://www.kabisa.nl) - Software crafts(wo)men, passionately committed to exceed our customers expectations in every step we take. We value creativity and flexibility. Co-Organizer of the [Amsterdam Elixir meetup](http://www.meetup.com/Amsterdam-Elixir/).
 * [Made by Many](http://madebymany.com/) ([GitHub](https://github.com/madebymany)) - We help businesses identify market opportunities, bring successful digital products to life and create the culture & capabilities to sustain them.
 * [Mirego](http://mirego.com) ([GitHub](https://github.com/mirego)) - We help our clients innovate and reinvent themselves in order to prosper in the digital era.
@@ -57,6 +58,10 @@ A curated list of companies using Elixir in production, organized by industry.
 
 + [Packlane](https://packlane.com) ([GitHub](https://github.com/packlane)) - Design and order custom printed packaging online.
 + [The RealReal](https://www.therealreal.com) ([GitHub](https://github.com/TheRealReal)) - Marketplace for luxury fashion resale products.
+
+#### Education
+
+* [Grasp](https://play.google.com/store/apps/details?id=com.gordonbisnor.grasp&hl=en) - Android/iOS/Web application facilitating real-time education group work
 
 #### Expert Networks
 
@@ -98,6 +103,10 @@ A curated list of companies using Elixir in production, organized by industry.
 #### Online Marketing
 
 * [Moz](https://moz.com/) - ([GitHub](https://github.com/seomoz)) - Products to power your online visibility.
+
+#### Radio
+
+* [CKDU 88.1FM](http://www.ckdu.ca) - Community radio station in Halifax, Nova Scotia, Canada
 
 #### Real Estate
 
