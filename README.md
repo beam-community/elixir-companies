@@ -32,6 +32,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Mirego](http://mirego.com) ([GitHub](https://github.com/mirego)) - We help our clients innovate and reinvent themselves in order to prosper in the digital era.
 * [Plataformatec](http://plataformatec.com.br/) ([GitHub](https://github.com/plataformatec)) - Project inception, coaching, tailored projects, general consulting.  Sponsor of Elixir, employer to Elixir's BDFL.
 * [Prograils](https://prograils.com) ([GitHub](https://github.com/prograils)) - Software House full of skilled web developers and mobile experts. Our agile development team combines technologies like Elixir, Ruby on Rails, React and HTML 5 to build user friendly web & mobile apps.
+* [Progress Engine](http://progress-engine.com) ([Github](https://github.com/progress-engine/)) - Software development company, based in Moscow, Russia and specialized in  mobile and web applications development
 * [Red Panthers](http://redpanthers.co) ([Github](http://github.com/redpanthers)) -  We specialize in helping our clients validate, build and expand their business through technology
 * [RokkinCat](http://rokkincat.com) ([GitHub](https://github.com/rokkincat)) - Build projects, consulting, mobile and backend development. Wide range of clients.
 * [thoughtbot](https://thoughtbot.com) ([GitHub](https://github.com/thoughtbot)) - We work with companies to design, develop and grow high quality web and mobile products. We write and maintain open source software like [ExMachina](https://github.com/thoughtbot/ex_machina).
