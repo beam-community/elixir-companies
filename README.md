@@ -67,6 +67,10 @@ A curated list of companies using Elixir in production, organized by industry.
 
 * [Grasp](https://play.google.com/store/apps/details?id=com.gordonbisnor.grasp&hl=en) - Android/iOS/Web application facilitating real-time education group work
 
+#### Energy
+
+* [Brighterlink](https://www.brighterlink.io) ([GitHub](https://github.com/Brightergy)) - All-in-one energy platform for analytics, utilities and procurement. We use Elixir for backend API (powered by phoenix) and also for thousands of worker processes to fetch, parse and write data from embedded devices to our time-series database.
+
 #### Expert Networks
 
 * [AlphaSights](https://engineering.alphasights.com) ([GitHub](https://github.com/alphasights)) - Global knowledge broker with regional hubs in Europe, the Americas, Asia and the Middle East.
