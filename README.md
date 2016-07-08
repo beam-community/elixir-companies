@@ -75,9 +75,6 @@ A curated list of companies using Elixir in production, organized by industry.
 
 * [AlphaSights](https://engineering.alphasights.com) ([GitHub](https://github.com/alphasights)) - Global knowledge broker with regional hubs in Europe, the Americas, Asia and the Middle East.
 
-#### Identity
-* [ShoCard](https://www.shocard.com) ([GitHub](https://github.com/shocardinc)) - Digital identity on the blockchain.
-
 #### Gaming
 
 * [22cans](http://www.22cans.com/) ([GitHub](https://github.com/22cans)) - 22cans is an independent game studio founded by the industry legend and creator of God Game genre, Peter Molyneux. Creators of Curiosity and Godus.
@@ -93,6 +90,9 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### Human Resources
 * [Xerpa](http://www.xerpa.com.br) ([GitHub](https://github.com/Xerpa)) - Xerpa is a SaaS company aiming to simplify and modernize HR, payroll and benefits administration for Brazilian SMBs and their employees. Entire stack is functional: Elixir/Phoenix on the backend with ClojureScript frontend.
+
+#### Identity
+* [ShoCard](https://www.shocard.com) ([GitHub](https://github.com/shocardinc)) - Digital identity on the blockchain.
 
 #### Insurance
 * [prima.it](https://www.prima.it) - Italian insurance company with a focus on cutting edge technologies.
