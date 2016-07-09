@@ -25,6 +25,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Gaslight](http://teamgaslight.com) - Software Development, consulting, coaching, training, Organizer of the Cincinnati Elixir group. Now using Elixir and Phoenix in production.
 * [Govannon](https://govannon.nl) - Software development, consulting and full stack engineers.
 * [Icicle Technologies](http://www.icicletech.com)([GitHub](https://github.com/icicletech)) - Provides Consulting, Product Development on Elixir & Phoenix. Organizer of Bangalore Elixir Group, built [ElixirNation.io](http://elixirnation.io).
+* [Infinte Red](https://infinite.red)([GitHub](https://github.com/infinitered)) - Mobile and web app design and development services, using Elixir / Phoenix, React, and React Native. Based in Portland, San Francisco, and remote across the USA, with clients in eight countries. We build and maintain dozens of popular open source libraries.
 * [Isotope11](http://www.isotope11.com/) ([GitHub](https://github.com/isotope11)) - We provide custom software development and relevant technologies to a wide range of clients.  Josh Adams of [ElixirSips](http://elixirsips.com) was the CTO.
 * [Isnor Creative](http://www.isnorcreative.com) - Software development since 2008. Ruby, Elixir, Ember, React 
 * [Kabisa](http://www.kabisa.nl) - Software crafts(wo)men, passionately committed to exceed our customers expectations in every step we take. We value creativity and flexibility. Co-Organizer of the [Amsterdam Elixir meetup](http://www.meetup.com/Amsterdam-Elixir/).
