@@ -66,6 +66,7 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### Education
 
+* [Blake eLearning](http://readingeggs.com) - Blake eLearning is a developer of online literacy and numeracy products for children. We help parents and schools worldwide.
 * [Grasp](https://play.google.com/store/apps/details?id=com.gordonbisnor.grasp&hl=en) - Android/iOS/Web application facilitating real-time education group work
 
 #### Energy
