@@ -117,6 +117,7 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### Online Marketing
 
+* [GrowthPup](https://growthpup.com/) - Helping users to grow and maintain their Instagram community.
 * [Moz](https://moz.com/) - ([GitHub](https://github.com/seomoz)) - Products to power your online visibility.
 
 #### Radio
