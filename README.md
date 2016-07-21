@@ -129,6 +129,9 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Housing](https://housing.com/) - Housing.com is an Indian online real estate listing portal that simplifies finding, renting, and selling homes in India.
 * [Opendoor](https://www.opendoor.com) - Opendoor buys your home from you, so you can skip months of selling and start your next chapter.
 
+#### Hotel Aggregator
+* [Oyorooms](https://www.oyorooms.com) - Oyorooms is the India's largest branded network of hotels. Elixir/phoenix is used in few microservices, supporting oyo website and android/ ios app.
+
 #### Security
 * [Wombat Security Technologies](https://www.wombatsecurity.com/) - Wombat Security provides information security awareness and training software to help organizations teach their employees secure behavior. Our Security Education Platform includes integrated knowledge assessments, a library of simulated attacks, and interactive training modules, which have been proven to reduce successful phishing attacks and malware infections by up to 90%.
 
