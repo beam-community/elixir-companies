@@ -25,10 +25,12 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Fully Forged](http://fullyforged.com) - Software development and training, based in London.
 * [Gaslight](http://teamgaslight.com) - Software Development, consulting, coaching, training, Organizer of the Cincinnati Elixir group. Now using Elixir and Phoenix in production.
 * [Govannon](https://govannon.nl) - Software development, consulting and full stack engineers.
+* [Hashrocket](https://hashrocket.com) ([GitHub](https://github.com/hashrocket)) - Hashrocket is an expert team of designers, developers and consultants.
+We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer consulting, design, development, identity and training services.
 * [Icicle Technologies](http://www.icicletech.com)([GitHub](https://github.com/icicletech)) - Provides Consulting, Product Development on Elixir & Phoenix. Organizer of Bangalore Elixir Group, built [ElixirNation.io](http://elixirnation.io).
 * [Infinte Red](https://infinite.red)([GitHub](https://github.com/infinitered)) - Mobile and web app design and development services, using Elixir / Phoenix, React, and React Native. Based in Portland, San Francisco, and remote across the USA, with clients in eight countries. We build and maintain dozens of popular open source libraries.
 * [Isotope11](http://www.isotope11.com/) ([GitHub](https://github.com/isotope11)) - We provide custom software development and relevant technologies to a wide range of clients.  Josh Adams of [ElixirSips](http://elixirsips.com) was the CTO.
-* [Isnor Creative](http://www.isnorcreative.com) - Software development since 2008. Ruby, Elixir, Ember, React 
+* [Isnor Creative](http://www.isnorcreative.com) - Software development since 2008. Ruby, Elixir, Ember, React
 * [Kabisa](http://www.kabisa.nl) - Software crafts(wo)men, passionately committed to exceed our customers expectations in every step we take. We value creativity and flexibility. Co-Organizer of the [Amsterdam Elixir meetup](http://www.meetup.com/Amsterdam-Elixir/).
 * [Made by Many](http://madebymany.com/) ([GitHub](https://github.com/madebymany)) - We help businesses identify market opportunities, bring successful digital products to life and create the culture & capabilities to sustain them.
 * [Mirego](http://mirego.com) ([GitHub](https://github.com/mirego)) - We help our clients innovate and reinvent themselves in order to prosper in the digital era.
@@ -68,7 +70,7 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### Education
 
-* [Blake eLearning](http://readingeggs.com) - Blake eLearning is dedicated to making learning fun, motivational and effective for young children, teaching the essential skills needed for success at school. 
+* [Blake eLearning](http://readingeggs.com) - Blake eLearning is dedicated to making learning fun, motivational and effective for young children, teaching the essential skills needed for success at school.
 * [Grasp](https://play.google.com/store/apps/details?id=com.gordonbisnor.grasp&hl=en) - Android/iOS/Web application facilitating real-time education group work
 
 #### Energy
