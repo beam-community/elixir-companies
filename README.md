@@ -141,6 +141,10 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [CargoSense](http://cargosense.com/) - CargoSense is a smart-data and MicroAnalytics Software-as-a-Service (SaaS) company founded to create solutions that optimize logistics networks – in healthcare, food, medical devices and other industries with complex supply chains.
 * [Senseware](http://senseware.co) - Senseware supports data-driven decision-making by providing real-time, actionable insight on what is happening around us in buildings and cities.
 
+#### Social Good
+
+* [Code Corps](https://codecorps.org) ([GitHub](https://github.com/code-corps)) - Code Corps helps you build and fund open source software projects for social good.
+
 #### Social Network
 
 * [Pinterest](https://www.pinterest.com/) ([GitHub](https://github.com/pinterest)) - Pinterest is a visual discovery tool that you can use to find ideas for all your projects and interests.
