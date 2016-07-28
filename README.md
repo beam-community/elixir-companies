@@ -8,6 +8,10 @@ A curated list of companies using Elixir in production, organized by industry.
 #### Advertising
 * [icing](http://geticing.com) - Add an advertisement to any webpage and drive inbound traffic.
 
+#### Collaboration
+
+* [Canvas](https://usecanvas.com) ([GitHub](https://github.com/usecanvas)) - Notes for team of nerds.
+
 #### Consulting
 * [Agilion](https://www.agilion.com) ([GitHub](https://github.com/agilionapps)) - Software development and consulting.
 * [AmberBit](https://www.amberbit.com) ([GitHub](https://github.com/amberbit)) - We are polyglot developers (but mostly Ruby, JavaScript, Elixir, Elm).
