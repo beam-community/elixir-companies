@@ -60,6 +60,9 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Talkdesk](https://www.talkdesk.com) ([Github](https://github.com/talkdesk)) - Cloud-Based Call Center Software.
 * [VoiceLayer](https://voicelayer.io) - Integrate realtime Push-to-Talk into your application.
 
+#### Developers
+* [GitMonitor](https://gitmonitor.com) ([Blog](https://blog.gitmonitor.com)) - Custom rules and notifications for your GitHub repositories
+
 #### Enterprise
 
 + [Lexmark](https://www.lexmark.com) ([GitHub](https://github.com/OpenAperture)) - Provider of printing and imaging products, software, solutions and services that help customers save time and money.
