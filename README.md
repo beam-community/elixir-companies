@@ -2,12 +2,6 @@
 
 A curated list of companies using Elixir in production, organized by industry.
 
-#### Ad-Hoc Networking
-* [Meshable](https://meshable.io/trucks) - Ad-Hoc mesh networking to support free WiFi at small businesses.
-
-#### Advertising
-* [icing](http://geticing.com) - Add an advertisement to any webpage and drive inbound traffic.
-
 #### Collaboration
 
 * [Canvas](https://usecanvas.com) ([GitHub](https://github.com/usecanvas)) - Notes for team of nerds.
@@ -155,14 +149,13 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 #### Social Network
 
 * [Pinterest](https://www.pinterest.com/) ([GitHub](https://github.com/pinterest)) - Pinterest is a visual discovery tool that you can use to find ideas for all your projects and interests.
-* [RAVIO](https://ravio.com/) - Help people connect and share in creative and meaningful ways.
 
 #### Sports
 
 * [Bleacher Report](http://bleacherreport.com/) ([GitHub](https://github.com/br)) - Sports media site that is revolutionizing journalism.
 * [ClubCollect](https://clubcollect.com/en/home) - Billing and collection engine for sports clubs.
 * [Football Addicts](http://www.footballaddicts.com) ([GitHub](https://github.com/elixir-addicts)) - Creators of the well-known *Forza Football* and other leading football-related mobile applications.
-* [Find a Player](https://findaplayer.com) - Organise sports games, find people to play sports with
+* [Find a Player](https://findaplayer.com) - Organize sports games, find people to play sports with
 
 #### Transportation
 
