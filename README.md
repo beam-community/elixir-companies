@@ -104,7 +104,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [prima.it](https://www.prima.it) - Italian insurance company with a focus on cutting edge technologies.
 
 #### Internet of Things
-* [DIGIMONDO](https://www.digimondo.de/) - DIGIMONDO is building a LoRaWAN network providing connectivity for millions of IoT devices.
+* [DIGIMONDO](https://www.digimondo.de/) - DIGIMONDO is building a LoRaWAN network providing connectivity for millions of IoT devices. Using Elixir for networking/routing services and web applications.
 
 #### Marketplaces
 
