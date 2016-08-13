@@ -56,6 +56,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 #### Developers
 * [GitMonitor](https://gitmonitor.com) ([Blog](https://blog.gitmonitor.com)) - Custom rules and notifications for your GitHub repositories
+* [Timber](https://timber.io) ([GitHub](https://github.com/timberio)) - Timber makes logging useful again. Simple to set up, powerful search and filtering at your fingertips.
 
 #### Enterprise
 
