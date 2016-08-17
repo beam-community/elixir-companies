@@ -138,7 +138,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 #### Research
 
-* [nextjournal](https://nextjournal.com) - ([GitHub](https://github.com/nextjournal)) - An evolving platform for computer-aided research. Elixir used for developing the backend of the platform.
+* [nextjournal](https://nextjournal.com) - ([GitHub](https://github.com/nextjournal)) - An evolving platform for computer-aided research. Elixir is used for developing the backend of the platform.
 
 #### Hotel Aggregator
 * [Oyorooms](https://www.oyorooms.com) - Oyorooms is the India's largest branded network of hotels. Elixir/phoenix is used in few microservices, supporting oyo website and android/ ios app.
