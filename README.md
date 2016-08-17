@@ -85,6 +85,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 #### Gaming
 
 * [22cans](http://www.22cans.com/) ([GitHub](https://github.com/22cans)) - 22cans is an independent game studio founded by the industry legend and creator of God Game genre, Peter Molyneux. Creators of Curiosity and Godus.
+* [Bold Poker](https://boldpoker.net) - ([GitHub](https://github.com/boldpoker)) - Bold Poker transforms mobile devices into an efficient and professional poker dealer. Elixir is used for the backend communication service the clients connect to as well as for the website.
 * [Undead Labs](http://undeadlabs.com/) ([GitHub](https://github.com/undeadlabs)) - Creators of the smash hit survival-fantasy game _State of Decay_ and forthcoming tactical creature battler _Moonrise_.
 
 #### Government
@@ -134,6 +135,10 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 * [Housing](https://housing.com/) - Housing.com is an Indian online real estate listing portal that simplifies finding, renting, and selling homes in India.
 * [Opendoor](https://www.opendoor.com) - Opendoor buys your home from you, so you can skip months of selling and start your next chapter.
+
+#### Research
+
+* [nextjournal](https://nextjournal.com) - ([GitHub](https://github.com/nextjournal)) - An evolving platform for computer-aided research. Elixir is used for developing the backend of the platform.
 
 #### Hotel Aggregator
 * [Oyorooms](https://www.oyorooms.com) - Oyorooms is the India's largest branded network of hotels. Elixir/phoenix is used in few microservices, supporting oyo website and android/ ios app.
