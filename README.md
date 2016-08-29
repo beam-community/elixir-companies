@@ -88,7 +88,6 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 * [Kittysplit](https://kittysplit.com) - A webapp that alows easy splitting of group expenses.
 
-
 #### Gaming
 
 * [22cans](http://www.22cans.com/) ([GitHub](https://github.com/22cans)) - 22cans is an independent game studio founded by the industry legend and creator of God Game genre, Peter Molyneux. Creators of Curiosity and Godus.
