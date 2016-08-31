@@ -41,6 +41,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [RokkinCat](http://rokkincat.com) ([GitHub](https://github.com/rokkincat)) - Build projects, consulting, mobile and backend development. Wide range of clients.
 * [thoughtbot](https://thoughtbot.com) ([GitHub](https://github.com/thoughtbot)) - We work with companies to design, develop and grow high quality web and mobile products. We write and maintain open source software like [ExMachina](https://github.com/thoughtbot/ex_machina).
 * [Vinsol](http://vinsol.com) ([blog](http://vinsol.com/blog)) - Leading Web and Mobile Product Development company with expertise in Ecommerce. Maintainers of [SpreeCommerce(Rails)](https://github.com/spree/spree) and [NectarCommerce(Elixir/Phoneix)](https://github.com/vinsol/nectarcommerce) Open source projects.
+* [wemake.services](http://wemake.services/) ([GitHub](https://github.com/wemake-services)) - We make, craft, and develop web services and mobile applications in Moscow, Russia. We also host [elixir meetups in Moscow](http://elixir-lang.moscow).
 * [woumedia](http://woumedia.com) - Software House and Digital Design Agency from Copenhagen.
 
 #### Communication
