@@ -1,4 +1,5 @@
 # Elixir Companies
+[![Build Status](https://travis-ci.org/doomspork/elixir-companies.svg?branch=master)](https://travis-ci.org/doomspork/elixir-companies)
 
 A curated list of companies using Elixir in production, organized by industry.
 
@@ -13,7 +14,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [bitcrowd](http://bitcrowd.net) ([GitHub](https://github.com/bitcrowd)) - Berlin based software development and consulting for startups.
 * [Bitgamma](http://bitgamma.com) ([GitHub](https://github.com/bitgamma)) - We develop web, desktop and embedded applications. We code Elixir, C, Java/Javacard, Ruby, JS. We love working on embedded and custom boards.
 * [Carbon Five](http://carbonfive.com) ([blog](http://blog.carbonfive.com)) - Agile Web and Mobile Product Development in San Francisco, NYC, Los Angeles, and Chattanooga. Proud to have Elixir/Phoenix in our toolbox and to support [Wallaby](https://github.com/keathley/wallaby).
-* [CivilCode](http://www.civilcode.io) ([GitHub](https://github.com/civilcode)) - Developing tailored web-based business applications in Montreal, Canada. 
+* [CivilCode](http://www.civilcode.io) ([GitHub](https://github.com/civilcode)) - Developing tailored web-based business applications in Montreal, Canada.
 * [Cobenian](http://cobenian.com) ([GitHub](https://github.com/Cobenian)) - We solve problems with software.
 * [Coders51](http://www.coders51.com) ([GitHub](https://github.com/coders51)) - We develop web and mobile solutions for the entire galaxy.
 * [code lever](http://codelever.com) ([GitHub](https://github.com/code-lever)) - We develop software for small teams with big goals.  Working to grow the Elixir/Erlang ecosystem in the Midwest, USA.
