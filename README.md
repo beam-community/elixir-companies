@@ -58,6 +58,10 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Talkdesk](https://www.talkdesk.com) ([Github](https://github.com/talkdesk)) - Cloud-Based Call Center Software.
 * [VoiceLayer](https://voicelayer.io) - Integrate realtime Push-to-Talk into your application.
 
+#### Customer Service
+
+* [HiOperator](https://www.hioperator.com) - Customer support as-a-service. Think of us like AWS for customer service. We scale companies phone, chat or email support. YC-S16.
+
 #### Developers
 * [GitMonitor](https://gitmonitor.com) ([Blog](https://blog.gitmonitor.com)) - Custom rules and notifications for your GitHub repositories
 * [Timber](https://timber.io) ([GitHub](https://github.com/timberio)) - Timber makes logging useful again. Simple to set up, powerful search and filtering at your fingertips.
