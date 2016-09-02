@@ -177,6 +177,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [ClubCollect](https://clubcollect.com/en/home) - Billing and collection engine for sports clubs.
 * [Football Addicts](http://www.footballaddicts.com) ([GitHub](https://github.com/elixir-addicts)) - Creators of the well-known *Forza Football* and other leading football-related mobile applications.
 * [Find a Player](https://findaplayer.com) - Organize sports games, find people to play sports with
+* [Sleeperbot](https://sleeperbot.com) - Fantasy Football app with chat, alerts, news, and stats.
 
 #### Transportation
 
