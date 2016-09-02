@@ -156,6 +156,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Oyorooms](https://www.oyorooms.com) - Oyorooms is the India's largest branded network of hotels. Elixir/phoenix is used in few microservices, supporting oyo website and android/ ios app.
 
 #### Security
+* [Tinfoil Security](https://www.tinfoilsecurity.com/) - ([GitHub](https://github.com/tinfoil/)) - Tinfoil Security provides a dynamic security scanning solution for DevOps. We integrate with your CI system to find and help resolve security vulnerabilities in web applications and web services before they ever get deployed to production. We use Elixir to power our web service scanning engine.
 * [Wombat Security Technologies](https://www.wombatsecurity.com/) - Wombat Security provides information security awareness and training software to help organizations teach their employees secure behavior. Our Security Education Platform includes integrated knowledge assessments, a library of simulated attacks, and interactive training modules, which have been proven to reduce successful phishing attacks and malware infections by up to 90%.
 
 #### Sensors
