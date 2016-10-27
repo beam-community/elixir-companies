@@ -181,6 +181,10 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 * [Pinterest](https://www.pinterest.com/) ([GitHub](https://github.com/pinterest)) - Pinterest is a visual discovery tool that you can use to find ideas for all your projects and interests.
 
+#### Software Development
+
+* [Diatom Enterprises](http://www.diatomenterprises.com/) ([GitHub](https://github.com/DiatomEnterprises)) - Diatom Enterprises - Latvia based custom outsource software development company producing software for a wide variety of industries. We are proficient in Elixir, .NET, Java, Ruby on Rails, Node.JS, Angular.JS and other technologies. We offer Web, Mobile and Desktop development.
+
 #### Sports
 
 * [Bleacher Report](http://bleacherreport.com/) ([GitHub](https://github.com/br)) - Sports media site that is revolutionizing journalism.
