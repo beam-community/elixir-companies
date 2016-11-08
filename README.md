@@ -106,6 +106,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 * [22cans](http://www.22cans.com/) ([GitHub](https://github.com/22cans)) - 22cans is an independent game studio founded by the industry legend and creator of God Game genre, Peter Molyneux. Creators of Curiosity and Godus.
 * [Bold Poker](https://boldpoker.net) - ([GitHub](https://github.com/boldpoker)) - Bold Poker transforms mobile devices into an efficient and professional poker dealer. Elixir is used for the backend communication service the clients connect to as well as for the website.
+* [Emagroup](http://www.emagroup.cn/) - ([Github](https://github.com/repong)) - Develop mobile games. Elixir is used for building game management tools.
 * [Undead Labs](http://undeadlabs.com/) ([GitHub](https://github.com/undeadlabs)) - Creators of the smash hit survival-fantasy game _State of Decay_ and forthcoming tactical creature battler _Moonrise_.
 
 #### Government
