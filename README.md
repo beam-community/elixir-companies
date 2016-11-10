@@ -135,6 +135,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [askCharlie](https://www.askcharlie.de/) - Finding the best service providers for whatever needs you might have.
 * [SeekPanda](http://www.seekpanda.com) - Premier curated marketplace for hiring translators and interpreters.
 * [Storefront](http://thestorefront.com/) ([GitHub](https://github.com/thestorefront)) - Storefront makes it easy to find and rent short term retail space.
+* [Teachers Pay Teachers](https://www.teacherspayteachers.com/) ([GitHub](https://github.com/TeachersPayTeachers)) - Empowering millions of educators to share their work, their insights, and their inspiration with one another. Based in NYC, Elixir powers our backend infrastructure.
 
 #### Market Research
 
