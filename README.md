@@ -117,6 +117,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 #### Healthcare
 * [Pet Partners](http://petpartnersusa.com) ([GitHub](https://github.com/petpartnersllc)) - Own and operate a number of veterinary hospitals across the United States.  Using Elixir for all new development.
 * [WellMatch](https://wellmatchhealth.com) - Price transparency and a better way to shop for healthcare.
+* [My Meds & Me](https://www.mymedsandme.com) - A leading SaaS provider of web-based adverse event and product quality capture solutions for life sciences.
 
 #### Human Resources
 * [Xerpa](http://www.xerpa.com.br) ([GitHub](https://github.com/Xerpa)) - Xerpa is a SaaS company aiming to simplify and modernize HR, payroll and benefits administration for Brazilian SMBs and their employees. Entire stack is functional: Elixir/Phoenix on the backend with ClojureScript frontend.
