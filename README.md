@@ -119,6 +119,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Seneca Systems](http://seneca.systems/) ([GitHub](https://github.com/SenecaSystems)) - Powerful software for democracy's toughest problems.
 
 #### Healthcare
+* [My Meds & Me](https://www.mymedsandme.com) ([GitHub](https://github.com/MyMedsAndMe)) - A leading SaaS provider of web-based adverse event and product quality capture solutions for life sciences. [Click here to see how elixir being used at My Meds & Me.](https://www.youtube.com/watch?v=ZCYEX6ZIJgM) The company based in London.
 * [Pet Partners](http://petpartnersusa.com) ([GitHub](https://github.com/petpartnersllc)) - Own and operate a number of veterinary hospitals across the United States.  Using Elixir for all new development.
 * [WellMatch](https://wellmatchhealth.com) - Price transparency and a better way to shop for healthcare.
 
