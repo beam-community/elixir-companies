@@ -42,6 +42,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Lab Zero](https://labzero.com) ([GitHub](https://github.com/labzero)) - A San Francisco based development and design group. We specialize in Ruby, JS and Elixir.
 * [Made by Many](http://madebymany.com/) ([GitHub](https://github.com/madebymany)) - We help businesses identify market opportunities, bring successful digital products to life and create the culture & capabilities to sustain them.
 * [Mirego](http://mirego.com) ([GitHub](https://github.com/mirego)) - We help our clients innovate and reinvent themselves in order to prosper in the digital era.
+* [Neon Tree Solutions](http://neontree.pl) - Elixir, Erlang, React, Scala and Node.js outsourcing and consulting. We specialize in helping out start-ups and small companies to find the best tools for the job.
 * [Plataformatec](http://plataformatec.com.br/) ([GitHub](https://github.com/plataformatec)) - Project inception, coaching, tailored projects, general consulting.  Sponsor of Elixir, employer to Elixir's BDFL.
 * [Prograils](https://prograils.com) ([GitHub](https://github.com/prograils)) - Software House full of skilled web developers and mobile experts. Our agile development team combines technologies like Elixir, Ruby on Rails, React and HTML 5 to build user friendly web & mobile apps.
 * [Progress Engine](http://progress-engine.com) ([Github](https://github.com/progress-engine/)) - Software development company, based in Moscow, Russia and specialized in  mobile and web applications development
