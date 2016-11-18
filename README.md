@@ -211,6 +211,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 #### Traveling
 
+* [Aviasales](http://aviasales.ru) ([Github](https://github.com/KosyanMedia)) – Flights Meta Search Engine for Russian market with the main office on Phuket, Thailand. We use Elixir for our static content generator, messengers bots and couple of microservices.
 * [Lonely Planet](http://www.lonelyplanet.com) ([Github](https://github.com/lonelyplanet)) - Lonely Planet is renowned for its first-hand approach, up-to-date maps and commitment to providing the best information for travellers in the United States. Elixir currently being used for couple of very important microservices. [Find out more](https://medium.com/@derrickburns/building-a-modern-scalable-backend-modernizing-monolithic-applications-15fc3b8101fa#.ki1sfqqyg)
 
 #### Video
