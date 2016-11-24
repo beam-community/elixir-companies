@@ -10,6 +10,7 @@ A curated list of companies using Elixir in production, organized by industry.
 #### Collaboration
 
 * [Canvas](https://usecanvas.com) ([GitHub](https://github.com/usecanvas)) - Notes for team of nerds.
+* [Planning Center](https://planning.center) ([Github](https://github.com/planningcenter)) - Planning Center's suite of apps work together to allow more ministry in your Ministry. Planning Center is from USA. And it's adopting Elixir to it's stack. 
 
 #### Consulting
 * [Agilion](https://www.agilion.com) ([GitHub](https://github.com/agilionapps)) - Software development and consulting.
