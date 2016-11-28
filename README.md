@@ -199,6 +199,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 #### Social Network
 
 * [Pinterest](https://www.pinterest.com/) ([GitHub](https://github.com/pinterest)) - Pinterest is a visual discovery tool that you can use to find ideas for all your projects and interests.
+* [Yala](https://yalabot.com/) - Yala is a chatbot that makes use of machine learning to know the best time to post to multiple social networks. Yala's ingenious algorithm can increase your exposure and receive better engagement on the items you’re sharing. Oh, and it's free.
 
 #### Sports
 
