@@ -34,6 +34,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Fully Forged](http://fullyforged.com) - Software development and training, based in London.
 * [Gaslight](http://teamgaslight.com) - Software Development, consulting, coaching, training, Organizer of the Cincinnati Elixir group. Now using Elixir and Phoenix in production.
 * [Govannon](https://govannon.nl) - Software development, consulting and full stack engineers.
+* [GrillWork](http://grillwork.io) ([GitHub](https://github.com/grillwork))- Helping business through software. Working in Elixir/Phoenix/Ruby/Rails/Node/Javascript/ReactJS. We use Elixir for all backend/api work and for network programming.
 * [Hashrocket](https://hashrocket.com) ([GitHub](https://github.com/hashrocket)) - Hashrocket is an expert team of designers, developers and consultants.
 We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer consulting, design, development, identity and training services.
 * [Icicle Technologies](http://www.icicletech.com)([GitHub](https://github.com/icicletech)) - Provides Consulting, Product Development on Elixir & Phoenix. Organizer of Bangalore Elixir Group, built [ElixirNation.io](http://elixirnation.io).
@@ -55,6 +56,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
   ([GitHub](https://github.com/substantial)) - We are a digital product studio headquartered in Seattle. We use Elixir to build backends for web and mobile products.
 * [thoughtbot](https://thoughtbot.com) ([GitHub](https://github.com/thoughtbot)) - We work with companies to design, develop and grow high quality web and mobile products. We write and maintain open source software like [ExMachina](https://github.com/thoughtbot/ex_machina).
 * [toy rocket science](http://toyrocketscience.com) ([GitHub](https://github.com/trsc)) - We are a small expert team of developers in Berlin. We have a broad range of clients and make software that ranges from heavy-lifting on the server to the frontend, including apps.
+* [Tungsten Studios](http://tungstenstudios.io) - We build ideas. Elixir/Phoenix/Ruby/Rails/ReactJS/Javascript.
 * [Vinsol](http://vinsol.com) ([blog](http://vinsol.com/blog)) - Leading Web and Mobile Product Development company with expertise in Ecommerce. Maintainers of [SpreeCommerce(Rails)](https://github.com/spree/spree) and [NectarCommerce(Elixir/Phoneix)](https://github.com/vinsol/nectarcommerce) Open source projects.
 * [wemake.services](http://wemake.services/) ([GitHub](https://github.com/wemake-services)) - We make, craft, and develop web services and mobile applications in Moscow, Russia. We also host [elixir meetups in Moscow](http://elixir-lang.moscow).
 * [woumedia](http://woumedia.com) - Software House and Digital Design Agency from Copenhagen.
