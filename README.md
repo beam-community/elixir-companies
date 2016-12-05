@@ -68,6 +68,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Badger](http://badger-app.com) - Remind your friends with a delayed text/push.
 * [CrankWheel](http://crankwheel.com/) - Insanely simple freemium screen sharing plus enterprise features.
 * [Discord](https://discordapp.com/) - Free voice and text chat for gamers.
+* [Dubber](https://www.dubber.net) ([Github](https://github.com/dubbersoftware/)) - Dubber is a native cloud, call recording software as a service with unlimited scalability. Capture IM, video and calls like never before! Using Elixir to power our billing system and other backends. Based in Melbourne, Australia.
 * [E-MetroTel](http://www.emetrotel.com) - Cost-effective SIP based Unified Communication solutions.
 * [Flow](https://www.getflow.com/) - All your team’s communication, clear and organized.
 * [Fred](http://fredapp.com.br) - FRED is an artificial intelligence, conversational commerce and chatbots ecosystem with multiple platforms based in Brazil. FRED platforms enable companies of any size to build chatbots and messaging services in multiple channels.
