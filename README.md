@@ -7,6 +7,9 @@ A curated list of companies using Elixir in production, organized by industry.
 
 * [Aircloak](https://aircloak.com/) ([GitHub](https://github.com/Aircloak)) - Aircloak’s first-in-class real-time database anonymization solution provides instant privacy compliance and enables high-quality analytics for any data set and any use case. Aircloak's from Berlin. [Saša Jurić](https://github.com/sasa1977), the author of [Elixir in Action](https://www.manning.com/books/elixir-in-action) is software engineer at Aircloak.
 
+#### Cannabis
+* [Weedmaps](https://weedmaps.com/) Weedmaps.com is a community where medical marijuana users connect with other users in their geographic region to freely discuss and review local cannabis co-operatives, storefronts, medical doctors and delivery services. We are headquartered in Irvine, CA, and we are using Elixir to build our backend services.
+
 #### Collaboration
 
 * [Canvas](https://usecanvas.com) ([GitHub](https://github.com/usecanvas)) - Notes for team of nerds.
