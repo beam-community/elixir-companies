@@ -13,7 +13,7 @@ A curated list of companies using Elixir in production, organized by industry.
 #### Collaboration
 
 * [Canvas](https://usecanvas.com) ([GitHub](https://github.com/usecanvas)) - Notes for team of nerds.
-* [Planning Center](https://planning.center) ([Github](https://github.com/planningcenter)) - Planning Center's suite of apps work together to allow more ministry in your Ministry. Planning Center is from USA. And it's adopting Elixir to it's stack. 
+* [Planning Center](https://planning.center) ([Github](https://github.com/planningcenter)) - Planning Center's suite of apps work together to allow more ministry in your Ministry. Planning Center is from USA. And it's adopting Elixir to it's stack.
 
 #### Consulting
 * [Agilion](https://www.agilion.com) ([GitHub](https://github.com/agilionapps)) - Software development and consulting.
@@ -117,6 +117,10 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 #### Fintech
 
 * [Kittysplit](https://kittysplit.com) - A webapp that alows easy splitting of group expenses.
+
+#### Food
+
+* [Farmbot](https://farmbot.io/) ([Github](https://github.com/FarmBot)) - Humanity's first open-source CNC farming machine. Farmbot using Elixir for the Raspberry Pi 3. [Click here for more detail](https://github.com/FarmBot/farmbot_os). FarmBot Inc is located at 81 South Higuera Street, Suite 160, in San Luis Obispo, California.
 
 #### Gaming
 
