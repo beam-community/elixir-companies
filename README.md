@@ -173,6 +173,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 * [GrowthPup](https://growthpup.com/) - Helping users to grow and maintain their Instagram community.
 * [LookBookHQ](http://lookbookhq.com) ([GitHub](https://github.com/buzzdata)) - Enabling marketers to package content into seamless experiences. We use Elixir to calculate analytics for our customers. Toronto, Canada.
+* [Meltwater](https://meltwater.com) - ([GitHub](https://github.com/meltwater)) - Gather insights from outside the firewall to empower your business decisions. Using Elixir for backend services. San Francisco, USA.
 * [Moz](https://moz.com/) - ([GitHub](https://github.com/seomoz)) - Products to power your online visibility.
 
 #### Radio
