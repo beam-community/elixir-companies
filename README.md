@@ -114,6 +114,10 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 * [AlphaSights](https://engineering.alphasights.com) ([GitHub](https://github.com/alphasights)) - Global knowledge broker with regional hubs in Europe, the Americas, Asia and the Middle East.
 
+#### Family
+
+* [Findmypast](http://www.findmypast.co.uk/) ([Github](https://github.com/findmypast)) - Findmypast makes original historical documents available to search online, so that people can explore a collection of over two billion records find their ancestors and trace their family tree from the comfort of their own home worldwide. London, UK.
+
 #### Fintech
 
 * [Kittysplit](https://kittysplit.com) - A webapp that alows easy splitting of group expenses.
