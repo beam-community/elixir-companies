@@ -98,7 +98,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 #### E-Commerce
 
 + [Packlane](https://packlane.com) ([GitHub](https://github.com/packlane)) - Design and order custom printed packaging online.
-+ [The book of everyone](https://thebookofeveryone.com) ([Github](https://github.com/thebookofeveryone)) - Personalised books and unique gifts for your loved ones, made by our talented team of creatives. Barcelona, Catalunya, Spain. 
++ [The book of everyone](https://thebookofeveryone.com) ([Github](https://github.com/thebookofeveryone)) - Personalised books and unique gifts for your loved ones, made by our talented team of creatives. Barcelona, Catalunya, Spain.
 + [The RealReal](https://www.therealreal.com) ([GitHub](https://github.com/TheRealReal)) - Marketplace for luxury fashion resale products.
 + [Raise Marketplace](https://www.raise.com) - Buy and Sell Gift Cards - Exchange Gift Cards. Pricing recommendation API is developed in Elixir. Chicago, Illinois, US.
 + [RevZilla Motorsports](https://revzilla.com) ([GitHub](https://github.com/revzilla/)) - Philadelphia-based retailer bent on enhancing the experience of the Motorcycle Enthusiast. Home-grown Elixir ecom system in production.
@@ -178,6 +178,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 #### Online Marketing
 
+* [Appcues](http://www.appcues.com/) ([Github](https://github.com/appcues)) - Appcues helps people publish messages into their products instantly ⚡️💻 Follow us here for a curation of the best content for growth people. Boston, MA, US. 
 * [GrowthPup](https://growthpup.com/) - Helping users to grow and maintain their Instagram community.
 * [LookBookHQ](http://lookbookhq.com) ([GitHub](https://github.com/buzzdata)) - Enabling marketers to package content into seamless experiences. We use Elixir to calculate analytics for our customers. Toronto, Canada.
 * [Meltwater](https://meltwater.com) - ([GitHub](https://github.com/meltwater)) - Gather insights from outside the firewall to empower your business decisions. Using Elixir for backend services. San Francisco, USA.
