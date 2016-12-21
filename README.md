@@ -124,6 +124,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 #### Fintech
 
 * [Kittysplit](https://kittysplit.com) - A webapp that alows easy splitting of group expenses.
+* [Nebo15](http://nebo15.com/) ([Github](https://github.com/Nebo15)) - Large peer-to-peer lending platform completely on Elixir, from scratch. Kiev, Ukraine.
 
 #### Food
 
