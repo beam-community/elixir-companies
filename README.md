@@ -147,6 +147,8 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [WellMatch](https://wellmatchhealth.com) - Price transparency and a better way to shop for healthcare.
 
 #### Human Resources
+* [Recruitee](https://recruitee.com/) ([Github](https://github.com/Recruitee)) - Recruitee is the easiest way for teams to organize
+their hiring process - and grow faster. Amsterdam, Netherlands.
 * [Xerpa](http://www.xerpa.com.br) ([GitHub](https://github.com/Xerpa)) - Xerpa is a SaaS company aiming to simplify and modernize HR, payroll and benefits administration for Brazilian SMBs and their employees. Entire stack is functional: Elixir/Phoenix on the backend with ClojureScript frontend.
 
 #### Identity
