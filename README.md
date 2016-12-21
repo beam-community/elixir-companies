@@ -147,6 +147,8 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [WellMatch](https://wellmatchhealth.com) - Price transparency and a better way to shop for healthcare.
 
 #### Human Resources
+* [Recruitee](https://recruitee.com/) ([Github](https://github.com/Recruitee)) - Recruitee is the easiest way for teams to organize
+their hiring process - and grow faster. Amsterdam, Netherlands.
 * [Xerpa](http://www.xerpa.com.br) ([GitHub](https://github.com/Xerpa)) - Xerpa is a SaaS company aiming to simplify and modernize HR, payroll and benefits administration for Brazilian SMBs and their employees. Entire stack is functional: Elixir/Phoenix on the backend with ClojureScript frontend.
 
 #### Identity
@@ -179,7 +181,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 #### Online Marketing
 
-* [Appcues](http://www.appcues.com/) ([Github](https://github.com/appcues)) - Appcues helps people publish messages into their products instantly ⚡️💻 Follow us here for a curation of the best content for growth people. Boston, MA, US. 
+* [Appcues](http://www.appcues.com/) ([Github](https://github.com/appcues)) - Appcues helps people publish messages into their products instantly ⚡️💻 Follow us here for a curation of the best content for growth people. Boston, MA, US.
 * [GrowthPup](https://growthpup.com/) - Helping users to grow and maintain their Instagram community.
 * [LookBookHQ](http://lookbookhq.com) ([GitHub](https://github.com/buzzdata)) - Enabling marketers to package content into seamless experiences. We use Elixir to calculate analytics for our customers. Toronto, Canada.
 * [Meltwater](https://meltwater.com) - ([GitHub](https://github.com/meltwater)) - Gather insights from outside the firewall to empower your business decisions. Using Elixir for backend services. San Francisco, USA.
