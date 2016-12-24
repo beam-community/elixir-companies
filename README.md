@@ -172,6 +172,9 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 
 * [icanmakeitbetter](http://icanmakeitbetter.com/) - ([GitHub](https://github.com/icanmakeitbetter)) - All-in-one insight community and customer feedback solution.
 
+#### Media
+* [The Outline](https://theoutline.com) -  A new kind of publication for a new kind of human.
+
 #### Navigation
 
 * [Rose Point Navigation Systems](http://www.rosepointnav.com/) - Specializes in navigation software for recreational and professional mariners.
