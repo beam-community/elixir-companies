@@ -59,6 +59,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [RokkinCat](http://rokkincat.com) ([GitHub](https://github.com/rokkincat)) - Build projects, consulting, mobile and backend development. Wide range of clients.
 * [Substantial](https://substantial.com/)
   ([GitHub](https://github.com/substantial)) - We are a digital product studio headquartered in Seattle. We use Elixir to build backends for web and mobile products.
+* [Stride Consulting](http://www.stridenyc.com/) ([Github](https://github.com/stride-nyc)) - We’re NYC Agile Software Development Specialists. We help tech teams be their best inside the code and out. NYC, USA.
 * [thoughtbot](https://thoughtbot.com) ([GitHub](https://github.com/thoughtbot)) - We work with companies to design, develop and grow high quality web and mobile products. We write and maintain open source software like [ExMachina](https://github.com/thoughtbot/ex_machina).
 * [toy rocket science](http://toyrocketscience.com) ([GitHub](https://github.com/trsc)) - We are a small expert team of developers in Berlin. We have a broad range of clients and make software that ranges from heavy-lifting on the server to the frontend, including apps.
 * [Tungsten Studios](http://tungstenstudios.io) - We build ideas. Elixir/Phoenix/Ruby/Rails/ReactJS/Javascript.
