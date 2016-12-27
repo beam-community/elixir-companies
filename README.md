@@ -165,6 +165,9 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 #### Internet of Things
 * [DIGIMONDO](https://www.digimondo.de/) - DIGIMONDO is building a LoRaWAN network providing connectivity for millions of IoT devices. Using Elixir for networking/routing services and web applications.
 
+#### Legal services
+* [Avvo](https://www.avvo.com) ([Github](https://github.com/avvo)) - We believe that more information helps you make better decisions. At Avvo, we provide you with detailed information on lawyers and legal issues so that you can make the choices that are right for you. Seattle, Washington, USA.
+
 #### Marketplaces
 
 * [askCharlie](https://www.askcharlie.de/) - Finding the best service providers for whatever needs you might have.
