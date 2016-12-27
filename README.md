@@ -196,6 +196,10 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 * [Moz](https://moz.com/) - ([GitHub](https://github.com/seomoz)) - Products to power your online visibility.
 * [Workwithopal](https://www.workwithopal.com/) - ([Github](https://github.com/opallabs)) - The Opal Platform is designed for marketing team collaboration, facilitating the production and orchestration of the brand marketing process. Portland, OR, USA.
 
+#### Payment
+
+* [Spreedly](https://www.spreedly.com) ([Github](https://github.com/spreedly)) - Spreedly believes the best payment experience derives from excellent software combined with business flexibility. Durham, NC, USA.
+
 #### Publishing
 
 * [StoryCloud](http://storycloud.co) ([Github](https://github.com/StoryCloud)) - StoryCloud has developed an industry leading content publishing platform with security, encryption and permissions. San Diego, CA, USA.
