@@ -86,6 +86,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 #### Customer Service
 
+* [Customer Lobby](https://www.customerlobby.com) ([Github](https://github.com/customerlobby)) - Repeat Customer & Reviews Software. We are currently in the process of building a couple of services that use elixir. Berkeley, CA, USA.
 * [HiOperator](https://www.hioperator.com) - Customer support as-a-service. Think of us like AWS for customer service. We scale companies phone, chat or email support. YC-S16.
 
 #### Developers
