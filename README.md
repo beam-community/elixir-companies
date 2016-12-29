@@ -4,7 +4,7 @@
 A curated list of companies using Elixir in production, organized by industry.
 
 #### Business Intelligence
-
+* [Adjust](https://www.adjust.com/) ([Github](https://github.com/adjust)) - Mobile user attribution and advanced app analytics, combined with store stats. How elixir being used [Click here](http://big-elephants.com/). Berlin, Germany. 
 * [Aircloak](https://aircloak.com/) ([GitHub](https://github.com/Aircloak)) - Aircloak’s first-in-class real-time database anonymization solution provides instant privacy compliance and enables high-quality analytics for any data set and any use case. Aircloak's from Berlin. [Saša Jurić](https://github.com/sasa1977), the author of [Elixir in Action](https://www.manning.com/books/elixir-in-action) is software engineer at Aircloak.
 
 #### Cannabis
