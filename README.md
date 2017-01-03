@@ -4,7 +4,7 @@
 A curated list of companies using Elixir in production, organized by industry.
 
 #### Business Intelligence
-* [Adjust](https://www.adjust.com/) ([Github](https://github.com/adjust)) - Mobile user attribution and advanced app analytics, combined with store stats. How elixir being used [Click here](http://big-elephants.com/). Berlin, Germany. 
+* [Adjust](https://www.adjust.com/) ([Github](https://github.com/adjust)) - Mobile user attribution and advanced app analytics, combined with store stats. How elixir being used [Click here](http://big-elephants.com/). Berlin, Germany.
 * [Aircloak](https://aircloak.com/) ([GitHub](https://github.com/Aircloak)) - Aircloak’s first-in-class real-time database anonymization solution provides instant privacy compliance and enables high-quality analytics for any data set and any use case. Aircloak's from Berlin. [Saša Jurić](https://github.com/sasa1977), the author of [Elixir in Action](https://www.manning.com/books/elixir-in-action) is software engineer at Aircloak.
 
 #### Cannabis
@@ -102,10 +102,11 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 #### E-Commerce
 
 + [Packlane](https://packlane.com) ([GitHub](https://github.com/packlane)) - Design and order custom printed packaging online.
-+ [The book of everyone](https://thebookofeveryone.com) ([Github](https://github.com/thebookofeveryone)) - Personalised books and unique gifts for your loved ones, made by our talented team of creatives. Barcelona, Catalunya, Spain.
-+ [The RealReal](https://www.therealreal.com) ([GitHub](https://github.com/TheRealReal)) - Marketplace for luxury fashion resale products.
++ [Postmates](http://postmates.com) ([Github](https://github.com/postmates)) - On-demand delivery company based in San Francisco. We use Elixir in a lot of our internal projects (merchant inventory system, partner tools portal) and we have plans on open-sourcing a Thumbor library very soon.
 + [Raise Marketplace](https://www.raise.com) - Buy and Sell Gift Cards - Exchange Gift Cards. Pricing recommendation API is developed in Elixir. Chicago, Illinois, US.
 + [RevZilla Motorsports](https://revzilla.com) ([GitHub](https://github.com/revzilla/)) - Philadelphia-based retailer bent on enhancing the experience of the Motorcycle Enthusiast. Home-grown Elixir ecom system in production.
++ [The book of everyone](https://thebookofeveryone.com) ([Github](https://github.com/thebookofeveryone)) - Personalised books and unique gifts for your loved ones, made by our talented team of creatives. Barcelona, Catalunya, Spain.
++ [The RealReal](https://www.therealreal.com) ([GitHub](https://github.com/TheRealReal)) - Marketplace for luxury fashion resale products.
 
 #### Education
 * [Albert](https://www.albert.io/) ([Github](https://github.com/albert-io)) - Learn anything through interactive practice: College math and science, Advanced Placement®, SAT®, ACT®, GRE®, GMAT®, literature, social science, history, and more. Our API services are built with Elixir, Phoenix, and PostgreSQL. Chicago, Illinois.
