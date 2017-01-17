@@ -127,6 +127,10 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 * [Findmypast](http://www.findmypast.co.uk/) ([Github](https://github.com/findmypast)) - Findmypast makes original historical documents available to search online, so that people can explore a collection of over two billion records find their ancestors and trace their family tree from the comfort of their own home worldwide. London, UK.
 
+#### Field Services
+
+* [Useful](http://www.getuseful.com/) - Useful is the job management app for field service companies, allowing users to see crew locations, send and receive work orders and manage their business through an iPad. We use Elixir in production for all of our API services. Boulder, Colorado.
+
 #### Fintech
 
 * [Kittysplit](https://kittysplit.com) - A webapp that alows easy splitting of group expenses.
