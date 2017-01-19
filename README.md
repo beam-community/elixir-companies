@@ -187,6 +187,7 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 * [icanmakeitbetter](http://icanmakeitbetter.com/) - ([GitHub](https://github.com/icanmakeitbetter)) - All-in-one insight community and customer feedback solution.
 
 #### Media
+* [Brutalist](https://brutalist.press) - The news agency specialized on traditional views.
 * [The Outline](https://theoutline.com) -  A new kind of publication for a new kind of human.
 
 #### Navigation
