@@ -201,6 +201,7 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 #### Online Marketing
 
 * [Appcues](http://www.appcues.com/) ([Github](https://github.com/appcues)) - Appcues helps people publish messages into their products instantly ⚡️💻 Follow us here for a curation of the best content for growth people. Boston, MA, US.
+* [AuthorityLabs](https://authoritylabs.com/) ([GitHub](https://github.com/authoritylabs)) - Accurate and reliable search engine ranking data and keyword insights. Phoenix, AZ, USA.
 * [GrowthPup](https://growthpup.com/) - Helping users to grow and maintain their Instagram community.
 * [LookBookHQ](http://lookbookhq.com) ([GitHub](https://github.com/buzzdata)) - Enabling marketers to package content into seamless experiences. We use Elixir to calculate analytics for our customers. Toronto, Canada.
 * [Meltwater](https://meltwater.com) - ([GitHub](https://github.com/meltwater)) - Gather insights from outside the firewall to empower your business decisions. Using Elixir for backend services. San Francisco, USA.
