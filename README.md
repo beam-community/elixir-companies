@@ -175,6 +175,7 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 
 #### Legal services
 * [Avvo](https://www.avvo.com) ([Github](https://github.com/avvo)) - We believe that more information helps you make better decisions. At Avvo, we provide you with detailed information on lawyers and legal issues so that you can make the choices that are right for you. Seattle, Washington, USA.
+* [CONTRAKTOR](https://www.contraktor.com.br) - Legal contracts toolbox for Small and Medium companies! Contract creation, auto review, workflow, e-signature and contract management. Save time and avoid mistakes. Welcome to the 4th Industrial Revolution. Lawyers are ready to be disrupted? Come with us first in Brazil.
 
 #### Marketplaces
 
