@@ -260,6 +260,14 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 * [Find a Player](https://findaplayer.com) - Organize sports games, find people to play sports with
 * [Sleeperbot](https://sleeperbot.com) - Fantasy Football app with chat, alerts, news, and stats.
 
+#### Sustainability
+
+* [imby.bio](http://imby.bio/)
+  ([Gitlab](https://gitlab.com/imby.bio), [GitHub](https://github.com/imbybio/)) -
+  imby.bio helps individuals bring nature back in to their urban environment.
+  The company is based in London, UK and uses Elixir as their primary back-end
+  technology.
+
 #### Transportation
 
 * [Ride](https://ride.com) ([Github](https://github.com/ride)) - Ride is the hassle-free ridesharing app that simplifies your commute and connects you with neighbors and coworkers.
