@@ -216,6 +216,10 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 
 * [Spreedly](https://www.spreedly.com) ([Github](https://github.com/spreedly)) - Spreedly believes the best payment experience derives from excellent software combined with business flexibility. Durham, NC, USA.
 
+#### Performance Management
+
+* [Steer](https://www.newsteer.com/) - Steer is a lightweight Performance Management System for Agile teams. SaaS platform built with Elixir. Remote company with founders based in London and Barcelona.
+
 #### Publishing
 
 * [StoryCloud](http://storycloud.co) ([Github](https://github.com/StoryCloud)) - StoryCloud has developed an industry leading content publishing platform with security, encryption and permissions. San Diego, CA, USA.
