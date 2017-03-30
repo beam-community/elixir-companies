@@ -48,6 +48,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Isnor Creative](http://www.isnorcreative.com) - Software development since 2008. Ruby, Elixir, Ember, React
 * [Kabisa](http://www.kabisa.nl) - Software crafts(wo)men, passionately committed to exceed our customers expectations in every step we take. We value creativity and flexibility. Co-Organizer of the [Amsterdam Elixir meetup](http://www.meetup.com/Amsterdam-Elixir/).
 * [Lab Zero](https://labzero.com) ([GitHub](https://github.com/labzero)) - A San Francisco based development and design group. We specialize in Ruby, JS and Elixir.
+* [LessEverything](http://lesseverything.com) Companies hire us to build their big software idea, create integrations between products, improve their conversion rates or just bring new ideas to the table.
 * [Made by Many](http://madebymany.com/) ([GitHub](https://github.com/madebymany)) - We help businesses identify market opportunities, bring successful digital products to life and create the culture & capabilities to sustain them.
 * [Mirego](http://mirego.com) ([GitHub](https://github.com/mirego)) - We help our clients innovate and reinvent themselves in order to prosper in the digital era.
 * [Nebo #15](http://nebo15.com/) ([GitHub](https://github.com/Nebo15/)) - A Kiev based fintech R&D team, part of a large private equity fund. We specialize in large-scale financial projects that entirely build on Elixir, React and Kubernetes.
