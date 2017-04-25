@@ -244,6 +244,9 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 #### Hotel Aggregator
 * [Oyorooms](https://www.oyorooms.com) - Oyorooms is the India's largest branded network of hotels. Elixir/phoenix is used in few microservices, supporting oyo website and android/ ios app.
 
+### Sales
+* [Heresy](http://heresy.io) - ([GitHub](https://github.com/heresydev)) - The days of top-down sales management are over! We are bringing Agile to Sales, empowering salespeople to improve performance with better data and collaboration. We believe that CRM software built as a “system of record” adds little value to salespeople. Heresy is a workflow application, that enables sales professionals to manage their workload, forecast accurately and crush targets every month. Through its usage, we are able to aggregate valuable data that provides salespeople and their managers with unique insights without having to run a single report. Main product and platform are built exclusively using Elixir and Phoenix. London, UK.
+
 #### Security
 * [Tinfoil Security](https://www.tinfoilsecurity.com/) - ([GitHub](https://github.com/tinfoil/)) - Tinfoil Security provides a dynamic security scanning solution for DevOps. We integrate with your CI system to find and help resolve security vulnerabilities in web applications and web services before they ever get deployed to production. We use Elixir to power our web service scanning engine.
 * [Wombat Security Technologies](https://www.wombatsecurity.com/) - Wombat Security provides information security awareness and training software to help organizations teach their employees secure behavior. Our Security Education Platform includes integrated knowledge assessments, a library of simulated attacks, and interactive training modules, which have been proven to reduce successful phishing attacks and malware infections by up to 90%.
