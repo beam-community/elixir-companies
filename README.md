@@ -16,6 +16,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Planning Center](https://planning.center) ([Github](https://github.com/planningcenter)) - Planning Center's suite of apps work together to allow more ministry in your Ministry. Planning Center is from USA. And it's adopting Elixir to it's stack.
 
 #### Consulting
+* [361° DIGITAL](https://361.de) - We are a digital agency based in Stuttgart, Germany. We create web and mobile apps using Elixir, Phoenix, React and React Native.
 * [Agilion](https://www.agilion.com) ([GitHub](https://github.com/agilionapps)) - Software development and consulting.
 * [AmberBit](https://www.amberbit.com) ([GitHub](https://github.com/amberbit)) - We are polyglot developers (but mostly Ruby, JavaScript, Elixir, Elm).
 * [AppUnite](https://appunite.com) ([GitHub](https://github.com/appunite)) - We are efficient, goal-oriented software development team of professionals specialized in mobile and web.
