@@ -167,6 +167,12 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Pet Partners](http://petpartnersusa.com) ([GitHub](https://github.com/petpartnersllc)) - Own and operate a number of veterinary hospitals across the United States.  Using Elixir for all new development.
 * [WellMatch](https://wellmatchhealth.com) - Price transparency and a better way to shop for healthcare.
 
+#### Home Services
+* [Househappy](https://www.househappy.com/)([Github](https://github.com/househappy)) -
+  Househappytrax is a service designed to make homeownership easy.
+  Based in Portland, Oregon, USA.
+  We use Phoenix to build an API and admin web UI for Househappytrax.
+
 #### Human Resources
 * [Recruitee](https://recruitee.com/) ([Github](https://github.com/Recruitee)) - Recruitee is the easiest way for teams to organize
 their hiring process - and grow faster. Amsterdam, Netherlands.
