@@ -112,6 +112,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 + [Fave by Groupon](https://myfave.com) ([GitHub](https://github.com/kfit-dev)) - Get discounted deals from restaurants, cafes, bars, spa, salon, and gyms near you. Southeast Asia.
 + [Packlane](https://packlane.com) ([GitHub](https://github.com/packlane)) - Design and order custom printed packaging online.
 + [Postmates](http://postmates.com) ([Github](https://github.com/postmates)) - On-demand delivery company based in San Francisco. We use Elixir in a lot of our internal projects (merchant inventory system, partner tools portal) and we have plans on open-sourcing a Thumbor library very soon.
++ [Quiqup](https://quiqup.com) ([Github](https://github.com/QuiqUpLTD)) - Quiqup is a London-based startup offering on-demand, short distance logistics solutions. The data bus and core message broker are written in Elixir.
 + [Raise Marketplace](https://www.raise.com) - Buy and Sell Gift Cards - Exchange Gift Cards. Pricing recommendation API is developed in Elixir. Chicago, Illinois, US.
 + [RevZilla Motorsports](https://revzilla.com) ([GitHub](https://github.com/revzilla/)) - Philadelphia-based retailer bent on enhancing the experience of the Motorcycle Enthusiast. Home-grown Elixir ecom system in production.
 + [The book of everyone](https://thebookofeveryone.com) ([Github](https://github.com/thebookofeveryone)) - Personalised books and unique gifts for your loved ones, made by our talented team of creatives. Barcelona, Catalunya, Spain.
