@@ -233,6 +233,7 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 #### Payment
 
 * [Spreedly](https://www.spreedly.com) ([Github](https://github.com/spreedly)) - Spreedly believes the best payment experience derives from excellent software combined with business flexibility. Durham, NC, USA.
+* [TestingPays](https://testingpays.com) ([GitHub](https://github.com/TestingPays/)) - TestingPays makes integrating and testing your payment systems easier by providing tips, guides and allowing you to simulate payment gateway responses. We power our apps in browser live tail using elixir channels (replacing ActionCable). We are based in Dublin Ireland.
 
 #### Performance Management
 
