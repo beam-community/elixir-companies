@@ -23,6 +23,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Big Nerd Ranch](http://www.bignerdranch.com) ([GitHub](https://github.com/bignerdranch)) - We design and build innovative applications. We teach developers to do the same through our books and immersive training.
 * [bitcrowd](http://bitcrowd.net) ([GitHub](https://github.com/bitcrowd)) - Berlin based software development and consulting for startups.
 * [Bitgamma](http://bitgamma.com) ([GitHub](https://github.com/bitgamma)) - We develop web, desktop and embedded applications. We code Elixir, C, Java/Javacard, Ruby, JS. We love working on embedded and custom boards.
+* [Briisk](https://briisk.co) ([GitHub](https://github.com/briisk)) - Software agency devoted to defining, designing and developing applications, both for web and mobile. We build custom B2B and B2C products with Ruby, Elixir, Angular, Ionic and React Native. Based in Poznan, Poland.
 * [Carbon Five](http://carbonfive.com) ([blog](http://blog.carbonfive.com)) - Agile Web and Mobile Product Development in San Francisco, NYC, Los Angeles, and Chattanooga. Proud to have Elixir/Phoenix in our toolbox and to support [Wallaby](https://github.com/keathley/wallaby).
 * [CivilCode](http://www.civilcode.io) ([GitHub](https://github.com/civilcode)) - Developing tailored web-based business applications in Montreal, Canada.
 * [Cobenian](http://cobenian.com) ([GitHub](https://github.com/Cobenian)) - We solve problems with software.
