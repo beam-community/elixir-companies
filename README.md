@@ -151,6 +151,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Nebo15](http://nebo15.com/) ([Github](https://github.com/Nebo15)) - Large peer-to-peer lending platform completely on Elixir, from scratch. Kiev, Ukraine.
 * [Resuelve](https://resuelve.mx) ([Github](https://github.com/resuelve)) - Multiple retail financial services in LATAM. Elixir is used in the CBS (Core Banking System) and P2P loan service.
 * [Planswell](https://planswell.com/) ([Github](https://github.com/planswell)) - The company that helps you feel better about your money. Fund your retirement. Send a child to school. Pay off your debts. Planswell shows you how to achieve your biggest goals with one single monthly contribution. Toronto, Canada.
+* [TrustBK](https://trustbk.com) - A Bank for Small and Medium Businesses. Elixir is used for the Core Banking System (CBS). Based in Paris, France.
 
 #### Food
 
