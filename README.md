@@ -98,6 +98,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Customer Lobby](https://www.customerlobby.com) ([Github](https://github.com/customerlobby)) - Repeat Customer & Reviews Software. We are currently in the process of building a couple of services that use elixir. Berkeley, CA, USA.
 * [Elevio](https://elev.io) ([Github](https://github.com/elevio)) - We build contextual and predictive help for site and app owners so their customers can help themselves. We use Elixir for handling small data, orchestrating background jobs and messaging. We are based in sunny Melbourne, Australia.
 * [HiOperator](https://www.hioperator.com) - Customer support as-a-service. Think of us like AWS for customer service. We scale companies phone, chat or email support. YC-S16.
+* [StellaService](https://stellaservice.com) ([Github](https://github.com/stellaservice)) - We build products that optimize front-line team performance, gather feedback and insights and improve customer experiences across contact centers and stores. Now hiring (Q3 for Q4 '17) Elixir engineers for new product development. Based in NYC, USA.
 
 #### Developers
 * [GitMonitor](https://gitmonitor.com) ([Blog](https://blog.gitmonitor.com)) - Custom rules and notifications for your GitHub repositories
