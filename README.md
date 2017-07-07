@@ -43,6 +43,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Gaslight](http://teamgaslight.com) - Software Development, consulting, coaching, training, Organizer of the Cincinnati Elixir group. Now using Elixir and Phoenix in production.
 * [Govannon](https://govannon.nl) - Software development, consulting and full stack engineers.
 * [GrillWork](http://grillwork.io) ([GitHub](https://github.com/grillwork))- Helping business through software. Working in Elixir/Phoenix/Ruby/Rails/Node/Javascript/ReactJS. We use Elixir for all backend/api work and for network programming.
+* [Grok Interactive](https://www.grok-interactive.com) ([GitHub](https://github.com/GrokInteractive)) - We help companies solve hard problems and real-time communication with Elixir/Phoenix and React Native. Architecture, Training, and Implementation. All local developers, based in San Antonio, Texas.
 * [Hashrocket](https://hashrocket.com) ([GitHub](https://github.com/hashrocket)) - Hashrocket is an expert team of designers, developers and consultants.
 We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer consulting, design, development, identity and training services.
 * [Icicle Technologies](http://www.icicletech.com)([GitHub](https://github.com/icicletech)) - Provides Consulting, Product Development on Elixir & Phoenix. Organizer of Bangalore Elixir Group, built [ElixirNation.io](http://elixirnation.io).
