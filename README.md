@@ -3,6 +3,9 @@
 
 A curated list of companies using Elixir in production, organized by industry.
 
+#### Autonomous Vehicles
+* [EasyMile](https://easymile.com) ([GitHub](https://github.com/EasyMile)) - We design and build autonomous vehicles in France. We use Elixir for our Fleet Management suite.
+
 #### Business Intelligence
 * [Adjust](https://www.adjust.com/) ([Github](https://github.com/adjust)) - Mobile user attribution and advanced app analytics, combined with store stats. How elixir being used [Click here](http://big-elephants.com/). Berlin, Germany.
 * [Aircloak](https://aircloak.com/) ([GitHub](https://github.com/Aircloak)) - Aircloak’s first-in-class real-time database anonymization solution provides instant privacy compliance and enables high-quality analytics for any data set and any use case. Aircloak's from Berlin. [Saša Jurić](https://github.com/sasa1977), the author of [Elixir in Action](https://www.manning.com/books/elixir-in-action) is software engineer at Aircloak.
@@ -36,7 +39,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Digital Natives Budapest](http://www.digitalnatives.hu/) 10 years experience in RoR, JavaScript, since 2015 we do Elixir / Elm. We work for startups and bigger companies as well, we also founded a couple of SaaS products and a coding bootcamp. We host and organise among others [Elixir](http://www.meetup.com/budapest-elixir/) and [Ruby](http://www.meetup.com/budapest-rb/) meetups in Budapest. [GitHub](https://github.com/digitalnatives)
 * [DockYard](https://dockyard.com) ([GitHub](https://github.com/dockyard)) - Projects, staff augmentation, coaching, & code audits. Organizer of Boston Elixir. Specialize in Phoenix backends with Ember frontends. [Chris McCord](https://github.com/chrismccord) is Architectural Engineer and creator of Phoenix.
 * [Dynamo](http://godynamo.com) ([Github](https://github.com/DynamoMTL)) - We build beautiful digital experiences for startups and other innovators. Using Elixir to power our backends. Based in Montreal, Canada.
-* [Echobind](https://echobind.com)([Github](https://github.com/echobind)) - As a US-based full-service agency, we leverage Elixir to drive robust web and mobile applications. From design and implementation to trainings and code audits, we help our clients achieve. 
+* [Echobind](https://echobind.com)([Github](https://github.com/echobind)) - As a US-based full-service agency, we leverage Elixir to drive robust web and mobile applications. From design and implementation to trainings and code audits, we help our clients achieve.
 * [EL Passion](http://www.elpassion.com) ([GitHub](https://github.com/elpassion)) - Helping startups launch their products since 2010. Coding in Ruby, JS, Elixir, Swift, Kotlin. Organizer of [Elixir Warsaw Meetup](http://www.meetup.com/ElixirWarsaw-Meetup/).
 * [Erlang Solutions](https://www.erlang-solutions.com) - Erlang Solutions provide on-site/remote Elixir and Erlang consulting, architecture/code reviews and training for companies of all sizes - from startups to Fortune 100 companies - with over 15 years of experience designing scalable, fault-tolerant systems in Erlang/OTP. The company employs over 100 specialists working out of London, Stockholm, Krakow, Budapest, Berlin, San Francisco, Seattle and Buenos Aires. [GitHub](https://github.com/esl).
 * [Fully Forged](http://fullyforged.com) - Software development and training, based in London.
