@@ -149,6 +149,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 #### Fintech
 
+* [Cinch Financial](https://www.cinchfinancial.com/) ([Github](https://github.com/cinch-financial)) - A totally unbiased, comprehensive, personal financial advisor. We use elixir/phoenix for multiple services. Boston, MA, USA.
 * [Kittysplit](https://kittysplit.com) - A webapp that alows easy splitting of group expenses.
 * [MarketFactory](https://marketfactory.com) ([Github](https://github.com/MarketFactory))- A low-latency FX platform connecting banks/traders to 70+ different FX venues. We leverage elixir/phoenix for multiple back end microservices (ie. trade execution). New York, NY, USA.
 * [Nebo15](http://nebo15.com/) ([Github](https://github.com/Nebo15)) - Large peer-to-peer lending platform completely on Elixir, from scratch. Kiev, Ukraine.
