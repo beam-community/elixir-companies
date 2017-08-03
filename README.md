@@ -124,6 +124,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 + [Quiqup](https://quiqup.com) ([Github](https://github.com/QuiqUpLTD)) - Quiqup is a London-based startup offering on-demand, short distance logistics solutions. The data bus and core message broker are written in Elixir.
 + [Raise Marketplace](https://www.raise.com) - Buy and Sell Gift Cards - Exchange Gift Cards. Pricing recommendation API is developed in Elixir. Chicago, Illinois, US.
 + [RevZilla Motorsports](https://revzilla.com) ([GitHub](https://github.com/revzilla/)) - Philadelphia-based retailer bent on enhancing the experience of the Motorcycle Enthusiast. Home-grown Elixir ecom system in production.
++ [Shopybot](https://www.shopybot.com) - Facebook Chatbot platform for E-Commerce.
 + [The book of everyone](https://thebookofeveryone.com) ([Github](https://github.com/thebookofeveryone)) - Personalised books and unique gifts for your loved ones, made by our talented team of creatives. Barcelona, Catalunya, Spain.
 + [The RealReal](https://www.therealreal.com) ([GitHub](https://github.com/TheRealReal)) - Marketplace for luxury fashion resale products.
 
