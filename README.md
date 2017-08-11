@@ -104,6 +104,9 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [HiOperator](https://www.hioperator.com) - Customer support as-a-service. Think of us like AWS for customer service. We scale companies phone, chat or email support. YC-S16.
 * [StellaService](https://stellaservice.com) ([Github](https://github.com/stellaservice)) - We build products that optimize front-line team performance, gather feedback and insights and improve customer experiences across contact centers and stores. Now hiring (Q3 for Q4 '17) Elixir engineers for new product development. Based in NYC, USA.
 
+#### Dating
+* [Coffee Meets Bagel](https://coffeemeetsbagel.com/) ([Blog](https://tech.coffeemeetsbagel.com)) ([Github](https://github.com/Coffee-Meets-Bagel)) - A woman focused relationship application. We use Elixir to power an async management framework to control all of our workers.. We also use it to monitor the health of our api. San Francisco, CA.
+
 #### Developers
 * [GitMonitor](https://gitmonitor.com) ([Blog](https://blog.gitmonitor.com)) - Custom rules and notifications for your GitHub repositories
 * [Timber](https://timber.io) ([GitHub](https://github.com/timberio)) - Timber makes logging useful again. Simple to set up, powerful search and filtering at your fingertips.
