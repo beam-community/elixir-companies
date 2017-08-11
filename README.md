@@ -242,7 +242,7 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 * [LookBookHQ](http://lookbookhq.com) ([GitHub](https://github.com/buzzdata)) - Enabling marketers to package content into seamless experiences. We use Elixir to calculate analytics for our customers. Toronto, Canada.
 * [Meltwater](https://meltwater.com) - ([GitHub](https://github.com/meltwater)) - Gather insights from outside the firewall to empower your business decisions. Using Elixir for backend services. San Francisco, USA.
 * [Moz](https://moz.com/) - ([GitHub](https://github.com/seomoz)) - Products to power your online visibility.
-* [Workwithopal](https://www.workwithopal.com/) - ([Github](https://github.com/opallabs)) - The Opal Platform is designed for marketing team collaboration, facilitating the production and orchestration of the brand marketing process. Portland, OR, USA.
+* [Opal](https://www.workwithopal.com/) - ([Github](https://github.com/opallabs)) - Opal is a collaboration platform for brand marketers. We use Elixir in a few back-end services. Portland, OR, USA.
 
 #### Payment
 
