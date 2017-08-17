@@ -15,10 +15,11 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### Collaboration
 
-* [Canvas](https://usecanvas.com) ([GitHub](https://github.com/usecanvas)) - Notes for team of nerds.
+* Canvas ([GitHub](https://github.com/usecanvas)) - Notes for team of nerds.
 * [Planning Center](https://planning.center) ([Github](https://github.com/planningcenter)) - Planning Center's suite of apps work together to allow more ministry in your Ministry. Planning Center is from USA. And it's adopting Elixir to it's stack.
 
 #### Consulting
+
 * [361° DIGITAL](https://361.de) - We are a digital agency based in Stuttgart, Germany. We create web and mobile apps using Elixir, Phoenix, React and React Native.
 * [Agilion](https://www.agilion.com) ([GitHub](https://github.com/agilionapps)) - Software development and consulting.
 * [AmberBit](https://www.amberbit.com) ([GitHub](https://github.com/amberbit)) - We are polyglot developers (but mostly Ruby, JavaScript, Elixir, Elm).
@@ -58,7 +59,6 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [LessEverything](http://lesseverything.com) Companies hire us to build their big software idea, create integrations between products, improve their conversion rates or just bring new ideas to the table.
 * [Made by Many](http://madebymany.com/) ([GitHub](https://github.com/madebymany)) - We help businesses identify market opportunities, bring successful digital products to life and create the culture & capabilities to sustain them.
 * [Mirego](http://mirego.com) ([GitHub](https://github.com/mirego)) - We help our clients innovate and reinvent themselves in order to prosper in the digital era.
-* [Nebo #15](http://nebo15.com/) ([GitHub](https://github.com/Nebo15/)) - A Kiev based fintech R&D team, part of a large private equity fund. We specialize in large-scale financial projects that entirely build on Elixir, React and Kubernetes.
 * [Neon Tree Solutions](http://neontree.pl) - Elixir, Erlang, React, Scala and Node.js outsourcing and consulting. We specialize in helping out start-ups and small companies to find the best tools for the job.
 * [Nerds & Company](https://nerds.company) ([GitHub](https://github.com/nerds-and-company)) - Creating value for companies by creating value for people. A digital agency based in the Netherlands. Specialized in innovative projects. Experts in Elixir, Ruby and mobile.
 * [Plataformatec](http://plataformatec.com.br/) ([GitHub](https://github.com/plataformatec)) - Project inception, coaching, tailored projects, general consulting.  Sponsor of Elixir, employer to Elixir's BDFL.
@@ -74,7 +74,6 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Stride Consulting](http://www.stridenyc.com/) ([Github](https://github.com/stride-nyc)) - We’re NYC Agile Software Development Specialists. We help tech teams be their best inside the code and out. NYC, USA.
 * [thoughtbot](https://thoughtbot.com) ([GitHub](https://github.com/thoughtbot)) - We work with companies to design, develop and grow high quality web and mobile products. We write and maintain open source software like [ExMachina](https://github.com/thoughtbot/ex_machina).
 * [toy rocket science](http://toyrocketscience.com) ([GitHub](https://github.com/trsc)) - We are a small expert team of developers in Berlin. We have a broad range of clients and make software that ranges from heavy-lifting on the server to the frontend, including apps.
-* [Tungsten Studios](http://tungstenstudios.io) - We build ideas. Elixir/Phoenix/Ruby/Rails/ReactJS/Javascript.
 * [Vinsol](http://vinsol.com) ([blog](http://vinsol.com/blog)) - Leading Web and Mobile Product Development company with expertise in Ecommerce. Maintainers of [SpreeCommerce(Rails)](https://github.com/spree/spree) and [NectarCommerce(Elixir/Phoneix)](https://github.com/vinsol/nectarcommerce) Open source projects.
 * [wemake.services](http://wemake.services/) ([GitHub](https://github.com/wemake-services)) - We make, craft, and develop web services and mobile applications in Moscow, Russia. We also host [elixir meetups in Moscow](http://elixir-lang.moscow).
 * [woumedia](http://woumedia.com) - Software House and Digital Design Agency from Copenhagen.
@@ -247,7 +246,6 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 #### Payment
 
 * [Spreedly](https://www.spreedly.com) ([Github](https://github.com/spreedly)) - Spreedly believes the best payment experience derives from excellent software combined with business flexibility. Durham, NC, USA.
-* [TestingPays](https://testingpays.com) ([GitHub](https://github.com/TestingPays/)) - TestingPays makes integrating and testing your payment systems easier by providing tips, guides and allowing you to simulate payment gateway responses. We power our apps in browser live tail using elixir channels (replacing ActionCable). We are based in Dublin Ireland.
 
 #### Performance Management
 
@@ -312,7 +310,6 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 
 #### Transportation
 
-* [Ride](https://ride.com) ([Github](https://github.com/ride)) - Ride is the hassle-free ridesharing app that simplifies your commute and connects you with neighbors and coworkers.
 * [Tappsi](https://tappsi.co/) ([GitHub](https://github.com/tappsi)) - Taxi calls easier and safer in Colombia.
 
 #### Traveling
