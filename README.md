@@ -157,10 +157,11 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 * [Cinch Financial](https://www.cinchfinancial.com/) ([Github](https://github.com/cinch-financial)) - A totally unbiased, comprehensive, personal financial advisor. We use elixir/phoenix for multiple services. Boston, MA, USA.
 * [Kittysplit](https://kittysplit.com) - A webapp that alows easy splitting of group expenses.
+* [Kontomatik](https://kontomatik.com) ([Github](https://github.com/kontomatik)) - We provide API to banks for proving client identity (KYC) and reading financial data (input for credit scoring, PFM, invoicing etc). We use Elixir for user panel/administration/business intelligence tools. Based in Warsaw, Poland
 * [MarketFactory](https://marketfactory.com) ([Github](https://github.com/MarketFactory))- A low-latency FX platform connecting banks/traders to 70+ different FX venues. We leverage elixir/phoenix for multiple back end microservices (ie. trade execution). New York, NY, USA.
 * [Nebo15](http://nebo15.com/) ([Github](https://github.com/Nebo15)) - Large peer-to-peer lending platform completely on Elixir, from scratch. Kiev, Ukraine.
-* [Resuelve](https://resuelve.mx) ([Github](https://github.com/resuelve)) - Multiple retail financial services in LATAM. Elixir is used in the CBS (Core Banking System) and P2P loan service.
 * [Planswell](https://planswell.com/) ([Github](https://github.com/planswell)) - The company that helps you feel better about your money. Fund your retirement. Send a child to school. Pay off your debts. Planswell shows you how to achieve your biggest goals with one single monthly contribution. Toronto, Canada.
+* [Resuelve](https://resuelve.mx) ([Github](https://github.com/resuelve)) - Multiple retail financial services in LATAM. Elixir is used in the CBS (Core Banking System) and P2P loan service.
 * [TrustBK](https://trustbk.com) - A Bank for Small and Medium Businesses. Elixir is used for the Core Banking System (CBS). Based in Paris, France.
 
 #### Food
