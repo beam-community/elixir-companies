@@ -180,6 +180,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Seneca Systems](http://seneca.systems/) ([GitHub](https://github.com/SenecaSystems)) - Powerful software for democracy's toughest problems.
 
 #### Healthcare
+* [CoverMyMeds](https://www.covermymeds.com) - CoverMyMeds seamlessly integrates with EHR systems to provide hospitals and providers with ePA functionality at the point of prescribing. Offices in Columbus, OH and Cleveland, OH. 
 * [HotDoc](https://www.hotdoc.com.au) - HotDoc provides services to doctors and their patients.  We provide online bookings, reminders, follow up notifications and more.  We are an Australian based company and use Elixir for some of our services and are looking to use it more.
 * [Mediteo](https://www.mediteo.com) ([Github](https://github.com/mediteo)) - Mediteo is a young Digital Health start-up with the aim to provide the best solution to handle medication in a correct and secure way. Berlin, Germany.
 * [My Meds & Me](https://www.mymedsandme.com) ([GitHub](https://github.com/MyMedsAndMe)) - A leading SaaS provider of web-based adverse event and product quality capture solutions for life sciences. [Click here to see how elixir being used at My Meds & Me.](https://www.youtube.com/watch?v=ZCYEX6ZIJgM) The company based in London.
