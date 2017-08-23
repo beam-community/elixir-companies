@@ -279,6 +279,7 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 #### Security
 * [Tinfoil Security](https://www.tinfoilsecurity.com/) - ([GitHub](https://github.com/tinfoil/)) - Tinfoil Security provides a dynamic security scanning solution for DevOps. We integrate with your CI system to find and help resolve security vulnerabilities in web applications and web services before they ever get deployed to production. We use Elixir to power our web service scanning engine.
 * [Wombat Security Technologies](https://www.wombatsecurity.com/) - Wombat Security provides information security awareness and training software to help organizations teach their employees secure behavior. Our Security Education Platform includes integrated knowledge assessments, a library of simulated attacks, and interactive training modules, which have been proven to reduce successful phishing attacks and malware infections by up to 90%.
+* [Omagatoki 大禍時](https://omagatoki.co) - ([GitHub](https://github.com/omagatoki)) - VPN service which is transparent, secure and featureful.
 
 #### Sensors
 
