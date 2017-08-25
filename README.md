@@ -315,6 +315,7 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 #### Transportation
 
 * [Tappsi](https://tappsi.co/) ([GitHub](https://github.com/tappsi)) - Taxi calls easier and safer in Colombia.
+* [Liftit](https://liftit.co/) ([GitHub](https://github.com/Liftitapp)) - Liftit - Your best friend with a truck.
 
 #### Traveling
 
