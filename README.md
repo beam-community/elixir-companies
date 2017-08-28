@@ -77,6 +77,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Vinsol](http://vinsol.com) ([blog](http://vinsol.com/blog)) - Leading Web and Mobile Product Development company with expertise in Ecommerce. Maintainers of [SpreeCommerce(Rails)](https://github.com/spree/spree) and [NectarCommerce(Elixir/Phoneix)](https://github.com/vinsol/nectarcommerce) Open source projects.
 * [wemake.services](http://wemake.services/) ([GitHub](https://github.com/wemake-services)) - We make, craft, and develop web services and mobile applications in Moscow, Russia. We also host [elixir meetups in Moscow](http://elixir-lang.moscow).
 * [woumedia](http://woumedia.com) - Software House and Digital Design Agency from Copenhagen.
+* [Zuppler](http://www.zupplerworks.com/) ([GitHub](https://github.com/zuppler)) - We are a US based company. We try to offer the easiest way to let customers order food online for takeout or delivery. We develop all recent backend software using Elixir.
 
 #### Communication
 
