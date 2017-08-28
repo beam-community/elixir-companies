@@ -141,6 +141,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 #### Energy
 
 * [Brighterlink](https://www.brighterlink.io) ([GitHub](https://github.com/Brightergy)) - All-in-one energy platform for analytics, utilities and procurement. We use Elixir for backend API (powered by phoenix) and also for thousands of worker processes to fetch, parse and write data from embedded devices to our time-series database.
+* [Entelios](http://www.entelios.com) - Entelios enables large industrial energy consumers to commercialize their load flexibility into different energy markets in Europe, such as the classical demand response programs (PRL, SRL, etc.) or Intraday. Entelios' automated and distributed load control system is implemented in Erlang and Elixir. Entelios is based in Berlin and Munich, Germany.
 
 #### Expert Networks
 
