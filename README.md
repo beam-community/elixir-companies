@@ -205,6 +205,7 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 * [ShoCard](https://www.shocard.com) ([GitHub](https://github.com/shocardinc)) - Digital identity on the blockchain. Using Elixir/Phoenix for backend services: RESTful JSON API and internal tools.
 
 #### Insurance
+* [Corvus Insurance](https://www.corvusinsurance.com) ([GitHub](https://github.com/corvusinsurance)) - Commercial insurance company building technology enabled insurance products using sensor and IoT data. Using Elixir/Phoenix/Elm to build the CrowBar platform used by Brokers, Insurance Buyers and internal staff. Based in Boston, Massachusetts, USA.
 * [prima.it](https://www.prima.it) - Italian insurance company with a focus on cutting edge technologies.
 
 #### Internet of Things
