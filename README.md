@@ -57,6 +57,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Kabisa](http://www.kabisa.nl) - Software crafts(wo)men, passionately committed to exceed our customers expectations in every step we take. We value creativity and flexibility. Co-Organizer of the [Amsterdam Elixir meetup](http://www.meetup.com/Amsterdam-Elixir/).
 * [Lab Zero](https://labzero.com) ([GitHub](https://github.com/labzero)) - A San Francisco based development and design group. We specialize in Ruby, JS and Elixir.
 * [LessEverything](http://lesseverything.com) Companies hire us to build their big software idea, create integrations between products, improve their conversion rates or just bring new ideas to the table.
+* [Littlelines](http://littlelines.com) Provides development services, strategy, collaboration, upgrades and code reviews. Littlelines is located in the midwest and serves clients worldwide. We specialize in Elixir and Phoenix, Ruby on Rails, Swift and Vue.
 * [Made by Many](http://madebymany.com/) ([GitHub](https://github.com/madebymany)) - We help businesses identify market opportunities, bring successful digital products to life and create the culture & capabilities to sustain them.
 * [Mirego](http://mirego.com) ([GitHub](https://github.com/mirego)) - We help our clients innovate and reinvent themselves in order to prosper in the digital era.
 * [Neon Tree Solutions](http://neontree.pl) - Elixir, Erlang, React, Scala and Node.js outsourcing and consulting. We specialize in helping out start-ups and small companies to find the best tools for the job.
@@ -96,6 +97,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Telnyx](https://telnyx.com/) ([Github](https://github.com/team-telnyx)) - Telnyx provides a cloud-based portal & API offering carrier grade voice services such as Origination, Termination and SIPtrunking over the Internet. Chicago, IL, USA.
 * [Tongdao](https://tongdao.io) ([Github](https://github.com/tongdao)) - Tongdao is a data-driven marketing platform designed to enable businesses to understand their customers and engage them in a smart and personalized way across multiple channels. Using Elixir to power our messaging system and data collection backend. Shanghai, China.
 * [VoiceLayer](https://voicelayer.io) - Integrate realtime Push-to-Talk into your application.
+* [Xapix](https://www.xapix.io/) - XapiX makes it easy for enterprise developers to discover, integrate and combine data and services from multiple internal or public data sources. As the “Github of APIs” XapiX helps businesses create, improve and distribute API-based products. XapiX uses Elixir for various data transformation applications. XapiX is based in Berlin, Germany, and San Francisco, USA.
 
 #### Customer Service
 
@@ -105,6 +107,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [LiveHelpNow](https://www.livehelpnow.net) ([Github](https://github.com/livehelpnow)) - Customer service software featuring chat, ticket, knowledge base and callback systems. Elixir will drive our entire system in the near future, but runs a majority of our software now. We are based in Bethlehem, PA, USA
 * [Podium](https://www.podium.com) ([Github](https://github.com/podium)) - We power customer interaction and drive online reviews for local businesses. YC W16. Elixir powers a lot of our software, and we're based in Lehi, UT, USA.
 * [StellaService](https://stellaservice.com) ([Github](https://github.com/stellaservice)) - We build products that optimize front-line team performance, gather feedback and insights and improve customer experiences across contact centers and stores. Now hiring (Q3 for Q4 '17) Elixir engineers for new product development. Based in NYC, USA.
+* [Zenloop](http://www.zenloop.com/) ([Github](https://github.com/zenloopGmbH/)) - Collect and analyze feedback, using Net-Promoter-Score (NPS). Most of the backend is Elixir and Phoenix. Based in Berlin, Germany.
 
 #### Dating
 * [Coffee Meets Bagel](https://coffeemeetsbagel.com/) ([Blog](https://tech.coffeemeetsbagel.com)) ([Github](https://github.com/Coffee-Meets-Bagel)) - A woman focused relationship application. We use Elixir to power an async management framework to control all of our workers.. We also use it to monitor the health of our api. San Francisco, CA.
@@ -124,6 +127,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 + [Fave by Groupon](https://myfave.com) ([GitHub](https://github.com/kfit-dev)) - Get discounted deals from restaurants, cafes, bars, spa, salon, and gyms near you. Southeast Asia.
 + [Fontstore](https://www.fontstore.com) ([GitHub](https://github.com/fontstore)) - A font subscription service for designers. We use Elixir/Phoenix to build a web API for the website and handle WebSocket connection for the desktop applications.
++ [LETOTE](https://letote.com) ([GitHub](https://github.com/LeToteTeam)) - Rent and wear all the latest fashion, without ever stepping foot inside a store.  We use Elixir, Phoenix, and Nerves in our fulfillment center for speed, efficiency, and automation. Located in San Francisco, CA.
 + [Packlane](https://packlane.com) ([GitHub](https://github.com/packlane)) - Design and order custom printed packaging online.
 + [Postmates](http://postmates.com) ([Github](https://github.com/postmates)) - On-demand delivery company based in San Francisco. We use Elixir in a lot of our internal projects (merchant inventory system, partner tools portal) and we have plans on open-sourcing a Thumbor library very soon.
 + [Quiqup](https://quiqup.com) ([Github](https://github.com/QuiqUpLTD)) - Quiqup is a London-based startup offering on-demand, short distance logistics solutions. The data bus and core message broker are written in Elixir.
@@ -166,6 +170,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Nebo15](http://nebo15.com/) ([Github](https://github.com/Nebo15)) - Large peer-to-peer lending platform completely on Elixir, from scratch. Kiev, Ukraine.
 * [Planswell](https://planswell.com/) ([Github](https://github.com/planswell)) - The company that helps you feel better about your money. Fund your retirement. Send a child to school. Pay off your debts. Planswell shows you how to achieve your biggest goals with one single monthly contribution. Toronto, Canada.
 * [Resuelve](https://resuelve.mx) ([Github](https://github.com/resuelve)) - Multiple retail financial services in LATAM. Elixir is used in the CBS (Core Banking System) and P2P loan service.
+* [Solarisbank](https://www.solarisbank.de/) ([Github](https://github.com/solarisbank)) - Provider of financial solutions for other financial entities and companies.
 * [TrustBK](https://trustbk.com) - A Bank for Small and Medium Businesses. Elixir is used for the Core Banking System (CBS). Based in Paris, France.
 
 #### Food
@@ -178,6 +183,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Bold Poker](https://boldpoker.net) - ([GitHub](https://github.com/boldpoker)) - Bold Poker transforms mobile devices into an efficient and professional poker dealer. Elixir is used for the backend communication service the clients connect to as well as for the website.
 * [Emagroup](http://www.emagroup.cn/) - ([Github](https://github.com/repong)) - Develop mobile games. Elixir is used for building game management tools.
 * [Undead Labs](http://undeadlabs.com/) ([GitHub](https://github.com/undeadlabs)) - Creators of the smash hit survival-fantasy game _State of Decay_ and forthcoming tactical creature battler _Moonrise_.
+* [Wooga](https://www.wooga.com/) ([GitHub](https://github.com/wooga)) - Creators of Bubble Island and Futurama Game of Drones. They use Erlang and Elixir in some teams for building backend services.
 
 #### Government
 
@@ -216,6 +222,7 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 * [Avvo](https://www.avvo.com) ([Github](https://github.com/avvo)) - We believe that more information helps you make better decisions. At Avvo, we provide you with detailed information on lawyers and legal issues so that you can make the choices that are right for you. Seattle, Washington, USA.
 * [CONTRAKTOR](https://www.contraktor.com.br) - Legal contracts toolbox for Small and Medium companies! Contract creation, auto review, workflow, e-signature and contract management. Save time and avoid mistakes. Welcome to the 4th Industrial Revolution. Lawyers are ready to be disrupted? Come with us first in Brazil.
 * [Hello Sign](https://www.hellosign.com) ([Github](https://github.com/HelloFax)) - eSignature platform. Send and receive electronic signatures securely with the end-user solution or the eSignature API. San Fransisco, CA, USA.
+* [Volders](https://www.volders.de/) ([Github](https://github.com/volders)) - Management and canceling of german contracts. Berlin, Germany.
 
 #### Marketplaces
 
