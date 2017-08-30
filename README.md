@@ -125,6 +125,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 + [Fave by Groupon](https://myfave.com) ([GitHub](https://github.com/kfit-dev)) - Get discounted deals from restaurants, cafes, bars, spa, salon, and gyms near you. Southeast Asia.
 + [Fontstore](https://www.fontstore.com) ([GitHub](https://github.com/fontstore)) - A font subscription service for designers. We use Elixir/Phoenix to build a web API for the website and handle WebSocket connection for the desktop applications.
++ [LETOTE](https://letote.com) ([GitHub](https://github.com/LeToteTeam)) - Rent and wear all the latest fashion, without ever stepping foot inside a store.  We use Elixir, Phoenix, and Nerves in our fulfillment center for speed, efficiency, and automation. Located in San Francisco, CA.
 + [Packlane](https://packlane.com) ([GitHub](https://github.com/packlane)) - Design and order custom printed packaging online.
 + [Postmates](http://postmates.com) ([Github](https://github.com/postmates)) - On-demand delivery company based in San Francisco. We use Elixir in a lot of our internal projects (merchant inventory system, partner tools portal) and we have plans on open-sourcing a Thumbor library very soon.
 + [Quiqup](https://quiqup.com) ([Github](https://github.com/QuiqUpLTD)) - Quiqup is a London-based startup offering on-demand, short distance logistics solutions. The data bus and core message broker are written in Elixir.
