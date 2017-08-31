@@ -332,6 +332,7 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 
 * [Aviasales](http://aviasales.ru) ([Github](https://github.com/KosyanMedia)) – Flights Meta Search Engine for Russian market with the main office on Phuket, Thailand. We use Elixir for our static content generator, messengers bots and couple of microservices.
 * [Lonely Planet](http://www.lonelyplanet.com) ([Github](https://github.com/lonelyplanet)) - Lonely Planet is renowned for its first-hand approach, up-to-date maps and commitment to providing the best information for travellers in the United States. Elixir currently being used for couple of very important microservices. [Find out more](https://medium.com/@derrickburns/building-a-modern-scalable-backend-modernizing-monolithic-applications-15fc3b8101fa#.ki1sfqqyg)
+* [Peek](https://www.peek.com) ([GitHub](https://github.com/peek-travel/)) - Peek makes the world’s tours & activities easily bookable — anytime, anywhere. Peek uses Elixir in backend services powering Peek.com and Peek Pro. San Francisco, CA.
 * [Qixxit](https://www.qixxit.de) - Qixxit is your personal mobility advisor. We simplify the complexity of mobility for you and combine the many ways of getting from A to B for you in a convenient way. Elixir being used for the backend part. Berlin, Germany
 
 #### Video
