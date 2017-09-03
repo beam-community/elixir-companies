@@ -120,6 +120,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 + [Lexmark](https://www.lexmark.com) ([GitHub](https://github.com/OpenAperture)) - Provider of printing and imaging products, software, solutions and services that help customers save time and money.
 + [PagerDuty](http://pagerduty.com) ([GitHub](https://github.com/PagerDuty)) - PagerDuty is your fastest path to incident resolution, helping IT Operations and DevOps teams deliver on the promise of agility, performance, and uptime.
++ [Pivotal](https://pivotal.io) ([GitHub](https://github.com/pivotal)) - Leader in software engineering, Pivotal is the company behind CloudFoundry, the Java Spring Framework, and other products. They wrote the new [RabbitMQ CLI](https://github.com/rabbitmq/rabbitmq-cli/) and are [pushing Elixir](http://engineering.pivotal.io/post/elixir-clustering-on-cloud-foundry/) through their engineering blog.
 + [Puppet Labs](https://puppetlabs.com) ([GitHub](https://github.com/puppetlabs)) - Leader in IT automation. Host of the [Portland, OR Elixir Meetup](http://www.meetup.com/elixir-pdx/). Internal Elixir and Phoenix apps in production. All new internal development targeted at Elixir.
 + [Stampery](https://stampery.com) ([GitHub](https://github.com/stampery)) - 21st century notarization at your fingertips. We offer an immutable record of existence, integrity and ownership of all your files and email by leveraging the Blockchain technology.
 
