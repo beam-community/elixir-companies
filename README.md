@@ -5,6 +5,7 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### Autonomous Vehicles
 * [EasyMile](https://easymile.com) ([GitHub](https://github.com/EasyMile)) - We design and build autonomous vehicles in France. We use Elixir for our Fleet Management suite.
+* [High-Mobility](https://www.high-mobility.com/) ([GitHub](https://github.com/highmobility)) - We are building developer platform for connected cars which simplify collaboration between carmakers and software developers. We are using Elixir in our developer center, car emulators and in prototype cars.
 
 #### Business Intelligence
 * [Adjust](https://www.adjust.com/) ([Github](https://github.com/adjust)) - Mobile user attribution and advanced app analytics, combined with store stats. How elixir being used [Click here](http://big-elephants.com/). Berlin, Germany.
