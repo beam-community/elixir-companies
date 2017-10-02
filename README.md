@@ -248,6 +248,7 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 
 #### Non-profit Organization
 
+* [Communication Service for the Deaf](https://www.csd.org/) ([Github](https://github.com/C-S-D)) - Communication Service for the Deaf's [Vineya](https://govineya.com) ASL (American Sign Language) interpreting platform allows interpreters to work for any agency across the United States.  The [interpreter website](https://interpreter.govineya.com) for Vineya uses Elixir, Phoenix and RabbitMQ.
 * [Everyday Hero](https://www.everydayhero.com) - Everydayhero is transforming how people give to and connect with the causes they care about most.
 
 #### Online Marketing
