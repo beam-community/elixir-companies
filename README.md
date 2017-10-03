@@ -329,6 +329,7 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 
 #### Transportation
 
+* [Cabify](https://www.cabify.com/) ([GitHub](https://github.com/cabify)) - Cabify - A safer, ethical and innovative taxi app alternative. Elixir in production since 2016. Real-time applications and microservices with large amounts of data. Madrid/Barcelona.
 * [Liftit](https://liftit.co/) ([GitHub](https://github.com/Liftitapp)) - Liftit - Your best friend with a truck.
 * [Tappsi](https://tappsi.co/) ([GitHub](https://github.com/tappsi)) - Taxi calls easier and safer in Colombia.
 
