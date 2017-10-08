@@ -146,9 +146,9 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 #### Education
 * [Albert](https://www.albert.io/) ([Github](https://github.com/albert-io)) - Learn anything through interactive practice: College math and science, Advanced Placement®, SAT®, ACT®, GRE®, GMAT®, literature, social science, history, and more. Our API services are built with Elixir, Phoenix, and PostgreSQL. Chicago, Illinois.
-
 * [Blake eLearning](http://readingeggs.com) - Blake eLearning is dedicated to making learning fun, motivational and effective for young children, teaching the essential skills needed for success at school.
 * [Grasp](https://play.google.com/store/apps/details?id=com.gordonbisnor.grasp&hl=en) - Android/iOS/Web application facilitating real-time education group work
+* [Quero Education](http://quero.education/en) ([GitHub](https://github.com/quero-edu)) - Our marketplace helps students search, compare, and enroll in college programs for a price they can afford. Some of our products and internal tools use Elixir and Phoenix in production. Based in Sao Jose dos Campos, Brazil.
 * [Workshops.de](https://workshops.de) ([Github](https://github.com/workshops-de)) - An education company based in Essen, Germany. Well known for high quality workshops in the information technology area. The web application is entirely written in Elixir and based on the Phoenix Framework - running in production since early 2016.
 
 #### Energy
