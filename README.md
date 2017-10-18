@@ -76,6 +76,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [RokkinCat](http://rokkincat.com) ([GitHub](https://github.com/rokkincat)) - Build projects, consulting, mobile and backend development. Wide range of clients.
 * [Semaphore Mobile](https://www.semaphoremobile.com/)
   ([GitHub](https://github.com/semaphoremobile)) - We are a custom mobile application company based in Dallas. We use Elixir to build backend CMS and APIs for our clients web and mobile products.
+* [Sophilabs](https://sophilabs.co) ([Elixir and Phoenix](https://sophilabs.co/services/elixir-phoenix-development)) - We are an agile software design and development agency. We deliver top quality software through agile and perfectionist teams. USA based company with main development office located in South America for timezone convenience.
 * [Substantial](https://substantial.com/)
   ([GitHub](https://github.com/substantial)) - We are a digital product studio headquartered in Seattle. We use Elixir to build backends for web and mobile products.
 * [Stride Consulting](http://www.stridenyc.com/) ([Github](https://github.com/stride-nyc)) - We’re NYC Agile Software Development Specialists. We help tech teams be their best inside the code and out. NYC, USA.
