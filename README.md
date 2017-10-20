@@ -289,6 +289,7 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 #### Real Estate
 
 * [Housing](https://housing.com/) - Housing.com is an Indian online real estate listing portal that simplifies finding, renting, and selling homes in India.
+* [Nested](https://nested.com/) - Nested is an estate agent with a difference. We guarantee you a fair sale price for your home so you can move on chain-free. ([Github](https://github.com/nested-tech)) - Elixir powers our backend. London, UK.
 * [Opendoor](https://www.opendoor.com) - Opendoor buys your home from you, so you can skip months of selling and start your next chapter.
 
 #### Research
