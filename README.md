@@ -292,6 +292,7 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 * [EXR](https://www.exrny.com/) ([GitHub](https://github.com/exrny)) - EXR is a residential and commercial 
 real estate brokerage building a better experience for buying, selling, and leasing real estate.
 * [Housing](https://housing.com/) - Housing.com is an Indian online real estate listing portal that simplifies finding, renting, and selling homes in India.
+* [IdealSpot](https://www.idealspot.com) - IdealSpot provides local market data for retail and real estate. We use Elixir for distributed data aggregation and multiple backend services. Austin, TX, USA.
 * [Nested](https://nested.com/) - Nested is an estate agent with a difference. We guarantee you a fair sale price for your home so you can move on chain-free. ([Github](https://github.com/nested-tech)) - Elixir powers our backend. London, UK.
 * [Opendoor](https://www.opendoor.com) - Opendoor buys your home from you, so you can skip months of selling and start your next chapter.
 
