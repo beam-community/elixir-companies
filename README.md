@@ -17,7 +17,7 @@ A curated list of companies using Elixir in production, organized by industry.
 
 #### Consulting
 * [Agilion](https://www.agilion.com) ([GitHub](https://github.com/agilionapps)) - Software development and consulting.
-* [Alembic](http://alembic.com.au) ([GitHub](https://github.com/team-alembic)) - Australian based Elixir, Phoenix and GraphQL development and consulting.
+* [Alembic](http://alembic.com.au) ([GitHub](https://github.com/team-alembic)) - Australian based Elixir, Phoenix and GraphQL development and consulting. Organisers of [Elixir Sydney Meetup](http://elixir.sydney).
 * [AmberBit](https://www.amberbit.com) ([GitHub](https://github.com/amberbit)) - We are polyglot developers (but mostly Ruby, JavaScript, Elixir, Elm).
 * [AppUnite](https://appunite.com) ([GitHub](https://github.com/appunite)) - We are efficient, goal-oriented software development team of professionals specialized in mobile and web.
 * [Big Nerd Ranch](http://www.bignerdranch.com) ([GitHub](https://github.com/bignerdranch)) - We design and build innovative applications. We teach developers to do the same through our books and immersive training.
