@@ -223,6 +223,7 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 * [Xerpa](http://www.xerpa.com.br) ([GitHub](https://github.com/Xerpa)) - Xerpa is a SaaS company aiming to simplify and modernize HR, payroll and benefits administration for Brazilian SMBs and their employees. Entire stack is functional: Elixir/Phoenix on the backend with ClojureScript frontend.
 
 #### Identity
+* [Onfido](https://onfido.com) ([GitHub](https://github.com/onfido)) - Onfido builds trust in an online world by helping businesses digitally verify people’s identities.
 * [ShoCard](https://www.shocard.com) ([GitHub](https://github.com/shocardinc)) - Digital identity on the blockchain. Using Elixir/Phoenix for backend services: RESTful JSON API and internal tools.
 
 #### Insurance
