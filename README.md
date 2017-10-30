@@ -131,6 +131,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 + [Pivotal](https://pivotal.io) ([GitHub](https://github.com/pivotal)) - Leader in software engineering, Pivotal is the company behind CloudFoundry, the Java Spring Framework, and other products. They wrote the new [RabbitMQ CLI](https://github.com/rabbitmq/rabbitmq-cli/) and are [pushing Elixir](http://engineering.pivotal.io/post/elixir-clustering-on-cloud-foundry/) through their engineering blog.
 + [Puppet Labs](https://puppetlabs.com) ([GitHub](https://github.com/puppetlabs)) - Leader in IT automation. Host of the [Portland, OR Elixir Meetup](http://www.meetup.com/elixir-pdx/). Internal Elixir and Phoenix apps in production. All new internal development targeted at Elixir.
 + [Stampery](https://stampery.com) ([GitHub](https://github.com/stampery)) - 21st century notarization at your fingertips. We offer an immutable record of existence, integrity and ownership of all your files and email by leveraging the Blockchain technology.
++ [Stuart](https://stuart.com) ([GitHub](https://github.com/StuartApp)) - A disruptive B2B on-demand delivery platform that connects retailers with local couriers, enabling anyone to deliver anything at any time.
 
 #### E-Commerce
 
