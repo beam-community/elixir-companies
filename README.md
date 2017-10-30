@@ -217,6 +217,7 @@ System is ready to handle millions of patients, using data integrity algorithms 
   Househappytrax is a service designed to make homeownership easy.
   Based in Portland, Oregon, USA.
   We use Phoenix to build an API and admin web UI for Househappytrax.
+* [uSwitch](https://www.uswitch.com/) ([GitHub](https://github.com/uSwitch), [Blog](https://labs.uswitch.com/)) - uSwitch is a comparison service that helps you to compare on a range of products and services (energy, gas, broadband, mobiles, personal finance). We use Elixir in Credit Card comparison for finding out how likely customers are to get cards. Based in London, UK.
 
 #### Human Resources
 * [Recruitee](https://recruitee.com/) ([Github](https://github.com/Recruitee)) - Recruitee is the easiest way for teams to organize
