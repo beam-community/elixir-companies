@@ -107,6 +107,10 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [VoiceLayer](https://voicelayer.io) - Integrate realtime Push-to-Talk into your application.
 * [Xapix](https://www.xapix.io/) - XapiX makes it easy for enterprise developers to discover, integrate and combine data and services from multiple internal or public data sources. As the “Github of APIs” XapiX helps businesses create, improve and distribute API-based products. XapiX uses Elixir for various data transformation applications. XapiX is based in Berlin, Germany, and San Francisco, USA.
 
+#### Creative Software
+
+* [Adobe](https://www.adobe.com/) ([Github](https://github.com/adobe)) - Adobe provides digital media and digital marketing solutions. Adobe is using Elixir to build a combined client/cloud application for collaborative photography workflow. San Jose, CA, USA.
+
 #### Customer Service
 
 * [Customer Lobby](https://www.customerlobby.com) ([Github](https://github.com/customerlobby)) - Repeat Customer & Reviews Software. We are currently in the process of building a couple of services that use elixir. Berkeley, CA, USA.
