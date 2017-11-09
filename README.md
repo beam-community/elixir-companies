@@ -29,6 +29,7 @@ A curated list of companies using Elixir in production, organized by industry.
 * [Alembic](http://alembic.com.au) ([GitHub](https://github.com/team-alembic)) - Australian based Elixir, Phoenix and GraphQL development and consulting. Organisers of [Elixir Sydney Meetup](http://elixir.sydney) and supporters of [Elixir Girls](http://elixirgirls.com).
 * [AmberBit](https://www.amberbit.com) ([GitHub](https://github.com/amberbit)) - We are polyglot developers (but mostly Ruby, JavaScript, Elixir, Elm).
 * [AppUnite](https://appunite.com) ([GitHub](https://github.com/appunite)) - We are efficient, goal-oriented software development team of professionals specialized in mobile and web.
+* [Aviabird](https://aviabird.com) ([Github](https://github.com/aviabird)) - We at Aviabird helps companies design, engineer, and iterate on their most important digital products. We work alongside teams building beautiful, functional web applications with an eye towards the future. Pune, Maharashtra, India.
 * [Big Nerd Ranch](http://www.bignerdranch.com) ([GitHub](https://github.com/bignerdranch)) - We design and build innovative applications. We teach developers to do the same through our books and immersive training.
 * [bitcrowd](http://bitcrowd.net) ([GitHub](https://github.com/bitcrowd)) - Berlin based software development and consulting for startups.
 * [Bitgamma](http://bitgamma.com) ([GitHub](https://github.com/bitgamma)) - We develop web, desktop and embedded applications. We code Elixir, C, Java/Javacard, Ruby, JS. We love working on embedded and custom boards.
