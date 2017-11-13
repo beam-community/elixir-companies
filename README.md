@@ -190,6 +190,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Resuelve](https://resuelve.mx) ([Github](https://github.com/resuelve)) - Multiple retail financial services in LATAM. Elixir is used in the CBS (Core Banking System) and P2P loan service.
 * [Solarisbank](https://www.solarisbank.de/) ([Github](https://github.com/solarisbank)) - Provider of financial solutions for other financial entities and companies.
 * [TrustBK](https://trustbk.com) - A Bank for Small and Medium Businesses. Elixir is used for the Core Banking System (CBS). Based in Paris, France.
+* [YBEX](https://www.ybex.io) ([Github](https://github.com/ybexio)) - YBEX is a financial technology company, providing a marketplace platform for retail foreign exchange services. Elixir is used for our backend services. Based in Hong Kong.
 
 #### Food
 
