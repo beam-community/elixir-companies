@@ -101,6 +101,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [Mainframe](http://mainframe.co/) - Building the future of email.
 * [ProcessOne](https://www.process-one.net) ([GitHub](https://github.com/processone)) - Leader in Instant Messaging and Push Solutions.
 * [Pypestream](https://www.pypestream.com) - B2C Messaging Platform
+* [Slack](https://slack.com) ([GitHub](https://github.com/slackhq/))- Slack is a team communication application. They are using Elixir to build a media server for p2p and group calls. San Fransisco, CA, USA.
 * [Talkdesk](https://www.talkdesk.com) ([Github](https://github.com/talkdesk)) - Cloud-Based Call Center Software.
 * [TalkJS](https://talkjs.com) ([Github](https://github.com/talkjs)) - Pluggable user-to-user messaging for marketplaces and online platforms. We use Elixir for most of our messaging infrastructure.
 * [Telnyx](https://telnyx.com/) ([Github](https://github.com/team-telnyx)) - Telnyx provides a cloud-based portal & API offering carrier grade voice services such as Origination, Termination and SIPtrunking over the Internet. Chicago, IL, USA.
