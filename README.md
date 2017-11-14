@@ -241,7 +241,7 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 * [prima.it](https://www.prima.it) - Italian insurance company with a focus on cutting edge technologies.
 
 #### Internet Infrastructure
-* [DNSimple](https://dnsimple.com/) ([GitHub](https://github.com/dnsimple/)) - With a globally distributed team DNSimple provides the tools your need to manage your domains. We offer both a carefully crafted web interface for managing your domains and DNS records, as well as an HTTP API with various SDKs (including Elixir) and tools.
+* [DNSimple](https://dnsimple.com/) ([GitHub](https://github.com/dnsimple/)) - With a globally distributed team DNSimple provides the tools your need to manage your domains. We offer both a carefully crafted web interface for managing your domains and DNS records, as well as an HTTP API with various SDKs (including Elixir) and open source plugins in Elixir (and Phoenix).
 
 #### Internet of Things
 * [DIGIMONDO](https://www.digimondo.de/) - DIGIMONDO is building a LoRaWAN network providing connectivity for millions of IoT devices. Using Elixir for networking/routing services and web applications.
