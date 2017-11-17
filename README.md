@@ -21,6 +21,7 @@ A curated list of companies using Elixir in production, organized by industry.
 
 * Canvas ([GitHub](https://github.com/usecanvas)) - Notes for team of nerds.
 * [Planning Center](https://planning.center) ([Github](https://github.com/planningcenter)) - Planning Center's suite of apps work together to allow more ministry in your Ministry. Planning Center is from USA. And it's adopting Elixir to it's stack.
+* [RexPad](https://www.rexpad.com/) - Nimble collaborative note-taking. Located in Gothenburg, Sweden. Backend is written in Elixir and Phoenix.
 
 #### Consulting
 
