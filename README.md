@@ -312,6 +312,7 @@ real estate brokerage building a better experience for buying, selling, and leas
 * [IdealSpot](https://www.idealspot.com) - IdealSpot provides local market data for retail and real estate. We use Elixir for distributed data aggregation and multiple backend services. Austin, TX, USA.
 * [Nested](https://nested.com/) - Nested is an estate agent with a difference. We guarantee you a fair sale price for your home so you can move on chain-free. ([Github](https://github.com/nested-tech)) - Elixir powers our backend. London, UK.
 * [Opendoor](https://www.opendoor.com) - Opendoor buys your home from you, so you can skip months of selling and start your next chapter.
+* [Smartrent](https://smartrent.com) - Enterprise smart home automation for multifamily apartments, student housing, senior living and single family rental homes. Elixir runs the backend. Scottsdale, AZ, USA.
 
 #### Research
 
