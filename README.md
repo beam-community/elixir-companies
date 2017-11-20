@@ -376,6 +376,7 @@ real estate brokerage building a better experience for buying, selling, and leas
 
 * [Brightcove](http://brightcove.com) ([GitHub](https://github.com/brightcove)) - A leading global provider of powerful cloud solutions for delivering and monetizing video across connected devices.
 * [Evercam](http://www.evercam.io) ([GitHub](https://github.com/evercam)) - Camera Management Software (Open Source).
+* [Frame](https://frame.io/) ([GitHub](https://github.com/frameio)) - Frame.io is an online platform that enables its users to privately upload, review, and share video with their teams. Their product is built with Elixir and Phoenix. New York, USA.
 
 ## Contributing
 
