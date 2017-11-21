@@ -306,7 +306,9 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 
 #### Real Estate
 
-* [EXR](https://www.exrny.com/) ([GitHub](https://github.com/exrny)) - EXR is a residential and commercial 
+* [EmCasa](http://www.emcasa.com/) ([GitHub](https://github.com/gusaiani/re)) - EmCasa is an online residential broker
+using an Elixir webservice to help Brazilian buyers and sellers have a far superior experience in real estate. Rio de Janeiro, RJ, Brazil.
+* [EXR](https://www.exrny.com/) ([GitHub](https://github.com/exrny)) - EXR is a residential and commercial
 real estate brokerage building a better experience for buying, selling, and leasing real estate.
 * [Housing](https://housing.com/) - Housing.com is an Indian online real estate listing portal that simplifies finding, renting, and selling homes in India.
 * [IdealSpot](https://www.idealspot.com) - IdealSpot provides local market data for retail and real estate. We use Elixir for distributed data aggregation and multiple backend services. Austin, TX, USA.
