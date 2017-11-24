@@ -182,7 +182,6 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 #### Fintech
 
 * [Cinch Financial](https://www.cinchfinancial.com/) ([Github](https://github.com/cinch-financial)) - A totally unbiased, comprehensive, personal financial advisor. We use elixir/phoenix for multiple services. Boston, MA, USA.
-* [Edenlab](https://edenlab.com.ua/) ([Github](https://github.com/edenlabllc/)) - Boutique software and product development team. We love fintech and we specialize in it, but also run complex and meaningful projects in other fields (Healthcare, e-Government, etc.).
 * [Kittysplit](https://kittysplit.com) - A webapp that alows easy splitting of group expenses.
 * [Kontomatik](https://kontomatik.com) ([Github](https://github.com/kontomatik)) - We provide API to banks for proving client identity (KYC) and reading financial data (input for credit scoring, PFM, invoicing etc). We use Elixir for user panel/administration/business intelligence tools. Based in Warsaw, Poland
 * [MarketFactory](https://marketfactory.com) ([Github](https://github.com/MarketFactory))- A low-latency FX platform connecting banks/traders to 70+ different FX venues. We leverage elixir/phoenix for multiple back end microservices (ie. trade execution). New York, NY, USA.
@@ -202,7 +201,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 * [22cans](http://www.22cans.com/) ([GitHub](https://github.com/22cans)) - 22cans is an independent game studio founded by the industry legend and creator of God Game genre, Peter Molyneux. Creators of Curiosity and Godus.
 * [Bold Poker](https://boldpoker.net) - ([GitHub](https://github.com/boldpoker)) - Bold Poker transforms mobile devices into an efficient and professional poker dealer. Elixir is used for the backend communication service the clients connect to as well as for the website.
-* [Emagroup](http://www.emagroup.cn/) - ([Github](https://github.com/repong)) - Develop mobile games. Elixir is used for building game management tools.
+* [Emagroup](http://www.emagroup.cn/) - Develop mobile games. Elixir is used for building game management tools.
 * [Undead Labs](http://undeadlabs.com/) ([GitHub](https://github.com/undeadlabs)) - Creators of the smash hit survival-fantasy game _State of Decay_ and forthcoming tactical creature battler _Moonrise_.
 * [Wooga](https://www.wooga.com/) ([GitHub](https://github.com/wooga)) - Creators of Bubble Island and Futurama Game of Drones. They use Erlang and Elixir in some teams for building backend services.
 
@@ -214,7 +213,6 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 * [babylon health](https://www.babylonhealth.com) ([Github](https://github.com/Babylonpartners)) - babylon was founded with a single purpose: To put an accessible and affordable health service in the hands of every person on earth. Not feeling yourself? Chat to babylon for fast advice on what to do next if you’re feeling unwell. GP appointments are available 24/7 from your phone. Our doctors team-up with advanced artificial intelligence technology to give you the complete healthcare experience you deserve.
 * [CoverMyMeds](https://www.covermymeds.com) - CoverMyMeds seamlessly integrates with EHR systems to provide hospitals and providers with ePA functionality at the point of prescribing. Offices in Columbus, OH and Cleveland, OH.
 * [Future Pet](https://futurepet.care) ([GitHub](https://github.com/futurepet)) - FuturePet is a vetrinary software company based out of Vancouver & Victoria BC that uses our intelligent intake process to reduce appointment time by 40%. We use Elixir to power our main messaging platform.
-* [Edenlab](https://edenlab.com.ua/) ([Github](https://github.com/edenlabllc/ehealth.api)) - Ukrainian National Healthcare Services is written using Elixir and it is one of the biggest open sourced production Elixir project in the world and one of a biggest open sourced government project as well. System is ready to handle millions of patients, using data integrity algorithms (heavily influenced by blockchain ideas) and uses all the power of ErlangVM to support countrywide scale.
 System is ready to handle millions of patients, using data integrity algorithms (heavily influenced by blockchain ideas) and uses all the power of ErlangVM to support countrywide scale.
 * [HotDoc](https://www.hotdoc.com.au) - HotDoc provides services to doctors and their patients.  We provide online bookings, reminders, follow up notifications and more.  We are an Australian based company and use Elixir for some of our services and are looking to use it more.
 * [Mediteo](https://www.mediteo.com) ([Github](https://github.com/mediteo)) - Mediteo is a young Digital Health start-up with the aim to provide the best solution to handle medication in a correct and secure way. Berlin, Germany.
@@ -329,7 +327,7 @@ real estate brokerage building a better experience for buying, selling, and leas
 #### Security
 * [Tinfoil Security](https://www.tinfoilsecurity.com/) - ([GitHub](https://github.com/tinfoil/)) - Tinfoil Security provides a dynamic security scanning solution for DevOps. We integrate with your CI system to find and help resolve security vulnerabilities in web applications and web services before they ever get deployed to production. We use Elixir to power our web service scanning engine.
 * [Wombat Security Technologies](https://www.wombatsecurity.com/) - Wombat Security provides information security awareness and training software to help organizations teach their employees secure behavior. Our Security Education Platform includes integrated knowledge assessments, a library of simulated attacks, and interactive training modules, which have been proven to reduce successful phishing attacks and malware infections by up to 90%.
-* [Omagatoki 大禍時](https://omagatoki.co) - ([GitHub](https://github.com/omagatoki)) - VPN service which is transparent, secure and featureful.
+* [Omagatoki 大禍時](https://omagatoki.gdn) - ([GitHub](https://github.com/omagatoki)) - VPN service which is transparent, secure and featureful.
 
 #### Sensors
 
