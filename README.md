@@ -348,6 +348,7 @@ real estate brokerage building a better experience for buying, selling, and leas
 
 #### Sports
 
+* [Bleachr](http://www.bleachr.co) - Mobile platform aimed at helping professional sports teams engage fans at their events. They are using Elixir on the backend. Minneapolis, MN, USA.
 * [Bleacher Report](http://bleacherreport.com/) ([GitHub](https://github.com/br)) - Sports media site that is revolutionizing journalism.
 * [ClubCollect](https://clubcollect.com/en/home) - Billing and collection engine for sports clubs.
 * [Football Addicts](http://www.footballaddicts.com) ([GitHub](https://github.com/elixir-addicts)) - Creators of the well-known *Forza Football* and other leading football-related mobile applications.
