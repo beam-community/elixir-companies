@@ -197,6 +197,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 #### Food
 
+* [Bowery Farming](http://boweryfarming.com) ([GitHub](https://github.com/BoweryFarming)) - Bowery Farming uses high-tech approaches such as robotics, LED lightning and data analytics to grow leafy greens indoors. The software stack at Bowery consists of a few, focused Elixir services running in AWS, Phoenix + Vue.js on the front-end, and Elixir (Nerves) running on thousands of in-house built devices on-premise in our farms. New York, NY, USA.
 * [Farmbot](https://farmbot.io/) ([Github](https://github.com/FarmBot)) - Humanity's first open-source CNC farming machine. Farmbot using Elixir for the Raspberry Pi 3. [Click here for more detail](https://github.com/FarmBot/farmbot_os). FarmBot Inc is located at 81 South Higuera Street, Suite 160, in San Luis Obispo, California.
 
 #### Gaming
