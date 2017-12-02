@@ -133,6 +133,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 #### Enterprise
 
++ [Enterprise Modules](https://www.enterprisemodules.com) ([GitHub](https://github.com/enterprisemodules)) - Supported Enterprise Puppet Modules for complex software. Elixir used in production for modules subscription management. Nieuwegein, Netherlands.
 + [Lexmark](https://www.lexmark.com) ([GitHub](https://github.com/OpenAperture)) - Provider of printing and imaging products, software, solutions and services that help customers save time and money.
 + [Lob](https://lob.com) ([Github](https://github.com/lob)) - APIs for Print, Mail, Postcards, Letters, & Checks. San Fransisco, CA, USA.
 + [PagerDuty](http://pagerduty.com) ([GitHub](https://github.com/PagerDuty)) - PagerDuty is your fastest path to incident resolution, helping IT Operations and DevOps teams deliver on the promise of agility, performance, and uptime.
