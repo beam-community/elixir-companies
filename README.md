@@ -185,6 +185,7 @@ We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer cons
 
 * [Cinch Financial](https://www.cinchfinancial.com/) ([Github](https://github.com/cinch-financial)) - A totally unbiased, comprehensive, personal financial advisor. We use elixir/phoenix for multiple services. Boston, MA, USA.
 * [Circle](https://www.circle.com/) ([GitHub](https://github.com/circlefin)) - Circle builds products that enable greater ease-of-use in online and in-person payments. They are using Elixir in their product's API. Boston, MA, USA.
+* [Exeq](https://exeq.com) ([GitHub](https://github.com/exeqapp)) - Exeq helps users spend better. They are using Elixir to build the systems that aggregate, normalize, and analyze both transactional and merchant data. New York, NY, USA.
 * [Kittysplit](https://kittysplit.com) - A webapp that alows easy splitting of group expenses.
 * [Kontomatik](https://kontomatik.com) ([Github](https://github.com/kontomatik)) - We provide API to banks for proving client identity (KYC) and reading financial data (input for credit scoring, PFM, invoicing etc). We use Elixir for user panel/administration/business intelligence tools. Based in Warsaw, Poland
 * [MarketFactory](https://marketfactory.com) ([Github](https://github.com/MarketFactory))- A low-latency FX platform connecting banks/traders to 70+ different FX venues. We leverage elixir/phoenix for multiple back end microservices (ie. trade execution). New York, NY, USA.
