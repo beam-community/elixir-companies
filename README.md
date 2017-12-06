@@ -301,7 +301,7 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 
 #### Product Sampling
 
-* [SoPost](https://www.sopost.com/) - SoPost is a product sampling platform. We make use of Elixir & OTP (and a few other things) to provide a performant system that aids our mission to become the world's best product sampling company. Nearly always hiring in Newcastle & Edinburgh (UK).
+* [SoPost](https://www.sopost.com/) - SoPost is a product sampling platform. We make use of Elixir & OTP (and a few other things) to provide a performant system that aids our mission to become the world's best product sampling company. Currently, [Our GH repo](https://github.com/SoPost) is all private, but we are looking to open up some of the technology we've developed.  Nearly always hiring in Newcastle & Edinburgh (UK).
 
 #### Publishing
 
