@@ -299,6 +299,10 @@ their hiring process - and grow faster. Amsterdam, Netherlands.
 
 * [Steer](https://www.newsteer.com/) - Steer is a lightweight Performance Management System for Agile teams. SaaS platform built with Elixir. Remote company with founders based in London and Barcelona.
 
+#### Product Sampling
+
+* [SoPost](https://www.sopost.com/) - SoPost is a product sampling platform. We make use of Elixir & OTP (_and a few other things_) to provide a performant system that aids our mission to become the world's best product sampling company. Currently, [Our GH repo](https://github.com/SoPost) is all private, but we are looking to open up some of the technology we've developed.  Nearly always hiring in Newcastle & Edinburgh (UK).
+
 #### Publishing
 
 * [StoryCloud](http://storycloud.co) ([Github](https://github.com/StoryCloud)) - StoryCloud has developed an industry leading content publishing platform with security, encryption and permissions. San Diego, CA, USA.
