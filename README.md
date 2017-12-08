@@ -372,6 +372,7 @@ real estate brokerage building a better experience for buying, selling, and leas
 #### Transportation
 
 * [Cabify](https://www.cabify.com/) ([GitHub](https://github.com/cabify)) - Cabify - A safer, ethical and innovative taxi app alternative. Elixir in production since 2016. Real-time applications and microservices with large amounts of data. Madrid/Barcelona.
+* [Heetch](https://heetch.com) ([Github](https://github.com/heetch)) - Heetch - A ride-sharing app with a simple mission: we want people to enjoy their night out. With millions users in Europe, we're running microservices based architecture with real-time application. Paris, France (Remote friendly)
 * [Liftit](https://liftit.co/) ([GitHub](https://github.com/Liftitapp)) - Liftit - Your best friend with a truck.
 * [Tappsi](https://tappsi.co/) ([GitHub](https://github.com/tappsi)) - Taxi calls easier and safer in Colombia.
 
