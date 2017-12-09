@@ -25,7 +25,7 @@
             'use strict';
 
             (function (window) {
-                const template = '<table class="table table-sm">{{#companies}}<tr><th colspan="2">{{industry}}</th></tr>{{#companies}}<tr><td>{{#url}}<a href="{{url}}">{{{name}}}</a>{{/url}}{{^url}}{{{name}}}{{/url}}</td><td>{{{description}}}{{#blog}} <a hre="{{.}}">Blog</a>{{/blog}}{{#github}} <a href="{{.}}">GitHub</a>{{/github}}</td></tr>{{/companies}}{{/companies}}</table>';
+                const template = '<table class="table table-sm">{{#companies}}<tr><td>{{#url}}<a href="{{url}}">{{{name}}}</a>{{/url}}{{^url}}{{{name}}}{{/url}}<br /><small class="text-secondary">{{{industry}}}</small><br  /><small class="text-secondary">{{{location}}}</small></td><td>{{{description}}}{{#blog}}<p><a hre="{{.}}">Blog</a></p>{{/blog}}{{#github}}<p><a href="{{.}}">GitHub</a></p>{{/github}}</td></tr>{{/companies}}</table>';
 
                 const tomlURL = 'elixir-companies.toml';
 
@@ -38,28 +38,18 @@
                 function render(tomlData) {
                     let json = toml.parse(tomlData);
 
-                    var groups = {};
-                    json.company.forEach(function(item) {
-                        var list = groups[item.industry];
+                    var companies = json.company;
+                    companies.forEach(function(item) {
                         item.description = converter.makeHtml(item.description);
-                        if (list) {
-                            list.push(item);
-                        } else {
-                            groups[item.industry] = [item];
-                        }
                     });
 
-                    var companies = [];
-                    for (let industry in groups) {
-                        companies.push({ industry: industry, companies: groups[industry] });
-                    }
 
                     companies.sort(function(a, b){
-                        let industryA = a.industry.toLowerCase(),
-                            industryB = b.industry.toLowerCase();
-                        if (industryA < industryB) {
+                        let nameA = a.name.toLowerCase(),
+                            nameB = b.name.toLowerCase();
+                        if (nameA < nameB) {
                             return -1;
-                        } else if (industryA > industryB) {
+                        } else if (nameA > nameB) {
                             return 1
                         } else {
                             return 0;

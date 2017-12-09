@@ -74,23 +74,25 @@ description = "22cans is an independent game studio founded by the industry lege
 [[company]]
 name = "361° DIGITAL"
 industry = "Consulting"
-url = "https://361.de"
 location = "Stuttgart, Germany"
+url = "https://361.de"
 description = "We are a digital agency based in Stuttgart, Germany. We create web and mobile apps using Elixir, Phoenix, React and React Native."
 
 [[company]]
 name = "Adjust"
 industry = "Business Intelligence"
+location = "Berlin, Germany"
 url = "https://www.adjust.com/"
 github = "https://github.com/adjust"
-description = "Mobile user attribution and advanced app analytics, combined with store stats. How elixir being used [Click here](http://big-elephants.com/). Berlin, Germany."
+description = "Mobile user attribution and advanced app analytics, combined with store stats. How elixir being used [Click here](http://big-elephants.com/)."
 
 [[company]]
 name = "Adobe"
 industry = "Creative Software"
 url = "https://www.adobe.com/"
+location = "San Jose, CA, USA"
 github = "https://github.com/adobe"
-description = "Adobe provides digital media and digital marketing solutions. Adobe is using Elixir to build a combined client/cloud application for collaborative photography workflow. San Jose, CA, USA."
+description = "Adobe provides digital media and digital marketing solutions. Adobe is using Elixir to build a combined client/cloud application for collaborative photography workflow."
 
 [[company]]
 name = "Agilion"
@@ -110,8 +112,9 @@ description = "Aircloak’s first-in-class real-time database anonymization solu
 name = "Albert"
 industry = "Education"
 url = "https://www.albert.io/"
+location = "Chicago, IL, USA"
 github = "https://github.com/albert-io"
-description = "Learn anything through interactive practice: College math and science, Advanced Placement®, SAT®, ACT®, GRE®, GMAT®, literature, social science, history, and more. Our API services are built with Elixir, Phoenix, and PostgreSQL. Chicago, Illinois."
+description = "Learn anything through interactive practice: College math and science, Advanced Placement®, SAT®, ACT®, GRE®, GMAT®, literature, social science, history, and more. Our API services are built with Elixir, Phoenix, and PostgreSQL."
 
 [[company]]
 name = "Alembic"
@@ -146,14 +149,16 @@ name = "Appcues"
 industry = "Online Marketing"
 url = "http://www.appcues.com/"
 github = "https://github.com/appcues"
-description = "Appcues helps people publish messages into their products instantly ⚡️💻 Follow us here for a curation of the best content for growth people. Boston, MA, US."
+location = "Boston, MA, USA"
+description = "Appcues helps people publish messages into their products instantly ⚡️💻 Follow us here for a curation of the best content for growth people."
 
 [[company]]
 name = "AuthorityLabs"
 industry = "Online Marketing"
 url = "https://authoritylabs.com/"
+location = "Phoenix, AZ, USA"
 github = "https://github.com/authoritylabs"
-description = "Accurate and reliable search engine ranking data and keyword insights. Phoenix, AZ, USA."
+description = "Accurate and reliable search engine ranking data and keyword insights."
 
 [[company]]
 name = "Aviabird"
@@ -167,14 +172,15 @@ name = "Aviasales"
 industry = "Traveling"
 url = "http://aviasales.ru"
 github = "https://github.com/KosyanMedia"
-description = "Flights Meta Search Engine for Russian market with the main office on Phuket, Thailand. We use Elixir for our static content generator, messengers bots and couple of microservices."
+description = "– Flights Meta Search Engine for Russian market with the main office on Phuket, Thailand. We use Elixir for our static content generator, messengers bots and couple of microservices."
 
 [[company]]
 name = "Avvo"
 industry = "Legal services"
 url = "https://www.avvo.com"
 github = "https://github.com/avvo"
-description = "We believe that more information helps you make better decisions. At Avvo, we provide you with detailed information on lawyers and legal issues so that you can make the choices that are right for you. Seattle, Washington, USA."
+location = " Seattle, WA, USA."
+description = "We believe that more information helps you make better decisions. At Avvo, we provide you with detailed information on lawyers and legal issues so that you can make the choices that are right for you."
 
 [[company]]
 name = "Badger"
@@ -259,7 +265,8 @@ description = "The news agency specialized on traditional views."
 name = "CKDU 88.1FM"
 industry = "Radio"
 url = "http://www.ckdu.ca"
-description = "Community radio station in Halifax, Nova Scotia, Canada"
+location = "Halifax, Nova Scotia, Canada"
+description = "Community radio station in Halifax, Nova Scotia, Canada "
 
 [[company]]
 name = "CONTRAKTOR"
@@ -681,6 +688,13 @@ industry = "Consulting"
 url = "https://hashrocket.com"
 github = "https://github.com/hashrocket"
 description = "Hashrocket is an expert team of designers, developers and consultants. We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer consulting, design, development, identity and training services."
+
+[[company]]
+name = "Heetch"
+industry = "Transportation"
+url = "https://heetch.com"
+github = "https://github.com/heetch"
+description = "Heetch - A ride-sharing app with a simple mission: we want people to enjoy their night out. With millions users in Europe, we're running microservices based architecture with real-time application. Paris, France (Remote friendly)"
 
 [[company]]
 name = "Hello Sign"
@@ -1209,6 +1223,12 @@ url = "https://smartrent.com"
 description = "Enterprise smart home automation for multifamily apartments, student housing, senior living and single family rental homes. Elixir runs the backend. Scottsdale, AZ, USA."
 
 [[company]]
+name = "SoPost"
+industry = "Product Sampling"
+url = "https://www.sopost.com/"
+description = "SoPost is a product sampling platform. We make use of Elixir & OTP (_and a few other things_) to provide a performant system that aids our mission to become the world's best product sampling company. Currently, [Our GH repo](https://github.com/SoPost) is all private, but we are looking to open up some of the technology we've developed. Nearly always hiring in Newcastle & Edinburgh (UK)."
+
+[[company]]
 name = "Solarisbank"
 industry = "Fintech"
 url = "https://www.solarisbank.de/"
@@ -1550,8 +1570,9 @@ description = "We are a small expert team of developers in Berlin. We have a bro
 name = "uSwitch"
 industry = "Home Services"
 url = "https://www.uswitch.com/"
+location = "London, UK"
 github = "https://github.com/uSwitch), [Blog](https://labs.uswitch.com/"
-description = "uSwitch is a comparison service that helps you to compare on a range of products and services (energy, gas, broadband, mobiles, personal finance). We use Elixir in Credit Card comparison for finding out how likely customers are to get cards. Based in London, UK."
+description = "uSwitch is a comparison service that helps you to compare on a range of products and services (energy, gas, broadband, mobiles, personal finance). We use Elixir in Credit Card comparison for finding out how likely customers are to get cards."
 
 [[company]]
 name = "wemake.services"
