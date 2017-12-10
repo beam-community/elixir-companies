@@ -1,71 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Elixir Companies</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    </head>
-    <body>
-        <div class="container-fluid">
-            <h1>Elixir Companies</h1>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Elixir Companies</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70762101-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-            <p>A curated list of companies using Elixir in production, organized by industry.</p>
+      gtag('config', 'UA-70762101-4');
+    </script>
 
-            <div id="content"></div>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h1>Elixir Companies</h1>
 
-            <h2>Contributing</h2>
-            <p>Please see <a href="https://github.com/doomspork/elixir-companies/blob/master/CONTRIBUTING.md">CONTRIBUTING</a> for details.</p>
-        </div>
-        <script src="https://cdn.rawgit.com/jakwings/toml-j0.4/c6d4df55/dist/toml-browser.js"></script>
-        <script src="https://cdn.rawgit.com/showdownjs/showdown/1.8.2/dist/showdown.min.js"></script>
-        <script src="https://cdn.rawgit.com/janl/mustache.js/master/mustache.min.js"></script>
-        <script>
-            'use strict';
+      <p>A curated list of companies using Elixir in production, organized by industry.</p>
 
-            (function (window) {
-                const template = '<table class="table table-sm">{{#companies}}<tr><td>{{#url}}<a href="{{url}}">{{{name}}}</a>{{/url}}{{^url}}{{{name}}}{{/url}}<br /><small class="text-secondary">{{{industry}}}</small><br  /><small class="text-secondary">{{{location}}}</small></td><td>{{{description}}}{{#blog}}<p><a hre="{{.}}">Blog</a></p>{{/blog}}{{#github}}<p><a href="{{.}}">GitHub</a></p>{{/github}}</td></tr>{{/companies}}</table>';
+      <div id="content"></div>
 
-                const tomlURL = 'elixir-companies.toml';
+      <h2>Contributing</h2>
+      <p>Please see <a href="https://github.com/doomspork/elixir-companies/blob/master/CONTRIBUTING.md">CONTRIBUTING</a> for details.</p>
+    </div>
+    <script src="https://cdn.rawgit.com/jakwings/toml-j0.4/c6d4df55/dist/toml-browser.js"></script>
+    <script src="https://cdn.rawgit.com/showdownjs/showdown/1.8.2/dist/showdown.min.js"></script>
+    <script src="https://cdn.rawgit.com/janl/mustache.js/master/mustache.min.js"></script>
+    <script>
+      'use strict';
 
-                let tomlRequest = fetch(tomlURL).then(function(response) { return response.text(); });
-                let htmlFrame = document.querySelector('#content');
+      (function (window) {
+        const template = '<table class="table table-sm">{{#companies}}<tr><td>{{#url}}<a href="{{url}}">{{{name}}}</a>{{/url}}{{^url}}{{{name}}}{{/url}}<br /><small class="text-secondary">{{{industry}}}</small><br  /><small class="text-secondary">{{{location}}}</small></td><td>{{{description}}}{{#blog}}<p><a hre="{{.}}">Blog</a></p>{{/blog}}{{#github}}<p><a href="{{.}}">GitHub</a></p>{{/github}}</td></tr>{{/companies}}</table>';
 
-                let converter = new showdown.Converter();
-                converter.setFlavor('github');
+        const tomlURL = 'elixir-companies.toml';
 
-                function render(tomlData) {
-                    let json = toml.parse(tomlData);
+        let tomlRequest = fetch(tomlURL).then(function(response) { return response.text(); });
+        let htmlFrame = document.querySelector('#content');
 
-                    var companies = json.company;
-                    companies.forEach(function(item) {
-                        item.description = converter.makeHtml(item.description);
-                    });
+        let converter = new showdown.Converter();
+        converter.setFlavor('github');
+
+        function render(tomlData) {
+          let json = toml.parse(tomlData);
+
+          var companies = json.company;
+          companies.forEach(function(item) {
+            item.description = converter.makeHtml(item.description);
+          });
 
 
-                    companies.sort(function(a, b){
-                        let nameA = a.name.toLowerCase(),
-                            nameB = b.name.toLowerCase();
-                        if (nameA < nameB) {
-                            return -1;
-                        } else if (nameA > nameB) {
-                            return 1
-                        } else {
-                            return 0;
-                        }
-                    })
+          companies.sort(function(a, b){
+            let nameA = a.name.toLowerCase(),
+              nameB = b.name.toLowerCase();
+            if (nameA < nameB) {
+              return -1;
+            } else if (nameA > nameB) {
+              return 1
+            } else {
+              return 0;
+            }
+          })
 
-                    let html = Mustache.render(template, { companies: companies });
+          let html = Mustache.render(template, { companies: companies });
 
-                    htmlFrame.innerHTML = html;
-                }
+          htmlFrame.innerHTML = html;
+        }
 
-                Promise.all([tomlRequest]).then(values => {
-                    let tomlData = values[0];
-                    render(tomlData);
-                });
-            })(window);
-        </script>
-    </body>
+        Promise.all([tomlRequest]).then(values => {
+          let tomlData = values[0];
+          render(tomlData);
+        });
+      })(window);
+    </script>
+  </body>
 </html>
