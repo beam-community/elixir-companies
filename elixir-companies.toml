@@ -65,6 +65,14 @@ industries = [
 # description = "" # Company description and how Elixir is used
 
 [[company]]
+name = "Statuspal"
+industry = "Customer Service"
+url = "https://statuspal.io"
+github = "https://github.com/statuspal"
+location = "Berlin, Germany"
+description = "Statuspal makes it easy for you to communicate your app/service status to your customers, providing hosted & open source status pages manager written in Elixir + Phoenix."
+
+[[company]]
 name = "22cans"
 industry = "Gaming"
 url = "http://www.22cans.com/"
