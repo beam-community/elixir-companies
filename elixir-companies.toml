@@ -1594,3 +1594,11 @@ github = "https://github.com/anarock"
 url = "https://www.anarock.com"
 location = "Mumbai, India"
 description = "ANAROCK's key strategic business units comprise of the Residential business: broking & advisory services to clients and the Investment business: debt, equity and mezzanine funding. Now Using elixir for backend services created for productivity app"
+
+[[company]]
+name = "ZipBooks"
+industry = "Accounting Software"
+github = "https://github.com/zipbooks"
+url = "https://www.zipbooks.com"
+location = "Utah, USA"
+description = "ZipBooks makes great accounting software. We're half way through moving our backend to Elixir with average response times of 300ms."
