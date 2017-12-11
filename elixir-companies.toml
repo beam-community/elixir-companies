@@ -1602,3 +1602,11 @@ url = "https://infinum.co/"
 location = "San Francisco, CA, USA"
 github = "https://github.com/infinum/"
 description = "Infinum develops and designs great software for mobile and web. Our clients are large brands, banks, insurance companies, media publishers, mobile carriers and others. We use Elixir, Ruby & Golang on the backend."
+
+[[company]]
+name = "ZipBooks"
+industry = "Accounting Software"
+github = "https://github.com/zipbooks"
+url = "https://www.zipbooks.com"
+location = "Utah, USA"
+description = "ZipBooks makes great accounting software. We're half way through moving our backend to Elixir with average response times of 300ms."
