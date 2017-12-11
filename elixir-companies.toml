@@ -1596,6 +1596,14 @@ location = "Mumbai, India"
 description = "ANAROCK's key strategic business units comprise of the Residential business: broking & advisory services to clients and the Investment business: debt, equity and mezzanine funding. Now Using elixir for backend services created for productivity app"
 
 [[company]]
+name = "Infinum"
+industry = "Consulting"
+url = "https://infinum.co/"
+location = "San Francisco, CA, USA"
+github = "https://github.com/infinum/"
+description = "Infinum develops and designs great software for mobile and web. Our clients are large brands, banks, insurance companies, media publishers, mobile carriers and others. We use Elixir, Ruby & Golang on the backend."
+
+[[company]]
 name = "ZipBooks"
 industry = "Accounting Software"
 github = "https://github.com/zipbooks"
