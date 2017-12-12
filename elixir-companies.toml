@@ -65,14 +65,6 @@ industries = [
 # description = "" # Company description and how Elixir is used
 
 [[company]]
-name = "Statuspal"
-industry = "Customer Service"
-url = "https://statuspal.io"
-github = "https://github.com/statuspal"
-location = "Berlin, Germany"
-description = "Statuspal makes it easy for you to communicate your app/service status to your customers, providing hosted & open source status pages manager written in Elixir + Phoenix."
-
-[[company]]
 name = "22cans"
 industry = "Gaming"
 url = "http://www.22cans.com/"
@@ -1618,3 +1610,11 @@ github = "https://github.com/zipbooks"
 url = "https://www.zipbooks.com"
 location = "Utah, USA"
 description = "ZipBooks makes great accounting software. We're half way through moving our backend to Elixir with average response times of 300ms."
+
+[[company]]
+name = "Statuspal"
+industry = "Customer Service"
+url = "https://statuspal.io"
+github = "https://github.com/statuspal"
+location = "Berlin, Germany"
+description = "Statuspal makes it easy for you to communicate your app/service status to your customers, providing hosted & open source status pages manager written in Elixir + Phoenix."
