@@ -761,6 +761,13 @@ github = "https://github.com/infinitered"
 description = "Mobile and web app design and development services, using Elixir / Phoenix, React, and React Native. Based in Portland, San Francisco, and remote across the USA, with clients in eight countries. We build and maintain dozens of popular open source libraries, including [Thesis](github.com/infinitered/thesis-phoenix) and [Torch](github.com/infinitered/torch)."
 
 [[company]]
+name = "John Done"
+industry = "Consulting"
+url = "https://johndone.ai"
+github = ""
+description = "In the future, we will speak to machines, politely asking them to carry out tasks for us. At John Done Inc. we are doing our part to build that future by bringing the voice assistant John Done to telephone calls, communications platforms, and web conferences."
+
+[[company]]
 name = "Isnor Creative"
 industry = "Consulting"
 url = "http://www.isnorcreative.com"
