@@ -3,6 +3,7 @@ industries = [
   "Autonomous Vehicles",
   "Business Intelligence",
   "Cannabis",
+  "Child Care",
   "Collaboration",
   "Communication",
   "Consulting",
@@ -1618,3 +1619,11 @@ url = "https://statuspal.io"
 github = "https://github.com/statuspal"
 location = "Berlin, Germany"
 description = "Statuspal makes it easy for you to communicate your app/service status to your customers, providing hosted & open source status pages manager written in Elixir + Phoenix."
+
+[[company]]
+name = "KOVnet"
+industry = "Child Care"
+url = "http://www.kovnet.nl"
+github = "https://github.com/kdvnet"
+location = "Hoofddorp, The Netherlands"
+description = "Administration software for child care centers. Planning, invoicing, facilitating communication between careworkers and parents. We use Phoenix to replace the RoR backend, channels to feed the UIs."
