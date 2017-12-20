@@ -927,11 +927,11 @@ github = "https://github.com/creditera"
 description = "We are a Utah Company offering credit monitoring, financing, and advice for small & medium size businesses. We use elixir to build the business engine that curates relevant financing for our customers."
 
 [[company]]
-name = "Nebo15"
-industry = "Fintech"
+name = "Nebo #15"
+industry = "Consulting"
 url = "http://nebo15.com/"
 github = "https://github.com/Nebo15"
-description = "Large peer-to-peer lending platform completely on Elixir, from scratch. Kiev, Ukraine."
+description = "A distributed team of Elixir and React.js experts that work on cutting-edge projects design and development. Our fintech and blockchain experience comes from hands-on work in various areas, from eMoney clouds and P2P lending platforms to the National Health Service of Ukraine. We strongly believe in giving back to the community and open-sourced 10's of libraries and projects. "
 
 [[company]]
 name = "Neon Tree Solutions"
