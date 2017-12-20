@@ -257,12 +257,6 @@ github = "https://github.com/briisk"
 description = "Software agency devoted to defining, designing and developing applications, both for web and mobile. We build custom B2B and B2C products with Ruby, Elixir, Angular, Ionic and React Native. Based in Poznan, Poland."
 
 [[company]]
-name = "Brutalist"
-industry = "Media"
-url = "https://brutalist.press"
-description = "The news agency specialized on traditional views."
-
-[[company]]
 name = "CKDU 88.1FM"
 industry = "Radio"
 url = "http://www.ckdu.ca"
