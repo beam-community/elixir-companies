@@ -1652,3 +1652,11 @@ url = "https://www.insidetrack.com"
 github = "https://github.com/inside-track"
 location = "Portland, OR, USA" 
 description = "InsideTrack is dedicated to partnering with colleges and universities to create adaptive coaching solutions that generate measurable results. We are migrating various services that power our coaching platform to Elixir"
+
+[[company]]
+name = "Massachusetts Bay Transportation Authority (MBTA)" 
+industry = "Transportation"
+url = "https://medium.com/mbta-tech" 
+github = "https://github.com/mbta"
+location = "Boston, MA, USA" 
+description = "We are the public transit agency of Greater Boston, and we're building the next generation of websites, mobile apps, and rider experinece tools."
