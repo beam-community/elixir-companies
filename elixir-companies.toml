@@ -1652,3 +1652,11 @@ url = "https://www.insidetrack.com"
 github = "https://github.com/inside-track"
 location = "Portland, OR, USA" 
 description = "InsideTrack is dedicated to partnering with colleges and universities to create adaptive coaching solutions that generate measurable results. We are migrating various services that power our coaching platform to Elixir"
+
+[[company]]
+name = "Culture Amp"
+industry = "Human Resources"
+url = "https://www.cultureamp.com"
+github = "https://github.com/cultureamp"
+location = "Melbourne, Australia"
+description = "Culture Amp helps companies collect, understand, and act on employee feedback. We are using Elixir for a number of backend services."
