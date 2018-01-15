@@ -1660,3 +1660,11 @@ url = "https://medium.com/mbta-tech"
 github = "https://github.com/mbta"
 location = "Boston, MA, USA" 
 description = "We are the public transit agency of Greater Boston, and we're building the next generation of websites, mobile apps, and rider experinece tools."
+
+[[company]]
+name = "Culture Amp"
+industry = "Human Resources"
+url = "https://www.cultureamp.com"
+github = "https://github.com/cultureamp"
+location = "Melbourne, Australia"
+description = "Culture Amp helps companies collect, understand, and act on employee feedback. We are using Elixir for a number of backend services."
