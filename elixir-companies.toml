@@ -1646,11 +1646,11 @@ location = "Providence, RI, USA"
 description = "MojoTech helps transform businesses with cloud-native software solutions using Elixir and other progressive technologies. Operating at the intersection of lean product development, user-centric design, and engineering excellence, MojoTech builds scalable, value-driven software applications that solve serious problems. MojoTech is headquartered in Providence, RI with offices in Boulder, CO, New York, NY, and Washington, D.C."
 
 [[company]]
-name = "InsideTrack" 
+name = "InsideTrack"
 industry = "Education"
-url = "https://www.insidetrack.com" 
+url = "https://www.insidetrack.com"
 github = "https://github.com/inside-track"
-location = "Portland, OR, USA" 
+location = "Portland, OR, USA"
 description = "InsideTrack is dedicated to partnering with colleges and universities to create adaptive coaching solutions that generate measurable results. We are migrating various services that power our coaching platform to Elixir"
 
 [[company]]
@@ -1668,3 +1668,11 @@ url = "https://www.cultureamp.com"
 github = "https://github.com/cultureamp"
 location = "Melbourne, Australia"
 description = "Culture Amp helps companies collect, understand, and act on employee feedback. We are using Elixir for a number of backend services."
+
+[[company]]
+name = "Scripbox"
+industry = "Fintech"
+url = "https://scripbox.com"
+github = "https://github.com/scripbox"
+location = "Bengaluru, India"
+description = "Scripbox is an easy to use financial management and learning tool to help you learn about personal finance, investment, tax saving and tax planning. We use Elixir/Phoenix in our high volume events processing pipeline."
