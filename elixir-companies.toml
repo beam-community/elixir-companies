@@ -198,6 +198,13 @@ url = "http://badger-app.com"
 description = "Remind your friends with a delayed text/push."
 
 [[company]]
+name = "Basic Space"
+industry = "E-Commerce"
+url = "https://basic.space"
+location = "Los Angeles, CA, USA"
+description = "Basic Space is a curated marketplace app with influential creatives selling exclusive items and recommended products to their audience, powered by a homegrown Elixir/Phoenix E-commerce backend."
+
+[[company]]
 name = "Big Nerd Ranch"
 industry = "Consulting"
 url = "http://www.bignerdranch.com"
