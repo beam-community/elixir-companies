@@ -1690,3 +1690,11 @@ industry = "Education"
 url = "https://edurio.com/"
 location = "London, United Kingdom"
 description = "Edurio helps schools and education departments integrate an evidence-based approach to school improvement into their organisation by providing them with the research, expertise and tools they need to continuously collect feedback and monitor the quality of their schools."
+
+[[company]]
+name = "Made by Many"
+industry = "Consulting"
+url = "https://www.madebymany.com"
+location = "London, UK"
+github = "https://github.com/madebymany"
+description = "Made by Many is a company of thinkers and makers – expert technologists, experienced product designers and business strategists. We came together to create a completely new type of digital design business that bridges the gap between strategy and delivery. For the last decade we’ve worked at the forefront of product design, an emerging practice area that brings agile software methodologies, lean start-up and design thinking together – with zero dogma. We use Elixir to deliver groundbreaking products for our clients, ranging from early stage prototypes to fully scaled digital platforms."
