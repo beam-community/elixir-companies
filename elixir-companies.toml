@@ -1683,3 +1683,10 @@ url = "https://scripbox.com"
 github = "https://github.com/scripbox"
 location = "Bengaluru, India"
 description = "Scripbox is an easy to use financial management and learning tool to help you learn about personal finance, investment, tax saving and tax planning. We use Elixir/Phoenix in our high volume events processing pipeline."
+
+[[company]]
+name = "Edurio"
+industry = "Education"
+url = "https://edurio.com/"
+location = "London, United Kingdom"
+description = "Edurio helps schools and education departments integrate an evidence-based approach to school improvement into their organisation by providing them with the research, expertise and tools they need to continuously collect feedback and monitor the quality of their schools."
