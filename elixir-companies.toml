@@ -1698,3 +1698,11 @@ url = "http://appprova.com.br/"
 github= "https://github.com/appprova/"
 location = "Belo Horizonte, Brazil"
 description = "AppProva is a platform that helps students enhance their habilities concerning subjects of interest for assessments in a national scale, such as ENEM, ENADE and OAB. We use Elixir and Phoenix to build a marketplace for buying and elaborate questions, offer the students assessments within those questions, and show related content (videos, presentations, etc) in a personalized way."
+
+[[company]]
+name = "Sparta Science"
+industry = "Sports"
+url = "https://www.spartascience.com/"
+github = "https://github.com/sparta-science/"
+location = "San Francisco, CA & Menlo Park, CA"
+description = "Sparta Science can predict injuries before they happen. We identify athletes’ injury risks and recommend customized training plans to reduce the chance of injury. Our customers are professional and university sports programs (including NBA, NFL, MLB, and NCAA teams), hospitals, and the US military. Our web application is built on Elixir/Phoenix, and our scanning process relies heavily on Phoenix Channels."
