@@ -1706,3 +1706,11 @@ url = "https://www.spartascience.com/"
 github = "https://github.com/sparta-science/"
 location = "San Francisco, CA & Menlo Park, CA"
 description = "Sparta Science can predict injuries before they happen. We identify athletes’ injury risks and recommend customized training plans to reduce the chance of injury. Our customers are professional and university sports programs (including NBA, NFL, MLB, and NCAA teams), hospitals, and the US military. Our web application is built on Elixir/Phoenix, and our scanning process relies heavily on Phoenix Channels."
+
+[[company]]
+name = "Codedge LLC"
+industry = "Consulting"
+url = "https://www.codedge.io/"
+github = "https://github.com/codedge-llc"
+location = "Dallas, TX, USA"
+description = "As one of the first Elixir developer shops in Dallas, Texas, we create highly-scalable mobile and web applications to serve our client's business needs."
