@@ -17,13 +17,13 @@ industries = [
   "Enterprise",
   "Expert Networks",
   "Family",
-  "Field Services",
   "Fintech",
   "Food",
   "Gaming",
   "Government",
   "Healthcare",
   "Home Services",
+  "Hospitality",
   "Hotel Aggregator",
   "Human Resources",
   "Identity",
@@ -1355,6 +1355,13 @@ github = "https://github.com/team-telnyx"
 description = "Telnyx provides a cloud-based portal & API offering carrier grade voice services such as Origination, Termination and SIPtrunking over the Internet. Chicago, IL, USA."
 
 [[company]]
+name = "The.Club"
+industry = "Hospitality"
+url = "https://the.club"
+github = "https://github.com/TheClubHQ"
+description = "A global private club of like-minded members exchanging downtime in luxury assets around the world who is using Elixir to route, handle and analyze customer requests. Boulder, CO, USA."
+
+[[company]]
 name = "The Outline"
 industry = "Media"
 url = "https://theoutline.com"
@@ -1406,12 +1413,6 @@ industry = "Gaming"
 url = "http://undeadlabs.com/"
 github = "https://github.com/undeadlabs"
 description = "Creators of the smash hit survival-fantasy game _State of Decay_ and forthcoming tactical creature battler _Moonrise_."
-
-[[company]]
-name = "Useful"
-industry = "Field Services"
-url = "http://www.getuseful.com/"
-description = "Useful is the job management app for field service companies, allowing users to see crew locations, send and receive work orders and manage their business through an iPad. We use Elixir in production for all of our API services. Boulder, Colorado."
 
 [[company]]
 name = "Vinsol"
