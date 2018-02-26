@@ -1355,6 +1355,13 @@ github = "https://github.com/team-telnyx"
 description = "Telnyx provides a cloud-based portal & API offering carrier grade voice services such as Origination, Termination and SIPtrunking over the Internet. Chicago, IL, USA."
 
 [[company]]
+name = "The.Club"
+industry = "Hospitality"
+url = "https://the.club"
+github = "https://github.com/TheClubHQ"
+description = "A global private club of like-minded members exchanging downtime in luxury assets around the world who is using Elixir to route, handle and analyze customer requests. Boulder, CO, USA."
+
+[[company]]
 name = "The Outline"
 industry = "Media"
 url = "https://theoutline.com"
