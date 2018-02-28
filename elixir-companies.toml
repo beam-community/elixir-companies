@@ -890,6 +890,14 @@ url = "http://mainframe.co/"
 description = "Building the future of email."
 
 [[company]]
+name = "Matched Pattern"
+industry = "Consulting"
+url = "https://matchedpattern.com/"
+github = "https://github.com/MatchedPattern"
+location = "Columbus, OH"
+description = "We're Matched Pattern. We’re a software consultancy based in Columbus, Ohio. We specialize in web development, infrastructure and Internet of Things (IoT). Each of our Central Ohio-based, full-time developers have unique experiences and bring insight to each of our offerings. We use Elixir to build scalable web applications."
+
+[[company]]
 name = "MarketFactory"
 industry = "Fintech"
 url = "https://marketfactory.com"
