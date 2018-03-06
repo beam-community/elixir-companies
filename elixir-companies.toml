@@ -1410,9 +1410,9 @@ github = "https://github.com/tongdao"
 description = "Tongdao is a data-driven marketing platform designed to enable businesses to understand their customers and engage them in a smart and personalized way across multiple channels. Using Elixir to power our messaging system and data collection backend. Shanghai, China."
 
 [[company]]
-name = "TrustBK"
+name = "Margo Bank"
 industry = "Fintech"
-url = "https://trustbk.com"
+url = "https://margo.com"
 description = "A Bank for Small and Medium Businesses. Elixir is used for the Core Banking System (CBS). Based in Paris, France."
 
 [[company]]
