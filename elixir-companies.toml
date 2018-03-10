@@ -1723,3 +1723,11 @@ url = "https://www.codedge.io/"
 github = "https://github.com/codedge-llc"
 location = "Dallas, TX, USA"
 description = "As one of the first Elixir developer shops in Dallas, Texas, we create highly-scalable mobile and web applications to serve our client's business needs."
+
+[[company]]
+name = "CAVA"
+industry = "Food"
+url = "https://www.cava.com/"
+github = "https://github.com/cavagrill"
+location = "Washington, DC, USA"
+description = "CAVA is a rapidly expanding fast-casual restaurant and CPG brand focusing on fresh, Mediterranean-inspired, better-for- you cuisine. Our website and digital ordering platform are build in Elixir and Phoenix. Always hiring :)"
