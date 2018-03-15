@@ -1731,3 +1731,11 @@ url = "https://www.cava.com/"
 github = "https://github.com/cavagrill"
 location = "Washington, DC, USA"
 description = "CAVA is a rapidly expanding fast-casual restaurant and CPG brand focusing on fresh, Mediterranean-inspired, better-for- you cuisine. Our website and digital ordering platform are build in Elixir and Phoenix. Always hiring :)"
+
+[[company]]
+name = "RentPath"
+industry = "Digital Marketing for Real Estate"
+url = "https://www.rentpath.com/"
+github = "https://github.com/rentpath"
+location = "Atlanta, GA, USA"
+description = "Elixir is being used for many internal services that provide robust APIs for user facing products."
