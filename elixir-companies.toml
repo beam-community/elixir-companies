@@ -21,6 +21,7 @@ industries = [
   "Food",
   "Gaming",
   "Government",
+  "Health and Beauty",
   "Healthcare",
   "Home Services",
   "Hospitality",
@@ -1739,3 +1740,11 @@ url = "https://www.rentpath.com/"
 github = "https://github.com/rentpath"
 location = "Atlanta, GA, USA"
 description = "Elixir is being used for many internal services that provide robust APIs for user facing products."
+
+[[company]]
+name = "Bookwell"
+industry = "Health and Beauty"
+url = "https://www.bookwell.com.au"
+github = "https://github.com/bookwell"
+location = "Melbourne, Australia"
+description = "Bookwell is an online booking site for health and beauty services in Australia. We also provide web based calendar software for venues to manage staff and appointment scheduling which is integrated with our booking platform. We are using Elixir for most of our backend and (GraphQL) APIs. Currently hiring for Elixir roles! :)"
