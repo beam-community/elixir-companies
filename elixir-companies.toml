@@ -1748,3 +1748,11 @@ url = "https://www.bookwell.com.au"
 github = "https://github.com/bookwell"
 location = "Melbourne, Australia"
 description = "Bookwell is an online booking site for health and beauty services in Australia. We also provide web based calendar software for venues to manage staff and appointment scheduling which is integrated with our booking platform. We are using Elixir for most of our backend and (GraphQL) APIs. Currently hiring for Elixir roles! :)"
+
+[[company]]
+name = "WePay"
+industry = "Fintech"
+url = "https://go.wepay.com"
+github = "https://github.com/wepay"
+location = "Redwood City, CA, USA"
+description = "WePay is the payments partner to the platform economy. They are using Elixir in some of their internal tools."
