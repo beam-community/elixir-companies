@@ -32,6 +32,7 @@ industries = [
   "Internet Infrastructure",
   "Internet of Things",
   "Legal services",
+  "Logistics",
   "Market Research",
   "Marketplaces",
   "Media",
@@ -1756,3 +1757,11 @@ url = "https://go.wepay.com"
 github = "https://github.com/wepay"
 location = "Redwood City, CA, USA"
 description = "WePay is the payments partner to the platform economy. They are using Elixir in some of their internal tools."
+
+[[company]]
+name = "CargoTel"
+industry = "Logistics"
+url = "https://cargotel.com"
+github = ""
+location = "Boston, MA, USA"
+description = "CargoTel provides leading software products to the automotive logistics and transportation industries. We are using Elixir for multi-tenant web applications and services (SaaS)."
