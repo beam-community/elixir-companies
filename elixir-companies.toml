@@ -466,6 +466,14 @@ github = "https://github.com/dockyard"
 description = "Projects, staff augmentation, coaching, & code audits. Organizer of Boston Elixir. Specialize in Phoenix backends with Ember frontends. [Chris McCord](https://github.com/chrismccord) is Architectural Engineer and creator of Phoenix."
 
 [[company]]
+name = "Driftrock"
+industry = "Online Marketing"
+url = "https://www.driftrock.com"
+github = "https://github.com/driftrock"
+location = "London, UK"
+description = "We build products that help our clients acquire and convert more customers from Facebook, LinkedIn and Google. We use Elixir and RabbitMQ for our event-based systems and Elixir/Phoenix for our backend APIs."
+
+[[company]]
 name = "Dubber"
 industry = "Communication"
 url = "https://www.dubber.net"
