@@ -1773,3 +1773,10 @@ url = "https://cargotel.com"
 github = ""
 location = "Baltimore, MD, USA"
 description = "CargoTel provides leading software products to the automotive logistics and transportation industries. We are using Elixir for multi-tenant web applications and services (SaaS)."
+
+[[company]]
+name = "MyXplor"
+industry = "Education"
+url = "https://www.ourxplor.com/"
+location = "Melbourne, Australia"
+description = "MyXplor have full Elixir/Phoenix implementation backing their web and mobile apps. Their software is innovating in the Childcare and Education industries."
