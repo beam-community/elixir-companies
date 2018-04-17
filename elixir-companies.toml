@@ -1780,3 +1780,11 @@ industry = "Education"
 url = "https://www.ourxplor.com/"
 location = "Melbourne, Australia"
 description = "MyXplor have full Elixir/Phoenix implementation backing their web and mobile apps. Their software is innovating in the Childcare and Education industries."
+
+[[company]]
+name = "Wistia"
+industry = "Video"
+url = "https://www.wistia.com"
+github = "https://github.com/wistia"
+location = "Cambridge, MA, USA"
+description = "Wistia provides simple software for creating, managing, and sharing videos for business. Several of our core services are built in Elixir including our video encoding platform."
