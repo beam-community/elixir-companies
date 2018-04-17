@@ -1793,6 +1793,6 @@ description = "Wistia provides simple software for creating, managing, and shari
 name = "Coletiv"
 industry = "Consulting"
 url = "https://www.coletiv.com"
-github = "https://github.com/wistia"
+github = "https://github.com/coletiv"
 location = "Porto, Portugal"
 description = "Based in Portugal, we develop backend software using Elixir and Phoenix that integrates with web and mobile devices."
