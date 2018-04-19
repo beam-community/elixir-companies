@@ -1788,3 +1788,11 @@ url = "https://www.wistia.com"
 github = "https://github.com/wistia"
 location = "Cambridge, MA, USA"
 description = "Wistia provides simple software for creating, managing, and sharing videos for business. Several of our core services are built in Elixir including our video encoding platform."
+
+[[company]]
+name = "Coletiv"
+industry = "Consulting"
+url = "https://www.coletiv.com"
+github = "https://github.com/coletiv"
+location = "Porto, Portugal"
+description = "Based in Portugal, we develop backend software using Elixir and Phoenix that integrates with web and mobile devices."
