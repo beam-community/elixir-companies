@@ -1805,3 +1805,12 @@ url = "https://pandascore.co"
 github = "https://github.com/PandaScore"
 location = "Paris, France"
 description = "We provide statistics and live data on most of esports games and tournaments. Elixir powers our internal tools and processing pipelines"
+
+
+[[company]]
+name = "CodicePlastico"
+industry = "Consulting"
+location = "Brescia, Italy"
+url = "http://www.codiceplastico.com"
+github = "https://github.com/codiceplastico"
+description = "We are a team of superheroes that code elixir applications to save the world."
