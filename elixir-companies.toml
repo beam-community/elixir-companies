@@ -15,6 +15,7 @@ industries = [
   "Education",
   "Energy",
   "Enterprise",
+  "Esports",
   "Expert Networks",
   "Family",
   "Fintech",
@@ -1796,3 +1797,11 @@ url = "https://www.coletiv.com"
 github = "https://github.com/coletiv"
 location = "Porto, Portugal"
 description = "Based in Portugal, we develop backend software using Elixir and Phoenix that integrates with web and mobile devices."
+
+[[company]]
+name = "PandaScore"
+industry = "Esports"
+url = "https://pandascore.co"
+github = "https://github.com/PandaScore"
+location = "Paris, France"
+description = "We provide statistics and live data on most of esports games and tournaments. Elixir powers our interal tools and processing pipelines"
