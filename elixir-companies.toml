@@ -361,6 +361,13 @@ github = "https://github.com/coders51"
 description = "We develop web and mobile solutions for the entire galaxy."
 
 [[company]]
+name = "CodicePlastico"
+industry = "Consulting"
+url = "http://www.codiceplastico.com"
+github = "https://github.com/codiceplastico"
+description = "We are a team of superheroes that code elixir applications to save the world."
+
+[[company]]
 name = "Coffee Meets Bagel"
 industry = "Dating"
 url = "https://coffeemeetsbagel.com/"
