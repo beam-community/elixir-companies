@@ -1814,3 +1814,11 @@ location = "Brescia, Italy"
 url = "http://www.codiceplastico.com"
 github = "https://github.com/codiceplastico"
 description = "We are a team of superheroes that code elixir applications to save the world."
+
+[[company]]
+name = "ScriptDrop"
+industry = "Healthcare"
+url = "http://www.scriptdrop.co/"
+github = "https://github.com/ScriptDrop"
+location = "Columbus, OH, USA"
+description = "Integrated prescription delivery service."
