@@ -1,0 +1,25 @@
+<div class="company box">
+  <div class="content has-text-centered">
+    <p class="title is-4 thin">{{include['company']['name']}}</p>
+  </div>
+  <div class="content company-info has-text-left">
+    <p class="is-size-7">
+      <span class="icon purple"><i class="fas fa-fw fa-cogs"></i></span> {{include['company']['industry']}}<br>
+    {% if include['company']['url'] %}
+      <span class="icon purple"><i class="fas fa-fw fa-globe"></i></span> <a target="_blank" href="{{include['company']company.www}}">{{include['company']['url'] | replace: "http://", "" | replace: "https://", "" | replace: "www.", ""}}</a><br>
+    {% endif %}
+    {% if include['company']['blog'] %}
+      <span class="icon purple"><i class="fas fa-fw fa-lightbulb"></i></span> <a target="_blank" href="{{include['company']['blog']}}">{{include['company']['blog'] | replace: "http://", "" | replace: "https://", "" | replace: "www.", ""}}</a><br>
+    {% endif %}
+    {% if include['company']['github'] %}
+      <span class="icon purple"><i class="fab fa-fw fa-github"></i></span> <a target="_blank" href="https://github.com/{{include['company']['github']}}?language=elixir">GitHub</a><br>
+    {% endif %}
+    {% if include['company']['location'] %}
+      <span class="icon purple"><i class="fas fa-fw fa-location-arrow"></i></span> {{include['company']['location']}}<br>
+    {% endif %}
+    </p>
+  </div>
+  <div class="content is-size-7 has-text-centered">
+    {{ include['company']['description'] | markdownify }}
+  </div>
+</div>

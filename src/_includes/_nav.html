@@ -1,0 +1,29 @@
+<nav id="navbar" class="navbar has-shadow is-spaced">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">{% asset elixircompanies_logo.png %}&nbsp;<h1 class="title is-5">Elixir Companies</h1></a>
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/{{ site.github }}" target="_blank"><span class="icon has-text-grey-darker"><i class="fab fa-lg fa-github"></i></span></a>
+
+      <div id="navbarBurger" class="navbar-burger burger" data-target="navMain">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div> <!-- /navbarbrand -->
+    <div class="navbar-menu" id="navMain">
+      <div class="navbar-start">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link is-active">Industries</a>
+          <div id="moreDropdown" class="navbar-dropdown">
+            {% for industry in site.data['industries'] %}
+            <a class="navbar-item" href="/industries/{{ industry['path'] }}"><span class="has-text-weight-bold">{{ industry['name'] }}</span></a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item is-hidden-mobile" href="https://github.com/{{ site.github }}" target="_blank"><span class="icon has-text-grey-darker"><i class="fab fa-lg fa-github"></i></span></a>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -3,7 +3,8 @@ Please review our [Contribution Guidelines](https://github.com/doomspork/elixir-
 Review your changes and complete the checklist below.
 
 - [ ] Company name
-- [ ] Company description
+- [ ] Industry
 - [ ] Company location
-- [ ] GitHub link
+- [ ] Links
+- [ ] Company description
 - [ ] How Elixir is used
