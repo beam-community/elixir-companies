@@ -1,7 +1,7 @@
 language: ruby
 rvm:
-  - 2.2
+  - 2.4
 before_script:
   - gem install awesome_bot
 script:
-  - awesome_bot elixir-companies.toml --allow-redirect -w agilion.com,brighterlink.io,dubber.net,therealreal.com,marketfactory.com
+  - awesome_bot src/_data/companies.yml --allow-redirect

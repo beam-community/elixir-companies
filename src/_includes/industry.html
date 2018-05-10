@@ -1,0 +1,14 @@
+<section class="section">
+  <div class="container">
+    <div class="content">
+      <h1 class="title is-3 fancy">{{ page.industry }}</h1>
+      <div class="columns is-desktop is-multiline">
+      {% for company in page.companies %}
+        <div class="column is-one-quarter-desktop">
+          {% include company-card.html company=company %}
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div> <!-- /container -->
+</section>
