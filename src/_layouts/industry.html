@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<section class="section">
+  <div class="container">
+    <div class="content">
+      <h1 class="title is-3 fancy">{{ page.name }}</h1>
+      {{ content }}
+      <div class="columns is-desktop is-multiline">
+      {% for company in site.companies %}
+        {% if company.industry == page.name %}
+        <div class="column is-one-quarter-desktop">
+          {% include company-card.html company=company %}
+        </div>
+        {% endif %}
+      {% endfor %}
+      </div>
+    </div>
+  </div> <!-- /container -->
+</section>

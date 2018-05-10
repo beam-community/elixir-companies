@@ -1,0 +1,4 @@
+---
+layout: industries
+permalink: /industries/
+---

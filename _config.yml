@@ -1,0 +1,56 @@
+# Site settings
+name: Elixir Companies
+description: A curated list of companies using Elixir in production, organized by industry.
+maintainers:
+  - doomspork
+  - burden
+
+collections:
+  industries:
+    output: true
+    permalink: /industry/:title/
+  companies:
+    output: false
+    #permalink: /company/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: industries
+    values:
+      layout: industry
+  # - scope:
+  #     path: ""
+  #     type: companies
+  #   values:
+  #     layout: company
+
+
+# Social settings
+github: doomspork/elixir-companies
+
+# Build settings
+source: src
+destination: www
+markdown: kramdown
+
+compress_html:
+  ignore:
+    envs: ["development"]
+  clippings: all
+  comments: all
+  endings: all
+  startings: all
+  blanklines: false
+  profile: false
+
+assets:
+  sources:
+  - _assets/vendor
+  digest: true # cache busting
+  compress:
+    css: true
+    js: true
+
+compression: true
+gzip: true

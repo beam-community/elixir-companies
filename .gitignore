@@ -64,3 +64,11 @@ $RECYCLE.BIN/
 /deps
 erl_crash.dump
 *.ez
+
+### Node ###
+node_modules
+
+### Jekyll ###
+www/
+.jekyll-cache
+src/_assets/vendor
