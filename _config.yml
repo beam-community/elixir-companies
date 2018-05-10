@@ -5,6 +5,11 @@ maintainers:
   - doomspork
   - burden
 
+plugins:
+  - jekyll-assets
+  - kramdown
+  - uglifier
+
 collections:
   industries:
     output: true
@@ -19,12 +24,6 @@ defaults:
       type: industries
     values:
       layout: industry
-  # - scope:
-  #     path: ""
-  #     type: companies
-  #   values:
-  #     layout: company
-
 
 # Social settings
 github: doomspork/elixir-companies
@@ -44,13 +43,14 @@ compress_html:
   blanklines: false
   profile: false
 
+compression: true
+gzip: true
+
+exclude: ['config.ru', 'CONTRIBUTING.md', 'Gemfile', 'Gemfile.lock', 'Procfile', 'Rakefile', 'README.md']
 assets:
   sources:
   - _assets/vendor
-  digest: true # cache busting
+  digest: true
   compress:
     css: true
-    js: true
-
-compression: true
-gzip: true
+    js: uglifier
