@@ -46,7 +46,6 @@ compress_html:
 compression: true
 gzip: true
 
-exclude: ['config.ru', 'CONTRIBUTING.md', 'Gemfile', 'Gemfile.lock', 'Procfile', 'Rakefile', 'README.md']
 assets:
   sources:
   - _assets/vendor
