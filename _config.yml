@@ -36,20 +36,23 @@ markdown: kramdown
 compress_html:
   ignore:
     envs: ["development"]
-  clippings: all
+  clippings: []
   comments: all
-  endings: all
-  startings: all
+  endings: []
+  startings: []
   blanklines: false
   profile: false
-
-compression: true
-gzip: true
 
 assets:
   sources:
   - _assets/vendor
   digest: true
+  compression: true
+  gzip: false
+  defaults:
+    js: { integrity: false } # true on JEKYLL_ENV=production
+    css: { integrity: false } # true on JEKYLL_ENV=production
+    img: { integrity: false } # true on JEKYLL_ENV=production
   compress:
-    css: true
+    css: false
     js: uglifier

@@ -70,11 +70,7 @@ GEM
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.2)
-    puma (3.11.4)
     rack (2.0.4)
-    rack-jekyll (0.3.5)
-      jekyll
-      rack
     rake (12.0.0)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
@@ -93,7 +89,7 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    uglifier (4.1.10)
+    uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
 
 PLATFORMS
@@ -103,10 +99,8 @@ DEPENDENCIES
   jekyll
   jekyll-assets
   kramdown
-  puma
-  rack-jekyll
   rake
-  uglifier
+  uglifier (~> 3.2)
 
 RUBY VERSION
    ruby 2.4.2p198
