@@ -15,9 +15,29 @@
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link is-active">Industries</a>
           <div id="moreDropdown" class="navbar-dropdown">
-            {% for industry in site.data['industries'] %}
-            <a class="navbar-item" href="/industries/{{ industry['path'] }}"><span class="has-text-weight-bold">{{ industry['name'] }}</span></a>
-            {% endfor %}
+            {% assign first_list = site.data['industries'] | slice: 0, 18 %}
+            {% assign second_list = site.data['industries'] | slice: 18, 18 %}
+            {% assign third_list = site.data['industries'] | slice: 36, 18 %}
+
+            <div class="columns">
+              <div class="column">
+                {% for industry in first_list %}
+                <a class="navbar-item" href="/industries/{{ industry['path'] }}"><span class="has-text-weight-bold">{{ industry['name'] }}</span></a>
+                {% endfor %}
+              </div>
+              <div class="column">
+                {% for industry in second_list %}
+                <a class="navbar-item" href="/industries/{{ industry['path'] }}"><span class="has-text-weight-bold">{{ industry['name'] }}</span></a>
+                {% endfor %}
+              </div>
+              <div class="column">
+                {% for industry in third_list %}
+                <a class="navbar-item" href="/industries/{{ industry['path'] }}"><span class="has-text-weight-bold">{{ industry['name'] }}</span></a>
+                {% endfor %}
+              </div>
+            </div>
+
+
           </div>
         </div>
       </div>
