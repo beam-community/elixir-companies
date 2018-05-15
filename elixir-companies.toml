@@ -261,13 +261,6 @@ github = "https://github.com/brightcove"
 description = "A leading global provider of powerful cloud solutions for delivering and monetizing video across connected devices."
 
 [[company]]
-name = "Brighterlink"
-industry = "Energy"
-url = "https://www.brighterlink.io"
-github = "https://github.com/Brightergy"
-description = "All-in-one energy platform for analytics, utilities and procurement. We use Elixir for backend API (powered by phoenix) and also for thousands of worker processes to fetch, parse and write data from embedded devices to our time-series database."
-
-[[company]]
 name = "Briisk"
 industry = "Consulting"
 url = "https://briisk.co"
@@ -507,13 +500,6 @@ industry = "Real Estate"
 url = "https://www.exrny.com/"
 github = "https://github.com/exrny"
 description = "EXR is a residential and commercial real estate brokerage building a better experience for buying, selling, and leasing real estate."
-
-[[company]]
-name = "EasyMile"
-industry = "Autonomous Vehicles"
-url = "https://easymile.com"
-github = "https://github.com/EasyMile"
-description = "We design and build autonomous vehicles in France. We use Elixir for our Fleet Management suite."
 
 [[company]]
 name = "Echobind"
@@ -768,12 +754,6 @@ url = "http://www.icicletech.com)([GitHub](https://github.com/icicletech)"
 description = "Provides Consulting, Product Development on Elixir & Phoenix. Organizer of Bangalore Elixir Group, built [ElixirNation.io](http://elixirnation.io)."
 
 [[company]]
-name = "IdealSpot"
-industry = "Real Estate"
-url = "https://www.idealspot.com"
-description = "IdealSpot provides local market data for retail and real estate. We use Elixir for distributed data aggregation and multiple backend services. Austin, TX, USA."
-
-[[company]]
 name = "Infinite Red"
 industry = "Consulting"
 url = "https://infinite.red"
@@ -909,12 +889,6 @@ location = "Columbus, OH"
 description = "We're Matched Pattern. We’re a software consultancy based in Columbus, Ohio. We specialize in web development, infrastructure and Internet of Things (IoT). Each of our Central Ohio-based, full-time developers have unique experiences and bring insight to each of our offerings. We use Elixir to build scalable web applications."
 
 [[company]]
-name = "MarketFactory"
-industry = "Fintech"
-url = "https://marketfactory.com"
-description = "([Github](https://github.com/MarketFactory))- A low-latency FX platform connecting banks/traders to 70+ different FX venues. We leverage elixir/phoenix for multiple back end microservices (ie. trade execution). New York, NY, USA."
-
-[[company]]
 name = "Mediteo"
 industry = "Healthcare"
 url = "https://www.mediteo.com"
@@ -979,12 +953,6 @@ name = "Nested"
 industry = "Real Estate"
 url = "https://nested.com/"
 description = "Nested is an estate agent with a difference. We guarantee you a fair sale price for your home so you can move on chain-free. ([Github](https://github.com/nested-tech)) - Elixir powers our backend. London, UK."
-
-[[company]]
-name = "Omagatoki 大禍時"
-industry = "Security"
-url = "https://omagatoki.gdn"
-description = "([GitHub](https://github.com/omagatoki)) - VPN service which is transparent, secure and featureful."
 
 [[company]]
 name = "Onfido"
@@ -1459,12 +1427,6 @@ url = "https://weedmaps.com/"
 description = "Weedmaps.com is a community where medical marijuana users connect with other users in their geographic region to freely discuss and review local cannabis co-operatives, storefronts, medical doctors and delivery services. We are headquartered in Irvine, CA, and we are using Elixir to build our backend services."
 
 [[company]]
-name = "WellMatch"
-industry = "Healthcare"
-url = "https://wellmatchhealth.com"
-description = "Price transparency and a better way to shop for healthcare."
-
-[[company]]
 name = "WhiteHat"
 industry = "Apprenticeships"
 url = "https://whitehat.org.uk"
@@ -1608,7 +1570,7 @@ name = "uSwitch"
 industry = "Home Services"
 url = "https://www.uswitch.com/"
 location = "London, UK"
-github = "https://github.com/uSwitch), [Blog](https://labs.uswitch.com/"
+github = "https://github.com/uSwitch"
 description = "uSwitch is a comparison service that helps you to compare on a range of products and services (energy, gas, broadband, mobiles, personal finance). We use Elixir in Credit Card comparison for finding out how likely customers are to get cards."
 
 [[company]]
