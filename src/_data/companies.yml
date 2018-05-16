@@ -330,6 +330,13 @@ Diacode:
   github: https://github.com/diacode
   description: "Former Ruby on Rails development shop now embracing Elixir and Phoenix. Authors of [Phoenix Trello](https://github.com/bigardone/phoenix-trello) clone. Co-Organizer of the [Madrid |> Elixir meetup](http://www.meetup.com/Madrid-Elixir/)."
 
+DialerAI:
+  industry: Communication
+  location: Spain, Barcelona (also UK)
+  url: https://dialer.ai/
+  github: https://github.com/dialerai
+  description: "DialerAI is fully-featured CallCenter Solution, supporting predictive, power, preview and blended modes. We use Elixir to power some of our backends services, we are based in Barcelona."
+
 Diatom Enterprise Softwares:
   industry: Technology Consulting
   url: http://www.diatomenterprises.com/
