@@ -1535,3 +1535,10 @@ Flatiron School:
   jobs:
     - title: Software Engineer (Remote USA Allowed)
       url: "https://flatironschool.com/careers/view-posting/?gh_jid=51001"
+
+Decisiv:
+  industry: Service Relationship Management
+  location: Glen Allen, VA, USA
+  url: https://www.decisiv.com/
+  github: http://github.com/decisiv
+  description: "Decisiv is a rapidly growing industry leader in the asset management and service supply chain marketplace.  We use Elixir as the backbone of our microservice SoA."
