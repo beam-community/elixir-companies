@@ -161,13 +161,6 @@ Bold Poker:
   url: https://boldpoker.net
   description: "([GitHub](https://github.com/boldpoker)) - Bold Poker transforms mobile devices into an efficient and professional poker dealer. Elixir is used for the backend communication service the clients connect to as well as for the website."
 
-Botsquad:
-  industry: Communication
-  location: Amsterdam, the Netherlands
-  url: https://www.botsquad.com
-  github: https://github.com/botsqd
-  description: "Botsquad is a platform for building conversational apps and chatbots, running on the web, FB messenger, Slack, etc, using an Elixir-like DSL. Their backend is built exclusively with Elixir."
-
 Bowery Farming:
   industry: Food
   url: http://boweryfarming.com
@@ -330,13 +323,6 @@ Diacode:
   github: https://github.com/diacode
   description: "Former Ruby on Rails development shop now embracing Elixir and Phoenix. Authors of [Phoenix Trello](https://github.com/bigardone/phoenix-trello) clone. Co-Organizer of the [Madrid |> Elixir meetup](http://www.meetup.com/Madrid-Elixir/)."
 
-DialerAI:
-  industry: Communication
-  location: Spain, Barcelona (also UK)
-  url: https://dialer.ai/
-  github: https://github.com/dialerai
-  description: "DialerAI is fully-featured CallCenter Solution, supporting predictive, power, preview and blended modes. We use Elixir to power some of our backends services, we are based in Barcelona."
-
 Diatom Enterprise Softwares:
   industry: Technology Consulting
   url: http://www.diatomenterprises.com/
@@ -483,16 +469,6 @@ Flow:
   industry: Communication
   url: https://www.getflow.com/
   description: "All your team’s communication, clear and organized."
-
-Flatiron School:
-  industry: Education
-  url: http://www.flatironschool.com/
-  github: https://github.com/flatiron-labs
-  location: New York, NY, USA
-  description: "Flatiron School teaches passionate, creative people how to code in our immersive in-person bootcamps and through our online training platform Learn.co.  We recently joined the WeWork family as we continue our mutual mission to enable passionate people to learn the skills they need to pursue careers and lives they love.  We utilize Elixir to power our in-browser IDE functionality."
-  jobs:
-    - title: Software Engineer (Remote USA Allowed)
-      url: "https://flatironschool.com/careers/view-posting/?gh_jid=51001"
 
 Fontstore:
   industry: E-Commerce
@@ -655,16 +631,6 @@ Kabisa:
   jobs:
     - title: Elixir/Phoenix developer
       url: https://www.kabisa.nl/vacatures/elixir-phoenix-developer
-
-Kiprosh:
-  industry: Technology Consulting
-  location: Mumbai, India and Chicago, USA
-  github: http://github.com/kiprosh
-  url: http://www.kiprosh.com
-  description: "A software product development firm developing high impact high value and high performance scalable applications for clients in USA and Hong Kong. Expertise in Elixir, Phoenix, Ruby on Rails, React.js, Ember.js, iOS, Android and Agile methodologies. Co-Organizer of the [Mumbai Elixir Meetup](https://www.meetup.com/Mumbai-Elixir-Meetup-MEM/) and [Techgravy Meetup](https://www.meetup.com/Techgravy/)."
-  jobs:
-    - title: Software Engineer (Remote Allowed)
-      url: "http://kiprosh.com/careers"
 
 Kittysplit:
   industry: Financial Technology
@@ -1494,13 +1460,6 @@ Wistia:
   location: Cambridge, MA, USA
   description: "Wistia provides simple software for creating, managing, and sharing videos for business. Several of our core services are built in Elixir including our video encoding platform."
 
-Wunder:
-  industry: Mobility
-  url: https://www.wunder.org/
-  github: https://github.com/wundercar
-  location: Hamburg, Germany
-  description: "At Wunder, our mission is to solve traffic in the world’s most gridlocked cities through carpooling. It’s an epic mission that requires a combination of technology and community. Striving for excellence in these two areas is what makes us different. We use Elixir/Phoenix/OTP for most parts of the system."
-
 Coletiv:
   industry: Technology Consulting
   url: https://www.coletiv.com
@@ -1514,7 +1473,6 @@ PandaScore:
   github: https://github.com/PandaScore
   location: Paris, France
   description: "We provide statistics and live data on most of esports games and tournaments. Elixir powers our internal tools and processing pipelines"
-
 
 CodicePlastico:
   industry: Technology Consulting
@@ -1536,3 +1494,44 @@ VoiSmart:
   github: https://github.com/VoiSmart
   location: Milano, Italy
   description: "We develop Unified communications and Collaboration products. Elixir powers our webRTC video conference solution and is permeating legacy ones, too!"
+
+Wunder:
+  industry: Mobility
+  url: https://www.wunder.org/
+  github: https://github.com/wundercar
+  location: Hamburg, Germany
+  description: "At Wunder, our mission is to solve traffic in the world’s most gridlocked cities through carpooling. It’s an epic mission that requires a combination of technology and community. Striving for excellence in these two areas is what makes us different. We use Elixir/Phoenix/OTP for most parts of the system."
+
+Botsquad:
+  industry: Communication
+  location: Amsterdam, the Netherlands
+  url: https://www.botsquad.com
+  github: https://github.com/botsqd
+  description: "Botsquad is a platform for building conversational apps and chatbots, running on the web, FB messenger, Slack, etc, using an Elixir-like DSL. Their backend is built exclusively with Elixir."
+
+DialerAI:
+  industry: Communication
+  location: Spain, Barcelona (also UK)
+  url: https://dialer.ai/
+  github: https://github.com/dialerai
+  description: "DialerAI is fully-featured CallCenter Solution, supporting predictive, power, preview and blended modes. We use Elixir to power some of our backends services, we are based in Barcelona."
+
+Kiprosh:
+  industry: Technology Consulting
+  location: Mumbai, India and Chicago, USA
+  github: http://github.com/kiprosh
+  url: http://www.kiprosh.com
+  description: "A software product development firm developing high impact high value and high performance scalable applications for clients in USA and Hong Kong. Expertise in Elixir, Phoenix, Ruby on Rails, React.js, Ember.js, iOS, Android and Agile methodologies. Co-Organizer of the [Mumbai Elixir Meetup](https://www.meetup.com/Mumbai-Elixir-Meetup-MEM/) and [Techgravy Meetup](https://www.meetup.com/Techgravy/)."
+  jobs:
+    - title: Software Engineer (Remote Allowed)
+      url: "http://kiprosh.com/careers"
+
+Flatiron School:
+  industry: Education
+  url: http://www.flatironschool.com/
+  github: https://github.com/flatiron-labs
+  location: New York, NY, USA
+  description: "Flatiron School teaches passionate, creative people how to code in our immersive in-person bootcamps and through our online training platform Learn.co.  We recently joined the WeWork family as we continue our mutual mission to enable passionate people to learn the skills they need to pursue careers and lives they love.  We utilize Elixir to power our in-browser IDE functionality."
+  jobs:
+    - title: Software Engineer (Remote USA Allowed)
+      url: "https://flatironschool.com/careers/view-posting/?gh_jid=51001"
