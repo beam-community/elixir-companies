@@ -1454,6 +1454,13 @@ Wistia:
   location: Cambridge, MA, USA
   description: "Wistia provides simple software for creating, managing, and sharing videos for business. Several of our core services are built in Elixir including our video encoding platform."
 
+Wunder:
+  industry: Mobility
+  url: https://www.wunder.org/
+  github: https://github.com/wundercar
+  location: Hamburg, Germany
+  description: "At Wunder, our mission is to solve traffic in the world’s most gridlocked cities through carpooling. It’s an epic mission that requires a combination of technology and community. Striving for excellence in these two areas is what makes us different. We use Elixir/Phoenix/OTP for most parts of the system."
+
 Coletiv:
   industry: Technology Consulting
   url: https://www.coletiv.com
