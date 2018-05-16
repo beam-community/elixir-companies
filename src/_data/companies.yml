@@ -470,6 +470,12 @@ Flow:
   url: https://www.getflow.com/
   description: "All your team’s communication, clear and organized."
 
+Flatiron School:
+  industry: Education
+  url: http://www.flatironschool.com/
+  github: https://github.com/flatiron-labs
+  description: "Flatiron School teaches passionate, creative people how to code in our immersive in-person bootcamps and through our online training platform Learn.co.  We recently joined the WeWork family as we continue our mutual mission to enable passionate people to learn the skills they need to pursue careers and lives they love."
+
 Fontstore:
   industry: E-Commerce
   url: https://www.fontstore.com
