@@ -71,7 +71,7 @@ html {
     &.company {
       min-height: 350px;
       max-height: 350px;
-      overflow: scroll
+      overflow: auto;
     }
     .company-info {
       padding: 10px 0px;
