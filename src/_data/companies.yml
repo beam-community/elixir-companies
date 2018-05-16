@@ -1529,3 +1529,10 @@ ScriptDrop:
   github: https://github.com/ScriptDrop
   location: Columbus, OH, USA
   description: "Integrated prescription delivery service."
+
+VoiSmart:
+  industry: Telecommunications
+  url: https://www.voismart.it
+  github: https://github.com/VoiSmart
+  location: Milano, Italy
+  description: "We develop Unified communications and Collaboration products. Elixir powers our webRTC video conference solution and is permeating legacy ones, too!"
