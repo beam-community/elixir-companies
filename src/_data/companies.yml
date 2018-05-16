@@ -628,8 +628,10 @@ Kabisa:
 
 Kiprosh:
   industry: Technology Consulting
+  location: Mumbai, India and Chicago, USA
+  github: http://github.com/kiprosh
   url: http://www.kiprosh.com
-  description: "A software product development firm developing high impact high value and high performance scalable applications for clients in USA and Hong Kong. Expertise in Elixir, Phoenix, Ruby on Rails, React.js, Ember.js, iOS, Android and Agile methodologies. Headquartered in Mumbai, INDIA with an office in Chicago, USA. Co-Organizer of the [Mumbai Elixir Meetup](https://www.meetup.com/Mumbai-Elixir-Meetup-MEM/) and [Techgravy Meetup](https://www.meetup.com/Techgravy/)."
+  description: "A software product development firm developing high impact high value and high performance scalable applications for clients in USA and Hong Kong. Expertise in Elixir, Phoenix, Ruby on Rails, React.js, Ember.js, iOS, Android and Agile methodologies. Co-Organizer of the [Mumbai Elixir Meetup](https://www.meetup.com/Mumbai-Elixir-Meetup-MEM/) and [Techgravy Meetup](https://www.meetup.com/Techgravy/)."
 
 Kittysplit:
   industry: Financial Technology
