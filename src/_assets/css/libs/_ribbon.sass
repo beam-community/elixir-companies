@@ -1,0 +1,66 @@
+$ribbon-color: $grey-darker !default
+$ribbon-background-color: $white !default
+$ribbon-border: .1rem solid $grey-lighter !default
+
+// The ribbon sizes use mixins so they can be used at different breakpoints
+=ribbon-small
+  font-size: $size-small
+=ribbon-medium
+  font-size: $size-medium
+=ribbon-large
+  font-size: $size-large
+
+.has-ribbon
+  position: relative
+
+.has-ribbon-left
+  position: relative
+  .ribbon
+    right: auto
+    left: 0
+    border-left: none
+    border-right: $ribbon-border
+
+.has-ribbon-bottom
+  position: relative
+  .ribbon
+    top: auto
+    bottom: .5em
+
+.ribbon
+  background-color: $ribbon-background-color
+  border: $ribbon-border
+  border-right: none
+  color: $ribbon-color
+  font-size: $size-normal
+  justify-content: center
+  padding-left: 0.75em
+  padding-right: 0.75em
+  text-align: center
+  white-space: nowrap
+  position: absolute
+  top: .5em
+  right: 0
+  font-weight: 400
+  z-index: 2
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+    &.is-#{$name}:not(.is-outlined)
+      background-color: $color
+      border-color: transparent
+      color: $color-invert !important
+    &.is-#{$name}
+      &.is-outlined
+        background-color: transparent
+        border-color: $color
+
+  // Sizes
+  &.is-small
+    +ribbon-small
+  &.is-medium
+    +ribbon-medium
+  &.is-large
+    +ribbon-large
+  &.is-outlined
+    background-color: transparent

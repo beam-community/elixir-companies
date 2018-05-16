@@ -1,4 +1,7 @@
-<div class="company box">
+<div class="company box {% if include['company']['jobs'] %}has-ribbon{% endif %}">
+  {% if include['company']['jobs'] %}
+  <div class="ribbon is-warning"><b>Hiring!</b></div>
+  {% endif %}
   <div class="content has-text-centered">
     <p class="title is-4 thin">{{include['company']['name']}}</p>
   </div>
@@ -17,6 +20,9 @@
     {% if include['company']['location'] %}
       <span class="icon purple"><i class="fas fa-fw fa-location-arrow"></i></span> {{include['company']['location']}}<br>
     {% endif %}
+    {% for job in include['company']['jobs'] %}
+      <span class="icon purple"><i class="fas fa-briefcase"></i></span> <a href="{{ job['url'] }}">{{ job['title'] }}</a><br> 
+    {% endfor %}
     </p>
   </div>
   <div class="content is-size-7 has-text-centered">
