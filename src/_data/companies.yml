@@ -558,6 +558,9 @@ Hello Sign:
   url: https://www.hellosign.com
   github: https://github.com/HelloFax
   description: "eSignature platform. Send and receive electronic signatures securely with the end-user solution or the eSignature API. San Fransisco, CA, USA."
+  jobs:
+    - title: Software Engineer
+      url: "https://jobs.lever.co/hellosign/39ea6c41-8ff8-4c93-b0fd-4a6224ef29ec"
 
 Heresy:
   industry: Marketing/Sales
@@ -1111,6 +1114,9 @@ The RealReal:
   url: https://www.therealreal.com
   github: https://github.com/TheRealReal
   description: "Marketplace for luxury fashion resale products."
+  jobs:
+    - title: Lead Full Stack Engineer
+      url: "https://www.therealreal.com/careers/4CE9F124E3"
 
 The book of everyone:
   industry: E-Commerce

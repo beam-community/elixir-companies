@@ -10,16 +10,34 @@ class IndustryGenerator < Jekyll::Generator
       .group_by { |company| [company['industry'], company['industry'].downcase.gsub(/[^a-zA-Z]/, "-")] }
       .sort_by { |key, _values| key[0] }
       .reduce([]) do |acc, group|
-        acc << { 'companies' => group.last, 'name' => group.first.first, 'path' => group.first.last }
-      end
+      acc << { 'companies' => group.last, 'name' => group.first.first, 'path' => group.first.last }
+    end
 
     site.data['industries'] = industries
+    site.data['hiring'] = hiring_companies(industries)
+
+    site.pages << hiring_page(site)
 
     industries.each { |industry| site.pages << build_page(site, industry) }
   end
 
-  def build_page(site, industry)
+  def hiring_page(site)
+    page = Jekyll::PageWithoutAFile.new(site, site.source, '/', "hiring.md")
+    page.data['industry'] = 'Hiring'
+    page.data['companies'] = site.data['hiring']
+    page.data['layout'] = 'default'
+    page.content = '{% include industry.html %}'
 
+    page
+  end
+
+  def hiring_companies(industries)
+    industries
+      .flat_map { |industry| industry['companies'] }
+      .select { |company| company['jobs'] }
+  end
+
+  def build_page(site, industry)
     page = Jekyll::PageWithoutAFile.new(site, site.source, 'industries', "#{industry['path']}.md")
     page.data['industry'] = industry['name']
     page.data['companies'] = industry['companies']

@@ -36,10 +36,12 @@
                 {% endfor %}
               </div>
             </div>
-
-
           </div>
         </div>
+        {% assign hiring_count = site.data['hiring'] | size %}
+        {% if hiring_count > 0 %}
+          <a class="navbar-item" href="/hiring">Hiring</a>
+        {% endif %}
       </div>
       <div class="navbar-end">
         <a class="navbar-item is-hidden-mobile" href="https://github.com/{{ site.github }}" target="_blank"><span class="icon has-text-grey-darker"><i class="fab fa-lg fa-github"></i></span></a>

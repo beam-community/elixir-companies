@@ -17,6 +17,7 @@ $footer-background-color: $link;
 
 @import 'bulma/bulma';
 @import 'libs/mixins';
+@import 'libs/ribbon';
 
 html {
   background-attachment:  fixed, fixed;
@@ -41,7 +42,7 @@ html {
     color: #fff !important;
   }
   .purple {
-      color: $link-hover;
+    color: $link-hover;
   }
   .title {
     font-family: "Roboto Slab", serif;
