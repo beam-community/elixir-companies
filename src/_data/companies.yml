@@ -630,8 +630,14 @@ Isotope11:
 
 Kabisa:
   industry: Technology Consulting
+  location: Amsterdam, The Netherlands
   url: http://www.kabisa.nl
+  github: https://github.com/kabisa
+  blog: https://www.theguild.nl
   description: "Software crafts(wo)men, passionately committed to exceed our customers expectations in every step we take. We value creativity and flexibility. Co-Organizer of the [Amsterdam Elixir meetup](http://www.meetup.com/Amsterdam-Elixir/)."
+  jobs:
+    - title: Elixir/Phoenix developer
+      url: https://www.kabisa.nl/vacatures/elixir-phoenix-developer
 
 Kittysplit:
   industry: Financial Technology
