@@ -2,7 +2,7 @@
 
 # Elixir Companies
 
-A [curated list of companies using Elixir](https://doomspork.github.io/elixir-companies/) in production, organized by industry.
+A [curated list of companies using Elixir](https://elixir-companies.com/) in production, organized by industry.
 
 ## Contributing
 
