@@ -773,7 +773,13 @@ Neon Tree Solutions:
 Nested:
   industry: Real Estate
   url: https://nested.com/
-  description: "Nested is an estate agent with a difference. We guarantee you a fair sale price for your home so you can move on chain-free. ([Github](https://github.com/nested-tech)) - Elixir powers our backend. London, UK."
+  blog: https://tech.nested.com/
+  github: https://github.com/nested-tech
+  location: London, UK
+  description: "Nested is an estate agent with a difference. We give you an advance so you can buy your new home when you're ready, while we sell your old one for the best possible price. Elixir is our language of choice, we use it to power everything we do in the backend, from providing the API for our user facing website to powering our internal tools."
+  jobs:
+    - title: Senior Software Engineer
+      url: https://nested.workable.com/j/1D3FE7D3CD
 
 Onfido:
   industry: Identity
