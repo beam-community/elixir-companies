@@ -1021,6 +1021,7 @@ SoPost:
 Solarisbank:
   industry: Financial Technology
   url: https://www.solarisbank.de/
+  location: Berlin, Germany
   github: https://github.com/solarisbank
   description: "Provider of financial solutions for other financial entities and companies."
 
