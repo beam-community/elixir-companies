@@ -1552,3 +1552,10 @@ Decisiv:
   url: https://www.decisiv.com/
   github: http://github.com/decisiv
   description: "Decisiv is a rapidly growing industry leader in the asset management and service supply chain marketplace.  We use Elixir as the backbone of our microservice SoA."
+
+Rhino:
+  industry: Real Estate
+  url: https://www.sayrhino.com
+  github: https://github.com/sayrhino
+  location: New York, NY, USA
+  description: "Rhino replaces your security deposit with affordable insurance for your apartment – and puts thousands of dollars back in your pocket. We use Elixir to power our public API (https://www.sayrhino.com/api)"
