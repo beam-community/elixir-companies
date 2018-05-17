@@ -1501,6 +1501,9 @@ VoiSmart:
   github: https://github.com/VoiSmart
   location: Milano, Italy
   description: "We develop Unified communications and Collaboration products. Elixir powers our webRTC video conference solution and is permeating legacy ones, too!"
+  jobs:
+    - title: Software Engineer
+      url: https://www.voismart.it/en/job-opportunty
 
 Wunder:
   industry: Mobility
