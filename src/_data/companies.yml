@@ -1554,6 +1554,9 @@ Decisiv:
   url: https://www.decisiv.com/
   github: http://github.com/decisiv
   description: "Decisiv is a rapidly growing industry leader in the asset management and service supply chain marketplace.  We use Elixir as the backbone of our microservice SoA."
+  jobs:
+    - title: Senior Software Engineer
+      url: "https://www.decisiv.com/senior-software-eng-0-0"
 
 Rhino:
   industry: Real Estate
