@@ -1564,3 +1564,13 @@ Rhino:
   github: https://github.com/sayrhino
   location: New York, NY, USA
   description: "Rhino replaces your security deposit with affordable insurance for your apartment – and puts thousands of dollars back in your pocket. We use Elixir to power our public API (https://www.sayrhino.com/api)"
+
+InfluxData:
+  industry: Internet Infrastructure
+  url: https://www.influxdata.com
+  github: https://github.com/influxdata
+  location: San Fransisco, CA, USA
+  description: "InfluxData delivers a modern open source platform built from the ground up for metrics and events (time-sensitive data). They are using Elixir to build InfluxCloud, their hosted database-as-a-service product."
+  jobs:
+    - title: Elixir/Full stack developer (experience required)
+      url: https://www.influxdata.com/careers/#elixirfull-stack-developer-experience-required
