@@ -597,7 +597,8 @@ Housing:
 
 Icicle Technologies:
   industry: Technology Consulting
-  url: http://www.icicletech.com)([GitHub](https://github.com/icicletech)
+  url: http://www.icicletech.com
+  github: https://github.com/icicletech
   description: "Provides Technology Consulting, Product Development on Elixir & Phoenix. Organizer of Bangalore Elixir Group, built [ElixirNation.io](http://elixirnation.io)."
 
 Infinite Red:
