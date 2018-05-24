@@ -811,6 +811,14 @@ Packlane:
   github: https://github.com/packlane
   description: "Design and order custom printed packaging online."
 
+Palar Support:
+  industry: Customer Service
+  url: https://palar.support
+  github: https://github.com/palarsupport
+  description: "On-demand technical support for startups and agencies. Using Elixir in a few backend services and internal tools."
+  location: Remote and San Francisco, CA, USA
+
+
 PagerDuty:
   industry: Enterprise Software
   url: http://pagerduty.com
