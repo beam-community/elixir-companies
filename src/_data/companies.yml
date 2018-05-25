@@ -1529,6 +1529,9 @@ Botsquad:
   url: https://www.botsquad.com
   github: https://github.com/botsqd
   description: "Botsquad is a platform for building conversational apps and chatbots, running on the web, FB messenger, Slack, etc, using an Elixir-like DSL. Their backend is built exclusively with Elixir."
+  jobs:
+    - title: Elixir Developer
+      url: "https://www.botsquad.com/job_positions/elixir-developer/"
 
 DialerAI:
   industry: Communication
