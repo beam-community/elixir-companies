@@ -1586,3 +1586,10 @@ InfluxData:
   jobs:
     - title: Elixir/Full stack developer (experience required)
       url: https://www.influxdata.com/careers/#elixirfull-stack-developer-experience-required
+
+Chaince:
+  industry: Financial Services
+  url: https://chaince.com/
+  github: https://github.com/chaince
+  location: Hong Kong S.A.R., China
+  description: "A Superior Blockchain Asset Trading Platform Focusing on EOS Projects. Based on pure elixir/phoenix/OTP infrastructure."
