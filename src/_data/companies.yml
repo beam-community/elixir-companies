@@ -1600,3 +1600,13 @@ Helijia:
   github: https://github.com/helijia-web
   location: Beijing, China
   description: "Helijia provides highly customizable services to Chinese middle classes. We adopted Elixir in 2016 and really enjoy building applications with it! We use Elixir heavily in our web systems."
+
+Slab:
+  industry: Enterprise Software
+  url: https://slab.com
+  github: https://github.com/slab/
+  location: San Francisco, CA, USA
+  description: "A team's ability to retain and transfer ideas defines their competitive advantage. Slab is building their long term memory. We reimagined the humble knowledge base from the core user needs to make information sharing within teams fast, intuitive, and empowering. The main web application is built on Elixir/Phoenix with real-time features powered by Absinthe and OTP."
+  jobs:
+    - title: Software Engineer (Remote Allowed)
+      url: https://jobs.lever.co/slab/1c6fae7c-980e-4875-be9f-76ae1ebfad96
