@@ -1594,3 +1594,9 @@ Slab:
   jobs:
     - title: Software Engineer (Remote Allowed)
       url: https://jobs.lever.co/slab/1c6fae7c-980e-4875-be9f-76ae1ebfad96
+
+CodeSandbox:
+  industry: Computer Software
+  url: https://codesandbox.io/
+  github: https://github.com/CompuIves/codesandbox-client
+  description: "Online Code Editor Tailored for Web Application Development"
