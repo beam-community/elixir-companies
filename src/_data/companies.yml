@@ -318,12 +318,6 @@ Defacto:
   github: https://github.com/DefactoSoftware
   description: "Developing People since 1987. We build software to provide organizations with an intuitive and easy to use digital learning environment. We also contribute and maintain open source software. Based in Groningen, The Netherlands."
 
-Diacode:
-  industry: Technology Consulting
-  url: https://diacode.com
-  github: https://github.com/diacode
-  description: "Former Ruby on Rails development shop now embracing Elixir and Phoenix. Authors of [Phoenix Trello](https://github.com/bigardone/phoenix-trello) clone. Co-Organizer of the [Madrid |> Elixir meetup](http://www.meetup.com/Madrid-Elixir/)."
-
 Diatom Enterprise Softwares:
   industry: Technology Consulting
   url: http://www.diatomenterprises.com/
@@ -410,11 +404,6 @@ Emagroup:
   industry: Gaming
   url: http://www.emagroup.cn/
   description: "Develop mobile games. Elixir is used for building game management tools."
-
-Entelios:
-  industry: Energy
-  url: http://www.entelios.com
-  description: "Entelios enables large industrial energy consumers to commercialize their load flexibility into different energy markets in Europe, such as the classical demand response programs (PRL, SRL, etc.) or Intraday. Entelios' automated and distributed load control system is implemented in Erlang and Elixir. Entelios is based in Berlin and Munich, Germany."
 
 Enterprise Software Modules:
   industry: Enterprise Software
@@ -516,11 +505,6 @@ GitMonitor:
   url: https://gitmonitor.com
   blog: https://blog.gitmonitor.com
   description: "Custom rules and notifications for your GitHub repositories"
-
-Govannon:
-  industry: Technology Consulting
-  url: https://govannon.nl
-  description: "Software development, consulting and full stack engineers."
 
 Grasp:
   industry: Education
