@@ -1600,3 +1600,9 @@ CodeSandbox:
   url: https://codesandbox.io/
   github: https://github.com/CompuIves/codesandbox-client
   description: "Online Code Editor Tailored for Web Application Development"
+
+Wunder:
+  industry: Automotive
+  url: https://www.wunder.org/
+  github: https://github.com/wundercar
+  description: "Wunder is a mobility marketplace and tech platform providing carpooling, smart shuttles, and free-floating sharing to end customers, corporates and cities."
