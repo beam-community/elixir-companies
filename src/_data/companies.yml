@@ -1600,3 +1600,14 @@ CodeSandbox:
   url: https://codesandbox.io/
   github: https://github.com/CompuIves/codesandbox-client
   description: "Online Code Editor Tailored for Web Application Development"
+
+Coingaming:
+  industry: Gaming
+  url: http://coingaming.io/
+  blog: https://medium.com/coingaming
+  github: https://github.com/coingaming
+  location: Tallinn, Estonia
+  description: "The pioneers of the crypto gaming universe, The Coingaming Group was founded in 2014 and operates the world’s leading Bitcoin-focused iGaming brands, including Bitcasio.io and Sportsbet.io. We are all in with Elixir and are using it throughout our backend stack."
+  jobs:
+    - title: Elixir/Full stack developer
+      url: https://coingaming.recruitee.com/o/elixir-developer
