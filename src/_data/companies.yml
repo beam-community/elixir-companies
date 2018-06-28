@@ -1611,3 +1611,14 @@ Coingaming:
   jobs:
     - title: Elixir/Full stack developer
       url: https://coingaming.recruitee.com/o/elixir-developer
+
+SweetIQ:
+  industry: Marketing/Advertising/Sales
+  url: https://sweetiq.com/
+  blog: https://sweetiq.com/blog/
+  githun: https://github.com/SweetIQ
+  location: Montreal, Canada
+  description: "SweetIQ by ReachLocal, a local search marketing company that powers brands and marketing agencies with local listings, store locator pages, and reviews through software and data solutions. We are using Elixir in our backend. We are hiring!"
+  jobs:
+    - title: Software Engineer
+      url: https://sweetiq.com/about/careers/
