@@ -1638,3 +1638,13 @@ Expert360:
   jobs:
     - title: Software Engineer
       url: https://expert360.com/jobs
+
+Trax:
+  industry: Retail Industry
+  url: https://traxretail.com/
+  github: https://github.com/quri/
+  location: San Francisco, CA, USA
+  description: "Trax is the world leader in computer vision solutions for retail. Trax offers best-in-class in-store execution tools, market measurement services and data science solutions that are fundamentally transforming how in-store retail data is being collected, viewed and analysed. We are gradually migrating key services to an application written in Elixir, taking advantage of awesome libraries like Ecto, Absinthe, and Phoenix. We are hiring :)"
+  jobs:
+    - title: Backend Software Developer
+      url: https://traxretail.com/careers/engineering/A5.80F/backend-software-developer/all/
