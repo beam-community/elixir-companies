@@ -21,7 +21,7 @@
       <span class="icon purple"><i class="fas fa-fw fa-location-arrow"></i></span> {{include['company']['location']}}<br>
     {% endif %}
     {% for job in include['company']['jobs'] %}
-      <span class="icon purple"><i class="fas fa-briefcase"></i></span> <a href="{{ job['url'] }}">{{ job['title'] }}</a><br> 
+      <span class="icon purple"><i class="fas fa-briefcase"></i></span> <a href="{% if job['url'] == nil %}{{include['company']['url']}}{% else %}{{ job['url'] }}{% endif %}">{{ job['title'] }}</a><br> 
     {% endfor %}
     </p>
   </div>
