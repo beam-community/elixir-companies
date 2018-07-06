@@ -1656,16 +1656,16 @@ Pharos Production Inc.:
   description: "Pharos Production team is made up of the brightest and most dedicated blockchain, fintech, ICO, web and mobile developers, designers, project managers and quality assurance specialists. Our development efforts resulted in more than 30 mobile and web solutions – social networking apps, ICOs, private blockchains, e-commerce, news boards, other different business and entertainment applications. We are hiring!"
   jobs:
     - title: Elixir Developer
-    - url: http://www.pharosproduction.com
+      url: http://www.pharosproduction.com
     
 Kadabra:
   industry: Internet of Things
   url: http://www.kadabrapod.com
   github: https://github.com/kadabrapod
   location: Portland, ME, USA; Portland, OR, USA; Seattle, WA, USA
-  description: "Kadabra’s mission is to connect local food businesses and customers, deliver what people want when they want it, and do it all in an eco-friendly, sustainable way through a network of IoT-enabled food kiosks (we call them pods). Elixir powers our entire backend platform for IoT devices and mobile apps, and we're hiring! 🤓"
+  description: "Kadabra’s mission is to connect local food businesses and customers, deliver what people want when they want it, and do it all in an eco-friendly, sustainable way through a network of IoT-enabled food kiosks (we call them pods). Elixir powers our entire backend platform for IoT devices and mobile apps, and we're hiring (remote ok)! 🤓"
   jobs:
-    - title: Generalist Engineer (Remote Allowed)
+    - title: Generalist Engineer
       url: https://bit.ly/2J1umwM
-    - title: Mobile Engineer (Remote Allowed)
+    - title: Mobile Engineer
       url: https://bit.ly/2MOzkiw
