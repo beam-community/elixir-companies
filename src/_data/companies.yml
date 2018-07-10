@@ -1674,3 +1674,15 @@ Teachoo:
   url: https://www.teachoo.com/
   location: Delhi, India
   description: "Teachoo provides Maths, English, Accountancy and Finance content to students, schools and education departments."
+
+Formulae:
+  industry: Technology Consulting
+  location: Pune, India
+  url: http://formulae.io
+  blog: https://medium.com/formulae
+  github: https://github.com/formulaeio
+  description: "We use Elixir for realtime apps, chatbots and chat applications.
+  We build modern web and mobile apps using Elixir,
+  Phoenix, Rails, GraphQL, React and React Native.
+  We also do complete digital marketing"
+
