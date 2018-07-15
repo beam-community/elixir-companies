@@ -1689,3 +1689,12 @@ Formulae:
   Phoenix, Rails, GraphQL, React and React Native.
   We also do complete digital marketing"
 
+FunBox:
+  industry: Telecommunications
+  url: https://funbox.ru/
+  github: https://github.com/funbox
+  location: Moscow, Russia
+  description: Elixir is used for more and more new apps developed by our company for telecom clients, often with Phoenix, taking over Ruby on Rails.
+  jobs:
+    - title: Elixir Developer
+      url: https://funbox.ru/vacancies/elixir-developer
