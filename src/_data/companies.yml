@@ -1234,10 +1234,11 @@ Zenloop:
   description: "Collect and analyze feedback, using Net-Promoter-Score (NPS). Most of the backend is Elixir and Phoenix. Based in Berlin, Germany."
 
 Zuppler:
-  industry: Technology Consulting
+  industry: Online Ordering
+  location: Philadelphia, USA
   url: http://www.zupplerworks.com/
   github: https://github.com/zuppler
-  description: "We are a US based company. We try to offer the easiest way to let customers order food online for takeout or delivery. We develop all recent backend software using Elixir."
+  description: "We try to offer the easiest way to let customers order food online for takeout or delivery. We develop all recent backend software using Elixir."
 
 askCharlie:
   industry: Marketplaces
