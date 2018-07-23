@@ -437,7 +437,8 @@ Farmbot:
   industry: Food
   url: https://farmbot.io/
   github: https://github.com/FarmBot
-  description: "Humanity's first open-source CNC farming machine. Farmbot using Elixir for the Raspberry Pi 3. [Click here for more detail](https://github.com/FarmBot/farmbot_os). FarmBot Inc is located at 81 South Higuera Street, Suite 160, in San Luis Obispo, California."
+  location: San Luis Obispo, CA, USA
+  description: "Humanity's first open-source CNC farming machine. Farmbot using Elixir for the Raspberry Pi 3. [Click here for more detail](https://github.com/FarmBot/farmbot_os)."
 
 Fave by Groupon:
   industry: E-Commerce
