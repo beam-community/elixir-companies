@@ -1734,3 +1734,15 @@ FashionUnited:
   url: https://fashionunited.com/
   location: Amsterdam, The Netherlands
   description: "Making the fashion industry more efficient and transparent. Using GenStage/GraphQL to process large amount of data." 
+
+100Starlings:
+  industry: Technology Consulting
+  url: https://www.100starlings.com/
+  github: https://github.com/100Starlings
+  location: Remote
+  description: |
+    We are a cooperative of like minded professionals skilled at solving problems
+    and creating excellent products for our clients.
+    We have experience with Elixir, Ruby, JavaScript, AWS, Mobile development and more.
+    Our fully remote team is currently split between London, Berlin, and Hungary.
+    We also have a retreat every year and a training budget.
