@@ -1746,3 +1746,10 @@ FashionUnited:
     We have experience with Elixir, Ruby, JavaScript, AWS, Mobile development and more.
     Our fully remote team is currently split between London, Berlin, and Hungary.
     We also have a retreat every year and a training budget.
+
+Instinct Science:
+  industry: Healthcare
+  url: https://instinct.vet/
+  github: https://github.com/instinctscience
+  location: Remote
+  description: "Instinct uses Elixir to help the world’s state-of-the-art veterinary hospitals enhance their patient care, staff efficiency, and overall business."
