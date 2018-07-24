@@ -1713,3 +1713,15 @@ ProFootballFocus:
   url: https://www.profootballfocus.com/
   location: Cincinnati, OH
   description: "Pro Football Focus analyzes every player and every play of every game to deliver player grades, stats, and rankings for the NFL, fantasy football, and NFL Draft. We use Elixir, Phoenix, and React for data collection, analysise, reporting and web apps."
+
+100Starlings:
+  industry: Technology Consulting
+  url: https://www.100starlings.com/
+  github: https://github.com/100Starlings
+  location: Remote
+  description: |
+    We are a cooperative of like minded professionals skilled at solving problems
+    and creating excellent products for our clients.
+    We have experience with Elixir, Ruby, JavaScript, AWS, Mobile development and more.
+    Our fully remote team is currently split between London, Berlin, and Hungary.
+    We also have a retreat every year and a training budget.
