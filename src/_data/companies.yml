@@ -1748,3 +1748,10 @@ Instinct Science:
   github: https://github.com/instinctscience
   location: Remote
   description: "Instinct uses Elixir to help the world’s state-of-the-art veterinary hospitals enhance their patient care, staff efficiency, and overall business."
+
+René Koch AG:
+  industry: Communication
+  url: http://kochag.ch
+  github: https://github.com/Koch-AG
+  location: Au ZH, Switzerland
+  description: "Switzerland's leading manufacturer of intercom devices and accessories. Elixir is the backbone of our network based systems and cloud architecture."
