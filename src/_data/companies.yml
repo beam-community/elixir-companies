@@ -1707,3 +1707,9 @@ Distru:
   github: https://github.com/DistruApp
   location: Oakland, CA
   description: "Distru builds compliant software to streamline cannabis distribution & manufacturing. We've used Elixir & Phoenix as the backend of our application since day 1 to manage production, warehousing, sales orders, CRM, logistics, and more!"
+
+ProFootballFocus:
+  industry: Sports
+  url: https://www.profootballfocus.com/
+  location: Cincinnati, OH
+  description: "Pro Football Focus analyzes every player and every play of every game to deliver player grades, stats, and rankings for the NFL, fantasy football, and NFL Draft. We use Elixir, Phoenix, and React for data collection, analysise, reporting and web apps."
