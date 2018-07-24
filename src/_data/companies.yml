@@ -400,11 +400,6 @@ EmCasa:
   github: https://github.com/gusaiani/re
   description: "EmCasa is an online residential broker using an Elixir webservice to help Brazilian buyers and sellers have a far superior experience in real estate. Rio de Janeiro, RJ, Brazil."
 
-Emagroup:
-  industry: Gaming
-  url: http://www.emagroup.cn/
-  description: "Develop mobile games. Elixir is used for building game management tools."
-
 Enterprise Software Modules:
   industry: Enterprise Software
   url: https://www.enterprisemodules.com
