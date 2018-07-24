@@ -1764,3 +1764,14 @@ Divvy:
   jobs:
     - title: Software Engineer
       url: https://getdivvy.com/jobs
+
+Pixel Union:
+  industry: E-Commerce
+  url: https://pixelunion.net
+  github: https://github.com/pixelunion
+  location: Remote
+  description: "Helping you sell more with premium Shopify themes, apps, and custom services. Good times since '09."
+  jobs:
+  - title: Software Developer
+    url: https://pixel-union.workable.com
+    
