@@ -702,7 +702,7 @@ Mainframe:
 
 Matched Pattern:
   industry: Technology Consulting
-  url: https://matchedpattern.com/
+  url: https://www.matchedpattern.com/
   github: https://github.com/MatchedPattern
   location: Columbus, OH
   description: "We're Matched Pattern. We’re a software consultancy based in Columbus, Ohio. We specialize in web development, infrastructure and Internet of Things (IoT). Each of our Central Ohio-based, full-time developers have unique experiences and bring insight to each of our offerings. We use Elixir to build scalable web applications."
@@ -1722,18 +1722,18 @@ Tele2:
   jobs:
     - title: Ruby (Elixir) Developer
       url: https://werkenbij.tele2.nl/vacatures/it-services-network-it/ruby-elixir-developer-diemen/
-  
+
 Wuunder:
   industry:  Transportation
   url:  https://wearewuunder.com/en/
   location:  Weert, The Netherlands
   description: "Startup working on making shipping easier, Elixir powers the backend."
-   
+
 FashionUnited:
   industry: Apparel/Fashion
   url: https://fashionunited.com/
   location: Amsterdam, The Netherlands
-  description: "Making the fashion industry more efficient and transparent. Using GenStage/GraphQL to process large amount of data." 
+  description: "Making the fashion industry more efficient and transparent. Using GenStage/GraphQL to process large amount of data."
 
 100Starlings:
   industry: Technology Consulting
