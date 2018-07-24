@@ -1749,6 +1749,22 @@ Instinct Science:
   location: Remote
   description: "Instinct uses Elixir to help the world’s state-of-the-art veterinary hospitals enhance their patient care, staff efficiency, and overall business."
 
+René Koch AG:
+  industry: Communication
+  url: http://kochag.ch
+  github: https://github.com/Koch-AG
+  location: Au ZH, Switzerland
+  description: "Switzerland's leading manufacturer of intercom devices and accessories. Elixir is the backbone of our network based systems and cloud architecture."
+
+Divvy:
+  industry: Financial Services
+  url: https://getdivvy.com/
+  location: Lehi, UT, USA
+  description: "We’re on a mission to automate the spending and expense reporting process, enabling companies and individuals to have more control, greater convenience, and increased security when distributing funds. Our backend is a cluster of Elixir applications and GenServers."
+  jobs:
+    - title: Software Engineer
+      url: https://getdivvy.com/jobs
+
 Pixel Union:
   industry: E-Commerce
   url: https://pixelunion.net
@@ -1758,3 +1774,4 @@ Pixel Union:
   jobs:
   - title: Software Developer
     url: https://pixel-union.workable.com
+    
