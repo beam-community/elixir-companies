@@ -1713,3 +1713,24 @@ ProFootballFocus:
   url: https://www.profootballfocus.com/
   location: Cincinnati, OH
   description: "Pro Football Focus analyzes every player and every play of every game to deliver player grades, stats, and rankings for the NFL, fantasy football, and NFL Draft. We use Elixir, Phoenix, and React for data collection, analysise, reporting and web apps."
+
+Tele2:
+  industry:  Telecommunications
+  url:  http://www.tele2.com/
+  location:  Amsterdam, The Netherlands
+  description: "Telecom Provider, replacing some of the internal tooling with Elixir."
+  jobs:
+    - title: Ruby (Elixir) Developer
+      url: https://werkenbij.tele2.nl/vacatures/it-services-network-it/ruby-elixir-developer-diemen/
+  
+Wuunder:
+  industry:  Transportation
+  url:  https://wearewuunder.com/en/
+  location:  Weert, The Netherlands
+  description: "Startup working on making shipping easier, Elixir powers the backend."
+   
+FashionUnited:
+  industry: Apparel/Fashion
+  url: https://fashionunited.com/
+  location: Amsterdam, The Netherlands
+  description: "Making the fashion industry more efficient and transparent. Using GenStage/GraphQL to process large amount of data." 
