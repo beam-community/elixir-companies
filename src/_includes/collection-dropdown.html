@@ -1,0 +1,17 @@
+<div class="navbar-item has-dropdown is-hoverable">
+  <a class="navbar-link is-active">{{ include.collection | capitalize }}</a>
+  <div class="navbar-dropdown">
+    <div class="columns">
+      {% assign collection = site.data[include.collection] %}
+      {% assign per_column = collection | size | divided_by: 3.0 | ceil %}
+      {% for col in (0..2) %}
+        {% assign offset = per_column | times: col %}
+      <div class="column">
+        {% for item in collection offset: offset, limit: per_column %}
+          <a class="navbar-item" href="/{{ include.collection }}/{{ item.path }}"><span class="has-text-weight-bold">{{ item.name }}</span></a>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

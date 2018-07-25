@@ -12,22 +12,8 @@
     </div> <!-- /navbarbrand -->
     <div class="navbar-menu" id="navMain">
       <div class="navbar-start">
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link is-active">Industries</a>
-          <div id="moreDropdown" class="navbar-dropdown">
-            <div class="columns">
-              {% assign per_column = site.data.industries | size | divided_by: 3.0 | ceil %}
-              {% for col in (0..2) %}
-                {% assign offset = per_column | times: col %}
-              <div class="column">
-                {% for industry in site.data.industries offset: offset, limit: per_column %}
-                <a class="navbar-item" href="/industries/{{ industry['path'] }}"><span class="has-text-weight-bold">{{ industry['name'] }}</span></a>
-                {% endfor %}
-              </div>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
+        {% include collection-dropdown.html collection="industries" %}
+        {% include collection-dropdown.html collection="locations" %}
         {% assign hiring_count = site.data['hiring'] | size %}
         {% if hiring_count > 0 %}
           <a class="navbar-item" href="/hiring">Hiring</a>
