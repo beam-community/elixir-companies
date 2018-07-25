@@ -1784,3 +1784,12 @@ Envato:
   jobs:
     - title: Developers / Senior Developers
       url: https://envato.com/careers/
+
+iwantmyname:
+  industry: Domain Registrar
+  url: https://iwantmyname.com
+  github: https://github.com/iwantmyname
+  description: "We sell domain names and specialize in making experiences easy for humans. The good ones. And we've been doing it for a decade now."
+  jobs:
+    - title: Elixir/Erlang developer
+      url: https://iwantmyname.com/jobs/elixir
