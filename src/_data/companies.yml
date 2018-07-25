@@ -1774,4 +1774,13 @@ Pixel Union:
   jobs:
   - title: Software Developer
     url: https://pixel-union.workable.com
-    
+
+Envato:
+  industry: Marketplaces
+  url: https://envato.com/
+  github: https://github.com/envato/
+  location: Melbourne, Australia
+  description: "Envato is the leading marketplace for creative assets and creative people. We use Elixir to build high performance event sourced systems."
+  jobs:
+    - title: Developers / Senior Developers
+      url: https://envato.com/careers/
