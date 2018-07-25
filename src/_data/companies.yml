@@ -1630,7 +1630,7 @@ JoinUp:
   description: "JoinUp is a recruiting chatbot that helps recruiters source & qualify candidates more efficiently on their websites. Our api is powered by Phoenix/Elixir with Reason/React frontends."
 
 Expert360:
-  industry: Marketplace
+  industry: Marketplaces
   url: https://expert360.com
   location: Sydney, Australia
   description: "Expert360 allows businesses to engage and manage top talent for short-mid term project-work. We use Elixir on the backend with Phoenix, Absinthe for our GraphQL API and React components on the frontend."
