@@ -1800,3 +1800,13 @@ Vragments:
   github: https://github.com/vragments
   description: "Vragments is a Berlin-based startup. We create bespoke VR experiences and products for non-technical users to build their own virtual reality stories. We use Elixir for media processing and backend systems."
   location: Berlin, Germany
+
+Shedul:
+  industry: Beauty/Wellness
+  url: http://www.shedul.com/
+  github: https://github.com/surgeventures
+  location: Warsaw, PL
+  description: "Shedul.com is the leading software platform for beauty and wellness industry used by 40,000+ merchants in more than 120 Countries. We have Elixir running on production since mid-2017, powering our APIs & business services."
+  jobs:
+  - title: Ruby/Elixir Developer
+    url: https://shedul.workable.com/j/92C6EACEED
