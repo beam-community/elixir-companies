@@ -1630,7 +1630,7 @@ JoinUp:
   description: "JoinUp is a recruiting chatbot that helps recruiters source & qualify candidates more efficiently on their websites. Our api is powered by Phoenix/Elixir with Reason/React frontends."
 
 Expert360:
-  industry: Marketplace
+  industry: Marketplaces
   url: https://expert360.com
   location: Sydney, Australia
   description: "Expert360 allows businesses to engage and manage top talent for short-mid term project-work. We use Elixir on the backend with Phoenix, Absinthe for our GraphQL API and React components on the frontend."
@@ -1774,7 +1774,33 @@ Pixel Union:
   jobs:
   - title: Software Developer
     url: https://pixel-union.workable.com
-    
+
+Envato:
+  industry: Marketplaces
+  url: https://envato.com/
+  github: https://github.com/envato/
+  location: Melbourne, Australia
+  description: "Envato is the leading marketplace for creative assets and creative people. We use Elixir to build high performance event sourced systems."
+  jobs:
+    - title: Developers / Senior Developers
+      url: https://envato.com/careers/
+
+iwantmyname:
+  industry: Domain Registrar
+  url: https://iwantmyname.com
+  github: https://github.com/iwantmyname
+  description: "We sell domain names and specialize in making experiences easy for humans. The good ones. And we've been doing it for a decade now."
+  jobs:
+    - title: Elixir/Erlang developer
+      url: https://iwantmyname.com/jobs/elixir
+     
+Vragments:
+  industry: Computer Software/Engineering
+  url: https://vragments.com
+  github: https://github.com/vragments
+  description: "Vragments is a Berlin-based startup. We create bespoke VR experiences and products for non-technical users to build their own virtual reality stories. We use Elixir for media processing and backend systems."
+  location: Berlin, Germany
+
 Shedul:
   industry: Beauty/Wellness
   url: http://www.shedul.com/
