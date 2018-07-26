@@ -1780,7 +1780,7 @@ Shedul:
   url: http://www.shedul.com/
   github: https://github.com/surgeventures
   location: Warsaw, PL
-  description: "Shedul.com is the leading software platform for beauty and wellness industry used by 40,000+ merchants in more than 120 Countries."
+  description: "Shedul.com is the leading software platform for beauty and wellness industry used by 40,000+ merchants in more than 120 Countries. We have Elixir running on production since mid-2017, powering our APIs & business services."
   jobs:
   - title: Ruby/Elixir Developer
     url: https://shedul.workable.com/j/92C6EACEED
