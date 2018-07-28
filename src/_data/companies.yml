@@ -12,6 +12,7 @@
   url: http://www.22cans.com/
   github: https://github.com/22cans
   description: "22cans is an independent game studio founded by the industry legend and creator of God Game genre, Peter Molyneux. Creators of Curiosity and Godus."
+  location: "Guildford, Surrey, United Kingdom"
 
 361° DIGITAL:
   industry: Technology Consulting
@@ -46,12 +47,14 @@ Agilion:
   url: https://www.agilion.com
   github: https://github.com/agilionapps
   description: "Software development and consulting."
+  location: "Burlington, VT, USA"
 
 Aircloak:
   industry: Business Intelligence
   url: https://aircloak.com/
   github: https://github.com/Aircloak
   description: "Aircloak’s first-in-class real-time database anonymization solution provides instant privacy compliance and enables high-quality analytics for any data set and any use case. Aircloak's from Berlin. [Saša Jurić](https://github.com/sasa1977), the author of [Elixir in Action](https://www.manning.com/books/elixir-in-action) is software engineer at Aircloak."
+  location: "Berlin, Gemany and San Francisco, CA, USA"
 
 Albert:
   industry: Education
@@ -78,12 +81,14 @@ AmberBit:
   url: https://www.amberbit.com
   github: https://github.com/amberbit
   description: "We are polyglot developers (but mostly Ruby, JavaScript, Elixir, Elm)."
+  location: Warsaw, Poland
 
 AppUnite:
   industry: Technology Consulting
   url: https://appunite.com
   github: https://github.com/appunite
   description: "We are efficient, goal-oriented software development team of professionals specialized in mobile and web."
+  location: Poznań, Poland
 
 Appcues:
   industry: Marketing/Sales
@@ -104,6 +109,7 @@ Aviabird:
   url: https://aviabird.com
   github: https://github.com/aviabird
   description: "We at Aviabird helps companies design, engineer, and iterate on their most important digital products. We work alongside teams building beautiful, functional web applications with an eye towards the future. Pune, Maharashtra, India."
+  location:  Pune, Maharashtra, India
 
 Aviasales:
   industry: Leisure/Travel
@@ -156,6 +162,7 @@ Bleachr:
   industry: Sports
   url: http://www.bleachr.co
   description: "Mobile platform aimed at helping professional sports teams engage fans at their events. They are using Elixir on the backend. Minneapolis, MN, USA."
+  location: Minneapolis, MN, USA
 
 Bold Poker:
   industry: Gaming
@@ -167,6 +174,7 @@ Bowery Farming:
   url: http://boweryfarming.com
   github: https://github.com/BoweryFarming
   description: "Bowery Farming uses high-tech approaches such as robotics, LED lightning and data analytics to grow leafy greens indoors. The software stack at Bowery consists of a few, focused Elixir services running in AWS, Phoenix + Vue.js on the front-end, and Elixir (Nerves) running on thousands of in-house built devices on-premise in our farms. New York, NY, USA."
+  location: "New-York"
 
 Brightcove:
   industry: Video
@@ -196,6 +204,7 @@ Cabify:
   url: https://www.cabify.com/
   github: https://github.com/cabify
   description: "Cabify - A safer, ethical and innovative taxi app alternative. Elixir in production since 2016. Real-time applications and microservices with large amounts of data. Madrid/Barcelona."
+  location: Madrid/Barcelona
 
 Canvas:
   industry: Collaboration
@@ -311,6 +320,7 @@ DNSimple:
   url: https://dnsimple.com/
   github: https://github.com/dnsimple/
   description: "With a globally distributed team DNSimple provides the tools your need to manage your domains. We offer both a carefully crafted web interface for managing your domains and DNS records, as well as an HTTP API with various SDKs (including Elixir) and open source plugins in Elixir (and Phoenix)."
+  location: Remote
 
 Defacto:
   industry: Education
@@ -484,6 +494,7 @@ Fully Forged:
   industry: Technology Consulting
   url: http://fullyforged.com
   description: "Software development and training, based in London."
+  location: London
 
 Future Pet:
   industry: Healthcare
@@ -511,6 +522,7 @@ GrillWork:
   industry: Technology Consulting
   url: http://grillwork.io
   description: "([GitHub](https://github.com/grillwork))- Helping business through software. Working in Elixir/Phoenix/Ruby/Rails/Node/Javascript/ReactJS. We use Elixir for all backend/api work and for network programming."
+  location: Burlington, VT, USA
 
 Grok Interactive:
   industry: Technology Consulting
@@ -707,6 +719,7 @@ Mediteo:
   url: https://www.mediteo.com
   github: https://github.com/mediteo
   description: "Mediteo is a young Digital Health start-up with the aim to provide the best solution to handle medication in a correct and secure way. Berlin, Germany."
+  location: Berlin, Germany
 
 Meltwater:
   industry: Marketing/Sales
@@ -729,6 +742,7 @@ My Meds & Me:
   url: https://www.mymedsandme.com
   github: https://github.com/MyMedsAndMe
   description: "A leading SaaS provider of web-based adverse event and product quality capture solutions for life sciences. [Click here to see how elixir being used at My Meds & Me.](https://www.youtube.com/watch?v=ZCYEX6ZIJgM) The company based in London."
+  location: London, United Kingdom
 
 Nav:
   industry: Financial Technology
@@ -852,6 +866,7 @@ Podium:
   url: https://www.podium.com
   github: https://github.com/podium
   description: "We power customer interaction and drive online reviews for local businesses. YC W16. Elixir powers a lot of our software, and we're based in Lehi, UT, USA."
+  location: Lehi, UT, USA
 
 Postmates:
   industry: E-Commerce
@@ -898,6 +913,7 @@ Qixxit:
   industry: Leisure/Travel
   url: https://www.qixxit.com
   description: "Qixxit is your personal mobility advisor. We simplify the complexity of mobility for you and combine the many ways of getting from A to B for you in a convenient way. Elixir being used for the backend part. Berlin, Germany"
+  location: Berlin, Germany
 
 Quero Education:
   industry: Education
@@ -1025,6 +1041,7 @@ Spreedly:
   url: https://www.spreedly.com
   github: https://github.com/spreedly
   description: "Spreedly believes the best payment experience derives from excellent software combined with business flexibility. Durham, NC, USA."
+  location: Durham, NC, USA
 
 Stampery:
   industry: Enterprise Software
@@ -1042,6 +1059,7 @@ StellaService:
   url: https://stellaservice.com
   github: https://github.com/stellaservice
   description: "We build products that optimize front-line team performance, gather feedback and insights and improve customer experiences across contact centers and stores. Now hiring (Q3 for Q4 '17) Elixir engineers for new product development. Based in NYC, USA."
+  location:  NYC, USA
 
 Storefront:
   industry: Marketplaces
@@ -1127,6 +1145,7 @@ The book of everyone:
   url: https://thebookofeveryone.com
   github: https://github.com/thebookofeveryone
   description: "Personalised books and unique gifts for your loved ones, made by our talented team of creatives. Barcelona, Catalunya, Spain."
+  location: Barcelona, Spain.
 
 Timber:
   industry: Computer Software
@@ -1149,6 +1168,7 @@ Margo Bank:
   industry: Financial Technology
   url: https://margo.com
   description: "A Bank for Small and Medium Businesses. Elixir is used for the Core Banking System (CBS). Based in Paris, France."
+  location: Paris, France
 
 Undead Labs:
   industry: Gaming
@@ -1172,11 +1192,13 @@ Volders:
   url: https://www.volders.de/
   github: https://github.com/volders
   description: "Management and canceling of german contracts. Berlin, Germany."
+  location: Berlin, Germany
 
 Weedmaps:
   industry: Cannabis
   url: https://weedmaps.com/
   description: "Weedmaps.com is a community where medical marijuana users connect with other users in their geographic region to freely discuss and review local cannabis co-operatives, storefronts, medical doctors and delivery services. We are headquartered in Irvine, CA, and we are using Elixir to build our backend services."
+  location:  Irvine, CA, USA
 
 WhiteHat:
   industry: Staffing/Recruiting
@@ -1217,6 +1239,7 @@ YBEX:
   url: https://www.ybex.io
   github: https://github.com/ybexio
   description: "YBEX is a financial technology company, providing a marketplace platform for retail foreign exchange services. Elixir is used for our backend services. Based in Hong Kong."
+  location: Hong Kong
 
 Yala:
   industry: Social Network
@@ -1252,6 +1275,7 @@ bitcrowd:
   url: http://bitcrowd.net
   github: https://github.com/bitcrowd
   description: "Berlin based software development and consulting for startups."
+  location: Berlin, Germany
 
 code lever:
   industry: Technology Consulting
@@ -1274,6 +1298,7 @@ imby.bio:
   industry: Sustainability
   url: http://imby.bio/
   description: "([Gitlab](https://gitlab.com/imby.bio), [GitHub](https://github.com/imbybio/)) - imby.bio helps individuals bring nature back in to their urban environment. The company is based in London, UK and uses Elixir as their primary back-end technology."
+  location: London, United Kingdom
 
 nextjournal:
   industry: Research
@@ -1296,6 +1321,7 @@ toy rocket science:
   url: http://toyrocketscience.com
   github: https://github.com/trsc
   description: "We are a small expert team of developers in Berlin. We have a broad range of clients and make software that ranges from heavy-lifting on the server to the frontend, including apps."
+  location: Berlin, Germany
 
 uSwitch:
   industry: Home Services
