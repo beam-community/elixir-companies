@@ -1837,6 +1837,11 @@ Shedul:
   - title: Ruby/Elixir Developer
     url: https://shedul.workable.com/j/92C6EACEED
 
+Groma:
+  industry: Enterprise Software
+  url: https://www.groma.si/en
+  description: "We develop a solution for employee scheduling and payroll automation in complex shift work environments ([shiftplan.io](https://www.shiftplan.io)). We deployed first Elixir based back-end services to production in 2015. Impressed by the performance and maintainability, Elixir is now powering a majority of our back-end services. Located in Ljubljana, Slovenia."
+
 Perseids:
   industry: E-Commerce
   url: https://perseids.io/
@@ -1844,4 +1849,3 @@ Perseids:
   blog: https://eengine.pl/en/blog
   location: Aleksandrów Łódzki, Poland
   description: "We guarantee server response time less than 0,1 sec. With Perseids (Elixir & React) you can change the insufficient front of your online shop into something really fast and user-friendly without a revolution in your business processes.e the insufficient front of your online shop into something really fast and user-friendly without a revolution in your business processes."
-
