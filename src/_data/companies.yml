@@ -1836,3 +1836,8 @@ Shedul:
   jobs:
   - title: Ruby/Elixir Developer
     url: https://shedul.workable.com/j/92C6EACEED
+
+Groma:
+  industry: Enterprise Software
+  url: https://www.groma.si/en
+  description: "We develop a solution for employee scheduling and payroll automation in complex shift work environments ([shiftplan.io](https://www.shiftplan.io)). We deployed first Elixir based back-end services to production in 2015. Impressed by the performance and maintainability, Elixir is now powering a majority of our back-end services. Located in Ljubljana, Slovenia."
