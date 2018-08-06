@@ -1844,8 +1844,9 @@ Groma:
 
 Perseids:
   industry: E-Commerce
-  url: https://perseids.io/
+  url: https://perseids.io
   github: https://github.com/eEngineSoftwareHouse
   blog: https://eengine.pl/en/blog
   location: Aleksandrów Łódzki, Poland
-  description: "We guarantee server response time less than 0,1 sec. With Perseids (Elixir & React) you can change the insufficient front of your online shop into something really fast and user-friendly without a revolution in your business processes.e the insufficient front of your online shop into something really fast and user-friendly without a revolution in your business processes."
+  description: "We guarantee server response time less than 0,1 sec. With Perseids (Elixir & React) you can change the insufficient front of your online shop into something really fast and user-friendly without a revolution in your business processes."
+
