@@ -1850,3 +1850,9 @@ Perseids:
   location: Aleksandrów Łódzki, Poland
   description: "We guarantee server response time less than 0,1 sec. With Perseids (Elixir & React) you can change the insufficient front of your online shop into something really fast and user-friendly without a revolution in your business processes."
 
+Kudoo:
+  industry: Financial Services
+  url:  https://kudoo.io
+  github: https://github.com/KudooCloud
+  location: Melbourne, Australia
+  description: "Kudoo provides financial services to professional service companies. We provide project, timesheets and invoicing software to enable businesses to effeciently invoice their customers from the work performed by their staff. We use Elixir and Phoenix to power our backend and deploy our API and all business logic."
