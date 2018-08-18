@@ -1856,3 +1856,13 @@ Kudoo:
   github: https://github.com/KudooCloud
   location: Melbourne, Australia
   description: "Kudoo provides financial services to professional service companies. We provide project, timesheets and invoicing software to enable businesses to effeciently invoice their customers from the work performed by their staff. We use Elixir and Phoenix to power our backend and deploy our API and all business logic."
+
+Geek Soft:
+  industry: Financial Services
+  url: https://geeksoft.pl
+  github: https://github.com/geeksoftteam
+  location: Warsaw, Poland
+  description: "Geek Soft specializes in developing systems for cryptocurrencies industry, financial markets trading platforms as well as other FinTech applications. We use Elixir to build high performance backend and API. Our 4 applications running on production since 2016."
+  jobs:
+  - title: Elixir Developer
+    url: https://geeksoft.pl/#career
