@@ -1819,7 +1819,7 @@ iwantmyname:
   jobs:
     - title: Elixir/Erlang developer
       url: https://iwantmyname.com/jobs/elixir
-     
+
 Vragments:
   industry: Computer Software/Engineering
   url: https://vragments.com
@@ -1866,3 +1866,10 @@ Geek Soft:
   jobs:
   - title: Elixir Developer
     url: https://geeksoft.pl/#career
+
+Revelry Labs:
+  industry: Technology Consulting
+  url: https://revelry.co
+  github: https://github.com/revelrylabs
+  location: New Orleans, LA, USA
+  description: "The Revelry PaaS consists of infrastructure tooling, component libraries, self-contained systems and full digital products that help companies bring innovative solutions to market and scale fast. We use Elixir and Phoenix to develop web applications, API and mobile backends, and infrastructure."
