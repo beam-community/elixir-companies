@@ -1906,7 +1906,7 @@ Mirego:
 
 Seat Engine:
   industry: E-Commerce
-  url: https://http://www.seatengine.com/
+  url: http://www.seatengine.com/
   github: https://github.com/seatengine
   location: Philadelphia, PA, USA
   description: "An e-commerce and event management platform (written on Phoenix Framework) for ComedyClubs and music venues."
