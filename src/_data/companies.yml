@@ -1914,9 +1914,10 @@ Seat Engine:
 CityBase:
   industry: GovTech
   url: https://thecitybase.com
+  blog: https://thecitybase.com/cityblog/
   github: https://github.com/CityBaseInc
   location: Chicago, IL, USA
-  description: "We use Elixir since 2016 to build many of our services, the majority of them based on Phoenix and Absinthe."
+  description: "CityBase is working with innovative public servants to transform the experience of government. We use Elixir since 2016 to build many of our services, the majority of them based on Phoenix and Absinthe."
   jobs:
     - title: Senior Elixir Engineer
       url: https://thecitybase.com/careers/#senior-elixir-engineer
