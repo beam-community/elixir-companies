@@ -1873,3 +1873,10 @@ Revelry Labs:
   github: https://github.com/revelrylabs
   location: New Orleans, LA, USA
   description: "The Revelry PaaS consists of infrastructure tooling, component libraries, self-contained systems and full digital products that help companies bring innovative solutions to market and scale fast. We use Elixir and Phoenix to develop web applications, API and mobile backends, and infrastructure."
+
+Seat Engine:
+  industry: E-Commerce
+  url: https://http://www.seatengine.com/
+  github: https://github.com/seatengine
+  location: Philadelphia, PA, USA
+  description: "An e-commerce and event management platform (written on Phoenix Framework) for ComedyClubs and music venues."
