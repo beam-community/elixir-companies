@@ -1873,3 +1873,14 @@ Revelry Labs:
   github: https://github.com/revelrylabs
   location: New Orleans, LA, USA
   description: "The Revelry PaaS consists of infrastructure tooling, component libraries, self-contained systems and full digital products that help companies bring innovative solutions to market and scale fast. We use Elixir and Phoenix to develop web applications, API and mobile backends, and infrastructure."
+
+2U:
+  industry: Education Technology
+  url: https://2u.com
+  github: https://github.com/2uinc
+  location: Brooklyn, NY, USA
+  description: "2U powers the world’s best digital higher education. When students win, universities win, and by coming together around one shared goal—delivering great student outcomes—we are transforming the future of higher education for the better."
+  jobs:
+  - title: Software Engineer, Core Systems
+    url: https://2u.com/careers/?gh_jid=4057619002
+     
