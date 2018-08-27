@@ -1873,3 +1873,10 @@ Revelry Labs:
   github: https://github.com/revelrylabs
   location: New Orleans, LA, USA
   description: "The Revelry PaaS consists of infrastructure tooling, component libraries, self-contained systems and full digital products that help companies bring innovative solutions to market and scale fast. We use Elixir and Phoenix to develop web applications, API and mobile backends, and infrastructure."
+
+Contractbook:
+  industry: Legal Services
+  url: https://contractbook.co
+  github: https://github.com/contractbook
+  location: Copenhagen, Danmark
+  description: "Efficient Contract Management for Modern Businesses. Create, sign and store all your contracts in one safe place. Our server side is written in Elixir."
