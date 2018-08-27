@@ -1113,6 +1113,9 @@ Teachers Pay Teachers:
   url: https://www.teacherspayteachers.com/
   github: https://github.com/TeachersPayTeachers
   description: "Empowering millions of educators to share their work, their insights, and their inspiration with one another. Based in NYC, Elixir powers our backend infrastructure."
+  jobs:
+    - title: Software Engineer, Digital
+      url: "https://boards.greenhouse.io/teacherspayteachers/jobs/1120325"
 
 Telnyx:
   industry: Communication
