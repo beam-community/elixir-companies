@@ -1890,3 +1890,13 @@ Mirego:
   jobs:
     - title: Web Developer
       url: "https://life.mirego.com/en/available-positions#quebec-developpeur-euse-web"
+
+2U:
+  industry: Education Technology
+  url: https://2u.com
+  github: https://github.com/2uinc
+  location: Brooklyn, NY, USA
+  description: "2U powers the world’s best digital higher education. When students win, universities win, and by coming together around one shared goal—delivering great student outcomes—we are transforming the future of higher education for the better. We use Elixir, Phoenix, and Absinthe to develop high performance data pipelines, and abstractions on difficult-to-integrate third party services."
+  jobs:
+  - title: Software Engineer, Core Systems
+    url: https://2u.com/careers/?gh_jid=4057619002
