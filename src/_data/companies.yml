@@ -1873,3 +1873,13 @@ Revelry Labs:
   github: https://github.com/revelrylabs
   location: New Orleans, LA, USA
   description: "The Revelry PaaS consists of infrastructure tooling, component libraries, self-contained systems and full digital products that help companies bring innovative solutions to market and scale fast. We use Elixir and Phoenix to develop web applications, API and mobile backends, and infrastructure."
+
+Mirego:
+  industry: Technology Consulting
+  url: https://www.mirego.com
+  github: https://github.com/mirego
+  location: Quebec, Canada
+  description: "Mirego is a start-to-finish digital product team based in Quebec City, Montreal & Toronto. We want to build the greatest team, the best workplace and a better world. We’ve been using Elixir in production for our own projects since 2014 and for our clients’ since 2016."
+  jobs:
+    - title: Web Developer
+      url: "https://life.mirego.com/en/available-positions#quebec-developpeur-euse-web"
