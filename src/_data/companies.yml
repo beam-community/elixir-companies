@@ -1906,7 +1906,18 @@ Mirego:
 
 Seat Engine:
   industry: E-Commerce
-  url: https://http://www.seatengine.com/
+  url: http://www.seatengine.com/
   github: https://github.com/seatengine
   location: Philadelphia, PA, USA
   description: "An e-commerce and event management platform (written on Phoenix Framework) for ComedyClubs and music venues."
+
+CityBase:
+  industry: GovTech
+  url: https://thecitybase.com
+  blog: https://thecitybase.com/cityblog/
+  github: https://github.com/CityBaseInc
+  location: Chicago, IL, USA
+  description: "CityBase is working with innovative public servants to transform the experience of government. We use Elixir since 2016 to build many of our services, the majority of them based on Phoenix and Absinthe."
+  jobs:
+    - title: Senior Elixir Engineer
+      url: https://thecitybase.com/careers/#senior-elixir-engineer
