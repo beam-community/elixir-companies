@@ -15,13 +15,13 @@
   location: "Guildford, Surrey, United Kingdom"
 
 361° DIGITAL:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   location: Stuttgart, Germany
   url: https://361.de
   description: "We are a digital agency based in Stuttgart, Germany. We create web and mobile apps using Elixir, Phoenix, React and React Native."
 
 Adjust:
-  industry: Enterprise Software
+  industry: BI, Consultancy, Enterprise, Networking
   location: Berlin, Germany
   url: https://www.adjust.com/
   github: https://github.com/adjust
@@ -36,14 +36,14 @@ Adobe:
   description: "Adobe provides digital media and digital marketing solutions. Adobe is using Elixir to build a combined client/cloud application for collaborative photography workflow."
 
 AdRoll:
-  industry: Marketing/Sales
+  industry: E-Commerce
   url: https://www.adroll.com
   github: https://github.com/AdRoll
   location: San Fransisco, CA, USA
   description: "AdRoll is a marketing platform enabling brands of all sizes to create personalized ad campaigns based on their own website data. They use Elixir in their high-volume data processing pipeline."
 
 Agilion:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.agilion.com
   github: https://github.com/agilionapps
   description: "Software development and consulting."
@@ -64,27 +64,27 @@ Albert:
   description: "Learn anything through interactive practice: College math and science, Advanced Placement®, SAT®, ACT®, GRE®, GMAT®, literature, social science, history, and more. Our API services are built with Elixir, Phoenix, and PostgreSQL."
 
 Alembic:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://alembic.com.au
   github: https://github.com/team-alembic
   location: Sydney, Australia
   description: "Elixir, React and GraphQL development and consulting. Organisers of [Elixir Sydney Meetup](https://elixir.sydney) and supporters of [Elixir Girls](http://elixirgirls.com)."
 
 AlphaSights:
-  industry: Expert Networks
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://engineering.alphasights.com
   github: https://github.com/alphasights
   description: "Global knowledge broker with regional hubs in Europe, the Americas, Asia and the Middle East."
 
 AmberBit:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.amberbit.com
   github: https://github.com/amberbit
   description: "We are polyglot developers (but mostly Ruby, JavaScript, Elixir, Elm)."
   location: Warsaw, Poland
 
 AppUnite:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://appunite.com
   github: https://github.com/appunite
   description: "We are efficient, goal-oriented software development team of professionals specialized in mobile and web."
@@ -105,7 +105,7 @@ AuthorityLabs:
   description: "Accurate and reliable search engine ranking data and keyword insights."
 
 Aviabird:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://aviabird.com
   github: https://github.com/aviabird
   description: "We at Aviabird helps companies design, engineer, and iterate on their most important digital products. We work alongside teams building beautiful, functional web applications with an eye towards the future. Pune, Maharashtra, India."
@@ -125,7 +125,7 @@ Avvo:
   description: "We believe that more information helps you make better decisions. At Avvo, we provide you with detailed information on lawyers and legal issues so that you can make the choices that are right for you."
 
 Badger:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://badger-app.com
   description: "Remind your friends with a delayed text/push."
 
@@ -136,13 +136,13 @@ Basic Space:
   description: "Basic Space is a curated marketplace app with influential creatives selling exclusive items and recommended products to their audience, powered by a homegrown Elixir/Phoenix E-commerce backend."
 
 Big Nerd Ranch:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://www.bignerdranch.com
   github: https://github.com/bignerdranch
   description: "We design and build innovative applications. We teach developers to do the same through our books and immersive training."
 
 Bitgamma:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://bitgamma.com
   github: https://github.com/bitgamma
   description: "We develop web, desktop and embedded applications. We code Elixir, C, Java/Javacard, Ruby, JS. We love working on embedded and custom boards."
@@ -183,7 +183,7 @@ Brightcove:
   description: "A leading global provider of powerful cloud solutions for delivering and monetizing video across connected devices."
 
 Briisk:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://briisk.co
   github: https://github.com/briisk
   description: "Software agency devoted to defining, designing and developing applications, both for web and mobile. We build custom B2B and B2C products with Ruby, Elixir, Angular, Ionic and React Native. Based in Poznan, Poland."
@@ -207,12 +207,12 @@ Cabify:
   location: Madrid/Barcelona
 
 Canvas:
-  industry: Collaboration
+  industry: BI, Consultancy, Enterprise, Networking
   github: https://github.com/usecanvas
   description: "Notes for team of nerds."
 
 Carbon Five:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://carbonfive.com
   blog: http://blog.carbonfive.com
   description: "Agile Web and Mobile Product Development in San Francisco, NYC, Los Angeles, and Chattanooga. Proud to have Elixir/Phoenix in our toolbox and to support [Wallaby](https://github.com/keathley/wallaby)."
@@ -223,19 +223,19 @@ CargoSense:
   description: "CargoSense is a smart-data and MicroAnalytics Software-as-a-Service (SaaS) company founded to create solutions that optimize logistics networks – in healthcare, food, medical devices and other industries with complex supply chains."
 
 Cinch Financial:
-  industry: Financial Technology
+  industry: Financial Services
   url: https://www.cinchfinancial.com/
   github: https://github.com/cinch-financial
   description: "A totally unbiased, comprehensive, personal financial advisor. We use elixir/phoenix for multiple services. Boston, MA, USA."
 
 Circle:
-  industry: Financial Technology
+  industry: Financial Services
   url: https://www.circle.com/
   github: https://github.com/circlefin
   description: "Circle builds products that enable greater ease-of-use in online and in-person payments. They are using Elixir in their product's API. Boston, MA, USA."
 
 CivilCode:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://www.civilcode.io
   github: https://github.com/civilcode
   description: "Developing tailored web-based business applications in Montreal, Canada."
@@ -246,7 +246,7 @@ ClubCollect:
   description: "Billing and collection engine for sports clubs."
 
 Cobenian:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://cobenian.com
   github: https://github.com/Cobenian
   description: "We solve problems with software."
@@ -258,7 +258,7 @@ Code Corps:
   description: "Code Corps helps you build and fund open source software projects for social good."
 
 Coders51:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://www.coders51.com
   github: https://github.com/coders51
   description: "We develop web and mobile solutions for the entire galaxy."
@@ -277,29 +277,29 @@ Communication Service for the Deaf:
   description: "Communication Service for the Deaf's [Vineya](https://govineya.com) ASL (American Sign Language) interpreting platform allows interpreters to work for any agency across the United States. The [interpreter website](https://interpreter.govineya.com) for Vineya uses Elixir, Phoenix and RabbitMQ."
 
 Corvus Insurance:
-  industry: Insurance
+  industry: Financial Services
   url: https://www.corvusinsurance.com
   github: https://github.com/corvusinsurance
   description: "Commercial insurance company building technology enabled insurance products using sensor and IoT data. Using Elixir/Phoenix/Elm to build the CrowBar platform used by Brokers, Insurance Buyers and internal staff. Based in Boston, Massachusetts, USA."
 
 CoverMyMeds:
-  industry: Healthcare
+  industry: Health and family care
   url: https://www.covermymeds.com
   description: "CoverMyMeds seamlessly integrates with EHR systems to provide hospitals and providers with ePA functionality at the point of prescribing. Offices in Columbus, OH and Cleveland, OH."
 
 CrankWheel:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://crankwheel.com/
   description: "Insanely simple freemium screen sharing plus enterprise features."
 
 Crevalle:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://crevalle.io
   github: https://github.com/crevalle
   description: "Creator of the [EMPEX](http://empex.co) conferences, we specialize in listening and helping. Our company products are all built in Elixir. We also provide Elixir training and development services. LA/NYC"
 
 Cultivate:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://cultivatehq.com
   github: https://github.com/cultivatehq
   description: "Long-term practitioners of agile, Lean Startup and Lean UX, providing end-to-end product development. We’re using Elixir on live client projects and have been building web applications since 2009, when we operated as the Edinburgh office of EdgeCase."
@@ -329,23 +329,23 @@ Defacto:
   description: "Developing People since 1987. We build software to provide organizations with an intuitive and easy to use digital learning environment. We also contribute and maintain open source software. Based in Groningen, The Netherlands."
 
 Diatom Enterprise Softwares:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://www.diatomenterprises.com/
   github: https://github.com/DiatomEnterprises
   description: "Diatom Enterprise Softwares - Latvia based custom outsource software development company producing software for a wide variety of industries. We are proficient in Elixir, .NET, Java, Ruby on Rails, Node.JS, Angular.JS and other technologies. We offer Web, Mobile and Desktop development."
 
 Digital Natives Budapest:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://www.digitalnatives.hu/
   description: "10 years experience in RoR, JavaScript, since 2015 we do Elixir / Elm. We work for startups and bigger companies as well, we also founded a couple of SaaS products and a coding bootcamp. We host and organise among others [Elixir](http://www.meetup.com/budapest-elixir/) and [Ruby](http://www.meetup.com/budapest-rb/) meetups in Budapest. [GitHub](https://github.com/digitalnatives)"
 
 Discord:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://discordapp.com/
   description: "Free voice and text chat for gamers."
 
 DockYard:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://dockyard.com
   github: https://github.com/dockyard
   description: "Projects, staff augmentation, coaching, & code audits. Organizer of Boston Elixir. Specialize in Phoenix backends with Ember frontends. [Chris McCord](https://github.com/chrismccord) is Architectural Engineer and creator of Phoenix."
@@ -358,24 +358,24 @@ Driftrock:
   description: "We build products that help our clients acquire and convert more customers from Facebook, LinkedIn and Google. We use Elixir and RabbitMQ for our event-based systems and Elixir/Phoenix for our backend APIs."
 
 Dubber:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.dubber.net
   github: https://github.com/dubbersoftware/
   description: "Dubber is a native cloud, call recording software as a service with unlimited scalability. Capture IM, video and calls like never before! Using Elixir to power our billing system and other backends. Based in Melbourne, Australia."
 
 Dynamo:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://godynamo.com
   github: https://github.com/DynamoMTL
   description: "We build beautiful digital experiences for startups and other innovators. Using Elixir to power our backends. Based in Montreal, Canada."
 
 E-MetroTel:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://www.emetrotel.com
   description: "Cost-effective SIP based Unified Communication solutions."
 
 EL Passion:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://www.elpassion.com
   github: https://github.com/elpassion
   description: "Helping startups launch their products since 2010. Coding in Ruby, JS, Elixir, Swift, Kotlin. Organizer of [Elixir Warsaw Meetup](http://www.meetup.com/ElixirWarsaw-Meetup/)."
@@ -387,16 +387,16 @@ EXR:
   description: "EXR is a residential and commercial real estate brokerage building a better experience for buying, selling, and leasing real estate."
 
 Echobind:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://echobind.com/
   github: https://github.com/echobind/
   description: "As a US-based full-service agency, we leverage Elixir to drive robust web and mobile applications. From design and implementation to trainings and code audits, we help our clients achieve."
 
 Edenlab:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://edenlab.com.ua/
   github: https://github.com/edenlabllc/
-  description: "Boutique software and product development team. We love fintech and we specialize in it, but also run complex and meaningful projects in other fields (Healthcare, e-Government, etc.). We have experience in enterprise solution developments, understand client’s requirements and pain, but are able to combine enterprises with cutting-edge technologies and start-up approach. We have experience in banking, microfinance, startups and software development using elixir."
+  description: "Boutique software and product development team. We love fintech and we specialize in it, but also run complex and meaningful projects in other fields (Health and family care, e-Government, etc.). We have experience in enterprise solution developments, understand client’s requirements and pain, but are able to combine enterprises with cutting-edge technologies and start-up approach. We have experience in banking, microfinance, startups and software development using elixir."
 
 Elevio:
   industry: Customer Service
@@ -411,13 +411,13 @@ EmCasa:
   description: "EmCasa is an online residential broker using an Elixir webservice to help Brazilian buyers and sellers have a far superior experience in real estate. Rio de Janeiro, RJ, Brazil."
 
 Enterprise Software Modules:
-  industry: Enterprise Software
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.enterprisemodules.com
   github: https://github.com/enterprisemodules
   description: "Supported Enterprise Software Puppet Modules for complex software. Elixir used in production for modules subscription management. Nieuwegein, Netherlands."
 
 Erlang Solutions:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.erlang-solutions.com
   description: "Erlang Solutions provide on-site/remote Elixir and Erlang consulting, architecture/code reviews and training for companies of all sizes - from startups to Fortune 100 companies - with over 15 years of experience designing scalable, fault-tolerant systems in Erlang/OTP. The company employs over 100 specialists working out of London, Stockholm, Krakow, Budapest, Berlin, San Francisco, Seattle and Buenos Aires. [GitHub](https://github.com/esl)."
 
@@ -433,7 +433,7 @@ Everyday Hero:
   description: "Everydayhero is transforming how people give to and connect with the causes they care about most."
 
 Exeq:
-  industry: Financial Technology
+  industry: Financial Services
   url: https://exeq.com
   github: https://github.com/exeqapp
   description: "Exeq helps users spend better. They are using Elixir to build the systems that aggregate, normalize, and analyze both transactional and merchant data. New York, NY, USA."
@@ -457,13 +457,13 @@ Find a Player:
   description: "Organize sports games, find people to play sports with"
 
 Findmypast:
-  industry: Family
+  industry: Health and family care
   url: http://www.findmypast.co.uk/
   github: https://github.com/findmypast
   description: "Findmypast makes original historical documents available to search online, so that people can explore a collection of over two billion records find their ancestors and trace their family tree from the comfort of their own home worldwide. London, UK."
 
 Flow:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.getflow.com/
   description: "All your team’s communication, clear and organized."
 
@@ -486,24 +486,24 @@ Frame:
   description: "Frame.io is an online platform that enables its users to privately upload, review, and share video with their teams. Their product is built with Elixir and Phoenix. New York, USA."
 
 Fred:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://fredapp.com.br
   description: "FRED is an artificial intelligence, conversational commerce and chatbots ecosystem with multiple platforms based in Brazil. FRED platforms enable companies of any size to build chatbots and messaging services in multiple channels."
 
 Fully Forged:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://fullyforged.com
   description: "Software development and training, based in London."
   location: London
 
 Future Pet:
-  industry: Healthcare
+  industry: Health and family care
   url: https://futurepet.care
   github: https://github.com/futurepet
   description: "FuturePet is a vetrinary software company based out of Vancouver & Victoria BC that uses our intelligent intake process to reduce appointment time by 40%. We use Elixir to power our main messaging platform. System is ready to handle millions of patients, using data integrity algorithms (heavily influenced by blockchain ideas) and uses all the power of ErlangVM to support countrywide scale."
 
 Gaslight:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://teamgaslight.com
   description: "Software Development, consulting, coaching, training, Organizer of the Cincinnati Elixir group. Now using Elixir and Phoenix in production."
 
@@ -519,13 +519,13 @@ Grasp:
   description: "Android/iOS/Web application facilitating real-time education group work"
 
 GrillWork:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://grillwork.io
   description: "([GitHub](https://github.com/grillwork))- Helping business through software. Working in Elixir/Phoenix/Ruby/Rails/Node/Javascript/ReactJS. We use Elixir for all backend/api work and for network programming."
   location: Burlington, VT, USA
 
 Grok Interactive:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.grok-interactive.com
   github: https://github.com/GrokInteractive
   description: "We help companies solve hard problems and real-time communication with Elixir/Phoenix and React Native. Architecture, Training, and Implementation. All local developers, based in San Antonio, Texas."
@@ -536,7 +536,7 @@ GrowthPup:
   description: "Helping users to grow and maintain their Instagram community."
 
 Hashrocket:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://hashrocket.com
   github: https://github.com/hashrocket
   description: "Hashrocket is an expert team of designers, developers and consultants. We specialize in Ruby on Rails, Ember, Elixir, Phoenix and mobile. We offer consulting, design, development, identity and training services."
@@ -573,7 +573,7 @@ High-Mobility:
   description: "We are building developer platform for connected cars which simplify collaboration between carmakers and software developers. We are using Elixir in our developer center, car emulators and in prototype cars."
 
 HotDoc:
-  industry: Healthcare
+  industry: Health and family care
   url: https://www.hotdoc.com.au
   description: "HotDoc provides services to doctors and their patients. We provide online bookings, reminders, follow up notifications and more. We are an Australian based company and use Elixir for some of our services and are looking to use it more."
 
@@ -588,36 +588,36 @@ Housing:
   description: "Housing.com is an Indian online real estate listing portal that simplifies finding, renting, and selling homes in India."
 
 Icicle Technologies:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://www.icicletech.com
   github: https://github.com/icicletech
   description: "Provides Technology Consulting, Product Development on Elixir & Phoenix. Organizer of Bangalore Elixir Group, built [ElixirNation.io](http://elixirnation.io)."
 
 Infinite Red:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://infinite.red
   github: https://github.com/infinitered
   description: "Mobile and web app design and development services, using Elixir / Phoenix, React, and React Native. Based in Portland, San Francisco, and remote across the USA, with clients in eight countries. We build and maintain dozens of popular open source libraries, including [Thesis](github.com/infinitered/thesis-phoenix) and [Torch](github.com/infinitered/torch)."
 
 John Done:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://johndone.ai
   github:
   description: "In the future, we will speak to machines, politely asking them to carry out tasks for us. At John Done Inc. we are doing our part to build that future by bringing the voice assistant John Done to telephone calls, communications platforms, and web conferences."
 
 Isnor Creative:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://www.isnorcreative.com
   description: "Software development since 2008. Ruby, Elixir, Ember, React"
 
 Isotope11:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://www.isotope11.com/
   github: https://github.com/isotope11
   description: "We provide custom software development and relevant technologies to a wide range of clients. Josh Adams of [ElixirSips](http://elixirsips.com) was the CTO."
 
 Kabisa:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   location: Amsterdam, The Netherlands
   url: http://www.kabisa.nl
   github: https://github.com/kabisa
@@ -628,12 +628,12 @@ Kabisa:
       url: https://www.kabisa.nl/vacatures/elixir-phoenix-developer
 
 Kittysplit:
-  industry: Financial Technology
+  industry: Financial Services
   url: https://kittysplit.com
   description: "A webapp that alows easy splitting of group expenses."
 
 Kontomatik:
-  industry: Financial Technology
+  industry: Financial Services
   url: https://kontomatik.com
   github: https://github.com/kontomatik
   description: "We provide API to banks for proving client identity (KYC) and reading financial data (input for credit scoring, PFM, invoicing etc). We use Elixir for user panel/administration/business intelligence tools. Based in Warsaw, Poland"
@@ -645,18 +645,18 @@ LETOTE:
   description: "Rent and wear all the latest fashion, without ever stepping foot inside a store. We use Elixir, Phoenix, and Nerves in our fulfillment center for speed, efficiency, and automation. Located in San Francisco, CA."
 
 Lab Zero:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://labzero.com
   github: https://github.com/labzero
   description: "A San Francisco based development and design group. We specialize in Ruby, JS and Elixir."
 
 LessEverything:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://lesseverything.com
   description: "Companies hire us to build their big software idea, create integrations between products, improve their conversion rates or just bring new ideas to the table."
 
 Lexmark:
-  industry: Enterprise Software
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.lexmark.com
   github: https://github.com/OpenAperture
   description: "Provider of printing and imaging products, software, solutions and services that help customers save time and money."
@@ -668,7 +668,7 @@ Liftit:
   description: "Liftit - Your best friend with a truck."
 
 Littlelines:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://littlelines.com
   description: "Provides development services, strategy, collaboration, upgrades and code reviews. Littlelines is located in the midwest and serves clients worldwide. We specialize in Elixir and Phoenix, Ruby on Rails, Swift and Vue."
 
@@ -679,7 +679,7 @@ LiveHelpNow:
   description: "Customer service software featuring chat, ticket, knowledge base and callback systems. Elixir will drive our entire system in the near future, but runs a majority of our software now. We are based in Bethlehem, PA, USA"
 
 Lob:
-  industry: Enterprise Software
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://lob.com
   github: https://github.com/lob
   description: "APIs for Print, Mail, Postcards, Letters, & Checks. San Fransisco, CA, USA."
@@ -697,25 +697,25 @@ LookBookHQ:
   description: "Enabling marketers to package content into seamless experiences. We use Elixir to calculate analytics for our customers. Toronto, Canada."
 
 Made by Many:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://madebymany.com/
   github: https://github.com/madebymany
   description: "We help businesses identify market opportunities, bring successful digital products to life and create the culture & capabilities to sustain them."
 
 Mainframe:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://mainframe.co/
   description: "Building the future of email."
 
 Matched Pattern:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.matchedpattern.com/
   github: https://github.com/MatchedPattern
   location: Columbus, OH
   description: "We're Matched Pattern. We’re a software consultancy based in Columbus, Ohio. We specialize in web development, infrastructure and Internet of Things (IoT). Each of our Central Ohio-based, full-time developers have unique experiences and bring insight to each of our offerings. We use Elixir to build scalable web applications."
 
 Mediteo:
-  industry: Healthcare
+  industry: Health and family care
   url: https://www.mediteo.com
   github: https://github.com/mediteo
   description: "Mediteo is a young Digital Health start-up with the aim to provide the best solution to handle medication in a correct and secure way. Berlin, Germany."
@@ -727,7 +727,7 @@ Meltwater:
   description: "([GitHub](https://github.com/meltwater)) - Gather insights from outside the firewall to empower your business decisions. Using Elixir for backend services. San Francisco, USA."
 
 Mirego:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://mirego.com
   github: https://github.com/mirego
   description: "We help our clients innovate and reinvent themselves in order to prosper in the digital era."
@@ -738,31 +738,31 @@ Moz:
   description: "([GitHub](https://github.com/seomoz)) - Products to power your online visibility."
 
 My Meds & Me:
-  industry: Healthcare
+  industry: Health and family care
   url: https://www.mymedsandme.com
   github: https://github.com/MyMedsAndMe
   description: "A leading SaaS provider of web-based adverse event and product quality capture solutions for life sciences. [Click here to see how elixir being used at My Meds & Me.](https://www.youtube.com/watch?v=ZCYEX6ZIJgM) The company based in London."
   location: London, United Kingdom
 
 Nav:
-  industry: Financial Technology
+  industry: Financial Services
   url: https://nav.com
   github: https://github.com/creditera
   description: "We are a Utah Company offering credit monitoring, financing, and advice for small & medium size businesses. We use elixir to build the business engine that curates relevant financing for our customers."
 
 "Nebo #15":
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://nebo15.com/
   github: https://github.com/Nebo15
   description: "A distributed team of Elixir and React.js experts that work on cutting-edge projects design and development. Our fintech and blockchain experience comes from hands-on work in various areas, from eMoney clouds and P2P lending platforms to the National Health Service of Ukraine. We strongly believe in giving back to the community and open-sourced 10's of libraries and projects."
 
 Neon Tree Solutions:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://neontree.pl
   description: "Elixir, Erlang, React, Scala and Node.js outsourcing and consulting. We specialize in helping out start-ups and small companies to find the best tools for the job."
 
 "Nerds & Company":
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://nerds.company
   github: https://github.com/nerds-and-company
   description: "Creating value for companies by creating value for people. A digital agency based in the Netherlands. Specialized in innovative projects. Experts in Elixir, Ruby and mobile."
@@ -814,7 +814,7 @@ Palar Support:
 
 
 PagerDuty:
-  industry: Enterprise Software
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://pagerduty.com
   github: https://github.com/PagerDuty
   description: "PagerDuty is your fastest path to incident resolution, helping IT Operations and DevOps teams deliver on the promise of agility, performance, and uptime."
@@ -826,37 +826,37 @@ Peek:
   description: "Peek makes the world’s tours & activities easily bookable — anytime, anywhere. Peek uses Elixir in backend services powering Peek.com and Peek Pro. San Francisco, CA."
 
 Pet Partners:
-  industry: Healthcare
+  industry: Health and family care
   url: http://petpartnersusa.com
   github: https://github.com/petpartnersllc
   description: "Own and operate a number of veterinary hospitals across the United States. Using Elixir for all new development."
 
 Pinterest:
-  industry: Social Network
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.pinterest.com/
   github: https://github.com/pinterest
   description: "Pinterest is a visual discovery tool that you can use to find ideas for all your projects and interests."
 
 Pivotal:
-  industry: Enterprise Software
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://pivotal.io
   github: https://github.com/pivotal
   description: "Leader in software engineering, Pivotal is the company behind CloudFoundry, the Java Spring Framework, and other products. They wrote the new [RabbitMQ CLI](https://github.com/rabbitmq/rabbitmq-cli/) and are [pushing Elixir](http://engineering.pivotal.io/post/elixir-clustering-on-cloud-foundry/) through their engineering blog."
 
 Planning Center:
-  industry: Collaboration
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://planning.center
   github: https://github.com/planningcenter
   description: "Planning Center's suite of apps work together to allow more ministry in your Ministry. Planning Center is from USA. And it's adopting Elixir to it's stack."
 
 Planswell:
-  industry: Financial Technology
+  industry: Financial Services
   url: https://planswell.com/
   github: https://github.com/planswell
   description: "The company that helps you feel better about your money. Fund your retirement. Send a child to school. Pay off your debts. Planswell shows you how to achieve your biggest goals with one single monthly contribution. Toronto, Canada."
 
 Plataformatec:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://plataformatec.com.br/
   github: https://github.com/plataformatec
   description: "Project inception, coaching, tailored projects, general consulting. Sponsor of Elixir, employer to Elixir's BDFL."
@@ -875,37 +875,37 @@ Postmates:
   description: "On-demand delivery company based in San Francisco. We use Elixir in a lot of our internal projects (merchant inventory system, partner tools portal) and we have plans on open-sourcing a Thumbor library very soon."
 
 ProcessOne:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.process-one.net
   github: https://github.com/processone
   description: "Leader in Instant Messaging and Push Solutions."
 
 Prograils:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://prograils.com
   github: https://github.com/prograils
   description: "Software House full of skilled web developers and mobile experts. Our agile development team combines technologies like Elixir, Ruby on Rails, React and HTML 5 to build user friendly web & mobile apps."
 
 Progress Engine:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://progress-engine.com
   github: https://github.com/progress-engine/
   description: "Software development company, based in Moscow, Russia and specialized in mobile and web applications development"
 
 PromptWorks:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.promptworks.com
   github: https://github.com/promptworks/
   description: "Philadelphia's premier software consultancy with a reputation for quality and rigor. Uses technologies like Elixir, Go, Ruby, Python, React, and Ember."
 
 Puppet Labs:
-  industry: Enterprise Software
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://puppetlabs.com
   github: https://github.com/puppetlabs
   description: "Leader in IT automation. Host of the [Portland, OR Elixir Meetup](http://www.meetup.com/elixir-pdx/). Internal Elixir and Phoenix apps in production. All new internal development targeted at Elixir."
 
 Pypestream:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.pypestream.com
   description: "B2C Messaging Platform"
 
@@ -933,19 +933,19 @@ Raise Marketplace:
   description: "Buy and Sell Gift Cards - Exchange Gift Cards. Pricing recommendation API is developed in Elixir. Chicago, Illinois, US."
 
 Recruitee:
-  industry: Human Resources
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://recruitee.com/
   github: https://github.com/Recruitee
   description: "Recruitee is the easiest way for teams to organize their hiring process - and grow faster. Amsterdam, Netherlands."
 
 Red Panthers:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://redpanthers.co
   github: http://github.com/redpanthers
   description: "We specialize in helping our clients validate, build and expand their business through technology"
 
 Resuelve:
-  industry: Financial Technology
+  industry: Financial Services
   url: https://resuelve.mx
   github: https://github.com/resuelve
   description: "Multiple retail financial services in LATAM. Elixir is used in the CBS (Core Banking System) and P2P loan service."
@@ -957,12 +957,12 @@ RevZilla Motorsports:
   description: "Philadelphia-based retailer bent on enhancing the experience of the Motorcycle Enthusiast. Home-grown Elixir ecom system in production."
 
 RexPad:
-  industry: Collaboration
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.rexpad.com/
   description: "Nimble collaborative note-taking. Located in Gothenburg, Sweden. Backend is written in Elixir and Phoenix."
 
 RokkinCat:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://rokkincat.com
   github: https://github.com/rokkincat
   description: "Build projects, consulting, mobile and backend development. Wide range of clients."
@@ -973,12 +973,12 @@ Rose Point Navigation Systems:
   description: "Specializes in navigation software for recreational and professional mariners."
 
 SeekPanda:
-  industry: Marketplaces
+  industry: E-Commerce
   url: http://www.seekpanda.com
   description: "Premier curated marketplace for hiring translators and interpreters."
 
 Semaphore Mobile:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.semaphoremobile.com/
   description: "([GitHub](https://github.com/semaphoremobile)) - We are a custom mobile application company based in Dallas. We use Elixir to build backend CMS and APIs for our clients web and mobile products."
 
@@ -1005,7 +1005,7 @@ Shopybot:
   description: "Facebook Chatbot platform for E-Commerce."
 
 Slack:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://slack.com
   description: "([GitHub](https://github.com/slackhq/))- Slack is a team communication application. They are using Elixir to build a media server for p2p and group calls. San Fransisco, CA, USA."
 
@@ -1025,26 +1025,26 @@ SoPost:
   description: "SoPost is a product sampling platform. We make use of Elixir & OTP (_and a few other things_) to provide a performant system that aids our mission to become the world's best product sampling company. Currently, [Our GH repo](https://github.com/SoPost) is all private, but we are looking to open up some of the technology we've developed. Nearly always hiring in Newcastle & Edinburgh (UK)."
 
 solarisBank:
-  industry: Financial Technology
+  industry: Financial Services
   url: https://www.solarisbank.de/
   location: Berlin, Germany
   github: https://github.com/solarisbank
   description: "Provider of financial solutions for other financial entities and companies."
 
 Sophilabs:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://sophilabs.co
   description: "([Elixir and Phoenix](https://sophilabs.co/services/elixir-phoenix-development)) - We are an agile software design and development agency. We deliver top quality software through agile and perfectionist teams. USA based company with main development office located in South America for timezone convenience."
 
 Spreedly:
-  industry: Payment
+  industry: Financial Services
   url: https://www.spreedly.com
   github: https://github.com/spreedly
   description: "Spreedly believes the best payment experience derives from excellent software combined with business flexibility. Durham, NC, USA."
   location: Durham, NC, USA
 
 Stampery:
-  industry: Enterprise Software
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://stampery.com
   github: https://github.com/stampery
   description: "21st century notarization at your fingertips. We offer an immutable record of existence, integrity and ownership of all your files and email by leveraging the Blockchain technology."
@@ -1062,7 +1062,7 @@ StellaService:
   location:  NYC, USA
 
 Storefront:
-  industry: Marketplaces
+  industry: E-Commerce
   url: http://thestorefront.com/
   github: https://github.com/thestorefront
   description: "Storefront makes it easy to find and rent short term retail space."
@@ -1074,30 +1074,30 @@ StoryCloud:
   description: "StoryCloud has developed an industry leading content publishing platform with security, encryption and permissions. San Diego, CA, USA."
 
 Stride Technology Consulting:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://www.stridenyc.com/
   github: https://github.com/stride-nyc
   description: "We’re NYC Agile Software Development Specialists. We help tech teams be their best inside the code and out. NYC, USA."
 
 Stuart:
-  industry: Enterprise Software
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://stuart.com
   github: https://github.com/StuartApp
   description: "A disruptive B2B on-demand delivery platform that connects retailers with local couriers, enabling anyone to deliver anything at any time."
 
 Substantial:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://substantial.com/
   description: "([GitHub](https://github.com/substantial)) - We are a digital product studio headquartered in Seattle. We use Elixir to build backends for web and mobile products."
 
 TalkJS:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://talkjs.com
   github: https://github.com/talkjs
   description: "Pluggable user-to-user messaging for marketplaces and online platforms. We use Elixir for most of our messaging infrastructure."
 
 Talkdesk:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.talkdesk.com
   github: https://github.com/talkdesk
   description: "Cloud-Based Call Center Software."
@@ -1109,13 +1109,13 @@ Tappsi:
   description: "Taxi calls easier and safer in Colombia."
 
 Teachers Pay Teachers:
-  industry: Marketplaces
+  industry: E-Commerce
   url: https://www.teacherspayteachers.com/
   github: https://github.com/TeachersPayTeachers
   description: "Empowering millions of educators to share their work, their insights, and their inspiration with one another. Based in NYC, Elixir powers our backend infrastructure."
 
 Telnyx:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://telnyx.com/
   github: https://github.com/team-telnyx
   description: "Telnyx provides a cloud-based portal & API offering carrier grade voice services such as Origination, Termination and SIPtrunking over the Internet. Chicago, IL, USA."
@@ -1159,13 +1159,13 @@ Tinfoil Security:
   description: "([GitHub](https://github.com/tinfoil/)) - Tinfoil Security provides a dynamic security scanning solution for DevOps. We integrate with your CI system to find and help resolve security vulnerabilities in web applications and web services before they ever get deployed to production. We use Elixir to power our web service scanning engine."
 
 Tongdao:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://tongdao.io
   github: https://github.com/tongdao
   description: "Tongdao is a data-driven marketing platform designed to enable businesses to understand their customers and engage them in a smart and personalized way across multiple channels. Using Elixir to power our messaging system and data collection backend. Shanghai, China."
 
 Margo Bank:
-  industry: Financial Technology
+  industry: Financial Services
   url: https://margo.com
   description: "A Bank for Small and Medium Businesses. Elixir is used for the Core Banking System (CBS). Based in Paris, France."
   location: Paris, France
@@ -1177,13 +1177,13 @@ Undead Labs:
   description: "Creators of the smash hit survival-fantasy game _State of Decay_ and forthcoming tactical creature battler _Moonrise_."
 
 Vinsol:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://vinsol.com
   blog: http://vinsol.com/blog
   description: "Leading Web and Mobile Product Development company with expertise in Ecommerce. Maintainers of [SpreeCommerce(Rails)](https://github.com/spree/spree) and [NectarCommerce(Elixir/Phoneix)](https://github.com/vinsol/nectarcommerce) Open source projects."
 
 VoiceLayer:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://voicelayer.io
   description: "Integrate realtime Push-to-Talk into your application."
 
@@ -1195,13 +1195,13 @@ Volders:
   location: Berlin, Germany
 
 Weedmaps:
-  industry: Cannabis
+  industry: Health- and familycare
   url: https://weedmaps.com/
   description: "Weedmaps.com is a community where medical marijuana users connect with other users in their geographic region to freely discuss and review local cannabis co-operatives, storefronts, medical doctors and delivery services. We are headquartered in Irvine, CA, and we are using Elixir to build our backend services."
   location:  Irvine, CA, USA
 
 WhiteHat:
-  industry: Staffing/Recruiting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://whitehat.org.uk
   github: https://github.com/WhiteHatuk
   description: "We're a tech startup founded to ensure young people have access to the best career-focused apprenticeships on offer. We use Elixir for all our web services. London, UK."
@@ -1224,25 +1224,25 @@ Workshops.de:
   description: "An education company based in Essen, Germany. Well known for high quality workshops in the information technology area. The web application is entirely written in Elixir and based on the Phoenix Framework - running in production since early 2016."
 
 Xapix:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.xapix.io/
   description: "XapiX makes it easy for enterprise developers to discover, integrate and combine data and services from multiple internal or public data sources. As the “Github of APIs” XapiX helps businesses create, improve and distribute API-based products. XapiX uses Elixir for various data transformation applications. XapiX is based in Berlin, Germany, and San Francisco, USA."
 
 Xerpa:
-  industry: Human Resources
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://www.xerpa.com.br
   github: https://github.com/Xerpa
   description: "Xerpa is a SaaS company aiming to simplify and modernize HR, payroll and benefits administration for Brazilian SMBs and their employees. Entire stack is functional: Elixir/Phoenix on the backend with ClojureScript frontend."
 
 YBEX:
-  industry: Financial Technology
+  industry: Financial Services
   url: https://www.ybex.io
   github: https://github.com/ybexio
   description: "YBEX is a financial technology company, providing a marketplace platform for retail foreign exchange services. Elixir is used for our backend services. Based in Hong Kong."
   location: Hong Kong
 
 Yala:
-  industry: Social Network
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://yalabot.com/
   description: "Yala is a chatbot that makes use of machine learning to know the best time to post to multiple social networks. Yala's ingenious algorithm can increase your exposure and receive better engagement on the items you’re sharing. Oh, and it's free."
 
@@ -1253,38 +1253,39 @@ Zenloop:
   description: "Collect and analyze feedback, using Net-Promoter-Score (NPS). Most of the backend is Elixir and Phoenix. Based in Berlin, Germany."
 
 Zuppler:
-  industry: Online Ordering
+  industry: E-Commerce
   location: Philadelphia, USA
   url: http://www.zupplerworks.com/
   github: https://github.com/zuppler
   description: "We try to offer the easiest way to let customers order food online for takeout or delivery. We develop all recent backend software using Elixir."
 
 askCharlie:
-  industry: Marketplaces
+  industry: E-Commerce
   url: https://www.askcharlie.de/
   description: "Finding the best service providers for whatever needs you might have."
 
 babylon health:
-  industry: Healthcare
+  industry: Health and family care
   url: https://www.babylonhealth.com
   github: https://github.com/Babylonpartners
   description: "babylon was founded with a single purpose: To put an accessible and affordable health service in the hands of every person on earth. Not feeling yourself? Chat to babylon for fast advice on what to do next if you’re feeling unwell. GP appointments are available 24/7 from your phone. Our doctors team-up with advanced artificial intelligence technology to give you the complete healthcare experience you deserve."
 
 bitcrowd:
-  industry: Technology Consulting
-  url: http://bitcrowd.net
+  industry: BI, Consultancy, Enterprise, Networking
+  # url
+  : http://bitcrowd.net
   github: https://github.com/bitcrowd
   description: "Berlin based software development and consulting for startups."
   location: Berlin, Germany
 
 code lever:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://codelever.com
   github: https://github.com/code-lever
   description: "We develop software for small teams with big goals. Working to grow the Elixir/Erlang ecosystem in the Midwest, USA."
 
 codequest:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://codequest.com
   github: https://github.com/codequest-eu
   description: "We are polyglot software engineers who use Elixir, Go, Ruby, Swift and JavaScript to turn ideas into awesome software for the web and mobile."
@@ -1306,18 +1307,18 @@ nextjournal:
   description: "([GitHub](https://github.com/nextjournal)) - An evolving platform for computer-aided research. Elixir is used for developing the backend of the platform."
 
 prima.it:
-  industry: Insurance
+  industry: Financial Services
   url: https://www.prima.it
   description: "Italian insurance company with a focus on cutting edge technologies."
 
 thoughtbot:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://thoughtbot.com
   github: https://github.com/thoughtbot
   description: "We work with companies to design, develop and grow high quality web and mobile products. We write and maintain open source software like [ExMachina](https://github.com/thoughtbot/ex_machina)."
 
 toy rocket science:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://toyrocketscience.com
   github: https://github.com/trsc
   description: "We are a small expert team of developers in Berlin. We have a broad range of clients and make software that ranges from heavy-lifting on the server to the frontend, including apps."
@@ -1331,13 +1332,13 @@ uSwitch:
   description: "uSwitch is a comparison service that helps you to compare on a range of products and services (energy, gas, broadband, mobiles, personal finance). We use Elixir in Credit Card comparison for finding out how likely customers are to get cards."
 
 wemake.services:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://wemake.services/
   github: https://github.com/wemake-services
   description: "We make, craft, and develop web services and mobile applications in Moscow, Russia. We also host [elixir meetups in Moscow](http://elixir-lang.moscow)."
 
 woumedia:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://woumedia.com
   description: "Software House and Digital Design Agency from Copenhagen."
 
@@ -1349,14 +1350,14 @@ Anarock:
   description: "ANAROCK's key strategic business units comprise of the Residential business: broking & advisory services to clients and the Investment business: debt, equity and mezzanine funding. Now Using elixir for backend services created for productivity app"
 
 Infinum:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://infinum.co/
   location: San Francisco, CA, USA
   github: https://github.com/infinum/
   description: "Infinum develops and designs great software for mobile and web. Our clients are large brands, banks, insurance companies, media publishers, mobile carriers and others. We use Elixir, Ruby & Golang on the backend."
 
 ZipBooks:
-  industry: Financial Technology
+  industry: Financial Services
   github: https://github.com/zipbooks
   url: https://www.zipbooks.com
   location: Utah, USA
@@ -1370,14 +1371,14 @@ Statuspal:
   description: "Statuspal makes it easy for you to communicate your app/service status to your customers, providing hosted & open source status pages manager written in Elixir + Phoenix."
 
 KOVnet:
-  industry: Child Care
+  industry: Health and family care
   url: http://www.kovnet.nl
   github: https://github.com/kdvnet
   location: Hoofddorp, The Netherlands
   description: "Administration software for child care centers. Planning, invoicing, facilitating communication between careworkers and parents. We use Phoenix to replace the RoR backend, channels to feed the UIs."
 
 MojoTech:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.mojotech.com/
   github: https://github.com/mojotech
   location: Providence, RI, USA
@@ -1398,14 +1399,14 @@ Massachusetts Bay Transportation Authority (MBTA):
   description: "We are the public transit agency of Greater Boston, and we're building the next generation of websites, mobile apps, and rider experinece tools."
 
 Culture Amp:
-  industry: Human Resources
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.cultureamp.com
   github: https://github.com/cultureamp
   location: Melbourne, Australia
   description: "Culture Amp helps companies collect, understand, and act on employee feedback. We are using Elixir for a number of backend services."
 
 Scripbox:
-  industry: Financial Technology
+  industry: Financial Services
   url: https://scripbox.com
   github: https://github.com/scripbox
   location: Bengaluru, India
@@ -1435,7 +1436,7 @@ Sparta Science:
       url: https://github.com/sparta-science/engineer-job-posting
 
 Codedge LLC:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.codedge.io/
   github: https://github.com/codedge-llc
   location: Dallas, TX, USA
@@ -1456,14 +1457,14 @@ RentPath:
   description: "Elixir is being used for many internal services that provide robust APIs for user facing products."
 
 Bookwell:
-  industry: Health/Fitness
+  industry: Health and family care
   url: https://www.bookwell.com.au
   github: https://github.com/bookwell
   location: Melbourne, Australia
   description: "Bookwell is an online booking site for health and beauty services in Australia. We also provide web based calendar software for venues to manage staff and appointment scheduling which is integrated with our booking platform. We are using Elixir for most of our backend and (GraphQL) APIs. Currently hiring for Elixir roles! :)"
 
 WePay:
-  industry: Financial Technology
+  industry: Financial Services
   url: https://go.wepay.com
   github: https://github.com/wepay
   location: Redwood City, CA, USA
@@ -1489,7 +1490,7 @@ Wistia:
   description: "Wistia provides simple software for creating, managing, and sharing videos for business. Several of our core services are built in Elixir including our video encoding platform."
 
 Coletiv:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.coletiv.com
   github: https://github.com/coletiv
   location: Porto, Portugal
@@ -1503,14 +1504,14 @@ PandaScore:
   description: "We provide statistics and live data on most of esports games and tournaments. Elixir powers our internal tools and processing pipelines"
 
 CodicePlastico:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   location: Brescia, Italy
   url: http://www.codiceplastico.com
   github: https://github.com/codiceplastico
   description: "We are a team of superheroes that code elixir applications to save the world."
 
 ScriptDrop:
-  industry: Healthcare
+  industry: Health and family care
   url: http://www.scriptdrop.co/
   github: https://github.com/ScriptDrop
   location: Columbus, OH, USA
@@ -1521,7 +1522,7 @@ VoiSmart:
   url: https://www.voismart.it
   github: https://github.com/VoiSmart
   location: Milano, Italy
-  description: "We develop Unified communications and Collaboration products. Elixir powers our webRTC video conference solution and is permeating legacy ones, too!"
+  description: "We develop Unified communications and BI, Consultancy, Enterprise, Networking products. Elixir powers our webRTC video conference solution and is permeating legacy ones, too!"
   jobs:
     - title: Software Engineer
       url: https://www.voismart.it/en/job-opportunty
@@ -1534,7 +1535,7 @@ Wunder:
   description: "At Wunder, our mission is to solve traffic in the world’s most gridlocked cities through carpooling. It’s an epic mission that requires a combination of technology and community. Striving for excellence in these two areas is what makes us different. We use Elixir/Phoenix/OTP for most parts of the system."
 
 Botsquad:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   location: Amsterdam, the Netherlands
   url: https://www.botsquad.com
   github: https://github.com/botsqd
@@ -1544,14 +1545,14 @@ Botsquad:
       url: "https://www.botsquad.com/job_positions/elixir-developer/"
 
 DialerAI:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   location: Spain, Barcelona (also UK)
   url: https://dialer.ai/
   github: https://github.com/dialerai
   description: "DialerAI is fully-featured CallCenter Solution, supporting predictive, power, preview and blended modes. We use Elixir to power some of our backends services, we are based in Barcelona."
 
 Kiprosh:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   location: Mumbai, India and Chicago, USA
   github: http://github.com/kiprosh
   url: http://www.kiprosh.com
@@ -1571,7 +1572,7 @@ Flatiron School:
       url: "https://flatironschool.com/careers/view-posting/?gh_jid=51001"
 
 Decisiv:
-  industry: Service Relationship Management
+  industry: BI, Consultancy, Enterprise, Networking
   location: Glen Allen, VA, USA
   url: https://www.decisiv.com/
   github: http://github.com/decisiv
@@ -1605,14 +1606,14 @@ Chaince:
   description: "A Superior Blockchain Asset Trading Platform Focusing on EOS Projects. Based on pure elixir/phoenix/OTP infrastructure."
 
 Helijia:
-  industry: Health/Fitness
+  industry: Health and family care
   url: https://www.helijia.com/
   github: https://github.com/helijia-web
   location: Beijing, China
   description: "Helijia provides highly customizable services to Chinese middle classes. We adopted Elixir in 2016 and really enjoy building applications with it! We use Elixir heavily in our web systems."
 
 Slab:
-  industry: Enterprise Software
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://slab.com
   github: https://github.com/slab/
   location: San Francisco, CA, USA
@@ -1639,7 +1640,7 @@ Coingaming:
       url: https://coingaming.recruitee.com/o/elixir-developer
 
 SweetIQ:
-  industry: Marketing/Advertising/Sales
+  industry: E-Commerce
   url: https://sweetiq.com/
   blog: https://sweetiq.com/blog/
   githun: https://github.com/SweetIQ
@@ -1650,13 +1651,13 @@ SweetIQ:
       url: https://sweetiq.com/about/careers/
 
 JoinUp:
-  industry: Staffing/Recruiting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.joinup.io
   location: Paris, France
   description: "JoinUp is a recruiting chatbot that helps recruiters source & qualify candidates more efficiently on their websites. Our api is powered by Phoenix/Elixir with Reason/React frontends."
 
 Expert360:
-  industry: Marketplaces
+  industry: E-Commerce
   url: https://expert360.com
   location: Sydney, Australia
   description: "Expert360 allows businesses to engage and manage top talent for short-mid term project-work. We use Elixir on the backend with Phoenix, Absinthe for our GraphQL API and React components on the frontend."
@@ -1666,7 +1667,7 @@ Expert360:
       url: https://expert360.com/jobs
 
 Trax:
-  industry: Retail Industry
+  industry: E-Commerce
   url: https://traxretail.com/
   github: https://github.com/quri/
   location: San Francisco, CA, USA
@@ -1676,7 +1677,7 @@ Trax:
       url: https://traxretail.com/careers/engineering/A5.80F/backend-software-developer/all/
 
 Pharos Production Inc.:
-  industry: Blockchain & Fintech
+  industry: Financial Services 
   url: http://www.pharosproduction.com
   location: Las Vegas, NV, USA; Kyiv, Ukraine
   description: "Pharos Production team is made up of the brightest and most dedicated blockchain, fintech, ICO, web and mobile developers, designers, project managers and quality assurance specialists. Our development efforts resulted in more than 30 mobile and web solutions – social networking apps, ICOs, private blockchains, e-commerce, news boards, other different business and entertainment applications. We are hiring!"
@@ -1702,7 +1703,7 @@ Teachoo:
   description: "Teachoo provides Maths, English, Accountancy and Finance content to students, schools and education departments."
 
 Formulae:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   location: Pune, India
   url: http://formulae.io
   blog: https://medium.com/formulae
@@ -1723,7 +1724,7 @@ FunBox:
       url: https://funbox.ru/vacancies/elixir-developer
 
 Distru:
-  industry: Cannabis
+  industry: Health and family care
   url: https://distru.com
   github: https://github.com/DistruApp
   location: Oakland, CA
@@ -1757,7 +1758,7 @@ FashionUnited:
   description: "Making the fashion industry more efficient and transparent. Using GenStage/GraphQL to process large amount of data."
 
 100Starlings:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.100starlings.com/
   github: https://github.com/100Starlings
   location: Remote
@@ -1769,14 +1770,14 @@ FashionUnited:
     We also have a retreat every year and a training budget.
 
 Instinct Science:
-  industry: Healthcare
+  industry: Health and family care
   url: https://instinct.vet/
   github: https://github.com/instinctscience
   location: Remote
   description: "Instinct uses Elixir to help the world’s state-of-the-art veterinary hospitals enhance their patient care, staff efficiency, and overall business."
 
 René Koch AG:
-  industry: Communication
+  industry: BI, Consultancy, Enterprise, Networking
   url: http://kochag.ch
   github: https://github.com/Koch-AG
   location: Au ZH, Switzerland
@@ -1802,7 +1803,7 @@ Pixel Union:
     url: https://pixel-union.workable.com
 
 Envato:
-  industry: Marketplaces
+  industry: E-Commerce
   url: https://envato.com/
   github: https://github.com/envato/
   location: Melbourne, Australia
@@ -1838,7 +1839,7 @@ Shedul:
     url: https://shedul.workable.com/j/92C6EACEED
 
 Groma:
-  industry: Enterprise Software
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.groma.si/en
   description: "We develop a solution for employee scheduling and payroll automation in complex shift work environments ([shiftplan.io](https://www.shiftplan.io)). We deployed first Elixir based back-end services to production in 2015. Impressed by the performance and maintainability, Elixir is now powering a majority of our back-end services. Located in Ljubljana, Slovenia."
 
@@ -1868,7 +1869,7 @@ Geek Soft:
     url: https://geeksoft.pl/#career
 
 Revelry Labs:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://revelry.co
   github: https://github.com/revelrylabs
   location: New Orleans, LA, USA
@@ -1882,7 +1883,7 @@ Contractbook:
   description: "Efficient Contract Management for Modern Businesses. Create, sign and store all your contracts in one safe place. Our server side is written in Elixir."
 
 Mirego:
-  industry: Technology Consulting
+  industry: BI, Consultancy, Enterprise, Networking
   url: https://www.mirego.com
   github: https://github.com/mirego
   location: Quebec, Canada
