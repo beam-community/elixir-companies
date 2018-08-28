@@ -1921,3 +1921,10 @@ CityBase:
   jobs:
     - title: Senior Elixir Engineer
       url: https://thecitybase.com/careers/#senior-elixir-engineer
+
+Ride Health: 
+  industry: Healthcare
+  url: https://ride-health.com
+  blog: https://medium.com/ride-health
+  location: New York, NY 
+  description: "Ride Health helps low-income, elderly and disabled patients who face transportation barriers reach their appointments. Our real-time system is written 100% in Elixir using the ([Kora](https://github.com/ironbay/kora)) framework."
