@@ -1928,3 +1928,13 @@ Ride Health:
   blog: https://medium.com/ride-health
   location: New York, NY 
   description: "Ride Health helps low-income, elderly and disabled patients who face transportation barriers reach their appointments. Our real-time system is written 100% in Elixir using the ([Kora](https://github.com/ironbay/kora)) framework."
+ 
+ Nightwatch:
+  industry: SEO
+  url: https://nightwatch.io
+  blog: http://blog.nightwatch.io
+  location: Remote
+  description: "Nightwatch is the most advanced and intuitive SEO tracker and analytics tool in the industry. We use Elixir for high performance web scraping."
+  jobs:
+    - title: Full-stack developer [Ember | Rails | Elixir]
+      url: https://nightwatch.io/jobs
