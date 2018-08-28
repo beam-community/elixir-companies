@@ -1739,7 +1739,7 @@ ProFootballFocus:
   description: "Pro Football Focus analyzes every player and every play of every game to deliver player grades, stats, and rankings for the NFL, fantasy football, and NFL Draft. We use Elixir, Phoenix, and React for data collection, analysise, reporting and web apps."
 
 Tele2:
-  industry:  Telecommunications
+  industry: Telecommunications
   url:  http://www.tele2.com/
   location:  Amsterdam, The Netherlands
   description: "Telecom Provider, replacing some of the internal tooling with Elixir."
@@ -1748,7 +1748,7 @@ Tele2:
       url: https://werkenbij.tele2.nl/vacatures/it-services-network-it/ruby-elixir-developer-diemen/
 
 Wuunder:
-  industry:  Transportation
+  industry: Transportation
   url:  https://wearewuunder.com/en/
   location:  Weert, The Netherlands
   description: "Startup working on making shipping easier, Elixir powers the backend."
@@ -1922,14 +1922,14 @@ CityBase:
     - title: Senior Elixir Engineer
       url: https://thecitybase.com/careers/#senior-elixir-engineer
 
-Ride Health: 
+Ride Health:
   industry: Healthcare
   url: https://ride-health.com
   blog: https://medium.com/ride-health
-  location: New York, NY 
+  location: New York, NY
   description: "Ride Health helps low-income, elderly and disabled patients who face transportation barriers reach their appointments. Our real-time system is written 100% in Elixir using the ([Kora](https://github.com/ironbay/kora)) framework."
- 
- Nightwatch:
+
+Nightwatch:
   industry: SEO
   url: https://nightwatch.io
   blog: http://blog.nightwatch.io
