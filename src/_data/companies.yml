@@ -1946,3 +1946,10 @@ Ostmodern:
   location: London, UK
   github: https://github.com/ostmodern
   description: "Ostmodern work with leading media, broadcast and sport brands to define product strategies, develop innovative solutions and build services that deliver tangible competitive advantage, whether on desktop, mobile, tablet or TV. We use Elixir for high-throughput messaging and other performance-critical tasks."
+
+Digital Origin:
+  industry: Financial Services
+  url: https://www.digitalorigin.com/  
+  github: https://github.com/digitalorigin
+  location: Barcelona, Spain  
+  description: "Digital Origin is a financial services company mainly focused on offering e-tailers a product to provide consumer credit to their customers in the form of deferred payments. We use Elixir along with Phoenix in our payments platform."
