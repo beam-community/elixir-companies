@@ -1953,3 +1953,10 @@ Digital Origin:
   github: https://github.com/digitalorigin
   location: Barcelona, Spain  
   description: "Digital Origin is a financial services company mainly focused on offering e-tailers a product to provide consumer credit to their customers in the form of deferred payments. We use Elixir along with Phoenix in our payments platform."
+
+NewAperio:
+  industry: Technology Consulting
+  url: https://newaperio.com
+  github: https://github.com/newaperio
+  location: Baton Rouge, LA, USA
+  description: "We help brands uncover their hidden potential. We're a web and mobile design and development studio. We use Elixir and Phoenix in client work and on internal projects to develop web apps, mobile app APIs, embedded systems and appliances, and more."
