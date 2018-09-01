@@ -1938,7 +1938,7 @@ Nightwatch:
   jobs:
     - title: Full-stack developer [Ember | Rails | Elixir]
       url: https://nightwatch.io/jobs
-      
+
 Ostmodern:
   industry: Broadcast Media
   url: https://ostmodern.co.uk
@@ -1949,10 +1949,17 @@ Ostmodern:
 
 Digital Origin:
   industry: Financial Services
-  url: https://www.digitalorigin.com/  
+  url: https://www.digitalorigin.com/
   github: https://github.com/digitalorigin
-  location: Barcelona, Spain  
+  location: Barcelona, Spain
   description: "Digital Origin is a financial services company mainly focused on offering e-tailers a product to provide consumer credit to their customers in the form of deferred payments. We use Elixir along with Phoenix in our payments platform."
+
+Slickspaces:
+  industry: Hospitality
+  url: https://slickspaces.com
+  location: Vancouver, Canada
+  github: https://github.com/slickspaces
+  description: "Fully automated guest access, twenty-four seven. Elixir and Phoenix are used for the entire API and back-end."
 
 NewAperio:
   industry: Technology Consulting
