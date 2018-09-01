@@ -1960,3 +1960,10 @@ Slickspaces:
   location: Vancouver, Canada
   github: https://github.com/slickspaces
   description: "Fully automated guest access, twenty-four seven. Elixir and Phoenix are used for the entire API and back-end."
+
+NewAperio:
+  industry: Technology Consulting
+  url: https://newaperio.com
+  github: https://github.com/newaperio
+  location: Baton Rouge, LA, USA
+  description: "We help brands uncover their hidden potential. We're a web and mobile design and development studio. We use Elixir and Phoenix in client work and on internal projects to develop web apps, mobile app APIs, embedded systems and appliances, and more."
