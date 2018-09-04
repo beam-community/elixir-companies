@@ -1014,10 +1014,12 @@ Sleeperbot:
   url: https://sleeperbot.com
   description: "Fantasy Football app with chat, alerts, news, and stats."
 
-Smartrent:
+SmartRent:
   industry: Real Estate
   url: https://smartrent.com
-  description: "Enterprise Software smart home automation for multifamily apartments, student housing, senior living and single family rental homes. Elixir runs the backend. Scottsdale, AZ, USA."
+  location: Scottsdale, AZ, USA
+  github: https://github.com/smartrent
+  description: "Smart home automation for multifamily apartments, student housing, senior living and single family rental homes. Elixir runs the backend and on embedded hardware with Nerves"
 
 SoPost:
   industry: Marketing/Sales
