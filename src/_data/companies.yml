@@ -1970,7 +1970,7 @@ NewAperio:
 
 Podium:
   industry: Enterprise Software
-  url: https://www.podium.com
+  url: https://www.podium.com/careers
   github: https://github.com/podium
   location: Lehi, UT, USA
   description: "We believe that every business should participate in building a thriving local ecosystem. So we're building tools that make interacting easier and more convenient for everyone. We use Elixir and Phoenix for a large majority of our backend services."
