@@ -1969,3 +1969,10 @@ NewAperio:
   github: https://github.com/newaperio
   location: Baton Rouge, LA, USA
   description: "We help brands uncover their hidden potential. We're a web and mobile design and development studio. We use Elixir and Phoenix in client work and on internal projects to develop web apps, mobile app APIs, embedded systems and appliances, and more."
+
+Zenaton:
+  industry: Computer Software/Engineering
+  url: https://zenaton.com/
+  github: https://github.com/zenaton
+  location: Paris, FR
+  description: "Zenaton provides technical teams with the tools they need to easily create advanced business processes using a powerful hosted workflow engine. Elixir has been used to build the workflow engine and the worker agent"
