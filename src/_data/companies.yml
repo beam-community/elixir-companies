@@ -476,7 +476,6 @@ Fontstore:
 Football Addicts:
   industry: Sports
   url: http://www.footballaddicts.com
-  github: https://github.com/elixir-addicts
   description: "Creators of the well-known *Forza Football* and other leading football-related mobile applications."
 
 Frame:
@@ -543,7 +542,7 @@ Hashrocket:
 
 Heetch:
   industry: Transportation
-  url: https://heetch.com
+  url: https://www.heetch.com
   github: https://github.com/heetch
   description: "Heetch - A ride-sharing app with a simple mission: we want people to enjoy their night out. With millions users in Europe, we're running microservices based architecture with real-time application. Paris, France (Remote friendly)"
 
@@ -725,12 +724,6 @@ Meltwater:
   industry: Marketing/Sales
   url: https://meltwater.com
   description: "([GitHub](https://github.com/meltwater)) - Gather insights from outside the firewall to empower your business decisions. Using Elixir for backend services. San Francisco, USA."
-
-Mirego:
-  industry: Technology Consulting
-  url: http://mirego.com
-  github: https://github.com/mirego
-  description: "We help our clients innovate and reinvent themselves in order to prosper in the digital era."
 
 Moz:
   industry: Marketing/Sales
