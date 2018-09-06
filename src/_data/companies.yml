@@ -113,7 +113,7 @@ Aviabird:
 
 Aviasales:
   industry: Leisure/Travel
-  url: https://aviasales.ru
+  url: https://www.aviasales.ru
   github: https://github.com/KosyanMedia
   description: "– Flights Meta Search Engine for Russian market with the main office on Phuket, Thailand. We use Elixir for our static content generator, messengers bots and couple of microservices."
 
@@ -481,7 +481,6 @@ Fontstore:
 Football Addicts:
   industry: Sports
   url: http://www.footballaddicts.com
-  github: https://github.com/forzafootball
   description: "Creators of the well-known *Forza Football* and other leading football-related mobile applications."
 
 Frame:
@@ -548,7 +547,7 @@ Hashrocket:
 
 Heetch:
   industry: Transportation
-  url: https://heetch.com
+  url: https://www.heetch.com
   github: https://github.com/heetch
   description: "Heetch - A ride-sharing app with a simple mission: we want people to enjoy their night out. With millions users in Europe, we're running microservices based architecture with real-time application. Paris, France (Remote friendly)"
 
@@ -1582,9 +1581,6 @@ Decisiv:
   url: https://www.decisiv.com/
   github: http://github.com/decisiv
   description: "Decisiv is a rapidly growing industry leader in the asset management and service supply chain marketplace.  We use Elixir as the backbone of our microservice SoA."
-  jobs:
-    - title: Senior Software Engineer
-      url: "https://www.decisiv.com/senior-software-eng-0-0"
 
 Rhino:
   industry: Real Estate
