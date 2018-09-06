@@ -476,7 +476,7 @@ Fontstore:
 Football Addicts:
   industry: Sports
   url: http://www.footballaddicts.com
-  github: https://github.com/elixir-addicts
+  github: https://github.com/forzafootball
   description: "Creators of the well-known *Forza Football* and other leading football-related mobile applications."
 
 Frame:
@@ -725,12 +725,6 @@ Meltwater:
   industry: Marketing/Sales
   url: https://meltwater.com
   description: "([GitHub](https://github.com/meltwater)) - Gather insights from outside the firewall to empower your business decisions. Using Elixir for backend services. San Francisco, USA."
-
-Mirego:
-  industry: Technology Consulting
-  url: http://mirego.com
-  github: https://github.com/mirego
-  description: "We help our clients innovate and reinvent themselves in order to prosper in the digital era."
 
 Moz:
   industry: Marketing/Sales
@@ -1969,3 +1963,13 @@ NewAperio:
   github: https://github.com/newaperio
   location: Baton Rouge, LA, USA
   description: "We help brands uncover their hidden potential. We're a web and mobile design and development studio. We use Elixir and Phoenix in client work and on internal projects to develop web apps, mobile app APIs, embedded systems and appliances, and more."
+
+Blend Media:
+  industry: Media Production
+  url: https://blend.media/
+  github: https://github.com/blendmedia
+  location: London, United Kingdom
+  description: "Blend is the world’s leading provider for Brands and Publishers looking to benefit from the deeper audience engagement that immersive content offers. We have built the largest library of premium 360° Video/VR films, available to license for use in campaigns across social media, Virtual Reality headsets and WebVR, and we run a global network of expert 360° Video Creators. Blend also makes it easy for Brands and Publishers to create their own 360 ad experiences all within the browser. Our \"360 Stories\" are customisable WebVR environments that deliver an engaging and shareable ad format, scalable across all social networks. Our backend is written in Elixir using Phoenix."
+  jobs:
+    - title: Software Engineer - Elixir
+      url: https://blend.media/careers/software-engineer-elixir
