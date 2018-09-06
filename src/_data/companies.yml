@@ -197,7 +197,12 @@ CKDU 88.1FM:
 CONTRAKTOR:
   industry: Legal Services
   url: https://www.contraktor.com.br
+  github: https://github.com/Contraktor-Legal-Tech
+  location: Curitiba, Parana, Brazil
   description: "Legal contracts toolbox for Small and Medium companies! Contract creation, auto review, workflow, e-signature and contract management. Save time and avoid mistakes. Welcome to the 4th Industrial Revolution. Lawyers are ready to be disrupted? Come with us first in Brazil."
+  jobs:
+    - title: Backend Software Developer
+      url: http://jobs.contraktor.com.br
 
 Cabify:
   industry: Transportation
