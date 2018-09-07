@@ -1983,3 +1983,14 @@ Zenaton:
   github: https://github.com/zenaton
   location: Paris, FR
   description: "Zenaton provides technical teams with the tools they need to easily create advanced business processes using a powerful hosted workflow engine. Elixir has been used to build the workflow engine and the worker agent"
+
+TSC:
+  industry: Business Intelligence
+  url: https://tsc.ai
+  blog: https://tsc.ai/news/
+  github: https://github.com/thestakeholdercompany
+  location: Singapore
+  description: TSC uses AI and the most advanced stakeholder technology to solve hard problems for some of the biggest companies, governments, and non-profits around the globe. We use Elixir and Phoenix to provide an API to our front-end applications, and for most business logic. We have chosen this stack to ensure scalability and resilience.
+  jobs:
+    - title: Back-end engineer [Elixir | Phoenix | Postgres]
+      url: https://tsc.ai/careers/
