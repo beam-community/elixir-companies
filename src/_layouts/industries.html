@@ -1,0 +1,42 @@
+---
+layout: default
+---
+{% capture csv_companies %}
+  {% for co in site.companies %}
+    {{co.industry}},{{co.name}}|
+  {% endfor %}
+{% endcapture %}
+{% assign companies = csv_companies | strip_newlines | strip | replace: "  ", "" | split: "|" | sort %}
+{% capture company_count %}{{ companies | size }}{% endcapture %}
+
+{% include hero-intro.html %}
+<section class="section">
+  <div class="container">
+    <div class="content">
+      {% for company in companies %}
+        {% assign split = company | split: "," %}
+        {% unless split[1] == "" %}
+          {% unless last_industry == split[0] %}
+            {% if last_industry %}
+              </div> <!-- /columns -->
+            {% endif %}
+            <h2 class="title is-3 fancy">{{ split[0] }}</h2>
+            <div class="columns is-desktop is-multiline">
+          {% endunless %}
+
+          {% for item in site.companies %}
+            {% if item.name == split[1] %}
+              <div class="column is-one-quarter-desktop">
+                {% include company-card.html company=item %}
+              </div>
+            {% endif %}
+          {% endfor %}
+
+          {% capture last_industry %}{{ split[0] }}{% endcapture %}
+        {% endunless %}
+      {% endfor %}
+      </div> <!-- /columns -->
+      {{ content }}
+    </div> <!-- /content -->
+  </div> <!-- /container -->
+</section>
