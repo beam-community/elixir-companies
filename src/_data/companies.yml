@@ -1994,3 +1994,13 @@ TSC:
   jobs:
     - title: Back-end engineer [Elixir | Phoenix | Postgres]
       url: https://tsc.ai/careers/
+
+KM Online:
+  industry: Financial Services
+  url: https://kmonline.com.br
+  github: https://github.com/kmonline
+  location: Florianópolis, Brazil
+  description: Founded at 2017, at Florianópolis, KM Online has an objective to simplify expense reporting and displacement reimbursement, using our Cloud platform, composed by mobile apps and web access.
+  jobs:
+    - title: Fullstack Developer
+      url: https://github.com/RubyFloripa/jobs/issues/12
