@@ -2001,3 +2001,13 @@ Pattern Match:
   github: https://github.com/patternmatch/
   description: "Elixir & AWS. We can help you with: developing the product, setting up infrastructure that is going to survive millions of concurrent users, perform full scale load tests to prove it and hook up business metrics, so that you can see it with your own eyes. Our main areas of  expertise are: Ad Tech, Instant Messaging, Public Transport & IoT."
   location: Cracow, Poland
+
+KM Online:
+  industry: Financial Services
+  url: https://kmonline.com.br
+  github: https://github.com/kmonline
+  location: Florianópolis, Brazil
+  description: Founded at 2017, at Florianópolis, KM Online has an objective to simplify expense reporting and displacement reimbursement, using our Cloud platform, composed by mobile apps and web access. We use Elixir to process background jobs using AWS SNS + SQS with producer and consumer pipelines provided by GenStage.
+  jobs:
+    - title: Fullstack Developer
+      url: https://github.com/RubyFloripa/jobs/issues/12
