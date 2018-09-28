@@ -2015,3 +2015,9 @@ KM Online:
   jobs:
     - title: Fullstack Developer
       url: https://github.com/RubyFloripa/jobs/issues/12
+
+"Motorola Solutions":
+  industry: Telecommunications
+  url: https://www.motorolasolutions.com/
+  location: Krakow, Poland
+  description: Motorola Solutions uses Erlang and Elixir to develop components of mission critical communication systems that need to be reliable and fault-tolerant in the moment that matters.
