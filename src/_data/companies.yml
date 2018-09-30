@@ -2021,3 +2021,10 @@ KM Online:
   url: https://www.motorolasolutions.com/
   location: Krakow, Poland
   description: Motorola Solutions uses Erlang and Elixir to develop components of mission critical communication systems that need to be reliable and fault-tolerant in the moment that matters.
+  
+Amplified AI:
+  industry: Enterprise SaaS
+  url: https://amplified.ai
+  github: https://github.com/amplifiedai
+  location: Tokyo/San Francisco
+  description: Amplified uses artificial intelligence to make patents simpler and fairer. We use Elixir as the core of our back end stack because it gives us both performance and developer happiness, and guarantees scalability as we grow.
