@@ -749,6 +749,9 @@ Nav:
   url: https://nav.com
   github: https://github.com/creditera
   description: "We are a Utah Company offering credit monitoring, financing, and advice for small & medium size businesses. We use elixir to build the business engine that curates relevant financing for our customers."
+  jobs:
+    - title: Senior Elixir Backend Developer
+      url: https://nav.bamboohr.com/jobs/view.php?id=58
 
 "Nebo #15":
   industry: Technology Consulting
@@ -2021,7 +2024,7 @@ KM Online:
   url: https://www.motorolasolutions.com/
   location: Krakow, Poland
   description: Motorola Solutions uses Erlang and Elixir to develop components of mission critical communication systems that need to be reliable and fault-tolerant in the moment that matters.
-  
+
 Amplified AI:
   industry: Enterprise SaaS
   url: https://amplified.ai
