@@ -2031,3 +2031,10 @@ Amplified AI:
   github: https://github.com/amplifiedai
   location: Tokyo/San Francisco
   description: Amplified uses artificial intelligence to make patents simpler and fairer. We use Elixir as the core of our back end stack because it gives us both performance and developer happiness, and guarantees scalability as we grow.
+
+Very:
+  industry: Technology Consulting
+  url: https://www.verypossible.com
+  github: http://github.com/verypossible
+  location: Remote
+  description: Very leverages Elixir where it makes sense to solve a wide range of problems clients face. These include APIs, full stack web builds, embedded firmware for IoT devices, and backend services that deal with parallelizable workloads, soft real-time constraints, or that require battle tested fault tolerance.
