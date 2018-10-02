@@ -2038,3 +2038,9 @@ Very:
   github: http://github.com/verypossible
   location: Remote
   description: Very leverages Elixir where it makes sense to solve a wide range of problems clients face. These include APIs, full stack web builds, embedded firmware for IoT devices, and backend services that deal with parallelizable workloads, soft real-time constraints, or that require battle tested fault tolerance.
+
+YouProp:
+  industry: Real Estate
+  url: http://youprop.com.br
+  location: São Paulo, BR
+  description: "YouProp is an online real estate management and financial system for owners. We use Elixir in backend and angular 6 in front."
