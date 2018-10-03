@@ -1131,6 +1131,9 @@ Telnyx:
   url: https://telnyx.com/
   github: https://github.com/team-telnyx
   description: "Telnyx provides a cloud-based portal & API offering carrier grade voice services such as Origination, Termination and SIPtrunking over the Internet. Chicago, IL, USA."
+  jobs:
+    - title: Elixir Engineer (remote)
+      url: https://telnyx.com/company/careers
 
 The.Club:
   industry: Hospitality
