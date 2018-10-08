@@ -2047,3 +2047,9 @@ YouProp:
   url: http://youprop.com.br
   location: São Paulo, BR
   description: "YouProp is an online real estate management and financial system for owners. We use Elixir in backend and angular 6 in front."
+
+HiringSolved:
+  industry: Staffing/Recruiting
+  url: https://hiringsolved.com
+  location: Chandler, AZ
+  description: HiringSolved uses use artificial intelligence to automate candidate matching, increase diversity, reduce time to fill jobs, analyze the social web, and unlock the power of your ATS, CRM, and HRIS data. Currently uses Elixir in select data processing systems.
