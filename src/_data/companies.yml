@@ -2053,3 +2053,9 @@ HiringSolved:
   url: https://hiringsolved.com
   location: Chandler, AZ
   description: HiringSolved uses use artificial intelligence to automate candidate matching, increase diversity, reduce time to fill jobs, analyze the social web, and unlock the power of your ATS, CRM, and HRIS data. Currently uses Elixir in select data processing systems.
+
+Bizneo HR:
+  industry: Human Resources
+  url: https://www.bizneo.com/
+  location: Madrid, Spain
+  description: "Bizneo’s HR Suite offers tools to manage your entire employee lifecycle. Built with Elixir and Phoenix, our HR management tools empower companies to act quickly and think globally in their HR processes."
