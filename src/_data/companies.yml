@@ -8,12 +8,17 @@
 #   description: " # Company description and how Elixir is used"
 
 Ardhika Softwares:
-  industry: Hospitality,Agriculture,Travel,Logistics & Healthcare
+  industry: Computer Software/Engineering
    url:  http://ardhika.com
    location: Chennai, India
-   description: "We are an IT Services & Product development company specialising in devolpment using Open Source technologies.  We use Elixir, Phoenix & VueJS predominantly in our products which includes a Cloud Based Restaurant Management System"
+   description: "We are an IT Services & Product development company specialising in development using Open Source technologies.  We use Elixir, Phoenix & VueJS predominantly in our products which includes a Cloud Based Restaurant Management System"
 
-
+Aveshika:
+    industry: Hospitality
+    url:  http://aveshika.com
+    location: Chennai, India
+    description: "We are a product development company specialised in Hospitality sector. We have used Elixir, Phoenix & VueJS to develop a Cloud based Restaurant Management System & Visitor Management System"
+	
 22cans:
   industry: Gaming
   url: http://www.22cans.com/
