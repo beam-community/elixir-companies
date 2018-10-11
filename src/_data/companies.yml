@@ -2059,3 +2059,15 @@ Bizneo HR:
   url: https://www.bizneo.com/
   location: Madrid, Spain
   description: "Bizneo’s HR Suite offers tools to manage your entire employee lifecycle. Built with Elixir and Phoenix, our HR management tools empower companies to act quickly and think globally in their HR processes."
+
+Ardhika Softwares:
+  industry: Computer Software/Engineering
+  url:  http://ardhika.com
+  location: Chennai, India
+  description: "We are an IT Services & Product development company specialising in development using Open Source technologies.  We use Elixir, GoLang & VueJS predominantly in our products which includes a Cloud Based Restaurant Management System"
+
+Aveshika:
+  industry: Hospitality
+  url:  http://aveshika.com
+  location: Chennai, India
+  description: "We are a product development company specialised in Hospitality sector. We have used Elixir, Phoenix & VueJS to develop a Cloud based Restaurant Management System & Visitor Management System"
