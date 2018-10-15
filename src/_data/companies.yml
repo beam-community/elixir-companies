@@ -467,16 +467,6 @@ Findmypast:
   github: https://github.com/findmypast
   description: "Findmypast makes original historical documents available to search online, so that people can explore a collection of over two billion records find their ancestors and trace their family tree from the comfort of their own home worldwide. London, UK."
 
-FirstAlert:
-  industry: Consumer Electronics
-  url: https://www.firstalert.com/
-  location: Aurora, IL, USA and Atlanta, GA, USA
-  description: "First Alert is a brand in Newell's Security & Safety suite. We build smoke alarms, safety products, and smart home devices. We use Phoenix for user-facing web APIs and distributed Elixir for the cloud side of our smart home products."
-  jobs:
-    - title: Senior Cloud Engineer
-     url: "https://careers.newellbrands.com/us/en/job/NEBRUS1327/Senior-Cloud-Engineer-Safety-and-Security"
-    - title:
-      url: "https://careers.newellbrands.com/us/en/job/NEBRUS1328/Principal-Cloud-Engineer-Safety-and-Security"
 Flow:
   industry: Communication
   url: https://www.getflow.com/
@@ -2081,3 +2071,14 @@ Aveshika:
   url:  http://aveshika.com
   location: Chennai, India
   description: "We are a product development company specialised in Hospitality sector. We have used Elixir, Phoenix & VueJS to develop a Cloud based Restaurant Management System & Visitor Management System"
+
+FirstAlert:
+  industry: Consumer Electronics
+  url: https://www.firstalert.com/
+  location: Aurora, IL, USA and Atlanta, GA, USA
+  description: "First Alert is a brand in Newell's Security & Safety suite. We build smoke alarms, safety products, and smart home devices. We use Phoenix for user-facing web APIs and distributed Elixir for the cloud side of our smart home products."
+  jobs:
+    - title: Senior Cloud Engineer
+      url: "https://careers.newellbrands.com/us/en/job/NEBRUS1327/Senior-Cloud-Engineer-Safety-and-Security"
+    - title:
+      url: "https://careers.newellbrands.com/us/en/job/NEBRUS1328/Principal-Cloud-Engineer-Safety-and-Security"
