@@ -1,0 +1,13 @@
+<h1>Show Industry</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @industry.name %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.industry_path(@conn, :edit, @industry) %></span>
+<span><%= link "Back", to: Routes.industry_path(@conn, :index) %></span>
