@@ -17,6 +17,7 @@ defmodule ElixirCompaniesWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    resources "/industries", IndustryController
   end
 
   # Other scopes may use custom stacks.
