@@ -2071,3 +2071,9 @@ Aveshika:
   url:  http://aveshika.com
   location: Chennai, India
   description: "We are a product development company specialised in Hospitality sector. We have used Elixir, Phoenix & VueJS to develop a Cloud based Restaurant Management System & Visitor Management System"
+
+Celeste Computing:
+  industry: Computer Software/Engineering
+  url: https://www.linkedin.com/in/alopez-codeceleste/
+  location: Remote / Baltimore, MD USA / Santiago de Chile
+  description: "Software for enterprising wise apes. A staffing + consulting shop which focuses on Elixir, Erlang, Phoenix, React, Kubernetes, and AWS. If you code in elixir and are looking for work, send a message to the founder on LinkedIn."
