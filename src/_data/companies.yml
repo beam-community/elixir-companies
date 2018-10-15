@@ -2078,3 +2078,9 @@ Aviacommerce:
   github: https://github.com/aviacommerce
   description: "We are simplifying e-commerce ecosystem by unifying and creating smart services and providing consistent, cost-effective solution to sellers."
   location:  Pune, Maharashtra, India  
+
+Salam:
+  industry: Social Network
+  url: https://salam.io
+  location: Dubai, UAE
+  description: "We are the social platform that combines all the best features of the top social networks - posts, stories, chat, map and much more. We are using Elixir as the core technology for the backend. It helps us to build complex and sophisticated business logic in fast, yet simple and reliable way."
