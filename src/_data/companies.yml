@@ -2072,6 +2072,30 @@ Aveshika:
   location: Chennai, India
   description: "We are a product development company specialised in Hospitality sector. We have used Elixir, Phoenix & VueJS to develop a Cloud based Restaurant Management System & Visitor Management System"
 
+Aviacommerce:
+  industry: E-Commerce
+  url: https://aviacommerce.org
+  github: https://github.com/aviacommerce
+  description: "We are simplifying e-commerce ecosystem by unifying and creating smart services and providing consistent, cost-effective solution to sellers."
+  location:  Pune, Maharashtra, India  
+
+Salam:
+  industry: Social Network
+  url: https://salam.io
+  location: Dubai, UAE
+  description: "We are the social platform that combines all the best features of the top social networks - posts, stories, chat, map and much more. We are using Elixir as the core technology for the backend. It helps us to build complex and sophisticated business logic in fast, yet simple and reliable way."
+
+FirstAlert:
+  industry: Consumer Electronics
+  url: https://www.firstalert.com/
+  location: Aurora, IL, USA and Atlanta, GA, USA
+  description: "First Alert is a brand in Newell's Security & Safety suite. We build smoke alarms, safety products, and smart home devices. We use Phoenix for user-facing web APIs and distributed Elixir for the cloud side of our smart home products."
+  jobs:
+    - title: Senior Cloud Engineer
+      url: "https://careers.newellbrands.com/us/en/job/NEBRUS1327/Senior-Cloud-Engineer-Safety-and-Security"
+    - title:
+      url: "https://careers.newellbrands.com/us/en/job/NEBRUS1328/Principal-Cloud-Engineer-Safety-and-Security"
+
 Celeste Computing:
   industry: Computer Software/Engineering
   url: https://www.linkedin.com/in/alopez-codeceleste/
