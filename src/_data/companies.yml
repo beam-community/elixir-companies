@@ -2071,3 +2071,9 @@ Aveshika:
   url:  http://aveshika.com
   location: Chennai, India
   description: "We are a product development company specialised in Hospitality sector. We have used Elixir, Phoenix & VueJS to develop a Cloud based Restaurant Management System & Visitor Management System"
+
+Salam:
+  industry: Social Network
+  url: https://salam.io
+  location: Dubai, UAE
+  description: "We are the social platform that combines all the best features of the top social networks - posts, stories, chat, map and much more. We are using Elixir as the core technology for the backend. It helps us to build complex and sophisticated business logic in fast, yet simple and reliable way."
