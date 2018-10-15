@@ -10,7 +10,7 @@ defmodule ElixirCompanies.Companies.Company do
     field :location, :string
     field :name, :string
     field :url, :string
-    field :industry_id, :id
+    belongs_to :industry, ElixirCompanies.Industries.Industry
 
     timestamps()
   end
@@ -18,7 +18,7 @@ defmodule ElixirCompanies.Companies.Company do
   @doc false
   def changeset(company, attrs) do
     company
-    |> cast(attrs, [:name, :description, :url, :github, :location, :blog])
-    |> validate_required([:name, :description, :url, :github, :location, :blog])
+    |> cast(attrs, [:name, :description, :url, :github, :location, :blog, :industry_id])
+    |> validate_required([:name, :description, :url, :github, :location, :blog, :industry_id])
   end
 end
