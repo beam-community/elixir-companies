@@ -467,6 +467,12 @@ Findmypast:
   github: https://github.com/findmypast
   description: "Findmypast makes original historical documents available to search online, so that people can explore a collection of over two billion records find their ancestors and trace their family tree from the comfort of their own home worldwide. London, UK."
 
+FirstAlert:
+  industry: Consumer Electronics
+  url: https://www.firstalert.com/
+  location: Aurora, IL, USA
+  description: "First Alert builds alarms, safety products, and smart home devices. We use Phoenix for user-facing web APIs and distributed Elixir for the cloud side of our smart home product suite."
+
 Flow:
   industry: Communication
   url: https://www.getflow.com/
