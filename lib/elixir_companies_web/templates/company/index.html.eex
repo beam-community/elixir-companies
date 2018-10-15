@@ -1,0 +1,36 @@
+<h1>Listing Companies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Url</th>
+      <th>Github</th>
+      <th>Location</th>
+      <th>Blog</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for company <- @companies do %>
+    <tr>
+      <td><%= company.name %></td>
+      <td><%= company.description %></td>
+      <td><%= company.url %></td>
+      <td><%= company.github %></td>
+      <td><%= company.location %></td>
+      <td><%= company.blog %></td>
+
+      <td>
+        <%= link "Show", to: Routes.company_path(@conn, :show, company) %>
+        <%= link "Edit", to: Routes.company_path(@conn, :edit, company) %>
+        <%= link "Delete", to: Routes.company_path(@conn, :delete, company), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Company", to: Routes.company_path(@conn, :new) %></span>
