@@ -16,7 +16,7 @@ defmodule ElixirCompaniesWeb.Router do
   scope "/", ElixirCompaniesWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", CompanyController, :recent
     resources "/industries", IndustryController
     resources "/companies", CompanyController
     resources "/jobs", JobController

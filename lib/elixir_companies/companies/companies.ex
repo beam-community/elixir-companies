@@ -21,6 +21,15 @@ defmodule ElixirCompanies.Companies do
     Repo.all(Company)
   end
 
+  def list_recent_companies do
+    from(
+      c in Company,
+      order_by: [desc: c.inserted_at],
+      limit: 10
+    )
+    |> Repo.all()
+  end
+
   @doc """
   Gets a single company.
 
