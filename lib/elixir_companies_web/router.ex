@@ -19,6 +19,7 @@ defmodule ElixirCompaniesWeb.Router do
     get "/", PageController, :index
     resources "/industries", IndustryController
     resources "/companies", CompanyController
+    resources "/jobs", JobController
   end
 
   # Other scopes may use custom stacks.
