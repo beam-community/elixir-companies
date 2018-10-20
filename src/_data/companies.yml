@@ -1662,10 +1662,10 @@ SweetIQ:
       url: https://sweetiq.com/about/careers/
 
 JoinUp:
-  industry: Staffing/Recruiting
+  industry: Human Resources
   url: https://www.joinup.io
   location: Paris, France
-  description: "JoinUp is a recruiting chatbot that helps recruiters source & qualify candidates more efficiently on their websites. Our api is powered by Phoenix/Elixir with Reason/React frontends."
+  description: "JoinUp is a recruiting bot that helps recruiters source & qualify candidates more efficiently on their websites. Our api is powered by Phoenix/Elixir with Reason/React frontends."
 
 Expert360:
   industry: Marketplaces
