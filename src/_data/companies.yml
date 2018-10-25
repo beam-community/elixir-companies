@@ -2101,3 +2101,9 @@ Celeste Computing:
   url: https://www.linkedin.com/in/alopez-codeceleste/
   location: Remote / Baltimore, MD USA / Santiago de Chile
   description: "Software for enterprising wise apes. A staffing + consulting shop which focuses on Elixir, Erlang, Phoenix, React, Kubernetes, and AWS. If you code in elixir and are looking for work, send a message to the founder on LinkedIn."
+
+Brex:
+  industry: Financial Technology
+  url: https://brex.com
+  location: San Fancisco, California, USA
+  description: Brex is rebuilding core financial services from scratch, starting with a credit card for startups. We are 100% Elixir and we use it to build large-scale distributed systems.
