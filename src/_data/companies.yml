@@ -2107,3 +2107,10 @@ Brex:
   url: https://brex.com
   location: San Fancisco, California, USA
   description: Brex is rebuilding core financial services from scratch, starting with a credit card for startups. We are 100% Elixir and we use it to build large-scale distributed systems.
+
+Mux:
+  industry: Video
+  url: https://mux.com
+  github: https://github.com/muxinc
+  location: San Fancisco, California, USA
+  description: Mux offers real-time performance monitoring and analytics for video streaming, helping publishers deliver better quality of experience to their viewers. The API is built with Elixir.
