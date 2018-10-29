@@ -511,6 +511,17 @@ Gaslight:
   url: http://teamgaslight.com
   description: "Software Development, consulting, coaching, training, Organizer of the Cincinnati Elixir group. Now using Elixir and Phoenix in production."
 
+GigSmart:
+  industry: Gig Economy
+  location: Denver, CO, USA
+  github: https://github.com/gigsmart
+  blob: https://gigsmart.com/blog/
+  url: https://gigsmart.com
+  description: "Labor on demand for employers and Work on demand for workers. Powered by Elixir/Phoenix backend serving up a GraphQL api to our mobile applications."
+  jobs:
+    - title: Elixir Developer
+      url: http://jobs.gigsmart.com/p/0c53be225a7f-elixir-developer
+
 GitMonitor:
   industry: Computer Software
   url: https://gitmonitor.com
