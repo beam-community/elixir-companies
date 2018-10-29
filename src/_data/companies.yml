@@ -511,6 +511,11 @@ Gaslight:
   url: http://teamgaslight.com
   description: "Software Development, consulting, coaching, training, Organizer of the Cincinnati Elixir group. Now using Elixir and Phoenix in production."
 
+GigSmart:
+  industry: Gig Economy
+  url: https://gigsmart.com
+  description: "Labor on demand for employers and Work on demand for workers. Powered by Elixir/Phoenix backend serving up a GraphQL api to our mobile applications."
+
 GitMonitor:
   industry: Computer Software
   url: https://gitmonitor.com
