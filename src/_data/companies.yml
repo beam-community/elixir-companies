@@ -514,7 +514,7 @@ Gaslight:
 GigSmart:
   industry: Gig Economy
   url: https://gigsmart.com
-  description: "Labor on demand for employers and Work on demand for workers. Powered by Elixir/Phoenix backend serving up a GraphQL api to our mobile applications."
+  description: "Labor on demand for employers and Work on demand for workers. Powered by Elixir/Phoenix backend serving up a GraphQL api to our mobile applications. – [Always Hiring](https://jobs.gigsmart.com/)"
 
 GitMonitor:
   industry: Computer Software
