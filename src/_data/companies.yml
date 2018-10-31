@@ -2125,3 +2125,13 @@ Mux:
   github: https://github.com/muxinc
   location: San Fancisco, California, USA
   description: Mux offers real-time performance monitoring and analytics for video streaming, helping publishers deliver better quality of experience to their viewers. The API is built with Elixir.
+
+Ecaresoft:
+  industry: Healthcare
+  url: https://www.ecaresoft.com
+  github: https://github.com/ecaresoft
+  location: San Pedro, Nuevo Leon, MEX
+  description: "We're in the business of driving healhcare costs down in order for everyone to have access to the best care possible."
+  jobs:
+    - title: Full Stack Software Developer
+      url: https://careers.ecaresoft.com/post/2018/10/26/full-stack-software-developers/
