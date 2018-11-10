@@ -1,0 +1,23 @@
+<div class="company box <%= hiring_ribbon(@company) %>">
+    <%= if hiring?(@company) do %>
+        <div class="ribbon is-warning"><b>Hiring!</b></div>
+    <% end %>
+  <div class="content has-text-centered">
+    <p class="title is-4 thin"><%= @company.name %></p>
+  </div>
+  <div class="content company-info has-text-left">
+    <p class="is-size-7">
+      <span class="icon purple"><i class="fas fa-fw fa-cogs"></i></span> <%= industry_name(@company) %><br>
+      <%= render "url.html", url: @company.url %>
+      <%= render "blog.html", blog: @company.blog %>
+      <%= render "github.html", github: @company.github %>
+      <%= render "location.html", location: @company.location %>
+      <%= for job <- @company.jobs do %>
+          <%= render "job.html", job: job %>
+      <% end %>
+    </p>
+  </div>
+  <div class="content is-size-7 has-text-centered">
+      <%= @company.description %>
+  </div>
+</div>

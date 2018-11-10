@@ -5,8 +5,9 @@ defmodule ElixirCompaniesWeb.CompanyController do
   alias ElixirCompanies.Companies.Company
 
   def recent(conn, _params) do
+    companies_count = Companies.count_total()
     recent_companies = Companies.list_recent_companies()
-    render(conn, "home.html", recent_companies: recent_companies)
+    render(conn, "recent.html", recent_companies: recent_companies, companies_count: companies_count)
   end
 
   def index(conn, _params) do
