@@ -21,6 +21,11 @@ defmodule ElixirCompanies.Industries do
     Repo.all(Industry)
   end
 
+  def list_available_industries do
+    query = from i in Industry, join: c in assoc(i, :companies)
+    Repo.all(query)
+  end
+
   @doc """
   Gets a single industry.
 

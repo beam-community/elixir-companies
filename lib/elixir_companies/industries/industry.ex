@@ -5,6 +5,7 @@ defmodule ElixirCompanies.Industries.Industry do
 
   schema "industries" do
     field :name, :string
+    has_many :companies, ElixirCompanies.Companies.Company
 
     timestamps()
   end

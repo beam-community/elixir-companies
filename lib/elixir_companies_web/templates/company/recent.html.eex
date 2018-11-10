@@ -1,0 +1,11 @@
+<%= render "hero_intro.html", conn: @conn, companies_count: @companies_count %>
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h1 class="title is-3 fancy">Recent Additions</h1>
+            <div class="columns is-desktop is-multiline">
+                <%= render ElixirCompaniesWeb.CompanyView, "companies.html", companies: @recent_companies %>
+            </div> <!-- /columns -->
+        </div> <!-- /content -->
+    </div> <!-- /container -->
+</section>

@@ -8,15 +8,7 @@
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   </head>
   <body>
-        <nav class="navigation">
-            <section class="container">
-                <%= link "Elixir Companies", to: Routes.company_path(@conn, :recent), class: "navigation-title" %>
-                    <%= link "Industries", to: Routes.industry_path(@conn, :index), class: "navigation-link" %>
-                    <%= link "Companies", to: Routes.company_path(@conn, :index), class: "navigation-link"%>
-                    <%= link "Jobs", to: Routes.job_path(@conn, :index) %>
-                </ul>
-            </section>
-        </nav>
+      <%= render "navbar.html", conn: @conn, industries_for_menu: @industries_for_menu %>
     <main role="main" class="container">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>

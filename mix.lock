@@ -22,4 +22,6 @@
   "postgrex": {:hex, :postgrex, "0.14.0", "f3d6ffea1ca8a156e0633900a5338a3d17b00435227726baed8982718232b694", [:mix], [{:connection, "~> 1.0", [hex: :connection, repo: "hexpm", optional: false]}, {:db_connection, "~> 2.0", [hex: :db_connection, repo: "hexpm", optional: false]}, {:decimal, "~> 1.0", [hex: :decimal, repo: "hexpm", optional: false]}, {:jason, "~> 1.0", [hex: :jason, repo: "hexpm", optional: true]}], "hexpm"},
   "ranch": {:hex, :ranch, "1.6.2", "6db93c78f411ee033dbb18ba8234c5574883acb9a75af0fb90a9b82ea46afa00", [:rebar3], [], "hexpm"},
   "telemetry": {:hex, :telemetry, "0.2.0", "5b40caa3efe4deb30fb12d7cd8ed4f556f6d6bd15c374c2366772161311ce377", [:mix], [], "hexpm"},
+  "yamerl": {:hex, :yamerl, "0.7.0", "e51dba652dce74c20a88294130b48051ebbbb0be7d76f22de064f0f3ccf0aaf5", [:rebar3], [], "hexpm"},
+  "yaml_elixir": {:hex, :yaml_elixir, "2.1.0", "79ec163e0f379dadf4b0e8b5162567dc1feb96c3cfa793105869e2c616ab4342", [:mix], [{:yamerl, "~> 0.7", [hex: :yamerl, repo: "hexpm", optional: false]}], "hexpm"},
 }

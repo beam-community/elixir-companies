@@ -11,6 +11,7 @@ defmodule ElixirCompanies.Companies.Company do
     field :name, :string
     field :url, :string
     belongs_to :industry, ElixirCompanies.Industries.Industry
+    has_many :jobs, ElixirCompanies.Jobs.Job
 
     timestamps()
   end
@@ -19,6 +20,6 @@ defmodule ElixirCompanies.Companies.Company do
   def changeset(company, attrs) do
     company
     |> cast(attrs, [:name, :description, :url, :github, :location, :blog, :industry_id])
-    |> validate_required([:name, :description, :url, :github, :location, :blog, :industry_id])
+    |> validate_required([:name, :description, :url, :industry_id])
   end
 end

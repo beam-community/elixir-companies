@@ -1,0 +1,49 @@
+<nav id="navbar" class="navbar has-shadow is-spaced">
+  <div class="container">
+      <div class="navbar-brand">
+          <%= link to: Routes.company_path(@conn, :recent), class: "navbar-item" do %>
+              <%= img_tag Routes.static_path(@conn, "/images/elixircompanies_logo.png") %>
+              &nbsp;
+              <h1 class="title is-5">Elixir Companies</h1>
+          <% end %>
+          <a class="navbar-item is-hidden-desktop" href="https://github.com/elixirschool/elixir_companies" target="_blank">
+              <span class="icon has-text-grey-darker">
+                  <i class="fab fa-lg fa-github"></i>
+              </span>
+          </a>
+
+          <div id="navbarBurger" class="navbar-burger burger" data-target="navMain">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+      </div> <!-- /navbarbrand -->
+      <div class="navbar-menu" id="navMain">
+          <div class="navbar-start">
+              <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link is-active">Industries</a>
+                  <div id="moreDropdown" class="navbar-dropdown">
+                      <div class="columns">
+                          <% industries_per_column = divide_industries_in_columns(@industries_for_menu) %>
+                          <%= for column <- industries_per_column do %>
+                              <div class="column">
+                                  <%= for industry <- column do %>
+                                      <%= link to: Routes.industry_path(@conn, :show, industry.id), class: "navbar-item" do %>
+                                          <span class="has-text-weight-bold">
+                                              <%= industry.name %>
+                                          </span>
+                                      <% end %>
+                                  <% end %>
+                              </div>
+                          <% end %>
+                      </div>
+                  </div>
+              </div>
+              <%= link "Hiring", to: Routes.job_path(@conn, :index), class: "navbar-item" %>
+          </div>
+          <div class="navbar-end">
+              <a class="navbar-item is-hidden-mobile" href="https://github.com/elixirschool/elixir-companies" target="_blank"><span class="icon has-text-grey-darker"><i class="fab fa-lg fa-github"></i></span></a>
+          </div>
+      </div>
+  </div>
+</nav>
