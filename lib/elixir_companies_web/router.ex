@@ -8,6 +8,7 @@ defmodule ElixirCompaniesWeb.Router do
     plug :protect_from_forgery
     plug :put_secure_browser_headers
     plug ElixirCompaniesWeb.Plugs.Menu
+    plug ElixirCompaniesWeb.Plugs.SiteData
   end
 
   pipeline :api do

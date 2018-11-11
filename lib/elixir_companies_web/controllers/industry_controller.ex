@@ -27,7 +27,7 @@ defmodule ElixirCompaniesWeb.IndustryController do
   end
 
   def show(conn, %{"id" => id}) do
-    industry = Industries.get_industry!(id)
+    industry = Industries.get_industry_with_companies!(id)
     render(conn, "show.html", industry: industry)
   end
 

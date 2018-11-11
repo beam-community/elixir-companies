@@ -1,0 +1,32 @@
+<footer class="footer has-text-white has-text-weight-light">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p class="is-size-4">
+                <span class="has-text-weight-normal">
+                    <%= @site_data.name %>
+                </span> is maintained by
+                <%= for maintainer <- @site_data.maintainers do %>
+                    <a class="has-text-weight-normal" href="https://github.com/<%= maintainer %>">
+                        @<%= maintainer %>
+                    </a>
+                <% end %>
+                .
+            </p>
+            <p class="is-size-6">
+                <span class="has-text-weight-bold">
+                    Support
+                </span>
+                <%= @site_data.name %>
+            </p>
+            <p>
+                <span class="has-text-weight-bold is-size-7">
+                    Visit our sponsor
+                </span>
+                <br>
+                <a target="_blank" href="https://utensils.io" class="button is-inverted is-primary has-text-weight-bold is-medium">
+                    utensils.io
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>

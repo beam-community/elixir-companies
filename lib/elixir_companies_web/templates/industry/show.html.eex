@@ -1,13 +1,10 @@
-<h1>Show Industry</h1>
-
-<ul>
-
-  <li>
-    <strong>Name:</strong>
-    <%= @industry.name %>
-  </li>
-
-</ul>
-
-<span><%= link "Edit", to: Routes.industry_path(@conn, :edit, @industry) %></span>
-<span><%= link "Back", to: Routes.industry_path(@conn, :index) %></span>
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h1 class="title is-3 fancy"><%= @industry.name %></h1>
+            <div class="columns is-desktop is-multiline">
+                <%= render ElixirCompaniesWeb.CompanyView, "companies.html", companies: @industry.companies %>
+            </div> <!-- /columns -->
+        </div> <!-- /content -->
+    </div> <!-- /container -->
+</section>
