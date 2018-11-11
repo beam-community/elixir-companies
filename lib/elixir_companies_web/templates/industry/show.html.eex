@@ -1,7 +1,9 @@
 <section class="section">
     <div class="container">
         <div class="content">
-            <h1 class="title is-3 fancy"><%= @industry.name %></h1>
+            <h1 class="title is-3 fancy">
+                <%= @industry.name %>
+            </h1>
             <div class="columns is-desktop is-multiline">
                 <%= render ElixirCompaniesWeb.CompanyView, "companies.html", companies: @industry.companies %>
             </div> <!-- /columns -->
