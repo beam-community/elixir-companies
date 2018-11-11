@@ -4,7 +4,7 @@
           <%= link to: Routes.company_path(@conn, :recent), class: "navbar-item" do %>
               <%= img_tag Routes.static_path(@conn, "/images/elixircompanies_logo.png") %>
               &nbsp;
-              <h1 class="title is-5">Elixir Companies</h1>
+              <h1 class="title is-5"><%= @site_data.name %></h1>
           <% end %>
           <a class="navbar-item is-hidden-desktop" href="https://github.com/elixirschool/elixir_companies" target="_blank">
               <span class="icon has-text-grey-darker">

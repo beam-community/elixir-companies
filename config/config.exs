@@ -25,6 +25,15 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix and Ecto
 config :phoenix, :json_library, Jason
 
+config :elixir_companies, site_data: %{
+  name: "Elixir Companies",
+  description: "A curated list of companies using Elixir in production, organized by industry.",
+  maintainers: [
+    "doompsork",
+    "burden",
+  ],
+}
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"

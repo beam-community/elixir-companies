@@ -1,4 +1,4 @@
-<%= render "hero_intro.html", conn: @conn, companies_count: @companies_count %>
+<%= render "hero_intro.html", conn: @conn, companies_count: @companies_count, site_data: @site_data %>
 <section class="section">
     <div class="container">
         <div class="content">

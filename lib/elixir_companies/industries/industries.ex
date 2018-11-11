@@ -42,6 +42,12 @@ defmodule ElixirCompanies.Industries do
   """
   def get_industry!(id), do: Repo.get!(Industry, id)
 
+  def get_industry_with_companies!(id) do
+    Industry
+    |> Repo.get!(id)
+    |> Repo.preload(:companies)
+  end
+
   @doc """
   Creates a industry.
 
