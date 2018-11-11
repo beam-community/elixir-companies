@@ -5,8 +5,8 @@ defmodule ElixirCompanies.Industries do
 
   import Ecto.Query, warn: false
   alias ElixirCompanies.Repo
-
   alias ElixirCompanies.Industries.Industry
+  alias ElixirCompanies.Companies.Company
 
   @doc """
   Returns the list of industries.
@@ -43,9 +43,15 @@ defmodule ElixirCompanies.Industries do
   def get_industry!(id), do: Repo.get!(Industry, id)
 
   def get_industry_with_companies!(id) do
-    Industry
-    |> Repo.get!(id)
-    |> Repo.preload(:companies)
+    query =
+      from i in Industry,
+      left_join: c in assoc(i, :companies),
+      left_join: ci in assoc(c, :industry),
+      left_join: cj in assoc(c, :jobs),
+      where: i.id == ^id,
+      preload: [companies: {c, industry: ci, jobs: cj}]
+
+    Repo.one(query)
   end
 
   @doc """
