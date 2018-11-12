@@ -35,6 +35,19 @@ config :elixir_companies, site_data: %{
   ],
 }
 
+config :oauth2, serializers: %{
+  "application/json" => Jason
+}
+
+config :ueberauth, Ueberauth,
+  providers: [
+    github: { Ueberauth.Strategy.Github, [default_scope: "user,user:email,public_repo"] }
+  ]
+
+config :ueberauth, Ueberauth.Strategy.Github.OAuth,
+  client_id: System.get_env("ELIXIR_COMPANIES_GITHUB_CLIENT_ID"),
+  client_secret: System.get_env("ELIXIR_COMPANIES_GITHUB_CLIENT_SECRET")
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
