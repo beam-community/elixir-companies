@@ -24,6 +24,14 @@ defmodule ElixirCompaniesWeb.Router do
     resources "/jobs", JobController
   end
 
+  scope "/auth", ElixirCompaniesWeb do
+    pipe_through :browser
+
+    get "/signout", AuthController, :signout
+    get "/github", AuthController, :request
+    get "/github/callback", AuthController, :callback
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", ElixirCompaniesWeb do
   #   pipe_through :api
