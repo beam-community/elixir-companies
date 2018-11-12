@@ -1,10 +1,10 @@
 defmodule ElixirCompaniesWeb.AuthController do
   use ElixirCompaniesWeb, :controller
   plug Ueberauth
-  alias ElixirCompaniesWeb.Plugs.Auth
+  alias ElixirCompanies.Accounts
 
-  def callback(%{assigns: %{ueberauth_auth: auth}} = conn, params) do
-    user_arams = %{
+  def callback(%{assigns: %{ueberauth_auth: auth}} = conn, _params) do
+    user_params = %{
       token: auth.credentials.token,
       email: auth.info.email
     }
@@ -32,11 +32,11 @@ defmodule ElixirCompaniesWeb.AuthController do
   end
 
   defp insert_or_update_user(user_params) do
-    case Auth.get_user_by_email(user_params.email) do
+    case Accounts.get_user_by_email(user_params.email) do
       nil ->
-        Auth.create_user(user_params)
+        Accounts.create_user(user_params)
       user ->
-        Auth.upate_user(user, user_params)
+        Accounts.update_user(user, user_params)
     end
   end
 end

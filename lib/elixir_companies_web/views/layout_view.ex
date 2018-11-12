@@ -1,8 +1,6 @@
 defmodule ElixirCompaniesWeb.LayoutView do
   use ElixirCompaniesWeb, :view
 
-  alias ElixirCompanies.Settings.Setting
-
   def divide_industries_in_columns([]), do: []
   def divide_industries_in_columns(industries) do
     industries_length = length(industries)

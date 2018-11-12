@@ -9,6 +9,7 @@ defmodule ElixirCompaniesWeb.Router do
     plug :put_secure_browser_headers
     plug ElixirCompaniesWeb.Plugs.Menu
     plug ElixirCompaniesWeb.Plugs.SiteData
+    plug ElixirCompaniesWeb.Plugs.SetUser
   end
 
   pipeline :api do
@@ -22,6 +23,7 @@ defmodule ElixirCompaniesWeb.Router do
     resources "/industries", IndustryController
     resources "/companies", CompanyController
     resources "/jobs", JobController
+    resources "/users", UserController
   end
 
   scope "/auth", ElixirCompaniesWeb do
@@ -30,6 +32,10 @@ defmodule ElixirCompaniesWeb.Router do
     get "/signout", AuthController, :signout
     get "/github", AuthController, :request
     get "/github/callback", AuthController, :callback
+  end
+
+  scope "/admin", ElixirCompaniesWeb do
+    
   end
 
   # Other scopes may use custom stacks.
