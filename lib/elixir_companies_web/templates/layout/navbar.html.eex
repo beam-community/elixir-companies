@@ -6,12 +6,7 @@
               &nbsp;
               <h1 class="title is-5"><%= @site_data.name %></h1>
           <% end %>
-          <a class="navbar-item is-hidden-desktop" href="https://github.com/elixirschool/elixir_companies" target="_blank">
-              <span class="icon has-text-grey-darker">
-                  <i class="fab fa-lg fa-github"></i>
-              </span>
-          </a>
-
+          <%= render "auth_icon.html", conn: @conn, version_hidden: "desktop" %>
           <div id="navbarBurger" class="navbar-burger burger" data-target="navMain">
               <span></span>
               <span></span>
@@ -42,7 +37,7 @@
               <%= link "Hiring", to: Routes.job_path(@conn, :index), class: "navbar-item" %>
           </div>
           <div class="navbar-end">
-              <a class="navbar-item is-hidden-mobile" href="https://github.com/elixirschool/elixir-companies" target="_blank"><span class="icon has-text-grey-darker"><i class="fab fa-lg fa-github"></i></span></a>
+              <%= render "auth_icon.html", conn: @conn, version_hidden: "mobile" %>
           </div>
       </div>
   </div>
