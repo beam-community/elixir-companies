@@ -6,7 +6,6 @@ defmodule ElixirCompanies.Industries do
   import Ecto.Query, warn: false
   alias ElixirCompanies.Repo
   alias ElixirCompanies.Industries.Industry
-  alias ElixirCompanies.Companies.Company
 
   @doc """
   Returns the list of industries.
