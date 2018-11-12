@@ -31,6 +31,7 @@ config :elixir_companies, site_data: %{
   maintainers: [
     "doompsork",
     "burden",
+    "gemantzu"
   ],
 }
 
