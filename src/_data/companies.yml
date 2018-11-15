@@ -2130,3 +2130,10 @@ Daybit:
   github: https://github.com/daybit-exchange
   location: Seoul, South Korea
   description: "A cryptocurrency exchange service built with Elixir / Phoenix & Elm. We also provides websocket based API for developers."
+
+Versus Systems:
+  industry: Gaming
+  url: https://www.versussystems.com/
+  github: https://github.com/versus-systems
+  location: Los Angeles, California, USA
+  description: "Versus makes games more fun. Our white-label platform gives players the opportunity to play for the things they love, inside of the games they love. Interactive entertainment becomes even more engaging, more fun, and more personal."
