@@ -511,6 +511,17 @@ Gaslight:
   url: http://teamgaslight.com
   description: "Software Development, consulting, coaching, training, Organizer of the Cincinnati Elixir group. Now using Elixir and Phoenix in production."
 
+GigSmart:
+  industry: Gig Economy
+  location: Denver, CO, USA
+  github: https://github.com/gigsmart
+  blob: https://gigsmart.com/blog/
+  url: https://gigsmart.com
+  description: "Labor on demand for employers and Work on demand for workers. Powered by Elixir/Phoenix backend serving up a GraphQL api to our mobile applications."
+  jobs:
+    - title: Elixir Developer
+      url: http://jobs.gigsmart.com/p/0c53be225a7f-elixir-developer
+
 GitMonitor:
   industry: Computer Software
   url: https://gitmonitor.com
@@ -1662,10 +1673,10 @@ SweetIQ:
       url: https://sweetiq.com/about/careers/
 
 JoinUp:
-  industry: Staffing/Recruiting
+  industry: Human Resources
   url: https://www.joinup.io
   location: Paris, France
-  description: "JoinUp is a recruiting chatbot that helps recruiters source & qualify candidates more efficiently on their websites. Our api is powered by Phoenix/Elixir with Reason/React frontends."
+  description: "JoinUp is a recruiting bot that helps recruiters source & qualify candidates more efficiently on their websites. Our api is powered by Phoenix/Elixir with Reason/React frontends."
 
 Expert360:
   industry: Marketplaces
@@ -1694,18 +1705,6 @@ Pharos Production Inc.:
   description: "Pharos Production team is made up of the brightest and most dedicated blockchain, fintech, ICO, web and mobile developers, designers, project managers and quality assurance specialists. Our development efforts resulted in more than 30 mobile and web solutions – social networking apps, ICOs, private blockchains, e-commerce, news boards, other different business and entertainment applications. We are hiring!"
   jobs:
     - title: Elixir Developer
-
-Kadabra:
-  industry: Internet of Things
-  url: http://www.kadabrapod.com
-  github: https://github.com/kadabrapod
-  location: Portland, ME, USA; Portland, OR, USA; Seattle, WA, USA
-  description: "Kadabra’s mission is to connect local food businesses and customers, deliver what people want when they want it, and do it all in an eco-friendly, sustainable way through a network of IoT-enabled food kiosks (we call them pods). Elixir powers our entire backend platform for IoT devices and mobile apps, and we're hiring (remote ok)! 🤓"
-  jobs:
-    - title: Generalist Engineer
-      url: https://bit.ly/2J1umwM
-    - title: Mobile Engineer
-      url: https://bit.ly/2MOzkiw
 
 Teachoo:
   industry: Education
@@ -2060,14 +2059,81 @@ Bizneo HR:
   location: Madrid, Spain
   description: "Bizneo’s HR Suite offers tools to manage your entire employee lifecycle. Built with Elixir and Phoenix, our HR management tools empower companies to act quickly and think globally in their HR processes."
 
-Ardhika Softwares:
-  industry: Computer Software/Engineering
-  url:  http://ardhika.com
-  location: Chennai, India
-  description: "We are an IT Services & Product development company specialising in development using Open Source technologies.  We use Elixir, GoLang & VueJS predominantly in our products which includes a Cloud Based Restaurant Management System"
-
 Aveshika:
   industry: Hospitality
   url:  http://aveshika.com
   location: Chennai, India
   description: "We are a product development company specialised in Hospitality sector. We have used Elixir, Phoenix & VueJS to develop a Cloud based Restaurant Management System & Visitor Management System"
+
+Aviacommerce:
+  industry: E-Commerce
+  url: https://aviacommerce.org
+  github: https://github.com/aviacommerce
+  description: "We are simplifying e-commerce ecosystem by unifying and creating smart services and providing consistent, cost-effective solution to sellers."
+  location:  Pune, Maharashtra, India  
+
+Salam:
+  industry: Social Network
+  url: https://salam.io
+  location: Dubai, UAE
+  description: "We are the social platform that combines all the best features of the top social networks - posts, stories, chat, map and much more. We are using Elixir as the core technology for the backend. It helps us to build complex and sophisticated business logic in fast, yet simple and reliable way."
+
+FirstAlert:
+  industry: Consumer Electronics
+  url: https://www.firstalert.com/
+  location: Aurora, IL, USA and Atlanta, GA, USA
+  description: "First Alert is a brand in Newell's Security & Safety suite. We build smoke alarms, safety products, and smart home devices. We use Phoenix for user-facing web APIs and distributed Elixir for the cloud side of our smart home products."
+  jobs:
+    - title: Senior Cloud Engineer
+      url: "https://careers.newellbrands.com/us/en/job/NEBRUS1327/Senior-Cloud-Engineer-Safety-and-Security"
+    - title:
+      url: "https://careers.newellbrands.com/us/en/job/NEBRUS1328/Principal-Cloud-Engineer-Safety-and-Security"
+
+Celeste Computing:
+  industry: Computer Software/Engineering
+  url: https://www.linkedin.com/in/alopez-codeceleste/
+  location: Remote / Baltimore, MD USA / Santiago de Chile
+  description: "Software for enterprising wise apes. A staffing + consulting shop which focuses on Elixir, Erlang, Phoenix, React, Kubernetes, and AWS. If you code in elixir and are looking for work, send a message to the founder on LinkedIn."
+
+Brex:
+  industry: Financial Technology
+  url: https://brex.com
+  location: San Fancisco, California, USA
+  description: Brex is rebuilding core financial services from scratch, starting with a credit card for startups. We are 100% Elixir and we use it to build large-scale distributed systems.
+
+Mux:
+  industry: Video
+  url: https://mux.com
+  github: https://github.com/muxinc
+  location: San Fancisco, California, USA
+  description: Mux offers real-time performance monitoring and analytics for video streaming, helping publishers deliver better quality of experience to their viewers. The API is built with Elixir.
+
+Ecaresoft:
+  industry: Healthcare
+  url: https://www.ecaresoft.com
+  github: https://github.com/ecaresoft
+  location: San Pedro, Nuevo Leon, MEX
+  description: "We're in the business of driving healhcare costs down in order for everyone to have access to the best care possible."
+  jobs:
+    - title: Full Stack Software Developer
+      url: https://careers.ecaresoft.com/post/2018/10/26/full-stack-software-developers/
+
+Daybit:
+  industry: Cryptocurrency Exchange
+  url: https://daybit.com
+  github: https://github.com/daybit-exchange
+  location: Seoul, South Korea
+  description: "A cryptocurrency exchange service built with Elixir / Phoenix & Elm. We also provides websocket based API for developers."
+
+Versus Systems:
+  industry: Gaming
+  url: https://www.versussystems.com/
+  github: https://github.com/versus-systems
+  location: Los Angeles, California, USA
+  description: "Versus makes games more fun. Our white-label platform gives players the opportunity to play for the things they love, inside of the games they love. Interactive entertainment becomes even more engaging, more fun, and more personal."
+
+Ardhika Software:
+  industry: Technology Consulting
+  url:  http://ardhika.com
+  location: Chennai, India
+  description: "We are an IT Services & Product development company specialising in development using Open Source technologies.  We use Elixir, GoLang & VueJS predominantly in our products which includes a Cloud Based Restaurant Management System"
