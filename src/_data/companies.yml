@@ -2137,3 +2137,11 @@ Ardhika Software:
   url:  http://ardhika.com
   location: Chennai, India
   description: "We are an IT Services & Product development company specialising in development using Open Source technologies.  We use Elixir, GoLang & VueJS predominantly in our products which includes a Cloud Based Restaurant Management System"
+
+10Pines:
+  industry: Technology Consulting
+  url: https://www.10pines.com/
+  blog: https://blog.10pines.com/
+  github: https://github.com/10pines
+  location: Buenos Aires, Argentina
+  description: "We craft elegant software using Elixir / Phoenix among other modern technologies. Organizers and sponsors of [Erlang/Elixir local conference](http://www.erlang-factory.com/eflba2017) and organizers of local [Elixir meetup](https://www.meetup.com/BeamBA/).
