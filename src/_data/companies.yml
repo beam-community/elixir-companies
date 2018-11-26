@@ -2070,7 +2070,7 @@ Aviacommerce:
   url: https://aviacommerce.org
   github: https://github.com/aviacommerce
   description: "We are simplifying e-commerce ecosystem by unifying and creating smart services and providing consistent, cost-effective solution to sellers."
-  location:  Pune, Maharashtra, India  
+  location:  Pune, Maharashtra, India
 
 Salam:
   industry: Social Network
@@ -2113,7 +2113,7 @@ Ecaresoft:
   url: https://www.ecaresoft.com
   github: https://github.com/ecaresoft
   location: San Pedro, Nuevo Leon, MEX
-  description: "We're in the business of driving healhcare costs down in order for everyone to have access to the best care possible."
+  description: We're in the business of driving healhcare costs down in order for everyone to have access to the best care possible.
   jobs:
     - title: Full Stack Software Developer
       url: https://careers.ecaresoft.com/post/2018/10/26/full-stack-software-developers/
@@ -2123,20 +2123,20 @@ Daybit:
   url: https://daybit.com
   github: https://github.com/daybit-exchange
   location: Seoul, South Korea
-  description: "A cryptocurrency exchange service built with Elixir / Phoenix & Elm. We also provides websocket based API for developers."
+  description: A cryptocurrency exchange service built with Elixir / Phoenix & Elm. We also provides websocket based API for developers.
 
 Versus Systems:
   industry: Gaming
   url: https://www.versussystems.com/
   github: https://github.com/versus-systems
   location: Los Angeles, California, USA
-  description: "Versus makes games more fun. Our white-label platform gives players the opportunity to play for the things they love, inside of the games they love. Interactive entertainment becomes even more engaging, more fun, and more personal."
+  description: Versus makes games more fun. Our white-label platform gives players the opportunity to play for the things they love, inside of the games they love. Interactive entertainment becomes even more engaging, more fun, and more personal.
 
 Ardhika Software:
   industry: Technology Consulting
   url:  http://ardhika.com
   location: Chennai, India
-  description: "We are an IT Services & Product development company specialising in development using Open Source technologies.  We use Elixir, GoLang & VueJS predominantly in our products which includes a Cloud Based Restaurant Management System"
+  description: We are an IT Services & Product development company specialising in development using Open Source technologies.  We use Elixir, GoLang & VueJS predominantly in our products which includes a Cloud Based Restaurant Management System
 
 10Pines:
   industry: Technology Consulting
@@ -2144,4 +2144,4 @@ Ardhika Software:
   blog: https://blog.10pines.com/
   github: https://github.com/10pines
   location: Buenos Aires, Argentina
-  description: "We craft elegant software using Elixir / Phoenix among other modern technologies. Organizers and sponsors of [Erlang/Elixir local conference](http://www.erlang-factory.com/eflba2017) and organizers of local [Elixir meetup](https://www.meetup.com/BeamBA/).
+  description: We craft elegant software using Elixir / Phoenix among other modern technologies. Organizers and sponsors of [Erlang/Elixir local conference](http://www.erlang-factory.com/eflba2017) and organizers of local [Elixir meetup](https://www.meetup.com/BeamBA/).
