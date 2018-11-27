@@ -315,11 +315,6 @@ Customer Lobby:
   github: https://github.com/customerlobby
   description: "Repeat Customer & Reviews Software. We are currently in the process of building a couple of services that use elixir. Berkeley, CA, USA."
 
-DIGIMONDO:
-  industry: Internet of Things
-  url: https://www.digimondo.de/
-  description: "DIGIMONDO is building a LoRaWAN network providing connectivity for millions of IoT devices. Using Elixir for networking/routing services and web applications."
-
 DNSimple:
   industry: Internet Infrastructure
   url: https://dnsimple.com/
