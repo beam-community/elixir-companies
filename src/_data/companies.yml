@@ -2140,3 +2140,11 @@ Ardhika Software:
   github: https://github.com/10pines
   location: Buenos Aires, Argentina
   description: We craft elegant software using Elixir / Phoenix among other modern technologies. Organizers and sponsors of [Erlang/Elixir local conference](http://www.erlang-factory.com/eflba2017) and organizers of local [Elixir meetup](https://www.meetup.com/BeamBA/).
+
+
+Audian:
+  industry: Telecommunications
+  url: https://www.audian.com/
+  github: https://github.com/audian
+  location: Kirkland, WA. USA
+  description: "Audian is a VoIP company that provides affordable, reliable, scalable hosted voice solutions for small to medium and large sized businesses. We use Elixir for our device provisioner, CDR aggregation and upcoming SMS/Chat platform."
