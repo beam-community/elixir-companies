@@ -2148,3 +2148,11 @@ Audian:
   github: https://github.com/audian
   location: Kirkland, WA. USA
   description: "Audian is a VoIP company that provides affordable, reliable, scalable hosted voice solutions for small to medium and large sized businesses. We use Elixir for our device provisioner, CDR aggregation and upcoming SMS/Chat platform."
+
+Fiqus:
+  industry: Computer Software/Engineering
+  url: https://fiqus.com/
+  blog: https://fiqus.com/blog/
+  github: https://github.com/fiqus
+  location: Buenos Aires, Argentina and Villa La Angostura, Argentina
+  description: We are a Software Co-operative and we work (and love) Elixir/Phoenix among other modern technologies. We participate and organize the local [Elixir meetup](https://www.meetup.com/BeamBA/).
