@@ -2156,3 +2156,11 @@ Fiqus:
   github: https://github.com/fiqus
   location: Buenos Aires, Argentina and Villa La Angostura, Argentina
   description: We are a Software Co-operative and we work (and love) Elixir/Phoenix among other modern technologies. We participate and organize the local [Elixir meetup](https://www.meetup.com/BeamBA/).
+
+Seer Aerospace:
+  industry: Enterprise Software
+  url: https://seeraerospace.com
+  github: https://github.com/seeraerospace
+  location: New York, NY. USA
+  description: An aviation software company making it easier to buy and sell aircraft parts. We use Elixir / Phoenix for our seller web app.
+  
