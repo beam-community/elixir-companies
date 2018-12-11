@@ -2164,3 +2164,10 @@ Seer Aerospace:
   location: New York, NY. USA
   description: An aviation software company making it easier to buy and sell aircraft parts. We use Elixir / Phoenix for our seller web app.
   
+Ispirata:
+    industry: Embedded software/Internet of Things
+    url: https://ispirata.com/
+    blog: https://blog.ispirata.com/
+    github: https://github.com/ispirata
+    location: Milano, Italy and Padova, Italy
+    description: "Ispirata is a software company focused on open source solutions. Ispirata builds Astarte, an Open Source IoT platform written in Elixir."
