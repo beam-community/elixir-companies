@@ -2171,3 +2171,11 @@ Ispirata:
     github: https://github.com/ispirata
     location: Milano, Italy and Padova, Italy
     description: "Ispirata is a software company focused on open source solutions. Ispirata builds Astarte, an Open Source IoT platform written in Elixir."
+
+Postmates:
+  industry: Online Ordering
+  url: https://www.postmates.com/
+  blog: https://blog.postmates.com/
+  github: https://github.com/postmates/
+  location: San Francisco, CA
+  description: Postmates is the largest, most reliable on-demand delivery and pickup platform. Elixir and Erlang are used for multiple core backend components.
