@@ -2171,3 +2171,22 @@ Ispirata:
     github: https://github.com/ispirata
     location: Milano, Italy and Padova, Italy
     description: "Ispirata is a software company focused on open source solutions. Ispirata builds Astarte, an Open Source IoT platform written in Elixir."
+
+OmiseGO:
+  industry: Blockchain & Fintech
+  url: https://omisego.network
+  blog: https://blog.omisego.network/
+  github: https://github.com/omisego
+  location: Bangkok, Singapore, Tokyo, Warsaw, etc.
+  description: "OmiseGO enables financial inclusion and interoperability through the public, decentralized OMG network. Elixir is used both for developing the OMG Network as well as the eWallet application."
+  jobs:
+    - title: Blockchain Developer
+      url: https://imappandgolem.traffit.com/public/an/8
+    - title: Software Developer
+      url: https://omise.breezy.hr/p/0c7bbc8de698-omisego-software-developer
+    - title: DevOps
+      url: https://omise.breezy.hr/p/3409b3bd0a86-omisego-devops-engineer
+    - title: Researcher
+      url: https://omise.breezy.hr/p/6040f662364a-omisego-researcher
+    - title: Technical Writer
+      url: https://omise.breezy.hr/p/51dea06688c4-omisego-technical-writer
