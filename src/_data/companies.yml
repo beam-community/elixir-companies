@@ -2163,7 +2163,7 @@ Seer Aerospace:
   github: https://github.com/seeraerospace
   location: New York, NY. USA
   description: An aviation software company making it easier to buy and sell aircraft parts. We use Elixir / Phoenix for our seller web app.
-  
+
 Ispirata:
     industry: Embedded software/Internet of Things
     url: https://ispirata.com/
@@ -2199,7 +2199,7 @@ OmiseGO:
     - title: Technical Writer
       url: https://omise.breezy.hr/p/51dea06688c4-omisego-technical-writer
 
-PagerDuty
+PagerDuty:
   industry: Computer Software/Engineering
   url: https://www.pagerduty.com/
   blog: https://engineering.pagerduty.com/
@@ -2208,4 +2208,3 @@ PagerDuty
   jobs:
     - title: All Roles
       url: https://www.pagerduty.com/careers/
-  
