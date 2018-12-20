@@ -2198,3 +2198,14 @@ OmiseGO:
       url: https://omise.breezy.hr/p/6040f662364a-omisego-researcher
     - title: Technical Writer
       url: https://omise.breezy.hr/p/51dea06688c4-omisego-technical-writer
+
+PagerDuty
+  industry: Computer Software/Engineering
+  url: https://www.pagerduty.com/
+  blog: https://engineering.pagerduty.com/
+  location: Toronto, San Francisco, Seattle, Atlanta, Remote
+  description: PagerDuty is the leading digital operations management platform for businesses. We empower DevOps, IT operations, support, security, and business leaders to turn any signal into insight and real-time action across any operational use case. When revenue and brand reputation depend on customer satisfaction, PagerDuty helps teams prevent and resolve business-impacting incidents and deliver exceptional digital experiences.  All new software is written in Elixir, and currently we have over 50 Elixir services in production.
+  jobs:
+    - title: All Roles
+      url: https://www.pagerduty.com/careers/
+  
