@@ -9,11 +9,15 @@ defmodule ElixirCompaniesWeb.Router do
     plug :put_secure_browser_headers
     plug ElixirCompaniesWeb.Plugs.Menu
     plug ElixirCompaniesWeb.Plugs.SiteData
-    plug ElixirCompaniesWeb.Plugs.SetUser
+    plug ElixirCompaniesWeb.Plugs.Authorize
   end
 
   pipeline :api do
     plug :accepts, ["json"]
+  end
+
+  pipeline :auth do
+    plug ElixirCompaniesWeb.Plugs.Authorize
   end
 
   scope "/", ElixirCompaniesWeb do
@@ -27,7 +31,7 @@ defmodule ElixirCompaniesWeb.Router do
   end
 
   scope "/auth", ElixirCompaniesWeb do
-    pipe_through :browser
+    pipe_through [:browser, :auth]
 
     get "/signout", AuthController, :signout
     get "/github", AuthController, :request

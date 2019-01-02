@@ -18,7 +18,7 @@ defmodule ElixirCompaniesWeb.AuthController do
   end
 
   defp signin(conn, user_params) do
-    case insert_or_update_user(user_params) do
+    case Accounts.create_user(user_params) do
       {:ok, user} ->
         conn
         |> put_flash(:info, "Welcome back!")
@@ -28,15 +28,6 @@ defmodule ElixirCompaniesWeb.AuthController do
         conn
         |> put_flash(:error, "Error: #{reason}")
         |> redirect(to: Routes.company_path(conn, :index))
-    end
-  end
-
-  defp insert_or_update_user(user_params) do
-    case Accounts.get_user_by_email(user_params.email) do
-      nil ->
-        Accounts.create_user(user_params)
-      user ->
-        Accounts.update_user(user, user_params)
     end
   end
 end

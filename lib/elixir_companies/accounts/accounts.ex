@@ -4,9 +4,7 @@ defmodule ElixirCompanies.Accounts do
   """
 
   import Ecto.Query, warn: false
-  alias ElixirCompanies.Repo
-
-  alias ElixirCompanies.Accounts.User
+  alias ElixirCompanies.{Accounts.User, Repo}
 
   @doc """
   Returns the list of users.
@@ -52,7 +50,7 @@ defmodule ElixirCompanies.Accounts do
   def create_user(attrs \\ %{}) do
     %User{}
     |> User.changeset(attrs)
-    |> Repo.insert()
+    |> Repo.insert(on_conflict: :replace_all_except_primary_key, confict_target: :email)
   end
 
   @doc """
