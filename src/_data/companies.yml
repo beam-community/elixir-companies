@@ -856,12 +856,6 @@ Pivotal:
   github: https://github.com/pivotal
   description: "Leader in software engineering, Pivotal is the company behind CloudFoundry, the Java Spring Framework, and other products. They wrote the new [RabbitMQ CLI](https://github.com/rabbitmq/rabbitmq-cli/) and are [pushing Elixir](http://engineering.pivotal.io/post/elixir-clustering-on-cloud-foundry/) through their engineering blog."
 
-Planning Center:
-  industry: Collaboration
-  url: https://planning.center
-  github: https://github.com/planningcenter
-  description: "Planning Center's suite of apps work together to allow more ministry in your Ministry. Planning Center is from USA. And it's adopting Elixir to it's stack."
-
 Planswell:
   industry: Financial Technology
   url: https://planswell.com/
