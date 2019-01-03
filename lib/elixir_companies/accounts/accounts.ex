@@ -50,7 +50,7 @@ defmodule ElixirCompanies.Accounts do
   def create_user(attrs \\ %{}) do
     %User{}
     |> User.changeset(attrs)
-    |> Repo.insert(on_conflict: :replace_all_except_primary_key, confict_target: :email)
+    |> Repo.insert(on_conflict: {:replace, [:token]}, conflict_target: :email)
   end
 
   @doc """
@@ -99,6 +99,10 @@ defmodule ElixirCompanies.Accounts do
   def change_user(%User{} = user) do
     User.changeset(user, %{})
   end
+
+  @doc """
+  Gets a single user, selected by email.
+  """
 
   def get_user_by_email(email) do
     query =
