@@ -43,7 +43,6 @@ defmodule ElixirCompanies.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:yaml_elixir, "~> 2.1", only: :dev},
       {:ueberauth, "~> 0.5.0"},
       {:ueberauth_github, "~> 0.7.0"}
     ]
