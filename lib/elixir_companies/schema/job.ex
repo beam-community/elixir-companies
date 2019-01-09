@@ -1,12 +1,14 @@
-defmodule ElixirCompanies.Jobs.Job do
+defmodule ElixirCompanies.Schema.Job do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias ElixirCompanies.Schema.Company
 
   schema "jobs" do
     field :title, :string
     field :url, :string
-    belongs_to :company, ElixirCompanies.Companies.Company
+
+    belongs_to :company, Company
 
     timestamps()
   end

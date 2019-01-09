@@ -1,11 +1,9 @@
 defmodule ElixirCompanies.CompaniesTest do
   use ElixirCompanies.DataCase
 
-  alias ElixirCompanies.Companies
+  alias ElixirCompanies.{Companies, Schema.Company}
 
   describe "companies" do
-    alias ElixirCompanies.Companies.Company
-
     @valid_attrs %{blog: "some blog", description: "some description", github: "some github", location: "some location", name: "some name", url: "some url"}
     @update_attrs %{blog: "some updated blog", description: "some updated description", github: "some updated github", location: "some updated location", name: "some updated name", url: "some updated url"}
     @invalid_attrs %{blog: nil, description: nil, github: nil, location: nil, name: nil, url: nil}
@@ -47,7 +45,7 @@ defmodule ElixirCompanies.CompaniesTest do
       company = company_fixture()
       assert {:ok, %Company{} = company} = Companies.update_company(company, @update_attrs)
 
-      
+
       assert company.blog == "some updated blog"
       assert company.description == "some updated description"
       assert company.github == "some updated github"

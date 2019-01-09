@@ -1,11 +1,9 @@
 defmodule ElixirCompanies.JobsTest do
   use ElixirCompanies.DataCase
 
-  alias ElixirCompanies.Jobs
+  alias ElixirCompanies.{Jobs, Schema.Job}
 
   describe "jobs" do
-    alias ElixirCompanies.Jobs.Job
-
     @valid_attrs %{title: "some title", url: "some url"}
     @update_attrs %{title: "some updated title", url: "some updated url"}
     @invalid_attrs %{title: nil, url: nil}
@@ -43,7 +41,7 @@ defmodule ElixirCompanies.JobsTest do
       job = job_fixture()
       assert {:ok, %Job{} = job} = Jobs.update_job(job, @update_attrs)
 
-      
+
       assert job.title == "some updated title"
       assert job.url == "some updated url"
     end

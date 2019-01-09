@@ -4,7 +4,7 @@ defmodule ElixirCompanies.Accounts do
   """
 
   import Ecto.Query, warn: false
-  alias ElixirCompanies.{Accounts.User, Repo}
+  alias ElixirCompanies.{Repo, Schema.User}
 
   @doc """
   Returns the list of users.
