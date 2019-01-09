@@ -31,6 +31,16 @@ defmodule Companies.Companies do
     Repo.all(query)
   end
 
+  def list_hiring_companies do
+    query = from c in Company,
+      order_by: [desc: c.inserted_at],
+      left_join: j in Job,
+      group_by: c.id,
+      having: count(j) > 0,
+      preload: [:industry, :jobs]
+    Repo.all(query)
+  end
+
   def count_total do
     query = from(c in Company, select: count(c.id))
     Repo.one(query)

@@ -4,7 +4,8 @@ defmodule Companies.Jobs do
   """
 
   import Ecto.Query, warn: false
-  alias Companies.{Repo, Schema.Job}
+
+  alias Companies.{Companies, Repo, Schema.Job}
 
   @doc """
   Returns the list of jobs.
@@ -47,8 +48,9 @@ defmodule Companies.Jobs do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_job(attrs \\ %{}) do
-    %Job{}
+  def create_job(attrs \\ %{}, company_id) do
+    company = Companies.get_company!(company_id)
+    %Job{company_id: company.id}
     |> Job.changeset(attrs)
     |> Repo.insert()
   end

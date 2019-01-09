@@ -9,12 +9,14 @@
                     With <span class="has-text-weight-bold">
                     <%= @companies_count %>
                 </span> and counting...</p>
-                <p><a  target="_blank" class="button is-white is-rounded is-outlined" href="https://github.com/{{ site.github }}/blob/master/CONTRIBUTING.md">
-                    <span class="icon">
-                        <i class="fab fa-github"></i>
-                    </span>
-                    <span class="has-text-weight-bold is-uppercase">Contribute</span>
-                </a></p>
+                <p>
+                    <%= link to: Routes.company_path(@conn, :new), class: "button is-white is-rounded is-outlined" do %>
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span class="has-text-weight-bold ">Add a company</span>
+                    <% end %>
+                </p>
             </div>
         </div>
     </div>

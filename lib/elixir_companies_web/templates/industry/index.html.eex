@@ -9,17 +9,17 @@
     </tr>
   </thead>
   <tbody>
-<%= for industry <- @industries do %>
-    <tr>
-      <td><%= industry.name %></td>
+    <%= for industry <- @industries do %>
+      <tr>
+        <td><%= industry.name %></td>
 
-      <td>
-        <%= link "Show", to: Routes.industry_path(@conn, :show, industry) %>
-        <%= link "Edit", to: Routes.industry_path(@conn, :edit, industry) %>
-        <%= link "Delete", to: Routes.industry_path(@conn, :delete, industry), method: :delete, data: [confirm: "Are you sure?"] %>
-      </td>
-    </tr>
-<% end %>
+        <td>
+          <%= link "Show", to: Routes.industry_path(@conn, :show, industry) %>
+          <%= link "Edit", to: Routes.industry_path(@conn, :edit, industry) %>
+          <%= link "Delete", to: Routes.industry_path(@conn, :delete, industry), method: :delete, data: [confirm: "Are you sure?"] %>
+        </td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 

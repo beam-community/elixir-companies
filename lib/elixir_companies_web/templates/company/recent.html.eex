@@ -4,7 +4,7 @@
         <div class="content">
             <h1 class="title is-3 fancy">Recent Additions</h1>
             <div class="columns is-desktop is-multiline">
-                <%= render CompaniesWeb.CompanyView, "companies.html", companies: @recent_companies %>
+              <%= render CompaniesWeb.CompanyView, "companies.html", companies: @recent_companies, conn: @conn %>
             </div> <!-- /columns -->
         </div> <!-- /content -->
     </div> <!-- /container -->
