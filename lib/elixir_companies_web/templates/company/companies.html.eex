@@ -1,5 +1,5 @@
 <%= for company <- @companies do %>
     <div class="column is-one-quarter-desktop">
-        <%= render "card.html", company: company %>
+        <%= render "card.html", company: company, conn: @conn %>
     </div>
 <% end %>

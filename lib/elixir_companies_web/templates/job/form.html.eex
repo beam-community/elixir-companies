@@ -5,15 +5,23 @@
     </div>
   <% end %>
 
-  <%= label f, :title %>
-  <%= text_input f, :title %>
-  <%= error_tag f, :title %>
+  <div class="field">
+      <%= label f, :title, class: "field" %>
+      <div class="control">
+          <%= text_input f, :title, class: "input" %>
+          <%= error_tag f, :title %>
+      </div>
+  </div>
 
-  <%= label f, :url %>
-  <%= text_input f, :url %>
-  <%= error_tag f, :url %>
+  <div class="field">
+      <%= label f, :url, class: "field" %>
+      <div class="control">
+          <%= text_input f, :url, class: "input" %>
+          <%= error_tag f, :url %>
+      </div>
+  </div>
 
   <div>
-    <%= submit "Save" %>
+    <%= submit "Save", class: "button is-primary" %>
   </div>
 <% end %>

@@ -24,9 +24,11 @@ defmodule CompaniesWeb.Router do
     pipe_through :browser
 
     get "/", CompanyController, :recent
+    get "/hiring", CompanyController, :hiring
     resources "/industries", IndustryController
-    resources "/companies", CompanyController
-    resources "/jobs", JobController
+    resources "/companies", CompanyController do
+      resources "/jobs", JobController
+    end
     resources "/users", UserController
   end
 

@@ -36,4 +36,8 @@ defmodule CompaniesWeb.CompanyView do
   def render("blog.html", %{blog: nil}), do: ""
   def render("github.html", %{github: nil}), do: ""
   def render("location.html", %{location: nil}), do: ""
+
+  def select_industries(industries) do
+    Enum.map(industries, fn %{id: id, name: name} -> {name, id} end)
+  end
 end

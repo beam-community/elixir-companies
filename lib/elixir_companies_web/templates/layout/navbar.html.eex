@@ -32,9 +32,14 @@
                               </div>
                           <% end %>
                       </div>
+                      <div class="columns">
+                          <div class="column is-8 is-offset-2">
+                              <%= link "New Industry", to: Routes.industry_path(@conn, :new), class: "button is-primary " %>
+                          </div>
+                      </div>
                   </div>
               </div>
-              <%= link "Hiring", to: Routes.job_path(@conn, :index), class: "navbar-item" %>
+              <%= link "Hiring", to: Routes.company_path(@conn, :hiring), class: "navbar-item" %>
           </div>
           <div class="navbar-end">
               <%= render "auth_icon.html", conn: @conn, version_hidden: "mobile" %>

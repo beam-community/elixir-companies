@@ -1,24 +1,25 @@
 defmodule CompaniesWeb.JobController do
   use CompaniesWeb, :controller
 
-  alias Companies.{Jobs, Schema.Job}
+  alias Companies.{Companies, Jobs, Schema.Job}
 
   def index(conn, _params) do
     jobs = Jobs.list_jobs()
     render(conn, "index.html", jobs: jobs)
   end
 
-  def new(conn, _params) do
+  def new(conn, %{"company_id" => company_id}) do
     changeset = Jobs.change_job(%Job{})
-    render(conn, "new.html", changeset: changeset)
+    company = Companies.get_company!(company_id)
+    render(conn, "new.html", changeset: changeset, company: company)
   end
 
-  def create(conn, %{"job" => job_params}) do
-    case Jobs.create_job(job_params) do
+  def create(conn, %{"job" => job_params, "company_id" => company_id}) do
+    case Jobs.create_job(job_params, company_id) do
       {:ok, job} ->
         conn
         |> put_flash(:info, "Job created successfully.")
-        |> redirect(to: Routes.job_path(conn, :show, job))
+        |> redirect(to: Routes.company_path(conn, :recent))
 
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "new.html", changeset: changeset)

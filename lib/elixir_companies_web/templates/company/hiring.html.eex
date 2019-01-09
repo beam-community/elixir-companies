@@ -1,0 +1,10 @@
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h1 class="title is-3 fancy">Hiring</h1>
+            <div class="columns is-desktop is-multiline">
+                <%= render ElixirCompaniesWeb.CompanyView, "companies.html", companies: @hiring_companies, conn: @conn %>
+            </div> <!-- /columns -->
+        </div> <!-- /content -->
+    </div> <!-- /container -->
+</section>

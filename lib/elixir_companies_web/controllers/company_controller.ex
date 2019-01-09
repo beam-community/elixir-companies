@@ -13,6 +13,11 @@ defmodule CompaniesWeb.CompanyController do
     )
   end
 
+  def hiring(conn, _params) do
+    hiring_companies = Companies.list_hiring_companies()
+    render(conn, "hiring.html", hiring_companies: hiring_companies)
+  end
+
   def index(conn, _params) do
     companies = Companies.list_companies()
     render(conn, "index.html", companies: companies)
@@ -20,7 +25,8 @@ defmodule CompaniesWeb.CompanyController do
 
   def new(conn, _params) do
     changeset = Companies.change_company(%Company{})
-    render(conn, "new.html", changeset: changeset)
+    industries = Industries.list_industries()
+    render(conn, "new.html", changeset: changeset, industries: industries)
   end
 
   def create(conn, %{"company" => company_params}) do
