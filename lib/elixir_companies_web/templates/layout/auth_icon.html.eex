@@ -1,4 +1,4 @@
-<%= if @conn.assigns[:current_user] do %>
+<%= if signed_in?(@conn) do %>
     <%= link to: Routes.auth_path(@conn, :signout), class: "navbar-item is-hidden-#{@version_hidden}" do %>
         <span class="icon has-text-grey-darker">
             <i class="fas fa-lg fa-sign-out-alt"></i>

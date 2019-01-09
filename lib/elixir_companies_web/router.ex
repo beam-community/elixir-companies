@@ -38,10 +38,6 @@ defmodule ElixirCompaniesWeb.Router do
     get "/github/callback", AuthController, :callback
   end
 
-  scope "/admin", ElixirCompaniesWeb do
-    
-  end
-
   # Other scopes may use custom stacks.
   # scope "/api", ElixirCompaniesWeb do
   #   pipe_through :api
