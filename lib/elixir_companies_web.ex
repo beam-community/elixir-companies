@@ -1,12 +1,12 @@
-defmodule ElixirCompaniesWeb do
+defmodule CompaniesWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use ElixirCompaniesWeb, :controller
-      use ElixirCompaniesWeb, :view
+      use CompaniesWeb, :controller
+      use CompaniesWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,11 +19,11 @@ defmodule ElixirCompaniesWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: ElixirCompaniesWeb
+      use Phoenix.Controller, namespace: CompaniesWeb
 
       import Plug.Conn
-      import ElixirCompaniesWeb.Gettext
-      alias ElixirCompaniesWeb.Router.Helpers, as: Routes
+      import CompaniesWeb.Gettext
+      alias CompaniesWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -31,7 +31,7 @@ defmodule ElixirCompaniesWeb do
     quote do
       use Phoenix.View,
         root: "lib/elixir_companies_web/templates",
-        namespace: ElixirCompaniesWeb
+        namespace: CompaniesWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
@@ -39,9 +39,9 @@ defmodule ElixirCompaniesWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import ElixirCompaniesWeb.ErrorHelpers
-      import ElixirCompaniesWeb.Gettext
-      alias ElixirCompaniesWeb.Router.Helpers, as: Routes
+      import CompaniesWeb.ErrorHelpers
+      import CompaniesWeb.Gettext
+      alias CompaniesWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -56,7 +56,7 @@ defmodule ElixirCompaniesWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import ElixirCompaniesWeb.Gettext
+      import CompaniesWeb.Gettext
     end
   end
 

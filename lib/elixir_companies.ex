@@ -1,6 +1,6 @@
-defmodule ElixirCompanies do
+defmodule Companies do
   @moduledoc """
-  ElixirCompanies keeps the contexts that define your domain
+  Companies keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

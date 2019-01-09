@@ -1,3 +1,3 @@
-defmodule ElixirCompaniesWeb.JobView do
-  use ElixirCompaniesWeb, :view
+defmodule CompaniesWeb.JobView do
+  use CompaniesWeb, :view
 end

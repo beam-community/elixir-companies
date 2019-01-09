@@ -1,7 +1,7 @@
-defmodule ElixirCompaniesWeb.AuthController do
-  use ElixirCompaniesWeb, :controller
+defmodule CompaniesWeb.AuthController do
+  use CompaniesWeb, :controller
   plug Ueberauth
-  alias ElixirCompanies.Accounts
+  alias Companies.Accounts
 
   def callback(%{assigns: %{ueberauth_auth: auth}} = conn, _params) do
     user_params = %{

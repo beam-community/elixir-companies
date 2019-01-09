@@ -1,5 +1,5 @@
-defmodule ElixirCompaniesWeb.Router do
-  use ElixirCompaniesWeb, :router
+defmodule CompaniesWeb.Router do
+  use CompaniesWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -7,9 +7,9 @@ defmodule ElixirCompaniesWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-    plug ElixirCompaniesWeb.Plugs.Menu
-    plug ElixirCompaniesWeb.Plugs.SiteData
-    plug ElixirCompaniesWeb.Plugs.Authorize
+    plug CompaniesWeb.Plugs.Menu
+    plug CompaniesWeb.Plugs.SiteData
+    plug CompaniesWeb.Plugs.Authorize
   end
 
   pipeline :api do
@@ -17,10 +17,10 @@ defmodule ElixirCompaniesWeb.Router do
   end
 
   pipeline :auth do
-    plug ElixirCompaniesWeb.Plugs.Authorize
+    plug CompaniesWeb.Plugs.Authorize
   end
 
-  scope "/", ElixirCompaniesWeb do
+  scope "/", CompaniesWeb do
     pipe_through :browser
 
     get "/", CompanyController, :recent
@@ -30,7 +30,7 @@ defmodule ElixirCompaniesWeb.Router do
     resources "/users", UserController
   end
 
-  scope "/auth", ElixirCompaniesWeb do
+  scope "/auth", CompaniesWeb do
     pipe_through [:browser, :auth]
 
     get "/signout", AuthController, :signout
@@ -39,7 +39,7 @@ defmodule ElixirCompaniesWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", ElixirCompaniesWeb do
+  # scope "/api", CompaniesWeb do
   #   pipe_through :api
   # end
 end

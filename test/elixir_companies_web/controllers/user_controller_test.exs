@@ -1,7 +1,7 @@
-defmodule ElixirCompaniesWeb.UserControllerTest do
-  use ElixirCompaniesWeb.ConnCase
+defmodule CompaniesWeb.UserControllerTest do
+  use CompaniesWeb.ConnCase
 
-  alias ElixirCompanies.Accounts
+  alias Companies.Accounts
 
   @create_attrs %{email: "some email", token: "some token"}
   @update_attrs %{email: "some updated email", token: "some updated token"}

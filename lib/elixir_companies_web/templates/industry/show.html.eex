@@ -5,7 +5,7 @@
                 <%= @industry.name %>
             </h1>
             <div class="columns is-desktop is-multiline">
-                <%= render ElixirCompaniesWeb.CompanyView, "companies.html", companies: @industry.companies %>
+                <%= render CompaniesWeb.CompanyView, "companies.html", companies: @industry.companies %>
             </div> <!-- /columns -->
         </div> <!-- /content -->
     </div> <!-- /container -->

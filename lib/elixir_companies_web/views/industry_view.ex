@@ -1,3 +1,3 @@
-defmodule ElixirCompaniesWeb.IndustryView do
-  use ElixirCompaniesWeb, :view
+defmodule CompaniesWeb.IndustryView do
+  use CompaniesWeb, :view
 end

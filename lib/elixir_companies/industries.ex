@@ -1,10 +1,10 @@
-defmodule ElixirCompanies.Industries do
+defmodule Companies.Industries do
   @moduledoc """
   The Industries context.
   """
 
   import Ecto.Query, warn: false
-  alias ElixirCompanies.{Repo, Schema.Industry}
+  alias Companies.{Repo, Schema.Industry}
 
   @doc """
   Returns the list of industries.

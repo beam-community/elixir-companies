@@ -1,4 +1,4 @@
-defmodule ElixirCompanies.MixProject do
+defmodule Companies.MixProject do
   use Mix.Project
 
   def project do
@@ -19,7 +19,7 @@ defmodule ElixirCompanies.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {ElixirCompanies.Application, []},
+      mod: {Companies.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

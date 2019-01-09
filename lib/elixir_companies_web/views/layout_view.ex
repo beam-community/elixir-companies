@@ -1,5 +1,5 @@
-defmodule ElixirCompaniesWeb.LayoutView do
-  use ElixirCompaniesWeb, :view
+defmodule CompaniesWeb.LayoutView do
+  use CompaniesWeb, :view
 
   def divide_industries_in_columns([]), do: []
   def divide_industries_in_columns(industries) do

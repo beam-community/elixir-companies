@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(ElixirCompanies.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(Companies.Repo, :manual)

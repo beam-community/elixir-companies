@@ -1,5 +1,5 @@
-defmodule ElixirCompaniesWeb.CompanyView do
-  use ElixirCompaniesWeb, :view
+defmodule CompaniesWeb.CompanyView do
+  use CompaniesWeb, :view
 
   def hiring_ribbon(company) do
     case hiring?(company) do

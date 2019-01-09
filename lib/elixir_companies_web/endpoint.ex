@@ -1,7 +1,7 @@
-defmodule ElixirCompaniesWeb.Endpoint do
+defmodule CompaniesWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :elixir_companies
 
-  socket "/socket", ElixirCompaniesWeb.UserSocket,
+  socket "/socket", CompaniesWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -42,5 +42,5 @@ defmodule ElixirCompaniesWeb.Endpoint do
     key: "_elixir_companies_key",
     signing_salt: "7TewWYSt"
 
-  plug ElixirCompaniesWeb.Router
+  plug CompaniesWeb.Router
 end

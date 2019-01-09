@@ -1,7 +1,7 @@
-defmodule ElixirCompanies.JobsTest do
-  use ElixirCompanies.DataCase
+defmodule Companies.JobsTest do
+  use Companies.DataCase
 
-  alias ElixirCompanies.{Jobs, Schema.Job}
+  alias Companies.{Jobs, Schema.Job}
 
   describe "jobs" do
     @valid_attrs %{title: "some title", url: "some url"}

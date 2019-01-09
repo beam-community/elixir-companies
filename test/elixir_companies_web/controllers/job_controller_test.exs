@@ -1,7 +1,7 @@
-defmodule ElixirCompaniesWeb.JobControllerTest do
-  use ElixirCompaniesWeb.ConnCase
+defmodule CompaniesWeb.JobControllerTest do
+  use CompaniesWeb.ConnCase
 
-  alias ElixirCompanies.Jobs
+  alias Companies.Jobs
 
   @create_attrs %{title: "some title", url: "some url"}
   @update_attrs %{title: "some updated title", url: "some updated url"}

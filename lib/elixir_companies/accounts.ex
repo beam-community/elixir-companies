@@ -1,10 +1,10 @@
-defmodule ElixirCompanies.Accounts do
+defmodule Companies.Accounts do
   @moduledoc """
   The Accounts context.
   """
 
   import Ecto.Query, warn: false
-  alias ElixirCompanies.{Repo, Schema.User}
+  alias Companies.{Repo, Schema.User}
 
   @doc """
   Returns the list of users.
