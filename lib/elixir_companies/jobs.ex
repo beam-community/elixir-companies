@@ -4,9 +4,7 @@ defmodule ElixirCompanies.Jobs do
   """
 
   import Ecto.Query, warn: false
-  alias ElixirCompanies.Repo
-
-  alias ElixirCompanies.Jobs.Job
+  alias ElixirCompanies.{Repo, Schema.Job}
 
   @doc """
   Returns the list of jobs.

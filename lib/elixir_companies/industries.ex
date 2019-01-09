@@ -4,8 +4,7 @@ defmodule ElixirCompanies.Industries do
   """
 
   import Ecto.Query, warn: false
-  alias ElixirCompanies.Repo
-  alias ElixirCompanies.Industries.Industry
+  alias ElixirCompanies.{Repo, Schema.Industry}
 
   @doc """
   Returns the list of industries.

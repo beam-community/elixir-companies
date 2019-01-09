@@ -1,11 +1,9 @@
 defmodule ElixirCompanies.AccountsTest do
   use ElixirCompanies.DataCase
 
-  alias ElixirCompanies.Accounts
+  alias ElixirCompanies.{Accounts, Schema.User}
 
   describe "users" do
-    alias ElixirCompanies.Accounts.User
-
     @valid_attrs %{email: "some email", token: "some token"}
     @update_attrs %{email: "some updated email", token: "some updated token"}
     @invalid_attrs %{email: nil, token: nil}

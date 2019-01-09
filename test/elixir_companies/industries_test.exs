@@ -1,11 +1,9 @@
 defmodule ElixirCompanies.IndustriesTest do
   use ElixirCompanies.DataCase
 
-  alias ElixirCompanies.Industries
+  alias ElixirCompanies.{Industries, Schema.Industry}
 
   describe "industries" do
-    alias ElixirCompanies.Industries.Industry
-
     @valid_attrs %{name: "some name"}
     @update_attrs %{name: "some updated name"}
     @invalid_attrs %{name: nil}
@@ -42,7 +40,7 @@ defmodule ElixirCompanies.IndustriesTest do
       industry = industry_fixture()
       assert {:ok, %Industry{} = industry} = Industries.update_industry(industry, @update_attrs)
 
-      
+
       assert industry.name == "some updated name"
     end
 

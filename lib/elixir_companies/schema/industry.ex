@@ -1,11 +1,13 @@
-defmodule ElixirCompanies.Industries.Industry do
+defmodule ElixirCompanies.Schema.Industry do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias ElixirCompanies.Schema.Company
 
   schema "industries" do
     field :name, :string
-    has_many :companies, ElixirCompanies.Companies.Company
+
+    has_many :companies, Company
 
     timestamps()
   end

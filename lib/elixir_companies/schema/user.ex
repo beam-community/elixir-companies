@@ -1,4 +1,4 @@
-defmodule ElixirCompanies.Accounts.User do
+defmodule ElixirCompanies.Schema.User do
   use Ecto.Schema
   import Ecto.Changeset
 
