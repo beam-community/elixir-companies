@@ -9,7 +9,8 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
-alias Companies.Schema.{Company, Industry, Repo}
+alias Companies.Schema.{Company, Industry}
+alias Companies.Repo
 
 industries = ["Accounting", "Airlines/Aviation", "Alternative Dispute Resolution", "Alternative Medicine", "Animation",
               "Apparel/Fashion", "Architecture/Planning", "Arts/Crafts", "Automotive", "Aviation/Aerospace",
@@ -54,7 +55,7 @@ Repo.insert!(%Company{
   name: "Plataformatec",
   description: "Project inception, coaching, tailored projects, general consulting. Sponsor of Elixir, employer to Elixir's BDFL.",
   github: "https://github.com/plataformatec",
-  industry: technology_consulting.id,
+  industry_id: technology_consulting.id,
   location: "São Paulo, Brazil",
   url: "http://plataformatec.com.br",
 })
