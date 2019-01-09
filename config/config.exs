@@ -25,23 +25,25 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix and Ecto
 config :phoenix, :json_library, Jason
 
-config :elixir_companies, site_data: %{
-  name: "Elixir Companies",
-  description: "A curated list of companies using Elixir in production, organized by industry.",
-  maintainers: [
-    "doompsork",
-    "burden",
-    "gemantzu"
-  ],
-}
+config :elixir_companies,
+  site_data: %{
+    name: "Elixir Companies",
+    description: "A curated list of companies using Elixir in production, organized by industry.",
+    maintainers: [
+      "doompsork",
+      "burden",
+      "gemantzu"
+    ]
+  }
 
-config :oauth2, serializers: %{
-  "application/json" => Jason
-}
+config :oauth2,
+  serializers: %{
+    "application/json" => Jason
+  }
 
 config :ueberauth, Ueberauth,
   providers: [
-    github: { Ueberauth.Strategy.Github, [default_scope: "user,user:email,public_repo"] }
+    github: {Ueberauth.Strategy.Github, [default_scope: "user,user:email,public_repo"]}
   ]
 
 config :ueberauth, Ueberauth.Strategy.Github.OAuth,

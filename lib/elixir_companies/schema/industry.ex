@@ -5,9 +5,9 @@ defmodule Companies.Schema.Industry do
   alias Companies.Schema.Company
 
   schema "industries" do
-    field :name, :string
+    field(:name, :string)
 
-    has_many :companies, Company
+    has_many(:companies, Company)
 
     timestamps()
   end
