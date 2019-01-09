@@ -6,19 +6,19 @@
   <% end %>
 
   <div class="field">
-      <%= label f, :title, class: "field" %>
-      <div class="control">
-          <%= text_input f, :title, class: "input" %>
-          <%= error_tag f, :title %>
-      </div>
+    <%= label f, :title, class: "field" %>
+    <div class="control">
+      <%= text_input f, :title, class: "input" %>
+      <%= error_tag f, :title %>
+    </div>
   </div>
 
   <div class="field">
-      <%= label f, :url, class: "field" %>
-      <div class="control">
-          <%= text_input f, :url, class: "input" %>
-          <%= error_tag f, :url %>
-      </div>
+    <%= label f, :url, class: "field" %>
+    <div class="control">
+      <%= text_input f, :url, class: "input" %>
+      <%= error_tag f, :url %>
+    </div>
   </div>
 
   <div>
