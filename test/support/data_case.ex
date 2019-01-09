@@ -21,6 +21,7 @@ defmodule Companies.DataCase do
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
+      import Companies.Factory
       import Companies.DataCase
     end
   end

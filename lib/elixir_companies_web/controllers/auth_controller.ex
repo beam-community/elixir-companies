@@ -1,7 +1,9 @@
 defmodule CompaniesWeb.AuthController do
   use CompaniesWeb, :controller
-  plug Ueberauth
+
   alias Companies.Accounts
+
+  plug Ueberauth
 
   def callback(%{assigns: %{ueberauth_auth: auth}} = conn, _params) do
     user_params = %{

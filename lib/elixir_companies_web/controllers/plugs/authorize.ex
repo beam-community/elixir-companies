@@ -1,5 +1,6 @@
 defmodule CompaniesWeb.Plugs.Authorize do
   import Plug.Conn
+
   alias Companies.Accounts
 
   def init(opts), do: opts

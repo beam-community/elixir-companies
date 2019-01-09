@@ -1,8 +1,7 @@
 defmodule CompaniesWeb.JobController do
   use CompaniesWeb, :controller
 
-  alias Companies.Jobs
-  alias Companies.Jobs.Job
+  alias Companies.{Jobs, Schema.Job}
 
   def index(conn, _params) do
     jobs = Jobs.list_jobs()

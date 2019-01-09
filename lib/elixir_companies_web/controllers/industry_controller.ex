@@ -1,8 +1,7 @@
 defmodule CompaniesWeb.IndustryController do
   use CompaniesWeb, :controller
 
-  alias Companies.Industries
-  alias Companies.Industries.Industry
+  alias Companies.{Industries, Schema.Industry}
 
   def index(conn, _params) do
     industries = Industries.list_industries()
