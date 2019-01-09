@@ -1,3 +1,3 @@
-defmodule ElixirCompaniesWeb.PageViewTest do
-  use ElixirCompaniesWeb.ConnCase, async: true
+defmodule CompaniesWeb.PageViewTest do
+  use CompaniesWeb.ConnCase, async: true
 end

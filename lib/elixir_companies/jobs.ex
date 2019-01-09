@@ -1,10 +1,10 @@
-defmodule ElixirCompanies.Jobs do
+defmodule Companies.Jobs do
   @moduledoc """
   The Jobs context.
   """
 
   import Ecto.Query, warn: false
-  alias ElixirCompanies.{Repo, Schema.Job}
+  alias Companies.{Repo, Schema.Job}
 
   @doc """
   Returns the list of jobs.

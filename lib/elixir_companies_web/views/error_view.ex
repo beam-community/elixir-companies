@@ -1,5 +1,5 @@
-defmodule ElixirCompaniesWeb.ErrorView do
-  use ElixirCompaniesWeb, :view
+defmodule CompaniesWeb.ErrorView do
+  use CompaniesWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

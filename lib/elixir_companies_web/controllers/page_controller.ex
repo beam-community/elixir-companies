@@ -1,5 +1,5 @@
-defmodule ElixirCompaniesWeb.PageController do
-  use ElixirCompaniesWeb, :controller
+defmodule CompaniesWeb.PageController do
+  use CompaniesWeb, :controller
 
   def index(conn, _params) do
     render(conn, "index.html")

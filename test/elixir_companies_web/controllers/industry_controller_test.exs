@@ -1,7 +1,7 @@
-defmodule ElixirCompaniesWeb.IndustryControllerTest do
-  use ElixirCompaniesWeb.ConnCase
+defmodule CompaniesWeb.IndustryControllerTest do
+  use CompaniesWeb.ConnCase
 
-  alias ElixirCompanies.Industries
+  alias Companies.Industries
 
   @create_attrs %{name: "some name"}
   @update_attrs %{name: "some updated name"}

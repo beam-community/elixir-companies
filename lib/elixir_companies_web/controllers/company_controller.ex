@@ -1,8 +1,8 @@
-defmodule ElixirCompaniesWeb.CompanyController do
-  use ElixirCompaniesWeb, :controller
+defmodule CompaniesWeb.CompanyController do
+  use CompaniesWeb, :controller
 
-  alias ElixirCompanies.Companies
-  alias ElixirCompanies.Companies.Company
+  alias Companies.Companies
+  alias Companies.Companies.Company
 
   def recent(conn, _params) do
     companies_count = Companies.count_total()

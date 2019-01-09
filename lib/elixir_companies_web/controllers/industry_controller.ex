@@ -1,8 +1,8 @@
-defmodule ElixirCompaniesWeb.IndustryController do
-  use ElixirCompaniesWeb, :controller
+defmodule CompaniesWeb.IndustryController do
+  use CompaniesWeb, :controller
 
-  alias ElixirCompanies.Industries
-  alias ElixirCompanies.Industries.Industry
+  alias Companies.Industries
+  alias Companies.Industries.Industry
 
   def index(conn, _params) do
     industries = Industries.list_industries()

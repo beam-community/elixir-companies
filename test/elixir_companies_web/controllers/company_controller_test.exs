@@ -1,7 +1,7 @@
-defmodule ElixirCompaniesWeb.CompanyControllerTest do
-  use ElixirCompaniesWeb.ConnCase
+defmodule CompaniesWeb.CompanyControllerTest do
+  use CompaniesWeb.ConnCase
 
-  alias ElixirCompanies.Companies
+  alias Companies.Companies
 
   @create_attrs %{blog: "some blog", description: "some description", github: "some github", location: "some location", name: "some name", url: "some url"}
   @update_attrs %{blog: "some updated blog", description: "some updated description", github: "some updated github", location: "some updated location", name: "some updated name", url: "some updated url"}

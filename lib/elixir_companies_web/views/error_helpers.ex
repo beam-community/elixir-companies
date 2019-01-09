@@ -1,4 +1,4 @@
-defmodule ElixirCompaniesWeb.ErrorHelpers do
+defmodule CompaniesWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -36,9 +36,9 @@ defmodule ElixirCompaniesWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(ElixirCompaniesWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(CompaniesWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(ElixirCompaniesWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(CompaniesWeb.Gettext, "errors", msg, opts)
     end
   end
 end

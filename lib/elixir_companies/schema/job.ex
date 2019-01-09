@@ -1,8 +1,8 @@
-defmodule ElixirCompanies.Schema.Job do
+defmodule Companies.Schema.Job do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias ElixirCompanies.Schema.Company
+  alias Companies.Schema.Company
 
   schema "jobs" do
     field :title, :string

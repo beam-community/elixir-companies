@@ -1,4 +1,4 @@
-defmodule ElixirCompaniesWeb.ConnCase do
+defmodule CompaniesWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -19,18 +19,18 @@ defmodule ElixirCompaniesWeb.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      alias ElixirCompaniesWeb.Router.Helpers, as: Routes
+      alias CompaniesWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint ElixirCompaniesWeb.Endpoint
+      @endpoint CompaniesWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(ElixirCompanies.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Companies.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(ElixirCompanies.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Companies.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

@@ -1,10 +1,10 @@
-defmodule ElixirCompanies.Companies do
+defmodule Companies.Companies do
   @moduledoc """
   The Companies context.
   """
 
   import Ecto.Query, warn: false
-  alias ElixirCompanies.{Schema.Company, Repo}
+  alias Companies.{Schema.Company, Repo}
 
 
   @doc """

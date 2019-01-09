@@ -1,3 +1,3 @@
-defmodule ElixirCompaniesWeb.UserView do
-  use ElixirCompaniesWeb, :view
+defmodule CompaniesWeb.UserView do
+  use CompaniesWeb, :view
 end

@@ -1,8 +1,8 @@
-defmodule ElixirCompaniesWeb.JobController do
-  use ElixirCompaniesWeb, :controller
+defmodule CompaniesWeb.JobController do
+  use CompaniesWeb, :controller
 
-  alias ElixirCompanies.Jobs
-  alias ElixirCompanies.Jobs.Job
+  alias Companies.Jobs
+  alias Companies.Jobs.Job
 
   def index(conn, _params) do
     jobs = Jobs.list_jobs()

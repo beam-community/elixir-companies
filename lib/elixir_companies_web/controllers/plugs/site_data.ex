@@ -1,4 +1,4 @@
-defmodule ElixirCompaniesWeb.Plugs.SiteData do
+defmodule CompaniesWeb.Plugs.SiteData do
   import Plug.Conn
 
   def init(opts), do: opts

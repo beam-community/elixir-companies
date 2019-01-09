@@ -8,14 +8,14 @@
 use Mix.Config
 
 config :elixir_companies,
-  ecto_repos: [ElixirCompanies.Repo]
+  ecto_repos: [Companies.Repo]
 
 # Configures the endpoint
-config :elixir_companies, ElixirCompaniesWeb.Endpoint,
+config :elixir_companies, CompaniesWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "cnFp+p3HcWa0ZaS5YhEfuJlU2PIxvUinNThsTSXm4ZE2M7D/zYzpfIJGMVNLHtqv",
-  render_errors: [view: ElixirCompaniesWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: ElixirCompanies.PubSub, adapter: Phoenix.PubSub.PG2]
+  render_errors: [view: CompaniesWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: Companies.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,

@@ -1,6 +1,6 @@
-defmodule ElixirCompaniesWeb.Plugs.Authorize do
+defmodule CompaniesWeb.Plugs.Authorize do
   import Plug.Conn
-  alias ElixirCompanies.Accounts
+  alias Companies.Accounts
 
   def init(opts), do: opts
 
