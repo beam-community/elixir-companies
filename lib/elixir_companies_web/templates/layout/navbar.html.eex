@@ -2,7 +2,7 @@
   <div class="container">
       <div class="navbar-brand">
           <%= link to: Routes.company_path(@conn, :recent), class: "navbar-item" do %>
-              <%= img_tag Routes.static_path(@conn, "/images/Companies_logo.png") %>
+              <%= img_tag Routes.static_path(@conn, "/images/elixircompanies_logo.png") %>
               &nbsp;
               <h1 class="title is-5"><%= @site_data.name %></h1>
           <% end %>
