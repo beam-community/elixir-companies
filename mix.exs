@@ -9,7 +9,7 @@ defmodule Companies.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
-      test_coverage: [tool: ExCoveralls], 
+      test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [coveralls: :test, "coveralls.html": :test],
       aliases: aliases(),
       deps: deps()
@@ -45,10 +45,10 @@ defmodule Companies.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:ueberauth, "~> 0.5.0"},
-      {:ueberauth_github, "~> 0.7.0"}, 
+      {:ueberauth_github, "~> 0.7.0"},
       {:ex_machina, "~> 2.2", only: :test},
       {:excoveralls, "~> 0.10", only: :test},
-      {:phoenix_live_reload, "~> 1.2", only: :dev},
+      {:phoenix_live_reload, "~> 1.2", only: :dev}
     ]
   end
 
@@ -62,7 +62,14 @@ defmodule Companies.MixProject do
     [
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
-      test: ["ecto.create --quiet", "ecto.migrate", "test"]
+      test: [
+        "format --check-formatted --check-equivalent --dry-run",
+        "compile --warnings-as-errors",
+        "ecto.drop --quiet",
+        "ecto.create --quiet",
+        "ecto.migrate --quiet",
+        "test"
+      ]
     ]
   end
 end

@@ -22,7 +22,7 @@ defmodule Companies.Factory do
 
   def industry_factory do
     %Industry{
-      name: sequence(:name, &"Test Industry #{&1}"),
+      name: sequence(:name, &"Test Industry #{&1}")
     }
   end
 

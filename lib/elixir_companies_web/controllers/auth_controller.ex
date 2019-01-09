@@ -10,6 +10,7 @@ defmodule CompaniesWeb.AuthController do
       token: auth.credentials.token,
       email: auth.info.email
     }
+
     signin(conn, user_params)
   end
 
@@ -26,6 +27,7 @@ defmodule CompaniesWeb.AuthController do
         |> put_flash(:info, "Welcome back!")
         |> put_session(:user_id, user.id)
         |> redirect(to: Routes.company_path(conn, :recent))
+
       {:error, reason} ->
         conn
         |> put_flash(:error, "Error: #{reason}")

@@ -3,8 +3,8 @@ defmodule Companies.Schema.User do
   import Ecto.Changeset
 
   schema "users" do
-    field :email, :string
-    field :token, :string
+    field(:email, :string)
+    field(:token, :string)
 
     timestamps()
   end

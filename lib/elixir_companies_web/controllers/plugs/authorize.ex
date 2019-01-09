@@ -12,6 +12,7 @@ defmodule CompaniesWeb.Plugs.Authorize do
   end
 
   defp assign_user(nil, conn), do: conn
+
   defp assign_user(user_id, conn) do
     user = Accounts.get_user!(user_id)
     assign(conn, :current_user, user)

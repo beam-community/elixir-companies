@@ -3,10 +3,9 @@ defmodule Companies.Repo.Migrations.CreateIndustries do
 
   def change do
     create table(:industries) do
-      add :name, :string
+      add(:name, :string)
 
       timestamps()
     end
-
   end
 end

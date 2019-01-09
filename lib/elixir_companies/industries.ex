@@ -20,7 +20,7 @@ defmodule Companies.Industries do
   end
 
   def list_available_industries do
-    query = from i in Industry, join: c in assoc(i, :companies)
+    query = from(i in Industry, join: c in assoc(i, :companies))
     Repo.all(query)
   end
 
@@ -42,12 +42,13 @@ defmodule Companies.Industries do
 
   def get_industry_with_companies!(id) do
     query =
-      from i in Industry,
-      left_join: c in assoc(i, :companies),
-      left_join: ci in assoc(c, :industry),
-      left_join: cj in assoc(c, :jobs),
-      where: i.id == ^id,
-      preload: [companies: {c, industry: ci, jobs: cj}]
+      from(i in Industry,
+        left_join: c in assoc(i, :companies),
+        left_join: ci in assoc(c, :industry),
+        left_join: cj in assoc(c, :jobs),
+        where: i.id == ^id,
+        preload: [companies: {c, industry: ci, jobs: cj}]
+      )
 
     Repo.one(query)
   end

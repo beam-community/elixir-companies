@@ -5,10 +5,10 @@ defmodule Companies.Schema.Job do
   alias Companies.Schema.Company
 
   schema "jobs" do
-    field :title, :string
-    field :url, :string
+    field(:title, :string)
+    field(:url, :string)
 
-    belongs_to :company, Company
+    belongs_to(:company, Company)
 
     timestamps()
   end

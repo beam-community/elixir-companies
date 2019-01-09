@@ -21,15 +21,18 @@ defmodule Companies.Companies do
   end
 
   def list_recent_companies do
-    query = from c in Company,
-      order_by: [desc: c.inserted_at],
-      limit: 8,
-      preload: [:industry, :jobs]
+    query =
+      from(c in Company,
+        order_by: [desc: c.inserted_at],
+        limit: 8,
+        preload: [:industry, :jobs]
+      )
+
     Repo.all(query)
   end
 
   def count_total do
-    query = from c in Company, select: count(c.id)
+    query = from(c in Company, select: count(c.id))
     Repo.one(query)
   end
 
