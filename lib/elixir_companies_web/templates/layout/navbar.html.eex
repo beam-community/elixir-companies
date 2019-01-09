@@ -1,49 +1,49 @@
 <nav id="navbar" class="navbar has-shadow is-spaced">
   <div class="container">
-      <div class="navbar-brand">
-          <%= link to: Routes.company_path(@conn, :recent), class: "navbar-item" do %>
-              <%= img_tag Routes.static_path(@conn, "/images/elixircompanies_logo.png") %>
-              &nbsp;
-              <h1 class="title is-5"><%= @site_data.name %></h1>
-          <% end %>
-          <%= render "auth_icon.html", conn: @conn, version_hidden: "desktop" %>
-          <div id="navbarBurger" class="navbar-burger burger" data-target="navMain">
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-      </div> <!-- /navbarbrand -->
-      <div class="navbar-menu" id="navMain">
-          <div class="navbar-start">
-              <div class="navbar-item has-dropdown is-hoverable">
-                  <a class="navbar-link is-active">Industries</a>
-                  <div id="moreDropdown" class="navbar-dropdown">
-                      <div class="columns">
-                          <% industries_per_column = divide_industries_in_columns(@industries_for_menu) %>
-                          <%= for column <- industries_per_column do %>
-                              <div class="column">
-                                  <%= for industry <- column do %>
-                                      <%= link to: Routes.industry_path(@conn, :show, industry.id), class: "navbar-item" do %>
-                                          <span class="has-text-weight-bold">
-                                              <%= industry.name %>
-                                          </span>
-                                      <% end %>
-                                  <% end %>
-                              </div>
-                          <% end %>
-                      </div>
-                      <div class="columns">
-                          <div class="column is-8 is-offset-2">
-                              <%= link "New Industry", to: Routes.industry_path(@conn, :new), class: "button is-primary " %>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <%= link "Hiring", to: Routes.company_path(@conn, :hiring), class: "navbar-item" %>
-          </div>
-          <div class="navbar-end">
-              <%= render "auth_icon.html", conn: @conn, version_hidden: "mobile" %>
-          </div>
+    <div class="navbar-brand">
+      <%= link to: Routes.company_path(@conn, :recent), class: "navbar-item" do %>
+        <%= img_tag Routes.static_path(@conn, "/images/elixircompanies_logo.png") %>
+        &nbsp;
+        <h1 class="title is-5"><%= @site_data.name %></h1>
+      <% end %>
+      <%= render "auth_icon.html", conn: @conn, version_hidden: "desktop" %>
+      <div id="navbarBurger" class="navbar-burger burger" data-target="navMain">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
+    </div> <!-- /navbarbrand -->
+    <div class="navbar-menu" id="navMain">
+      <div class="navbar-start">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link is-active">Industries</a>
+          <div id="moreDropdown" class="navbar-dropdown">
+            <div class="columns">
+              <% industries_per_column = divide_industries_in_columns(@industries_for_menu) %>
+              <%= for column <- industries_per_column do %>
+                <div class="column">
+                  <%= for industry <- column do %>
+                    <%= link to: Routes.industry_path(@conn, :show, industry.id), class: "navbar-item" do %>
+                      <span class="has-text-weight-bold">
+                        <%= industry.name %>
+                      </span>
+                    <% end %>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+            <div class="columns">
+              <div class="column is-8 is-offset-2">
+                <%= link "New Industry", to: Routes.industry_path(@conn, :new), class: "button is-primary " %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <%= link "Hiring", to: Routes.company_path(@conn, :hiring), class: "navbar-item" %>
+      </div>
+      <div class="navbar-end">
+        <%= render "auth_icon.html", conn: @conn, version_hidden: "mobile" %>
+      </div>
+    </div>
   </div>
 </nav>
