@@ -4,6 +4,6 @@ defmodule CompaniesWeb.Plugs.SiteData do
   def init(opts), do: opts
 
   def call(conn, _opts) do
-    assign(conn, :site_data, Application.get_env(:elixir_companies, :site_data))
+    assign(conn, :site_data, Application.get_env(:companies, :site_data))
   end
 end

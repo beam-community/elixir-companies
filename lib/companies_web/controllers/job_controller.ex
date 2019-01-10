@@ -16,7 +16,7 @@ defmodule CompaniesWeb.JobController do
 
   def create(conn, %{"job" => job_params, "company_id" => company_id}) do
     case Jobs.create_job(job_params, company_id) do
-      {:ok, job} ->
+      {:ok, _job} ->
         conn
         |> put_flash(:info, "Job created successfully.")
         |> redirect(to: Routes.company_path(conn, :recent))

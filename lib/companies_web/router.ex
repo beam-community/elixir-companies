@@ -39,9 +39,4 @@ defmodule CompaniesWeb.Router do
     get "/github", AuthController, :request
     get "/github/callback", AuthController, :callback
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", CompaniesWeb do
-  #   pipe_through :api
-  # end
 end

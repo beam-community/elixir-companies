@@ -1,5 +1,5 @@
 defmodule CompaniesWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :elixir_companies
+  use Phoenix.Endpoint, otp_app: :companies
 
   socket "/socket", CompaniesWeb.UserSocket,
     websocket: true,
@@ -11,7 +11,7 @@ defmodule CompaniesWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :elixir_companies,
+    from: :companies,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -39,7 +39,7 @@ defmodule CompaniesWeb.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_elixir_companies_key",
+    key: "_companies_key",
     signing_salt: "7TewWYSt"
 
   plug CompaniesWeb.Router

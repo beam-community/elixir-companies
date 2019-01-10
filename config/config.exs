@@ -7,11 +7,11 @@
 # General application configuration
 use Mix.Config
 
-config :elixir_companies,
+config :companies,
   ecto_repos: [Companies.Repo]
 
 # Configures the endpoint
-config :elixir_companies, CompaniesWeb.Endpoint,
+config :companies, CompaniesWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "cnFp+p3HcWa0ZaS5YhEfuJlU2PIxvUinNThsTSXm4ZE2M7D/zYzpfIJGMVNLHtqv",
   render_errors: [view: CompaniesWeb.ErrorView, accepts: ~w(html json)],
@@ -25,7 +25,7 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix and Ecto
 config :phoenix, :json_library, Jason
 
-config :elixir_companies,
+config :companies,
   site_data: %{
     name: "Elixir Companies",
     description: "A curated list of companies using Elixir in production, organized by industry.",
@@ -47,8 +47,8 @@ config :ueberauth, Ueberauth,
   ]
 
 config :ueberauth, Ueberauth.Strategy.Github.OAuth,
-  client_id: System.get_env("ELIXIR_COMPANIES_GITHUB_CLIENT_ID"),
-  client_secret: System.get_env("ELIXIR_COMPANIES_GITHUB_CLIENT_SECRET")
+  client_id: System.get_env("companies_GITHUB_CLIENT_ID"),
+  client_secret: System.get_env("companies_GITHUB_CLIENT_SECRET")
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

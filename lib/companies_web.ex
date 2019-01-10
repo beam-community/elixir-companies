@@ -23,6 +23,7 @@ defmodule CompaniesWeb do
 
       import Plug.Conn
       import CompaniesWeb.Gettext
+
       alias CompaniesWeb.Router.Helpers, as: Routes
     end
   end
@@ -30,7 +31,7 @@ defmodule CompaniesWeb do
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/elixir_companies_web/templates",
+        root: "lib/companies_web/templates",
         namespace: CompaniesWeb
 
       # Import convenience functions from controllers
