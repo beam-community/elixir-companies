@@ -1,11 +1,22 @@
-language: ruby
-rvm:
-  - 2.4
-addons:
-  apt:
-    packages:
-    - libcurl4-openssl-dev
-before_script:
-  - gem install awesome_bot
+language: elixir
+sudo: false
+notifications:
+  email: false
+
+elixir:
+  - 1.7
+
+otp_release:
+  - 21.2
+
 script:
-  - awesome_bot src/_data/companies.yml --allow-redirect --set-timeout 300
+  - mix local.hex --force
+  - mix local.rebar --force
+  - mix deps.get
+  - mix do compile --warnings-as-errors --force
+  - mix format --check-formatted
+
+cache:
+  directories:
+    - _build
+    - deps
