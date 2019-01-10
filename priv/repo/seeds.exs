@@ -9,7 +9,7 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
-alias Companies.Schema.{Company, Industry}
+alias Companies.Schema.{Company, Job, Industry}
 alias Companies.Repo
 
 industries = [
@@ -136,7 +136,6 @@ industries = [
   "Publishing Industry",
   "Railroad Manufacture",
   "Ranching",
-  "Real Estate/Mortgage",
   "Recreational Facilities/Services",
   "Religious Institutions",
   "Renewables/Environment",
@@ -169,9 +168,10 @@ industries = [
 
 Enum.each(industries, &Repo.insert!(%Industry{name: &1}))
 
+real_estate = Repo.insert!(%Industry{name: "Real Estate/Mortgage"})
 technology_consulting = Repo.insert!(%Industry{name: "Technology Consulting"})
 
-Repo.insert!(%Company{
+plataformatec = Repo.insert!(%Company{
   name: "Plataformatec",
   description:
     "Project inception, coaching, tailored projects, general consulting. Sponsor of Elixir, employer to Elixir's BDFL.",
@@ -179,4 +179,10 @@ Repo.insert!(%Company{
   industry_id: technology_consulting.id,
   location: "São Paulo, Brazil",
   url: "http://plataformatec.com.br"
+})
+
+Repo.insert!(%Job{
+  company_id: plataformatec.id,
+  title: "Test Job",
+  url: "http://plataformatec.com.br/jobs"
 })

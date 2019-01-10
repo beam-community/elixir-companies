@@ -1,7 +1,7 @@
 defmodule CompaniesWeb.CompanyController do
   use CompaniesWeb, :controller
 
-  alias Companies.{Companies, Schema.Company}
+  alias Companies.{Companies, Industries, Schema.Company}
 
   def recent(conn, _params) do
     companies_count = Companies.count_total()

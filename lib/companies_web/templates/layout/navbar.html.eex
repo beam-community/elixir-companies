@@ -15,9 +15,14 @@
     </div> <!-- /navbarbrand -->
     <div class="navbar-menu" id="navMain">
       <div class="navbar-start">
+
+        <%= link "Home", to: Routes.company_path(@conn, :recent), class: "navbar-item" %>
+
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link is-active">Industries</a>
+
           <div id="moreDropdown" class="navbar-dropdown">
+
             <div class="columns">
               <% industries_per_column = divide_industries_in_columns(@industries_for_menu) %>
               <%= for column <- industries_per_column do %>
@@ -32,13 +37,15 @@
                 </div>
               <% end %>
             </div>
+
             <div class="columns">
               <div class="column is-8 is-offset-2">
-                <%= link "New Industry", to: Routes.industry_path(@conn, :new), class: "button is-primary " %>
+                <%= link "New Industry", to: Routes.industry_path(@conn, :new), class: "button is-primary" %>
               </div>
             </div>
           </div>
         </div>
+
         <%= link "Hiring", to: Routes.company_path(@conn, :hiring), class: "navbar-item" %>
       </div>
       <div class="navbar-end">
