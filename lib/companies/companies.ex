@@ -5,7 +5,7 @@ defmodule Companies.Companies do
 
   import Ecto.Query, warn: false
 
-  alias Companies.{Schema.Company, Repo}
+  alias Companies.{Repo, Schema.Company}
 
   @doc """
   Returns the list of companies.
@@ -32,12 +32,12 @@ defmodule Companies.Companies do
   end
 
   def list_hiring_companies do
-    query = from c in Company,
-      order_by: [desc: c.inserted_at],
-      left_join: j in Job,
-      group_by: c.id,
-      having: count(j) > 0,
+    query =
+      from c in Company,
+      join: j in assoc(c, :jobs),
+      order_by: [desc: j.inserted_at],
       preload: [:industry, :jobs]
+
     Repo.all(query)
   end
 

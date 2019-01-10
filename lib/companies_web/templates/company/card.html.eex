@@ -12,7 +12,7 @@
     <%= render "blog.html", blog: @company.blog %>
     <%= render "github.html", github: @company.github %>
     <%= render "location.html", location: @company.location %>
-    <%= link to: Routes.company_job_path(@conn, :new, @company) do %>
+    <%= link to: Routes.job_path(@conn, :new, company_id: @company.id) do %>
       <span class="icon icon-purle" >
         <i class="fas fa-plus" ></i>
       </span>
