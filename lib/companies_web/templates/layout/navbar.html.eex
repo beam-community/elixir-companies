@@ -4,7 +4,7 @@
       <%= link to: Routes.company_path(@conn, :recent), class: "navbar-item" do %>
         <%= img_tag Routes.static_path(@conn, "/images/elixircompanies_logo.png") %>
         &nbsp;
-        <h1 class="title is-5"><%= @site_data.name %></h1>
+        <h1 class="title is-5"><%= site_title() %></h1>
       <% end %>
       <%= render "auth_icon.html", conn: @conn, version_hidden: "desktop" %>
       <div id="navbarBurger" class="navbar-burger burger" data-target="navMain">
@@ -24,8 +24,7 @@
           <div id="moreDropdown" class="navbar-dropdown">
 
             <div class="columns">
-              <% industries_per_column = divide_industries_in_columns(@industries_for_menu) %>
-              <%= for column <- industries_per_column do %>
+              <%= for column <- industry_groupings() do %>
                 <div class="column">
                   <%= for industry <- column do %>
                     <%= link to: Routes.industry_path(@conn, :show, industry.id), class: "navbar-item" do %>

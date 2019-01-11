@@ -3,7 +3,7 @@
     <div class="container has-text-centered">
       <div class="content">
         <h1 class="title is-4 thin">
-          <%= @site_data.description %>
+          <%= site_description() %>
         </h1>
         <p>
         With <span class="has-text-weight-bold">

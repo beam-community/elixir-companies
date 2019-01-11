@@ -23,6 +23,7 @@ defmodule CompaniesWeb do
 
       import Plug.Conn
       import CompaniesWeb.Gettext
+      import CompaniesWeb.UserHelpers
 
       alias CompaniesWeb.Router.Helpers, as: Routes
     end
@@ -42,6 +43,7 @@ defmodule CompaniesWeb do
 
       import CompaniesWeb.ErrorHelpers
       import CompaniesWeb.Gettext
+      import CompaniesWeb.SiteHelpers
       alias CompaniesWeb.Router.Helpers, as: Routes
     end
   end

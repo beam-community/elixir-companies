@@ -33,7 +33,11 @@ defmodule Companies.Accounts do
       ** (Ecto.NoResultsError)
 
   """
-  def get_user!(id), do: Repo.get!(User, id)
+  def get_user!(id) do
+    User
+    |> Repo.get!(id)
+    |> maintainer_status()
+  end
 
   @doc """
   Creates a user.
@@ -51,6 +55,7 @@ defmodule Companies.Accounts do
     %User{}
     |> User.changeset(attrs)
     |> Repo.insert(on_conflict: {:replace, [:token]}, conflict_target: :email)
+    |> maintainer_status()
   end
 
   @doc """
@@ -69,6 +74,7 @@ defmodule Companies.Accounts do
     user
     |> User.changeset(attrs)
     |> Repo.update()
+    |> maintainer_status()
   end
 
   @doc """
@@ -110,6 +116,26 @@ defmodule Companies.Accounts do
         where: u.email == ^email
       )
 
-    Repo.one(query)
+    query
+    |> Repo.one()
+    |> maintainer_status()
+  end
+
+  defp maintainer_status({:error, reason}) do
+    {:error, reason}
+  end
+
+  defp maintainer_status({:ok, user}) do
+    {:ok, maintainer_status(user)}
+  end
+
+  defp maintainer_status(%{nickname: nickname} = user) do
+    %{user | maintainer: nickname in maintainers()}
+  end
+
+  defp maintainers do
+    :companies
+    |> Application.get_env(:site_data)
+    |> Map.get(:maintainers)
   end
 end

@@ -13,9 +13,9 @@ defmodule CompaniesWeb.IndustryController do
     render(conn, "new.html", changeset: changeset)
   end
 
-  def create(conn, %{"industry" => industry_params}) do
-    case Industries.create_industry(industry_params) do
-      {:ok, industry} ->
+  def create(conn, %{"industry" => params}) do
+    case Industries.create(params, current_user(conn)) do
+      :ok ->
         conn
         |> put_flash(:info, "Industry created successfully.")
         |> redirect(to: Routes.industry_path(conn, :show, industry))

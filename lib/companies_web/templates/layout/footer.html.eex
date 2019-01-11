@@ -3,9 +3,9 @@
     <div class="content has-text-centered">
       <p class="is-size-4">
       <span class="has-text-weight-normal">
-        <%= @site_data.name %>
+        <%= site_title() %>
       </span> is maintained by
-      <%= for maintainer <- @site_data.maintainers do %>
+      <%= for maintainer <- maintainers() do %>
         <a class="has-text-weight-normal" href="https://github.com/<%= maintainer %>">
           @<%= maintainer %>
         </a>
@@ -16,7 +16,7 @@
       <span class="has-text-weight-bold">
         Support
       </span>
-      <%= @site_data.name %>
+      <%= site_title() %>
       </p>
       <p>
       <span class="has-text-weight-bold is-size-7">

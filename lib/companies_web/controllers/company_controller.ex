@@ -29,9 +29,9 @@ defmodule CompaniesWeb.CompanyController do
     render(conn, "new.html", changeset: changeset, industries: industries)
   end
 
-  def create(conn, %{"company" => company_params}) do
-    case Companies.create_company(company_params) do
-      {:ok, company} ->
+  def create(conn, %{"company" => params}) do
+    case Companies.create(params, current_user(conn)) do
+      :ok ->
         conn
         |> put_flash(:info, "Company created successfully.")
         |> redirect(to: Routes.company_path(conn, :show, company))
