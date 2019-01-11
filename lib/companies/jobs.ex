@@ -48,10 +48,8 @@ defmodule Companies.Jobs do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_job(attrs \\ %{}, company_id) do
-    company = Companies.get_company!(company_id)
-
-    %Job{company_id: company.id}
+  def create_job(attrs \\ %{}) do
+    %Job{}
     |> Job.changeset(attrs)
     |> Repo.insert()
   end

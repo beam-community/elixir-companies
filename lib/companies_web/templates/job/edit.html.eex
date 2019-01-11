@@ -1,5 +1,9 @@
-<h1>Edit Job</h1>
+<div class="container">
+    <div class="columns is-centered">
+        <div class="column is-half">
+            <h1 class="title has-text-centered">Edit Job</h1>
 
-<%= render "form.html", Map.put(assigns, :action, Routes.job_path(@conn, :update, @job)) %>
-
-<span><%= link "Back", to: Routes.job_path(@conn, :index) %></span>
+            <%= render "form.html", Map.put(assigns, :action, Routes.job_path(@conn, :update, @job)) %>
+        </div>
+    </div>
+</div>

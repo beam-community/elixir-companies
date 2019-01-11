@@ -2,6 +2,7 @@ defmodule CompaniesWeb.JobController do
   use CompaniesWeb, :controller
 
   alias Companies.{Companies, Jobs, Schema.Job}
+  plug :load_companies when action in [:new, :edit, :create, :update]
 
   def index(conn, _params) do
     jobs = Jobs.list_jobs()
@@ -14,8 +15,8 @@ defmodule CompaniesWeb.JobController do
     render(conn, "new.html", changeset: changeset, company: company)
   end
 
-  def create(conn, %{"job" => job_params, "company_id" => company_id}) do
-    case Jobs.create_job(job_params, company_id) do
+  def create(conn, %{"job" => job_params}) do
+    case Jobs.create_job(job_params) do
       {:ok, _job} ->
         conn
         |> put_flash(:info, "Job created successfully.")
@@ -58,5 +59,9 @@ defmodule CompaniesWeb.JobController do
     conn
     |> put_flash(:info, "Job deleted successfully.")
     |> redirect(to: Routes.job_path(conn, :index))
+  end
+
+  defp load_companies(conn, _) do
+    assign(conn, :companies, Companies.list_companies())
   end
 end
