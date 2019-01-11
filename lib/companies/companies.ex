@@ -33,10 +33,11 @@ defmodule Companies.Companies do
 
   def list_hiring_companies do
     query =
-      from c in Company,
-      join: j in assoc(c, :jobs),
-      order_by: [desc: j.inserted_at],
-      preload: [:industry, :jobs]
+      from(c in Company,
+        join: j in assoc(c, :jobs),
+        order_by: [desc: j.inserted_at],
+        preload: [:industry, :jobs]
+      )
 
     Repo.all(query)
   end
