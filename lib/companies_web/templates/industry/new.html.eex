@@ -1,9 +1,8 @@
-<div class="container-fluid">
-  <h1 class="has-text-centered is-size-2">New Industry</h1>
-  <div class="columns">
-    <div class="column is-4 is-offset-4">
+<div class="container">
+  <h1 class="title has-text-centered">Suggest a new Industry</h1>
+  <div class="columns is-centered">
+    <div class="column is-half">
       <%= render "form.html", Map.put(assigns, :action, Routes.industry_path(@conn, :create)) %>
-      <span><%= link "Back", to: Routes.industry_path(@conn, :index) %></span>
     </div>
   </div>
 

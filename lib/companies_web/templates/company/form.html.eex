@@ -6,6 +6,15 @@
   <% end %>
 
   <div class="field">
+    <%= label f, :industry_id, class: "field" %>
+    <div class="control">
+      <span class="select">
+        <%= select f, :industry_id, select_industries(@industries) %>
+      </span>
+    </div>
+  </div>
+
+  <div class="field">
     <%= label f, :name, class: "field" %>
     <div class="control">
       <%= text_input f, :name, class: "input" %>
@@ -16,24 +25,16 @@
   <div class="field">
     <%= label f, :description, class: "field" %>
     <div class="control">
-      <%= text_input f, :description, class: "input" %>
+      <%= textarea f, :description, class: "textarea" %>
       <%= error_tag f, :description %>
     </div>
   </div>
 
   <div class="field">
-    <%= label f, :url, class: "field" %>
+    <%= label f, :url, "Website", class: "field" %>
     <div class="control">
       <%= text_input f, :url, class: "input" %>
       <%= error_tag f, :url %>
-    </div>
-  </div>
-
-  <div class="field">
-    <%= label f, :github, class: "field" %>
-    <div class="control">
-      <%= text_input f, :github, class: "input" %>
-      <%= error_tag f, :github %>
     </div>
   </div>
 
@@ -45,22 +46,32 @@
     </div>
   </div>
 
+  <hr>
+
+  <h5 class="subtitle is-5">Optional fields</h5>
+
   <div class="field">
-    <%= label f, :blog, class: "field" %>
+    <%= label f, :github, "GitHub", class: "field" %>
+    <div class="control">
+      <%= text_input f, :github, class: "input" %>
+      <%= error_tag f, :github %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= label f, :blog, "Blog website", class: "field" %>
     <div class="control">
       <%= text_input f, :blog, class: "input" %>
       <%= error_tag f, :blog %>
     </div>
   </div>
 
-  <div class="field">
-    <%= label f, :industry_id, class: "field" %>
+  <div class="field is-grouped is-grouped-centered">
     <div class="control">
-      <%= select f, :industry_id, select_industries(@industries) %>
+      <%= submit "Save", class: "button is-primary" %>
     </div>
-  </div>
-
-  <div>
-    <%= submit "Save", class: "button is-outlined" %>
+    <div class="control">
+      <%= link "Back", to: Routes.company_path(@conn, :recent), class: "button is-primary" %>
+    </div>
   </div>
 <% end %>
