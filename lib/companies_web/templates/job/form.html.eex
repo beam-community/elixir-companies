@@ -6,6 +6,14 @@
   <% end %>
 
   <div class="field">
+      <%= label f, :company_id, class: "field" %>
+      <div class="control">
+          <%= select f, :company_id, companies_for_select(@companies), class: "input" %>
+          <%= error_tag f, :company_id %>
+      </div>
+  </div>
+
+  <div class="field">
     <%= label f, :title, class: "field" %>
     <div class="control">
       <%= text_input f, :title, class: "input" %>
