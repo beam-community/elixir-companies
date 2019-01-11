@@ -1,11 +1,10 @@
 <div class="container">
-  <div class="columns">
-    <div class="column is-4 is-offset-4">
-      <h1 class="has-text-centered is-size-2">New Company</h1>
+  <div class="columns is-centered">
+    <div class="column is-half">
+      <h1 class="has-text-centered title">New Company</h1>
 
       <%= render "form.html", Map.put(assigns, :action, Routes.company_path(@conn, :create)) %>
 
-      <span><%= link "Back", to: Routes.company_path(@conn, :index) %></span>
     </div>
   </div>
 </div>
