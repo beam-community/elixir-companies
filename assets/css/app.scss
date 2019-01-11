@@ -24,28 +24,36 @@ $footer-background-color: $link;
 html {
   background-attachment:  fixed, fixed;
   background-image:       asset_url("overlay.png"),	asset_url("paper_fibers.png");
+
   body {
     @include font-smoothing(on);
   }
+
   body, input, select, textarea {
     line-height: 1.35em;
   }
+
   footer {
     color: #fff;
+
     a {
       color: findColorInvert($primary);
     }
+
     strong {
       color: #fff;
     }
   }
+
   .purple-bg {
     background-color: $link;
     color: #fff !important;
   }
+
   .purple {
     color: $link-hover;
   }
+
   .title {
     font-family: "Roboto Slab", serif;
     font-weight: 700;
@@ -57,32 +65,47 @@ html {
       font-weight: 400;
     }
   }
+
   .subtitle{
     font-family: "Roboto Slab", serif;
   }
+
   .burger {
     color: $grey-dark;
   }
+
   .navbar-item{
     font-size: 1em;
   }
+
   .controls {
     box-sizing: initial !important;
   }
+
   .box {
     &.company {
       min-height: 350px;
       max-height: 350px;
       overflow: auto;
     }
+
     .company-info {
       padding: 10px 0px;
       border-bottom: 1px solid $grey-lighter;
       border-top: 1px solid $grey-lighter;
     }
   }
+
   form {
-      padding-top: 20px;
-      padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  footer {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 30;
   }
 }
