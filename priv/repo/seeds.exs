@@ -171,15 +171,16 @@ Enum.each(industries, &Repo.insert!(%Industry{name: &1}))
 real_estate = Repo.insert!(%Industry{name: "Real Estate/Mortgage"})
 technology_consulting = Repo.insert!(%Industry{name: "Technology Consulting"})
 
-plataformatec = Repo.insert!(%Company{
-  name: "Plataformatec",
-  description:
-    "Project inception, coaching, tailored projects, general consulting. Sponsor of Elixir, employer to Elixir's BDFL.",
-  github: "https://github.com/plataformatec",
-  industry_id: technology_consulting.id,
-  location: "São Paulo, Brazil",
-  url: "http://plataformatec.com.br"
-})
+plataformatec =
+  Repo.insert!(%Company{
+    name: "Plataformatec",
+    description:
+      "Project inception, coaching, tailored projects, general consulting. Sponsor of Elixir, employer to Elixir's BDFL.",
+    github: "https://github.com/plataformatec",
+    industry_id: technology_consulting.id,
+    location: "São Paulo, Brazil",
+    url: "http://plataformatec.com.br"
+  })
 
 Repo.insert!(%Job{
   company_id: plataformatec.id,

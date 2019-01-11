@@ -50,6 +50,7 @@ defmodule Companies.Jobs do
   """
   def create_job(attrs \\ %{}, company_id) do
     company = Companies.get_company!(company_id)
+
     %Job{company_id: company.id}
     |> Job.changeset(attrs)
     |> Repo.insert()
