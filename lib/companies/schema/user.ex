@@ -4,7 +4,10 @@ defmodule Companies.Schema.User do
 
   schema "users" do
     field(:email, :string)
+    field(:nickname, :string)
     field(:token, :string)
+
+    field(:maintainer, :boolean, default: false, virtual: true)
 
     timestamps()
   end
@@ -12,7 +15,7 @@ defmodule Companies.Schema.User do
   @doc false
   def changeset(user, attrs) do
     user
-    |> cast(attrs, [:email, :token])
-    |> validate_required([:email, :token])
+    |> cast(attrs, [:email, :nickname, :token])
+    |> validate_required([:email, :nickname, :token])
   end
 end
