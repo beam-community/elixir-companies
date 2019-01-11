@@ -4,14 +4,14 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Companies · Phoenix Framework</title>
+    <title><%= site_title() %></title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   </head>
   <body>
-    <%= render "navbar.html", conn: @conn, industries_for_menu: @industries_for_menu, site_data: @site_data %>
+    <%= render "navbar.html", conn: @conn %>
     <%= render @view_module, @view_template, assigns %>
     <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
-    <%= render "footer.html", conn: @conn, site_data: @site_data %>
+    <%= render "footer.html", conn: @conn %>
   </body>
 </html>

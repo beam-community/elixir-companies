@@ -7,9 +7,7 @@ defmodule CompaniesWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-    plug CompaniesWeb.Plugs.Menu
-    plug CompaniesWeb.Plugs.SiteData
-    plug CompaniesWeb.Plugs.Authorize
+    plug CompaniesWeb.Plugs.Session
   end
 
   pipeline :api do
@@ -32,10 +30,14 @@ defmodule CompaniesWeb.Router do
   end
 
   scope "/auth", CompaniesWeb do
-    pipe_through [:browser, :auth]
+    pipe_through [:browser]
 
     get "/signout", AuthController, :signout
     get "/github", AuthController, :request
     get "/github/callback", AuthController, :callback
+  end
+
+  scope "/admin", CompaniesWeb do
+    pipe_through [:browser, :auth]
   end
 end

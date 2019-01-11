@@ -1,20 +1,23 @@
 defmodule CompaniesWeb.Plugs.Authorize do
+  @moduledoc """
+  A simple plug to prevent users without maintainer status from continuing
+  """
+
+  import Phoenix.Controller, only: [put_flash: 3, redirect: 2]
   import Plug.Conn
 
-  alias Companies.Accounts
+  alias CompaniesWeb.Router.Helpers, as: Routes
 
   def init(opts), do: opts
 
-  def call(conn, _opts) do
+  def call(%{assigns: %{current_user: %{maintainer: true}}} = conn, _opts) do
     conn
-    |> get_session(:user_id)
-    |> assign_user(conn)
   end
 
-  defp assign_user(nil, conn), do: conn
-
-  defp assign_user(user_id, conn) do
-    user = Accounts.get_user!(user_id)
-    assign(conn, :current_user, user)
+  def call(conn, _opts) do
+    conn
+    |> put_status(401)
+    |> put_flash(:error, "Insufficient permissions")
+    |> redirect(to: Routes.company_path(conn, :recent))
   end
 end

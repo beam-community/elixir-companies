@@ -1,19 +1,9 @@
 defmodule CompaniesWeb.CompanyView do
   use CompaniesWeb, :view
 
-  def hiring_ribbon(company) do
-    case hiring?(company) do
-      true -> "has-ribbon"
-      false -> ""
-    end
-  end
+  def hiring?(%{jobs: jobs}), do: length(jobs) > 0
 
-  def hiring?(company) do
-    case company.jobs do
-      [] -> false
-      _ -> true
-    end
-  end
+  def hiring_ribbon(company), do: if(hiring?(company), do: "has-ribbon", else: "")
 
   def industry_name(company) do
     case company.industry do
