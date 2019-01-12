@@ -5,7 +5,8 @@ defmodule Companies.Companies do
 
   import Ecto.Query, warn: false
 
-  alias Companies.{Repo, Schema.Company}
+  alias Companies.{PendingChanges, Repo}
+  alias Companies.Schema.Company
 
   @doc """
   Returns the list of companies.
@@ -66,21 +67,22 @@ defmodule Companies.Companies do
   def get_company!(id), do: Repo.get!(Company, id)
 
   @doc """
-  Creates a company.
+  Submits a new company for approval.
 
   ## Examples
 
-      iex> create_company(%{field: value})
-      {:ok, %Company{}}
+      iex> create(%{field: value}, current_user())
+      :ok
 
-      iex> create_company(%{field: bad_value})
+      iex> create(%{field: bad_value}, current_user())
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_company(attrs \\ %{}) do
+  @spec create(map(), map()) :: {:ok, Ecto.Schema.t()} | {:error, Ecto.Changeset.t()}
+  def create(attrs, user) do
     %Company{}
     |> Company.changeset(attrs)
-    |> Repo.insert()
+    |> PendingChanges.create(:insert, user)
   end
 
   @doc """
