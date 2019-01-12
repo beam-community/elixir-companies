@@ -7,25 +7,25 @@ defmodule CompaniesWeb.CompanyController do
     companies_count = Companies.count_total()
     recent_companies = Companies.list_recent_companies()
 
-    render(conn, "recent.html",
-      recent_companies: recent_companies,
-      companies_count: companies_count
-    )
+    render(conn, "recent.html", recent_companies: recent_companies, companies_count: companies_count)
   end
 
   def hiring(conn, _params) do
     hiring_companies = Companies.list_hiring_companies()
+
     render(conn, "hiring.html", hiring_companies: hiring_companies)
   end
 
   def index(conn, _params) do
     companies = Companies.list_companies()
+
     render(conn, "index.html", companies: companies)
   end
 
   def new(conn, _params) do
     changeset = Companies.change_company(%Company{})
     industries = Industries.list_industries()
+
     render(conn, "new.html", changeset: changeset, industries: industries)
   end
 
@@ -34,7 +34,7 @@ defmodule CompaniesWeb.CompanyController do
       :ok ->
         conn
         |> put_flash(:info, "Company created successfully.")
-        |> redirect(to: Routes.company_path(conn, :show, company))
+        |> redirect(to: Routes.company_path(conn, :recent))
 
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "new.html", changeset: changeset)

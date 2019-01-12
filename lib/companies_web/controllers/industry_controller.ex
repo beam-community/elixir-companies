@@ -18,7 +18,7 @@ defmodule CompaniesWeb.IndustryController do
       :ok ->
         conn
         |> put_flash(:info, "Industry created successfully.")
-        |> redirect(to: Routes.industry_path(conn, :show, industry))
+        |> redirect(to: Routes.company_path(conn, :recent))
 
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "new.html", changeset: changeset)

@@ -4,7 +4,9 @@ defmodule Companies.Industries do
   """
 
   import Ecto.Query, warn: false
-  alias Companies.{Repo, Schema.Industry}
+
+  alias Companies.{Repo, PendingChanges}
+  alias Companies.Schema.Industry
 
   @doc """
   Returns the list of industries.
@@ -54,21 +56,22 @@ defmodule Companies.Industries do
   end
 
   @doc """
-  Creates a industry.
+  Creates a new industry suggestion.
 
   ## Examples
 
-      iex> create_industry(%{field: value})
+      iex> create(%{field: value}, current_user())
       {:ok, %Industry{}}
 
-      iex> create_industry(%{field: bad_value})
+      iex> create(%{field: bad_value}, current_user())
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_industry(attrs \\ %{}) do
+  @spec create(map(), map()) :: {:ok, Ecto.Schema.t()} | {:error, Ecto.Changeset.t()}
+  def create(attrs, user) do
     %Industry{}
     |> Industry.changeset(attrs)
-    |> Repo.insert()
+    |> PendingChanges.create(:insert, user)
   end
 
   @doc """

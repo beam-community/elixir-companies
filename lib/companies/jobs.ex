@@ -5,7 +5,8 @@ defmodule Companies.Jobs do
 
   import Ecto.Query, warn: false
 
-  alias Companies.{Companies, Repo, Schema.Job}
+  alias Companies.{Repo, PendingChanges}
+  alias Companies.Schema.Job
 
   @doc """
   Returns the list of jobs.
@@ -37,21 +38,22 @@ defmodule Companies.Jobs do
   def get_job!(id), do: Repo.get!(Job, id)
 
   @doc """
-  Creates a job.
+  Submits a job listing for approval.
 
   ## Examples
 
-      iex> create_job(%{field: value})
-      {:ok, %Job{}}
+      iex> create(%{field: value}, current_user())
+      :ok
 
-      iex> create_job(%{field: bad_value})
+      iex> create(%{field: bad_value}, current_user())
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_job(attrs \\ %{}) do
+  @spec create(map(), map()) :: {:ok, Ecto.Schema.t()} | {:error, Ecto.Changeset.t()}
+  def create(attrs, user) do
     %Job{}
     |> Job.changeset(attrs)
-    |> Repo.insert()
+    |> PendingChanges.create(:insert, user)
   end
 
   @doc """
