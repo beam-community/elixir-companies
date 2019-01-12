@@ -5,15 +5,15 @@ defmodule Companies.Schema.Company do
   alias Companies.Schema.{Industry, Job}
 
   schema "companies" do
-    field(:blog, :string)
-    field(:description, :string)
-    field(:github, :string)
-    field(:location, :string)
-    field(:name, :string)
-    field(:url, :string)
+    field :blog, :string
+    field :description, :string
+    field :github, :string
+    field :location, :string
+    field :name, :string
+    field :url, :string
 
-    belongs_to(:industry, Industry)
-    has_many(:jobs, Job)
+    belongs_to :industry, Industry
+    has_many :jobs, Job
 
     timestamps()
   end

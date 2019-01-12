@@ -6,13 +6,13 @@ defmodule Companies.Schema.PendingChange do
   alias Companies.Schema.User
 
   schema "pending_changes" do
-    field(:action, :string)
-    field(:approved, :boolean, default: false)
-    field(:changes, :map)
-    field(:note, :string)
-    field(:resource, :string)
+    field :action, :string
+    field :approved, :boolean, default: false
+    field :changes, :map
+    field :note, :string
+    field :resource, :string
 
-    belongs_to(:user, User)
+    belongs_to :user, User
 
     timestamps()
   end
