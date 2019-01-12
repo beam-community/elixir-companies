@@ -1,1 +1,1 @@
-<%= render "companies.html", companies: @companies  %>
+<%= render "companies.html", companies: @companies, conn: @conn %>

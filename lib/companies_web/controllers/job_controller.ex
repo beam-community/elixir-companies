@@ -10,7 +10,7 @@ defmodule CompaniesWeb.JobController do
   end
 
   def new(conn, %{"company_id" => company_id}) do
-    changeset = Jobs.change_job(%Job{})
+    changeset = Jobs.change_job(%Job{company_id: company_id})
     company = Companies.get_company!(company_id)
     render(conn, "new.html", changeset: changeset, company: company)
   end
