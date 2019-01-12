@@ -5,12 +5,7 @@ defmodule CompaniesWeb.CompanyView do
 
   def hiring_ribbon(company), do: if(hiring?(company), do: "has-ribbon", else: "")
 
-  def industry_name(company) do
-    case company.industry do
-      nil -> ""
-      industry -> industry.name
-    end
-  end
+  def industry_name(%{industry: %{name: industry_name}}), do: industry_name
 
   def link_title(url) do
     url
@@ -20,9 +15,6 @@ defmodule CompaniesWeb.CompanyView do
   end
 
   def render("url.html", %{url: nil}), do: ""
-  # def render("url.html", %{url: url}) do
-  #   render "url.html", url: url
-  # end
   def render("blog.html", %{blog: nil}), do: ""
   def render("github.html", %{github: nil}), do: ""
   def render("location.html", %{location: nil}), do: ""
