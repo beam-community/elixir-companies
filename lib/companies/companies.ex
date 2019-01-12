@@ -17,7 +17,9 @@ defmodule Companies.Companies do
 
   """
   def list_companies do
-    Repo.all(Company)
+    Company
+    |> Repo.all()
+    |> Repo.preload([:industry, :jobs])
   end
 
   def list_recent_companies do
