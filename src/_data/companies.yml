@@ -2202,3 +2202,13 @@ PagerDuty:
   jobs:
     - title: All Roles
       url: https://www.pagerduty.com/careers/
+
+Fast Radius:
+  industry: Additive Manufacturing & 3D Printing
+  url: https://www.fastradius.com/
+  github: https://github.com/fast-radius/
+  location: Chicago
+  description: "Fast Radius is the leading provider of comprehensive additive manufacturing solutions – from application discovery, to product design and testing, to industrial-grade production and global fulfillment. We love Elixir, and use it all over the stack, from embedded hardware to web applications to data processing."
+  jobs:
+    - title: Software Engineer
+      url: https://www.fastradius.com/careers
