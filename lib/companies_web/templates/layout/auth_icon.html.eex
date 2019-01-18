@@ -1,13 +1,16 @@
 <%= if signed_in?(@conn) do %>
-  <%= link to: Routes.auth_path(@conn, :signout), class: "navbar-item is-hidden-#{@version_hidden}" do %>
-    <span class="icon has-text-grey-darker">
-      <i class="fas fa-lg fa-sign-out-alt"></i>
+  <%= link to: Routes.auth_path(@conn, :signout), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
+    <span>Sign Out</span>
+    <span class="icon">
+      <i class="fas fa-sign-out"></i>
     </span>
   <% end %>
 <% else %>
-  <%= link to: "/auth/github", class: "navbar-item is-hidden-#{@version_hidden}" do %>
-    <span class="icon has-text-grey-darker">
-      <i class="fab fa-lg fa-github"></i>
+  <%= link to: "/auth/github", class: "navbar-item is-hidden-#{@version_hidden} button" do %>
+    <span>Sign In</span>
+
+    <span class="icon">
+      <i class="fab fa-github"></i>
     </span>
   <% end %>
 <% end %>

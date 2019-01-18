@@ -21,6 +21,8 @@ defmodule CompaniesWeb.Router do
   scope "/", CompaniesWeb do
     pipe_through :browser
 
+    resources "/pending", Admin.PendingChangeController, only: [:index, :show, :create]
+
     get "/", CompanyController, :recent
     get "/hiring", CompanyController, :hiring
     resources "/companies", CompanyController
@@ -37,7 +39,9 @@ defmodule CompaniesWeb.Router do
     get "/github/callback", AuthController, :callback
   end
 
-  scope "/admin", CompaniesWeb do
+  scope "/admin", CompaniesWeb.Admin do
     pipe_through [:browser, :auth]
+
+    resources "/pending", PendingChangeController
   end
 end
