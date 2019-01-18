@@ -28,7 +28,7 @@ config :phoenix, :json_library, Jason
 config :companies,
   site_data: %{
     name: "Elixir Companies",
-    description: "A curated list of companies using Elixir in production, organized by industry.",
+    description: "A collection of companies using Elixir in production.",
     maintainers: [
       "doompsork",
       "burden",

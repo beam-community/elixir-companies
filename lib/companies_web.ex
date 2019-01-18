@@ -44,6 +44,7 @@ defmodule CompaniesWeb do
       import CompaniesWeb.ErrorHelpers
       import CompaniesWeb.Gettext
       import CompaniesWeb.SiteHelpers
+      import CompaniesWeb.UserHelpers
       alias CompaniesWeb.Router.Helpers, as: Routes
     end
   end

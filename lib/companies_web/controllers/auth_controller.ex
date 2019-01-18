@@ -7,8 +7,9 @@ defmodule CompaniesWeb.AuthController do
 
   def callback(%{assigns: %{ueberauth_auth: auth}} = conn, _params) do
     user_params = %{
-      token: auth.credentials.token,
-      email: auth.info.email
+      email: auth.info.email,
+      nickname: auth.info.nickname,
+      token: auth.credentials.token
     }
 
     signin(conn, user_params)
@@ -24,7 +25,7 @@ defmodule CompaniesWeb.AuthController do
     case Accounts.create_user(user_params) do
       {:ok, user} ->
         conn
-        |> put_flash(:info, "Welcome back!")
+        |> put_flash(:info, "Welcome!")
         |> put_session(:user_id, user.id)
         |> redirect(to: Routes.company_path(conn, :recent))
 

@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="columns is-centered">
+    <div class="column is-half">
+      <span class="has-text-centered">
+        <h2 class="title is-2">Pending Change</h2>
+      </span>
+
+      <div class="tabs is-large is-centered">
+        <ul>
+          <li class="diff is-active"><a>Diff</a></li>
+          <li class="changes"><a>Changes</a></li>
+          <li class="original"><a>Original</a></li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="diff"></div>
+        <div class="original is-hidden">{ "name": "Plataformatec", "description": "Project inception, coaching, tailored projects, general consulting. Sponsor of Elixir, employer to Elixir's BDFL.", "github": "https://github.com/plataformatec", "location": "São Paulo, Brazil", "url": "http://plataformatec.com.br"}</div>
+          <div class="changes is-hidden">{ "name": "Plataformatec", "description": "Project consulting. Sponsor of Elixir, employer to Elixir's BDFL.", "github": "https://github.com/plataformatec", "location": "São Paulo, Brazil", "url": "http://plataformatec.com.br" }</div>
+      </div>
+
+      <div class="field is-grouped is-grouped-centered">
+        <div class="control">
+          <button class="button is-primary">Approve</button>
+        </div>
+        <div class="control">
+          <button class="button is-danger">Reject</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
