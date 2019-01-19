@@ -1,4 +1,12 @@
 <%= if signed_in?(@conn) do %>
+  <%= if admin_session?(@conn) do %>
+    <%= link to: Routes.pending_change_path(@conn, :signout), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
+      <span>Approvals</span>
+      <span class="icon">
+        <i class="fas fa-toolbox"></i>
+      </span>
+    <% end %> 
+  <% end %>
   <%= link to: Routes.auth_path(@conn, :signout), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
     <span>Sign Out</span>
     <span class="icon">
@@ -8,7 +16,6 @@
 <% else %>
   <%= link to: "/auth/github", class: "navbar-item is-hidden-#{@version_hidden} button" do %>
     <span>Sign In</span>
-
     <span class="icon">
       <i class="fab fa-github"></i>
     </span>
