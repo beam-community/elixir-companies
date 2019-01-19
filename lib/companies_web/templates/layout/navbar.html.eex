@@ -6,7 +6,6 @@
         &nbsp;
         <h1 class="title is-5"><%= site_title() %></h1>
       <% end %>
-      <%= render "auth_icon.html", conn: @conn, version_hidden: "desktop" %>
       <div id="navbarBurger" class="navbar-burger burger" data-target="navMain">
         <span></span>
         <span></span>
@@ -48,7 +47,7 @@
         <%= link "Hiring", to: Routes.company_path(@conn, :hiring), class: "navbar-item" %>
       </div>
       <div class="navbar-end">
-        <%= render "auth_icon.html", conn: @conn, version_hidden: "mobile" %>
+        <%= render "account.html", conn: @conn, version_hidden: "mobile" %>
       </div>
     </div>
   </div>
