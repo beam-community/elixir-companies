@@ -1,3 +1,0 @@
-<span class="icon purple"><i class="fas fa-fw fa-lightbulb"></i></span>
-<%= link link_title(@blog), to: @blog, target: :blank %>
-<br>
