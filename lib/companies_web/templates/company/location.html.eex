@@ -1,1 +1,0 @@
-<span class="icon purple"><i class="fas fa-fw fa-location-arrow"></i></span> <%= @location %><br>

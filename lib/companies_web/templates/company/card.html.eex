@@ -7,11 +7,31 @@
   </div>
   <div class="content company-info has-text-left">
     <p class="is-size-7">
-    <span class="icon purple"><i class="fas fa-fw fa-cogs"></i></span> <%= industry_name(@company) %><br>
-    <%= render "url.html", url: @company.url %>
-    <%= render "blog.html", blog: @company.blog %>
-    <%= render "github.html", github: @company.github %>
-    <%= render "location.html", location: @company.location %>
+    <span class="icon purple"><i class="fas fa-fw fa-cogs"></i></span>
+    <%= industry_name(@company) %><br>
+
+    <%= if @company.url do %>
+      <span class="icon purple"><i class="fas fa-fw fa-globe"></i></span>
+      <%= link link_title(@company.url), to: @company.url, target: :blank %>
+      <br>
+    <% end %>
+
+    <%= if @company.blog do %>
+      <span class="icon purple"><i class="fas fa-fw fa-lightbulb"></i></span>
+      <%= link link_title(@company.blog), to: @company.blog, target: :blank %>
+      <br>
+    <% end %>
+
+    <%= if @company.github do %>
+      <span class="icon purple"><i class="fab fa-fw fa-github"></i></span>
+      <%= link "GitHub", to: @company.github, target: :blank %>
+      <br>
+    <% end %>
+
+    <%= if @company.location do %>
+      <span class="icon purple"><i class="fas fa-fw fa-location-arrow"></i></span> <%= @company.location %><br>
+    <% end %>
+
     <%= link to: Routes.job_path(@conn, :new, company_id: @company.id) do %>
       <span class="icon icon-purle" >
         <i class="fas fa-plus" ></i>
@@ -20,7 +40,9 @@
       <% end %>
       <br/>
       <%= for job <- @company.jobs do %>
-        <%= render "job.html", job: job %>
+        <span class="icon purple"><i class="fas fa-briefcase"></i></span>
+        <%= link job.title, to: job.url, target: :blank %>
+        <br>
       <% end %>
     </p>
   </div>

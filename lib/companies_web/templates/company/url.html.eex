@@ -1,3 +1,0 @@
-<span class="icon purple"><i class="fas fa-fw fa-globe"></i></span>
-<%= link link_title(@url), to: @url, target: :blank %>
-<br>
