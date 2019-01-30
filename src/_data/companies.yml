@@ -2219,3 +2219,11 @@ MyDreams:
   github: https://github.com/MyDreamsClub
   location: Moscow, Russia
   description: "MyDreams is the platform wich provides basic social network features. The main feature which distinguishes is working with dreams. Dream can be fulfilled by other users or by the project. Dev team is in deep love with elixir because it helps to solve problems with highload and develop realtime features."
+
+YipYip:
+  industry: Mobile App & Game Development
+  url: https://www.yipyip.nl
+  github: https://github.com/weareyipyip
+  location: Rotterdam, the Netherlands
+  description: "YipYip is a native mobile app developer (iOS & Android) for a diverse range of customers. We mainly work for agencies, small businesses, government & startups. We use Elixir/Phoenix to develop backends and API's for our apps but also for other web based applications such as customer portals. We have a lot of experience in hosting Elixir apps in large docker clusters hosted on AWS." 
+  
