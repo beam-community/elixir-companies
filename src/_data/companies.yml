@@ -2230,3 +2230,11 @@ YipYip:
   location: Rotterdam, the Netherlands
   description: "YipYip is a native mobile app developer (iOS & Android) for a diverse range of customers. We mainly work for agencies, small businesses, government & startups. We use Elixir/Phoenix to develop backends and API's for our apps but also for other web based applications such as customer portals. We have a lot of experience in hosting Elixir apps in large docker clusters hosted on AWS."
 
+Grain:
+  industry: Communication
+  url: https://www.usegrain.com/
+  location: San Mateo, CA, USA
+  description: "Grain is on a mission to organize all team conversations to be accessible and useful for everyone, even if you weren't in the meeting. We do this by creating a replacement to Google docs that syncs perfectly with modern calendaring and video conferencing tools so that everyone is on the same page, with a perfect record of what is important but without requiring massive behavior change."
+  jobs:
+    - title: Backend Engineer - Elixir
+      url: https://angel.co/grain-intelligence/jobs/495036-backend-engineer-elixir
