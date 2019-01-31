@@ -2238,3 +2238,10 @@ Grain:
   jobs:
     - title: Backend Engineer - Elixir
       url: https://angel.co/grain-intelligence/jobs/495036-backend-engineer-elixir
+
+Wise Home:
+  instustry: Home automation
+  url: https://wisehome.dk
+  github: https://github.com/wise-home
+  location: Ry, Denmark
+  description: "Wise Home delivers automation and real time utility meter readings to landlords in primarily rental buildings. We use Elixir in all backend code and in some embedded software. Elixir is a perfect match for keeping persistent TCP connections to small devices in buildings."
