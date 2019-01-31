@@ -8,5 +8,5 @@ defmodule CompaniesWeb.UserHelpers do
     end
   end
 
-  def current_user(conn), do: get_in(conn, [:assigns, :current_user])
+  def current_user(conn), do: conn.assigns[:current_user]
 end
