@@ -872,6 +872,7 @@ Podium:
   industry: Customer Service
   url: https://www.podium.com
   github: https://github.com/podium
+  blog: https://medium.com/podium-engineering
   description: "Podium is an Interaction Management™ platform enabling 30,000+ businesses to communicate more effectively. We've run Elixir in production since 2016, constantly seek passionate engineers to help us modernize local business."
   location: Lehi, UT, USA
   jobs:
