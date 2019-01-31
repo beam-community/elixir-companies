@@ -872,8 +872,12 @@ Podium:
   industry: Customer Service
   url: https://www.podium.com
   github: https://github.com/podium
-  description: "We power customer interaction and drive online reviews for local businesses. YC W16. Elixir powers a lot of our software, and we're based in Lehi, UT, USA."
+  blog: https://medium.com/podium-engineering
+  description: "Podium is an Interaction Management™ platform enabling 30,000+ businesses to communicate more effectively. We've run Elixir in production since 2016, constantly seek passionate engineers to help us modernize local business."
   location: Lehi, UT, USA
+  jobs:
+    - title: All Roles
+      url: https://www.podium.com/careers
 
 Postmates:
   industry: E-Commerce
