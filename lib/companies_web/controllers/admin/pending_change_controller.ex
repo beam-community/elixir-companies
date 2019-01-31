@@ -4,7 +4,7 @@ defmodule CompaniesWeb.Admin.PendingChangeController do
   alias Companies.PendingChanges
 
   def index(conn, _params) do
-    render(conn, "index.html", change: pending_changes())
+    render(conn, "index.html", pending_changes: pending_changes())
   end
 
   def show(conn, _params) do

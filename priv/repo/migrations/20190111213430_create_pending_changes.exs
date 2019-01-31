@@ -6,7 +6,7 @@ defmodule Companies.Repo.Migrations.CreatePendingChanges do
       add :action, :string, null: false
       add :approved, :boolean, default: false, null: false
       add :changes, :map, null: false
-      add :note, :string, null: false
+      add :note, :string
       add :resource, :string, null: false
       add :user_id, references(:users), null: false
 
