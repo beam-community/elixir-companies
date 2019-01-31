@@ -31,13 +31,14 @@ defmodule CompaniesWeb.CompanyController do
 
   def create(conn, %{"company" => params}) do
     case Companies.create(params, current_user(conn)) do
-      :ok ->
+      {:ok, company} ->
         conn
         |> put_flash(:info, "Company created successfully.")
         |> redirect(to: Routes.company_path(conn, :recent))
 
       {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "new.html", changeset: changeset)
+        industries = Industries.list_industries()
+        render(conn, "new.html", changeset: changeset, industries: industries)
     end
   end
 

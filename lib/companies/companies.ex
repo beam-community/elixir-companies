@@ -82,7 +82,7 @@ defmodule Companies.Companies do
   def create(attrs, user) do
     %Company{}
     |> Company.changeset(attrs)
-    |> PendingChanges.create(:insert, user)
+    |> PendingChanges.create(:create, user)
   end
 
   @doc """
