@@ -39,7 +39,7 @@ AdRoll:
   industry: Marketing/Sales
   url: https://www.adroll.com
   github: https://github.com/AdRoll
-  location: San Fransisco, CA, USA
+  location: San Francisco, CA, USA
   description: "AdRoll is a marketing platform enabling brands of all sizes to create personalized ad campaigns based on their own website data. They use Elixir in their high-volume data processing pipeline."
 
 Agilion:
@@ -561,7 +561,7 @@ Hello Sign:
   industry: Legal Services
   url: https://www.hellosign.com
   github: https://github.com/HelloFax
-  description: "eSignature platform. Send and receive electronic signatures securely with the end-user solution or the eSignature API. San Fransisco, CA, USA."
+  description: "eSignature platform. Send and receive electronic signatures securely with the end-user solution or the eSignature API. San Francisco, CA, USA."
   jobs:
     - title: Software Engineer
       url: "https://jobs.lever.co/hellosign/39ea6c41-8ff8-4c93-b0fd-4a6224ef29ec"
@@ -694,7 +694,7 @@ Lob:
   industry: Enterprise Software
   url: https://lob.com
   github: https://github.com/lob
-  description: "APIs for Print, Mail, Postcards, Letters, & Checks. San Fransisco, CA, USA."
+  description: "APIs for Print, Mail, Postcards, Letters, & Checks. San Francisco, CA, USA."
 
 Lonely Planet:
   industry: Leisure/Travel
@@ -1014,7 +1014,7 @@ Shopybot:
 Slack:
   industry: Communication
   url: https://slack.com
-  description: "([GitHub](https://github.com/slackhq/))- Slack is a team communication application. They are using Elixir to build a media server for p2p and group calls. San Fransisco, CA, USA."
+  description: "([GitHub](https://github.com/slackhq/))- Slack is a team communication application. They are using Elixir to build a media server for p2p and group calls. San Francisco, CA, USA."
 
 Sleeperbot:
   industry: Sports
@@ -1603,7 +1603,7 @@ InfluxData:
   industry: Internet Infrastructure
   url: https://www.influxdata.com
   github: https://github.com/influxdata
-  location: San Fransisco, CA, USA
+  location: San Francisco, CA, USA
   description: "InfluxData delivers a modern open source platform built from the ground up for metrics and events (time-sensitive data). They are using Elixir to build InfluxCloud, their hosted database-as-a-service product."
   jobs:
     - title: Elixir/Full stack developer (experience required)
@@ -2090,14 +2090,14 @@ Celeste Computing:
 Brex:
   industry: Financial Technology
   url: https://brex.com
-  location: San Fancisco, California, USA
+  location: San Francisco, California, USA
   description: Brex is rebuilding core financial services from scratch, starting with a credit card for startups. We are 100% Elixir and we use it to build large-scale distributed systems.
 
 Mux:
   industry: Video
   url: https://mux.com
   github: https://github.com/muxinc
-  location: San Fancisco, California, USA
+  location: San Francisco, California, USA
   description: Mux offers real-time performance monitoring and analytics for video streaming, helping publishers deliver better quality of experience to their viewers. The API is built with Elixir.
 
 Ecaresoft:
