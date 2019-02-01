@@ -187,3 +187,42 @@ Repo.insert!(%Job{
   title: "Test Job",
   url: "http://plataformatec.com.br/jobs"
 })
+
+system =
+  Repo.insert!(%User{
+    email: "support@utensils.com",
+    nickname: "system"
+  })
+
+Repo.insert!(%PendingChange{
+  action: "create",
+  changes: %{
+    name: "Utensils",
+    description: """
+    Product development, technical leadership, and training. Sponsors of elixirschool.com, elixir-companies.com and others.
+    """,
+    github: "https://github.com/utensils",
+    industry_id: technology_consulting.id,
+    location: "Global",
+    url: "https://utensils.io"
+  },
+  resource: "company",
+  user_id: system.id
+})
+
+Repo.insert!(%PendingChange{
+  action: "update",
+  changes: %{
+    name: "Plataformatec",
+    description: """
+    Project inception, coaching, and general consulting. Sponsor of Elixir and employer to Elixir's BDFL.
+    """,
+    github: "https://github.com/plataformatec",
+    id: plataformatec.id,
+    industry_id: technology_consulting.id,
+    location: "São Paulo, Brazil",
+    url: "http://plataformatec.com.br"
+  },
+  resource: "company",
+  user_id: system.id
+})

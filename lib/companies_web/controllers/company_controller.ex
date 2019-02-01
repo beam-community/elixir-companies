@@ -31,7 +31,7 @@ defmodule CompaniesWeb.CompanyController do
 
   def create(conn, %{"company" => params}) do
     case Companies.create(params, current_user(conn)) do
-      {:ok, company} ->
+      {:ok, _company} ->
         conn
         |> put_flash(:info, "Company created successfully.")
         |> redirect(to: Routes.company_path(conn, :recent))
