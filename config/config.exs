@@ -30,7 +30,7 @@ config :companies,
     name: "Elixir Companies",
     description: "A collection of companies using Elixir in production.",
     maintainers: [
-      "doompsork",
+      "doomspork",
       "burden",
       "gemantzu"
     ]
