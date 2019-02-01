@@ -2262,3 +2262,13 @@ CareDox:
   jobs:
     - title: Senior Backend Engineer - Elixir
       url: https://caredox.com/careers/?gh_jid=1484987
+
+SmartLogic:
+  industry: Technology Consulting
+  url: https://smartlogic.io/
+  github: https://github.com/smartlogic
+  location: Baltimore, MD, USA
+  description: "SmartLogic is a Baltimore-based consulting company that has been building custom web and mobile software applications since 2005. We work with funded startups, established organizations, and non-profit agencies to bring new projects to life using progressive, best-of-breed technologies and methods. We use Rails, Elixir/Phoenix, React Native, and whatever else we need to get the job done."
+  jobs:
+    - title: Developer
+      url: https://smartlogic.workable.com/j/A57C1DD2C8
