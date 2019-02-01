@@ -8,20 +8,16 @@
         <thead>
           <tr>
             <th>Action</th>
-            <th>Approved?</th>
-            <th>Changes</th>
-            <th>Note</th>
             <th>Resource</th>
+            <th>Note</th>
             <th></th>
           </tr>
         </thead>
         <%= for pending_change <- @pending_changes do %>
         <tr>
           <td><%= pending_change.action %></td>
-          <td><%= pending_change.approved %></td>
-          <td><%= inspect pending_change.changes %></td>
-          <td><%= pending_change.note %></td>
           <td><%= pending_change.resource %></td>
+          <td><%= pending_change.note %></td>
           <td>
             <%= link to: Routes.pending_change_path(@conn, :show, pending_change) do %>
               <i class="fas fa-eye"></i>

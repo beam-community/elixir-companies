@@ -12,6 +12,8 @@ defmodule Companies.Schema.PendingChange do
     field :note, :string
     field :resource, :string
 
+    field :original, :map, virtual: true
+
     belongs_to :user, User
 
     timestamps()

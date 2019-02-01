@@ -7,8 +7,9 @@ defmodule CompaniesWeb.Admin.PendingChangeController do
     render(conn, "index.html", pending_changes: pending_changes())
   end
 
-  def show(conn, _params) do
-    render(conn, "show.html")
+  def show(conn, %{"id" => change_id}) do
+    pending_change = PendingChanges.get(change_id)
+    render(conn, "show.html", pending_change: pending_change)
   end
 
   def update(conn, %{"id" => change_id}) do
@@ -17,7 +18,8 @@ defmodule CompaniesWeb.Admin.PendingChangeController do
         conn
         |> put_flash(:info, "Approval submitted")
         |> redirect(to: Routes.pending_change_path(conn, :index))
-      {:error, changeset} ->
+
+      {:error, _changeset} ->
         conn
         |> put_flash(:error, "Approval failed")
         |> redirect(to: Routes.pending_change_path(conn, :index))

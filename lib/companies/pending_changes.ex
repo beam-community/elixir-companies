@@ -12,8 +12,7 @@ defmodule Companies.PendingChanges do
     with %{action: action, changes: changes, resource: resource} = change <- Repo.get!(PendingChange, change_id),
          module <- resource_module(resource),
          complete_changes <- struct(module, changes),
-         {:ok, _changes} <- apply_changes(action, complete_changes)
-    do
+         {:ok, _changes} <- apply_changes(action, complete_changes) do
       Repo.update!(%{change | approved: true})
     else
       nil -> {:error, "change not found"}
@@ -25,9 +24,59 @@ defmodule Companies.PendingChanges do
   def create(%{valid?: false} = changes, action, _user, _note), do: invalid_change(changes, action)
   def create(changes, action, user, note), do: insert_change(changes, action, note, user)
 
+  def get(id) do
+    case Repo.get(PendingChange, id) do
+      nil ->
+        nil
+
+      pending_change ->
+        current = current_values(pending_change)
+        %{pending_change | original: current}
+    end
+  end
+
   defp apply_changes("delete", resource), do: Repo.delete(resource)
   defp apply_changes("insert", resource), do: Repo.insert(resource)
   defp apply_changes("update", resource), do: Repo.update(resource)
+
+  defp current_values(%{changes: %{"id" => id}, resource: "company"}) do
+    {%{id: industry_id}, current_values} =
+      Company
+      |> Repo.get(id)
+      |> Repo.preload([:industry])
+      |> drop_ecto_fields()
+      |> Map.drop([:jobs])
+      |> drop_nulls()
+      |> Map.pop(:industry)
+
+    Map.put(current_values, :industry_id, industry_id)
+  end
+
+  defp current_values(%{changes: %{"id" => id}, resource: resource}) do
+    module = resource_module(resource)
+
+    module
+    |> Repo.get(id)
+    |> drop_ecto_fields()
+    |> drop_nulls()
+  end
+
+  defp current_values(_) do
+    %{}
+  end
+
+  defp drop_ecto_fields(schema) do
+    schema
+    |> Map.from_struct()
+    |> Map.drop([:__meta__, :inserted_at, :updated_at])
+  end
+
+  defp drop_nulls(map) do
+    Enum.reduce(map, %{}, fn
+      {_k, nil}, acc -> acc
+      {k, v}, acc -> Map.put(acc, k, v)
+    end)
+  end
 
   defp invalid_change(changes, action) do
     {:error, %{changes | repo: Repo, action: action}}

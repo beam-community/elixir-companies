@@ -15,8 +15,8 @@
 
       <div class="box">
         <div class="diff"></div>
-        <div class="original is-hidden">{ "name": "Plataformatec", "description": "Project inception, coaching, tailored projects, general consulting. Sponsor of Elixir, employer to Elixir's BDFL.", "github": "https://github.com/plataformatec", "location": "São Paulo, Brazil", "url": "http://plataformatec.com.br"}</div>
-          <div class="changes is-hidden">{ "name": "Plataformatec", "description": "Project consulting. Sponsor of Elixir, employer to Elixir's BDFL.", "github": "https://github.com/plataformatec", "location": "São Paulo, Brazil", "url": "http://plataformatec.com.br" }</div>
+        <div class="changes is-hidden"><%= to_json(@pending_change.changes) %></div>
+        <div class="original is-hidden"><%= to_json(@pending_change.original)%></div>
       </div>
 
       <div class="field is-grouped is-grouped-centered">
