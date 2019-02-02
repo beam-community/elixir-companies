@@ -22,7 +22,13 @@ defmodule Companies.Industries do
   end
 
   def list_available_industries do
-    query = from(i in Industry, join: c in assoc(i, :companies))
+    query =
+      from i in Industry,
+        join: c in assoc(i, :companies),
+        select: i,
+        distinct: true,
+        order_by: i.name
+
     Repo.all(query)
   end
 
