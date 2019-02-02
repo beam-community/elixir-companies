@@ -19,14 +19,17 @@
         <div class="original is-hidden"><%= to_json(@pending_change.original)%></div>
       </div>
 
-      <div class="field is-grouped is-grouped-centered">
-        <div class="control">
-          <button class="button is-primary">Approve</button>
+      <%= form_tag(Routes.pending_change_path(@conn, :update, @pending_change.id), method: "PATCH") do %>
+        <div class="field is-grouped is-grouped-centered">
+          <div class="control">
+            <%= submit("Approve", class: "button is-primary", name: "apprmval", value: "true") %>
+          </div>
+          <div class="control">
+            <%= submit("Reject", class: "button is-danger", name: "approval", value: "false") %>
+          </div>
         </div>
-        <div class="control">
-          <button class="button is-danger">Reject</button>
-        </div>
-      </div>
+      <% end %>
+
     </div>
   </div>
 </div>

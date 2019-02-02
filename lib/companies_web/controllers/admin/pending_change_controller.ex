@@ -1,6 +1,8 @@
 defmodule CompaniesWeb.Admin.PendingChangeController do
   use CompaniesWeb, :controller
 
+  require Logger
+
   alias Companies.PendingChanges
 
   def index(conn, _params) do
@@ -14,12 +16,14 @@ defmodule CompaniesWeb.Admin.PendingChangeController do
 
   def update(conn, %{"id" => change_id}) do
     case PendingChanges.approve(change_id) do
-      {:ok, _applied_changes} ->
+      {:ok, _approved_changes} ->
         conn
         |> put_flash(:info, "Approval submitted")
         |> redirect(to: Routes.pending_change_path(conn, :index))
 
-      {:error, _changeset} ->
+      {:error, reason} ->
+        Logger.error(reason)
+
         conn
         |> put_flash(:error, "Approval failed")
         |> redirect(to: Routes.pending_change_path(conn, :index))
