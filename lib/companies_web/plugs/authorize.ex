@@ -19,5 +19,6 @@ defmodule CompaniesWeb.Plugs.Authorize do
     |> put_status(401)
     |> put_flash(:error, "Insufficient permissions")
     |> redirect(to: Routes.company_path(conn, :recent))
+    |> halt()
   end
 end
