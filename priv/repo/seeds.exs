@@ -169,7 +169,6 @@ industries = [
 
 Enum.each(industries, &Repo.insert!(%Industry{name: &1}))
 
-real_estate = Repo.insert!(%Industry{name: "Real Estate/Mortgage"})
 technology_consulting = Repo.insert!(%Industry{name: "Technology Consulting"})
 
 plataformatec =

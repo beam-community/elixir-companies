@@ -1,0 +1,31 @@
+{
+  "name": "companies",
+  "scripts": {
+    "postdeploy": "mix do ecto.migrate, run priv/repo/seeds.exs"
+  },
+  "env": {
+    "GITHUB_CLIENT_ID": {
+      "required": true
+    },
+    "GITHUB_CLIENT_SECRET": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    },
+    "MIX_ENV": "dev"
+  },
+  "formation": {},
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/HashNuke/heroku-buildpack-elixir.git"
+    },
+    {
+      "url": "https://github.com/gjaldon/heroku-buildpack-phoenix-static.git"
+    }
+  ],
+  "stack": "heroku-18"
+}
