@@ -3,17 +3,28 @@ defmodule Companies.PendingChanges do
   The public interface to managing our pending data changes
   """
 
+  import Ecto.Query
+
   alias Companies.Repo
   alias Companies.Schema.{Company, Job, Industry, PendingChange}
 
-  def all, do: Repo.all(PendingChange)
+  def all do
+    query =
+      from p in PendingChange,
+        select: p,
+        where: p.approved == false
+
+    Repo.all(query)
+  end
 
   def approve(change_id) do
     with %{action: action, changes: changes, resource: resource} = change <- Repo.get!(PendingChange, change_id),
          module <- resource_module(resource),
-         complete_changes <- struct(module, changes),
-         {:ok, _changes} <- apply_changes(action, complete_changes) do
-      Repo.update!(%{change | approved: true})
+         changeset <- changeset(module, changes),
+         {:ok, _changes} <- apply_changes(action, changeset) do
+      change
+      |> PendingChange.changeset(%{approved: true})
+      |> Repo.update()
     else
       nil -> {:error, "change not found"}
       {:error, changeset} -> {:error, changeset}
@@ -35,9 +46,20 @@ defmodule Companies.PendingChanges do
     end
   end
 
-  defp apply_changes("delete", resource), do: Repo.delete(resource)
-  defp apply_changes("insert", resource), do: Repo.insert(resource)
-  defp apply_changes("update", resource), do: Repo.update(resource)
+  defp apply_changes("create", changeset), do: Repo.insert(changeset)
+  defp apply_changes("update", changeset), do: Repo.update(changeset)
+
+  defp changeset(module, changes) do
+    record =
+      if Map.has_key?(changes, "id") do
+        id = Map.get(changes, "id")
+        Repo.get(module, id)
+      else
+        struct(module, %{})
+      end
+
+    module.changeset(record, changes)
+  end
 
   defp current_values(%{changes: %{"id" => id}, resource: "company"}) do
     {%{id: industry_id}, current_values} =
