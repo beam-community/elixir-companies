@@ -1,9 +1,0 @@
-<div class="container">
-  <h1 class="title has-text-centered">Suggest a new Industry</h1>
-  <div class="columns is-centered">
-    <div class="column is-half">
-      <%= render "form.html", Map.put(assigns, :action, Routes.industry_path(@conn, :create)) %>
-    </div>
-  </div>
-
-</div>

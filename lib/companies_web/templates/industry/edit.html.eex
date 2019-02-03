@@ -1,5 +1,0 @@
-<h1>Edit Industry</h1>
-
-<%= render "form.html", Map.put(assigns, :action, Routes.industry_path(@conn, :update, @industry)) %>
-
-<span><%= link "Back", to: Routes.industry_path(@conn, :index) %></span>
