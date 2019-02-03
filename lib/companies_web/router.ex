@@ -24,7 +24,6 @@ defmodule CompaniesWeb.Router do
     get "/", CompanyController, :recent
     get "/hiring", CompanyController, :hiring
     resources "/companies", CompanyController
-    resources "/industries", IndustryController
     resources "/jobs", JobController
     resources "/users", UserController
   end
