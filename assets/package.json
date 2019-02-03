@@ -6,7 +6,7 @@
     "watch": "webpack --mode development --watch"
   },
   "dependencies": {
-    "bulma": "^0.7.2",
+    "bulma": "jgthms/bulma#master",
     "bulma-extensions": "^3.0.0",
     "diff": "^4.0.1",
     "node-sass": "^4.10.0",
