@@ -41,6 +41,7 @@ defmodule Companies.PendingChanges do
         nil
 
       pending_change ->
+        pending_change = Repo.preload(pending_change, :user)
         current = current_values(pending_change)
         %{pending_change | original: current}
     end

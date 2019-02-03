@@ -11,6 +11,7 @@ defmodule CompaniesWeb.Admin.PendingChangeController do
 
   def show(conn, %{"id" => change_id}) do
     pending_change = PendingChanges.get(change_id)
+
     render(conn, "show.html", pending_change: pending_change)
   end
 
