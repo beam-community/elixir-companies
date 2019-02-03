@@ -14,37 +14,9 @@
     </div> <!-- /navbarbrand -->
     <div class="navbar-menu" id="navMain">
       <div class="navbar-start">
-
         <%= link "Home", to: Routes.company_path(@conn, :recent), class: "navbar-item" %>
-
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link is-active">Industries</a>
-
-          <div id="moreDropdown" class="navbar-dropdown">
-
-            <div class="columns">
-              <%= for column <- industry_groupings() do %>
-                <div class="column">
-                  <%= for industry <- column do %>
-                    <%= link to: Routes.industry_path(@conn, :show, industry.id), class: "navbar-item" do %>
-                      <span class="has-text-weight-bold">
-                        <%= industry.name %>
-                      </span>
-                    <% end %>
-                  <% end %>
-                </div>
-              <% end %>
-            </div>
-
-            <div class="columns">
-              <div class="column is-8 is-offset-2">
-                <%= link "New Industry", to: Routes.industry_path(@conn, :new), class: "button is-primary" %>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <%= link "Hiring", to: Routes.company_path(@conn, :hiring), class: "navbar-item" %>
+        <%= link "Browse", to: Routes.company_path(@conn, :index), class: "navbar-item" %>
+        <%= link "Jobs", to: Routes.job_path(@conn, :index), class: "navbar-item" %>
       </div>
       <div class="navbar-end">
         <%= render "account.html", conn: @conn, version_hidden: "mobile" %>
