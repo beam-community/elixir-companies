@@ -1,10 +1,32 @@
-<%= render "hero_intro.html", conn: @conn, companies_count: @companies_count %>
+<section class="hero is-primary is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="content">
+        <h1 class="title is-4 thin">
+          <%= site_description() %>
+        </h1>
+        <p>
+        With <span class="has-text-weight-bold">
+          <%= @companies_count %>
+        </span> and counting...</p>
+        <p>
+        <%= link to: Routes.company_path(@conn, :new), class: "button is-white is-rounded is-outlined" do %>
+          <span class="icon">
+            <i class="fab fa-github"></i>
+          </span>
+          <span class="has-text-weight-bold ">Add a company</span>
+        <% end %>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section">
   <div class="container">
     <div class="content">
       <h1 class="title is-3 fancy">Recent Additions</h1>
       <div class="columns is-desktop is-multiline">
-        <%= render CompaniesWeb.CompanyView, "companies.html", companies: @recent_companies, conn: @conn %>
+        <%= render "companies.html", companies: @recent_companies, conn: @conn %>
       </div> <!-- /columns -->
     </div> <!-- /content -->
   </div> <!-- /container -->
