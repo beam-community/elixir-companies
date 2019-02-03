@@ -4,6 +4,9 @@
       <span class="has-text-centered">
         <h2 class="title is-2">Pending Change</h2>
       </span>
+      <span class="has-text-centered">
+        <h2 class="title is-5">Requested by: <a href="https://github.com/<%= @pending_change.user.nickname %>" target="_blank"><%= @pending_change.user.nickname %></a></h2>
+      </span>
 
       <div class="tabs is-large is-centered">
         <ul>
