@@ -10,11 +10,21 @@
           <%= @companies_count %>
         </span> and counting...</p>
         <p>
-        <%= link to: Routes.company_path(@conn, :new), class: "button is-white is-rounded is-outlined" do %>
-          <span class="icon">
-            <i class="fab fa-github"></i>
-          </span>
-          <span class="has-text-weight-bold ">Add a company</span>
+
+        <%= if signed_in?(@conn) do %>
+          <%= link to: Routes.company_path(@conn, :new), class: "button is-white is-rounded is-outlined" do %>
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span class="has-text-weight-bold">Add a company</span>
+          <% end %>
+        <% else %>
+          <%= link to: "/auth/github", class: "button is-white is-rounded is-outlined" do %>
+            <span class="has-text-weight-bold">Sign in & list free</span>
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+          <% end %>
         <% end %>
         </p>
       </div>
