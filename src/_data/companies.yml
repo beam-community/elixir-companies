@@ -2272,3 +2272,22 @@ SmartLogic:
   jobs:
     - title: Developer
       url: https://smartlogic.workable.com/j/A57C1DD2C8
+
+Healthdesk.ai:
+  industry: Healthcare
+  url: https://healthcare.ai
+  location: Orange County, CA
+  description: Equip your facility with a suite of AI-powered tools and services built exclusively for health clubs, gyms, and fitness centers to stay one step ahead.
+  jobs:
+    - title: Contract
+      url: https://angel.co/l/2fkyXV
+
+Citrusbyte:
+  industry: Technology Consulting
+  url: https://citrusbyte.com/
+  github: https://github.com/citrusbyte
+  location: Los Angeles, CA
+  description: From whiteboarding new concepts to long-term support, we work with startups and large multi-national enterprises to develop new applications.
+  jobs:
+    - title: Solutions Architect
+    - url: https://citrusbyte.applytojob.com/apply/WLPNjpqVlF/Software-Solutions-Architect-Remote?source=ElixirCompaniesCom
