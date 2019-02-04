@@ -614,12 +614,6 @@ Infinite Red:
   github: https://github.com/infinitered
   description: "Mobile and web app design and development services, using Elixir / Phoenix, React, and React Native. Based in Portland, San Francisco, and remote across the USA, with clients in eight countries. We build and maintain dozens of popular open source libraries, including [Thesis](github.com/infinitered/thesis-phoenix) and [Torch](github.com/infinitered/torch)."
 
-John Done:
-  industry: Technology Consulting
-  url: https://johndone.ai
-  github:
-  description: "In the future, we will speak to machines, politely asking them to carry out tasks for us. At John Done Inc. we are doing our part to build that future by bringing the voice assistant John Done to telephone calls, communications platforms, and web conferences."
-
 Isnor Creative:
   industry: Technology Consulting
   url: http://www.isnorcreative.com
@@ -721,13 +715,6 @@ Mainframe:
   industry: Communication
   url: http://mainframe.co/
   description: "Building the future of email."
-
-Matched Pattern:
-  industry: Technology Consulting
-  url: https://www.matchedpattern.com/
-  github: https://github.com/MatchedPattern
-  location: Columbus, OH
-  description: "We're Matched Pattern. We’re a software consultancy based in Columbus, Ohio. We specialize in web development, infrastructure and Internet of Things (IoT). Each of our Central Ohio-based, full-time developers have unique experiences and bring insight to each of our offerings. We use Elixir to build scalable web applications."
 
 Mediteo:
   industry: Healthcare
@@ -1118,12 +1105,6 @@ Talkdesk:
   github: https://github.com/talkdesk
   description: "Cloud-Based Call Center Software."
 
-Tappsi:
-  industry: Transportation
-  url: https://tappsi.co/
-  github: https://github.com/tappsi
-  description: "Taxi calls easier and safer in Colombia."
-
 Teachers Pay Teachers:
   industry: Marketplaces
   url: https://www.teacherspayteachers.com/
@@ -1158,9 +1139,6 @@ The RealReal:
   url: https://www.therealreal.com
   github: https://github.com/TheRealReal
   description: "Marketplace for luxury fashion resale products."
-  jobs:
-    - title: Lead Full Stack Engineer
-      url: "https://www.therealreal.com/careers/4CE9F124E3"
 
 The book of everyone:
   industry: E-Commerce
@@ -1179,12 +1157,6 @@ Tinfoil Security:
   industry: Security
   url: https://www.tinfoilsecurity.com/
   description: "([GitHub](https://github.com/tinfoil/)) - Tinfoil Security provides a dynamic security scanning solution for DevOps. We integrate with your CI system to find and help resolve security vulnerabilities in web applications and web services before they ever get deployed to production. We use Elixir to power our web service scanning engine."
-
-Tongdao:
-  industry: Communication
-  url: https://tongdao.io
-  github: https://github.com/tongdao
-  description: "Tongdao is a data-driven marketing platform designed to enable businesses to understand their customers and engage them in a smart and personalized way across multiple channels. Using Elixir to power our messaging system and data collection backend. Shanghai, China."
 
 Margo Bank:
   industry: Financial Technology
@@ -1750,9 +1722,6 @@ Tele2:
   url:  http://www.tele2.com/
   location:  Amsterdam, The Netherlands
   description: "Telecom Provider, replacing some of the internal tooling with Elixir."
-  jobs:
-    - title: Ruby (Elixir) Developer
-      url: https://werkenbij.tele2.nl/vacatures/it-services-network-it/ruby-elixir-developer-diemen/
 
 Wuunder:
   industry: Transportation
@@ -1826,9 +1795,6 @@ iwantmyname:
   url: https://iwantmyname.com
   github: https://github.com/iwantmyname
   description: "We sell domain names and specialize in making experiences easy for humans. The good ones. And we've been doing it for a decade now."
-  jobs:
-    - title: Elixir/Erlang developer
-      url: https://iwantmyname.com/jobs/elixir
 
 Vragments:
   industry: Computer Software/Engineering
@@ -1981,9 +1947,6 @@ Blend Media:
   github: https://github.com/blendmedia
   location: London, United Kingdom
   description: "Blend is the world’s leading provider for Brands and Publishers looking to benefit from the deeper audience engagement that immersive content offers. We have built the largest library of premium 360° Video/VR films, available to license for use in campaigns across social media, Virtual Reality headsets and WebVR, and we run a global network of expert 360° Video Creators. Blend also makes it easy for Brands and Publishers to create their own 360 ad experiences all within the browser. Our \"360 Stories\" are customisable WebVR environments that deliver an engaging and shareable ad format, scalable across all social networks. Our backend is written in Elixir using Phoenix."
-  jobs:
-    - title: Software Engineer - Elixir
-      url: https://blend.media/careers/software-engineer-elixir
 
 Zenaton:
   industry: Computer Software/Engineering
@@ -2058,12 +2021,6 @@ Bizneo HR:
   location: Madrid, Spain
   description: "Bizneo’s HR Suite offers tools to manage your entire employee lifecycle. Built with Elixir and Phoenix, our HR management tools empower companies to act quickly and think globally in their HR processes."
 
-Aveshika:
-  industry: Hospitality
-  url:  http://aveshika.com
-  location: Chennai, India
-  description: "We are a product development company specialised in Hospitality sector. We have used Elixir, Phoenix & VueJS to develop a Cloud based Restaurant Management System & Visitor Management System"
-
 Aviacommerce:
   industry: E-Commerce
   url: https://aviacommerce.org
@@ -2082,11 +2039,6 @@ FirstAlert:
   url: https://www.firstalert.com/
   location: Aurora, IL, USA and Atlanta, GA, USA
   description: "First Alert is a brand in Newell's Security & Safety suite. We build smoke alarms, safety products, and smart home devices. We use Phoenix for user-facing web APIs and distributed Elixir for the cloud side of our smart home products."
-  jobs:
-    - title: Senior Cloud Engineer
-      url: "https://careers.newellbrands.com/us/en/job/NEBRUS1327/Senior-Cloud-Engineer-Safety-and-Security"
-    - title:
-      url: "https://careers.newellbrands.com/us/en/job/NEBRUS1328/Principal-Cloud-Engineer-Safety-and-Security"
 
 Celeste Computing:
   industry: Computer Software/Engineering
@@ -2290,4 +2242,4 @@ Citrusbyte:
   description: From whiteboarding new concepts to long-term support, we work with startups and large multi-national enterprises to develop new applications.
   jobs:
     - title: Solutions Architect
-    - url: https://citrusbyte.applytojob.com/apply/WLPNjpqVlF/Software-Solutions-Architect-Remote?source=ElixirCompaniesCom
+      url: https://citrusbyte.applytojob.com/apply/WLPNjpqVlF/Software-Solutions-Architect-Remote?source=ElixirCompaniesCom
