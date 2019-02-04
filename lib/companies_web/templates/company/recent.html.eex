@@ -36,7 +36,11 @@
     <div class="content">
       <h1 class="title is-3 fancy">Recent Additions</h1>
       <div class="columns is-desktop is-multiline">
-        <%= render "companies.html", companies: @recent_companies, conn: @conn %>
+        <%= for company <- @recent_companies do %>
+          <div class="column is-one-quarter-desktop">
+            <%= render "card.html", company: company, conn: @conn %>
+          </div>
+        <% end %>
       </div> <!-- /columns -->
     </div> <!-- /content -->
   </div> <!-- /container -->

@@ -7,8 +7,7 @@
 # General application configuration
 use Mix.Config
 
-config :companies,
-  ecto_repos: [Companies.Repo]
+config :companies, ecto_repos: [Companies.Repo]
 
 # Configures the endpoint
 config :companies, CompaniesWeb.Endpoint,
@@ -49,6 +48,10 @@ config :ueberauth, Ueberauth,
 config :ueberauth, Ueberauth.Strategy.Github.OAuth,
   client_id: System.get_env("GITHUB_CLIENT_ID"),
   client_secret: System.get_env("GITHUB_CLIENT_SECRET")
+
+config :scrivener_html,
+  routes_helper: CompaniesWeb.Router.Helpers,
+  view_style: :bulma
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

@@ -1,6 +1,8 @@
 defmodule CompaniesWeb.CompanyView do
   use CompaniesWeb, :view
 
+  import Scrivener.HTML
+
   def hiring?(%{jobs: jobs}), do: length(jobs) > 0
 
   def hiring_ribbon(company), do: if(hiring?(company), do: "has-ribbon", else: "")

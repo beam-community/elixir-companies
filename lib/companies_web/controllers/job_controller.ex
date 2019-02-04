@@ -61,7 +61,5 @@ defmodule CompaniesWeb.JobController do
     |> redirect(to: Routes.job_path(conn, :index))
   end
 
-  defp load_companies(conn, _) do
-    assign(conn, :companies, Companies.list_companies())
-  end
+  defp load_companies(conn, _), do: assign(conn, :companies, Companies.all())
 end

@@ -1,6 +1,5 @@
 defmodule Companies.Companies do
   @moduledoc """
-  The Companies context.
   """
 
   import Ecto.Query, warn: false
@@ -9,44 +8,57 @@ defmodule Companies.Companies do
   alias Companies.Schema.Company
 
   @doc """
-  Returns the list of companies.
+  Returns the list of paginated companies.
 
   ## Examples
 
-      iex> list_companies()
-      [%Company{}, ...]
+  iex> all()
+  [%Company{}, ...]
 
   """
-  def list_companies do
-    Company
-    |> Repo.all()
-    |> Repo.preload([:industry, :jobs])
+
+  def all(params \\ %{}) do
+    page = Map.get(params, "page", 1)
+
+    (c in Company)
+    |> from()
+    |> join(:inner, [c], i in assoc(c, :industry))
+    |> join(:left, [c], j in assoc(c, :jobs))
+    |> predicates(params)
+    |> preload([_c, i, j], industry: i, jobs: j)
+    |> Repo.paginate(page: page, page_size: 8)
   end
 
-  def list_recent_companies do
-    query =
-      from(c in Company,
-        order_by: [desc: c.inserted_at],
-        limit: 8,
-        preload: [:industry, :jobs]
-      )
+  defp predicates(query, %{"type" => <<start, finish>>}) when start in 97..122 do
+    query = order_by(query, [c, _i, _j], asc: fragment("LOWER(?)", c.name))
 
-    Repo.all(query)
+    Enum.reduce(start..finish, query, fn char, acc ->
+      or_where(acc, [c], ilike(c.name, ^"#{[char]}%"))
+    end)
   end
 
-  def list_hiring_companies do
-    query =
-      from(c in Company,
-        join: j in assoc(c, :jobs),
-        order_by: [desc: j.inserted_at],
-        preload: [:industry, :jobs]
-      )
-
-    Repo.all(query)
+  defp predicates(query, %{"type" => "hiring"}) do
+    query
+    |> order_by([_c, _i, j], desc: j.inserted_at)
+    |> join(:inner, [c], j in assoc(c, :jobs))
   end
 
-  def count_total do
-    query = from(c in Company, select: count(c.id))
+  defp predicates(query, _) do
+    order_by(query, [c, _i, _j], desc: c.inserted_at)
+  end
+
+  @doc """
+  Returns the total company count
+
+  ## Examples
+
+  iex> count()
+  23
+
+  """
+  def count do
+    query = from c in Company, select: count(c.id)
+
     Repo.one(query)
   end
 
@@ -57,11 +69,11 @@ defmodule Companies.Companies do
 
   ## Examples
 
-      iex> get_company!(123)
-      %Company{}
+  iex> get_company!(123)
+  %Company{}
 
-      iex> get_company!(456)
-      ** (Ecto.NoResultsError)
+  iex> get_company!(456)
+  ** (Ecto.NoResultsError)
 
   """
   def get_company!(id), do: Repo.get!(Company, id)
@@ -71,11 +83,11 @@ defmodule Companies.Companies do
 
   ## Examples
 
-      iex> create(%{field: value}, current_user())
-      :ok
+  iex> create(%{field: value}, current_user())
+  :ok
 
-      iex> create(%{field: bad_value}, current_user())
-      {:error, %Ecto.Changeset{}}
+  iex> create(%{field: bad_value}, current_user())
+  {:error, %Ecto.Changeset{}}
 
   """
   @spec create(map(), map()) :: {:ok, Ecto.Schema.t()} | {:error, Ecto.Changeset.t()}
@@ -90,11 +102,11 @@ defmodule Companies.Companies do
 
   ## Examples
 
-      iex> update_company(company, %{field: new_value})
-      {:ok, %Company{}}
+  iex> update_company(company, %{field: new_value})
+  {:ok, %Company{}}
 
-      iex> update_company(company, %{field: bad_value})
-      {:error, %Ecto.Changeset{}}
+  iex> update_company(company, %{field: bad_value})
+  {:error, %Ecto.Changeset{}}
 
   """
   def update_company(%Company{} = company, attrs) do
@@ -108,11 +120,11 @@ defmodule Companies.Companies do
 
   ## Examples
 
-      iex> delete_company(company)
-      {:ok, %Company{}}
+  iex> delete_company(company)
+  {:ok, %Company{}}
 
-      iex> delete_company(company)
-      {:error, %Ecto.Changeset{}}
+  iex> delete_company(company)
+  {:error, %Ecto.Changeset{}}
 
   """
   def delete_company(%Company{} = company) do
@@ -124,8 +136,8 @@ defmodule Companies.Companies do
 
   ## Examples
 
-      iex> change_company(company)
-      %Ecto.Changeset{source: %Company{}}
+  iex> change_company(company)
+  %Ecto.Changeset{source: %Company{}}
 
   """
   def change_company(%Company{} = company) do
