@@ -10,11 +10,5 @@ defmodule CompaniesWeb.UserHelpers do
 
   def current_user(conn), do: conn.assigns[:current_user]
 
-  def signed_in?(conn) do
-    with %{id: _id} <- Map.get(conn.assigns, :current_user) do
-      true
-    else
-      _ -> false
-    end
-  end
+  def signed_in?(conn), do: current_user(conn) != nil
 end

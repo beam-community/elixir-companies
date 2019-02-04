@@ -1,1 +1,58 @@
-<%= render "companies.html", companies: @companies, conn: @conn %>
+<section class="section">
+  <div class="container">
+
+    <h1 class="title is-3 fancy">Browse</h1>
+
+    <div class="tabs is-centered">
+      <ul>
+        <li>
+          <%= link to: Routes.company_path(@conn, :index) do %>
+            Newest
+          <% end %>
+        </li> 
+        <li>
+          <%= link to: Routes.company_path(@conn, :index, type: "hiring") do %>
+            Hiring 
+          <% end %>
+        </li> 
+        <li>
+          <%= link to: Routes.company_path(@conn, :index, type: "ae") do %>
+            A — E 
+          <% end %>
+        </li> 
+        <li>
+          <%= link to: Routes.company_path(@conn, :index, type: "fj") do %>
+            F — J 
+          <% end %>
+        </li> 
+        <li>
+          <%= link to: Routes.company_path(@conn, :index, type: "ko") do %>
+            K — O
+          <% end %>
+        </li> 
+        <li>
+          <%= link to: Routes.company_path(@conn, :index, type: "pt") do %>
+            P — T
+          <% end %>
+        </li>
+        <li>
+          <%= link to: Routes.company_path(@conn, :index, type: "uz") do %>
+            U — Z
+          <% end %>
+        </li> 
+      </ul>
+    </div>
+
+    <div class="content">
+      <div class="columns is-desktop is-multiline">
+        <%= for company <- @companies do %>
+          <div class="column is-one-quarter-desktop">
+            <%= render "card.html", company: company, conn: @conn %>
+          </div>
+        <% end %>
+      </div> <!-- /columns -->
+    </div> <!-- /content -->
+
+    <%= pagination_links(@conn, @companies, [next: "Next", previous: "Previous"] ++ query_params(@conn)) %>
+  </div> <!-- /container -->
+</section>
