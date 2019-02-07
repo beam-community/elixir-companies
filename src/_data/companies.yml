@@ -2243,3 +2243,28 @@ Citrusbyte:
   jobs:
     - title: Solutions Architect
       url: https://citrusbyte.applytojob.com/apply/WLPNjpqVlF/Software-Solutions-Architect-Remote?source=ElixirCompaniesCom
+
+Rekki:
+  industry: Restaurant Tech
+  url: https://www.rekki.com
+  location: London
+  description: |
+    REKKI is a free mobile app that allows you to order and chat with any supplier.
+
+    We are a highly technical and inquisitive bunch still small enough that anyone can impact and influence.
+    We like to take risks on technologies that will pay off in the long term, like Elixir, RabbitMQ, or React Native.
+
+    Elixir powers our core systems such as chat and orders, and much more.
+
+    We're always looking for talented people no matter the role so feel free to reach out to us.
+  github: https://github.com/rekki
+  blog: https://medium.com/rekki-engineering
+  jobs:
+    - title: Backend (Elixir), Frontend (JavaScript, React Native), QA Engineers
+      url: https://www.rekki.com/careers/engineering
+    - title: Data Scientists
+      url: https://www.rekki.com/careers/data
+    - title: Designers
+      url: https://www.rekki.com/careers/design
+    - title: Product Managers
+      url: https://www.rekki.com/careers/product
