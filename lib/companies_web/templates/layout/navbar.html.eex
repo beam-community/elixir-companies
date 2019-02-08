@@ -16,7 +16,7 @@
       <div class="navbar-start">
         <%= link "Home", to: Routes.company_path(@conn, :recent), class: "navbar-item" %>
         <%= link "Browse", to: Routes.company_path(@conn, :index), class: "navbar-item" %>
-        <%= link "Jobs", to: Routes.job_path(@conn, :index), class: "navbar-item" %>
+        <%= link "Hiring", to: Routes.company_path(@conn, :index, type: "hiring"), class: "navbar-item" %>
       </div>
       <div class="navbar-end">
         <%= render "account.html", conn: @conn, version_hidden: "mobile" %>
