@@ -12,6 +12,7 @@
   url: http://www.22cans.com/
   github: https://github.com/22cans
   description: "22cans is an independent game studio founded by the industry legend and creator of God Game genre, Peter Molyneux. Creators of Curiosity and Godus."
+  location: "Guildford, Surrey, United Kingdom"
 
 361° DIGITAL:
   industry: Technology Consulting
@@ -38,7 +39,7 @@ AdRoll:
   industry: Marketing/Sales
   url: https://www.adroll.com
   github: https://github.com/AdRoll
-  location: San Fransisco, CA, USA
+  location: San Francisco, CA, USA
   description: "AdRoll is a marketing platform enabling brands of all sizes to create personalized ad campaigns based on their own website data. They use Elixir in their high-volume data processing pipeline."
 
 Agilion:
@@ -46,12 +47,14 @@ Agilion:
   url: https://www.agilion.com
   github: https://github.com/agilionapps
   description: "Software development and consulting."
+  location: "Burlington, VT, USA"
 
 Aircloak:
   industry: Business Intelligence
   url: https://aircloak.com/
   github: https://github.com/Aircloak
   description: "Aircloak’s first-in-class real-time database anonymization solution provides instant privacy compliance and enables high-quality analytics for any data set and any use case. Aircloak's from Berlin. [Saša Jurić](https://github.com/sasa1977), the author of [Elixir in Action](https://www.manning.com/books/elixir-in-action) is software engineer at Aircloak."
+  location: "Berlin, Gemany and San Francisco, CA, USA"
 
 Albert:
   industry: Education
@@ -65,7 +68,10 @@ Alembic:
   url: https://alembic.com.au
   github: https://github.com/team-alembic
   location: Sydney, Australia
-  description: "Elixir, React and GraphQL development and consulting. Organisers of [Elixir Sydney Meetup](https://elixir.sydney) and supporters of [Elixir Girls](http://elixirgirls.com)."
+  description: "Elixir, Javascript, React and GraphQL development and consulting. Organisers of [Elixir Sydney Meetup](https://elixir.sydney), co-organisers of [Elixir Camp](https://elixir.camp) and supporters of [Elixir Girls](http://elixirgirls.com)."
+  jobs:
+    - title: Developers of all levels & Lead Technical Consultant
+      url: https://alembic.com.au/careers
 
 AlphaSights:
   industry: Expert Networks
@@ -78,12 +84,14 @@ AmberBit:
   url: https://www.amberbit.com
   github: https://github.com/amberbit
   description: "We are polyglot developers (but mostly Ruby, JavaScript, Elixir, Elm)."
+  location: Warsaw, Poland
 
 AppUnite:
   industry: Technology Consulting
   url: https://appunite.com
   github: https://github.com/appunite
   description: "We are efficient, goal-oriented software development team of professionals specialized in mobile and web."
+  location: Poznań, Poland
 
 Appcues:
   industry: Marketing/Sales
@@ -104,10 +112,11 @@ Aviabird:
   url: https://aviabird.com
   github: https://github.com/aviabird
   description: "We at Aviabird helps companies design, engineer, and iterate on their most important digital products. We work alongside teams building beautiful, functional web applications with an eye towards the future. Pune, Maharashtra, India."
+  location:  Pune, Maharashtra, India
 
 Aviasales:
   industry: Leisure/Travel
-  url: https://aviasales.ru
+  url: https://www.aviasales.ru
   github: https://github.com/KosyanMedia
   description: "– Flights Meta Search Engine for Russian market with the main office on Phuket, Thailand. We use Elixir for our static content generator, messengers bots and couple of microservices."
 
@@ -156,6 +165,7 @@ Bleachr:
   industry: Sports
   url: http://www.bleachr.co
   description: "Mobile platform aimed at helping professional sports teams engage fans at their events. They are using Elixir on the backend. Minneapolis, MN, USA."
+  location: Minneapolis, MN, USA
 
 Bold Poker:
   industry: Gaming
@@ -167,6 +177,7 @@ Bowery Farming:
   url: http://boweryfarming.com
   github: https://github.com/BoweryFarming
   description: "Bowery Farming uses high-tech approaches such as robotics, LED lightning and data analytics to grow leafy greens indoors. The software stack at Bowery consists of a few, focused Elixir services running in AWS, Phoenix + Vue.js on the front-end, and Elixir (Nerves) running on thousands of in-house built devices on-premise in our farms. New York, NY, USA."
+  location: "New-York"
 
 Brightcove:
   industry: Video
@@ -189,13 +200,19 @@ CKDU 88.1FM:
 CONTRAKTOR:
   industry: Legal Services
   url: https://www.contraktor.com.br
+  github: https://github.com/Contraktor-Legal-Tech
+  location: Curitiba, Parana, Brazil
   description: "Legal contracts toolbox for Small and Medium companies! Contract creation, auto review, workflow, e-signature and contract management. Save time and avoid mistakes. Welcome to the 4th Industrial Revolution. Lawyers are ready to be disrupted? Come with us first in Brazil."
+  jobs:
+    - title: Backend Software Developer
+      url: http://jobs.contraktor.com.br
 
 Cabify:
   industry: Transportation
   url: https://www.cabify.com/
   github: https://github.com/cabify
   description: "Cabify - A safer, ethical and innovative taxi app alternative. Elixir in production since 2016. Real-time applications and microservices with large amounts of data. Madrid/Barcelona."
+  location: Madrid/Barcelona
 
 Canvas:
   industry: Collaboration
@@ -301,16 +318,12 @@ Customer Lobby:
   github: https://github.com/customerlobby
   description: "Repeat Customer & Reviews Software. We are currently in the process of building a couple of services that use elixir. Berkeley, CA, USA."
 
-DIGIMONDO:
-  industry: Internet of Things
-  url: https://www.digimondo.de/
-  description: "DIGIMONDO is building a LoRaWAN network providing connectivity for millions of IoT devices. Using Elixir for networking/routing services and web applications."
-
 DNSimple:
   industry: Internet Infrastructure
   url: https://dnsimple.com/
   github: https://github.com/dnsimple/
   description: "With a globally distributed team DNSimple provides the tools your need to manage your domains. We offer both a carefully crafted web interface for managing your domains and DNS records, as well as an HTTP API with various SDKs (including Elixir) and open source plugins in Elixir (and Phoenix)."
+  location: Remote
 
 Defacto:
   industry: Education
@@ -400,11 +413,6 @@ EmCasa:
   github: https://github.com/gusaiani/re
   description: "EmCasa is an online residential broker using an Elixir webservice to help Brazilian buyers and sellers have a far superior experience in real estate. Rio de Janeiro, RJ, Brazil."
 
-Emagroup:
-  industry: Gaming
-  url: http://www.emagroup.cn/
-  description: "Develop mobile games. Elixir is used for building game management tools."
-
 Enterprise Software Modules:
   industry: Enterprise Software
   url: https://www.enterprisemodules.com
@@ -437,7 +445,8 @@ Farmbot:
   industry: Food
   url: https://farmbot.io/
   github: https://github.com/FarmBot
-  description: "Humanity's first open-source CNC farming machine. Farmbot using Elixir for the Raspberry Pi 3. [Click here for more detail](https://github.com/FarmBot/farmbot_os). FarmBot Inc is located at 81 South Higuera Street, Suite 160, in San Luis Obispo, California."
+  location: San Luis Obispo, CA, USA
+  description: "Humanity's first open-source CNC farming machine. Farmbot using Elixir for the Raspberry Pi 3. [Click here for more detail](https://github.com/FarmBot/farmbot_os)."
 
 Fave by Groupon:
   industry: E-Commerce
@@ -470,7 +479,6 @@ Fontstore:
 Football Addicts:
   industry: Sports
   url: http://www.footballaddicts.com
-  github: https://github.com/elixir-addicts
   description: "Creators of the well-known *Forza Football* and other leading football-related mobile applications."
 
 Frame:
@@ -488,6 +496,7 @@ Fully Forged:
   industry: Technology Consulting
   url: http://fullyforged.com
   description: "Software development and training, based in London."
+  location: London
 
 Future Pet:
   industry: Healthcare
@@ -499,6 +508,17 @@ Gaslight:
   industry: Technology Consulting
   url: http://teamgaslight.com
   description: "Software Development, consulting, coaching, training, Organizer of the Cincinnati Elixir group. Now using Elixir and Phoenix in production."
+
+GigSmart:
+  industry: Gig Economy
+  location: Denver, CO, USA
+  github: https://github.com/gigsmart
+  blob: https://gigsmart.com/blog/
+  url: https://gigsmart.com
+  description: "Labor on demand for employers and Work on demand for workers. Powered by Elixir/Phoenix backend serving up a GraphQL api to our mobile applications."
+  jobs:
+    - title: Elixir Developer
+      url: http://jobs.gigsmart.com/p/0c53be225a7f-elixir-developer
 
 GitMonitor:
   industry: Computer Software
@@ -515,6 +535,7 @@ GrillWork:
   industry: Technology Consulting
   url: http://grillwork.io
   description: "([GitHub](https://github.com/grillwork))- Helping business through software. Working in Elixir/Phoenix/Ruby/Rails/Node/Javascript/ReactJS. We use Elixir for all backend/api work and for network programming."
+  location: Burlington, VT, USA
 
 Grok Interactive:
   industry: Technology Consulting
@@ -535,7 +556,7 @@ Hashrocket:
 
 Heetch:
   industry: Transportation
-  url: https://heetch.com
+  url: https://www.heetch.com
   github: https://github.com/heetch
   description: "Heetch - A ride-sharing app with a simple mission: we want people to enjoy their night out. With millions users in Europe, we're running microservices based architecture with real-time application. Paris, France (Remote friendly)"
 
@@ -543,15 +564,17 @@ Hello Sign:
   industry: Legal Services
   url: https://www.hellosign.com
   github: https://github.com/HelloFax
-  description: "eSignature platform. Send and receive electronic signatures securely with the end-user solution or the eSignature API. San Fransisco, CA, USA."
+  description: "eSignature platform. Send and receive electronic signatures securely with the end-user solution or the eSignature API. San Francisco, CA, USA."
   jobs:
     - title: Software Engineer
       url: "https://jobs.lever.co/hellosign/39ea6c41-8ff8-4c93-b0fd-4a6224ef29ec"
 
 Heresy:
   industry: Marketing/Sales
-  url: http://heresy.io
-  description: "([GitHub](https://github.com/heresydev)) - The days of top-down sales management are over! We are bringing Agile to Sales, empowering salespeople to improve performance with better data and collaboration. We believe that CRM software built as a “system of record” adds little value to salespeople. Heresy is a workflow application, that enables sales professionals to manage their workload, forecast accurately and crush targets every month. Through its usage, we are able to aggregate valuable data that provides salespeople and their managers with unique insights without having to run a single report. Main product and platform are built exclusively using Elixir and Phoenix. London, UK."
+  url: https://heresy.io
+  github: https://github.com/heresydev
+  location: London, UK
+  description: "Reinventing Sales, one sprint at a time. We are bringing Agile to Sales, empowering salespeople to improve performance with better data and collaboration. We use Elixir & Phoenix for our main product and predictive analytics engine."
 
 HiOperator:
   industry: Customer Service
@@ -590,12 +613,6 @@ Infinite Red:
   url: https://infinite.red
   github: https://github.com/infinitered
   description: "Mobile and web app design and development services, using Elixir / Phoenix, React, and React Native. Based in Portland, San Francisco, and remote across the USA, with clients in eight countries. We build and maintain dozens of popular open source libraries, including [Thesis](github.com/infinitered/thesis-phoenix) and [Torch](github.com/infinitered/torch)."
-
-John Done:
-  industry: Technology Consulting
-  url: https://johndone.ai
-  github:
-  description: "In the future, we will speak to machines, politely asking them to carry out tasks for us. At John Done Inc. we are doing our part to build that future by bringing the voice assistant John Done to telephone calls, communications platforms, and web conferences."
 
 Isnor Creative:
   industry: Technology Consulting
@@ -674,7 +691,7 @@ Lob:
   industry: Enterprise Software
   url: https://lob.com
   github: https://github.com/lob
-  description: "APIs for Print, Mail, Postcards, Letters, & Checks. San Fransisco, CA, USA."
+  description: "APIs for Print, Mail, Postcards, Letters, & Checks. San Francisco, CA, USA."
 
 Lonely Planet:
   industry: Leisure/Travel
@@ -699,29 +716,17 @@ Mainframe:
   url: http://mainframe.co/
   description: "Building the future of email."
 
-Matched Pattern:
-  industry: Technology Consulting
-  url: https://matchedpattern.com/
-  github: https://github.com/MatchedPattern
-  location: Columbus, OH
-  description: "We're Matched Pattern. We’re a software consultancy based in Columbus, Ohio. We specialize in web development, infrastructure and Internet of Things (IoT). Each of our Central Ohio-based, full-time developers have unique experiences and bring insight to each of our offerings. We use Elixir to build scalable web applications."
-
 Mediteo:
   industry: Healthcare
   url: https://www.mediteo.com
   github: https://github.com/mediteo
   description: "Mediteo is a young Digital Health start-up with the aim to provide the best solution to handle medication in a correct and secure way. Berlin, Germany."
+  location: Berlin, Germany
 
 Meltwater:
   industry: Marketing/Sales
   url: https://meltwater.com
   description: "([GitHub](https://github.com/meltwater)) - Gather insights from outside the firewall to empower your business decisions. Using Elixir for backend services. San Francisco, USA."
-
-Mirego:
-  industry: Technology Consulting
-  url: http://mirego.com
-  github: https://github.com/mirego
-  description: "We help our clients innovate and reinvent themselves in order to prosper in the digital era."
 
 Moz:
   industry: Marketing/Sales
@@ -733,12 +738,16 @@ My Meds & Me:
   url: https://www.mymedsandme.com
   github: https://github.com/MyMedsAndMe
   description: "A leading SaaS provider of web-based adverse event and product quality capture solutions for life sciences. [Click here to see how elixir being used at My Meds & Me.](https://www.youtube.com/watch?v=ZCYEX6ZIJgM) The company based in London."
+  location: London, United Kingdom
 
 Nav:
   industry: Financial Technology
   url: https://nav.com
   github: https://github.com/creditera
   description: "We are a Utah Company offering credit monitoring, financing, and advice for small & medium size businesses. We use elixir to build the business engine that curates relevant financing for our customers."
+  jobs:
+    - title: Senior Elixir Backend Developer
+      url: https://nav.bamboohr.com/jobs/view.php?id=58
 
 "Nebo #15":
   industry: Technology Consulting
@@ -813,7 +822,11 @@ Peek:
   industry: Leisure/Travel
   url: https://www.peek.com
   github: https://github.com/peek-travel/
-  description: "Peek makes the world’s tours & activities easily bookable — anytime, anywhere. Peek uses Elixir in backend services powering Peek.com and Peek Pro. San Francisco, CA."
+  description: "Peek makes the world's tours & activities easily bookable — anytime, anywhere. Peek uses Elixir in backend services powering Peek.com and Peek Pro."
+  location: San Francisco
+  jobs:
+    - title: Software Engineer - Backend
+      url: "https://boards.greenhouse.io/peek/jobs/1284563"
 
 Pet Partners:
   industry: Healthcare
@@ -833,12 +846,6 @@ Pivotal:
   github: https://github.com/pivotal
   description: "Leader in software engineering, Pivotal is the company behind CloudFoundry, the Java Spring Framework, and other products. They wrote the new [RabbitMQ CLI](https://github.com/rabbitmq/rabbitmq-cli/) and are [pushing Elixir](http://engineering.pivotal.io/post/elixir-clustering-on-cloud-foundry/) through their engineering blog."
 
-Planning Center:
-  industry: Collaboration
-  url: https://planning.center
-  github: https://github.com/planningcenter
-  description: "Planning Center's suite of apps work together to allow more ministry in your Ministry. Planning Center is from USA. And it's adopting Elixir to it's stack."
-
 Planswell:
   industry: Financial Technology
   url: https://planswell.com/
@@ -855,7 +862,12 @@ Podium:
   industry: Customer Service
   url: https://www.podium.com
   github: https://github.com/podium
-  description: "We power customer interaction and drive online reviews for local businesses. YC W16. Elixir powers a lot of our software, and we're based in Lehi, UT, USA."
+  blog: https://medium.com/podium-engineering
+  description: "Podium is an Interaction Management™ platform enabling 30,000+ businesses to communicate more effectively. We've run Elixir in production since 2016, constantly seek passionate engineers to help us modernize local business."
+  location: Lehi, UT, USA
+  jobs:
+    - title: All Roles
+      url: https://www.podium.com/careers
 
 Postmates:
   industry: E-Commerce
@@ -900,8 +912,9 @@ Pypestream:
 
 Qixxit:
   industry: Leisure/Travel
-  url: https://www.qixxit.de
+  url: https://www.qixxit.com
   description: "Qixxit is your personal mobility advisor. We simplify the complexity of mobility for you and combine the many ways of getting from A to B for you in a convenient way. Elixir being used for the backend part. Berlin, Germany"
+  location: Berlin, Germany
 
 Quero Education:
   industry: Education
@@ -995,24 +1008,26 @@ Shopybot:
 Slack:
   industry: Communication
   url: https://slack.com
-  description: "([GitHub](https://github.com/slackhq/))- Slack is a team communication application. They are using Elixir to build a media server for p2p and group calls. San Fransisco, CA, USA."
+  description: "([GitHub](https://github.com/slackhq/))- Slack is a team communication application. They are using Elixir to build a media server for p2p and group calls. San Francisco, CA, USA."
 
 Sleeperbot:
   industry: Sports
   url: https://sleeperbot.com
   description: "Fantasy Football app with chat, alerts, news, and stats."
 
-Smartrent:
+SmartRent:
   industry: Real Estate
   url: https://smartrent.com
-  description: "Enterprise Software smart home automation for multifamily apartments, student housing, senior living and single family rental homes. Elixir runs the backend. Scottsdale, AZ, USA."
+  location: Scottsdale, AZ, USA
+  github: https://github.com/smartrent
+  description: "Smart home automation for multifamily apartments, student housing, senior living and single family rental homes. Elixir runs the backend and on embedded hardware with Nerves"
 
 SoPost:
   industry: Marketing/Sales
   url: https://www.sopost.com/
   description: "SoPost is a product sampling platform. We make use of Elixir & OTP (_and a few other things_) to provide a performant system that aids our mission to become the world's best product sampling company. Currently, [Our GH repo](https://github.com/SoPost) is all private, but we are looking to open up some of the technology we've developed. Nearly always hiring in Newcastle & Edinburgh (UK)."
 
-Solarisbank:
+solarisBank:
   industry: Financial Technology
   url: https://www.solarisbank.de/
   location: Berlin, Germany
@@ -1029,6 +1044,7 @@ Spreedly:
   url: https://www.spreedly.com
   github: https://github.com/spreedly
   description: "Spreedly believes the best payment experience derives from excellent software combined with business flexibility. Durham, NC, USA."
+  location: Durham, NC, USA
 
 Stampery:
   industry: Enterprise Software
@@ -1046,6 +1062,7 @@ StellaService:
   url: https://stellaservice.com
   github: https://github.com/stellaservice
   description: "We build products that optimize front-line team performance, gather feedback and insights and improve customer experiences across contact centers and stores. Now hiring (Q3 for Q4 '17) Elixir engineers for new product development. Based in NYC, USA."
+  location:  NYC, USA
 
 Storefront:
   industry: Marketplaces
@@ -1088,23 +1105,23 @@ Talkdesk:
   github: https://github.com/talkdesk
   description: "Cloud-Based Call Center Software."
 
-Tappsi:
-  industry: Transportation
-  url: https://tappsi.co/
-  github: https://github.com/tappsi
-  description: "Taxi calls easier and safer in Colombia."
-
 Teachers Pay Teachers:
   industry: Marketplaces
   url: https://www.teacherspayteachers.com/
   github: https://github.com/TeachersPayTeachers
   description: "Empowering millions of educators to share their work, their insights, and their inspiration with one another. Based in NYC, Elixir powers our backend infrastructure."
+  jobs:
+    - title: Software Engineer, Digital
+      url: "https://boards.greenhouse.io/teacherspayteachers/jobs/1120325"
 
 Telnyx:
-  industry: Communication
+  industry: Telecommunications
   url: https://telnyx.com/
   github: https://github.com/team-telnyx
   description: "Telnyx provides a cloud-based portal & API offering carrier grade voice services such as Origination, Termination and SIPtrunking over the Internet. Chicago, IL, USA."
+  jobs:
+    - title: Elixir Engineer (remote)
+      url: https://telnyx.com/company/careers
 
 The.Club:
   industry: Hospitality
@@ -1122,15 +1139,13 @@ The RealReal:
   url: https://www.therealreal.com
   github: https://github.com/TheRealReal
   description: "Marketplace for luxury fashion resale products."
-  jobs:
-    - title: Lead Full Stack Engineer
-      url: "https://www.therealreal.com/careers/4CE9F124E3"
 
 The book of everyone:
   industry: E-Commerce
   url: https://thebookofeveryone.com
   github: https://github.com/thebookofeveryone
   description: "Personalised books and unique gifts for your loved ones, made by our talented team of creatives. Barcelona, Catalunya, Spain."
+  location: Barcelona, Spain.
 
 Timber:
   industry: Computer Software
@@ -1143,16 +1158,11 @@ Tinfoil Security:
   url: https://www.tinfoilsecurity.com/
   description: "([GitHub](https://github.com/tinfoil/)) - Tinfoil Security provides a dynamic security scanning solution for DevOps. We integrate with your CI system to find and help resolve security vulnerabilities in web applications and web services before they ever get deployed to production. We use Elixir to power our web service scanning engine."
 
-Tongdao:
-  industry: Communication
-  url: https://tongdao.io
-  github: https://github.com/tongdao
-  description: "Tongdao is a data-driven marketing platform designed to enable businesses to understand their customers and engage them in a smart and personalized way across multiple channels. Using Elixir to power our messaging system and data collection backend. Shanghai, China."
-
 Margo Bank:
   industry: Financial Technology
   url: https://margo.com
   description: "A Bank for Small and Medium Businesses. Elixir is used for the Core Banking System (CBS). Based in Paris, France."
+  location: Paris, France
 
 Undead Labs:
   industry: Gaming
@@ -1176,11 +1186,13 @@ Volders:
   url: https://www.volders.de/
   github: https://github.com/volders
   description: "Management and canceling of german contracts. Berlin, Germany."
+  location: Berlin, Germany
 
 Weedmaps:
   industry: Cannabis
   url: https://weedmaps.com/
   description: "Weedmaps.com is a community where medical marijuana users connect with other users in their geographic region to freely discuss and review local cannabis co-operatives, storefronts, medical doctors and delivery services. We are headquartered in Irvine, CA, and we are using Elixir to build our backend services."
+  location:  Irvine, CA, USA
 
 WhiteHat:
   industry: Staffing/Recruiting
@@ -1221,6 +1233,7 @@ YBEX:
   url: https://www.ybex.io
   github: https://github.com/ybexio
   description: "YBEX is a financial technology company, providing a marketplace platform for retail foreign exchange services. Elixir is used for our backend services. Based in Hong Kong."
+  location: Hong Kong
 
 Yala:
   industry: Social Network
@@ -1234,10 +1247,11 @@ Zenloop:
   description: "Collect and analyze feedback, using Net-Promoter-Score (NPS). Most of the backend is Elixir and Phoenix. Based in Berlin, Germany."
 
 Zuppler:
-  industry: Technology Consulting
+  industry: Online Ordering
+  location: Philadelphia, USA
   url: http://www.zupplerworks.com/
   github: https://github.com/zuppler
-  description: "We are a US based company. We try to offer the easiest way to let customers order food online for takeout or delivery. We develop all recent backend software using Elixir."
+  description: "We try to offer the easiest way to let customers order food online for takeout or delivery. We develop all recent backend software using Elixir."
 
 askCharlie:
   industry: Marketplaces
@@ -1255,6 +1269,7 @@ bitcrowd:
   url: http://bitcrowd.net
   github: https://github.com/bitcrowd
   description: "Berlin based software development and consulting for startups."
+  location: Berlin, Germany
 
 code lever:
   industry: Technology Consulting
@@ -1277,6 +1292,7 @@ imby.bio:
   industry: Sustainability
   url: http://imby.bio/
   description: "([Gitlab](https://gitlab.com/imby.bio), [GitHub](https://github.com/imbybio/)) - imby.bio helps individuals bring nature back in to their urban environment. The company is based in London, UK and uses Elixir as their primary back-end technology."
+  location: London, United Kingdom
 
 nextjournal:
   industry: Research
@@ -1299,6 +1315,7 @@ toy rocket science:
   url: http://toyrocketscience.com
   github: https://github.com/trsc
   description: "We are a small expert team of developers in Berlin. We have a broad range of clients and make software that ranges from heavy-lifting on the server to the frontend, including apps."
+  location: Berlin, Germany
 
 uSwitch:
   industry: Home Services
@@ -1407,6 +1424,9 @@ Sparta Science:
   github: https://github.com/sparta-science/
   location: San Francisco, CA & Menlo Park, CA
   description: "Sparta Science can predict injuries before they happen. We identify athletes’ injury risks and recommend customized training plans to reduce the chance of injury. Our customers are professional and university sports programs (including NBA, NFL, MLB, and NCAA teams), hospitals, and the US military. Our web application is built on Elixir/Phoenix, and our scanning process relies heavily on Phoenix Channels."
+  jobs:
+    - title: Full Stack Engineer
+      url: https://github.com/sparta-science/engineer-job-posting
 
 Codedge LLC:
   industry: Technology Consulting
@@ -1550,9 +1570,6 @@ Decisiv:
   url: https://www.decisiv.com/
   github: http://github.com/decisiv
   description: "Decisiv is a rapidly growing industry leader in the asset management and service supply chain marketplace.  We use Elixir as the backbone of our microservice SoA."
-  jobs:
-    - title: Senior Software Engineer
-      url: "https://www.decisiv.com/senior-software-eng-0-0"
 
 Rhino:
   industry: Real Estate
@@ -1565,7 +1582,7 @@ InfluxData:
   industry: Internet Infrastructure
   url: https://www.influxdata.com
   github: https://github.com/influxdata
-  location: San Fransisco, CA, USA
+  location: San Francisco, CA, USA
   description: "InfluxData delivers a modern open source platform built from the ground up for metrics and events (time-sensitive data). They are using Elixir to build InfluxCloud, their hosted database-as-a-service product."
   jobs:
     - title: Elixir/Full stack developer (experience required)
@@ -1624,13 +1641,13 @@ SweetIQ:
       url: https://sweetiq.com/about/careers/
 
 JoinUp:
-  industry: Staffing/Recruiting
+  industry: Human Resources
   url: https://www.joinup.io
   location: Paris, France
-  description: "JoinUp is a recruiting chatbot that helps recruiters source & qualify candidates more efficiently on their websites. Our api is powered by Phoenix/Elixir with Reason/React frontends."
+  description: "JoinUp is a recruiting bot that helps recruiters source & qualify candidates more efficiently on their websites. Our api is powered by Phoenix/Elixir with Reason/React frontends."
 
 Expert360:
-  industry: Marketplace
+  industry: Marketplaces
   url: https://expert360.com
   location: Sydney, Australia
   description: "Expert360 allows businesses to engage and manage top talent for short-mid term project-work. We use Elixir on the backend with Phoenix, Absinthe for our GraphQL API and React components on the frontend."
@@ -1656,4 +1673,602 @@ Pharos Production Inc.:
   description: "Pharos Production team is made up of the brightest and most dedicated blockchain, fintech, ICO, web and mobile developers, designers, project managers and quality assurance specialists. Our development efforts resulted in more than 30 mobile and web solutions – social networking apps, ICOs, private blockchains, e-commerce, news boards, other different business and entertainment applications. We are hiring!"
   jobs:
     - title: Elixir Developer
+<<<<<<< HEAD
     - url: http://www.pharosproduction.com
+=======
+
+Teachoo:
+  industry: Education
+  url: https://www.teachoo.com/
+  location: Delhi, India
+  description: "Teachoo provides Maths, English, Accountancy and Finance content to students, schools and education departments."
+
+Formulae:
+  industry: Technology Consulting
+  location: Pune, India
+  url: http://formulae.io
+  blog: https://medium.com/formulae
+  github: https://github.com/formulaeio
+  description: "We use Elixir for realtime apps, chatbots and chat applications.
+  We build modern web and mobile apps using Elixir,
+  Phoenix, Rails, GraphQL, React and React Native.
+  We also do complete digital marketing"
+
+FunBox:
+  industry: Telecommunications
+  url: https://funbox.ru/
+  github: https://github.com/funbox
+  location: Moscow, Russia
+  description: Elixir is used for more and more new apps developed by our company for telecom clients, often with Phoenix, taking over Ruby on Rails.
+  jobs:
+    - title: Elixir Developer
+      url: https://funbox.ru/vacancies/elixir-developer
+
+Distru:
+  industry: Cannabis
+  url: https://distru.com
+  github: https://github.com/DistruApp
+  location: Oakland, CA
+  description: "Distru builds compliant software to streamline cannabis distribution & manufacturing. We've used Elixir & Phoenix as the backend of our application since day 1 to manage production, warehousing, sales orders, CRM, logistics, and more!"
+  jobs:
+    - title: Senior Software Engineer
+      url: https://hire.withgoogle.com/public/jobs/distrucom/view/P_AAAAAAGAAFlHy5yLSUe5SP?trackingTag=elixirCompanies
+
+ProFootballFocus:
+  industry: Sports
+  url: https://www.profootballfocus.com/
+  location: Cincinnati, OH
+  description: "Pro Football Focus analyzes every player and every play of every game to deliver player grades, stats, and rankings for the NFL, fantasy football, and NFL Draft. We use Elixir, Phoenix, and React for data collection, analysise, reporting and web apps."
+
+Tele2:
+  industry: Telecommunications
+  url:  http://www.tele2.com/
+  location:  Amsterdam, The Netherlands
+  description: "Telecom Provider, replacing some of the internal tooling with Elixir."
+
+Wuunder:
+  industry: Transportation
+  url:  https://wearewuunder.com/en/
+  location:  Weert, The Netherlands
+  description: "Startup working on making shipping easier, Elixir powers the backend."
+
+FashionUnited:
+  industry: Apparel/Fashion
+  url: https://fashionunited.com/
+  location: Amsterdam, The Netherlands
+  description: "Making the fashion industry more efficient and transparent. Using GenStage/GraphQL to process large amount of data."
+
+100Starlings:
+  industry: Technology Consulting
+  url: https://www.100starlings.com/
+  github: https://github.com/100Starlings
+  location: Remote
+  description: |
+    We are a cooperative of like minded professionals skilled at solving problems
+    and creating excellent products for our clients.
+    We have experience with Elixir, Ruby, JavaScript, AWS, Mobile development and more.
+    Our fully remote team is currently split between London, Berlin, and Hungary.
+    We also have a retreat every year and a training budget.
+
+Instinct Science:
+  industry: Healthcare
+  url: https://instinct.vet/
+  github: https://github.com/instinctscience
+  location: Remote
+  description: "Instinct uses Elixir to help the world’s state-of-the-art veterinary hospitals enhance their patient care, staff efficiency, and overall business."
+
+René Koch AG:
+  industry: Communication
+  url: http://kochag.ch
+  github: https://github.com/Koch-AG
+  location: Au ZH, Switzerland
+  description: "Switzerland's leading manufacturer of intercom devices and accessories. Elixir is the backbone of our network based systems and cloud architecture."
+
+Divvy:
+  industry: Financial Services
+  url: https://getdivvy.com/
+  location: Lehi, UT, USA
+  description: "We’re on a mission to automate the spending and expense reporting process, enabling companies and individuals to have more control, greater convenience, and increased security when distributing funds. Our backend is a cluster of Elixir applications and GenServers."
+  jobs:
+    - title: Software Engineer
+      url: https://getdivvy.com/jobs
+
+Pixel Union:
+  industry: E-Commerce
+  url: https://pixelunion.net
+  github: https://github.com/pixelunion
+  location: Remote
+  description: "Helping you sell more with premium Shopify themes, apps, and custom services. Good times since '09."
+  jobs:
+  - title: Software Developer
+    url: https://pixel-union.workable.com
+
+Envato:
+  industry: Marketplaces
+  url: https://envato.com/
+  github: https://github.com/envato/
+  location: Melbourne, Australia
+  description: "Envato is the leading marketplace for creative assets and creative people. We use Elixir to build high performance event sourced systems."
+  jobs:
+    - title: Developers / Senior Developers
+      url: https://envato.com/careers/
+
+iwantmyname:
+  industry: Domain Registrar
+  url: https://iwantmyname.com
+  github: https://github.com/iwantmyname
+  description: "We sell domain names and specialize in making experiences easy for humans. The good ones. And we've been doing it for a decade now."
+
+Vragments:
+  industry: Computer Software/Engineering
+  url: https://vragments.com
+  github: https://github.com/vragments
+  description: "Vragments is a Berlin-based startup. We create bespoke VR experiences and products for non-technical users to build their own virtual reality stories. We use Elixir for media processing and backend systems."
+  location: Berlin, Germany
+
+Shedul:
+  industry: Beauty/Wellness
+  url: http://www.shedul.com/
+  github: https://github.com/surgeventures
+  location: Warsaw, PL
+  description: "Shedul.com is the leading software platform for beauty and wellness industry used by 40,000+ merchants in more than 120 Countries. We have Elixir running on production since mid-2017, powering our APIs & business services."
+  jobs:
+  - title: Ruby/Elixir Developer
+    url: https://shedul.workable.com/j/92C6EACEED
+
+Groma:
+  industry: Enterprise Software
+  url: https://www.groma.si/en
+  description: "We develop a solution for employee scheduling and payroll automation in complex shift work environments ([shiftplan.io](https://www.shiftplan.io)). We deployed first Elixir based back-end services to production in 2015. Impressed by the performance and maintainability, Elixir is now powering a majority of our back-end services. Located in Ljubljana, Slovenia."
+
+Perseids:
+  industry: E-Commerce
+  url: https://perseids.io
+  github: https://github.com/eEngineSoftwareHouse
+  blog: https://eengine.pl/en/blog
+  location: Aleksandrów Łódzki, Poland
+  description: "We guarantee server response time less than 0,1 sec. With Perseids (Elixir & React) you can change the insufficient front of your online shop into something really fast and user-friendly without a revolution in your business processes."
+
+Kudoo:
+  industry: Financial Services
+  url:  https://kudoo.io
+  github: https://github.com/KudooCloud
+  location: Melbourne, Australia
+  description: "Kudoo provides financial services to professional service companies. We provide project, timesheets and invoicing software to enable businesses to effeciently invoice their customers from the work performed by their staff. We use Elixir and Phoenix to power our backend and deploy our API and all business logic."
+
+Geek Soft:
+  industry: Financial Services
+  url: https://geeksoft.pl
+  github: https://github.com/geeksoftteam
+  location: Warsaw, Poland
+  description: "Geek Soft specializes in developing systems for cryptocurrencies industry, financial markets trading platforms as well as other FinTech applications. We use Elixir to build high performance backend and API. Our 4 applications running on production since 2016."
+  jobs:
+  - title: Elixir Developer
+    url: https://geeksoft.pl/#career
+
+Revelry Labs:
+  industry: Technology Consulting
+  url: https://revelry.co
+  github: https://github.com/revelrylabs
+  location: New Orleans, LA, USA
+  description: "The Revelry PaaS consists of infrastructure tooling, component libraries, self-contained systems and full digital products that help companies bring innovative solutions to market and scale fast. We use Elixir and Phoenix to develop web applications, API and mobile backends, and infrastructure."
+
+Contractbook:
+  industry: Legal Services
+  url: https://contractbook.co
+  github: https://github.com/contractbook
+  location: Copenhagen, Danmark
+  description: "Efficient Contract Management for Modern Businesses. Create, sign and store all your contracts in one safe place. Our server side is written in Elixir."
+
+Mirego:
+  industry: Technology Consulting
+  url: https://www.mirego.com
+  github: https://github.com/mirego
+  location: Quebec, Canada
+  description: "Mirego is a start-to-finish digital product team based in Quebec City, Montreal & Toronto. We want to build the greatest team, the best workplace and a better world. We’ve been using Elixir in production for our own projects since 2014 and for our clients’ since 2016."
+  jobs:
+    - title: Web Developer
+      url: "https://life.mirego.com/en/available-positions#quebec-developpeur-euse-web"
+
+2U:
+  industry: Education Technology
+  url: https://2u.com
+  github: https://github.com/2uinc
+  location: Brooklyn, NY, USA
+  description: "2U powers the world’s best digital higher education. When students win, universities win, and by coming together around one shared goal—delivering great student outcomes—we are transforming the future of higher education for the better. We use Elixir, Phoenix, and Absinthe to develop high performance data pipelines, and abstractions on difficult-to-integrate third party services."
+  jobs:
+  - title: Software Engineer, Core Systems
+    url: https://2u.com/careers/?gh_jid=4057619002
+
+Seat Engine:
+  industry: E-Commerce
+  url: http://www.seatengine.com/
+  github: https://github.com/seatengine
+  location: Philadelphia, PA, USA
+  description: "An e-commerce and event management platform (written on Phoenix Framework) for ComedyClubs and music venues."
+
+CityBase:
+  industry: GovTech
+  url: https://thecitybase.com
+  blog: https://thecitybase.com/cityblog/
+  github: https://github.com/CityBaseInc
+  location: Chicago, IL, USA
+  description: "CityBase is working with innovative public servants to transform the experience of government. We use Elixir since 2016 to build many of our services, the majority of them based on Phoenix and Absinthe."
+  jobs:
+    - title: Senior Elixir Engineer
+      url: https://thecitybase.com/careers/#senior-elixir-engineer
+
+Ride Health:
+  industry: Healthcare
+  url: https://ride-health.com
+  blog: https://medium.com/ride-health
+  location: New York, NY
+  description: "Ride Health helps low-income, elderly and disabled patients who face transportation barriers reach their appointments. Our real-time system is written 100% in Elixir using the ([Kora](https://github.com/ironbay/kora)) framework."
+
+Nightwatch:
+  industry: SEO
+  url: https://nightwatch.io
+  blog: http://blog.nightwatch.io
+  location: Remote
+  description: "Nightwatch is the most advanced and intuitive SEO tracker and analytics tool in the industry. We use Elixir for high performance web scraping."
+  jobs:
+    - title: Full-stack developer [Ember | Rails | Elixir]
+      url: https://nightwatch.io/jobs
+
+Ostmodern:
+  industry: Broadcast Media
+  url: https://ostmodern.co.uk
+  blog: https://ostmodern.co.uk/blog/
+  location: London, UK
+  github: https://github.com/ostmodern
+  description: "Ostmodern work with leading media, broadcast and sport brands to define product strategies, develop innovative solutions and build services that deliver tangible competitive advantage, whether on desktop, mobile, tablet or TV. We use Elixir for high-throughput messaging and other performance-critical tasks."
+
+Digital Origin:
+  industry: Financial Services
+  url: https://www.digitalorigin.com/
+  github: https://github.com/digitalorigin
+  location: Barcelona, Spain
+  description: "Digital Origin is a financial services company mainly focused on offering e-tailers a product to provide consumer credit to their customers in the form of deferred payments. We use Elixir along with Phoenix in our payments platform."
+
+Slickspaces:
+  industry: Hospitality
+  url: https://slickspaces.com
+  location: Vancouver, Canada
+  github: https://github.com/slickspaces
+  description: "Fully automated guest access, twenty-four seven. Elixir and Phoenix are used for the entire API and back-end."
+
+NewAperio:
+  industry: Technology Consulting
+  url: https://newaperio.com
+  github: https://github.com/newaperio
+  location: Baton Rouge, LA, USA
+  description: "We help brands uncover their hidden potential. We're a web and mobile design and development studio. We use Elixir and Phoenix in client work and on internal projects to develop web apps, mobile app APIs, embedded systems and appliances, and more."
+
+Blend Media:
+  industry: Media Production
+  url: https://blend.media/
+  github: https://github.com/blendmedia
+  location: London, United Kingdom
+  description: "Blend is the world’s leading provider for Brands and Publishers looking to benefit from the deeper audience engagement that immersive content offers. We have built the largest library of premium 360° Video/VR films, available to license for use in campaigns across social media, Virtual Reality headsets and WebVR, and we run a global network of expert 360° Video Creators. Blend also makes it easy for Brands and Publishers to create their own 360 ad experiences all within the browser. Our \"360 Stories\" are customisable WebVR environments that deliver an engaging and shareable ad format, scalable across all social networks. Our backend is written in Elixir using Phoenix."
+
+Zenaton:
+  industry: Computer Software/Engineering
+  url: https://zenaton.com/
+  github: https://github.com/zenaton
+  location: Paris, FR
+  description: "Zenaton provides technical teams with the tools they need to easily create advanced business processes using a powerful hosted workflow engine. Elixir has been used to build the workflow engine and the worker agent"
+
+TSC:
+  industry: Business Intelligence
+  url: https://tsc.ai
+  blog: https://tsc.ai/news/
+  github: https://github.com/thestakeholdercompany
+  location: Singapore
+  description: TSC uses AI and the most advanced stakeholder technology to solve hard problems for some of the biggest companies, governments, and non-profits around the globe. We use Elixir and Phoenix to provide an API to our front-end applications, and for most business logic. We have chosen this stack to ensure scalability and resilience.
+  jobs:
+    - title: Back-end engineer [Elixir | Phoenix | Postgres]
+      url: https://tsc.ai/careers/
+
+Pattern Match:
+  industry: Technology Consulting
+  url: https://pattern-match.com
+  github: https://github.com/patternmatch/
+  description: "Elixir & AWS. We can help you with: developing the product, setting up infrastructure that is going to survive millions of concurrent users, perform full scale load tests to prove it and hook up business metrics, so that you can see it with your own eyes. Our main areas of  expertise are: Ad Tech, Instant Messaging, Public Transport & IoT."
+  location: Cracow, Poland
+
+KM Online:
+  industry: Financial Services
+  url: https://kmonline.com.br
+  github: https://github.com/kmonline
+  location: Florianópolis, Brazil
+  description: Founded at 2017, at Florianópolis, KM Online has an objective to simplify expense reporting and displacement reimbursement, using our Cloud platform, composed by mobile apps and web access. We use Elixir to process background jobs using AWS SNS + SQS with producer and consumer pipelines provided by GenStage.
+  jobs:
+    - title: Fullstack Developer
+      url: https://github.com/RubyFloripa/jobs/issues/12
+
+"Motorola Solutions":
+  industry: Telecommunications
+  url: https://www.motorolasolutions.com/
+  location: Krakow, Poland
+  description: Motorola Solutions uses Erlang and Elixir to develop components of mission critical communication systems that need to be reliable and fault-tolerant in the moment that matters.
+
+Amplified AI:
+  industry: Enterprise SaaS
+  url: https://amplified.ai
+  github: https://github.com/amplifiedai
+  location: Tokyo/San Francisco
+  description: Amplified uses artificial intelligence to make patents simpler and fairer. We use Elixir as the core of our back end stack because it gives us both performance and developer happiness, and guarantees scalability as we grow.
+
+Very:
+  industry: Technology Consulting
+  url: https://www.verypossible.com
+  github: http://github.com/verypossible
+  location: Remote
+  description: Very leverages Elixir where it makes sense to solve a wide range of problems clients face. These include APIs, full stack web builds, embedded firmware for IoT devices, and backend services that deal with parallelizable workloads, soft real-time constraints, or that require battle tested fault tolerance.
+
+YouProp:
+  industry: Real Estate
+  url: http://youprop.com.br
+  location: São Paulo, BR
+  description: "YouProp is an online real estate management and financial system for owners. We use Elixir in backend and angular 6 in front."
+
+HiringSolved:
+  industry: Staffing/Recruiting
+  url: https://hiringsolved.com
+  location: Chandler, AZ
+  description: HiringSolved uses use artificial intelligence to automate candidate matching, increase diversity, reduce time to fill jobs, analyze the social web, and unlock the power of your ATS, CRM, and HRIS data. Currently uses Elixir in select data processing systems.
+
+Bizneo HR:
+  industry: Human Resources
+  url: https://www.bizneo.com/
+  location: Madrid, Spain
+  description: "Bizneo’s HR Suite offers tools to manage your entire employee lifecycle. Built with Elixir and Phoenix, our HR management tools empower companies to act quickly and think globally in their HR processes."
+
+Aviacommerce:
+  industry: E-Commerce
+  url: https://aviacommerce.org
+  github: https://github.com/aviacommerce
+  description: "We are simplifying e-commerce ecosystem by unifying and creating smart services and providing consistent, cost-effective solution to sellers."
+  location:  Pune, Maharashtra, India
+
+Salam:
+  industry: Social Network
+  url: https://salam.io
+  location: Dubai, UAE
+  description: "We are the social platform that combines all the best features of the top social networks - posts, stories, chat, map and much more. We are using Elixir as the core technology for the backend. It helps us to build complex and sophisticated business logic in fast, yet simple and reliable way."
+
+FirstAlert:
+  industry: Consumer Electronics
+  url: https://www.firstalert.com/
+  location: Aurora, IL, USA and Atlanta, GA, USA
+  description: "First Alert is a brand in Newell's Security & Safety suite. We build smoke alarms, safety products, and smart home devices. We use Phoenix for user-facing web APIs and distributed Elixir for the cloud side of our smart home products."
+
+Celeste Computing:
+  industry: Computer Software/Engineering
+  url: https://www.linkedin.com/in/alopez-codeceleste/
+  location: Remote / Baltimore, MD USA / Santiago de Chile
+  description: "Software for enterprising wise apes. A staffing + consulting shop which focuses on Elixir, Erlang, Phoenix, React, Kubernetes, and AWS. If you code in elixir and are looking for work, send a message to the founder on LinkedIn."
+
+Brex:
+  industry: Financial Technology
+  url: https://brex.com
+  location: San Francisco, California, USA
+  description: Brex is rebuilding core financial services from scratch, starting with a credit card for startups. We are 100% Elixir and we use it to build large-scale distributed systems.
+
+Mux:
+  industry: Video
+  url: https://mux.com
+  github: https://github.com/muxinc
+  location: San Francisco, California, USA
+  description: Mux offers real-time performance monitoring and analytics for video streaming, helping publishers deliver better quality of experience to their viewers. The API is built with Elixir.
+
+Ecaresoft:
+  industry: Healthcare
+  url: https://www.ecaresoft.com
+  github: https://github.com/ecaresoft
+  location: San Pedro, Nuevo Leon, MEX
+  description: We're in the business of driving healhcare costs down in order for everyone to have access to the best care possible.
+  jobs:
+    - title: Full Stack Software Developer
+      url: https://careers.ecaresoft.com/post/2018/10/26/full-stack-software-developers/
+
+Daybit:
+  industry: Cryptocurrency Exchange
+  url: https://daybit.com
+  github: https://github.com/daybit-exchange
+  location: Seoul, South Korea
+  description: A cryptocurrency exchange service built with Elixir / Phoenix & Elm. We also provides websocket based API for developers.
+
+Versus Systems:
+  industry: Gaming
+  url: https://www.versussystems.com/
+  github: https://github.com/versus-systems
+  location: Los Angeles, California, USA
+  description: Versus makes games more fun. Our white-label platform gives players the opportunity to play for the things they love, inside of the games they love. Interactive entertainment becomes even more engaging, more fun, and more personal.
+
+Ardhika Software:
+  industry: Technology Consulting
+  url:  http://ardhika.com
+  location: Chennai, India
+  description: We are an IT Services & Product development company specialising in development using Open Source technologies.  We use Elixir, GoLang & VueJS predominantly in our products which includes a Cloud Based Restaurant Management System
+
+10Pines:
+  industry: Technology Consulting
+  url: https://www.10pines.com/
+  blog: https://blog.10pines.com/
+  github: https://github.com/10pines
+  location: Buenos Aires, Argentina
+  description: We craft elegant software using Elixir / Phoenix among other modern technologies. Organizers and sponsors of [Erlang/Elixir local conference](http://www.erlang-factory.com/eflba2017) and organizers of local [Elixir meetup](https://www.meetup.com/BeamBA/).
+
+
+Audian:
+  industry: Telecommunications
+  url: https://www.audian.com/
+  github: https://github.com/audian
+  location: Kirkland, WA. USA
+  description: "Audian is a VoIP company that provides affordable, reliable, scalable hosted voice solutions for small to medium and large sized businesses. We use Elixir for our device provisioner, CDR aggregation and upcoming SMS/Chat platform."
+
+Fiqus:
+  industry: Computer Software/Engineering
+  url: https://fiqus.com/
+  blog: https://fiqus.com/blog/
+  github: https://github.com/fiqus
+  location: Buenos Aires, Argentina and Villa La Angostura, Argentina
+  description: We are a Software Co-operative and we work (and love) Elixir/Phoenix among other modern technologies. We participate and organize the local [Elixir meetup](https://www.meetup.com/BeamBA/).
+
+Seer Aerospace:
+  industry: Enterprise Software
+  url: https://seeraerospace.com
+  github: https://github.com/seeraerospace
+  location: New York, NY. USA
+  description: An aviation software company making it easier to buy and sell aircraft parts. We use Elixir / Phoenix for our seller web app.
+
+Ispirata:
+    industry: Embedded software/Internet of Things
+    url: https://ispirata.com/
+    blog: https://blog.ispirata.com/
+    github: https://github.com/ispirata
+    location: Milano, Italy and Padova, Italy
+    description: "Ispirata is a software company focused on open source solutions. Ispirata builds Astarte, an Open Source IoT platform written in Elixir."
+
+Postmates:
+  industry: Online Ordering
+  url: https://www.postmates.com/
+  blog: https://blog.postmates.com/
+  github: https://github.com/postmates/
+  location: San Francisco, CA
+  description: Postmates is the largest, most reliable on-demand delivery and pickup platform. Elixir and Erlang are used for multiple core backend components.
+
+OmiseGO:
+  industry: Blockchain & Fintech
+  url: https://omisego.network
+  blog: https://blog.omisego.network/
+  github: https://github.com/omisego
+  location: Bangkok, Singapore, Tokyo, Warsaw, etc.
+  description: "OmiseGO enables financial inclusion and interoperability through the public, decentralized OMG network. Elixir is used both for developing the OMG Network as well as the eWallet application."
+  jobs:
+    - title: Blockchain Developer
+      url: https://imappandgolem.traffit.com/public/an/8
+    - title: Software Developer
+      url: https://omise.breezy.hr/p/0c7bbc8de698-omisego-software-developer
+    - title: DevOps
+      url: https://omise.breezy.hr/p/3409b3bd0a86-omisego-devops-engineer
+    - title: Researcher
+      url: https://omise.breezy.hr/p/6040f662364a-omisego-researcher
+    - title: Technical Writer
+      url: https://omise.breezy.hr/p/51dea06688c4-omisego-technical-writer
+
+PagerDuty:
+  industry: Computer Software/Engineering
+  url: https://www.pagerduty.com/
+  blog: https://engineering.pagerduty.com/
+  location: Toronto, San Francisco, Seattle, Atlanta, Remote
+  description: PagerDuty is the leading digital operations management platform for businesses. We empower DevOps, IT operations, support, security, and business leaders to turn any signal into insight and real-time action across any operational use case. When revenue and brand reputation depend on customer satisfaction, PagerDuty helps teams prevent and resolve business-impacting incidents and deliver exceptional digital experiences.  All new software is written in Elixir, and currently we have over 50 Elixir services in production.
+  jobs:
+    - title: All Roles
+      url: https://www.pagerduty.com/careers/
+
+Fast Radius:
+  industry: Additive Manufacturing & 3D Printing
+  url: https://www.fastradius.com/
+  github: https://github.com/fast-radius/
+  location: Chicago
+  description: "Fast Radius is the leading provider of comprehensive additive manufacturing solutions – from application discovery, to product design and testing, to industrial-grade production and global fulfillment. We love Elixir, and use it all over the stack, from embedded hardware to web applications to data processing."
+  jobs:
+    - title: Software Engineer
+      url: https://www.fastradius.com/careers
+
+MyDreams:
+  industry: Social Network
+  url: https://www.mydreams.club/
+  github: https://github.com/MyDreamsClub
+  location: Moscow, Russia
+  description: "MyDreams is the platform wich provides basic social network features. The main feature which distinguishes is working with dreams. Dream can be fulfilled by other users or by the project. Dev team is in deep love with elixir because it helps to solve problems with highload and develop realtime features."
+
+YipYip:
+  industry: Mobile App & Game Development
+  url: https://www.yipyip.nl
+  github: https://github.com/weareyipyip
+  location: Rotterdam, the Netherlands
+  description: "YipYip is a native mobile app developer (iOS & Android) for a diverse range of customers. We mainly work for agencies, small businesses, government & startups. We use Elixir/Phoenix to develop backends and API's for our apps but also for other web based applications such as customer portals. We have a lot of experience in hosting Elixir apps in large docker clusters hosted on AWS."
+
+Grain:
+  industry: Communication
+  url: https://www.usegrain.com/
+  location: San Mateo, CA, USA
+  description: "Grain is on a mission to organize all team conversations to be accessible and useful for everyone, even if you weren't in the meeting. We do this by creating a replacement to Google docs that syncs perfectly with modern calendaring and video conferencing tools so that everyone is on the same page, with a perfect record of what is important but without requiring massive behavior change."
+  jobs:
+    - title: Backend Engineer - Elixir
+      url: https://angel.co/grain-intelligence/jobs/495036-backend-engineer-elixir
+
+Wise Home:
+  industry: Home automation
+  url: https://wisehome.dk
+  github: https://github.com/wise-home
+  location: Ry, Denmark
+  description: "Wise Home delivers automation and real time utility meter readings to landlords in primarily rental buildings. We use Elixir in all backend code and in some embedded software. Elixir is a perfect match for keeping persistent TCP connections to small devices in buildings."
+
+CareDox:
+  industry: Healthcare
+  url: https://caredox.com
+  github: https://github.com/motherknows
+  location: New York, NY, USA (SW corner of Bryant Park, walkable from Grand Central & Penn Station)
+  description: Diverse, collaborative team of thoughtful, friendly engineers driven by mission of working with schools and school nurses to immunize all children -- even the uninsured! -- against diseases like the flu and help children with chronic illnesses (like asthma) manage their care. We take pride in our Elixir code and use CI tools to guarantee production Elixir code has high test coverage and clean compiler, Dialyzer, Credo, and Sobelow results.
+  jobs:
+    - title: Senior Backend Engineer - Elixir
+      url: https://caredox.com/careers/?gh_jid=1484987
+
+SmartLogic:
+  industry: Technology Consulting
+  url: https://smartlogic.io/
+  github: https://github.com/smartlogic
+  location: Baltimore, MD, USA
+  description: "SmartLogic is a Baltimore-based consulting company that has been building custom web and mobile software applications since 2005. We work with funded startups, established organizations, and non-profit agencies to bring new projects to life using progressive, best-of-breed technologies and methods. We use Rails, Elixir/Phoenix, React Native, and whatever else we need to get the job done."
+  jobs:
+    - title: Developer
+      url: https://smartlogic.workable.com/j/A57C1DD2C8
+
+Healthdesk.ai:
+  industry: Healthcare
+  url: https://healthcare.ai
+  location: Orange County, CA
+  description: Equip your facility with a suite of AI-powered tools and services built exclusively for health clubs, gyms, and fitness centers to stay one step ahead.
+  jobs:
+    - title: Contract
+      url: https://angel.co/l/2fkyXV
+
+Citrusbyte:
+  industry: Technology Consulting
+  url: https://citrusbyte.com/
+  github: https://github.com/citrusbyte
+  location: Los Angeles, CA
+  description: From whiteboarding new concepts to long-term support, we work with startups and large multi-national enterprises to develop new applications.
+  jobs:
+    - title: Solutions Architect
+      url: https://citrusbyte.applytojob.com/apply/WLPNjpqVlF/Software-Solutions-Architect-Remote?source=ElixirCompaniesCom
+
+Rekki:
+  industry: Restaurant Tech
+  url: https://www.rekki.com
+  location: London
+  description: |
+    REKKI is a free mobile app that allows you to order and chat with any supplier.
+
+    We are a highly technical and inquisitive bunch still small enough that anyone can impact and influence.
+    We like to take risks on technologies that will pay off in the long term, like Elixir, RabbitMQ, or React Native.
+
+    Elixir powers our core systems such as chat and orders, and much more.
+
+    We're always looking for talented people no matter the role so feel free to reach out to us.
+  github: https://github.com/rekki
+  blog: https://medium.com/rekki-engineering
+  jobs:
+    - title: Backend (Elixir), Frontend (JavaScript, React Native), QA Engineers
+      url: https://www.rekki.com/careers/engineering
+    - title: Data Scientists
+      url: https://www.rekki.com/careers/data
+    - title: Designers
+      url: https://www.rekki.com/careers/design
+    - title: Product Managers
+      url: https://www.rekki.com/careers/product
+>>>>>>> cf177ebc7034d92090532b0beb27eb6d36262c94

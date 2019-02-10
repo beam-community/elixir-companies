@@ -1,7 +1,11 @@
 language: ruby
 rvm:
   - 2.4
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev
 before_script:
   - gem install awesome_bot
 script:
-  - awesome_bot src/_data/companies.yml --allow-redirect
+  - awesome_bot src/_data/companies.yml --allow-redirect --set-timeout 300

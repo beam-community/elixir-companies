@@ -9,8 +9,9 @@ class IndustryGenerator < Jekyll::Generator
     industries = complete_info
       .group_by { |company| [company['industry'], company['industry'].downcase.gsub(/[^a-zA-Z]/, "-")] }
       .sort_by { |key, _values| key[0] }
-      .reduce([]) do |acc, group|
-      acc << { 'companies' => group.last, 'name' => group.first.first, 'path' => group.first.last }
+      .reduce([]) do |acc, ((name, path), companies)|
+      sorted_companies = companies.sort_by { |c| c['name'].downcase }
+      acc << { 'companies' => sorted_companies, 'name' => name, 'path' => path }
     end
 
     site.data['industries'] = industries
