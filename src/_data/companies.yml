@@ -1668,9 +1668,19 @@ Trax:
 
 Pharos Production Inc.:
   industry: Blockchain & Fintech
-  url: http://www.pharosproduction.com
+  url: https://pharosproduction.com
+  blog: https://medium.com/pharos-production
+  github: https://github.com/PharosProduction
   location: Las Vegas, NV, USA; Kyiv, Ukraine
-  description: "Pharos Production team is made up of the brightest and most dedicated blockchain, fintech, ICO, web and mobile developers, designers, project managers and quality assurance specialists. Our development efforts resulted in more than 30 mobile and web solutions – social networking apps, ICOs, private blockchains, e-commerce, news boards, other different business and entertainment applications. We are hiring!"
+  description: |
+    We're a Vegas-based software development company with development branches in Eastern Europe (Ukraine, Lithuania). 
+    We specialize in high-load systems, including custom distributed and decentralized technologies like blockchain, 
+    with all required infra - web front end, mobile apps, DevOps etc. We use cutting-edge tools in our technology 
+    stack - Elixir, Scala, ReactJS, Kotlin for Android, Swift for iOS, Flutter for cross-platform development and Fuchsia, 
+    Kubernetes, Docker and Ansible for deployment into AWS, Azure or private servers. Also, we provide the development 
+    of distributed/decentralized projects on Quorum (J.P. Morgan blockchain technology for financial organizations) 
+    and Hyperledger stack for Supply Chain projects. 
+    We are hiring!
   jobs:
     - title: Elixir Developer
 
