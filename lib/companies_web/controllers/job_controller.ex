@@ -23,7 +23,6 @@ defmodule CompaniesWeb.JobController do
         |> redirect(to: Routes.company_path(conn, :recent))
 
       {:error, %Ecto.Changeset{} = changeset} ->
-        IO.inspect(changeset)
         render(conn, "new.html", changeset: changeset)
     end
   end
