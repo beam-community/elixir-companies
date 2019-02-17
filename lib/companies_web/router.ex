@@ -34,6 +34,7 @@ defmodule CompaniesWeb.Router do
     get "/signout", AuthController, :signout
     get "/github", AuthController, :request
     get "/github/callback", AuthController, :callback
+    resources "/companies", CompanyController, only: [:new, :create]
   end
 
   scope "/admin", CompaniesWeb.Admin do
