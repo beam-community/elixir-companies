@@ -17,12 +17,13 @@ defmodule CompaniesWeb.JobController do
 
   def create(conn, %{"job" => params}) do
     case Jobs.create(params, current_user(conn)) do
-      :ok ->
+      {:ok, _job} ->
         conn
         |> put_flash(:info, "Job created successfully.")
         |> redirect(to: Routes.company_path(conn, :recent))
 
       {:error, %Ecto.Changeset{} = changeset} ->
+        IO.inspect(changeset)
         render(conn, "new.html", changeset: changeset)
     end
   end
