@@ -18,14 +18,12 @@ defmodule Companies.Companies do
   """
 
   def all(params \\ %{}) do
-    page = Map.get(params, "page", 1)
+    page = Map.get(params, "page", "1")
 
     (c in Company)
     |> from()
-    |> join(:inner, [c], i in assoc(c, :industry))
-    |> join(:left, [c], j in assoc(c, :jobs))
     |> predicates(params)
-    |> preload([_c, i, j], industry: i, jobs: j)
+    |> preload([:industry, :jobs])
     |> Repo.paginate(page: page, page_size: 8)
   end
 
@@ -39,8 +37,8 @@ defmodule Companies.Companies do
 
   defp predicates(query, %{"type" => "hiring"}) do
     query
-    |> order_by([_c, _i, j], desc: j.inserted_at)
     |> join(:inner, [c], j in assoc(c, :jobs))
+    |> order_by([_c, j], desc: j.inserted_at)
   end
 
   defp predicates(query, _) do
