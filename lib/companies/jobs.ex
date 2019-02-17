@@ -53,7 +53,7 @@ defmodule Companies.Jobs do
   def create(attrs, user) do
     %Job{}
     |> Job.changeset(attrs)
-    |> PendingChanges.create(:insert, user)
+    |> PendingChanges.create(:create, user)
   end
 
   @doc """
