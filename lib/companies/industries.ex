@@ -17,9 +17,6 @@ defmodule Companies.Industries do
   def all do
     query =
       from i in Industry,
-        join: c in assoc(i, :companies),
-        select: i,
-        distinct: true,
         order_by: i.name
 
     Repo.all(query)

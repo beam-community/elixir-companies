@@ -41,6 +41,12 @@ defmodule Companies.Companies do
     |> order_by([_c, j], desc: j.inserted_at)
   end
 
+  defp predicates(query, %{"industry" => industry_id}) do
+    query
+    |> where([c], c.industry_id == ^industry_id)
+    |> order_by(asc: :name)
+  end
+
   defp predicates(query, _) do
     order_by(query, [c, _i, _j], desc: c.inserted_at)
   end
