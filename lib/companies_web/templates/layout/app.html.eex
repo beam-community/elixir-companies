@@ -9,9 +9,11 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   </head>
   <body>
-    <%= render "navbar.html", conn: @conn %>
-    <%= render @view_module, @view_template, assigns %>
-    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <div id="wrapper">
+      <%= render "navbar.html", conn: @conn %>
+      <%= render @view_module, @view_template, assigns %>
+    </div>
     <%= render "footer.html", conn: @conn %>
+    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
