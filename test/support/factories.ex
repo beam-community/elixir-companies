@@ -1,7 +1,7 @@
-defmodule Companies.Factory do
-  use ExMachina.Ecto, repo: Companies.Repo
+defmodule ElixirCompanies.Factory do
+  use ExMachina.Ecto, repo: ElixirCompanies.Repo
 
-  alias Companies.Schema.{Company, Industry, Job, PendingChange, User}
+  alias ElixirCompanies.Schema.{Company, Industry, Job, PendingChange, User}
 
   def company_factory do
     %Company{

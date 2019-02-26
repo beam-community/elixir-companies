@@ -1,4 +1,4 @@
-defmodule Companies.Repo.Migrations.DescriptionAsText do
+defmodule ElixirCompanies.Repo.Migrations.DescriptionAsText do
   use Ecto.Migration
 
   def change do

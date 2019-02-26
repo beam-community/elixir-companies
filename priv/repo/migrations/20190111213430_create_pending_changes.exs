@@ -1,4 +1,4 @@
-defmodule Companies.Repo.Migrations.CreatePendingChanges do
+defmodule ElixirCompanies.Repo.Migrations.CreatePendingChanges do
   use Ecto.Migration
 
   def change do

@@ -2,7 +2,7 @@ use Mix.Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :companies, CompaniesWeb.Endpoint,
+config :elixir_companies, ElixirCompaniesWeb.Endpoint,
   http: [port: 4001],
   server: false
 
@@ -10,7 +10,7 @@ config :companies, CompaniesWeb.Endpoint,
 config :logger, level: :warn
 
 # Configure your database
-config :companies, Companies.Repo,
+config :elixir_companies, ElixirCompanies.Repo,
   username: "postgres",
   password: "postgres",
   database: "companies_test",

@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :companies, CompaniesWeb.Endpoint,
+config :elixir_companies, ElixirCompaniesWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -46,7 +46,7 @@ config :companies, CompaniesWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :companies, CompaniesWeb.Endpoint,
+config :elixir_companies, ElixirCompaniesWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
@@ -67,7 +67,7 @@ config :phoenix, :stacktrace_depth, 20
 config :phoenix, :plug_init_mode, :runtime
 
 # Configure your database
-config :companies, Companies.Repo,
+config :elixir_companies, ElixirCompanies.Repo,
   username: "postgres",
   password: "postgres",
   database: "companies_dev",

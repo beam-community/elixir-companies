@@ -5,12 +5,12 @@
 # Inside the script, you can read and write to any of your
 # repositories directly:
 #
-#     Companies.Repo.insert!(%Companies.SomeSchema{})
+#     ElixirCompanies.Repo.insert!(%ElixirCompanies.SomeSchema{})
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
-alias Companies.Schema.{Company, Job, Industry, PendingChange, User}
-alias Companies.Repo
+alias ElixirCompanies.Schema.{Company, Job, Industry, PendingChange, User}
+alias ElixirCompanies.Repo
 
 industries = [
   "Accounting",

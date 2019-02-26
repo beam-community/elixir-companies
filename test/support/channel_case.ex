@@ -1,4 +1,4 @@
-defmodule CompaniesWeb.ChannelCase do
+defmodule ElixirCompaniesWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,15 +21,15 @@ defmodule CompaniesWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint CompaniesWeb.Endpoint
+      @endpoint ElixirCompaniesWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Companies.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(ElixirCompanies.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Companies.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(ElixirCompanies.Repo, {:shared, self()})
     end
 
     :ok

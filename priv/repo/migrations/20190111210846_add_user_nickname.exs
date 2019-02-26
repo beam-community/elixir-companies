@@ -1,4 +1,4 @@
-defmodule Companies.Repo.Migrations.AddUserNickname do
+defmodule ElixirCompanies.Repo.Migrations.AddUserNickname do
   use Ecto.Migration
 
   def change do

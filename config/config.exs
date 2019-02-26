@@ -7,14 +7,14 @@
 # General application configuration
 use Mix.Config
 
-config :companies, ecto_repos: [Companies.Repo]
+config :elixir_companies, ecto_repos: [ElixirCompanies.Repo]
 
 # Configures the endpoint
-config :companies, CompaniesWeb.Endpoint,
+config :elixir_companies, ElixirCompaniesWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "cnFp+p3HcWa0ZaS5YhEfuJlU2PIxvUinNThsTSXm4ZE2M7D/zYzpfIJGMVNLHtqv",
-  render_errors: [view: CompaniesWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Companies.PubSub, adapter: Phoenix.PubSub.PG2]
+  render_errors: [view: ElixirCompaniesWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: ElixirCompanies.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -24,9 +24,9 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix and Ecto
 config :phoenix, :json_library, Jason
 
-config :companies,
+config :elixir_companies,
   site_data: %{
-    name: "Elixir Companies",
+    name: "Elixir ElixirCompanies",
     description: "A collection of companies using Elixir in production.",
     maintainers: [
       "doomspork",
@@ -50,7 +50,7 @@ config :ueberauth, Ueberauth.Strategy.Github.OAuth,
   client_secret: System.get_env("GITHUB_CLIENT_SECRET")
 
 config :scrivener_html,
-  routes_helper: CompaniesWeb.Router.Helpers,
+  routes_helper: ElixirCompaniesWeb.Router.Helpers,
   view_style: :bulma
 
 # Import environment specific config. This must remain at the bottom
