@@ -12,7 +12,7 @@
 
     <%= if @company.url do %>
       <span class="icon purple"><i class="fas fa-fw fa-globe"></i></span>
-      <%= link link_title(@company.url), to: @company.url, target: :blank %>
+      <%= link link_title(@company.url), to: url_with_scheme(@company.url), target: :blank %>
       <br>
     <% end %>
 
@@ -41,7 +41,7 @@
       <br/>
       <%= for job <- @company.jobs do %>
         <span class="icon purple"><i class="fas fa-briefcase"></i></span>
-        <%= link job.title, to: job.url, target: :blank %>
+        <%= link job.title, to: url_with_scheme(job.url), target: :blank %>
         <br>
       <% end %>
     </p>
