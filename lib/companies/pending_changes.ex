@@ -5,7 +5,7 @@ defmodule Companies.PendingChanges do
 
   import Ecto.Query
 
-  alias Companies.Repo
+  alias Companies.{Repo, Slack}
   alias Companies.Schema.{Company, Job, Industry, PendingChange}
 
   def all do
@@ -105,7 +105,7 @@ defmodule Companies.PendingChanges do
     {:error, %{changes | repo: Repo, action: action}}
   end
 
-  defp insert_change(%{data: resource, params: changes}, action, note, %{id: user_id}) do
+  defp insert_change(%{data: resource, params: changes}, action, note, %{id: user_id} = user) do
     updated_changes =
       case Map.get(resource, :id) do
         nil -> changes
@@ -123,6 +123,19 @@ defmodule Companies.PendingChanges do
     %PendingChange{}
     |> PendingChange.changeset(params)
     |> Repo.insert()
+    |> notify_slack(user)
+  end
+
+  defp notify_slack({:ok, pending_change}, user) do
+    pending_change
+    |> Map.put(:user, user)
+    |> Slack.notify()
+
+    {:ok, pending_change}
+  end
+
+  defp notify_slack(error, _user) do
+    error
   end
 
   defp resource_module("company"), do: Company
