@@ -1,5 +1,5 @@
 {
-  "name": "companies",
+  "name": "elixir-companies",
   "scripts": {
     "postdeploy": "mix do ecto.migrate, run priv/repo/seeds.exs"
   },
@@ -13,6 +13,9 @@
     "SECRET_KEY_BASE": {
       "required": true
     },
+    "SLACK_NOTIFICATION_ENDPOINT": {
+      "required": true
+    }
     "MIX_ENV": "dev"
   },
   "formation": {},
