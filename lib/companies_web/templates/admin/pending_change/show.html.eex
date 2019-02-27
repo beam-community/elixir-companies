@@ -25,7 +25,7 @@
       <%= form_tag(Routes.pending_change_path(@conn, :update, @pending_change.id), method: "PATCH") do %>
         <div class="field is-grouped is-grouped-centered">
           <div class="control">
-            <%= submit("Approve", class: "button is-primary", name: "apprmval", value: "true") %>
+            <%= submit("Approve", class: "button is-primary", name: "approval", value: "true") %>
           </div>
           <div class="control">
             <%= submit("Reject", class: "button is-danger", name: "approval", value: "false") %>

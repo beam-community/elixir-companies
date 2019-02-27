@@ -34,31 +34,32 @@ defmodule CompaniesWeb.JobController do
 
   def edit(conn, %{"id" => id}) do
     job = Jobs.get_job!(id)
+    company = Companies.get_company!(job.company_id)
     changeset = Jobs.change_job(job)
-    render(conn, "edit.html", job: job, changeset: changeset)
+    render(conn, "edit.html", job: job, changeset: changeset, company: company)
   end
 
   def update(conn, %{"id" => id, "job" => job_params}) do
     job = Jobs.get_job!(id)
 
-    case Jobs.update_job(job, job_params) do
-      {:ok, job} ->
+    case Jobs.update_job(job, job_params, current_user(conn)) do
+      {:ok, _job} ->
         conn
         |> put_flash(:info, "Job updated successfully.")
-        |> redirect(to: Routes.job_path(conn, :show, job))
+        |> redirect(to: Routes.company_path(conn, :recent))
 
       {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "edit.html", job: job, changeset: changeset)
+        render(conn, "edit.html", changeset: changeset)
     end
   end
 
   def delete(conn, %{"id" => id}) do
     job = Jobs.get_job!(id)
-    {:ok, _job} = Jobs.delete_job(job)
+    {:ok, _job} = Jobs.delete_job(job, current_user(conn))
 
     conn
     |> put_flash(:info, "Job deleted successfully.")
-    |> redirect(to: Routes.job_path(conn, :index))
+    |> redirect(to: Routes.company_path(conn, :recent))
   end
 
   defp load_companies(conn, _), do: assign(conn, :companies, Companies.all())

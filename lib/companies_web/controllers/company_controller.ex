@@ -44,29 +44,31 @@ defmodule CompaniesWeb.CompanyController do
   def edit(conn, %{"id" => id}) do
     company = Companies.get_company!(id)
     changeset = Companies.change_company(company)
-    render(conn, "edit.html", company: company, changeset: changeset)
+    industries = Industries.all()
+    render(conn, "edit.html", company: company, changeset: changeset, industries: industries)
   end
 
   def update(conn, %{"id" => id, "company" => company_params}) do
     company = Companies.get_company!(id)
 
-    case Companies.update_company(company, company_params) do
-      {:ok, company} ->
+    case Companies.update_company(company, company_params, current_user(conn)) do
+      {:ok, _company} ->
         conn
         |> put_flash(:info, "Company updated successfully.")
-        |> redirect(to: Routes.company_path(conn, :show, company))
+        |> redirect(to: Routes.company_path(conn, :recent))
 
       {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "edit.html", company: company, changeset: changeset)
+        industries = Industries.all()
+        render(conn, "edit.html", company: company, changeset: changeset, industries: industries)
     end
   end
 
   def delete(conn, %{"id" => id}) do
     company = Companies.get_company!(id)
-    {:ok, _company} = Companies.delete_company(company)
+    {:ok, _company} = Companies.delete_company(company, current_user(conn))
 
     conn
     |> put_flash(:info, "Company deleted successfully.")
-    |> redirect(to: Routes.company_path(conn, :index))
+    |> redirect(to: Routes.company_path(conn, :recent))
   end
 end
