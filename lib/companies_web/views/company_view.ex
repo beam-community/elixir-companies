@@ -16,6 +16,10 @@ defmodule CompaniesWeb.CompanyView do
     |> String.replace("www.", "")
   end
 
+  def url_with_scheme("http://" <> _ = url), do: url
+  def url_with_scheme("https://" <> _ = url), do: url
+  def url_with_scheme(url, scheme \\ "https"), do: "#{scheme}://#{url}"
+
   def render("url.html", %{url: nil}), do: ""
   def render("blog.html", %{blog: nil}), do: ""
   def render("github.html", %{github: nil}), do: ""
