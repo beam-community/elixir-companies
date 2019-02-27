@@ -49,6 +49,7 @@ defmodule Companies.PendingChanges do
 
   defp apply_changes("create", changeset), do: Repo.insert(changeset)
   defp apply_changes("update", changeset), do: Repo.update(changeset)
+  defp apply_changes("delete", resource), do: Repo.delete(resource)
 
   defp changeset(module, changes) do
     record =
@@ -73,6 +74,18 @@ defmodule Companies.PendingChanges do
       |> Map.pop(:industry)
 
     Map.put(current_values, :industry_id, industry_id)
+  end
+
+  defp current_values(%{changes: %{"id" => id}, resource: "job"}) do
+    {%{id: company_id}, current_values} =
+      Job
+      |> Repo.get(id)
+      |> Repo.preload([:company])
+      |> drop_ecto_fields()
+      |> drop_nulls()
+      |> Map.pop(:company)
+
+    Map.put(current_values, :company_id, company_id)
   end
 
   defp current_values(%{changes: %{"id" => id}, resource: resource}) do
@@ -103,6 +116,21 @@ defmodule Companies.PendingChanges do
 
   defp invalid_change(changes, action) do
     {:error, %{changes | repo: Repo, action: action}}
+  end
+
+  defp insert_change(%{data: resource}, "delete", note, %{id: user_id} = user) do
+    params = %{
+      action: "delete",
+      changes: "{}",
+      note: note,
+      resource: struct_to_string(resource),
+      user_id: user_id
+    }
+
+    %PendingChange{}
+    |> PendingChange.changeset(params)
+    |> Repo.insert()
+    |> notify_slack(user)
   end
 
   defp insert_change(%{data: resource, params: changes}, action, note, %{id: user_id} = user) do

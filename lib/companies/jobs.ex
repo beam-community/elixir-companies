@@ -68,10 +68,10 @@ defmodule Companies.Jobs do
       {:error, %Ecto.Changeset{}}
 
   """
-  def update_job(%Job{} = job, attrs) do
+  def update_job(%Job{} = job, attrs, user) do
     job
     |> Job.changeset(attrs)
-    |> Repo.update()
+    |> PendingChanges.create(:update, user)
   end
 
   @doc """
@@ -86,8 +86,10 @@ defmodule Companies.Jobs do
       {:error, %Ecto.Changeset{}}
 
   """
-  def delete_job(%Job{} = job) do
-    Repo.delete(job)
+  def delete_job(%Job{} = job, user) do
+    job
+    |> Job.changeset(%{})
+    |> PendingChanges.create(:delete, user)
   end
 
   @doc """

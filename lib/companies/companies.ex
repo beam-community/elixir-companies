@@ -107,10 +107,10 @@ defmodule Companies.Companies do
   {:error, %Ecto.Changeset{}}
 
   """
-  def update_company(%Company{} = company, attrs) do
+  def update_company(%Company{} = company, attrs, user) do
     company
     |> Company.changeset(attrs)
-    |> Repo.update()
+    |> PendingChanges.create(:update, user)
   end
 
   @doc """
@@ -125,8 +125,10 @@ defmodule Companies.Companies do
   {:error, %Ecto.Changeset{}}
 
   """
-  def delete_company(%Company{} = company) do
-    Repo.delete(company)
+  def delete_company(%Company{} = company, user) do
+    company
+    |> Company.changeset(%{})
+    |> PendingChanges.create(:delete, user)
   end
 
   @doc """

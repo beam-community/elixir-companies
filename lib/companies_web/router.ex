@@ -24,7 +24,6 @@ defmodule CompaniesWeb.Router do
     get "/", CompanyController, :recent
     get "/hiring", CompanyController, :hiring
     get "/browse", CompanyController, :index
-    resources "/jobs", JobController
     resources "/users", UserController
   end
 
@@ -34,7 +33,8 @@ defmodule CompaniesWeb.Router do
     get "/signout", AuthController, :signout
     get "/github", AuthController, :request
     get "/github/callback", AuthController, :callback
-    resources "/companies", CompanyController, only: [:new, :create]
+    resources "/companies", CompanyController
+    resources "/jobs", JobController
   end
 
   scope "/admin", CompaniesWeb.Admin do
