@@ -30,7 +30,6 @@ defmodule Companies.Slack do
         }
       ]
     }
-
   end
 
   defp notify_slack(), do: Application.get_env(:companies, :notify_slack)

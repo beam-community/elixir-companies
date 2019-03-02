@@ -41,6 +41,7 @@ defmodule Companies.PendingChanges do
 
     {:ok, :rejected}
   end
+
   def act(change_id, "true") do
     change_id
     |> get!()
@@ -52,7 +53,6 @@ defmodule Companies.PendingChanges do
          record <- get_record(module, changes),
          changeset <- apply_changeset(module, action, record, changes),
          {:ok, _changes} <- apply_changes(action, changeset) do
-
       change
       |> PendingChange.changeset(%{approved: true})
       |> Repo.update()
@@ -65,6 +65,7 @@ defmodule Companies.PendingChanges do
   defp apply_changeset(_module, "delete", record, _changes) do
     record
   end
+
   defp apply_changeset(module, _action, record, changes) do
     module.changeset(record, changes)
   end
@@ -128,7 +129,6 @@ defmodule Companies.PendingChanges do
   defp invalid_change(changes, action) do
     {:error, %{changes | repo: Repo, action: action}}
   end
-
 
   defp notify_slack({:ok, pending_change}, user) do
     pending_change
