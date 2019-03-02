@@ -4,11 +4,13 @@
   <% end %>
   <div class="content has-text-centered">
     <p class="title is-4 thin"><%= @company.name %></p>
-    <%= link to: Routes.company_path(@conn, :edit, @company) do %>
-      <span class="icon purple"><i class="fas fa-edit"></i></span> edit
-    <% end %>
-    <%= link to: Routes.company_path(@conn, :delete, @company), method: :delete do %>
-      <span class="icon purple"><i class="fas fa-trash-alt"></i></span> delete
+    <%= if signed_in?(@conn) do %>
+      <%= link to: Routes.company_path(@conn, :edit, @company) do %>
+        <span class="icon purple"><i class="fas fa-edit"></i></span> edit
+      <% end %>
+      <%= link to: Routes.company_path(@conn, :delete, @company), method: :delete do %>
+        <span class="icon purple"><i class="fas fa-trash-alt"></i></span> delete
+      <% end %>
     <% end %>
   </div>
   <div class="content company-info has-text-left">
@@ -48,6 +50,7 @@
       <%= for job <- @company.jobs do %>
         <span class="icon purple"><i class="fas fa-briefcase"></i></span>
         <%= link job.title, to: url_with_scheme(job.url), target: :blank %>
+        <%= if signed_in?(@conn) do %>
         &nbsp;
         [
         <%= link to: Routes.job_path(@conn, :edit, job) do %>
@@ -58,6 +61,7 @@
           <span class="icon purple"><i class="fas fa-trash-alt"></i></span>
         <% end %>
         ]
+        <% end %>
         <br>
       <% end %>
     </p>

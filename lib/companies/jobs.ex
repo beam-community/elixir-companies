@@ -87,9 +87,7 @@ defmodule Companies.Jobs do
 
   """
   def delete_job(%Job{} = job, user) do
-    job
-    |> Job.changeset(%{})
-    |> PendingChanges.create(:delete, user)
+    PendingChanges.create(%{data: job, params: %{"id" => job.id, "delete" => true}}, :delete, user)
   end
 
   @doc """
