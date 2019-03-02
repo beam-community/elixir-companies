@@ -126,7 +126,7 @@ defmodule Companies.Companies do
 
   """
   def delete_company(%Company{} = company, user) do
-    PendingChanges.create(%{data: company, params: %{"id" => company.id, "delete" => true}}, :delete, user)
+    PendingChanges.create(company, :delete, user)
   end
 
   @doc """

@@ -7,7 +7,7 @@ config :companies, CompaniesWeb.Endpoint,
   server: false
 
 # Print only warnings and errors during test
-config :logger, level: :warn
+config :logger, level: :info
 
 # Configure your database
 config :companies, Companies.Repo,
@@ -16,5 +16,3 @@ config :companies, Companies.Repo,
   database: "companies_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
-
-config :companies, :notify_slack, false

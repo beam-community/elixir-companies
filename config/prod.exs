@@ -15,7 +15,7 @@ config :companies, CompaniesWeb.Endpoint,
   cache_static_manifest: "priv/static/cache_manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
-config :companies, :notify_slack, true
+config :companies, :notifier, Notify.Slack
 
 # Do not print debug messages in production
 config :logger, level: :info
