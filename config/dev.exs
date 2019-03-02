@@ -73,5 +73,3 @@ config :companies, Companies.Repo,
   database: "companies_dev",
   hostname: "localhost",
   pool_size: 10
-
-config :companies, :notify_slack, false

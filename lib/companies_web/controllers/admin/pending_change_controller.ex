@@ -16,12 +16,7 @@ defmodule CompaniesWeb.Admin.PendingChangeController do
   end
 
   def update(conn, %{"id" => change_id, "approval" => approval}) do
-    case PendingChanges.act(change_id, approval) do
-      {:ok, :rejected} ->
-        conn
-        |> put_flash(:info, "Changes rejected")
-        |> redirect(to: Routes.pending_change_path(conn, :index))
-
+    case PendingChanges.approve(change_id, approval == "true") do
       {:ok, _approved_changes} ->
         conn
         |> put_flash(:info, "Changes submitted")
