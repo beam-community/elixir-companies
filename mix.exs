@@ -22,7 +22,7 @@ defmodule Companies.MixProject do
   def application do
     [
       mod: {Companies.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:appsignal, :logger, :runtime_tools]
     ]
   end
 
@@ -35,6 +35,7 @@ defmodule Companies.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:appsignal, "~> 1.0"},
       {:ecto_sql, "~> 3.0"},
       {:gettext, "~> 0.11"},
       {:httpoison, "~> 1.5"},
