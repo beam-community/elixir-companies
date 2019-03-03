@@ -42,7 +42,7 @@ config :oauth2,
 
 config :ueberauth, Ueberauth,
   providers: [
-    github: {Ueberauth.Strategy.Github, [default_scope: "user,user:email,public_repo", send_redirect_uri: false]}
+    github: {Ueberauth.Strategy.Github, [default_scope: "user:email", send_redirect_uri: false]}
   ]
 
 config :ueberauth, Ueberauth.Strategy.Github.OAuth,
