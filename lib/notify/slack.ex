@@ -1,7 +1,7 @@
 defmodule Notify.Slack do
   use HTTPoison.Base
 
-  def notify(%{action: action, resource: resource, user: %{nickname: nickname}}) do
+  def notify(%{action: action, resource: resource, user: %{nickname: nickname}}, opts \\ []) do
     message = %{
       attachments: [
         %{
@@ -15,7 +15,9 @@ defmodule Notify.Slack do
       ]
     }
 
-    post(endpoint(), message)
+    opts
+    |> urls()
+    |> Enum.each(&post(&1, message))
   end
 
   def process_request_body(body) when is_map(body), do: Jason.encode!(body)
@@ -23,7 +25,14 @@ defmodule Notify.Slack do
 
   def process_request_headers(headers), do: [{"Content-Type", "application/json"}] ++ headers
 
-  def process_url(url), do: "https://hooks.slack.com/services/" <> url
+  def urls(opts) do
+    base_url = Keyword.get(opts, :base_url, "https://hooks.slack.com/services/")
+    Enum.map(endpoints(), &Path.join(base_url, &1))
+  end
 
-  defp endpoint, do: System.get_env("SLACK_NOTIFICATION_ENDPOINT")
+  defp endpoints do
+    "SLACK_NOTIFICATION_ENDPOINT"
+    |> System.get_env()
+    |> String.split(",", trim: true)
+  end
 end
