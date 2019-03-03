@@ -49,7 +49,6 @@ defmodule Companies.MixProject do
       {:scrivener_html, "~> 1.8"},
       {:ueberauth, "~> 0.5.0"},
       {:ueberauth_github, "~> 0.7.0"},
-
       {:ex_machina, "~> 2.2", only: :test},
       {:excoveralls, "~> 0.10", only: :test},
       {:phoenix_live_reload, "~> 1.2", only: :dev}

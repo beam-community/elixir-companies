@@ -17,7 +17,7 @@ defmodule CompaniesWeb.CompanyController do
   end
 
   def new(conn, _params) do
-    changeset = Companies.change_company(%Company{})
+    changeset = Companies.change(%Company{})
     industries = Industries.all()
 
     render(conn, "new.html", changeset: changeset, industries: industries)
@@ -37,21 +37,21 @@ defmodule CompaniesWeb.CompanyController do
   end
 
   def show(conn, %{"id" => id}) do
-    company = Companies.get_company!(id)
+    company = Companies.get!(id)
     render(conn, "show.html", company: company)
   end
 
   def edit(conn, %{"id" => id}) do
-    company = Companies.get_company!(id)
-    changeset = Companies.change_company(company)
+    company = Companies.get!(id)
+    changeset = Companies.change(company)
     industries = Industries.all()
     render(conn, "edit.html", company: company, changeset: changeset, industries: industries)
   end
 
   def update(conn, %{"id" => id, "company" => company_params}) do
-    company = Companies.get_company!(id)
+    company = Companies.get!(id)
 
-    case Companies.update_company(company, company_params, current_user(conn)) do
+    case Companies.update(company, company_params, current_user(conn)) do
       {:ok, _company} ->
         conn
         |> put_flash(:info, "Company updated successfully.")
@@ -64,8 +64,8 @@ defmodule CompaniesWeb.CompanyController do
   end
 
   def delete(conn, %{"id" => id}) do
-    company = Companies.get_company!(id)
-    {:ok, _company} = Companies.delete_company(company, current_user(conn))
+    company = Companies.get!(id)
+    {:ok, _company} = Companies.delete(company, current_user(conn))
 
     conn
     |> put_flash(:info, "Company deleted successfully.")
