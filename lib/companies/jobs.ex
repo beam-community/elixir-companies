@@ -13,11 +13,11 @@ defmodule Companies.Jobs do
 
   ## Examples
 
-      iex> list_jobs()
+      iex> all()
       [%Job{}, ...]
 
   """
-  def list_jobs do
+  def all do
     Repo.all(Job)
   end
 
@@ -28,14 +28,14 @@ defmodule Companies.Jobs do
 
   ## Examples
 
-      iex> get_job!(123)
+      iex> get!(123)
       %Job{}
 
-      iex> get_job!(456)
+      iex> get!(456)
       ** (Ecto.NoResultsError)
 
   """
-  def get_job!(id), do: Repo.get!(Job, id)
+  def get!(id), do: Repo.get!(Job, id)
 
   @doc """
   Submits a job listing for approval.
@@ -61,14 +61,14 @@ defmodule Companies.Jobs do
 
   ## Examples
 
-      iex> update_job(job, %{field: new_value})
+      iex> update(job, %{field: new_value})
       {:ok, %Job{}}
 
-      iex> update_job(job, %{field: bad_value})
+      iex> update(job, %{field: bad_value})
       {:error, %Ecto.Changeset{}}
 
   """
-  def update_job(%Job{} = job, attrs, user) do
+  def update(%Job{} = job, attrs, user) do
     job
     |> Job.changeset(attrs)
     |> PendingChanges.create(:update, user)
@@ -79,14 +79,14 @@ defmodule Companies.Jobs do
 
   ## Examples
 
-      iex> delete_job(job)
+      iex> delete(job)
       {:ok, %Job{}}
 
-      iex> delete_job(job)
+      iex> delete(job)
       {:error, %Ecto.Changeset{}}
 
   """
-  def delete_job(%Job{} = job, user) do
+  def delete(%Job{} = job, user) do
     PendingChanges.create(job, :delete, user)
   end
 
@@ -95,11 +95,11 @@ defmodule Companies.Jobs do
 
   ## Examples
 
-      iex> change_job(job)
+      iex> change(job)
       %Ecto.Changeset{source: %Job{}}
 
   """
-  def change_job(%Job{} = job) do
+  def change(%Job{} = job) do
     Job.changeset(job, %{})
   end
 end

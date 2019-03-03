@@ -28,9 +28,10 @@ defmodule Companies.Factory do
 
   def pending_change_factory do
     %PendingChange{
-      action: "insert",
+      action: "create",
       changes: params_for(:company),
-      resource: "company"
+      resource: "company",
+      user: insert(:user)
     }
   end
 

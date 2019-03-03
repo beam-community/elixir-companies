@@ -11,20 +11,27 @@ defmodule Companies.PendingChanges do
   def all do
     query =
       from p in PendingChange,
-        select: p,
-        where: p.approved == false
+        where: is_nil(p.approved)
 
     Repo.all(query)
   end
 
-  def approve(change_id, approval \\ true) do
-    with %{action: action, changes: changes, resource: resource} = change <- Repo.get!(PendingChange, change_id),
+  def approve(change_id, false) do
+    case Repo.get(PendingChange, change_id) do
+      nil ->
+        {:error, "change not found"}
+
+      change ->
+        update_approval(change, false)
+    end
+  end
+
+  def approve(change_id, true) do
+    with %{action: action, changes: changes, resource: resource} = change <- Repo.get(PendingChange, change_id),
          module <- resource_module(resource),
          changeset <- changeset(module, changes),
          {:ok, _changes} <- apply_changes(action, changeset) do
-      change
-      |> PendingChange.changeset(%{approved: approval})
-      |> Repo.update()
+      update_approval(change, true)
     else
       nil -> {:error, "change not found"}
       {:error, changeset} -> {:error, changeset}
@@ -33,8 +40,8 @@ defmodule Companies.PendingChanges do
 
   def create(changeset, action, user, note \\ "")
   def create(%{valid?: false} = changes, action, _user, _note), do: invalid_change(changes, action)
-  def create(%{id: _id} = resource, action, user, note), do: create(%{data: resource}, action, note, user)
-  def create(changes, action, user, note), do: insert_change(changes, action, note, user)
+  def create(%{id: _id} = resource, action, user, note), do: create(%{data: resource, params: %{}}, action, user, note)
+  def create(changes, action, user, note), do: insert_change(changes, action, user, note)
 
   def get(id) do
     case Repo.get(PendingChange, id) do
@@ -62,19 +69,6 @@ defmodule Companies.PendingChanges do
       end
 
     module.changeset(record, changes)
-  end
-
-  defp current_values(%{changes: %{"id" => id}, resource: "company"}) do
-    {%{id: industry_id}, current_values} =
-      Company
-      |> Repo.get(id)
-      |> Repo.preload([:industry])
-      |> drop_ecto_fields()
-      |> Map.drop([:jobs])
-      |> drop_nulls()
-      |> Map.pop(:industry)
-
-    Map.put(current_values, :industry_id, industry_id)
   end
 
   defp current_values(%{changes: %{"id" => id}, resource: resource}) do
@@ -107,7 +101,7 @@ defmodule Companies.PendingChanges do
     {:error, %{changes | repo: Repo, action: action}}
   end
 
-  defp insert_change(%{data: resource, params: changes}, action, note, %{id: user_id} = user) do
+  defp insert_change(%{data: resource, params: changes}, action, %{id: user_id} = user, note) do
     updated_changes =
       case Map.get(resource, :id) do
         nil -> changes
@@ -147,4 +141,10 @@ defmodule Companies.PendingChanges do
   defp struct_to_string(%Company{}), do: "company"
   defp struct_to_string(%Industry{}), do: "industry"
   defp struct_to_string(%Job{}), do: "job"
+
+  defp update_approval(change, approval) do
+    change
+    |> PendingChange.changeset(%{approved: approval})
+    |> Repo.update()
+  end
 end

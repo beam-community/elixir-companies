@@ -7,7 +7,7 @@ defmodule Companies.Schema.PendingChange do
 
   schema "pending_changes" do
     field :action, :string
-    field :approved, :boolean, default: false
+    field :approved, :boolean
     field :changes, :map
     field :note, :string
     field :resource, :string
