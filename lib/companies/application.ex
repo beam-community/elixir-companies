@@ -16,6 +16,14 @@ defmodule Companies.Application do
       # {Companies.Worker, arg},
     ]
 
+    Telemetry.attach(
+      "elixir-companies-ecto",
+      [:companies, :repo, :query],
+      Appsignal.Ecto,
+      :handle_event,
+      nil
+    )
+
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: Companies.Supervisor]
