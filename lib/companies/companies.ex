@@ -22,8 +22,11 @@ defmodule Companies.Companies do
 
     (c in Company)
     |> from()
+    |> join(:inner, [c], i in assoc(c, :industry))
+    |> join(:left, [c, _i], j in assoc(c, :jobs))
     |> predicates(params)
-    |> preload([:industry, :jobs])
+    |> distinct([_c, _i, _j], true)
+    |> preload([_c, i, j], industry: i, jobs: j)
     |> Repo.paginate(page: page, page_size: 8)
   end
 
@@ -134,8 +137,9 @@ defmodule Companies.Companies do
 
   defp predicates(query, %{"type" => "hiring"}) do
     query
-    |> join(:inner, [c], j in assoc(c, :jobs))
-    |> order_by([_c, j], desc: j.inserted_at)
+    |> exclude(:left_join)
+    |> join(:inner, [c, _i, _j], j in assoc(c, :jobs))
+    |> order_by([_c, _i, j], desc: j.inserted_at)
   end
 
   defp predicates(query, _) do
