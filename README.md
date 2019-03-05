@@ -19,4 +19,6 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 _Note_: You need to set up a [GitHub Application](https://developer.github.com/) and ensure `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET` are available to your application.
 
+_Note_: You need to have Postgres version 9.5+, due to our use of certain features that are fairly new (JSONB Data Type + ON CONFLICT query).
+
 _Note_: If for some reason you reset the database on your machine, you will see an error as the browser has cookies for a user that does not exist in the database. You will need to clear the cookies and site data for the page on your browser and refresh the page to remove the error.
