@@ -17,10 +17,6 @@ Proudly built with [Phoenix](https://phoenixframework.org).
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-_Note_: You need to setup a [GitHub Application](https://developer.github.com/) and ensure `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET` are available to your application. 
+_Note_: You need to setup a [GitHub Application](https://developer.github.com/) and ensure `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET` are available to your application.
 
 _Note_: If for some reason you reset the database on your machine, you will see an error as the browser has cookies for a user that does not exist in the database. You will need to clear the cookies and site data for the page on your browser and refresh the page in order to remove the error.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
