@@ -9,12 +9,19 @@ elixir:
 otp_release:
   - 21.2
 
+addons:
+  postgresql: "9.5"
+
+env:
+  - MIX_ENV=test
+
 script:
   - mix local.hex --force
   - mix local.rebar --force
   - mix deps.get
   - mix do compile --warnings-as-errors --force
   - mix format --check-formatted
+  - mix test
 
 cache:
   directories:
