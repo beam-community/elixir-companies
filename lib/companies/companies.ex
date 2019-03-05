@@ -24,8 +24,8 @@ defmodule Companies.Companies do
     |> from()
     |> join(:inner, [c], i in assoc(c, :industry))
     |> join(:left, [c, _i], j in assoc(c, :jobs))
+    |> distinct([c, _i, _j], c)
     |> predicates(params)
-    |> distinct([_c, _i, _j], true)
     |> preload([_c, i, j], industry: i, jobs: j)
     |> Repo.paginate(page: page, page_size: 8)
   end
