@@ -18,3 +18,4 @@ config :companies, Companies.Repo,
   pool: Ecto.Adapters.SQL.Sandbox
 
 config :companies, Notify.Mailer, adapter: Bamboo.TestAdapter
+config :companies, :jobs_url_checker, enabled: false

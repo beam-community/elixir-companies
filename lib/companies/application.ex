@@ -12,8 +12,16 @@ defmodule Companies.Application do
       Companies.Repo,
       # Start the endpoint when the application starts
       CompaniesWeb.Endpoint,
+      # Supervisor to run one-off tasks like email sending
       {Task.Supervisor, name: Companies.TaskSupervisor}
     ]
+
+    children =
+      if Application.get_env(:companies, :jobs_url_checker)[:enabled] do
+        children ++ [{Companies.JobChecker.Scheduler, name: Companies.JobChecker.Scheduler}]
+      else
+        children
+      end
 
     :telemetry.attach(
       "elixir-companies-ecto",
