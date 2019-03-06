@@ -22,7 +22,7 @@ defmodule CompaniesWeb.Router do
     pipe_through :browser
 
     get "/", CompanyController, :recent
-    get "/hiring", CompanyController, :hiring
+    get "/hiring", Redirect, to: "/browse?type=hiring"
     get "/browse", CompanyController, :index
     resources "/users", UserController
   end
