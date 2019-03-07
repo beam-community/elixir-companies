@@ -95,7 +95,7 @@ html {
     &.company {
       min-height: 350px;
       max-height: 350px;
-      overflow: auto;
+      overflow: hidden;
     }
 
     .company-info {
