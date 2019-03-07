@@ -12,7 +12,7 @@ defmodule Companies.CompaniesTest do
   describe "all/1" do
     test "retrieves a paginated list of companies" do
       insert_list(2, :company)
-      assert %{page_number: 1, page_size: 8, total_entries: 2, total_pages: 1} = Companies.all()
+      assert %{page_number: 1, page_size: 16, total_entries: 2, total_pages: 1} = Companies.all()
     end
 
     test "filters companies by hiring" do

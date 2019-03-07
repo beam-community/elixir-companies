@@ -34,7 +34,8 @@ config :companies,
       "burden",
       "gemantzu"
     ]
-  }
+  },
+  companies_per_page: 16
 
 config :oauth2,
   serializers: %{

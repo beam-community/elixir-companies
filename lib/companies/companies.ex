@@ -27,7 +27,7 @@ defmodule Companies.Companies do
     |> distinct([c, _i, _j], c)
     |> predicates(params)
     |> preload([_c, i, j], industry: i, jobs: j)
-    |> Repo.paginate(page: page, page_size: 8)
+    |> Repo.paginate(page: page)
   end
 
   @doc """
