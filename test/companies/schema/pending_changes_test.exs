@@ -22,6 +22,7 @@ defmodule Companies.Schema.PendingChangeTest do
     test "validates correct parameters" do
       changeset = PendingChange.changeset(%PendingChange{}, @valid_pending_change)
       assert changeset.valid?
+      assert changeset.changes.user_id == @valid_pending_change.user_id
     end
 
     test "invalidates changeset if action field is out of options set" do

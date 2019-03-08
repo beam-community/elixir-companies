@@ -17,6 +17,7 @@ defmodule Companies.Schema.JobTest do
     test "validates correct parameters" do
       changeset = Job.changeset(%Job{}, @valid_job)
       assert changeset.valid?
+      assert changeset.changes.company_id == @valid_job.company_id
     end
 
     test "empty attributes invalidate changeset" do
