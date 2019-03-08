@@ -1,6 +1,10 @@
 <div class="company box <%= hiring_ribbon(@company) %>">
   <%= if hiring?(@company) do %>
-    <div class="ribbon is-warning"><b>Hiring!</b></div>
+    <div class="ribbon is-warning corner-top-right-ribbon">
+      <span>
+        <b>Hiring!</b>
+      </span>
+    </div>
   <% end %>
   <div class="content has-text-centered">
     <p class="title is-4 thin"><%= @company.name %></p>

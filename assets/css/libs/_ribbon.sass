@@ -55,6 +55,25 @@ $ribbon-border: .1rem solid $grey-lighter !default
         background-color: transparent
         border-color: $color
 
+.ribbon span
+  position: absolute
+  display: block
+  width: 100px
+  padding: 5px 0
+  background-color: #ffdd57
+  box-shadow: 0 5px 10px rgba(0,0,0,.1)
+  text-shadow: 0 1px 1px rgba(0,0,0,.2)
+  text-align: center
+
+.corner-top-right-ribbon
+  top: -22px
+  right: 25px
+
+.corner-top-right-ribbon span
+  top: 30px;
+  left: -25px;
+  transform: rotate(45deg);
+
   // Sizes
   &.is-small
     +ribbon-small
