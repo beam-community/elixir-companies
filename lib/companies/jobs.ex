@@ -22,6 +22,7 @@ defmodule Companies.Jobs do
 
     (j in Job)
     |> from()
+    |> where([j], is_nil(j.removed_pending_change_id))
     |> predicates(params)
     |> order_by(desc: :updated_at)
     |> preload(:company)
@@ -42,7 +43,12 @@ defmodule Companies.Jobs do
       ** (Ecto.NoResultsError)
 
   """
-  def get!(id), do: Repo.get!(Job, id)
+  def get!(id) do
+    (j in Job)
+    |> from()
+    |> where([j], is_nil(j.removed_pending_change_id))
+    |> Repo.get!(id)
+  end
 
   @doc """
   Submits a job listing for approval.

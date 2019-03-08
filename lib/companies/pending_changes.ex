@@ -46,7 +46,7 @@ defmodule Companies.PendingChanges do
     with %{action: action, changes: changes, resource: resource} = change <- Repo.get(PendingChange, change_id),
          module <- resource_module(resource),
          changeset <- changeset(module, changes),
-         {:ok, _changes} <- apply_changes(action, changeset) do
+         {:ok, _changes} <- apply_changes(action, changeset, change_id) do
       update_approval(change, note, reviewer, true)
     else
       nil -> {:error, "change not found"}
@@ -71,9 +71,15 @@ defmodule Companies.PendingChanges do
     end
   end
 
-  defp apply_changes("create", changeset), do: Repo.insert(changeset)
-  defp apply_changes("delete", record), do: Repo.delete(record)
-  defp apply_changes("update", changeset), do: Repo.update(changeset)
+  defp apply_changes("create", changeset, _change_id), do: Repo.insert(changeset)
+
+  defp apply_changes("delete", record, change_id) do
+    record
+    |> Ecto.Changeset.cast(%{removed_pending_change_id: change_id}, [:removed_pending_change_id])
+    |> Repo.update()
+  end
+
+  defp apply_changes("update", changeset, _change_id), do: Repo.update(changeset)
 
   defp changeset(module, changes) do
     record =

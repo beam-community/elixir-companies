@@ -34,6 +34,27 @@ defmodule Companies.JobsTest do
       assert %{entries: [%{title: "test job"}]} = Jobs.all(%{"search" => %{"text" => " job"}})
       assert %{entries: [%{title: "test job"}]} = Jobs.all(%{"search" => %{"text" => " job "}})
     end
+
+    test "does not retrieve deleted records" do
+      %{id: deleted_id} = insert(:job, %{removed_pending_change: build(:pending_change)})
+      insert_list(2, :job)
+
+      refute deleted_id in Enum.map(Jobs.all(), & &1.id)
+    end
+  end
+
+  describe "get!/1" do
+    test "retrieves by id" do
+      %{id: job_id} = insert(:job)
+
+      assert %{id: ^job_id} = Jobs.get!(job_id)
+    end
+
+    test "does not retrieve deleted record" do
+      job = insert(:job, %{removed_pending_change: build(:pending_change)})
+
+      assert_raise Ecto.NoResultsError, fn -> Jobs.get!(job.id) end
+    end
   end
 
   describe "create/2" do
