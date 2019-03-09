@@ -12,7 +12,6 @@ defmodule Companies.Schema.IndustryTest do
     name: "Mining industry"
   }
 
-
   describe "industry changeset " do
     test "industry/2 validates with the correct data" do
       changeset = Industry.changeset(%Industry{}, @valid_industry)
