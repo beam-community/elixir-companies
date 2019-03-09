@@ -1,6 +1,6 @@
 <div class="company box <%= hiring_ribbon(@company) %>">
   <%= if hiring?(@company) do %>
-    <div class="ribbon is-warning corner-top-right-ribbon">
+    <div class="ribbon is-warning corner-top-left-ribbon">
       <span>
         <b>Hiring!</b>
       </span>
