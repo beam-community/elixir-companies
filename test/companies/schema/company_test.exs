@@ -17,6 +17,7 @@ defmodule Companies.Schema.CompanyTest do
     url: "link of the company",
     industry_id: 12346
   }
+
   describe "company changeset" do
     test "company/2 validates with the correct parameters" do
       changeset = Company.changeset(%Company{}, @valid_company_params)
