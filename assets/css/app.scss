@@ -22,6 +22,7 @@ $footer-padding: 2rem 1.5rem 2rem;
 @import "bulma";
 @import "libs/_mixins";
 @import "libs/_ribbon";
+@import "errors";
 
 html {
   background-attachment: fixed, fixed;
@@ -35,6 +36,7 @@ html {
   }
 
   #wrapper {
+    position: relative;
     flex: 1;
   }
 
