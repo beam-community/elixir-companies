@@ -13,14 +13,13 @@ defmodule Companies.Schema.JobTest do
     company_id: 60
   }
 
-  describe "job changesets" do
-    test "validates correct parameters" do
+  describe "changeset/2" do
+    test "returns a valid changeset with correct parameters" do
       changeset = Job.changeset(%Job{}, @valid_job)
       assert changeset.valid?
-      assert changeset.changes.company_id == @valid_job.company_id
     end
 
-    test "empty attributes invalidate changeset" do
+    test "returns an invalid changeset for incorrect parameteres" do
       changeset = Job.changeset(%Job{}, %{})
       refute changeset.valid?
     end
