@@ -1,19 +1,19 @@
 <footer class="footer has-text-white has-text-weight-light">
   <div class="container">
     <div class="content has-text-centered">
-      <p class="is-size-5">
-      <span class="has-text-weight-bold">
+      <p>
+      <span class="has-text-weight-semibold">
         <%= site_title() %>
       </span>
       is maintained by
       <%= for maintainer <- maintainers() do %>
-        <a class="has-text-weight-bold" href="https://github.com/<%= maintainer %>">
+        <a class="has-text-weight-semibold" href="https://github.com/<%= maintainer %>">
           @<%= maintainer %>
         </a>
       <% end %>
       </p>
       <p>
-      Made possible with support from <a class="has-text-weight-bold" href="https://utensils.io">utensils.io</a>
+      Made possible with support from <a class="has-text-weight-semibold" href="https://utensils.io">utensils.io</a>
       </p>
     </div>
   </div>

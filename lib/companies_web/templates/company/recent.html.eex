@@ -6,7 +6,7 @@
           <%= site_description() %>
         </h1>
         <p>
-        With <span class="has-text-weight-bold">
+        With <span class="has-text-weight-semibold">
           <%= @companies_count %>
         </span> and counting...</p>
         <p>
@@ -16,11 +16,11 @@
             <span class="icon">
               <i class="fab fa-github"></i>
             </span>
-            <span class="has-text-weight-bold">Add a company</span>
+            <span class="has-text-weight-semibold">Add a company</span>
           <% end %>
         <% else %>
           <%= link to: "/auth/github", class: "button is-white is-rounded is-outlined" do %>
-            <span class="has-text-weight-bold">Sign in & list free</span>
+            <span class="has-text-weight-semibold">Sign in & list free</span>
             <span class="icon">
               <i class="fab fa-github"></i>
             </span>
