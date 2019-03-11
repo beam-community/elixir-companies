@@ -1,0 +1,242 @@
+## `msgid`s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove `msgid`s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use `mix gettext.extract --merge` or `mix gettext.merge`
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: en\n"
+"Plural-Forms: nplurals=2\n"
+
+#, elixir-format
+#: lib/companies_web/templates/company/recent.html.eex:19
+msgid "Add a company"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/card.html.eex:51
+msgid "Add a job"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/layout/account.html.eex:6
+msgid "Approvals"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/form.html.eex:74
+#: lib/companies_web/templates/company/show.html.eex:38
+#: lib/companies_web/templates/job/form.html.eex:37
+#: lib/companies_web/templates/job/show.html.eex:18
+msgid "Back"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/show.html.eex:31
+msgid "Blog:"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/index.html.eex:4
+#: lib/companies_web/templates/layout/navbar.html.eex:18
+msgid "Browse"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/show.html.eex:11
+msgid "Description:"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/show.html.eex:37
+#: lib/companies_web/templates/job/show.html.eex:17
+msgid "Edit"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/edit.html.eex:4
+msgid "Edit Company"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/job/edit.html.eex:4
+msgid "Edit Job"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/hiring.html.eex:4
+#: lib/companies_web/templates/company/index.html.eex:15
+#: lib/companies_web/templates/layout/navbar.html.eex:19
+msgid "Hiring"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/card.html.eex:5
+msgid "Hiring!"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/show.html.eex:26
+msgid "Location:"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/error/404_page.html.eex:3
+msgid "Looks like you are lost"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/layout/footer.html.eex:16
+msgid "Made possible with support from"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/show.html.eex:6
+msgid "Name:"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/new.html.eex:4
+msgid "New Company"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/job/new.html.eex:4
+msgid "New Job"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/index.html.eex:10
+msgid "Newest"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/form.html.eex:4
+#: lib/companies_web/templates/job/form.html.eex:4
+msgid "Oops, something went wrong! Please check the errors below."
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/recent.html.eex:37
+msgid "Recent Additions"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/form.html.eex:71
+#: lib/companies_web/templates/job/form.html.eex:34
+msgid "Save"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/show.html.eex:1
+msgid "Show Company"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/job/show.html.eex:1
+msgid "Show Job"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/layout/account.html.eex:24
+msgid "Sign in"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/recent.html.eex:23
+msgid "Sign in & list free"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/layout/account.html.eex:15
+msgid "Sign out"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/job/show.html.eex:6
+msgid "Title:"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/show.html.eex:16
+#: lib/companies_web/templates/job/show.html.eex:11
+msgid "Url:"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/recent.html.eex:9
+msgid "With <span class='has-text-weight-semibold'>%{companies_count}</span> and counting..."
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/card.html.eex:16
+msgid "delete"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/layout/footer.html.eex:8
+msgid "is maintained by"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/helpers/site_helpers.ex:11
+msgid "A collection of companies using Elixir in production."
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/layout/navbar.html.eex:17
+msgid "Home"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/form.html.eex:62
+msgid "Blog website"
+msgstr ""
+
+#, elixir-format, fuzzy
+#: lib/companies_web/templates/company/form.html.eex:26
+msgid "Description"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/form.html.eex:9
+msgid "Industry"
+msgstr ""
+
+#, elixir-format, fuzzy
+#: lib/companies_web/templates/company/form.html.eex:42
+msgid "Location"
+msgstr ""
+
+#, elixir-format, fuzzy
+#: lib/companies_web/templates/company/form.html.eex:18
+msgid "Name"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/form.html.eex:51
+msgid "Optional fields"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/form.html.eex:34
+msgid "Website"
+msgstr ""
+
+#, elixir-format, fuzzy
+#: lib/companies_web/templates/job/form.html.eex:9
+msgid "Company"
+msgstr ""
+
+#, elixir-format, fuzzy
+#: lib/companies_web/templates/job/form.html.eex:17
+msgid "Title"
+msgstr ""
+
+#, elixir-format, fuzzy
+#: lib/companies_web/templates/job/form.html.eex:25
+msgid "Url"
+msgstr ""

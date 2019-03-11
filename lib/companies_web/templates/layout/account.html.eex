@@ -3,7 +3,7 @@
     <%= if admin_session?(@conn) do %>
       <p class="control">
       <%= link to: Routes.pending_change_path(@conn, :index), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
-        <span>Approvals</span>
+        <span><%= gettext("Approvals") %></span>
         <span class="icon">
           <i class="fas fa-check-circle"></i>
         </span>
@@ -12,7 +12,7 @@
     <% end %>
     <p class="control">
     <%= link to: Routes.auth_path(@conn, :signout), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
-      <span>Sign out</span>
+      <span><%= gettext("Sign out") %></span>
       <span class="icon">
         <i class="fas fa-sign-out-alt"></i>
       </span>
@@ -21,7 +21,7 @@
   </div>
 <% else %>
   <%= link to: "/auth/github", class: "navbar-item is-hidden-#{@version_hidden} button" do %>
-    <span>Sign in</span>
+    <span><%= gettext("Sign in") %></span>
     <span class="icon">
       <i class="fab fa-github"></i>
     </span>

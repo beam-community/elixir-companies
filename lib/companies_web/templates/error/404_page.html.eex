@@ -1,4 +1,4 @@
 <div class="not_found">
   <div class="not_found-code">404</div>
-  <div class="not_found-text">Looks like you are lost</div>
+  <div class="not_found-text"><%= gettext("Looks like you are lost") %></div>
 </div>
