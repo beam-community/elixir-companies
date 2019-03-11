@@ -5,11 +5,9 @@ defmodule Companies.Schema.PendingChangeTest do
 
   use Companies.DataCase
 
-  alias Companies.Schema.{
-    PendingChange
-  }
+  alias Companies.Schema.PendingChange
 
-  @valid_pending_change %{
+  @valid_pending_change_params %{
     action: "create",
     approved: "true",
     changes: %{},
@@ -18,20 +16,19 @@ defmodule Companies.Schema.PendingChangeTest do
     user_id: 60
   }
 
-  describe "pending_change changesets" do
-    test "validates correct parameters" do
-      changeset = PendingChange.changeset(%PendingChange{}, @valid_pending_change)
+  describe "changeset/2" do
+    test "returns a valid changeset with correct parameters" do
+      changeset = PendingChange.changeset(%PendingChange{}, @valid_pending_change_params)
       assert changeset.valid?
-      assert changeset.changes.user_id == @valid_pending_change.user_id
     end
 
-    test "invalidates changeset if action field is out of options set" do
-      changeset = PendingChange.changeset(%PendingChange{}, %{@valid_pending_change | action: "edit"})
+    test "returns an invalid changeset for unsupported actions" do
+      changeset = PendingChange.changeset(%PendingChange{}, %{@valid_pending_change_params | action: "edit"})
       refute changeset.valid?
     end
 
-    test "invalidates changeset if resouce field is out of options set" do
-      changeset = PendingChange.changeset(%PendingChange{}, %{@valid_pending_change | resource: "work"})
+    test "returns an invalid changeset for unsupported resources" do
+      changeset = PendingChange.changeset(%PendingChange{}, %{@valid_pending_change_params | resource: "work"})
       refute changeset.valid?
     end
   end

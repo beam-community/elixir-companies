@@ -1,10 +1,12 @@
 /* This file is for your main application css. */
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto+Slab:400,700");
-$purple: #4a365f;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600|IBM+Plex+Sans:400,500');
+$purple: #4A365F;
 $grey-dark: #3d4449;
 
-$family-primary: "Open Sans", sans-serif;
+$family-primary: Montserrat, sans-serif;
+
 $text: $grey-dark;
 $text-light: lighten($text, 20%);
 $text-strong: darken($text, 5%);
@@ -22,19 +24,20 @@ $footer-padding: 2rem 1.5rem 2rem;
 @import "bulma";
 @import "libs/_mixins";
 @import "libs/_ribbon";
+@import "errors";
 
 html {
   background-attachment: fixed, fixed;
   background-image: asset_url("overlay.png"), asset_url("paper_fibers.png");
 
   body {
-    @include font-smoothing(on);
     display: flex;
     min-height: 100vh;
     flex-direction: column;
   }
 
   #wrapper {
+    position: relative;
     flex: 1;
   }
 
@@ -67,8 +70,8 @@ html {
   }
 
   .title {
-    font-family: "Roboto Slab", serif;
-    font-weight: 700;
+    font-family: 'IBM Plex Sans', serif;
+    font-weight: 500;
     &.fancy {
       padding-bottom: 10px;
       border-bottom: 5px solid $link-hover;
@@ -79,7 +82,7 @@ html {
   }
 
   .subtitle {
-    font-family: "Roboto Slab", serif;
+    font-family: 'IBM Plex Sans', serif;
   }
 
   .burger {
