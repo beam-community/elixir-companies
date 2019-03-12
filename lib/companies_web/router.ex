@@ -24,7 +24,6 @@ defmodule CompaniesWeb.Router do
     get "/", CompanyController, :recent
     get "/hiring", Redirect, to: "/browse?type=hiring"
     get "/browse", CompanyController, :index
-    resources "/users", UserController
   end
 
   scope "/auth", CompaniesWeb do
