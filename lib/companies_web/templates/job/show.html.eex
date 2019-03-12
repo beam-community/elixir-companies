@@ -1,18 +1,18 @@
-<h1>Show Job</h1>
+<h1><%= gettext("Show Job") %></h1>
 
 <ul>
 
   <li>
-    <strong>Title:</strong>
+    <strong><%= gettext("Title:") %></strong>
     <%= @job.title %>
   </li>
 
   <li>
-    <strong>Url:</strong>
+    <strong><%= gettext("Url:") %></strong>
     <%= @job.url %>
   </li>
 
 </ul>
 
-<span><%= link "Edit", to: Routes.job_path(@conn, :edit, @job) %></span>
-<span><%= link "Back", to: Routes.job_path(@conn, :index) %></span>
+<span><%= link gettext("Edit"), to: Routes.job_path(@conn, :edit, @job) %></span>
+<span><%= link gettext("Back"), to: Routes.job_path(@conn, :index) %></span>

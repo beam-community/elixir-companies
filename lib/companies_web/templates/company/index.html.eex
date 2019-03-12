@@ -1,35 +1,35 @@
 <section class="section">
   <div class="container">
 
-    <h1 class="title is-3 fancy">Browse</h1>
+    <h1 class="title is-3 fancy"><%= gettext("Browse") %></h1>
 
     <div class="tabs is-centered">
       <ul>
         <li>
           <%= link to: Routes.company_path(@conn, :index) do %>
-            Newest
+            <%= gettext("Newest") %>
           <% end %>
-        </li> 
+        </li>
         <li>
           <%= link to: Routes.company_path(@conn, :index, type: "hiring") do %>
-            Hiring 
+            <%= gettext("Hiring") %>
           <% end %>
-        </li> 
+        </li>
         <li>
           <%= link to: Routes.company_path(@conn, :index, type: "ae") do %>
-            A — E 
+            A — E
           <% end %>
-        </li> 
+        </li>
         <li>
           <%= link to: Routes.company_path(@conn, :index, type: "fj") do %>
-            F — J 
+            F — J
           <% end %>
-        </li> 
+        </li>
         <li>
           <%= link to: Routes.company_path(@conn, :index, type: "ko") do %>
             K — O
           <% end %>
-        </li> 
+        </li>
         <li>
           <%= link to: Routes.company_path(@conn, :index, type: "pt") do %>
             P — T
@@ -39,7 +39,7 @@
           <%= link to: Routes.company_path(@conn, :index, type: "uz") do %>
             U — Z
           <% end %>
-        </li> 
+        </li>
       </ul>
     </div>
 

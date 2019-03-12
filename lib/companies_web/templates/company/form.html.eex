@@ -1,12 +1,12 @@
 <%= form_for @changeset, @action, fn f -> %>
   <%= if @changeset.action do %>
     <div class="alert alert-danger">
-      <p>Oops, something went wrong! Please check the errors below.</p>
+      <p><%= gettext("Oops, something went wrong! Please check the errors below.") %></p>
     </div>
   <% end %>
 
   <div class="field">
-    <%= label f, :industry_id, class: "field" %>
+    <%= label f, :industry_id, gettext("Industry"), class: "field" %>
     <div class="control">
       <span class="select">
         <%= select f, :industry_id, select_industries(@industries) %>
@@ -15,7 +15,7 @@
   </div>
 
   <div class="field">
-    <%= label f, :name, class: "field" %>
+    <%= label f, :name, gettext("Name"), class: "field" %>
     <div class="control">
       <%= text_input f, :name, class: "input" %>
       <%= error_tag f, :name %>
@@ -23,7 +23,7 @@
   </div>
 
   <div class="field">
-    <%= label f, :description, class: "field" %>
+    <%= label f, :description, gettext("Description"), class: "field" %>
     <div class="control">
       <%= textarea f, :description, class: "textarea" %>
       <%= error_tag f, :description %>
@@ -31,7 +31,7 @@
   </div>
 
   <div class="field">
-    <%= label f, :url, "Website", class: "field" %>
+    <%= label f, :url, gettext("Website"), class: "field" %>
     <div class="control">
       <%= text_input f, :url, class: "input" %>
       <%= error_tag f, :url %>
@@ -39,7 +39,7 @@
   </div>
 
   <div class="field">
-    <%= label f, :location, class: "field" %>
+    <%= label f, :location, gettext("Location"), class: "field" %>
     <div class="control">
       <%= text_input f, :location, class: "input" %>
       <%= error_tag f, :location %>
@@ -48,7 +48,7 @@
 
   <hr>
 
-  <h5 class="subtitle is-5">Optional fields</h5>
+  <h5 class="subtitle is-5"><%= gettext("Optional fields") %></h5>
 
   <div class="field">
     <%= label f, :github, "GitHub", class: "field" %>
@@ -59,7 +59,7 @@
   </div>
 
   <div class="field">
-    <%= label f, :blog, "Blog website", class: "field" %>
+    <%= label f, :blog, gettext("Blog website"), class: "field" %>
     <div class="control">
       <%= text_input f, :blog, class: "input" %>
       <%= error_tag f, :blog %>
@@ -68,10 +68,10 @@
 
   <div class="field is-grouped is-grouped-centered">
     <div class="control">
-      <%= submit "Save", class: "button is-primary" %>
+      <%= submit gettext("Save"), class: "button is-primary" %>
     </div>
     <div class="control">
-      <%= link "Back", to: Routes.company_path(@conn, :recent), class: "button is-primary" %>
+      <%= link gettext("Back"), to: Routes.company_path(@conn, :recent), class: "button is-primary" %>
     </div>
   </div>
 <% end %>

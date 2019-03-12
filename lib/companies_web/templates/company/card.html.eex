@@ -2,7 +2,7 @@
   <%= if hiring?(@company) do %>
     <div class="ribbon is-warning corner-top-left-ribbon">
       <span>
-        <b>Hiring!</b>
+        <b><%= gettext("Hiring!") %></b>
       </span>
     </div>
   <% end %>
@@ -15,10 +15,10 @@
         </div>
         <div class="company-actions">
           <%= link to: Routes.company_path(@conn, :edit, @company) do %>
-            <span class="icon"><i class="fas fa-edit"></i></span> Edit
+            <span class="icon"><i class="fas fa-edit"></i></span> <%= gettext("Edit") %>
           <% end %>
           <%= link to: Routes.company_path(@conn, :delete, @company), method: :delete do %>
-            <span class="icon"><i class="fas fa-trash-alt"></i></span> Delete
+            <span class="icon"><i class="fas fa-trash-alt"></i></span> <%= gettext("Delete") %>
           <% end %>
         </div>
       </div>
@@ -55,7 +55,7 @@
       <span class="icon icon-purle" >
         <i class="fas fa-plus" ></i>
       </span>
-        Add a job
+        <%= gettext("Add a job") %>
       <% end %>
       <br/>
       <%= for job <- @company.jobs do %>

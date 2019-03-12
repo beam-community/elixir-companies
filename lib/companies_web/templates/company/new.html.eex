@@ -1,7 +1,7 @@
 <div class="container">
   <div class="columns is-centered">
     <div class="column is-half">
-      <h1 class="has-text-centered title">New Company</h1>
+      <h1 class="has-text-centered title"><%= gettext("New Company") %></h1>
 
       <%= render "form.html", Map.put(assigns, :action, Routes.company_path(@conn, :create)) %>
 

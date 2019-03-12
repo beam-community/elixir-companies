@@ -5,7 +5,7 @@
       <span class="has-text-weight-semibold">
         <%= site_title() %>
       </span>
-      is maintained by
+      <%= gettext("is maintained by") %>
       <%= for maintainer <- maintainers() do %>
         <a class="has-text-weight-semibold" href="https://github.com/<%= maintainer %>">
           @<%= maintainer %>
@@ -13,7 +13,8 @@
       <% end %>
       </p>
       <p>
-      Made possible with support from <a class="has-text-weight-semibold" href="https://utensils.io">utensils.io</a>
+      <%= gettext("Made possible with support from") %>
+      <a class="has-text-weight-semibold" href="https://utensils.io">utensils.io</a>
       </p>
     </div>
   </div>

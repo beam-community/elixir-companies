@@ -6,9 +6,9 @@
           <%= site_description() %>
         </h1>
         <p>
-        With <span class="has-text-weight-semibold">
-          <%= @companies_count %>
-        </span> and counting...</p>
+          <%= raw gettext(
+            "With <span class='has-text-weight-semibold'>%{companies_count}</span> and counting...",
+            companies_count: @companies_count) %>
         <p>
 
         <%= if signed_in?(@conn) do %>
@@ -16,11 +16,11 @@
             <span class="icon">
               <i class="fab fa-github"></i>
             </span>
-            <span class="has-text-weight-semibold">Add a company</span>
+            <span class="has-text-weight-semibold"><%= gettext("Add a company") %></span>
           <% end %>
         <% else %>
           <%= link to: "/auth/github", class: "button is-white is-rounded is-outlined" do %>
-            <span class="has-text-weight-semibold">Sign in & list free</span>
+            <span class="has-text-weight-semibold"><%= gettext("Sign in & list free") %></span>
             <span class="icon">
               <i class="fab fa-github"></i>
             </span>
@@ -34,7 +34,7 @@
 <section class="section">
   <div class="container">
     <div class="content">
-      <h1 class="title is-3 fancy">Recent Additions</h1>
+      <h1 class="title is-3 fancy"><%= gettext("Recent Additions") %></h1>
       <div class="columns is-mobile is-multiline">
         <%= for company <- @recent_companies do %>
           <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
