@@ -1,10 +1,12 @@
 /* This file is for your main application css. */
 
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600|IBM+Plex+Sans:400,500');
 $purple: #4A365F;
 $grey-dark: #3d4449;
 
 $family-primary: Montserrat, sans-serif;
+
 $text: $grey-dark;
 $text-light: lighten($text, 20%);
 $text-strong: darken($text, 5%);
@@ -26,7 +28,7 @@ $footer-padding: 2rem 1.5rem 2rem;
 
 html {
   background-attachment: fixed, fixed;
-  background-image: asset_url("overlay.png"),	asset_url("paper_fibers.png");
+  background-image: asset_url("overlay.png"), asset_url("paper_fibers.png");
 
   body {
     display: flex;
@@ -39,7 +41,10 @@ html {
     flex: 1;
   }
 
-  body, input, select, textarea {
+  body,
+  input,
+  select,
+  textarea {
     line-height: 1.35em;
   }
 
@@ -76,7 +81,7 @@ html {
     }
   }
 
-  .subtitle{
+  .subtitle {
     font-family: 'IBM Plex Sans', serif;
   }
 
@@ -84,7 +89,7 @@ html {
     color: $grey-dark;
   }
 
-  .navbar-item{
+  .navbar-item {
     font-size: 1em;
   }
 
@@ -97,6 +102,57 @@ html {
       min-height: 350px;
       max-height: 350px;
       overflow: hidden;
+
+      .content {
+        position: relative;
+        .company-actions-wrapper {
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          &.show {
+            .company-actions {
+              display: inline-block;
+            }
+          }
+
+          .toggle-company-actions {
+            cursor: pointer;
+          }
+
+          .company-actions {
+            display: none;
+            position: absolute;
+            width: 140px;
+            top: 25px;
+            right: 0;
+            background: white;
+            box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1),
+              0 0 0 1px rgba(10, 10, 10, 0.1);
+            z-index: 2;
+            border-radius: 3px;
+
+            a {
+              color: $grey-darker;
+              display: block;
+              text-align: left;
+              padding: 10px;
+
+              &:hover {
+                background-color: $white-ter;
+              }
+
+              &:first-child {
+                margin-top: 10px;
+              }
+
+              &:last-child {
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
     }
 
     .company-info {

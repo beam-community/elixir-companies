@@ -44,9 +44,9 @@
     </div>
 
     <div class="content">
-      <div class="columns is-desktop is-multiline">
+      <div class="columns is-mobile is-multiline">
         <%= for company <- @companies do %>
-          <div class="column is-one-quarter-desktop">
+          <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
             <%= render "card.html", company: company, conn: @conn %>
           </div>
         <% end %>
