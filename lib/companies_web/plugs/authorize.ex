@@ -3,6 +3,7 @@ defmodule CompaniesWeb.Plugs.Authorize do
   A simple plug to prevent users without maintainer status from continuing
   """
 
+  import CompaniesWeb.LocaleHelpers, only: [locale: 1]
   import Phoenix.Controller, only: [put_flash: 3, redirect: 2]
   import Plug.Conn
 
@@ -22,7 +23,7 @@ defmodule CompaniesWeb.Plugs.Authorize do
     conn
     |> put_status(401)
     |> put_flash(:error, "Insufficient permissions")
-    |> redirect(to: Routes.company_path(conn, :recent))
+    |> redirect(to: Routes.company_path(conn, :recent, locale(conn)))
     |> halt()
   end
 end

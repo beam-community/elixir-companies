@@ -1,16 +1,22 @@
 defmodule Companies.PendingChangesTest do
   use Companies.DataCase
+  use Bamboo.Test
 
   import Companies.Factory
   import ExUnit.CaptureLog
 
   alias Companies.{Companies, PendingChanges, Schema.PendingChange}
 
-  describe "all/1" do
+  @email_subject_approval "Your Elixir Companies change was approved"
+  @email_subject_rejection "Your Elixir Companies change needs to be revisited"
+  @note "A example approval note"
+
+  describe "all/0" do
     setup do
       insert(:pending_change)
       insert(:pending_change, %{approved: true})
       insert(:pending_change, %{approved: false})
+
       :ok
     end
 
@@ -39,42 +45,46 @@ defmodule Companies.PendingChangesTest do
       %{total_entries: pre_count} = Companies.all()
 
       %{id: id} = insert(:pending_change)
-      assert {:ok, %{approved: true}} = PendingChanges.approve(id, true)
+      assert {:ok, %{approved: true}} = PendingChanges.approve(id, @note, true)
       assert Enum.empty?(PendingChanges.all())
 
       %{total_entries: post_count} = Companies.all()
 
       assert pre_count < post_count
+      assert_email_delivered_with(subject: @email_subject_approval)
     end
 
     test "approves a pending update change" do
       %{id: company_id} = insert(:company)
       %{id: id} = insert(:pending_change, %{action: "update", changes: %{id: company_id, name: "updated"}})
 
-      assert {:ok, %{approved: true}} = PendingChanges.approve(id, true)
+      assert {:ok, %{approved: true}} = PendingChanges.approve(id, @note, true)
       assert %{entries: [%{name: "updated"}], total_entries: 1} = Companies.all()
+      assert_email_delivered_with(subject: @email_subject_approval)
     end
 
     test "approves a pending delete change" do
       %{id: company_id} = insert(:company)
-      %{id: id} = insert(:pending_change, %{action: "delete", changes: %{id: company_id}})
+      %{id: id} = insert(:pending_change, %{action: "delete", changes: %{id: company_id, name: "elixir-companies"}})
 
-      assert {:ok, %{approved: true}} = PendingChanges.approve(id, true)
+      assert {:ok, %{approved: true}} = PendingChanges.approve(id, @note, true)
       assert %{total_entries: 0} = Companies.all()
+      assert_email_delivered_with(subject: @email_subject_approval)
     end
 
     test "rejects a pending change" do
       %{total_entries: pre_count} = Companies.all()
 
       %{id: id} = insert(:pending_change)
-      assert {:ok, %{approved: false}} = PendingChanges.approve(id, false)
+      assert {:ok, %{approved: false}} = PendingChanges.approve(id, @note, false)
       assert Enum.empty?(PendingChanges.all())
 
       assert %{total_entries: ^pre_count} = Companies.all()
+      assert_email_delivered_with(subject: @email_subject_rejection)
     end
 
     test "returns an error for missing changes" do
-      assert {:error, "change not found"} = PendingChanges.approve(-1, true)
+      assert {:error, "change not found"} = PendingChanges.approve(-1, @note, true)
     end
   end
 
@@ -89,8 +99,7 @@ defmodule Companies.PendingChangesTest do
 
       output =
         capture_log(fn ->
-          assert {:ok, %{action: "delete", resource: "company"}} =
-                   PendingChanges.create(company, :delete, user, "out of business")
+          assert {:ok, %{action: "delete", resource: "company"}} = PendingChanges.create(company, :delete, user)
         end)
 
       assert output =~ "NOTIFICATION"

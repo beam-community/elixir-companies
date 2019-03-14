@@ -1,4 +1,4 @@
-defmodule CompaniesWeb.Redirect do
+defmodule CompaniesWeb.Plugs.Redirect do
   @moduledoc """
   A plug used to handle redirects by the `CompaniesWeb.Router`
   """
