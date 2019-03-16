@@ -122,9 +122,15 @@ defmodule Companies.PendingChanges do
     |> notification(user)
   end
 
-  defp notification({:ok, pending_change}, user) do
-    pending_change
-    |> Map.put(:user, user)
+  defp notification({:ok, pending_change}, user \\ nil) do
+    users_pending_change =
+      if is_ni(user) do 
+        Repo.preload(pending_change, [:user])
+      else
+        Map.put(:user, user)
+      end 
+
+    users_pending_change
     |> Notify.perform()
 
     {:ok, pending_change}
@@ -146,5 +152,6 @@ defmodule Companies.PendingChanges do
     change
     |> PendingChange.changeset(%{approved: approval})
     |> Repo.update()
+    |> notification()
   end
 end
