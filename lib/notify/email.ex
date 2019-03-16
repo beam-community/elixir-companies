@@ -23,7 +23,7 @@ defmodule Notify.Email do
   action to take to get the changes approved
   """
   @spec change_rejected(map()) :: Bamboo.Email.t()
-  def change_rejected(change) do
+  def change_rejected(pending_change) do
     template_id = System.get_env("SENDGRID_REJECTED_TEMPLATE_ID")
 
     pending_change
