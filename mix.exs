@@ -36,6 +36,7 @@ defmodule Companies.MixProject do
   defp deps do
     [
       {:appsignal, "~> 1.0"},
+      {:bamboo, "~>1.2.0"},
       {:ecto_sql, "~> 3.0"},
       {:gettext, "~> 0.11"},
       {:httpoison, "~> 1.5"},
@@ -53,8 +54,7 @@ defmodule Companies.MixProject do
       {:bypass, "~> 1.0", only: :test},
       {:ex_machina, "~> 2.2", only: :test},
       {:excoveralls, "~> 0.10", only: :test},
-      {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:bamboo, "~>1.2.0"}
+      {:phoenix_live_reload, "~> 1.2", only: :dev}
     ]
   end
 
