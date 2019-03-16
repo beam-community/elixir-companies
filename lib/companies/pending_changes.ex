@@ -122,12 +122,15 @@ defmodule Companies.PendingChanges do
     |> notification(user)
   end
 
-  defp notification({:ok, pending_change}, user \\ nil) do
+  @spec notification(term(), term()) :: {:ok, map()} | map()
+  defp notification(result, user \\ nil)
+
+  defp notification({:ok, pending_change}, user) do
     users_pending_change =
       if is_nil(user) do
         Repo.preload(pending_change, [:user])
       else
-        Map.put(:user, user)
+        Map.put(pending_change, :user, user)
       end
 
     users_pending_change
