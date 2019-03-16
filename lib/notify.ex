@@ -6,10 +6,17 @@ defmodule Notify do
 
   @doc false
   @spec perform(map()) :: Bamboo.Email.t() | term()
-  def perform(%{approved: true} = pending_change), do: pending_change |> Email.change_approved() |> Mailer.deliver_now()
+  def perform(%{approved: true} = pending_change) do
+    pending_change
+    |> Email.change_approved()
+    |> Mailer.deliver_now()
+  end
 
-  def perform(%{approved: false} = pending_change),
-    do: pending_change |> Email.change_rejected() |> Mailer.deliver_now()
+  def perform(%{approved: false} = pending_change) do
+    pending_change
+    |> Email.change_rejected()
+    |> Mailer.deliver_now()
+  end
 
   def perform(message), do: apply(notifier(), :notify, [message])
 
