@@ -124,11 +124,11 @@ defmodule Companies.PendingChanges do
 
   defp notification({:ok, pending_change}, user \\ nil) do
     users_pending_change =
-      if is_ni(user) do 
+      if is_nil(user) do
         Repo.preload(pending_change, [:user])
       else
         Map.put(:user, user)
-      end 
+      end
 
     users_pending_change
     |> Notify.perform()
