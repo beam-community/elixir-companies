@@ -37,7 +37,7 @@ defmodule Companies.PendingChangesTest do
 
     test "approves a pending delete change" do
       %{id: company_id} = insert(:company)
-      %{id: id} = insert(:pending_change, %{action: "delete", changes: %{id: company_id}})
+      %{id: id} = insert(:pending_change, %{action: "delete", changes: %{id: company_id, name: "elixir-companies"}})
 
       assert {:ok, %{approved: true}} = PendingChanges.approve(id, true)
       assert %{total_entries: 0} = Companies.all()
