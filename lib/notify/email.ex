@@ -9,17 +9,13 @@ defmodule Notify.Email do
   This function builds an email that informs a user of their attempted changes being approved and applied
   """
   @spec change_approved(map()) :: Bamboo.Email.t()
-  def change_approved(change) do
-    temp_id = System.get_env("SENDGRID_APPROVED_TEMPLATE_ID")
+  def change_approved(pending_change) do
+    template_id = System.get_env("SENDGRID_APPROVED_TEMPLATE_ID")
 
-    new_email()
-    |> to(details.recipient)
-    |> from("noreply@elixir-companies.com")
-    |> subject("Your changes need to be revisited")
-    |> with_template(temp_id)
-    # whatever fields we'd need
-    |> add_dynamic_field(:handle, details.handle)
-    |> add_dynamic_field(:resource, details.resource)
+    pending_change
+    |> change_update_email()
+    |> subject("Your changes have been approved")
+    |> with_template(template_id)
   end
 
   @doc """
@@ -28,44 +24,25 @@ defmodule Notify.Email do
   """
   @spec change_rejected(map()) :: Bamboo.Email.t()
   def change_rejected(change) do
-    temp_id = System.get_env("SENDGRID_REJECTED_TEMPLATE_ID")
+    template_id = System.get_env("SENDGRID_REJECTED_TEMPLATE_ID")
 
-    details = change_details(change)
-
-    new_email()
-    |> to(details.recipient)
-    |> from("noreply@elixir-companies.com")
+    pending_change
+    |> change_update_email()
     |> subject("Your changes need to be revisited")
-    |> with_template(temp_id)
-    # whatever fields we'd need
-    |> add_dynamic_field(:handle, details.handle)
-    |> add_dynamic_field(:resource, details.resource)
+    |> with_template(template_id)
   end
 
-  @doc false
-  @spec change_details(map()) :: map()
-  def change_details(change) do
-    change_details = %{changer: "", resource: "", resource_name: "", recipient: ""}
-
-    loaded_change =
-      change
-      |> Repo.preload(:user)
-
-    named_details = %{change_details | changer: loaded_change.user.nickname, recipient: loaded_change.user.email}
-
-    resourced_change
-
-    case loaded_change.resource do
-      "company" ->
-        %{named_details | resource: "company"}
-
-      "job" ->
-        %{named_details | resource: "job"}
-
-      "industry" ->
-        %{named_details | resource: "industry"}
-    end
-
-    resourced_change
+  @spec change_update_email(map()) :: Bamboo.Email.t()
+  defp change_update_email(%{changes: changes, resource: resource, user: %{email: email, nickname: nickname}}) do
+    new_email()
+    |> to(email)
+    |> from("noreply@elixir-companies.com")
+    |> add_dynamic_field(:nickname, nickname)
+    |> add_dynamic_field(:resource, resource)
+    |> add_dynamic_field(:resource_name, resource_name(changes))
   end
+
+  @spec resource_name(map()) :: String.t()
+  defp resource_name(%{"name" => name}), do: name
+  defp resource_name(%{"title" => title}), do: title
 end
