@@ -19,11 +19,18 @@ defmodule CompaniesWeb.Router do
   end
 
   scope "/", CompaniesWeb do
-    pipe_through :browser
+    pipe_through [:browser]
 
     get "/", CompanyController, :recent
     get "/hiring", Redirect, to: "/browse?type=hiring"
     get "/browse", CompanyController, :index
+
+    scope "/" do
+      pipe_through [:auth]
+
+      resources "/companies", CompanyController, except: [:index, :show]
+      resources "/jobs", JobController, except: [:index, :show]
+    end
   end
 
   scope "/auth", CompaniesWeb do
@@ -32,12 +39,10 @@ defmodule CompaniesWeb.Router do
     get "/signout", AuthController, :signout
     get "/github", AuthController, :request
     get "/github/callback", AuthController, :callback
-    resources "/companies", CompanyController
-    resources "/jobs", JobController
   end
 
   scope "/admin", CompaniesWeb.Admin do
-    pipe_through [:browser]
+    pipe_through [:browser, :auth]
 
     resources "/pending", PendingChangeController
   end
