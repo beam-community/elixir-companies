@@ -1,24 +1,22 @@
 <%= if signed_in?(@conn) do %>
-  <div class="field is-grouped">
-    <%= if admin_session?(@conn) do %>
-      <p class="control">
-      <%= link to: Routes.pending_change_path(@conn, :index, @conn.params["locale"]), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
-        <span><%= gettext("Approvals") %></span>
-        <span class="icon">
-          <i class="fas fa-check-circle"></i>
-        </span>
-      <% end %>
-      </p>
-    <% end %>
+  <%= if admin_session?(@conn) do %>
     <p class="control">
-    <%= link to: Routes.auth_path(@conn, :signout, @conn.params["locale"]), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
-      <span><%= gettext("Sign out") %></span>
+    <%= link to: Routes.pending_change_path(@conn, :index, @conn.params["locale"]), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
+      <span><%= gettext("Approvals") %></span>
       <span class="icon">
-        <i class="fas fa-sign-out-alt"></i>
+        <i class="fas fa-check-circle"></i>
       </span>
     <% end %>
     </p>
-  </div>
+  <% end %>
+  <p class="control">
+  <%= link to: Routes.auth_path(@conn, :signout, @conn.params["locale"]), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
+    <span><%= gettext("Sign out") %></span>
+    <span class="icon">
+      <i class="fas fa-sign-out-alt"></i>
+    </span>
+  <% end %>
+  </p>
 <% else %>
   <%= link to: "/auth/github", class: "navbar-item is-hidden-#{@version_hidden} button" do %>
     <span><%= gettext("Sign in") %></span>

@@ -19,7 +19,10 @@
         <%= link gettext("Hiring"), to: Routes.company_path(@conn, :index, @conn.params["locale"], type: "hiring"), class: "navbar-item" %>
       </div>
       <div class="navbar-end">
-        <%= render "account.html", conn: @conn, version_hidden: "mobile" %>
+        <div class="field is-grouped">
+          <%= render "account.html", conn: @conn, version_hidden: "mobile" %>
+          <%= render "locales.html", conn: @conn %>
+        </div>
       </div>
     </div>
   </div>
