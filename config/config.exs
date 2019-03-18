@@ -30,8 +30,8 @@ config :companies,
     name: "Elixir Companies",
     maintainers: [
       "doomspork",
-      "burden",
-      "gemantzu"
+      "gemantzu",
+      "tajchumber"
     ]
   },
   companies_per_page: 16

@@ -16,7 +16,7 @@ msgid "Add a company"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/company/card.html.eex:51
+#: lib/companies_web/templates/company/card.html.eex:58
 msgid "Add a job"
 msgstr ""
 
@@ -50,6 +50,7 @@ msgid "Description:"
 msgstr ""
 
 #, elixir-format
+#: lib/companies_web/templates/company/card.html.eex:18
 #: lib/companies_web/templates/company/show.html.eex:37
 #: lib/companies_web/templates/job/show.html.eex:17
 msgid "Edit"
@@ -88,7 +89,7 @@ msgid "Looks like you are lost"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/layout/footer.html.eex:16
+#: lib/companies_web/templates/layout/footer.html.eex:17
 msgid "Made possible with support from"
 msgstr ""
 
@@ -171,11 +172,6 @@ msgid "With <span class='has-text-weight-semibold'>%{companies_count}</span> and
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/company/card.html.eex:16
-msgid "delete"
-msgstr ""
-
-#, elixir-format
 #: lib/companies_web/templates/layout/footer.html.eex:8
 msgid "is maintained by"
 msgstr ""
@@ -188,4 +184,64 @@ msgstr ""
 #, elixir-format
 #: lib/companies_web/templates/layout/navbar.html.eex:17
 msgid "Home"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/layout/footer.html.eex:14
+msgid " and a team of contributors!"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/form.html.eex:62
+msgid "Blog website"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/job/form.html.eex:9
+msgid "Company"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/card.html.eex:21
+msgid "Delete"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/form.html.eex:26
+msgid "Description"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/form.html.eex:9
+msgid "Industry"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/form.html.eex:42
+msgid "Location"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/form.html.eex:18
+msgid "Name"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/form.html.eex:51
+msgid "Optional fields"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/job/form.html.eex:17
+msgid "Title"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/job/form.html.eex:25
+msgid "Url"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/form.html.eex:34
+msgid "Website"
 msgstr ""

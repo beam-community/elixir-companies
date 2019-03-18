@@ -11,6 +11,7 @@
           @<%= maintainer %>
         </a>
       <% end %>
+      <%= gettext(" and a team of contributors!") %>
       </p>
       <p>
       <%= gettext("Made possible with support from") %>
