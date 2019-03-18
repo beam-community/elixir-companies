@@ -22,7 +22,7 @@ defmodule CompaniesWeb.Plugs.Authorize do
     conn
     |> put_status(401)
     |> put_flash(:error, "Insufficient permissions")
-    |> redirect(to: Routes.company_path(conn, :recent))
+    |> redirect(to: Routes.company_path(conn, :recent, conn.params["locale"]))
     |> halt()
   end
 end

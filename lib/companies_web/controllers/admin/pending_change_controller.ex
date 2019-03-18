@@ -20,14 +20,14 @@ defmodule CompaniesWeb.Admin.PendingChangeController do
       {:ok, _approved_changes} ->
         conn
         |> put_flash(:info, "Changes submitted")
-        |> redirect(to: Routes.pending_change_path(conn, :index))
+        |> redirect(to: Routes.pending_change_path(conn, :index, conn.params["locale"]))
 
       {:error, reason} ->
         Logger.error(reason)
 
         conn
         |> put_flash(:error, "Changes failed")
-        |> redirect(to: Routes.pending_change_path(conn, :index))
+        |> redirect(to: Routes.pending_change_path(conn, :index, conn.params["locale"]))
     end
   end
 

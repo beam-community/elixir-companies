@@ -53,7 +53,8 @@ defmodule Companies.MixProject do
       {:bypass, "~> 1.0", only: :test},
       {:ex_machina, "~> 2.2", only: :test},
       {:excoveralls, "~> 0.10", only: :test},
-      {:phoenix_live_reload, "~> 1.2", only: :dev}
+      {:phoenix_live_reload, "~> 1.2", only: :dev},
+      {:set_locale, "~> 0.2.1"}
     ]
   end
 

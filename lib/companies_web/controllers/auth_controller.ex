@@ -18,7 +18,7 @@ defmodule CompaniesWeb.AuthController do
   def signout(conn, _params) do
     conn
     |> configure_session(drop: true)
-    |> redirect(to: Routes.company_path(conn, :recent))
+    |> redirect(to: Routes.company_path(conn, :recent, conn.params["locale"]))
   end
 
   defp signin(conn, user_params) do
@@ -27,12 +27,12 @@ defmodule CompaniesWeb.AuthController do
         conn
         |> put_flash(:info, "Welcome!")
         |> put_session(:user_id, user.id)
-        |> redirect(to: Routes.company_path(conn, :recent))
+        |> redirect(to: Routes.company_path(conn, :recent, conn.params["locale"]))
 
       {:error, reason} ->
         conn
         |> put_flash(:error, "Error: #{reason}")
-        |> redirect(to: Routes.company_path(conn, :index))
+        |> redirect(to: Routes.company_path(conn, :index, conn.params["locale"]))
     end
   end
 end
