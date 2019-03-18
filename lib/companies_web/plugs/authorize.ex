@@ -10,7 +10,11 @@ defmodule CompaniesWeb.Plugs.Authorize do
 
   def init(opts), do: opts
 
-  def call(%{assigns: %{current_user: %{maintainer: true}}} = conn, _opts) do
+  def call(%{assigns: %{current_user: %{maintainer: true}}} = conn, maintainer: true) do
+    conn
+  end
+
+  def call(%{assigns: %{current_user: %{}}} = conn, []) do
     conn
   end
 

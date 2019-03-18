@@ -18,6 +18,10 @@ defmodule CompaniesWeb.Router do
     plug CompaniesWeb.Plugs.Authorize
   end
 
+  pipeline :admin do
+    plug CompaniesWeb.Plugs.Authorize, maintainer: true
+  end
+
   scope "/", CompaniesWeb do
     pipe_through [:browser]
 
@@ -42,7 +46,7 @@ defmodule CompaniesWeb.Router do
   end
 
   scope "/admin", CompaniesWeb.Admin do
-    pipe_through [:browser, :auth]
+    pipe_through [:browser, :admin]
 
     resources "/pending", PendingChangeController
   end
