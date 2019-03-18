@@ -32,13 +32,13 @@ defmodule CompaniesWeb.Router do
     get "/signout", AuthController, :signout
     get "/github", AuthController, :request
     get "/github/callback", AuthController, :callback
-    resources "/companies", CompanyController
-    resources "/jobs", JobController
   end
 
-  scope "/admin", CompaniesWeb.Admin do
-    pipe_through [:browser]
+  scope "/admin", CompaniesWeb do
+    pipe_through [:browser, :auth]
 
-    resources "/pending", PendingChangeController
+    resources "/pending", Admin.PendingChangeController
+    resources "/companies", CompanyController
+    resources "/jobs", JobController
   end
 end
