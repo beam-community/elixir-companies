@@ -1,4 +1,4 @@
-<div class="dropdown is-hoverable">
+<div class="dropdown locales is-hoverable">
   <div class="dropdown-trigger">
     <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
       <span><%= current_location() %></span>

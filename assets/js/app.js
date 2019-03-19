@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  var $localeItems = document.querySelectorAll(".dropdown .dropdown-item");
+  var $localeItems = document.querySelectorAll(".locales .dropdown-item");
 
   if ($localeItems) {
     $localeItems.forEach(function(toggler) {
