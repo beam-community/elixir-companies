@@ -44,16 +44,16 @@ defmodule CompaniesWeb.Router do
       resources "/jobs", JobController, except: [:index, :show]
     end
 
-    scope "/auth" do
-      get "/signout", AuthController, :signout
-      get "/github", AuthController, :request
-      get "/github/callback", AuthController, :callback
-    end
-
     scope "/admin", Admin do
       pipe_through [:admin]
 
       resources "/pending", PendingChangeController
     end
+  end
+
+  scope "/auth", CompaniesWeb do
+    get "/signout", AuthController, :signout
+    get "/github", AuthController, :request
+    get "/github/callback", AuthController, :callback
   end
 end

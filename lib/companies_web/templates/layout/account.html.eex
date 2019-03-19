@@ -10,7 +10,7 @@
     </p>
   <% end %>
   <p class="control">
-    <%= link to: Routes.auth_path(@conn, :signout, @conn.params["locale"]), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
+    <%= link to: Routes.auth_path(@conn, :signout), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
       <span><%= gettext("Sign out") %></span>
       <span class="icon">
         <i class="fas fa-sign-out-alt"></i>
@@ -19,7 +19,7 @@
   </p>
 <% else %>
   <p class="control">
-    <%= link to: "/auth/github", class: "navbar-item is-hidden-#{@version_hidden} button" do %>
+    <%= link to: Routes.auth_path(@conn, :request), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
       <span><%= gettext("Sign in") %></span>
       <span class="icon">
         <i class="fab fa-github"></i>

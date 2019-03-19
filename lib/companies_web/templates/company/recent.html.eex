@@ -19,7 +19,7 @@
             <span class="has-text-weight-semibold"><%= gettext("Add a company") %></span>
           <% end %>
         <% else %>
-          <%= link to: Routes.auth_path(@conn, :request, @conn.params["locale"]), class: "button is-white is-rounded is-outlined" do %>
+          <%= link to: Routes.auth_path(@conn, :request), class: "button is-white is-rounded is-outlined" do %>
             <span class="has-text-weight-semibold"><%= gettext("Sign in & list free") %></span>
             <span class="icon">
               <i class="fab fa-github"></i>
