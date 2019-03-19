@@ -37,9 +37,9 @@ defmodule Notify.Email do
     new_email()
     |> to(email)
     |> from("noreply@elixir-companies.com")
-    |> add_dynamic_field(:nickname, nickname)
-    |> add_dynamic_field(:resource, resource)
-    |> add_dynamic_field(:resource_name, resource_name(changes))
+    |> substitute("{{nickname}}", nickname)
+    |> substitute("{{resource}}", resource)
+    |> substitute("{{resource_name}}", resource_name(changes))
   end
 
   @spec resource_name(map()) :: String.t()
