@@ -26,7 +26,7 @@ defmodule CompaniesWeb.Router do
   scope "/", CompaniesWeb do
     pipe_through [:browser]
 
-    get "/", CompanyController, :dummy
+    get "/", CompanyController, :recent
     get "/browse", CompanyController, :index
   end
 
