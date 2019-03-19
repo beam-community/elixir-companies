@@ -8,6 +8,7 @@ defmodule CompaniesWeb.Router do
     plug :protect_from_forgery
     plug :put_secure_browser_headers
     plug CompaniesWeb.Plugs.Session
+    plug SetLocale, gettext: CompaniesWeb.Gettext, default_locale: "en"
   end
 
   pipeline :api do
@@ -25,6 +26,13 @@ defmodule CompaniesWeb.Router do
   scope "/", CompaniesWeb do
     pipe_through [:browser]
 
+    get "/", CompanyController, :dummy
+    get "/browse", CompanyController, :index
+  end
+
+  scope "/:locale/", CompaniesWeb do
+    pipe_through [:browser]
+
     get "/", CompanyController, :recent
     get "/hiring", Redirect, to: "/browse?type=hiring"
     get "/browse", CompanyController, :index
@@ -35,19 +43,17 @@ defmodule CompaniesWeb.Router do
       resources "/companies", CompanyController, except: [:index, :show]
       resources "/jobs", JobController, except: [:index, :show]
     end
-  end
 
-  scope "/auth", CompaniesWeb do
-    pipe_through [:browser]
+    scope "/auth" do
+      get "/signout", AuthController, :signout
+      get "/github", AuthController, :request
+      get "/github/callback", AuthController, :callback
+    end
 
-    get "/signout", AuthController, :signout
-    get "/github", AuthController, :request
-    get "/github/callback", AuthController, :callback
-  end
+    scope "/admin", Admin do
+      pipe_through [:admin]
 
-  scope "/admin", CompaniesWeb.Admin do
-    pipe_through [:browser, :admin]
-
-    resources "/pending", PendingChangeController
+      resources "/pending", PendingChangeController
+    end
   end
 end
