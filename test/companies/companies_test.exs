@@ -10,21 +10,30 @@ defmodule Companies.CompaniesTest do
   end
 
   describe "all/1" do
-    test "retrieves a paginated list of companies" do
-      insert_list(2, :company)
-      assert %{page_number: 1, page_size: 16, total_entries: 2, total_pages: 1} = Companies.all()
-    end
-
-    test "filters companies by hiring" do
-      [company, _] = insert_list(2, :company)
-      insert(:job, company: company)
-      assert %{total_entries: 1} = Companies.all(%{"type" => "hiring"})
-    end
-
-    test "filters companies by starting letter" do
-      insert(:company, name: "ALPHA")
+    test "retrieves a paginated list of companies sorted by inserted datetime" do
       insert(:company, name: "ZULU")
-      assert %{total_entries: 1} = Companies.all(%{"type" => "ae"})
+      insert(:company, name: "ALPHA")
+
+      assert %{entries: entries, page_number: 1, page_size: 16, total_entries: 2, total_pages: 1} = Companies.all()
+      assert [%{name: "ZULU"}, %{name: "ALPHA"}] = entries
+    end
+
+    test "filters companies by hiring sorted by most recent job" do
+      alpha = insert(:company, name: "ALPHA")
+      zulu = insert(:company, name: "ZULU")
+
+      insert(:job, company: zulu)
+      insert(:job, company: alpha)
+
+      assert %{entries: [%{name: "ALPHA"}, %{name: "ZULU"}]} = Companies.all(%{"type" => "hiring"})
+    end
+
+    test "filters and sorts companies by starting letter" do
+      insert(:company, name: "ZULU")
+      insert(:company, name: "BETA")
+      insert(:company, name: "ALPHA")
+
+      assert %{entries: [%{name: "ALPHA"}, %{name: "BETA"}]} = Companies.all(%{"type" => "ae"})
     end
   end
 
