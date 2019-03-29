@@ -24,7 +24,6 @@ defmodule Companies.Companies do
     |> from()
     |> join(:inner, [c], i in assoc(c, :industry))
     |> join(:left, [c, _i], j in assoc(c, :jobs))
-    |> distinct([c, _i, _j], asc: c.name)
     |> predicates(params)
     |> preload([_c, i, j], industry: i, jobs: j)
     |> Repo.paginate(page: page)
@@ -128,7 +127,7 @@ defmodule Companies.Companies do
   end
 
   defp predicates(query, %{"type" => <<start, finish>>}) when start in 97..122 do
-    query = order_by(query, [c, _i, _j], asc: fragment("LOWER(?)", c.name))
+    query = distinct(query, [c, _i, _j], asc: fragment("LOWER(?)", c.name))
 
     Enum.reduce(start..finish, query, fn char, acc ->
       or_where(acc, [c], ilike(c.name, ^"#{[char]}%"))
@@ -138,11 +137,14 @@ defmodule Companies.Companies do
   defp predicates(query, %{"type" => "hiring"}) do
     query
     |> exclude(:left_join)
+    |> distinct([c, _i, _j], true)
     |> join(:inner, [c, _i, _j], j in assoc(c, :jobs))
     |> order_by([_c, _i, j], desc: j.inserted_at)
   end
 
   defp predicates(query, _) do
-    order_by(query, [c, _i, _j], desc: c.inserted_at)
+    query
+    |> distinct([c, _i, _j], true)
+    |> order_by([c, _i, _j], desc: c.inserted_at)
   end
 end
