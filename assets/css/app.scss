@@ -101,7 +101,7 @@ html {
     &.company {
       min-height: 350px;
       max-height: 350px;
-      overflow: hidden;
+      overflow-y: auto;
 
       .content {
         position: relative;
@@ -159,6 +159,10 @@ html {
       padding: 10px 0px;
       border-bottom: 1px solid $grey-lighter;
       border-top: 1px solid $grey-lighter;
+    }
+
+    .company-description {
+      padding-bottom: 20px;
     }
   }
 
