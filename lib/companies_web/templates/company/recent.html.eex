@@ -42,6 +42,9 @@
           </div>
         <% end %>
       </div> <!-- /columns -->
+      <div class="container has-text-centered">
+        <%= link gettext("Browse full list"), to: Routes.company_path(@conn, :index), class: "button is-link" %>
+      </div>
     </div> <!-- /content -->
   </div> <!-- /container -->
 </section>
