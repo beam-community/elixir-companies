@@ -12,7 +12,7 @@
         <p>
 
         <%= if signed_in?(@conn) do %>
-          <%= link to: Routes.company_path(@conn, :new, @conn.params["locale"]), class: "button is-white is-rounded is-outlined" do %>
+          <%= link to: Routes.company_path(@conn, :new, locale(@conn)), class: "button is-white is-rounded is-outlined" do %>
             <span class="icon">
               <i class="fab fa-github"></i>
             </span>

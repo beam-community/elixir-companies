@@ -8,6 +8,9 @@ defmodule CompaniesWeb.Router do
     plug :protect_from_forgery
     plug :put_secure_browser_headers
     plug CompaniesWeb.Plugs.Session
+  end
+
+  pipeline :set_locale do
     plug SetLocale, gettext: CompaniesWeb.Gettext, default_locale: "en"
   end
 
@@ -24,14 +27,14 @@ defmodule CompaniesWeb.Router do
   end
 
   scope "/", CompaniesWeb do
-    pipe_through [:browser]
+    pipe_through [:browser, :set_locale]
 
     get "/", CompanyController, :recent
     get "/browse", CompanyController, :index
   end
 
   scope "/:locale/", CompaniesWeb do
-    pipe_through [:browser]
+    pipe_through [:browser, :set_locale]
 
     get "/", CompanyController, :recent
     get "/hiring", Redirect, to: "/browse?type=hiring"
@@ -52,6 +55,8 @@ defmodule CompaniesWeb.Router do
   end
 
   scope "/auth", CompaniesWeb do
+    pipe_through [:browser]
+
     get "/signout", AuthController, :signout
     get "/github", AuthController, :request
     get "/github/callback", AuthController, :callback

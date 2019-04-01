@@ -1,7 +1,7 @@
 <%= if signed_in?(@conn) do %>
   <%= if admin_session?(@conn) do %>
     <p class="control">
-      <%= link to: Routes.pending_change_path(@conn, :index, @conn.params["locale"]), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
+      <%= link to: Routes.pending_change_path(@conn, :index, locale(@conn)), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
         <span><%= gettext("Approvals") %></span>
         <span class="icon">
           <i class="fas fa-check-circle"></i>
