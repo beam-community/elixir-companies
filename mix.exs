@@ -48,13 +48,13 @@ defmodule Companies.MixProject do
       {:postgrex, ">= 0.0.0"},
       {:scrivener_ecto, "~> 2.0"},
       {:scrivener_html, "~> 1.8"},
+      {:set_locale, "~> 0.2.1"},
       {:ueberauth, "~> 0.5.0"},
       {:ueberauth_github, "~> 0.7.0"},
       {:bypass, "~> 1.0", only: :test},
       {:ex_machina, "~> 2.2", only: :test},
       {:excoveralls, "~> 0.10", only: :test},
-      {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:set_locale, "~> 0.2.1"}
+      {:phoenix_live_reload, "~> 1.2", only: :dev}
     ]
   end
 
