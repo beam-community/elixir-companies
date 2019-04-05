@@ -77,7 +77,7 @@
       <% end %>
     </p>
   </div>
-  <div class="content is-size-7 has-text-centered">
+  <div class="content company-description is-size-7 has-text-centered">
     <%= @company.description %>
   </div>
 </div>
