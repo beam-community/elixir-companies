@@ -30,7 +30,6 @@ html {
   background-attachment: fixed, fixed;
   background-image: asset_url("overlay.png"), asset_url("paper_fibers.png");
 
-
   body {
     display: flex;
     min-height: 100vh;
@@ -99,7 +98,6 @@ html {
   }
 
   .box {
-
 
     &.company {
       min-height: 350px;
