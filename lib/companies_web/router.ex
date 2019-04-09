@@ -10,6 +10,10 @@ defmodule CompaniesWeb.Router do
     plug CompaniesWeb.Plugs.Session
   end
 
+  pipeline :set_locale do
+    plug SetLocale, gettext: CompaniesWeb.Gettext, default_locale: "en"
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
@@ -23,7 +27,14 @@ defmodule CompaniesWeb.Router do
   end
 
   scope "/", CompaniesWeb do
-    pipe_through [:browser]
+    pipe_through [:browser, :set_locale]
+
+    get "/", CompanyController, :recent
+    get "/browse", CompanyController, :index
+  end
+
+  scope "/:locale/", CompaniesWeb do
+    pipe_through [:browser, :set_locale]
 
     get "/", CompanyController, :recent
     get "/hiring", Redirect, to: "/browse?type=hiring"
@@ -35,6 +46,12 @@ defmodule CompaniesWeb.Router do
       resources "/companies", CompanyController, except: [:index, :show]
       resources "/jobs", JobController, except: [:index, :show]
     end
+
+    scope "/admin", Admin do
+      pipe_through [:admin]
+
+      resources "/pending", PendingChangeController
+    end
   end
 
   scope "/auth", CompaniesWeb do
@@ -43,11 +60,5 @@ defmodule CompaniesWeb.Router do
     get "/signout", AuthController, :signout
     get "/github", AuthController, :request
     get "/github/callback", AuthController, :callback
-  end
-
-  scope "/admin", CompaniesWeb.Admin do
-    pipe_through [:browser, :admin]
-
-    resources "/pending", PendingChangeController
   end
 end

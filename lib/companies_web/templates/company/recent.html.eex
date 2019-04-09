@@ -12,14 +12,14 @@
         <p>
 
         <%= if signed_in?(@conn) do %>
-          <%= link to: Routes.company_path(@conn, :new), class: "button is-white is-rounded is-outlined" do %>
+          <%= link to: Routes.company_path(@conn, :new, locale(@conn)), class: "button is-white is-rounded is-outlined" do %>
             <span class="icon">
               <i class="fab fa-github"></i>
             </span>
             <span class="has-text-weight-semibold"><%= gettext("Add a company") %></span>
           <% end %>
         <% else %>
-          <%= link to: "/auth/github", class: "button is-white is-rounded is-outlined" do %>
+          <%= link to: Routes.auth_path(@conn, :request), class: "button is-white is-rounded is-outlined" do %>
             <span class="has-text-weight-semibold"><%= gettext("Sign in & list free") %></span>
             <span class="icon">
               <i class="fab fa-github"></i>
@@ -43,7 +43,7 @@
         <% end %>
       </div> <!-- /columns -->
       <div class="container has-text-centered">
-        <%= link gettext("Browse full list"), to: Routes.company_path(@conn, :index), class: "button is-link" %>
+        <%= link gettext("Browse full list"), to: Routes.company_path(@conn, :index, locale(@conn)), class: "button is-link" %>
       </div>
     </div> <!-- /content -->
   </div> <!-- /container -->

@@ -112,4 +112,17 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
   }
+
+  var $localeItems = document.querySelectorAll(".locales .dropdown-item");
+
+  if ($localeItems) {
+    $localeItems.forEach(function(toggler) {
+      toggler.addEventListener("click", function(event) {
+        event.preventDefault();
+        var parts = window.location.href.split("/");
+        parts[3] = toggler.dataset.locale;
+        window.location = parts.join("/");
+      });
+    });
+  }
 });

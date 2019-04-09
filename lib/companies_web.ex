@@ -24,6 +24,7 @@ defmodule CompaniesWeb do
       import Plug.Conn
       import CompaniesWeb.Gettext
       import CompaniesWeb.UserHelpers
+      import CompaniesWeb.LocaleHelpers
 
       alias CompaniesWeb.Router.Helpers, as: Routes
     end
@@ -45,6 +46,8 @@ defmodule CompaniesWeb do
       import CompaniesWeb.Gettext
       import CompaniesWeb.SiteHelpers
       import CompaniesWeb.UserHelpers
+      import CompaniesWeb.LocaleHelpers
+
       alias CompaniesWeb.Router.Helpers, as: Routes
     end
   end

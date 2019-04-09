@@ -3,7 +3,7 @@
     <div class="column is-half">
       <h1 class="has-text-centered title"><%= gettext("Edit Company") %></h1>
 
-      <%= render "form.html", Map.put(assigns, :action, Routes.company_path(@conn, :update, @company)) %>
+      <%= render "form.html", Map.put(assigns, :action, Routes.company_path(@conn, :update, locale(@conn), @company)) %>
 
     </div>
   </div>

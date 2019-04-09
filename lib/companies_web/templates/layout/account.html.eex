@@ -1,29 +1,29 @@
 <%= if signed_in?(@conn) do %>
-  <div class="field is-grouped">
-    <%= if admin_session?(@conn) do %>
-      <p class="control">
-      <%= link to: Routes.pending_change_path(@conn, :index), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
+  <%= if admin_session?(@conn) do %>
+    <p class="control">
+      <%= link to: Routes.pending_change_path(@conn, :index, locale(@conn)), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
         <span><%= gettext("Approvals") %></span>
         <span class="icon">
           <i class="fas fa-check-circle"></i>
         </span>
       <% end %>
-      </p>
-    <% end %>
-    <p class="control">
+    </p>
+  <% end %>
+  <p class="control">
     <%= link to: Routes.auth_path(@conn, :signout), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
       <span><%= gettext("Sign out") %></span>
       <span class="icon">
         <i class="fas fa-sign-out-alt"></i>
       </span>
     <% end %>
-    </p>
-  </div>
+  </p>
 <% else %>
-  <%= link to: "/auth/github", class: "navbar-item is-hidden-#{@version_hidden} button" do %>
-    <span><%= gettext("Sign in") %></span>
-    <span class="icon">
-      <i class="fab fa-github"></i>
-    </span>
-  <% end %>
+  <p class="control">
+    <%= link to: Routes.auth_path(@conn, :request), class: "navbar-item is-hidden-#{@version_hidden} button" do %>
+      <span><%= gettext("Sign in") %></span>
+      <span class="icon">
+        <i class="fab fa-github"></i>
+      </span>
+    <% end %>
+  </p>
 <% end %>

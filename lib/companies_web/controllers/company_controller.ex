@@ -28,7 +28,7 @@ defmodule CompaniesWeb.CompanyController do
       {:ok, _company} ->
         conn
         |> put_flash(:info, "Company created successfully.")
-        |> redirect(to: Routes.company_path(conn, :recent))
+        |> redirect(to: Routes.company_path(conn, :recent, locale(conn)))
 
       {:error, %Ecto.Changeset{} = changeset} ->
         industries = Industries.all()
@@ -55,7 +55,7 @@ defmodule CompaniesWeb.CompanyController do
       {:ok, _company} ->
         conn
         |> put_flash(:info, "Company updated successfully.")
-        |> redirect(to: Routes.company_path(conn, :recent))
+        |> redirect(to: Routes.company_path(conn, :recent, locale(conn)))
 
       {:error, %Ecto.Changeset{} = changeset} ->
         industries = Industries.all()
@@ -69,6 +69,6 @@ defmodule CompaniesWeb.CompanyController do
 
     conn
     |> put_flash(:info, "Company deleted successfully.")
-    |> redirect(to: Routes.company_path(conn, :recent))
+    |> redirect(to: Routes.company_path(conn, :recent, locale(conn)))
   end
 end

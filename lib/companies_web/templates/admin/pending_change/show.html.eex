@@ -22,7 +22,7 @@
         <div class="original is-hidden"><%= to_json(@pending_change.original)%></div>
       </div>
 
-      <%= form_tag(Routes.pending_change_path(@conn, :update, @pending_change.id), method: "PATCH") do %>
+      <%= form_tag(Routes.pending_change_path(@conn, :update, locale(@conn), @pending_change.id), method: "PATCH") do %>
         <div class="field is-grouped is-grouped-centered">
           <div class="control">
             <%= submit("Approve", class: "button is-primary", name: "approval", value: "true") %>

@@ -32,7 +32,7 @@ defmodule CompaniesWeb.AuthController do
       {:error, reason} ->
         conn
         |> put_flash(:error, "Error: #{reason}")
-        |> redirect(to: Routes.company_path(conn, :index))
+        |> redirect(to: Routes.company_path(conn, :recent))
     end
   end
 end

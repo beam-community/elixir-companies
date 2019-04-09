@@ -1,7 +1,7 @@
 <nav id="navbar" class="navbar has-shadow is-spaced">
   <div class="container">
     <div class="navbar-brand">
-      <%= link to: Routes.company_path(@conn, :recent), class: "navbar-item" do %>
+      <%= link to: Routes.company_path(@conn, :recent, locale(@conn)), class: "navbar-item" do %>
         <%= img_tag Routes.static_path(@conn, "/images/elixircompanies_logo.png") %>
         &nbsp;
         <h1 class="title is-5"><%= site_title() %></h1>
@@ -14,12 +14,15 @@
     </div> <!-- /navbarbrand -->
     <div class="navbar-menu" id="navMain">
       <div class="navbar-start">
-        <%= link gettext("Home"), to: Routes.company_path(@conn, :recent), class: "navbar-item" %>
-        <%= link gettext("Browse"), to: Routes.company_path(@conn, :index), class: "navbar-item" %>
-        <%= link gettext("Hiring"), to: Routes.company_path(@conn, :index, type: "hiring"), class: "navbar-item" %>
+        <%= link gettext("Home"), to: Routes.company_path(@conn, :recent, locale(@conn)), class: "navbar-item" %>
+        <%= link gettext("Browse"), to: Routes.company_path(@conn, :index, locale(@conn)), class: "navbar-item" %>
+        <%= link gettext("Hiring"), to: Routes.company_path(@conn, :index, locale(@conn), type: "hiring"), class: "navbar-item" %>
       </div>
       <div class="navbar-end">
-        <%= render "account.html", conn: @conn, version_hidden: "mobile" %>
+        <div class="field is-grouped">
+          <%= render "account.html", conn: @conn, version_hidden: "mobile" %>
+          <%= render "locales.html", conn: @conn %>
+        </div>
       </div>
     </div>
   </div>

@@ -20,7 +20,7 @@ defmodule CompaniesWeb.JobController do
       {:ok, _job} ->
         conn
         |> put_flash(:info, "Job created successfully.")
-        |> redirect(to: Routes.company_path(conn, :recent))
+        |> redirect(to: Routes.company_path(conn, :recent, locale(conn)))
 
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "new.html", changeset: changeset)
@@ -46,7 +46,7 @@ defmodule CompaniesWeb.JobController do
       {:ok, _job} ->
         conn
         |> put_flash(:info, "Job updated successfully.")
-        |> redirect(to: Routes.company_path(conn, :recent))
+        |> redirect(to: Routes.company_path(conn, :recent, locale(conn)))
 
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "edit.html", changeset: changeset)
@@ -59,7 +59,7 @@ defmodule CompaniesWeb.JobController do
 
     conn
     |> put_flash(:info, "Job deleted successfully.")
-    |> redirect(to: Routes.company_path(conn, :recent))
+    |> redirect(to: Routes.company_path(conn, :recent, locale(conn)))
   end
 
   defp load_companies(conn, _), do: assign(conn, :companies, Companies.all())

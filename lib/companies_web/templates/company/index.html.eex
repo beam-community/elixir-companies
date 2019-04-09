@@ -6,37 +6,37 @@
     <div class="tabs is-centered">
       <ul>
         <li>
-          <%= link to: Routes.company_path(@conn, :index) do %>
+          <%= link to: Routes.company_path(@conn, :index, locale(@conn)) do %>
             <%= gettext("Newest") %>
           <% end %>
         </li>
         <li>
-          <%= link to: Routes.company_path(@conn, :index, type: "hiring") do %>
+          <%= link to: Routes.company_path(@conn, :index, locale(@conn), type: "hiring") do %>
             <%= gettext("Hiring") %>
           <% end %>
         </li>
         <li>
-          <%= link to: Routes.company_path(@conn, :index, type: "ae") do %>
+          <%= link to: Routes.company_path(@conn, :index, locale(@conn), type: "ae") do %>
             A — E
           <% end %>
         </li>
         <li>
-          <%= link to: Routes.company_path(@conn, :index, type: "fj") do %>
+          <%= link to: Routes.company_path(@conn, :index, locale(@conn), type: "fj") do %>
             F — J
           <% end %>
         </li>
         <li>
-          <%= link to: Routes.company_path(@conn, :index, type: "ko") do %>
+          <%= link to: Routes.company_path(@conn, :index, locale(@conn), type: "ko") do %>
             K — O
           <% end %>
         </li>
         <li>
-          <%= link to: Routes.company_path(@conn, :index, type: "pt") do %>
+          <%= link to: Routes.company_path(@conn, :index, locale(@conn), type: "pt") do %>
             P — T
           <% end %>
         </li>
         <li>
-          <%= link to: Routes.company_path(@conn, :index, type: "uz") do %>
+          <%= link to: Routes.company_path(@conn, :index, locale(@conn), type: "uz") do %>
             U — Z
           <% end %>
         </li>

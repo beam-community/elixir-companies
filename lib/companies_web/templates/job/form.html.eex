@@ -34,7 +34,7 @@
       <%= submit gettext("Save"), class: "button is-primary" %>
     </div>
     <div class="control">
-      <%= link gettext("Back"), to: Routes.company_path(@conn, :recent), class: "button is-primary" %>
+      <%= link gettext("Back"), to: Routes.company_path(@conn, :recent, locale(@conn)), class: "button is-primary" %>
     </div>
   </div>
 <% end %>

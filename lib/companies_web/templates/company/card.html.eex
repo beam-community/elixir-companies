@@ -14,10 +14,10 @@
           <i class="fas fa-ellipsis-v"></i>
         </div>
         <div class="company-actions">
-          <%= link to: Routes.company_path(@conn, :edit, @company) do %>
+          <%= link to: Routes.company_path(@conn, :edit, locale(@conn), @company) do %>
             <span class="icon"><i class="fas fa-edit"></i></span> <%= gettext("Edit") %>
           <% end %>
-          <%= link to: Routes.company_path(@conn, :delete, @company), method: :delete do %>
+          <%= link to: Routes.company_path(@conn, :delete, locale(@conn), @company), method: :delete do %>
             <span class="icon"><i class="fas fa-trash-alt"></i></span> <%= gettext("Delete") %>
           <% end %>
         </div>
@@ -51,7 +51,7 @@
       <span class="icon purple"><i class="fas fa-fw fa-location-arrow"></i></span> <%= @company.location %><br>
     <% end %>
 
-    <%= link to: Routes.job_path(@conn, :new, company_id: @company.id) do %>
+    <%= link to: Routes.job_path(@conn, :new, locale(@conn), company_id: @company.id) do %>
       <span class="icon icon-purle" >
         <i class="fas fa-plus" ></i>
       </span>
@@ -64,11 +64,11 @@
         <%= if signed_in?(@conn) do %>
         &nbsp;
         [
-        <%= link to: Routes.job_path(@conn, :edit, job) do %>
+        <%= link to: Routes.job_path(@conn, :edit, locale(@conn), job) do %>
           <span class="icon purple"><i class="fas fa-edit"></i></span>
         <% end %>
         ,
-        <%= link to: Routes.job_path(@conn, :delete, job), method: :delete do %>
+        <%= link to: Routes.job_path(@conn, :delete, locale(@conn), job), method: :delete do %>
           <span class="icon purple"><i class="fas fa-trash-alt"></i></span>
         <% end %>
         ]

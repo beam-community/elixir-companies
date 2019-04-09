@@ -26,7 +26,7 @@
           <td><%= pending_change.resource %></td>
           <td><%= pending_change.note %></td>
           <td>
-            <%= link to: Routes.pending_change_path(@conn, :show, pending_change) do %>
+            <%= link to: Routes.pending_change_path(@conn, :show, locale(@conn), pending_change) do %>
               <i class="fas fa-eye"></i>
             <% end %>
           </td>

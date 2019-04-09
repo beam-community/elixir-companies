@@ -34,5 +34,5 @@
 
 </ul>
 
-<span><%= link gettext("Edit"), to: Routes.company_path(@conn, :edit, @company) %></span>
-<span><%= link gettext("Back"), to: Routes.company_path(@conn, :index) %></span>
+<span><%= link gettext("Edit"), to: Routes.company_path(@conn, :edit, locale(@conn), @company) %></span>
+<span><%= link gettext("Back"), to: Routes.company_path(@conn, :index, locale(@conn)) %></span>

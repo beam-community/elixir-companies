@@ -1,6 +1,5 @@
 defmodule CompaniesWeb.Admin.PendingChangeController do
   use CompaniesWeb, :controller
-
   require Logger
 
   alias Companies.PendingChanges
@@ -20,14 +19,14 @@ defmodule CompaniesWeb.Admin.PendingChangeController do
       {:ok, _approved_changes} ->
         conn
         |> put_flash(:info, "Changes submitted")
-        |> redirect(to: Routes.pending_change_path(conn, :index))
+        |> redirect(to: Routes.pending_change_path(conn, :index, locale(conn)))
 
       {:error, reason} ->
         Logger.error(reason)
 
         conn
         |> put_flash(:error, "Changes failed")
-        |> redirect(to: Routes.pending_change_path(conn, :index))
+        |> redirect(to: Routes.pending_change_path(conn, :index, locale(conn)))
     end
   end
 
