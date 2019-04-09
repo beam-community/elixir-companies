@@ -8,7 +8,25 @@ A [collection of companies using Elixir](https://elixir-companies.com/) in produ
 
 Proudly built with [Phoenix](https://phoenixframework.org).
 
-## Running
+### Adding a new company to the list
+
+- Sign with your GitHub account.
+- Click on `Add a company` button and you will be redirected to a form.
+- Fill all required data about the company and submit it.
+
+After that, the admin needs to validate the request.
+
+With everything OK the company will be approved and will appear in companies list.
+
+### Adding a new job opportunity for a company
+
+Once your company is available on the list, you are able to add a new Job opportunity for the given company.
+
+- Sign with your GitHub account.
+- Click on `+ Add a Job` link and you will be redirected to a form.
+- Fill all required data about the company and submit it.
+
+## Development
 
 1. Install dependencies with `mix deps.get`
 1. Create and migrate your database with `mix ecto.setup`
