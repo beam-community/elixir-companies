@@ -5,6 +5,8 @@ defmodule Companies.CompaniesTest do
 
   alias Companies.Companies
 
+  @moduletag :capture_log
+
   setup do
     {:ok, %{user: insert(:user)}}
   end
@@ -39,12 +41,10 @@ defmodule Companies.CompaniesTest do
 
   describe "create/2" do
     test "creates a pending change for a new company when changes are valid", %{user: user} do
-      capture_log(fn ->
-        assert {:ok, %{action: "create", resource: "company"}} =
-                 :company
-                 |> params_for()
-                 |> Companies.create(user)
-      end)
+      assert {:ok, %{action: "create", resource: "company"}} =
+               :company
+               |> params_for()
+               |> Companies.create(user)
     end
 
     test "returns an error for invalid changes", %{user: user} do
@@ -54,23 +54,19 @@ defmodule Companies.CompaniesTest do
 
   describe "delete/2" do
     test "creates a pending change for deleting a company", %{user: user} do
-      capture_log(fn ->
-        assert {:ok, %{action: "delete", resource: "company"}} =
-                 :company
-                 |> insert()
-                 |> Companies.delete(user)
-      end)
+      assert {:ok, %{action: "delete", resource: "company"}} =
+               :company
+               |> insert()
+               |> Companies.delete(user)
     end
   end
 
   describe "update/3" do
     test "creates a pending change for company updates when changes are valid", %{user: user} do
-      capture_log(fn ->
-        assert {:ok, %{action: "update", resource: "company"}} =
-                 :company
-                 |> insert()
-                 |> Companies.update(%{name: "updated"}, user)
-      end)
+      assert {:ok, %{action: "update", resource: "company"}} =
+               :company
+               |> insert()
+               |> Companies.update(%{name: "updated"}, user)
     end
 
     test "returns an error for invalid changes", %{user: user} do
