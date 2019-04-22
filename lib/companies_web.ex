@@ -47,6 +47,7 @@ defmodule CompaniesWeb do
       import CompaniesWeb.SiteHelpers
       import CompaniesWeb.UserHelpers
       import CompaniesWeb.LocaleHelpers
+      import Phoenix.LiveView, only: [live_render: 2, live_render: 3]
 
       alias CompaniesWeb.Router.Helpers, as: Routes
     end
@@ -57,6 +58,7 @@ defmodule CompaniesWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
+      import Phoenix.LiveView.Router
     end
   end
 

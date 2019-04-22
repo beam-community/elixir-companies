@@ -16,6 +16,12 @@ defmodule CompaniesWeb.CompanyController do
     render(conn, "index.html", companies: companies)
   end
 
+  def livebrowse(conn, params) do
+    companies = Companies.all(params)
+
+    Phoenix.LiveView.Controller.live_render(conn, CompaniesWeb.CompanyLive, session: %{companies: companies})
+  end
+
   def new(conn, _params) do
     changeset = Companies.change(%Company{})
     industries = Industries.all()

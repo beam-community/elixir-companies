@@ -8,6 +8,7 @@ defmodule CompaniesWeb.Router do
     plug :protect_from_forgery
     plug :put_secure_browser_headers
     plug CompaniesWeb.Plugs.Session
+    plug Phoenix.LiveView.Flash
   end
 
   pipeline :set_locale do
@@ -31,6 +32,7 @@ defmodule CompaniesWeb.Router do
 
     get "/", CompanyController, :recent
     get "/browse", CompanyController, :index
+    get "/livebrowse", CompanyController, :livebrowse
   end
 
   scope "/:locale/", CompaniesWeb do
@@ -39,6 +41,7 @@ defmodule CompaniesWeb.Router do
     get "/", CompanyController, :recent
     get "/hiring", Redirect, to: "/browse?type=hiring"
     get "/browse", CompanyController, :index
+    get "/livebrowse", CompanyController, :livebrowse
 
     scope "/" do
       pipe_through [:auth]

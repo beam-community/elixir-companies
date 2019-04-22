@@ -14,7 +14,10 @@ config :companies, CompaniesWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "cnFp+p3HcWa0ZaS5YhEfuJlU2PIxvUinNThsTSXm4ZE2M7D/zYzpfIJGMVNLHtqv",
   render_errors: [view: CompaniesWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Companies.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: Companies.PubSub, adapter: Phoenix.PubSub.PG2],
+  live_view: [
+    signing_salt: "aOlyB0caIBESz7l7wIaM4OcFyRkAX9Q8FczJdEQJzVXO5Fjpew82n9MJuGLamCAp"
+  ]
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -58,7 +61,8 @@ config :companies, CompaniesWeb.Endpoint, instrumenters: [Appsignal.Phoenix.Inst
 
 config :phoenix, :template_engines,
   eex: Appsignal.Phoenix.Template.EExEngine,
-  exs: Appsignal.Phoenix.Template.ExsEngine
+  exs: Appsignal.Phoenix.Template.ExsEngine,
+  leex: Phoenix.LiveView.Engine
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

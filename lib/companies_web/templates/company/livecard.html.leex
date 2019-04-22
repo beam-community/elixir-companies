@@ -1,0 +1,71 @@
+<div class="company box <%= hiring_ribbon(@company) %>">
+  <%= if hiring?(@company) do %>
+    <div class="ribbon is-warning corner-top-left-ribbon">
+      <span>
+        <b><%= gettext("Hiring!") %></b>
+      </span>
+    </div>
+  <% end %>
+  <div class="content has-text-centered">
+    <p class="title is-4 thin"><%= @company.name %></p>
+    <%# if signed_in?(@conn) do %>
+      <div class="company-actions-wrapper">
+        <div class="toggle-company-actions">
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
+        <div class="company-actions">
+          <a phx-click="edit-company">
+            <span class="icon"><i class="fas fa-edit"></i></span> <%= gettext("Edit") %>
+          </a>
+          <a phx-click="delete-company">
+            <span class="icon"><i class="fas fa-trash-alt"></i></span> <%= gettext("Delete") %>
+          </a>
+        </div>
+      </div>
+    <%# end %>
+  </div>
+  <div class="content company-info has-text-left">
+    <p class="is-size-7">
+      <span class="icon purple"><i class="fas fa-fw fa-cogs"></i></span>
+      <%= industry_name(@company) %><br>
+
+      <%= if @company.url do %>
+        <span class="icon purple"><i class="fas fa-fw fa-globe"></i></span>
+        <%= link link_title(@company.url), to: url_with_scheme(@company.url), target: :blank %>
+        <br>
+      <% end %>
+
+      <%= if @company.blog do %>
+        <span class="icon purple"><i class="fas fa-fw fa-lightbulb"></i></span>
+        <%= link link_title(@company.blog), to: @company.blog, target: :blank %>
+        <br>
+      <% end %>
+
+      <%= if @company.github do %>
+        <span class="icon purple"><i class="fab fa-fw fa-github"></i></span>
+        <%= link "GitHub", to: @company.github, target: :blank %>
+        <br>
+      <% end %>
+
+      <%= if @company.location do %>
+        <span class="icon purple"><i class="fas fa-fw fa-location-arrow"></i></span> <%= @company.location %><br>
+      <% end %>
+
+      <a phx-click="new-job-for-company">
+        <span class="icon icon-purle" >
+          <i class="fas fa-plus" ></i>
+        </span>
+        <%= gettext("Add a job") %>
+      </a>
+      <br/>
+      <%= for job <- @company.jobs do %>
+        <span class="icon purple"><i class="fas fa-briefcase"></i></span>
+        <%= link job.title, to: url_with_scheme(job.url), target: :blank %>
+        <br>
+      <% end %>
+    </p>
+  </div>
+  <div class="content company-description is-size-7 has-text-centered">
+    <%= @company.description %>
+  </div>
+</div>

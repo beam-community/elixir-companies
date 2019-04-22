@@ -10,6 +10,7 @@ import css from "../css/app.scss";
 // Import dependencies
 //
 import "phoenix_html";
+import LiveSocket from "phoenix_live_view";
 import * as jsDiff from "diff";
 
 // Import local files
@@ -126,3 +127,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
+let liveSocket = new LiveSocket("/live");
+liveSocket.connect();

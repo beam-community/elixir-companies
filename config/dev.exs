@@ -52,7 +52,8 @@ config :companies, CompaniesWeb.Endpoint,
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
       ~r{lib/companies_web/views/.*(ex)$},
-      ~r{lib/companies_web/templates/.*(eex)$}
+      ~r{lib/companies_web/templates/.*(eex)$},
+      ~r{lib/companies_web/live/.*(ex)$}
     ]
   ]
 
