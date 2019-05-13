@@ -197,3 +197,30 @@ html {
     padding-bottom: 20px;
   }
 }
+
+@include until($tablet) {
+  .navbar-end {
+    border-top: 1px solid $grey-dark;
+  }
+
+  .field.is-grouped {
+    display: block;
+
+    .control {
+      display: inline-block;
+      width: 100%;
+
+      .navbar-item {
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        border: none;
+        padding: 0.5rem 0.75rem;
+      }
+    }
+
+    .locales {
+      margin: 0.5rem 0.75rem;
+    }
+  }
+}
