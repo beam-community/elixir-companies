@@ -20,7 +20,7 @@
       </div>
       <div class="navbar-end">
         <div class="field is-grouped">
-          <%= render "account.html", conn: @conn, version_hidden: "mobile" %>
+          <%= render "account.html", conn: @conn %>
           <%= render "locales.html", conn: @conn %>
         </div>
       </div>
