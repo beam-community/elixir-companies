@@ -4,43 +4,8 @@
     <h1 class="title is-3 fancy"><%= gettext("Browse") %></h1>
 
     <div class="tabs is-centered">
-      <ul>
-        <li>
-          <button phx-click="index">
-            <%= gettext("Newest") %>
-          </button>
-        </li>
-        <li>
-          <button phx-click="hiring">
-            <%= gettext("Hiring") %>
-          </button>
-        </li>
-        <li>
-          <button phx-click="ae">
-            A — E
-          </button>
-        </li>
-        <li>
-          <button phx-click="fj">
-            F — J
-          </button>
-        </li>
-        <li>
-          <button phx-click="ko">
-            K — O
-          </button>
-        </li>
-        <li>
-          <button phx-click="pt">
-            P — T
-          </button>
-        </li>
-        <li>
-          <button phx-click="uz">
-            U — Z
-          </button>
-        </li>
-      </ul>
+      <form action="">
+      </form>
     </div>
 
     <div class="content">
@@ -53,6 +18,5 @@
       </div> <!-- /columns -->
     </div> <!-- /content -->
 
-    <%# pagination_links(@conn, @companies, [next: "Next", previous: "Previous"] ++ query_params(@conn)) %>
   </div> <!-- /container -->
 </section>
