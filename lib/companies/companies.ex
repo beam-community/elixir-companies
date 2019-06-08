@@ -126,8 +126,11 @@ defmodule Companies.Companies do
     Company.changeset(company, %{})
   end
 
-  defp predicates(query, %{"type" => <<start, finish>>}) when start in 97..122 do
+  defp predicates(query, %{"type" => <<start, finish>>}) do
     query = distinct(query, [c, _i, _j], asc: fragment("LOWER(?)", c.name))
+
+    start  = if (start  ==  97) do  32 else  97 end
+    finish = if (finish == 122) do 126 else 122 end
 
     Enum.reduce(start..finish, query, fn char, acc ->
       or_where(acc, [c], ilike(c.name, ^"#{[char]}%"))
@@ -139,12 +142,12 @@ defmodule Companies.Companies do
     |> exclude(:left_join)
     |> distinct([c, _i, _j], true)
     |> join(:inner, [c, _i, _j], j in assoc(c, :jobs))
-    |> order_by([_c, _i, j], desc: j.inserted_at)
+    |> order_by([_c, _i, j], asc: c.name)
   end
 
   defp predicates(query, _) do
     query
     |> distinct([c, _i, _j], true)
-    |> order_by([c, _i, _j], desc: c.inserted_at)
+    |> order_by([c, _i, _j], asc: c.name)
   end
 end
