@@ -1,12 +1,6 @@
 defmodule Companies.CompaniesTest do
   use Companies.DataCase
 
-  import ExUnit.CaptureLog
-
-  alias Companies.Companies
-
-  @moduletag :capture_log
-
   setup do
     {:ok, %{user: insert(:user)}}
   end
@@ -74,6 +68,23 @@ defmodule Companies.CompaniesTest do
                :company
                |> insert()
                |> Companies.update(%{name: nil}, user)
+    end
+  end
+
+  describe "search/1" do
+    test "returns all the companies when no params are provided" do
+      insert(:company, name: "ZULU")
+      assert [%{name: "ZULU"}] = Companies.search(%{})
+    end
+
+    test "returns only the companies that belong to that industry" do
+      industry = insert(:industry)
+      insert(:company, industry: industry, name: "ALPHA")
+
+      another_industry = insert(:industry)
+      insert(:company, industry: another_industry, name: "ZULU")
+
+      assert [%{name: "ZULU"}] = Companies.search(%{industry_id: another_industry.id})
     end
   end
 end

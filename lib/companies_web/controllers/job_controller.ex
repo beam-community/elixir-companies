@@ -1,7 +1,7 @@
 defmodule CompaniesWeb.JobController do
   use CompaniesWeb, :controller
 
-  alias Companies.{Companies, Jobs, Schema.Job}
+  alias Companies.{Jobs, Schema.Job}
   plug :load_companies when action in [:new, :edit, :create, :update]
 
   def index(conn, _params) do

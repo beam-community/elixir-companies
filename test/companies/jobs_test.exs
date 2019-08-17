@@ -1,11 +1,7 @@
 defmodule Companies.JobsTest do
   use Companies.DataCase
 
-  import ExUnit.CaptureLog
-
   alias Companies.Jobs
-
-  @moduletag :capture_log
 
   setup do
     {:ok, %{user: insert(:user)}}
