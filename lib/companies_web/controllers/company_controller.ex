@@ -1,7 +1,7 @@
 defmodule CompaniesWeb.CompanyController do
   use CompaniesWeb, :controller
 
-  alias Companies.{Companies, Industries, Schema.Company}
+  alias Companies.{Industries, Schema.Company}
 
   def recent(conn, _params) do
     companies_count = Companies.count()
@@ -16,8 +16,22 @@ defmodule CompaniesWeb.CompanyController do
     render(conn, "index.html", companies: companies)
   end
 
-  def livebrowse(conn, params) do
-    Phoenix.LiveView.Controller.live_render(conn, CompaniesWeb.CompanyLive, session: %{})
+  def livebrowse(conn, _params) do
+    industries = Companies.Industries.for_select()
+    companies = Companies.all()
+
+    Phoenix.LiveView.Controller.live_render(conn, CompaniesWeb.CompanyLiveView,
+      session: %{
+        current_user: current_user(conn),
+        companies: companies,
+        industries: industries,
+        search: %{
+          industry_id: nil,
+          text: "",
+          only_hiring: false
+        }
+      }
+    )
   end
 
   def new(conn, _params) do

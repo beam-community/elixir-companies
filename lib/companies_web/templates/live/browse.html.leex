@@ -4,29 +4,41 @@
       Browse
     </h1>
     <div class="tabs is-centered">
-      <div class="field">
-          <label class="field" for="industry">Industry</label>
+      <form action="#" phx-change="searchchange">
+        <div class="field">
+          <label class="field" for="industry_id">Industry</label>
           <div class="control">
             <div class="select">
-              <select id="industry" name="industry">
+              <select id="search[industry_id]" name="search[industry_id]">
                 <%= for industry <- @industries do %>
-                    <option value="<%= industry.id %>" <%= if industry.id == @search[:industry_id], do: "selected" %>><%= industry.name %></option>
+                  <option value="<%= elem(industry, 1) %>"><%= elem(industry, 0) %></option>
                 <% end %>
               </select>
             </div>
           </div>
-      </div>
-</form>
-</div>
-
-<div class="content">
-  <div class="columns is-mobile is-multiline">
-    <%= for company <- @companies do %>
-        <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
         </div>
+        <div class="field">
+          <label class="field" for="text">Text</label>
+          <div class="control">
+            <div class="text">
+              <input name="search[text]" type="text" value=""/>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field" for="only_hiring">
+            <input name="search[only_hiring]" type="checkbox" />
+            Show only hiring companies
+          </label>
+        </div>
+      </form>
+    </div>
+      <div class="columns is-mobile is-multiline">
+        <%= for company <- @companies do %>
+          <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
+            <%= live_render(@socket, CompaniesWeb.CardLiveView, session: %{company: company, current_user: @current_user}) %>
+          </div>
         <% end %>
-  </div> <!-- /columns -->
-</div> <!-- /content -->
-
-</div> <!-- /container -->
+      </div> <!-- /columns -->
+  </div> <!-- /container -->
 </section>
