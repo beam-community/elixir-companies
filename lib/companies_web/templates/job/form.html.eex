@@ -29,6 +29,15 @@
     </div>
   </div>
 
+  <div class="field">
+    <div class="control">
+      <label class="checkbox">
+        <%= checkbox f, :remote, class: "checkbox" %>
+        <%= gettext("This is a remote job") %>
+      </label>
+    </div>
+  </div>
+
   <div class="field is-grouped is-grouped-centered">
     <div class="control">
       <%= submit gettext("Save"), class: "button is-primary" %>
