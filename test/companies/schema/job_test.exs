@@ -10,7 +10,8 @@ defmodule Companies.Schema.JobTest do
   @valid_job %{
     title: "test changesets",
     url: "https://www.test@example.com",
-    company_id: 60
+    company_id: 60,
+    remote: true
   }
 
   describe "changeset/2" do
