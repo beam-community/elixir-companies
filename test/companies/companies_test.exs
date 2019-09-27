@@ -1,8 +1,6 @@
 defmodule Companies.CompaniesTest do
   use Companies.DataCase
 
-  import ExUnit.CaptureLog
-
   alias Companies.Companies
 
   @moduletag :capture_log
