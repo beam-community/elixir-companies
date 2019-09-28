@@ -52,7 +52,7 @@
     <% end %>
 
     <%= link to: Routes.job_path(@conn, :new, locale(@conn), company_id: @company.id) do %>
-      <span class="icon icon-purle" >
+      <span class="icon purple" >
         <i class="fas fa-plus" ></i>
       </span>
         <%= gettext("Add a job") %>
