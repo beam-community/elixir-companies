@@ -7,6 +7,7 @@ defmodule Companies.Schema.Job do
   schema "jobs" do
     field :title, :string
     field :url, :string
+    field :remote, :boolean
 
     belongs_to :company, Company
 
@@ -16,7 +17,7 @@ defmodule Companies.Schema.Job do
   @doc false
   def changeset(job, attrs) do
     job
-    |> cast(attrs, [:title, :url, :company_id])
-    |> validate_required([:title, :url, :company_id])
+    |> cast(attrs, [:title, :url, :company_id, :remote])
+    |> validate_required([:title, :url, :company_id, :remote])
   end
 end

@@ -35,7 +35,7 @@ Once your company is available on the list, you are able to add a new Job opport
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-_Note_: You need to set up a [GitHub Application](https://developer.github.com/) and ensure `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET` are available to your application.
+_Note_: You need to set up a [GitHub Application](https://developer.github.com/) and ensure `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET` are available to your application. The GitHub application needs its callback set to `http://localhost:4000/auth/github/callback` and be given read-only access to the email addresses of the user.
 
 _Note_: You need to have Postgres version 9.5+, due to our use of certain features that are fairly new (JSONB Data Type + ON CONFLICT query).
 

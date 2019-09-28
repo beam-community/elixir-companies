@@ -12,6 +12,11 @@
     <%= @job.url %>
   </li>
 
+  <li>
+    <strong><%= gettext("Remote:") %></strong>
+    <%= @job.remote %>
+  </li>
+
 </ul>
 
 <span><%= link gettext("Edit"), to: Routes.job_path(@conn, :edit, locale(@conn), @job) %></span>
