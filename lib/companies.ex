@@ -170,7 +170,7 @@ defmodule Companies do
         from c in query, where: ilike(c.name, ^"%#{text}%")
 
       {"only_hiring", _hiring}, query ->
-        from c in query
+        from(c in query)
     end)
     |> Repo.all()
     |> Repo.preload([:industry, :jobs])

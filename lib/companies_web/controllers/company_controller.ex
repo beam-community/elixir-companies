@@ -22,7 +22,8 @@ defmodule CompaniesWeb.CompanyController do
     industries = Companies.Industries.for_select()
     companies = Companies.all()
 
-    live_render(conn, CompaniesWeb.CompanyLiveView, session: %{
+    live_render(conn, CompaniesWeb.CompanyLiveView,
+      session: %{
         current_user: current_user(conn),
         companies: companies,
         industries: industries,
