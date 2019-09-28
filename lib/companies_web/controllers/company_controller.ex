@@ -3,6 +3,8 @@ defmodule CompaniesWeb.CompanyController do
 
   alias Companies.{Industries, Schema.Company}
 
+  import Phoenix.LiveView.Controller
+
   def recent(conn, _params) do
     companies_count = Companies.count()
     recent_companies = Companies.all()
@@ -20,8 +22,7 @@ defmodule CompaniesWeb.CompanyController do
     industries = Companies.Industries.for_select()
     companies = Companies.all()
 
-    Phoenix.LiveView.Controller.live_render(conn, CompaniesWeb.CompanyLiveView,
-      session: %{
+    live_render(conn, CompaniesWeb.CompanyLiveView, session: %{
         current_user: current_user(conn),
         companies: companies,
         industries: industries,
