@@ -5,27 +5,31 @@ defmodule CompaniesWeb.CompanyLiveView do
 
   def mount(session, socket) do
     socket =
-      case socket.assigns do
-        %{} ->
-          assign(
-            socket,
-            %{
-              companies: session.companies,
-              industries: session.industries,
-              current_user: session.current_user,
-              search: session.search
-            }
-          )
+      socket
+      |> assign(page: 1, per_page: @page_size)
+      |> assign(companies: session.companies)
+      |> assign(industries: session.industries)
+      |> assign(current_user: session.current_user)
+      |> assign(search: session.search)
 
-        _ ->
-          socket
-      end
-
-    {:ok, socket}
+    {:ok, socket, temporary_assigns: [:companies]}
   end
 
-  def handle_event("searchchange", %{"search" => search_params}, socket) do
-    {:noreply, assign(socket, :companies, Companies.search(search_params))}
+  defp fetch(%{assigns: %{page: page, per_page: per_page, search: search}} = socket) do
+    assign(socket, companies: Companies.search(search, page, per_page))
+  end
+
+  def handle_event("searchchange", %{"search" => search}, socket) do
+    socket =
+      socket
+      |> assign(page: 1, per_page: @page_size, search: search)
+      |> fetch()
+
+    {:noreply, socket}
+  end
+
+  def handle_event("load-more", _, %{assigns: assigns} = socket) do
+    {:noreply, socket |> assign(page: assigns.page + 1) |> fetch()}
   end
 
   def render(assigns) do

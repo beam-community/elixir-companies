@@ -4,7 +4,7 @@
       Browse Companies
     </h1>
     <div class="tabs is-centered">
-      <form action="#" phx-change="searchchange">
+      <form action="#" id="company_search" phx-change="searchchange" phx-hook="CleanCompanies">
         <div class="columns is-dekstop">
           <div class="column is-half">
             <div class="field">
@@ -36,12 +36,12 @@
         </div>
       </form>
     </div>
-      <div class="columns is-mobile is-multiline">
-        <%= for company <- @companies do %>
-          <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
-            <%= live_render(@socket, CompaniesWeb.CompanyCardLiveView, session: %{company: company, current_user: @current_user}, id: "card#{company.id}") %>
-          </div>
-        <% end %>
-      </div> <!-- /columns -->
+    <div class="columns is-mobile is-multiline" phx-update="append" phx-hook="InfiniteScroll" id="companies" data-page="<%= @page %>">
+      <%= for company <- @companies do %>
+          <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen" id="company-<%= company.id %>">
+            <%= live_render(@socket, CompaniesWeb.CompanyCardLiveView, session: %{company: company, current_user: @current_user}, id: "company_card-#{company.id}") %>
+        </div>
+      <% end %>
+    </div> <!-- /columns -->
   </div> <!-- /container -->
 </section>

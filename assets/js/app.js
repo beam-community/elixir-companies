@@ -80,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function() {
     tabLinks.forEach(function(tab) {
       tab.addEventListener("click", changeTab);
     });
-
     var original = document.querySelector(".box .original").innerHTML,
       changes = document.querySelector(".box .changes").innerHTML,
       diff = jsDiff.diffChars(original, changes),
@@ -129,5 +128,39 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-let liveSocket = new LiveSocket("/live", Socket);
+let Hooks = {};
+
+let scrollAt = () => {
+  let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  let scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+  let clientHeight = document.documentElement.clientHeight;
+
+  return scrollTop / (scrollHeight - clientHeight) * 100;
+};
+
+Hooks.InfiniteScroll = {
+  page() { return this.el.dataset.page; },
+  mounted(){
+    this.pending = this.page();
+    window.addEventListener("scroll", e => {
+      if(this.pending == this.page() && scrollAt() > 90){
+        this.pending = this.page() + 1;
+        this.pushEvent("load-more", {});
+      }
+    });
+  },
+  updated(){ this.pending = this.page(); }
+};
+
+Hooks.CleanCompanies = {
+  mounted() {
+    let form = document.getElementById('company_search');
+    form.addEventListener('change', () => {
+      let companies = document.getElementById('companies');
+      companies.innerHTML = '';
+    });
+  }
+};
+
+let liveSocket = new LiveSocket("/live", Socket, {hooks: Hooks});
 liveSocket.connect();

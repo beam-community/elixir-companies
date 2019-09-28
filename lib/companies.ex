@@ -131,6 +131,10 @@ defmodule Companies do
     Company.changeset(company, %{})
   end
 
+  defp limit_and_offset(query, page, per_page) do
+    from c in query, limit: ^per_page, offset: ^((page - 1) * per_page)
+  end
+
   defp predicates(query, %{"type" => <<start, finish>>}) when start in 97..122 do
     query = distinct(query, [c, _i, _j], asc: fragment("LOWER(?)", c.name))
 
@@ -153,13 +157,6 @@ defmodule Companies do
     |> order_by([c, _i, _j], desc: c.inserted_at)
   end
 
-  def search(filters) do
-    filters
-    |> Enum.reduce(Company, &query_predicates/2)
-    |> Repo.all()
-    |> Repo.preload([:industry, :jobs])
-  end
-
   defp query_predicates({_, val}, query) when is_nil(val) or val == "", do: query
 
   defp query_predicates({"industry_id", industry_id}, query) do
@@ -169,5 +166,13 @@ defmodule Companies do
 
   defp query_predicates({"text", text}, query) do
     from c in query, where: ilike(c.name, ^"%#{text}%")
+  end
+
+  def search(filters, page, per_page) do
+    filters
+    |> Enum.reduce(Company, &query_predicates/2)
+    |> limit_and_offset(page, per_page)
+    |> Repo.all()
+    |> Repo.preload([:industry, :jobs])
   end
 end
