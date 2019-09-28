@@ -1,8 +1,6 @@
 defmodule Companies.CompaniesTest do
   use Companies.DataCase
 
-  import ExUnit.CaptureLog
-
   alias Companies.Companies
 
   @moduletag :capture_log
@@ -17,7 +15,7 @@ defmodule Companies.CompaniesTest do
       insert(:company, name: "ALPHA")
 
       assert %{entries: entries, page_number: 1, page_size: 16, total_entries: 2, total_pages: 1} = Companies.all()
-      assert [%{name: "ZULU"}, %{name: "ALPHA"}] = entries
+      assert 2 == length(entries)
     end
 
     test "filters companies by hiring sorted by most recent job" do
