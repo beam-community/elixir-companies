@@ -105,17 +105,14 @@ defmodule Companies.Jobs do
 
   def search(filters) do
     filters
-    |> Enum.reduce(Job, fn
-      {_, nil}, query ->
-        query
-
-      {_, ""}, query ->
-        query
-
-      {"text", text}, query ->
-        from c in query, where: ilike(c.title, ^"%#{text}%")
-    end)
+    |> Enum.reduce(Job, &query_predicates/2)
     |> Repo.all()
     |> Repo.preload([:company])
   end
+
+  defp query_predicates({"text", text}, query) do
+    from c in query, where: ilike(c.title, ^"%#{text}%")
+  end
+
+  defp query_predicates(_, query), do: query
 end

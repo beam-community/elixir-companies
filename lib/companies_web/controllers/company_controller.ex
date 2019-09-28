@@ -20,7 +20,7 @@ defmodule CompaniesWeb.CompanyController do
       session: %{
         current_user: current_user(conn),
         companies: companies,
-        industries: industries,
+        industries: industries
       }
     )
   end

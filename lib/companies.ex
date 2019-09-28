@@ -155,24 +155,19 @@ defmodule Companies do
 
   def search(filters) do
     filters
-    |> Enum.reduce(Company, fn
-      {_, nil}, query ->
-        query
-
-      {_, ""}, query ->
-        query
-
-      {"industry_id", industry_id}, query ->
-        {industry_id, ""} = Integer.parse(industry_id)
-        from c in query, where: c.industry_id == ^industry_id
-
-      {"text", text}, query ->
-        from c in query, where: ilike(c.name, ^"%#{text}%")
-
-      {"only_hiring", _hiring}, query ->
-        from(c in query)
-    end)
+    |> Enum.reduce(Company, &query_predicates/2)
     |> Repo.all()
     |> Repo.preload([:industry, :jobs])
+  end
+
+  defp query_predicates({_, val}, query) when is_nil(val) or val == "", do: query
+
+  defp query_predicates({"industry_id", industry_id}, query) do
+    {industry_id, ""} = Integer.parse(industry_id)
+    from c in query, where: c.industry_id == ^industry_id
+  end
+
+  defp query_predicates({"text", text}, query) do
+    from c in query, where: ilike(c.name, ^"%#{text}%")
   end
 end
