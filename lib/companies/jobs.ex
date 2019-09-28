@@ -110,6 +110,10 @@ defmodule Companies.Jobs do
     |> Repo.preload([:company])
   end
 
+  defp query_predicates({"remote_only", "on"}, query) do
+    from c in query, where: c.remote == true
+  end
+
   defp query_predicates({"text", text}, query) do
     from c in query, where: ilike(c.title, ^"%#{text}%")
   end

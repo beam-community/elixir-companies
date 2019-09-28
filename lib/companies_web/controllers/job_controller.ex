@@ -14,7 +14,8 @@ defmodule CompaniesWeb.JobController do
         current_user: current_user(conn),
         jobs: jobs,
         search: %{
-          text: ""
+          text: "",
+          remote_only: "off"
         }
       }
     )

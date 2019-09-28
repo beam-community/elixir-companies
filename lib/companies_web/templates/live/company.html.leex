@@ -51,12 +51,12 @@
         <span class="icon purple"><i class="fas fa-fw fa-location-arrow"></i></span> <%= @company.location %><br>
       <% end %>
 
-      <a phx-click="new-job-for-company">
-        <span class="icon icon-purle" >
+      <%= link to: Routes.job_path(@socket, :new, locale(@socket), company_id: @company.id) do %>
+        <span class="icon purple" >
           <i class="fas fa-plus" ></i>
         </span>
         <%= gettext("Add a job") %>
-      </a>
+      <% end %>
       <br/>
       <%= for job <- @company.jobs do %>
         <span class="icon purple"><i class="fas fa-briefcase"></i></span>

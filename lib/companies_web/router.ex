@@ -41,8 +41,7 @@ defmodule CompaniesWeb.Router do
     get "/", CompanyController, :recent
     get "/hiring", Redirect, to: "/jobs"
     get "/jobs", JobController, :index
-    live "/companies", CompanyLiveView
-    live "/companies/page/:page", CompanyLiveView
+    get "/companies", CompanyController, :index
 
     scope "/" do
       pipe_through [:auth]
