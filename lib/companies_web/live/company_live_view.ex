@@ -2,7 +2,6 @@ defmodule CompaniesWeb.CompanyLiveView do
   use Phoenix.LiveView
 
   def mount(session, socket) do
-    IO.inspect session
     socket =
       case socket.assigns do
         %{} ->
@@ -24,16 +23,10 @@ defmodule CompaniesWeb.CompanyLiveView do
   end
 
   def handle_event("searchchange", %{"search" => search_params}, socket) do
-    companies = Companies.search(search_params)
-
-    socket =
-      socket
-      |> assign(companies: companies)
-
-    {:noreply, socket}
+    {:noreply, assign(socket, :companies, Companies.search(search_params))}
   end
 
   def render(assigns) do
-    CompaniesWeb.LiveView.render("browse.html", assigns)
+    Phoenix.View.render(CompaniesWeb.LiveView, "browse.html", assigns)
   end
 end

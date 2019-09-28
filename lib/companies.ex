@@ -156,6 +156,12 @@ defmodule Companies do
   def search(filters) do
     filters
     |> Enum.reduce(Company, fn
+      {_, nil}, query ->
+        query
+
+      {_, ""}, query ->
+        query
+
       {"industry_id", industry_id}, query ->
         {industry_id, ""} = Integer.parse(industry_id)
         from c in query, where: c.industry_id == ^industry_id
@@ -164,11 +170,9 @@ defmodule Companies do
         from c in query, where: ilike(c.name, ^"%#{text}%")
 
       {"only_hiring", _hiring}, query ->
-        query
-
-      {_, nil}, query ->
-        query
+        from c in query
     end)
     |> Repo.all()
+    |> Repo.preload([:industry, :jobs])
   end
 end
