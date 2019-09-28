@@ -8,6 +8,7 @@ defmodule CompaniesWeb.JobController do
 
   def index(conn, _params) do
     jobs = Jobs.search(%{})
+
     live_render(conn, CompaniesWeb.JobLiveView,
       session: %{
         current_user: current_user(conn),
