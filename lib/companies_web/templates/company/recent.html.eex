@@ -44,7 +44,6 @@
       </div> <!-- /columns -->
       <div class="container has-text-centered">
         <%= link gettext("Browse full list"), to: Routes.company_path(@conn, :index, locale(@conn)), class: "button is-link" %>
-        <%= link gettext("Browse full live list"), to: Routes.company_path(@conn, :livebrowse, locale(@conn)), class: "button is-link" %>
       </div>
     </div> <!-- /content -->
   </div> <!-- /container -->

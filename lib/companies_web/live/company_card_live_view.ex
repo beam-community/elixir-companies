@@ -1,4 +1,4 @@
-defmodule CompaniesWeb.CardLiveView do
+defmodule CompaniesWeb.CompanyCardLiveView do
   use Phoenix.LiveView
 
   def mount(session, socket) do
@@ -11,7 +11,7 @@ defmodule CompaniesWeb.CardLiveView do
   end
 
   def render(assigns) do
-    CompaniesWeb.LiveView.render("livecard.html", assigns)
+    CompaniesWeb.LiveView.render("company.html", assigns)
   end
 
   defp try_to_assign_user(socket, %{current_user: nil}), do: socket

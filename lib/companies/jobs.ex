@@ -102,4 +102,20 @@ defmodule Companies.Jobs do
   def change(%Job{} = job) do
     Job.changeset(job, %{})
   end
+
+  def search(filters) do
+    filters
+    |> Enum.reduce(Job, fn
+      {_, nil}, query ->
+        query
+
+      {_, ""}, query ->
+        query
+
+      {"text", text}, query ->
+        from c in query, where: ilike(c.title, ^"%#{text}%")
+    end)
+    |> Repo.all()
+    |> Repo.preload([:company])
+  end
 end

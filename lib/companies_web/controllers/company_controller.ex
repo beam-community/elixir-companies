@@ -12,13 +12,7 @@ defmodule CompaniesWeb.CompanyController do
     render(conn, "recent.html", recent_companies: recent_companies, companies_count: companies_count)
   end
 
-  def index(conn, params) do
-    companies = Companies.all(params)
-
-    render(conn, "index.html", companies: companies)
-  end
-
-  def livebrowse(conn, _params) do
+  def index(conn, _params) do
     industries = Companies.Industries.for_select()
     companies = Companies.all()
 

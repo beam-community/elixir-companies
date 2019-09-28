@@ -1,5 +1,7 @@
-defmodule CompaniesWeb.CompanyLiveView do
+defmodule CompaniesWeb.JobLiveView do
   use Phoenix.LiveView
+
+  alias Companies.Jobs
 
   def mount(session, socket) do
     socket =
@@ -8,8 +10,7 @@ defmodule CompaniesWeb.CompanyLiveView do
           assign(
             socket,
             %{
-              companies: session.companies,
-              industries: session.industries,
+              jobs: session.jobs,
               current_user: session.current_user,
               search: session.search
             }
@@ -23,10 +24,10 @@ defmodule CompaniesWeb.CompanyLiveView do
   end
 
   def handle_event("searchchange", %{"search" => search_params}, socket) do
-    {:noreply, assign(socket, :companies, Companies.search(search_params))}
+    {:noreply, assign(socket, :jobs, Jobs.search(search_params))}
   end
 
   def render(assigns) do
-    Phoenix.View.render(CompaniesWeb.LiveView, "companies.html", assigns)
+    Phoenix.View.render(CompaniesWeb.LiveView, "jobs.html", assigns)
   end
 end

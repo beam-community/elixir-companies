@@ -1,0 +1,33 @@
+<div class="company box">
+  <div class="content has-text-centered">
+    <p class="title is-4 thin"><%= @job.title %></p>
+    <%= if signed_in?(@socket) do %>
+      <div class="company-actions-wrapper">
+        <div class="toggle-company-actions">
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
+        <div class="company-actions">
+          <a phx-click="edit-job">
+            <span class="icon"><i class="fas fa-edit"></i></span> <%= gettext("Edit") %>
+          </a>
+          <a phx-click="delete-job">
+            <span class="icon"><i class="fas fa-trash-alt"></i></span> <%= gettext("Delete") %>
+          </a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="content company-info has-text-left">
+    <p class="is-size-7">
+      <span class="icon purple"><i class="fas fa-fw fa-cogs"></i></span>
+      <%= @job.company.name %><br>
+
+      <%= if @job.url do %>
+        <span class="icon purple"><i class="fas fa-fw fa-globe"></i></span>
+        <%= link link_title(@job.url), to: url_with_scheme(@job.url), target: :blank %>
+        <br>
+      <% end %>
+
+    </p>
+  </div>
+</div>

@@ -39,9 +39,9 @@ defmodule CompaniesWeb.Router do
     pipe_through [:browser, :set_locale]
 
     get "/", CompanyController, :recent
-    get "/hiring", Redirect, to: "/browse?type=hiring"
-    get "/browse", CompanyController, :index
-    get "/livebrowse", CompanyController, :livebrowse
+    get "/hiring", Redirect, to: "/jobs"
+    get "/jobs", JobController, :index
+    get "/companies", CompanyController, :index
 
     scope "/" do
       pipe_through [:auth]

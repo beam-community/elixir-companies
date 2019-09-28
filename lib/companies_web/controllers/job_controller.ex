@@ -4,9 +4,19 @@ defmodule CompaniesWeb.JobController do
   alias Companies.{Jobs, Schema.Job}
   plug :load_companies when action in [:new, :edit, :create, :update]
 
+  import Phoenix.LiveView.Controller
+
   def index(conn, _params) do
-    jobs = Jobs.all()
-    render(conn, "index.html", jobs: jobs)
+    jobs = Jobs.search(%{})
+    live_render(conn, CompaniesWeb.JobLiveView,
+      session: %{
+        current_user: current_user(conn),
+        jobs: jobs,
+        search: %{
+          text: ""
+        }
+      }
+    )
   end
 
   def new(conn, %{"company_id" => company_id}) do

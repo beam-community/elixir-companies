@@ -1,0 +1,38 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title is-3 fancy">
+      Browse Jobs
+    </h1>
+    <div class="tabs is-centered">
+      <form action="#" phx-change="searchchange">
+        <div class="columns is-desktop">
+          <div class="column is-half">
+            <div class="field">
+              <label class="field" for="text">Text</label>
+              <div class="control">
+                <div class="text">
+                  <input name="search[text]" type="text" value=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="column is-half"> -->
+          <!--   <div class="field"> -->
+          <!--     <label class="field" for="remote_only"> -->
+          <!--       <input name="search[remote_only]" type="checkbox" /> -->
+          <!--       Show only remote jobs -->
+          <!--     </label> -->
+          <!--   </div> -->
+          <!-- </div> -->
+        </div>
+      </form>
+    </div>
+      <div class="columns is-mobile is-multiline">
+        <%= for job <- @jobs do %>
+          <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
+            <%= live_render(@socket, CompaniesWeb.JobCardLiveView, session: %{job: job, current_user: @current_user}, id: "card#{job.id}") %>
+          </div>
+        <% end %>
+      </div> <!-- /columns -->
+  </div> <!-- /container -->
+</section>
