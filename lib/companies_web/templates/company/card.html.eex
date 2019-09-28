@@ -61,6 +61,7 @@
       <%= for job <- @company.jobs do %>
         <span class="icon purple"><i class="fas fa-briefcase"></i></span>
         <%= link job.title, to: url_with_scheme(job.url), target: :blank %>
+        <%= if job.remote do %>&nbsp;(remote)<% end %>
         <%= if signed_in?(@conn) do %>
         &nbsp;
         [
