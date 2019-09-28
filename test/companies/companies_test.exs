@@ -84,7 +84,17 @@ defmodule Companies.CompaniesTest do
       another_industry = insert(:industry)
       insert(:company, industry: another_industry, name: "ZULU")
 
-      assert [%{name: "ZULU"}] = Companies.search(%{industry_id: another_industry.id})
+      assert [%{name: "ZULU"}] = Companies.search(%{"industry_id" => "#{another_industry.id}"})
+    end
+
+    test "returns only the companies that their name has searched text" do
+      industry = insert(:industry)
+      insert(:company, industry: industry, name: "ALPHA")
+
+      another_industry = insert(:industry)
+      insert(:company, industry: another_industry, name: "ZULU")
+
+      assert [%{name: "ZULU"}] = Companies.search(%{"text" => "ul"})
     end
   end
 end
