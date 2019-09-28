@@ -21,11 +21,6 @@ defmodule CompaniesWeb.CompanyController do
         current_user: current_user(conn),
         companies: companies,
         industries: industries,
-        search: %{
-          industry_id: nil,
-          text: "",
-          only_hiring: false
-        }
       }
     )
   end

@@ -45,3 +45,46 @@
       </div> <!-- /columns -->
   </div> <!-- /container -->
 </section>
+<nav class="pagination is-centered">
+  <ul class="pagination-list">
+    <%= if @page > 1 do %>
+        <li>
+          <%= live_link "prev", to: Routes.live_path(@socket, CompaniesWeb.CompanyLiveView, @page - 1), class: "pagination-link" %>
+        </li>
+    <% end %>
+    <%= for i <- (@page - 5)..(@page + 5), i > 0 do %>
+      <li>
+      <%= if @page == i do %>
+        <a class="pagination-link is-current">1</a>
+      <% else %>
+        <a class="pagination-link" href="/browse?page=2" rel="next">2</a>
+      <% end %>
+      </li>
+      <%= live_link i, to: Routes.live_path(@socket, CompaniesWeb.CompanyLiveView, i) %>
+    <% end %>
+    <span>
+      <%= live_link "next", to: Routes.live_path(@socket, CompaniesWeb.CompanyLiveView, @page + 1) <> "#foo", replace: @page > 10 %>
+    </span>
+    <li class="">
+      <a class="pagination-link" href="/browse?page=3" rel="canonical">3</a>
+    </li>
+    <li class="">
+      <a class="pagination-link" href="/browse?page=4" rel="canonical">4</a>
+    </li>
+    <li class="">
+      <a class="pagination-link" href="/browse?page=5" rel="canonical">5</a>
+    </li>
+    <li class="">
+      <a class="pagination-link" href="/browse?page=6" rel="canonical">6</a>
+    </li>
+    <li class="">
+      <span class="pagination-ellipsis">…</span>
+    </li>
+    <li class="">
+      <a class="pagination-link" href="/browse?page=27" rel="canonical">27</a>
+    </li>
+    <li class="">
+      <a class="pagination-link" href="/browse?page=2" rel="next">Next</a>
+    </li>
+  </ul>
+</nav>
