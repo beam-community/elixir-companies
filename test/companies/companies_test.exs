@@ -74,7 +74,7 @@ defmodule Companies.CompaniesTest do
   describe "search/1" do
     test "returns all the companies when no params are provided" do
       insert(:company, name: "ZULU")
-      assert [%{name: "ZULU"}] = Companies.search(%{})
+      assert [%{name: "ZULU"}] = Companies.search(%{}, 1, 1)
     end
 
     test "returns only the companies that belong to that industry" do
@@ -84,7 +84,7 @@ defmodule Companies.CompaniesTest do
       another_industry = insert(:industry)
       insert(:company, industry: another_industry, name: "ZULU")
 
-      assert [%{name: "ZULU"}] = Companies.search(%{"industry_id" => "#{another_industry.id}"})
+      assert [%{name: "ZULU"}] = Companies.search(%{"industry_id" => "#{another_industry.id}"}, 1, 1)
     end
 
     test "returns only the companies that their name has searched text" do
@@ -94,7 +94,14 @@ defmodule Companies.CompaniesTest do
       another_industry = insert(:industry)
       insert(:company, industry: another_industry, name: "ZULU")
 
-      assert [%{name: "ZULU"}] = Companies.search(%{"text" => "ul"})
+      assert [%{name: "ZULU"}] = Companies.search(%{"text" => "ul"}, 1, 1)
+    end
+
+    test "pagination" do
+      insert(:company, name: "ALPHA")
+      insert(:company, name: "ZULU")
+
+      assert [%{name: "ALPHA"}] = Companies.search(%{}, 1, 1)
     end
   end
 end
