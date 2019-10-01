@@ -1,22 +1,20 @@
 <%= form_for @changeset, @action, fn f -> %>
   <%= if @changeset.action do %>
-    <div class="alert alert-danger">
+    <div class="notification is-danger">
       <p><%= gettext("Oops, something went wrong! Please check the errors below.") %></p>
     </div>
   <% end %>
 
   <div class="field">
-      <%= label f, :company_id, gettext("Company"), class: "field" %>
-      <div class="control">
-          <%= select f, :company_id, companies_for_select(@companies), class: "input" %>
-          <%= error_tag f, :company_id %>
-      </div>
+    <%= label f, :company_id, gettext("Company"), class: "field" %>
+    <p><strong><%= @company.name %></strong></p>
+    <%= hidden_input f, :company_id %>
   </div>
 
   <div class="field">
-    <%= label f, :title, gettext("Title"), class: "field" %>
+    <%= label f, :title, gettext("Job Title"), class: "field" %>
     <div class="control">
-      <%= text_input f, :title, class: "input" %>
+      <%= text_input f, :title, class: input_class(@changeset, :title) %>
       <%= error_tag f, :title %>
     </div>
   </div>
@@ -24,7 +22,7 @@
   <div class="field">
     <%= label f, :url, gettext("Url"), class: "field" %>
     <div class="control">
-      <%= text_input f, :url, class: "input" %>
+      <%= text_input f, :url, class: input_class(@changeset, :url) %>
       <%= error_tag f, :url %>
     </div>
   </div>

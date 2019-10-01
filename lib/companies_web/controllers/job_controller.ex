@@ -23,7 +23,11 @@ defmodule CompaniesWeb.JobController do
         |> redirect(to: Routes.company_path(conn, :recent, locale(conn)))
 
       {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "new.html", changeset: changeset)
+        company =
+          Map.get(params, "company_id")
+          |> Companies.get!()
+
+        render(conn, "new.html", changeset: changeset, company: company)
     end
   end
 

@@ -16,11 +16,10 @@ defmodule Companies.Application do
       # {Companies.Worker, arg},
     ]
 
-    Telemetry.attach(
+    :telemetry.attach(
       "elixir-companies-ecto",
       [:companies, :repo, :query],
-      Appsignal.Ecto,
-      :handle_event,
+      &Appsignal.Ecto.handle_event/4,
       nil
     )
 
