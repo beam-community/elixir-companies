@@ -1,0 +1,37 @@
+<div class="company box <%= remote_ribbon(@job) %>">
+  <%= if @job.remote do %>
+    <div class="ribbon is-warning corner-top-left-ribbon">
+      <span>
+        <b><%= gettext("Remote") %></b>
+      </span>
+    </div>
+  <% end %>
+  <div class="content has-text-centered">
+    <p class="title is-4 thin"><%= @job.title %></p>
+    <%= if signed_in?(@conn) do %>
+      <div class="company-actions-wrapper">
+        <div class="toggle-company-actions">
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
+        <div class="company-actions">
+          <%= link to: Routes.job_path(@conn, :edit, locale(@conn), @job) do %>
+            <span class="icon"><i class="fas fa-edit"></i></span> <%= gettext("Edit") %>
+          <% end %>
+          <%= link to: Routes.job_path(@conn, :delete, locale(@conn), @job), method: :delete do %>
+            <span class="icon"><i class="fas fa-trash-alt"></i></span> <%= gettext("Delete") %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="content company-description is-size-7 has-text-centered">
+    <%= @job.company.name %>
+  </div>
+  <div class="content company-info has-text-left">
+    <p class="is-size-7">
+      <span class="icon purple"><i class="fas fa-fw fa-globe"></i></span>
+      <%= link @job.url, to: @job.url, target: :blank %>
+      <br>
+    </p>
+  </div>
+</div>

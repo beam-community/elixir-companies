@@ -12,7 +12,18 @@ defmodule Companies.JobsTest do
   describe "all/0" do
     test "retrieves a list of jobs" do
       insert_list(2, :job)
-      assert 2 == length(Jobs.all())
+      assert %{entries: entries, page_number: 1, page_size: 16, total_entries: 2, total_pages: 1} = Jobs.all()
+      assert 2 == length(entries)
+    end
+
+    test "filter jobs by title" do
+      insert(:job, title: "test job")
+      insert(:job, title: "alternate")
+
+      assert %{entries: entries, page_number: 1, page_size: 16, total_entries: 1, total_pages: 1} =
+               Jobs.all(%{"search" => %{"text" => "job"}})
+
+      assert 1 == length(entries)
     end
   end
 

@@ -1,7 +1,7 @@
 defmodule CompaniesWeb.CompanyController do
   use CompaniesWeb, :controller
 
-  alias Companies.{Companies, Industries, Schema.Company}
+  alias Companies.{Industries, Schema.Company}
 
   def recent(conn, _params) do
     companies_count = Companies.count()
@@ -12,8 +12,9 @@ defmodule CompaniesWeb.CompanyController do
 
   def index(conn, params) do
     companies = Companies.all(params)
+    industries = Industries.for_select()
 
-    render(conn, "index.html", companies: companies)
+    render(conn, "index.html", companies: companies, industries: industries)
   end
 
   def new(conn, _params) do

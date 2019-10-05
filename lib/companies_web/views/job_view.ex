@@ -1,6 +1,8 @@
 defmodule CompaniesWeb.JobView do
   use CompaniesWeb, :view
 
+  import Scrivener.HTML
+
   def companies_for_select(companies) do
     Enum.map(companies, fn company ->
       {company.name, company.id}
@@ -17,4 +19,6 @@ defmodule CompaniesWeb.JobView do
       "input"
     end
   end
+
+  def remote_ribbon(job), do: if(job.remote, do: "has-ribbon", else: "")
 end

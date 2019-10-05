@@ -21,4 +21,13 @@ defmodule Companies.Industries do
 
     Repo.all(query)
   end
+
+  def for_select do
+    query =
+      from i in Industry,
+        order_by: i.name,
+        select: {i.name, i.id}
+
+    Repo.all(query)
+  end
 end

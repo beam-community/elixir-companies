@@ -1,0 +1,44 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title is-3 fancy"><%= gettext("Jobs") %></h1>
+    <div class="tabs is-centered">
+      <%= form_tag "/jobs", method: "get" do %>
+        <div class="columns is-desktop">
+          <div class="column">
+            <div class="field">
+              <div class="control">
+                <div class="text">
+                  <input name="search[text]" type="text" value=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="field">
+              <label class="field" for="remote_only">
+                <input name="search[remote_only]" type="checkbox" />
+                Show only remote jobs
+              </label>
+            </div>
+          </div>
+          <div class="column">
+            <div class="field">
+              <%= submit gettext("Search"), class: "button is-link" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="content">
+      <div class="columns is-mobile is-multiline">
+        <%= for job <- @jobs do %>
+          <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
+            <%= render "job.html", job: job, conn: @conn %>
+          </div>
+        <% end %>
+      </div> <!-- /columns -->
+    </div> <!-- /content -->
+
+    <%= pagination_links(@jobs, [next: "Next", previous: "Previous"] ++ query_params(@conn)) %>
+  </div> <!-- /container -->
+</section>

@@ -4,7 +4,7 @@ defmodule Companies.PendingChangesTest do
   import Companies.Factory
   import ExUnit.CaptureLog
 
-  alias Companies.{Companies, PendingChanges}
+  alias Companies.PendingChanges
 
   describe "all/0" do
     test "retrieve all pending changes" do

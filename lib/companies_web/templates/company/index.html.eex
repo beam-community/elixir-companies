@@ -1,48 +1,46 @@
 <section class="section">
   <div class="container">
 
-    <h1 class="title is-3 fancy"><%= gettext("Browse") %></h1>
-
+    <h1 class="title is-3 fancy"><%= gettext("Companies") %></h1>
     <div class="tabs is-centered">
-      <ul>
-        <li>
-          <%= link to: Routes.company_path(@conn, :index, locale(@conn)) do %>
-            <%= gettext("Newest") %>
-          <% end %>
-        </li>
-        <li>
-          <%= link to: Routes.company_path(@conn, :index, locale(@conn), type: "hiring") do %>
-            <%= gettext("Hiring") %>
-          <% end %>
-        </li>
-        <li>
-          <%= link to: Routes.company_path(@conn, :index, locale(@conn), type: "ae") do %>
-            A — E
-          <% end %>
-        </li>
-        <li>
-          <%= link to: Routes.company_path(@conn, :index, locale(@conn), type: "fj") do %>
-            F — J
-          <% end %>
-        </li>
-        <li>
-          <%= link to: Routes.company_path(@conn, :index, locale(@conn), type: "ko") do %>
-            K — O
-          <% end %>
-        </li>
-        <li>
-          <%= link to: Routes.company_path(@conn, :index, locale(@conn), type: "pt") do %>
-            P — T
-          <% end %>
-        </li>
-        <li>
-          <%= link to: Routes.company_path(@conn, :index, locale(@conn), type: "uz") do %>
-            U — Z
-          <% end %>
-        </li>
-      </ul>
+      <%= form_tag "/companies", method: "get" do %>
+        <div class="columns is-desktop">
+          <div class="column">
+            <div class="field">
+              <label class="field" for="text">Text</label>
+              <div class="control">
+                <div class="text">
+                  <input name="search[text]" type="text" value=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="field">
+              <label class="field" for="industry_id">Industry</label>
+              <div class="control">
+                <div class="select">
+                  <select id="search[industry_id]" name="search[industry_id]">
+                    <option value=""></option>
+                    <%= for industry <- @industries do %>
+                      <option value="<%= elem(industry, 1) %>"
+                              <%= selected_text(@conn.assigns, elem(industry, 1)) %>
+                      ><%= elem(industry, 0) %></option>
+                    <% end %>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="field">
+              <br/>
+              <%= submit gettext("Search"), class: "button is-link" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
-
     <div class="content">
       <div class="columns is-mobile is-multiline">
         <%= for company <- @companies do %>
@@ -53,6 +51,6 @@
       </div> <!-- /columns -->
     </div> <!-- /content -->
 
-    <%= pagination_links(@conn, @companies, [next: "Next", previous: "Previous"] ++ query_params(@conn)) %>
+    <%= pagination_links(@companies, [next: "Next", previous: "Previous"] ++ query_params(@conn)) %>
   </div> <!-- /container -->
 </section>
