@@ -29,9 +29,6 @@ defmodule CompaniesWeb.CompanyView do
     Enum.map(industries, fn %{id: id, name: name} -> {name, id} end)
   end
 
-  def selected_text(%{}, _), do: ""
-  def selected_text(%{search: %{}}, _), do: ""
-
   def selected?(params = %{search: %{"industry_id" => iid}}, industry_id) do
     if iid == industry_id do
       "selected"

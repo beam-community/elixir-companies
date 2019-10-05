@@ -23,9 +23,9 @@
                   <select id="search[industry_id]" name="search[industry_id]">
                     <option value=""></option>
                     <%= for industry <- @industries do %>
-                      <option value="<%= elem(industry, 1) %>"
-                              <%= selected_text(@conn.assigns, elem(industry, 1)) %>
-                      ><%= elem(industry, 0) %></option>
+                      <option value="<%= elem(industry, 1) %>">
+                        <%= elem(industry, 0) %>
+                      </option>
                     <% end %>
                   </select>
                 </div>
