@@ -1,4 +1,4 @@
-defmodule Companies do
+defmodule Companies.Companies do
   @moduledoc """
   """
 

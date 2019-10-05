@@ -1,6 +1,8 @@
 defmodule Companies.CompaniesTest do
   use Companies.DataCase
 
+  alias Companies.Companies
+
   @moduletag :capture_log
 
   setup do
