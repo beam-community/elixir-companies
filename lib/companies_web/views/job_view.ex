@@ -20,5 +20,6 @@ defmodule CompaniesWeb.JobView do
     end
   end
 
-  def remote_ribbon(job), do: if(job.remote, do: "has-ribbon", else: "")
+  def remote_ribbon(%{remote: true}), do: "has-ribbon"
+  def remote_ribbon(_), do: ""
 end
