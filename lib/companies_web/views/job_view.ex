@@ -22,4 +22,15 @@ defmodule CompaniesWeb.JobView do
 
   def remote_ribbon(%{remote: true}), do: "has-ribbon"
   def remote_ribbon(_), do: ""
+
+  def link_title(url) do
+    url
+    |> String.replace("http://", "")
+    |> String.replace("https://", "")
+    |> String.replace("www.", "")
+  end
+
+  def url_with_scheme("http://" <> _ = url), do: url
+  def url_with_scheme("https://" <> _ = url), do: url
+  def url_with_scheme(url, scheme \\ "https"), do: "#{scheme}://#{url}"
 end

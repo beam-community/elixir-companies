@@ -30,13 +30,22 @@
       <% end %>
     </div>
     <div class="content">
-      <div class="columns is-mobile is-multiline">
-        <%= for job <- @jobs do %>
-          <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
+      <table class="table is-fullwidth">
+        <thead>
+          <th>Remote</th>
+          <th>Title</th>
+          <th>Company</th>
+          <th>Url</th>
+          <%= if signed_in?(@conn) do %>
+            <th>Actions</th>
+          <% end %>
+        </thead>
+        <tbody>
+          <%= for job <- @jobs do %>
             <%= render "job.html", job: job, conn: @conn %>
-          </div>
-        <% end %>
-      </div> <!-- /columns -->
+          <% end %>
+        </tbody>
+      </table>
     </div> <!-- /content -->
 
     <%= pagination_links(@jobs, [next: "Next", previous: "Previous"] ++ query_params(@conn)) %>
