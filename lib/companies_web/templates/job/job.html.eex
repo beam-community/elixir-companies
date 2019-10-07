@@ -9,18 +9,18 @@
   <td>
     <p class="is-size-7">
       <span class="icon purple"><i class="fas fa-fw fa-globe"></i></span>
-      <%= link link_title(@job.url), to: url_with_scheme(@job.url), target: :blank %>
+      <%= link "Details", to: url_with_scheme(@job.url), target: :blank %>
       <br>
     </p>
   </td>
   <%= if signed_in?(@conn) do %>
     <td>
       <%= link to: Routes.job_path(@conn, :edit, locale(@conn), @job) do %>
-        <span class="icon"><i class="fas fa-edit"></i></span> <%= gettext("Edit") %>
+        <span class="icon"><i class="fas fa-edit"></i></span>
       <% end %>
       |
       <%= link to: Routes.job_path(@conn, :delete, locale(@conn), @job), method: :delete do %>
-        <span class="icon"><i class="fas fa-trash-alt"></i></span> <%= gettext("Delete") %>
+        <span class="icon"><i class="fas fa-trash-alt"></i></span>
       <% end %>
     </td>
   <% end %>
