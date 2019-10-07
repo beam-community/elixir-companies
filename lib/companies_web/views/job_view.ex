@@ -24,10 +24,7 @@ defmodule CompaniesWeb.JobView do
   def remote_ribbon(_), do: ""
 
   def link_title(url) do
-    url
-    |> String.replace("http://", "")
-    |> String.replace("https://", "")
-    |> String.replace("www.", "")
+    Regex.replace(~r/(http:\/\/|https:\/\/|www.)/i, url, "")
   end
 
   def url_with_scheme("http://" <> _ = url), do: url

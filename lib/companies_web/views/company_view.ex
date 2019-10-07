@@ -10,10 +10,7 @@ defmodule CompaniesWeb.CompanyView do
   def industry_name(%{industry: %{name: industry_name}}), do: industry_name
 
   def link_title(url) do
-    url
-    |> String.replace("http://", "")
-    |> String.replace("https://", "")
-    |> String.replace("www.", "")
+    Regex.replace(~r/(http:\/\/|https:\/\/|www.)/i, url, "")
   end
 
   def url_with_scheme("http://" <> _ = url), do: url
@@ -27,11 +24,5 @@ defmodule CompaniesWeb.CompanyView do
 
   def select_industries(industries) do
     Enum.map(industries, fn %{id: id, name: name} -> {name, id} end)
-  end
-
-  def selected?(%{search: %{"industry_id" => iid}}, industry_id) do
-    if iid == industry_id do
-      "selected"
-    end
   end
 end
