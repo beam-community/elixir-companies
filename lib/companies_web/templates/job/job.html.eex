@@ -1,0 +1,27 @@
+<tr>
+  <td>
+    <%= if @job.remote do %>
+      <span class="icon purple"><i class="fas fa-check-square"></i></span>
+    <% end %>
+  </td>
+  <td><%= @job.title %></td>
+  <td><%= @job.company.name %></td>
+  <td>
+    <p class="is-size-7">
+      <span class="icon purple"><i class="fas fa-fw fa-globe"></i></span>
+      <%= link link_title(@job.url), to: url_with_scheme(@job.url), target: :blank %>
+      <br>
+    </p>
+  </td>
+  <%= if signed_in?(@conn) do %>
+    <td>
+      <%= link to: Routes.job_path(@conn, :edit, locale(@conn), @job) do %>
+        <span class="icon"><i class="fas fa-edit"></i></span> <%= gettext("Edit") %>
+      <% end %>
+      |
+      <%= link to: Routes.job_path(@conn, :delete, locale(@conn), @job), method: :delete do %>
+        <span class="icon"><i class="fas fa-trash-alt"></i></span> <%= gettext("Delete") %>
+      <% end %>
+    </td>
+  <% end %>
+</tr>

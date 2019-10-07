@@ -22,12 +22,30 @@ defmodule Companies.Companies do
 
     (c in Company)
     |> from()
-    |> join(:inner, [c], i in assoc(c, :industry))
-    |> join(:left, [c, _i], j in assoc(c, :jobs))
     |> predicates(params)
-    |> preload([_c, i, j], industry: i, jobs: j)
+    |> preload([:industry, :jobs])
     |> Repo.paginate(page: page)
   end
+
+  def predicates(query, %{"search" => search_params}) do
+    Enum.reduce(search_params, query, &query_predicates/2)
+  end
+
+  def predicates(query, _) do
+    query
+  end
+
+  defp query_predicates({_, ""}, query), do: query
+
+  defp query_predicates({"industry_id", industry_id}, query) when not is_nil(industry_id) do
+    from c in query, where: c.industry_id == ^industry_id
+  end
+
+  defp query_predicates({"text", text}, query) do
+    from c in query, where: ilike(c.name, ^"%#{text}%")
+  end
+
+  defp query_predicates(nil, query), do: query
 
   @doc """
   Returns the total company count
@@ -124,27 +142,5 @@ defmodule Companies.Companies do
   """
   def change(%Company{} = company) do
     Company.changeset(company, %{})
-  end
-
-  defp predicates(query, %{"type" => <<start, finish>>}) when start in 97..122 do
-    query = distinct(query, [c, _i, _j], asc: fragment("LOWER(?)", c.name))
-
-    Enum.reduce(start..finish, query, fn char, acc ->
-      or_where(acc, [c], ilike(c.name, ^"#{[char]}%"))
-    end)
-  end
-
-  defp predicates(query, %{"type" => "hiring"}) do
-    query
-    |> exclude(:left_join)
-    |> distinct([c, _i, _j], true)
-    |> join(:inner, [c, _i, _j], j in assoc(c, :jobs))
-    |> order_by([_c, _i, j], desc: j.inserted_at)
-  end
-
-  defp predicates(query, _) do
-    query
-    |> distinct([c, _i, _j], true)
-    |> order_by([c, _i, _j], desc: c.inserted_at)
   end
 end

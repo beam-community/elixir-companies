@@ -12,8 +12,9 @@ defmodule CompaniesWeb.CompanyController do
 
   def index(conn, params) do
     companies = Companies.all(params)
+    industries = Industries.for_select()
 
-    render(conn, "index.html", companies: companies)
+    render(conn, "index.html", companies: companies, industries: industries)
   end
 
   def new(conn, _params) do

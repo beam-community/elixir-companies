@@ -18,22 +18,22 @@ defmodule Companies.CompaniesTest do
       assert 2 == length(entries)
     end
 
-    test "filters companies by hiring sorted by most recent job" do
+    test "filters companies by industry" do
       alpha = insert(:company, name: "ALPHA")
       zulu = insert(:company, name: "ZULU")
 
       insert(:job, company: zulu)
       insert(:job, company: alpha)
 
-      assert %{entries: [%{name: "ALPHA"}, %{name: "ZULU"}]} = Companies.all(%{"type" => "hiring"})
+      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"industry_id" => alpha.industry_id}})
     end
 
-    test "filters and sorts companies by starting letter" do
+    test "filters companies by text" do
       insert(:company, name: "ZULU")
       insert(:company, name: "BETA")
       insert(:company, name: "ALPHA")
 
-      assert %{entries: [%{name: "ALPHA"}, %{name: "BETA"}]} = Companies.all(%{"type" => "ae"})
+      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => "lp"}})
     end
   end
 

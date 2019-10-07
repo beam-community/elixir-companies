@@ -4,8 +4,8 @@ defmodule CompaniesWeb.JobController do
   alias Companies.{Companies, Jobs, Schema.Job}
   plug :load_companies when action in [:new, :edit, :create, :update]
 
-  def index(conn, _params) do
-    jobs = Jobs.all()
+  def index(conn, params) do
+    jobs = Jobs.all(params)
     render(conn, "index.html", jobs: jobs)
   end
 

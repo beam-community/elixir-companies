@@ -17,8 +17,14 @@ defmodule Companies.Jobs do
       [%Job{}, ...]
 
   """
-  def all do
-    Repo.all(Job)
+  def all(params \\ %{}) do
+    page = Map.get(params, "page", "1")
+
+    (j in Job)
+    |> from()
+    |> predicates(params)
+    |> preload(:company)
+    |> Repo.paginate(page: page)
   end
 
   @doc """
@@ -102,4 +108,20 @@ defmodule Companies.Jobs do
   def change(%Job{} = job) do
     Job.changeset(job, %{})
   end
+
+  def predicates(query, %{"search" => search_params}) do
+    Enum.reduce(search_params, query, &query_predicates/2)
+  end
+
+  def predicates(query, _), do: query
+
+  defp query_predicates({"remote_only", "on"}, query) do
+    from c in query, where: c.remote == true
+  end
+
+  defp query_predicates({"text", text}, query) do
+    from c in query, where: ilike(c.title, ^"%#{text}%")
+  end
+
+  defp query_predicates(nil, query), do: query
 end

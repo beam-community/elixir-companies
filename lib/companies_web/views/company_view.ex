@@ -10,10 +10,7 @@ defmodule CompaniesWeb.CompanyView do
   def industry_name(%{industry: %{name: industry_name}}), do: industry_name
 
   def link_title(url) do
-    url
-    |> String.replace("http://", "")
-    |> String.replace("https://", "")
-    |> String.replace("www.", "")
+    Regex.replace(~r/(http:\/\/|https:\/\/|www.)/i, url, "")
   end
 
   def url_with_scheme("http://" <> _ = url), do: url

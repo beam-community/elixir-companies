@@ -34,7 +34,7 @@ config :companies,
       "tajchumber"
     ]
   },
-  companies_per_page: 16
+  results_per_page: 16
 
 config :oauth2,
   serializers: %{
