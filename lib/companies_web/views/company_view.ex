@@ -25,4 +25,11 @@ defmodule CompaniesWeb.CompanyView do
   def select_industries(industries) do
     Enum.map(industries, fn %{id: id, name: name} -> {name, id} end)
   end
+
+  def markdown_format(markdown) do
+    markdown
+    |> Earmark.as_html!()
+    |> HtmlSanitizeEx.markdown_html()
+    |> Phoenix.HTML.raw()
+  end
 end

@@ -54,7 +54,9 @@ defmodule Companies.MixProject do
       {:bypass, "~> 1.0", only: :test},
       {:ex_machina, "~> 2.2", only: :test},
       {:excoveralls, "~> 0.10", only: :test},
-      {:phoenix_live_reload, "~> 1.2", only: :dev}
+      {:phoenix_live_reload, "~> 1.2", only: :dev},
+      {:earmark, "~> 1.4"},
+      {:html_sanitize_ex, "~> 1.3.0"}
     ]
   end
 
