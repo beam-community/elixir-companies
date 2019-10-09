@@ -79,6 +79,6 @@
     </p>
   </div>
   <div class="content company-description is-size-7 has-text-centered">
-    <%= @company.description %>
+    <%= markdown_format(@company.description) %>
   </div>
 </div>
