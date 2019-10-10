@@ -15,7 +15,7 @@
     <meta name="theme-color" content="#7C6E8A">
 
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
   </head>
   <body>
     <div id="wrapper">
