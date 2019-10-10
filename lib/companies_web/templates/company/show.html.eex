@@ -1,38 +1,7 @@
-<h1><%= gettext("Show Company") %></h1>
-
-<ul>
-
-  <li>
-    <strong><%= gettext("Name:") %></strong>
-    <%= @company.name %>
-  </li>
-
-  <li>
-    <strong><%= gettext("Description:") %></strong>
-    <%= @company.description %>
-  </li>
-
-  <li>
-    <strong><%= gettext("Url:") %></strong>
-    <%= @company.url %>
-  </li>
-
-  <li>
-    <strong>Github:</strong>
-    <%= @company.github %>
-  </li>
-
-  <li>
-    <strong><%= gettext("Location:") %></strong>
-    <%= @company.location %>
-  </li>
-
-  <li>
-    <strong><%= gettext("Blog:") %></strong>
-    <%= @company.blog %>
-  </li>
-
-</ul>
-
-<span><%= link gettext("Edit"), to: Routes.company_path(@conn, :edit, locale(@conn), @company) %></span>
-<span><%= link gettext("Back"), to: Routes.company_path(@conn, :index, locale(@conn)) %></span>
+<section class="section">
+  <div class="container">
+    <div class="is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
+      <%= render "card.html", company: @company, conn: @conn %>
+    </div>
+  </div>
+</section>
