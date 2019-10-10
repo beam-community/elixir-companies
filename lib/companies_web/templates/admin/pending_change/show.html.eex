@@ -17,9 +17,9 @@
       </div>
 
       <div class="box">
-        <div class="diff"></div>
-        <div class="changes is-hidden"><%= to_json(@pending_change.changes) %></div>
-        <div class="original is-hidden"><%= to_json(@pending_change.original)%></div>
+        <div class="diff"><pre></pre></div>
+        <div class="changes is-hidden"><pre><%= to_json(@pending_change.changes) %></pre></div>
+        <div class="original is-hidden"><pre><%= to_json(@pending_change.original)%></pre></div>
       </div>
 
       <%= form_tag(Routes.pending_change_path(@conn, :update, locale(@conn), @pending_change.id), method: "PATCH") do %>
