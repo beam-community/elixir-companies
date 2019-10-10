@@ -37,6 +37,26 @@ defmodule Companies.CompaniesTest do
     end
   end
 
+  describe "get!/2" do
+    test "retrieves a company by id" do
+      %{id: id} = insert(:company, name: "ZULU")
+
+      assert %{id: ^id} = Companies.get!(id)
+    end
+
+    test "preloads given associations" do
+      company = insert(:company, name: "ZULU")
+
+      assert %{jobs: []} = Companies.get!(company.id, preloads: [:jobs])
+    end
+
+    test "raises for unknown id" do
+      assert_raise Ecto.NoResultsError, fn ->
+        Companies.get!(1000, preloads: [:jobs])
+      end
+    end
+  end
+
   describe "create/2" do
     test "creates a pending change for a new company when changes are valid", %{user: user} do
       assert {:ok, %{action: "create", resource: "company"}} =
