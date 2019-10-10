@@ -11,25 +11,27 @@
       <h1 class="title is-3 fancy">
         Pending Changes
       </h1>
-      <table>
+      <table class="table">
         <thead>
           <tr>
+            <th></th>
             <th>Action</th>
             <th>Resource</th>
             <th>Note</th>
-            <th></th>
+            <th>Created</th>
           </tr>
         </thead>
         <%= for pending_change <- @pending_changes do %>
         <tr>
-          <td><%= pending_change.action %></td>
-          <td><%= pending_change.resource %></td>
-          <td><%= pending_change.note %></td>
           <td>
             <%= link to: Routes.pending_change_path(@conn, :show, locale(@conn), pending_change) do %>
               <i class="fas fa-eye"></i>
             <% end %>
           </td>
+          <td><%= pending_change.action %></td>
+          <td><%= pending_change.resource %></td>
+          <td><%= pending_change.note %></td>
+          <td><%= pending_change.inserted_at %></td>
         </tr>
         <% end %>
       </table>
