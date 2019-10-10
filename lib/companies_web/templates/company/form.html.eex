@@ -28,6 +28,9 @@
       <%= textarea f, :description, class: "textarea" %>
       <%= error_tag f, :description %>
     </div>
+    <div class="markdown">
+      <i class="fab fa-markdown"></i> <%= gettext("Styling with Markdown is supported") %>
+    </div>
   </div>
 
   <div class="field">
