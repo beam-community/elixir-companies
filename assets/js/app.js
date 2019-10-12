@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   };
 
-  var $diff = document.querySelector(".box .diff");
+  var $diff = document.querySelector(".box .diff pre");
 
   if ($diff) {
     var tabLinks = document.querySelectorAll(".tabs a");
@@ -79,23 +79,23 @@ document.addEventListener("DOMContentLoaded", function() {
       tab.addEventListener("click", changeTab);
     });
 
-    var original = document.querySelector(".box .original").innerHTML,
-      changes = document.querySelector(".box .changes").innerHTML,
+    var original = document.querySelector(".box .original pre").innerHTML,
+      changes = document.querySelector(".box .changes pre").innerHTML,
       diff = jsDiff.diffChars(original, changes),
       fragment = document.createDocumentFragment();
 
     diff.forEach(function(part) {
-      var color;
+      var backgroundColor;
       if (part.added) {
-        color = "green";
+        backgroundColor = "#acf2bd"
       } else if (part.removed) {
-        color = "red";
+        backgroundColor = "#fdb8c0"
       } else {
-        color = "grey";
+        backgroundColor = "inherit"
       }
 
       var span = document.createElement("span");
-      span.style.color = color;
+      span.style.backgroundColor = backgroundColor;
       span.appendChild(document.createTextNode(part.value));
       fragment.appendChild(span);
     });
