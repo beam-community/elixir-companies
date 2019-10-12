@@ -8,7 +8,7 @@
             <div class="field">
               <div class="control">
                 <div class="text">
-                  <input name="search[text]" type="text" value=""/>
+                  <input name="search[text]" class="input" type="text" value=""/>
                 </div>
               </div>
             </div>
