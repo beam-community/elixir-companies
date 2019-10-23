@@ -31,7 +31,8 @@ config :companies,
     maintainers: [
       "doomspork",
       "gemantzu",
-      "tajchumber"
+      "tajchumber",
+      "maartenvanvliet"
     ]
   },
   results_per_page: 16
