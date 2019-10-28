@@ -7,17 +7,17 @@
         <div class="columns is-desktop">
           <div class="column">
             <div class="field">
-              <label class="field" for="text">Text</label>
+              <label class="field" for="search[text]">Text</label>
               <div class="control">
                 <div class="text">
-                  <input name="search[text]" class="input" type="text" value=""/>
+                  <input name="search[text]" id="search[text]" class="input" type="text" value=""/>
                 </div>
               </div>
             </div>
           </div>
           <div class="column">
             <div class="field">
-              <label class="field" for="industry_id">Industry</label>
+              <label class="field" for="search[industry_id]">Industry</label>
               <div class="control">
                 <div class="select">
                   <select id="search[industry_id]" name="search[industry_id]">
