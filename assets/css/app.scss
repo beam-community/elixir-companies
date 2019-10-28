@@ -202,6 +202,13 @@ html {
   .navbar-end {
     border-top: 1px solid $grey-dark;
   }
+  .select{
+    display:inline-block;
+    max-width:100%;
+    select{
+      width: 100%;
+    }
+  }
 
   .field.is-grouped {
     display: block;
