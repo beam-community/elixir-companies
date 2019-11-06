@@ -31,6 +31,7 @@
     <div class="control">
       <label class="checkbox">
         <%= checkbox f, :remote, class: "checkbox" %>
+        &nbsp;
         <%= gettext("This is a remote job") %>
       </label>
     </div>

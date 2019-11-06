@@ -23,6 +23,7 @@ defmodule Companies.Jobs do
     (j in Job)
     |> from()
     |> predicates(params)
+    |> order_by(desc: :updated_at)
     |> preload(:company)
     |> Repo.paginate(page: page)
   end

@@ -20,6 +20,10 @@ defmodule CompaniesWeb.JobView do
     end
   end
 
+  def relative_time(%{updated_at: time}) do
+    Timex.format!(time, "{relative}", :relative)
+  end
+
   def remote_ribbon(%{remote: true}), do: "has-ribbon"
   def remote_ribbon(_), do: ""
 

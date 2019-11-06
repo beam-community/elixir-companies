@@ -32,10 +32,10 @@
     <div class="content">
       <table class="table is-fullwidth">
         <thead>
-          <th>Remote</th>
-          <th>Title</th>
-          <th>Company</th>
-          <th>Url</th>
+          <th><%= gettext("Remote") %></th>
+          <th><%= gettext("Title") %></th>
+          <th><%= gettext("Company") %></th>
+          <th><%= gettext("Last update") %></th>
           <%= if signed_in?(@conn) do %>
             <th>Actions</th>
           <% end %>
