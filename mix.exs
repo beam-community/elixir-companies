@@ -56,7 +56,8 @@ defmodule Companies.MixProject do
       {:excoveralls, "~> 0.10", only: :test},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:earmark, "~> 1.4"},
-      {:html_sanitize_ex, "~> 1.3.0"}
+      {:html_sanitize_ex, "~> 1.3.0"},
+      {:timex, "~> 3.6.1"}
     ]
   end
 

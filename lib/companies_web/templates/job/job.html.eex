@@ -8,7 +8,9 @@
     <%= link @job.title, to: url_with_scheme(@job.url), target: :blank %>
   </td>
   <td><%= @job.company.name %></td>
-  <td><%= @job.updated_at %></td>
+  <td>
+    <%= relative_time(@job) %>
+  </td>
   <%= if signed_in?(@conn) do %>
     <td>
       <%= link to: Routes.job_path(@conn, :edit, locale(@conn), @job) do %>
