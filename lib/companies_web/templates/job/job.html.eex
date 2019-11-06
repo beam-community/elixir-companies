@@ -4,15 +4,11 @@
       <span class="icon purple"><i class="fas fa-check-square"></i></span>
     <% end %>
   </td>
-  <td><%= @job.title %></td>
-  <td><%= @job.company.name %></td>
   <td>
-    <p class="is-size-7">
-      <span class="icon purple"><i class="fas fa-fw fa-globe"></i></span>
-      <%= link "Details", to: url_with_scheme(@job.url), target: :blank %>
-      <br>
-    </p>
+    <%= link @job.title, to: url_with_scheme(@job.url), target: :blank %>
   </td>
+  <td><%= @job.company.name %></td>
+  <td><%= @job.updated_at %></td>
   <%= if signed_in?(@conn) do %>
     <td>
       <%= link to: Routes.job_path(@conn, :edit, locale(@conn), @job) do %>
