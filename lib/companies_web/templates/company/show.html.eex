@@ -1,38 +1,64 @@
-<h1><%= gettext("Show Company") %></h1>
+<section class="section">
+  <div class="container">
+    <div class="content is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
+      <h1 class="title is-3 fancy"><%= @company.name %></h1>
+      <div class="content company-info has-text-left">
+        <p class="is-size-7">
+        <span class="icon purple"><i class="fas fa-fw fa-cogs"></i></span>
+        <%= industry_name(@company) %><br>
 
-<ul>
+        <%= if @company.url do %>
+          <span class="icon purple"><i class="fas fa-fw fa-globe"></i></span>
+          <%= link link_title(@company.url), to: url_with_scheme(@company.url), target: :blank %>
+          <br>
+        <% end %>
 
-  <li>
-    <strong><%= gettext("Name:") %></strong>
-    <%= @company.name %>
-  </li>
+        <%= if @company.blog do %>
+          <span class="icon purple"><i class="fas fa-fw fa-lightbulb"></i></span>
+          <%= link link_title(@company.blog), to: @company.blog, target: :blank %>
+          <br>
+        <% end %>
 
-  <li>
-    <strong><%= gettext("Description:") %></strong>
-    <%= @company.description %>
-  </li>
+        <%= if @company.github do %>
+          <span class="icon purple"><i class="fab fa-fw fa-github"></i></span>
+          <%= link "GitHub", to: @company.github, target: :blank %>
+          <br>
+        <% end %>
 
-  <li>
-    <strong><%= gettext("Url:") %></strong>
-    <%= @company.url %>
-  </li>
+        <%= if @company.location do %>
+          <span class="icon purple"><i class="fas fa-fw fa-location-arrow"></i></span> <%= @company.location %><br>
+        <% end %>
 
-  <li>
-    <strong>Github:</strong>
-    <%= @company.github %>
-  </li>
-
-  <li>
-    <strong><%= gettext("Location:") %></strong>
-    <%= @company.location %>
-  </li>
-
-  <li>
-    <strong><%= gettext("Blog:") %></strong>
-    <%= @company.blog %>
-  </li>
-
-</ul>
-
-<span><%= link gettext("Edit"), to: Routes.company_path(@conn, :edit, locale(@conn), @company) %></span>
-<span><%= link gettext("Back"), to: Routes.company_path(@conn, :index, locale(@conn)) %></span>
+        <%= link to: Routes.job_path(@conn, :new, locale(@conn), company_id: @company.id) do %>
+          <span class="icon purple" >
+            <i class="fas fa-plus" ></i>
+          </span>
+            <%= gettext("Add a job") %>
+          <% end %>
+          <br/>
+          <%= for job <- @company.jobs do %>
+            <span class="icon purple"><i class="fas fa-briefcase"></i></span>
+            <%= link job.title, to: url_with_scheme(job.url), target: :blank %>
+            <%= if job.remote do %>&nbsp;(remote)<% end %>
+            <%= if signed_in?(@conn) do %>
+            &nbsp;
+            [
+            <%= link to: Routes.job_path(@conn, :edit, locale(@conn), job) do %>
+              <span class="icon purple"><i class="fas fa-edit"></i></span>
+            <% end %>
+            ,
+            <%= link to: Routes.job_path(@conn, :delete, locale(@conn), job), method: :delete do %>
+              <span class="icon purple"><i class="fas fa-trash-alt"></i></span>
+            <% end %>
+            ]
+            <% end %>
+            <br>
+          <% end %>
+        </p>
+      </div>
+        <div class="content company-description is-size-5">
+    <%= markdown_format(@company.description) %>
+  </div>
+    </div>
+  </div>
+</section>

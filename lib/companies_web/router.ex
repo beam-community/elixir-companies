@@ -37,7 +37,7 @@ defmodule CompaniesWeb.Router do
     pipe_through [:browser, :set_locale]
 
     get "/", CompanyController, :recent
-    get "/companies", CompanyController, :index
+    resources "/companies", CompanyController, only: [:index, :show]
     get "/jobs", JobController, :index
 
     scope "/" do
