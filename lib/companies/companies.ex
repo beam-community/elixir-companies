@@ -76,7 +76,13 @@ defmodule Companies.Companies do
   ** (Ecto.NoResultsError)
 
   """
-  def get!(id), do: Repo.get!(Company, id)
+  def get!(id, opts \\ []) do
+    preloads = Keyword.get(opts, :preloads, [])
+
+    Company
+    |> preload(^preloads)
+    |> Repo.get!(id)
+  end
 
   @doc """
   Submits a new company for approval.
