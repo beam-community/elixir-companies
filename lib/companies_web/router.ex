@@ -36,16 +36,16 @@ defmodule CompaniesWeb.Router do
   scope "/:locale/", CompaniesWeb do
     pipe_through [:browser, :set_locale]
 
-    get "/", CompanyController, :recent
-    resources "/companies", CompanyController, only: [:index, :show]
-    get "/jobs", JobController, :index
-
     scope "/" do
       pipe_through [:auth]
 
       resources "/companies", CompanyController, except: [:index, :show]
       resources "/jobs", JobController, except: [:index, :show]
     end
+
+    get "/", CompanyController, :recent
+    resources "/companies", CompanyController, only: [:index, :show]
+    get "/jobs", JobController, :index
 
     scope "/admin", Admin do
       pipe_through [:admin]
