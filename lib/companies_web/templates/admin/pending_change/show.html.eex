@@ -21,7 +21,7 @@
         <div class="changes is-hidden"><pre><%= to_json(@pending_change.changes) %></pre></div>
         <div class="original is-hidden"><pre><%= to_json(@pending_change.original)%></pre></div>
       </div>
-      <%= if pending_approval?(@pending_change.approved) do %>
+      <%= if pending_approval?(@pending_change) do %>
         <%= form_tag(Routes.pending_change_path(@conn, :update, locale(@conn), @pending_change.id), method: "PATCH") do %>
           <div class="field is-grouped is-grouped-centered">
             <div class="control">
