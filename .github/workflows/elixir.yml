@@ -1,4 +1,11 @@
-on: [push, pull_request]
+name: Continuous Integration
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+  push:
+    branches:
+      - 'master'
 
 jobs:
   test:
