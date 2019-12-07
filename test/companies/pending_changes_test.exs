@@ -5,8 +5,8 @@ defmodule Companies.PendingChangesTest do
   import Companies.Factory
   import ExUnit.CaptureLog
 
-  alias Companies.{Companies, PendingChanges, Schema.PendingChange}
-  alias Companies.Schema.{Company, PendingChanges}
+  alias Companies.Schema.{Company, PendingChange}
+  alias Companies.{Companies, PendingChanges}
 
   @email_subject_approval "Your Elixir Companies change was approved"
   @email_subject_rejection "Your Elixir Companies change needs to be revisited"

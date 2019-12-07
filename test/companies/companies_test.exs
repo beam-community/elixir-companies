@@ -36,12 +36,6 @@ defmodule Companies.CompaniesTest do
       assert %{page_number: 1, page_size: 16, total_entries: 1, total_pages: 1} = Companies.all()
     end
 
-    test "filters companies by hiring" do
-      [company, _] = insert_list(2, :company)
-      insert(:job, company: company)
-      assert %{total_entries: 1} = Companies.all(%{"type" => "hiring"})
-    end
-
     test "filters companies by text" do
       insert(:company, name: "ZULU")
       insert(:company, name: "BETA")
