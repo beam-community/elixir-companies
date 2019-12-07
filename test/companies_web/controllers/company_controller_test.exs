@@ -1,6 +1,8 @@
 defmodule CompaniesWeb.CompanyControllerTest do
   use CompaniesWeb.ConnCase
 
+  @moduletag capture_log: true
+
   test "GET / without locale", %{conn: conn} do
     conn = get(conn, "/")
     assert redirected_to(conn, 302) == "/en"

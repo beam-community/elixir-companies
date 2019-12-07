@@ -4,6 +4,7 @@ defmodule CompaniesWeb.SiteHelpers do
   import CompaniesWeb.Gettext
 
   def query_params(%{query_params: %{"type" => type}}), do: [type: type]
+  def query_params(%{query_params: %{"approved" => approved}}), do: [approved: approved]
   def query_params(_), do: []
 
   def maintainers, do: Map.get(site_data(), :maintainers)

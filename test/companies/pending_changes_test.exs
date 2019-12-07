@@ -4,13 +4,33 @@ defmodule Companies.PendingChangesTest do
   import Companies.Factory
   import ExUnit.CaptureLog
 
-  alias Companies.{Companies, PendingChanges}
+  alias Companies.{Companies, PendingChanges, Schema.PendingChange}
 
-  describe "all/0" do
-    test "retrieve all pending changes" do
+  describe "all/1" do
+    setup do
       insert(:pending_change)
       insert(:pending_change, %{approved: true})
-      assert 1 == length(PendingChanges.all())
+      insert(:pending_change, %{approved: false})
+      :ok
+    end
+
+    test "retrieves a paginated list of all pending changes" do
+      assert %{entries: entries, page_number: 1, page_size: 16, total_entries: 1, total_pages: 1} = PendingChanges.all()
+      assert [%PendingChange{approved: nil}] = entries
+    end
+
+    test "retrieves a paginated list of all approved changes" do
+      assert %{entries: entries, page_number: 1, page_size: 16, total_entries: 1, total_pages: 1} =
+               PendingChanges.all(%{"approved" => "true"})
+
+      assert [%PendingChange{approved: true}] = entries
+    end
+
+    test "retrieves a paginated list of all rejected changes" do
+      assert %{entries: entries, page_number: 1, page_size: 16, total_entries: 1, total_pages: 1} =
+               PendingChanges.all(%{"approved" => "false"})
+
+      assert [%PendingChange{approved: false}] = entries
     end
   end
 
@@ -74,7 +94,8 @@ defmodule Companies.PendingChangesTest do
         end)
 
       assert output =~ "NOTIFICATION"
-      assert 1 == length(PendingChanges.all())
+      %{entries: entries} = PendingChanges.all()
+      assert 1 == length(entries)
     end
   end
 

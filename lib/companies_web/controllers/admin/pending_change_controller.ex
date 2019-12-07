@@ -4,8 +4,10 @@ defmodule CompaniesWeb.Admin.PendingChangeController do
 
   alias Companies.PendingChanges
 
-  def index(conn, _params) do
-    render(conn, "index.html", pending_changes: pending_changes())
+  def index(conn, params) do
+    pending_changes = PendingChanges.all(params)
+
+    render(conn, "index.html", pending_changes: pending_changes)
   end
 
   def show(conn, %{"id" => change_id}) do
@@ -29,6 +31,4 @@ defmodule CompaniesWeb.Admin.PendingChangeController do
         |> redirect(to: Routes.pending_change_path(conn, :index, locale(conn)))
     end
   end
-
-  defp pending_changes, do: PendingChanges.all()
 end

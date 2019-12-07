@@ -227,3 +227,39 @@ Repo.insert!(%PendingChange{
   resource: "company",
   user_id: system.id
 })
+
+# Denied change
+Repo.insert!(%PendingChange{
+  action: "create",
+  approved: false,
+  changes: %{
+    name: "spam",
+    description: """
+    spam spam.
+    """,
+    github: "https://github.com/spam",
+    industry_id: technology_consulting.id,
+    location: "Global",
+    url: "https://spam.io"
+  },
+  resource: "company",
+  user_id: system.id
+})
+
+# Approved change
+Repo.insert!(%PendingChange{
+  action: "create",
+  approved: true,
+  changes: %{
+    name: "Awkward",
+    description: """
+    Awkward is a digital product company based in Rotterdam, the Netherlands. We help our clients realize ideas from the first sketch, to launch day and beyond.
+    """,
+    github: "https://github.com/awkward",
+    industry_id: technology_consulting.id,
+    location: "Rotterdam, the Netherlands",
+    url: "https://awkward.co"
+  },
+  resource: "company",
+  user_id: system.id
+})

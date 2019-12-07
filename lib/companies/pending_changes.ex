@@ -8,12 +8,26 @@ defmodule Companies.PendingChanges do
   alias Companies.Repo
   alias Companies.Schema.{Company, Job, Industry, PendingChange}
 
-  def all do
-    query =
-      from p in PendingChange,
-        where: is_nil(p.approved)
+  @doc """
+  Returns the list of paginated changes.
 
-    Repo.all(query)
+  ## Examples
+
+  iex> all()
+  [%PendingChange{}, ...]
+
+  iex> all(%{"approved" => false})
+  [%PendingChange{}, ...]
+
+  iex> all(%{"approved" => true})
+  [%PendingChange{}, ...]
+  """
+  def all(params \\ %{}) do
+    page = Map.get(params, "page", "1")
+
+    PendingChange
+    |> predicates(params)
+    |> Repo.paginate(page: page)
   end
 
   def approve(change_id, false) do
@@ -133,6 +147,9 @@ defmodule Companies.PendingChanges do
   defp notification(error, _user) do
     error
   end
+
+  defp predicates(query, %{"approved" => approval}), do: query |> where([p], p.approved == ^approval)
+  defp predicates(query, _), do: query |> where([p], is_nil(p.approved))
 
   defp resource_module("company"), do: Company
   defp resource_module("industry"), do: Industry

@@ -6,10 +6,29 @@
 <% end %>
 
 <section class="section">
+<div class="navbar">
+  <div class="field is-grouped navbar-end">
+      <p class="control">
+        <%= link to: Routes.pending_change_path(@conn, :index, locale(@conn)), class: "navbar-item button" do %>
+          <span><%= gettext("Pending Changes") %></span>
+        <% end %>
+      </p>
+      <p class="control">
+        <%= link to: Routes.pending_change_path(@conn, :index, locale(@conn), approved: true), class: "navbar-item button" do %>
+          <span><%= gettext("Approved Changes") %></span>
+        <% end %>
+      </p>
+      <p class="control">
+        <%= link to: Routes.pending_change_path(@conn, :index, locale(@conn), approved: false), class: "navbar-item button" do %>
+          <span><%= gettext("Rejected Changes") %></span>
+        <% end %>
+      </p>
+  </div>
+  </div>
   <div class="container">
     <div class="content">
       <h1 class="title is-3 fancy">
-        Pending Changes
+        <%= pending_changes_title(@conn) %>
       </h1>
       <table class="table">
         <thead>
@@ -37,4 +56,7 @@
       </table>
     </div>
   </div>
+
+  <%= pagination_links(@pending_changes, [next: "Next", previous: "Previous"] ++ query_params(@conn)) %>
+
 </section>

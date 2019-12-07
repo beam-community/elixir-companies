@@ -50,7 +50,7 @@ defmodule CompaniesWeb.Router do
     scope "/admin", Admin do
       pipe_through [:admin]
 
-      resources "/pending", PendingChangeController
+      resources "/changes", PendingChangeController
     end
   end
 
