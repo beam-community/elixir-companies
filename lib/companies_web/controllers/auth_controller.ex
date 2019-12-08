@@ -27,12 +27,12 @@ defmodule CompaniesWeb.AuthController do
         conn
         |> put_flash(:info, "Welcome!")
         |> put_session(:user_id, user.id)
-        |> redirect(to: Routes.company_path(conn, :recent))
+        |> redirect(to: Routes.company_path(conn, :recent, "en"))
 
       {:error, reason} ->
         conn
         |> put_flash(:error, "Error: #{reason}")
-        |> redirect(to: Routes.company_path(conn, :recent))
+        |> redirect(to: Routes.company_path(conn, :recent, "en"))
     end
   end
 end
