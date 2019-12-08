@@ -20,12 +20,16 @@ defmodule Companies.Jobs do
   def all(params \\ %{}) do
     page = Map.get(params, "page", "1")
 
-    (j in Job)
-    |> from()
-    |> where([j], is_nil(j.removed_pending_change_id))
+    query =
+      from j in Job,
+        join: c in assoc(j, :company),
+        where: is_nil(j.removed_pending_change_id),
+        where: is_nil(c.removed_pending_change_id),
+        preload: [company: c],
+        order_by: [desc: :updated_at]
+
+    query
     |> predicates(params)
-    |> order_by(desc: :updated_at)
-    |> preload(:company)
     |> Repo.paginate(page: page)
   end
 
@@ -44,10 +48,16 @@ defmodule Companies.Jobs do
 
   """
   def get!(id) do
-    (j in Job)
-    |> from()
-    |> where([j], is_nil(j.removed_pending_change_id))
-    |> Repo.get!(id)
+    query =
+      from j in Job,
+        join: c in assoc(j, :company),
+        where: is_nil(j.removed_pending_change_id),
+        where: is_nil(c.removed_pending_change_id),
+        where: j.id == ^id,
+        preload: [company: c],
+        order_by: [desc: :updated_at]
+
+    Repo.one!(query)
   end
 
   @doc """

@@ -41,6 +41,14 @@ defmodule Companies.JobsTest do
 
       refute deleted_id in Enum.map(Jobs.all(), & &1.id)
     end
+
+    test "does not include jobs from deleted companies" do
+      company = insert(:company, removed_pending_change: build(:pending_change))
+      %{id: deleted_id} = insert(:job, company: company)
+      insert_list(2, :job)
+
+      refute deleted_id in Enum.map(Jobs.all(), & &1.id)
+    end
   end
 
   describe "get!/1" do
