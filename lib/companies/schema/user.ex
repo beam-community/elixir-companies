@@ -4,6 +4,7 @@ defmodule Companies.Schema.User do
 
   schema "users" do
     field :email, :string
+    field :email_notifications, :boolean
     field :nickname, :string
     field :token, :string
 
@@ -15,7 +16,7 @@ defmodule Companies.Schema.User do
   @doc false
   def changeset(user, attrs) do
     user
-    |> cast(attrs, [:email, :nickname, :token])
+    |> cast(attrs, [:email, :email_notifications, :nickname, :token])
     |> validate_required([:email, :nickname, :token])
   end
 end

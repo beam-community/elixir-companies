@@ -30,32 +30,32 @@ defmodule Companies.PendingChanges do
     |> Repo.paginate(page: page)
   end
 
-  def approve(change_id, false) do
+  def approve(change_id, note, false) do
     case Repo.get(PendingChange, change_id) do
       nil ->
         {:error, "change not found"}
 
       change ->
-        update_approval(change, false)
+        update_approval(change, note, false)
     end
   end
 
-  def approve(change_id, true) do
+  def approve(change_id, note, true) do
     with %{action: action, changes: changes, resource: resource} = change <- Repo.get(PendingChange, change_id),
          module <- resource_module(resource),
          changeset <- changeset(module, changes),
          {:ok, _changes} <- apply_changes(action, changeset) do
-      update_approval(change, true)
+      update_approval(change, note, true)
     else
       nil -> {:error, "change not found"}
       {:error, changeset} -> {:error, changeset}
     end
   end
 
-  def create(changeset, action, user, note \\ "")
-  def create(%{valid?: false} = changes, action, _user, _note), do: invalid_change(changes, action)
-  def create(%{id: _id} = resource, action, user, note), do: create(%{data: resource, params: %{}}, action, user, note)
-  def create(changes, action, user, note), do: insert_change(changes, action, user, note)
+  def create(changeset, action, user)
+  def create(%{valid?: false} = changes, action, _user), do: invalid_change(changes, action)
+  def create(%{id: _id} = resource, action, user), do: create(%{data: resource, params: %{}}, action, user)
+  def create(changes, action, user), do: insert_change(changes, action, user)
 
   def get(id) do
     case Repo.get(PendingChange, id) do
@@ -115,7 +115,7 @@ defmodule Companies.PendingChanges do
     {:error, %{changes | repo: Repo, action: action}}
   end
 
-  defp insert_change(%{data: resource, params: changes}, action, %{id: user_id} = user, note) do
+  defp insert_change(%{data: resource, params: changes}, action, %{id: user_id} = user) do
     updated_changes =
       case Map.get(resource, :id) do
         nil -> changes
@@ -125,7 +125,6 @@ defmodule Companies.PendingChanges do
     params = %{
       action: to_string(action),
       changes: updated_changes,
-      note: note,
       resource: struct_to_string(resource),
       user_id: user_id
     }
@@ -134,6 +133,14 @@ defmodule Companies.PendingChanges do
     |> PendingChange.changeset(params)
     |> Repo.insert()
     |> notification(user)
+  end
+
+  @spec notification(term(), term()) :: {:ok, map()} | map()
+  defp notification(result, user \\ nil)
+
+  defp notification({:ok, pending_change}, nil) do
+    %{user: user} = preloaded_change = Repo.preload(pending_change, [:user])
+    notification({:ok, preloaded_change}, user)
   end
 
   defp notification({:ok, pending_change}, user) do
@@ -159,9 +166,10 @@ defmodule Companies.PendingChanges do
   defp struct_to_string(%Industry{}), do: "industry"
   defp struct_to_string(%Job{}), do: "job"
 
-  defp update_approval(change, approval) do
+  defp update_approval(change, note, approval) do
     change
-    |> PendingChange.changeset(%{approved: approval})
+    |> PendingChange.changeset(%{approved: approval, note: String.trim(note)})
     |> Repo.update()
+    |> notification()
   end
 end

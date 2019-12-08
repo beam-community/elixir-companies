@@ -24,6 +24,13 @@
       <%= if pending_approval?(@pending_change) do %>
         <%= form_tag(Routes.pending_change_path(@conn, :update, locale(@conn), @pending_change.id), method: "PATCH") do %>
           <div class="field is-grouped is-grouped-centered">
+            <div class="control is-expanded">
+              <label class="label">Note</label>
+              <input class="input" name="note" type="text">
+            </div>
+          </div>
+
+          <div class="field is-grouped is-grouped-centered">
             <div class="control">
               <%= submit("Approve", class: "button is-primary", name: "approval", value: "true") %>
             </div>

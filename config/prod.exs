@@ -17,5 +17,9 @@ config :companies, CompaniesWeb.Endpoint,
 
 config :companies, :notifier, Notify.Slack
 
+config :companies, Notify.Mailer,
+  adapter: Bamboo.SendGridAdapter,
+  api_key: System.get_env("SENDGRID_API_KEY")
+
 # Do not print debug messages in production
 config :logger, level: :info

@@ -1,6 +1,5 @@
 defmodule Companies.Companies do
-  @moduledoc """
-  """
+  @moduledoc false
 
   import Ecto.Query, warn: false
 

@@ -16,3 +16,5 @@ config :companies, Companies.Repo,
   database: "companies_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+config :companies, Notify.Mailer, adapter: Bamboo.TestAdapter

@@ -19,12 +19,13 @@ defmodule CompaniesWeb.JobController do
     case Jobs.create(params, current_user(conn)) do
       {:ok, _job} ->
         conn
-        |> put_flash(:info, "Job created successfully.")
+        |> put_flash(:info, "Thank you! Your listing will be review and should appear on the site shortly.")
         |> redirect(to: Routes.company_path(conn, :recent, locale(conn)))
 
       {:error, %Ecto.Changeset{} = changeset} ->
         company =
-          Map.get(params, "company_id")
+          params
+          |> Map.get("company_id")
           |> Companies.get!()
 
         render(conn, "new.html", changeset: changeset, company: company)
@@ -49,7 +50,7 @@ defmodule CompaniesWeb.JobController do
     case Jobs.update(job, job_params, current_user(conn)) do
       {:ok, _job} ->
         conn
-        |> put_flash(:info, "Job updated successfully.")
+        |> put_flash(:info, "Thank you. Your requested changes are pending approval.")
         |> redirect(to: Routes.company_path(conn, :recent, locale(conn)))
 
       {:error, %Ecto.Changeset{} = changeset} ->
@@ -62,7 +63,7 @@ defmodule CompaniesWeb.JobController do
     {:ok, _job} = Jobs.delete(job, current_user(conn))
 
     conn
-    |> put_flash(:info, "Job deleted successfully.")
+    |> put_flash(:info, "Thank you. Your delete request is pending approval.")
     |> redirect(to: Routes.company_path(conn, :recent, locale(conn)))
   end
 
