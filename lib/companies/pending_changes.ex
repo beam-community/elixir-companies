@@ -115,16 +115,24 @@ defmodule Companies.PendingChanges do
     {:error, %{changes | repo: Repo, action: action}}
   end
 
-  defp insert_change(%{data: resource, params: changes}, action, %{id: user_id} = user) do
-    updated_changes =
-      case Map.get(resource, :id) do
-        nil -> changes
-        id -> Map.put(changes, "id", id)
-      end
+  defp insert_change(%{data: resource, params: params} = change, :delete, user) when params == %{} do
+    additions =
+      Enum.reduce([:id, :name, :title], %{}, fn key, acc ->
+        case Map.get(resource, key) do
+          nil -> acc
+          val -> Map.put(acc, to_string(key), val)
+        end
+      end)
 
+    change
+    |> Map.put(:params, additions)
+    |> insert_change(:delete, user)
+  end
+
+  defp insert_change(%{data: resource, params: changes}, action, %{id: user_id} = user) do
     params = %{
       action: to_string(action),
-      changes: updated_changes,
+      changes: changes,
       resource: struct_to_string(resource),
       user_id: user_id
     }
