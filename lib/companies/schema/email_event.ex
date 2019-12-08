@@ -1,4 +1,4 @@
-defmodule Companies.Schemas.EmailEvent do
+defmodule Companies.Schema.EmailEvent do
   use Ecto.Schema
   import Ecto.Changeset
 

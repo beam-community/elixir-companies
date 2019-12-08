@@ -49,7 +49,7 @@ defmodule Companies.Accounts do
   @doc """
   Gets a single user, selected by email.
   """
-  def get_user_by_email(email) do
+  def get_by_email(email) do
     query = from(u in User, where: u.email == ^email)
 
     query

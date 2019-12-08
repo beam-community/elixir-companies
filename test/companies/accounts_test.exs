@@ -23,7 +23,7 @@ defmodule Companies.AccountsTest do
   describe "get_user_by_email/1" do
     test "gets a user by email" do
       %{email: email, id: id} = insert(:user)
-      assert %{email: ^email, maintainer: false, id: ^id} = Accounts.get_user_by_email(email)
+      assert %{email: ^email, maintainer: false, id: ^id} = Accounts.get_by_email(email)
     end
   end
 end

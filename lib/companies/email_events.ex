@@ -5,40 +5,42 @@ defmodule Companies.EmailEvents do
   https://sendgrid.com/docs/for-developers/tracking-events/
   """
 
-  alias Companies.{Accounts, Repo, Schemas.EmailEvent}
+  alias Companies.Schema.{EmailEvent, User}
+  alias Companies.{Accounts, Repo, TaskSupervisor}
 
   @disable_user_emails ["bounce", "spamreport", "unsubscribe"]
   @whitelisted_events ["delivered", "open"]
 
   def create(events) do
-    Task.start(fn ->
-      Enum.reduce(events, %{}, &create_event/2)
+    Task.Supervisor.start_child(TaskSupervisor, fn ->
+      Enum.each(events, &create_event/1)
     end)
   end
 
-  defp create_event(%{"email" => user_email, "event" => event} = attrs, acc) do
-    if event in (@disable_user_emails ++ @whitelisted_events) do
-      user = Map.get(acc, user_email) || Accounts.get_user_by_email(user_email)
-
-      store_event(attrs, user)
-
-      updated_user =
-        case update_user_preferences(event, user) do
-          {:ok, updated_user} -> updated_user
-          _ -> user
-        end
-
-      Map.put(acc, user_email, updated_user)
+  defp create_event(%{"email" => user_email, "event" => event} = params) do
+    with true <- watched_event?(event),
+         %User{} = user <- Accounts.get_by_email(user_email),
+         {:ok, _event} <- store_event(params, user),
+         {:ok, _user} <- update_user_preferences(event, user) do
+      :ok
     else
-      acc
+      false ->
+        :ok
+
+      {:error, %{errors: errors}} ->
+        send_error(errors, params)
     end
   end
 
-  defp store_event(attrs, %{id: user_id}) do
-    updated_attrs = Map.put(attrs, "user_id", user_id)
+  defp send_error(errors, params) do
+    Appsignal.send_error(%RuntimeError{}, "SendGrid Callback", [], %{params: params, errors: errors})
+  end
+
+  defp store_event(params, %{id: user_id}) do
+    updated_params = Map.put(params, "user_id", user_id)
 
     %EmailEvent{}
-    |> EmailEvent.changeset(updated_attrs)
+    |> EmailEvent.changeset(updated_params)
     |> Repo.insert()
   end
 
@@ -50,4 +52,6 @@ defmodule Companies.EmailEvents do
 
   defp update_user_preferences(_event, user),
     do: {:ok, user}
+
+  defp watched_event?(event), do: event in (@disable_user_emails ++ @whitelisted_events)
 end

@@ -11,9 +11,8 @@ defmodule Companies.Application do
       # Start the Ecto repository
       Companies.Repo,
       # Start the endpoint when the application starts
-      CompaniesWeb.Endpoint
-      # Starts a worker by calling: Companies.Worker.start_link(arg)
-      # {Companies.Worker, arg},
+      CompaniesWeb.Endpoint,
+      {Task.Supervisor, name: Companies.TaskSupervisor}
     ]
 
     :telemetry.attach(
