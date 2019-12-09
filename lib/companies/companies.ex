@@ -18,12 +18,19 @@ defmodule Companies.Companies do
 
   def all(params \\ %{}) do
     page = Map.get(params, "page", "1")
+    order = Map.get(params, :order, :name)
 
     (c in Company)
     |> from()
     |> predicates(params)
+    |> order_by(^order)
     |> preload([:industry, :jobs])
     |> Repo.paginate(page: page)
+  end
+
+  def recent do
+    %{order: :inserted_at}
+    |> all()
   end
 
   def predicates(query, %{"search" => search_params}) do

@@ -10,12 +10,13 @@ defmodule Companies.CompaniesTest do
   end
 
   describe "all/1" do
-    test "retrieves a paginated list of companies sorted by inserted datetime" do
+    test "retrieves a paginated list of companies sorted by inserted datetime (desc)" do
       insert(:company, name: "ZULU")
       insert(:company, name: "ALPHA")
 
       assert %{entries: entries, page_number: 1, page_size: 16, total_entries: 2, total_pages: 1} = Companies.all()
       assert 2 == length(entries)
+      assert [%{name: "ALPHA"}, %{name: "ZULU"}] = entries
     end
 
     test "filters companies by industry" do
