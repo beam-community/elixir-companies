@@ -17,7 +17,7 @@
             <div class="field">
               <label class="field" for="remote_only">
                 <input name="search[remote_only]" type="checkbox" />
-                Show only remote jobs
+                <%= gettext("Show only remote jobs") %>
               </label>
             </div>
           </div>
@@ -37,7 +37,7 @@
           <th><%= gettext("Company") %></th>
           <th><%= gettext("Last update") %></th>
           <%= if signed_in?(@conn) do %>
-            <th>Actions</th>
+            <th><%= gettext("Actions") %></th>
           <% end %>
         </thead>
         <tbody>
@@ -48,6 +48,6 @@
       </table>
     </div> <!-- /content -->
 
-    <%= pagination_links(@jobs, [next: "Next", previous: "Previous"] ++ query_params(@conn)) %>
+    <%= pagination_links(@jobs, [next: gettext("Next"), previous: gettext("Previous")] ++ query_params(@conn)) %>
   </div> <!-- /container -->
 </section>
