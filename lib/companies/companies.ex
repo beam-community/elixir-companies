@@ -34,8 +34,7 @@ defmodule Companies.Companies do
   id next.
   """
   def recent do
-    %{order: [desc: :inserted_at, desc: :id]}
-    |> all()
+    all(%{order: [desc: :inserted_at, desc: :id]})
   end
 
   def predicates(query, %{"search" => search_params}) do
