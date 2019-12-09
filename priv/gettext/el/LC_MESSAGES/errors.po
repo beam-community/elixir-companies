@@ -1,0 +1,87 @@
+## `msgid`s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove `msgid`s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use `mix gettext.extract --merge` or `mix gettext.merge`
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: el\n"
+"Plural-Forms: nplurals=2\n"
+
+msgid "can't be blank"
+msgstr "δεν μπορεί να είναι κενό"
+
+msgid "has already been taken"
+msgstr "έχει χρησιμοποιηθεί ήδη"
+
+msgid "is invalid"
+msgstr "είναι άκυρο"
+
+msgid "must be accepted"
+msgstr "πρέπει να αποδεχθεί"
+
+msgid "has invalid format"
+msgstr "έχει μη έγκυρη μορφή"
+
+msgid "has an invalid entry"
+msgstr "έχει μη έγκυρη εγγραφή"
+
+msgid "is reserved"
+msgstr "είναι κρατημένη"
+
+msgid "does not match confirmation"
+msgstr "δεν ταιριάζει στην επιβεβαίωση"
+
+msgid "is still associated with this entry"
+msgstr "είναι ακόμα σχετιζόμενη με αυτή την εγγραφή"
+
+msgid "are still associated with this entry"
+msgstr "είναι ακόμα σχετιζόμενες με αυτή την εγγραφή"
+
+msgid "should be %{count} character(s)"
+msgid_plural "should be %{count} character(s)"
+msgstr[0] "θα πρέπει να είναι τουλάχιστον %{count} χαρακτήρας"
+msgstr[1] "θα πρέπει να είναι τουλάχιστον %{count} χαρακτήρες"
+
+msgid "should have %{count} item(s)"
+msgid_plural "should have %{count} item(s)"
+msgstr[0] "θα πρέπει να έχει τουλάχιστον %{count} αντικείμενο"
+msgstr[1] "θα πρέπει να έχει τουλάχιστον %{count} αντικείμενα"
+
+msgid "should be at least %{count} character(s)"
+msgid_plural "should be at least %{count} character(s)"
+msgstr[0] "θα πρέπει να είναι τουλάχιστον %{count} χαρακτήρας"
+msgstr[1] "θα πρέπει να είναι τουλάχιστον %{count} χαρακτήρες"
+
+msgid "should have at least %{count} item(s)"
+msgid_plural "should have at least %{count} item(s)"
+msgstr[0] "θα πρέπει να έχει τουλάχιστον %{count} αντικείμενο"
+msgstr[1] "θα πρέπει να έχει τουλάχιστον %{count} αντικείμενα"
+
+msgid "should be at most %{count} character(s)"
+msgid_plural "should be at most %{count} character(s)"
+msgstr[0] "πρέπει να είναι το πολύ %{count} χαρακτήρας"
+msgstr[1] "πρέπει να είναι το πολύ %{count} χαρακτήρες"
+
+msgid "should have at most %{count} item(s)"
+msgid_plural "should have at most %{count} item(s)"
+msgstr[0] "πρέπει να έχει το πολύ %{count} αντικείμενο"
+msgstr[1] "πρέπει να έχει το πολύ %{count} αντικείμενα"
+
+msgid "must be less than %{number}"
+msgstr "πρέπει να είναι λιγότερο από %{number}"
+
+msgid "must be greater than %{number}"
+msgstr "πρέπει να είναι μεγαλύτερο από %{number}"
+
+msgid "must be less than or equal to %{number}"
+msgstr "πρέπει να είναι λιγότερο ή ίσο από %{number}"
+
+msgid "must be greater than or equal to %{number}"
+msgstr "πρέπει να είναι μεγαλύτερο ή ίσο από %{number}"
+
+msgid "must be equal to %{number}"
+msgstr "πρέπει να έιναι ίσο με %{number}"
