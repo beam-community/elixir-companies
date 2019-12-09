@@ -7,7 +7,7 @@
         <div class="columns is-desktop">
           <div class="column">
             <div class="field">
-              <label class="field" for="search[text]">Text</label>
+              <label class="field" for="search[text]"><%= gettext("Text") %></label>
               <div class="control">
                 <div class="text">
                   <input name="search[text]" id="search[text]" class="input" type="text" value=""/>
@@ -17,7 +17,7 @@
           </div>
           <div class="column">
             <div class="field">
-              <label class="field" for="search[industry_id]">Industry</label>
+              <label class="field" for="search[industry_id]"><%= gettext("Industry") %></label>
               <div class="control">
                 <div class="select">
                   <select id="search[industry_id]" name="search[industry_id]">
@@ -51,6 +51,6 @@
       </div> <!-- /columns -->
     </div> <!-- /content -->
 
-    <%= pagination_links(@companies, [next: "Next", previous: "Previous"] ++ query_params(@conn)) %>
+    <%= pagination_links(@companies, [next: gettext("Next") , previous: gettext("Previous")] ++ query_params(@conn)) %>
   </div> <!-- /container -->
 </section>
