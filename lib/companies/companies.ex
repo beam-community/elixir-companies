@@ -28,8 +28,13 @@ defmodule Companies.Companies do
     |> Repo.paginate(page: page)
   end
 
+  @doc """
+  Simply calls `all/1` with a two level order, so that even in the slight chance we have
+  two companies with the exact same time of insertion, they will be ordered with
+  id next.
+  """
   def recent do
-    %{order: :inserted_at}
+    %{order: [desc: :inserted_at, desc: :id]}
     |> all()
   end
 
