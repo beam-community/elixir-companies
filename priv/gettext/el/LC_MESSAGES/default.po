@@ -175,6 +175,7 @@ msgstr "Περιγραφή"
 
 #, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:9
+#: lib/companies_web/templates/company/index.html.eex:20
 msgid "Industry"
 msgstr "Βιομηχανία"
 
@@ -289,3 +290,28 @@ msgstr "Υποστηρίζεται το στυλ με τη χρήση Markdown"
 #: lib/companies_web/templates/job/form.html.eex:35
 msgid "This is a remote job"
 msgstr "Αυτή είναι μια απομακρυσμένη εργασία"
+
+#, elixir-format
+#: lib/companies_web/templates/job/index.html.eex:40
+msgid "Actions"
+msgstr "Ενέργειες"
+
+#, elixir-format
+#: lib/companies_web/templates/company/index.html.eex:54
+msgid "Next"
+msgstr "Επόμενο"
+
+#, elixir-format
+#: lib/companies_web/templates/company/index.html.eex:54
+msgid "Previous"
+msgstr "Προηγούμενο"
+
+#, elixir-format
+#: lib/companies_web/templates/job/index.html.eex:20
+msgid "Show only remote jobs"
+msgstr "Δείξε μόνο απομακρυσμένες εργασίες"
+
+#, elixir-format
+#: lib/companies_web/templates/company/index.html.eex:10
+msgid "Text"
+msgstr "Κείμενο"

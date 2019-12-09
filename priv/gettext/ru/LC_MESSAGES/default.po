@@ -157,33 +157,34 @@ msgstr ""
 msgid "Blog website"
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/companies_web/templates/job/form.html.eex:9
 #: lib/companies_web/templates/job/index.html.eex:37
 msgid "Company"
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/companies_web/templates/company/card.html.eex:21
 msgid "Delete"
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:26
 msgid "Description"
 msgstr ""
 
 #, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:9
+#: lib/companies_web/templates/company/index.html.eex:20
 msgid "Industry"
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:45
 msgid "Location"
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:18
 msgid "Name"
 msgstr ""
@@ -193,12 +194,12 @@ msgstr ""
 msgid "Optional fields"
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/companies_web/templates/job/index.html.eex:36
 msgid "Title"
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/companies_web/templates/job/form.html.eex:23
 msgid "Url"
 msgstr ""
@@ -288,4 +289,29 @@ msgstr ""
 #, elixir-format
 #: lib/companies_web/templates/job/form.html.eex:35
 msgid "This is a remote job"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/job/index.html.eex:40
+msgid "Actions"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/index.html.eex:54
+msgid "Next"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/index.html.eex:54
+msgid "Previous"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/job/index.html.eex:20
+msgid "Show only remote jobs"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/index.html.eex:10
+msgid "Text"
 msgstr ""
