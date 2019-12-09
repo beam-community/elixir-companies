@@ -269,12 +269,8 @@ msgstr ""
 
 #, elixir-format
 #: lib/companies_web/templates/job/index.html.eex:35
-msgid "Remote"
-msgstr ""
-
-#, elixir-format
 #: lib/companies_web/templates/job/show.html.eex:16
-msgid "Remote:"
+msgid "Remote"
 msgstr ""
 
 #, elixir-format

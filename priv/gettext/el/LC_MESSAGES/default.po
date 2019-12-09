@@ -270,13 +270,9 @@ msgstr "Μη Αποδεχούμενες Αλλαγές"
 
 #, elixir-format
 #: lib/companies_web/templates/job/index.html.eex:35
+#: lib/companies_web/templates/job/show.html.eex:16
 msgid "Remote"
 msgstr "Απομακρυσμένη"
-
-#, elixir-format
-#: lib/companies_web/templates/job/show.html.eex:16
-msgid "Remote:"
-msgstr "Απομακρυσμένη:"
 
 #, elixir-format
 #: lib/companies_web/templates/company/index.html.eex:38
