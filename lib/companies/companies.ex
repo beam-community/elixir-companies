@@ -18,12 +18,23 @@ defmodule Companies.Companies do
 
   def all(params \\ %{}) do
     page = Map.get(params, "page", "1")
+    order = Map.get(params, :order, :name)
 
     (c in Company)
     |> from()
     |> predicates(params)
+    |> order_by(^order)
     |> preload([:industry, :jobs])
     |> Repo.paginate(page: page)
+  end
+
+  @doc """
+  Simply calls `all/1` with a two level order, so that even in the slight chance we have
+  two companies with the exact same time of insertion, they will be ordered with
+  id next.
+  """
+  def recent do
+    all(%{order: [desc: :inserted_at, desc: :id]})
   end
 
   def predicates(query, %{"search" => search_params}) do

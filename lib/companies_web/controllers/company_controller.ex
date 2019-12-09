@@ -5,7 +5,7 @@ defmodule CompaniesWeb.CompanyController do
 
   def recent(conn, _params) do
     companies_count = Companies.count()
-    recent_companies = Companies.all()
+    recent_companies = Companies.recent()
 
     render(conn, "recent.html", recent_companies: recent_companies, companies_count: companies_count)
   end
