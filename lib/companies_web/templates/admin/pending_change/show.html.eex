@@ -39,6 +39,12 @@
             </div>
           </div>
         <% end %>
+      <% else %>
+        <%= if @pending_change.reviewer do %>
+          <span class="has-text-centered">
+            <h2 class="title is-7">Reviewed by: <a href="https://github.com/<%= @pending_change.reviewer.nickname %>" target="_blank"><%= @pending_change.reviewer.nickname %></a></h2>
+          </span>
+        <% end %>
       <% end %>
     </div>
   </div>

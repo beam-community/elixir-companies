@@ -17,7 +17,7 @@ defmodule CompaniesWeb.Admin.PendingChangeController do
   end
 
   def update(conn, %{"id" => change_id, "approval" => approval, "note" => note}) do
-    case PendingChanges.approve(change_id, note, approval == "true") do
+    case PendingChanges.approve(change_id, note, current_user(conn), approval == "true") do
       {:ok, _approved_changes} ->
         conn
         |> put_flash(:info, "Changes submitted")
