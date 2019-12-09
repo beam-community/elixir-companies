@@ -40,3 +40,11 @@ _Note_: You need to set up a [GitHub Application](https://developer.github.com/)
 _Note_: You need to have Postgres version 9.5+, due to our use of certain features that are fairly new (JSONB Data Type + ON CONFLICT query).
 
 _Note_: If for some reason you reset the database on your machine, you will see an error as the browser has cookies for a user that does not exist in the database. You will need to clear the cookies and site data for the page on your browser and refresh the page to remove the error.
+
+## Localization
+
+In order to add a new language to the available list of locales, you have to do the following:
+- `mix gettext.extract` in order to extract all the latest gettext msgids from the code
+- `mix gettext.merge --priv/gettext` in order to merge the latest msgids with the locales.
+- `mix gettext.merge --priv/gettext --locale locale_code` in order the generate the files for the new locale.
+- Edit the `default.po` and `errors.po` in the `priv/gettext/{locale_code}/LC_MESSAGES/` dir. You leave the msgids intact and only touch the msgstr fields, where you translate the text accordingly.
