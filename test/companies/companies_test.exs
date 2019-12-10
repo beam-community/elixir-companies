@@ -36,6 +36,16 @@ defmodule Companies.CompaniesTest do
 
       assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => "lp"}})
     end
+
+    test "trims leading and trailing whitespace on text search" do
+      insert(:company, name: "ZULU")
+      insert(:company, name: "BETA")
+      insert(:company, name: "ALPHA")
+
+      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => "alpha "}})
+      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " alpha"}})
+      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " alpha "}})
+    end
   end
 
   describe "recent/1" do
