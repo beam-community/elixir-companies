@@ -25,6 +25,15 @@ defmodule Companies.JobsTest do
 
       assert 1 == length(entries)
     end
+
+    test "trims leading and trailing whitespace on text search" do
+      insert(:job, title: "test job")
+      insert(:job, title: "alternate")
+
+      assert %{entries: [%{title: "test job"}]} = Jobs.all(%{"search" => %{"text" => "job "}})
+      assert %{entries: [%{title: "test job"}]} = Jobs.all(%{"search" => %{"text" => " job"}})
+      assert %{entries: [%{title: "test job"}]} = Jobs.all(%{"search" => %{"text" => " job "}})
+    end
   end
 
   describe "create/2" do

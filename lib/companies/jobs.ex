@@ -121,6 +121,8 @@ defmodule Companies.Jobs do
   end
 
   defp query_predicates({"text", text}, query) do
+    text = String.trim(text)
+
     from c in query, where: ilike(c.title, ^"%#{text}%")
   end
 
