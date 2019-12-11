@@ -1,4 +1,7 @@
 defmodule CompaniesWeb.Plugs.Session do
+  @moduledoc """
+  Plug to assign the current user on the `conn`
+  """
   import Plug.Conn
 
   alias Companies.Accounts

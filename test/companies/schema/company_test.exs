@@ -13,7 +13,7 @@ defmodule Companies.Schema.CompanyTest do
     location: "Amsterdam",
     name: "Company name",
     url: "link of the company",
-    industry_id: 12346
+    industry_id: 12_346
   }
 
   describe "changeset/2" do

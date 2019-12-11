@@ -1,4 +1,6 @@
 defmodule Companies.Schema.Job do
+  @moduledoc false
+
   use Ecto.Schema
   import Ecto.Changeset
 
