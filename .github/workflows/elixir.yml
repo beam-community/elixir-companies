@@ -22,7 +22,7 @@ jobs:
           --health-retries 5
     steps:
       - uses: actions/checkout@v1.0.0
-      - uses: actions/setup-elixir@v1.0.0
+      - uses: actions/setup-elixir@v1.2.0
         with:
           otp-version: 21.1
           elixir-version: 1.7.4
