@@ -31,22 +31,22 @@ defmodule Companies.PendingChanges do
     |> Repo.paginate(page: page)
   end
 
-  def approve(change_id, note, false) do
+  def approve(change_id, note, reviewer, false) do
     case Repo.get(PendingChange, change_id) do
       nil ->
         {:error, "change not found"}
 
       change ->
-        update_approval(change, note, false)
+        update_approval(change, note, reviewer, false)
     end
   end
 
-  def approve(change_id, note, true) do
+  def approve(change_id, note, reviewer, true) do
     with %{action: action, changes: changes, resource: resource} = change <- Repo.get(PendingChange, change_id),
          module <- resource_module(resource),
          changeset <- changeset(module, changes),
          {:ok, _changes} <- apply_changes(action, changeset) do
-      update_approval(change, note, true)
+      update_approval(change, note, reviewer, true)
     else
       nil -> {:error, "change not found"}
       {:error, changeset} -> {:error, changeset}
@@ -64,7 +64,7 @@ defmodule Companies.PendingChanges do
         nil
 
       pending_change ->
-        pending_change = Repo.preload(pending_change, :user)
+        pending_change = Repo.preload(pending_change, [:user, :reviewer])
         current = current_values(pending_change)
         %{pending_change | original: current}
     end
@@ -175,9 +175,9 @@ defmodule Companies.PendingChanges do
   defp struct_to_string(%Industry{}), do: "industry"
   defp struct_to_string(%Job{}), do: "job"
 
-  defp update_approval(change, note, approval) do
+  defp update_approval(change, note, %{id: reviewer_id} = _reviewer, approval) do
     change
-    |> PendingChange.changeset(%{approved: approval, note: String.trim(note)})
+    |> PendingChange.approve_changeset(%{approved: approval, note: String.trim(note), reviewer_id: reviewer_id})
     |> Repo.update()
     |> notification()
   end

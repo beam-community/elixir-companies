@@ -44,4 +44,8 @@ defmodule Companies.Factory do
       token: "abc1234"
     }
   end
+
+  def maintainer_factory do
+    %{build(:user) | maintainer: true}
+  end
 end
