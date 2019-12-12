@@ -1,4 +1,7 @@
 defmodule Notify.Slack do
+  @moduledoc """
+  Module to send notifications to Slack about changes to companies or jobs
+  """
   use HTTPoison.Base
 
   def notify(%{action: action, resource: resource, user: %{nickname: nickname}}, opts \\ []) do

@@ -1,4 +1,6 @@
 defmodule Companies.Schema.PendingChange do
+  @moduledoc false
+
   use Ecto.Schema
 
   import Ecto.Changeset

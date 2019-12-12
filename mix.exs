@@ -58,7 +58,8 @@ defmodule Companies.MixProject do
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:earmark, "~> 1.4"},
       {:html_sanitize_ex, "~> 1.3.0"},
-      {:timex, "~> 3.6.1"}
+      {:timex, "~> 3.6.1"},
+      {:credo, "~> 1.1.0", only: [:dev, :test], runtime: false}
     ]
   end
 

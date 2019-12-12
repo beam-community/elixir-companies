@@ -1,4 +1,8 @@
 defmodule Companies.Industries do
+  @moduledoc """
+  The Industries context.
+  """
+
   import Ecto.Query, warn: false
 
   alias Companies.Repo
@@ -13,7 +17,6 @@ defmodule Companies.Industries do
   [%Industry{}, ...]
 
   """
-
   def all do
     query =
       from i in Industry,
