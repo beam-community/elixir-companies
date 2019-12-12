@@ -27,6 +27,7 @@ defmodule Companies.PendingChanges do
 
     PendingChange
     |> predicates(params)
+    |> preload(:reviewer)
     |> order_by(desc: :inserted_at)
     |> Repo.paginate(page: page)
   end

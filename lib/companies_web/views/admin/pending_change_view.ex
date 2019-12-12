@@ -3,6 +3,14 @@ defmodule CompaniesWeb.Admin.PendingChangeView do
 
   import Scrivener.HTML
 
+  def github_user_link(%{nickname: nickname}) do
+    link(
+      nickname,
+      to: "https://github.com/#{nickname}",
+      target: "_blank"
+    )
+  end
+
   def to_json(map) do
     Jason.encode!(map, pretty: true)
   end

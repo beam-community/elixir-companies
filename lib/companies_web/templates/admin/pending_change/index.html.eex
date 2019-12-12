@@ -37,6 +37,7 @@
             <th>Action</th>
             <th>Resource</th>
             <th>Note</th>
+            <th>Reviewer</th>
             <th>Created</th>
           </tr>
         </thead>
@@ -50,6 +51,11 @@
           <td><%= pending_change.action %></td>
           <td><%= pending_change.resource %></td>
           <td><%= pending_change.note %></td>
+          <td>
+            <%= if pending_change.reviewer do %>
+              <%= github_user_link pending_change.reviewer  %>
+            <% end %>
+          </td>
           <td><%= pending_change.inserted_at %></td>
         </tr>
         <% end %>
