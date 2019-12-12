@@ -1,4 +1,6 @@
 defmodule Companies.Factory do
+  @moduledoc false
+
   use ExMachina.Ecto, repo: Companies.Repo
 
   alias Companies.Schema.{Company, Industry, Job, PendingChange, User}
