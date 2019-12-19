@@ -5,7 +5,8 @@ defmodule Companies.PendingChangesTest do
   import Companies.Factory
   import ExUnit.CaptureLog
 
-  alias Companies.{Companies, PendingChanges, Schema.PendingChange}
+  alias Companies.Schema.{Company, PendingChange}
+  alias Companies.{Companies, PendingChanges}
 
   @email_subject_approval "Your Elixir Companies change was approved"
   @email_subject_rejection "Your Elixir Companies change needs to be revisited"
@@ -70,6 +71,7 @@ defmodule Companies.PendingChangesTest do
       assert {:ok, %{approved: true}} = PendingChanges.approve(id, @note, insert(:maintainer), true)
       assert %{total_entries: 0} = Companies.all()
       assert_email_delivered_with(subject: @email_subject_approval)
+      assert %{removed_pending_change_id: id} = Repo.get!(Company, company_id)
     end
 
     test "rejects a pending change" do

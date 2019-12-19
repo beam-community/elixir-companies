@@ -29,6 +29,13 @@ defmodule Companies.CompaniesTest do
       assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"industry_id" => alpha.industry_id}})
     end
 
+    test "does not retrieve deleted records" do
+      insert(:company, %{removed_pending_change: build(:pending_change)})
+      insert(:company)
+
+      assert %{page_number: 1, page_size: 16, total_entries: 1, total_pages: 1} = Companies.all()
+    end
+
     test "filters companies by text" do
       insert(:company, name: "ZULU")
       insert(:company, name: "BETA")
@@ -75,6 +82,29 @@ defmodule Companies.CompaniesTest do
       assert_raise Ecto.NoResultsError, fn ->
         Companies.get!(1000, preloads: [:jobs])
       end
+    end
+  end
+
+  describe "get!/1" do
+    test "retrieves by id" do
+      %{id: company_id} = insert(:company)
+
+      assert %{id: ^company_id} = Companies.get!(company_id)
+    end
+
+    test "does not retrieve deleted record" do
+      company = insert(:company, %{removed_pending_change: build(:pending_change)})
+
+      assert_raise Ecto.NoResultsError, fn -> Companies.get!(company.id) end
+    end
+  end
+
+  describe "count/0" do
+    test "calculates non-deleted companies" do
+      insert_list(2, :company)
+      insert(:company, %{removed_pending_change: build(:pending_change)})
+
+      assert 2 == Companies.count()
     end
   end
 

@@ -20,6 +20,7 @@ defmodule Companies.Industries do
   def all do
     query =
       from i in Industry,
+        where: is_nil(i.removed_pending_change_id),
         order_by: i.name
 
     Repo.all(query)
