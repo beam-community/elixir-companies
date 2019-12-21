@@ -1,4 +1,7 @@
 defmodule Companies.JobChecker.Scheduler do
+  @moduledoc """
+  The module to run Companies.JobChecker periodically.
+  """
   use GenServer
 
   alias Companies.JobChecker

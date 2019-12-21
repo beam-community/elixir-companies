@@ -71,6 +71,19 @@ defmodule Companies.PendingChanges do
     end
   end
 
+  def get_pending_changes_for(record) do
+    resource_name = struct_to_string(record)
+    id = record.id |> to_string()
+
+    query =
+      from p in PendingChange,
+        where: p.resource == ^resource_name,
+        where: is_nil(p.approved),
+        where: fragment("changes->>'id' = ?", ^id)
+
+    Repo.all(query)
+  end
+
   defp apply_changes("create", changeset, _change_id), do: Repo.insert(changeset)
 
   defp apply_changes("delete", record, change_id) do

@@ -37,10 +37,7 @@ config :companies,
   },
   results_per_page: 16
 
-config :companies, :jobs_url_checker,
-  enabled: true,
-  # 13 hours
-  interval: 46_800
+config :companies, :jobs_url_checker, enabled: false
 
 config :oauth2,
   serializers: %{

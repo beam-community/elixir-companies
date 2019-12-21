@@ -23,3 +23,9 @@ config :companies, Notify.Mailer,
 
 # Do not print debug messages in production
 config :logger, level: :info
+
+config :companies, :jobs_url_checker,
+  enabled: true,
+  # 13 hours
+  interval: 46_800,
+  user_id: System.get_env("JOB_CHECKER_USER_ID")

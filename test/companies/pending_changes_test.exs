@@ -116,4 +116,16 @@ defmodule Companies.PendingChangesTest do
       assert %{id: ^id} = PendingChanges.get(id)
     end
   end
+
+  describe "get_pending_changes_for/1" do
+    test "retrieves a pending changes list for the given company" do
+      company = insert(:company)
+
+      insert(:pending_change)
+      insert(:pending_change, %{approved: true, action: "update", changes: %{id: company.id, name: "updated"}})
+      %{id: id} = insert(:pending_change, %{action: "update", changes: %{id: company.id, name: "updated"}})
+
+      assert [%{id: ^id}] = PendingChanges.get_pending_changes_for(company)
+    end
+  end
 end

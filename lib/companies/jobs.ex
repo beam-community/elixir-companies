@@ -109,10 +109,6 @@ defmodule Companies.Jobs do
       {:error, %Ecto.Changeset{}}
 
   """
-  def delete(%Job{} = job) do
-    Repo.delete(job)
-  end
-
   def delete(%Job{} = job, user) do
     PendingChanges.create(job, :delete, user)
   end
