@@ -51,6 +51,6 @@
       </div> <!-- /columns -->
     </div> <!-- /content -->
 
-    <%= pagination_links(@companies, [next: gettext("Next") , previous: gettext("Previous")] ++ companies_query_params(@conn)) %>
+    <%= pagination_links(@companies, [next: gettext("Next") , previous: gettext("Previous")] ++ query_params(@conn)) %>
   </div> <!-- /container -->
 </section>
