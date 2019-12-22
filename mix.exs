@@ -54,7 +54,6 @@ defmodule Companies.MixProject do
       {:ueberauth_github, "~> 0.7.0"},
       {:bypass, "~> 1.0", only: :test},
       {:ex_machina, "~> 2.2", only: :test},
-      {:floki, "~> 0.23.0", only: :test},
       {:excoveralls, "~> 0.10", only: :test},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:earmark, "~> 1.4"},
