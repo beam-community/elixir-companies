@@ -14,77 +14,77 @@ msgstr ""
 #, elixir-format
 #: lib/companies_web/templates/company/recent.html.eex:19
 msgid "Add a company"
-msgstr ""
+msgstr "Добавить компанию"
 
 #, elixir-format
 #: lib/companies_web/templates/company/card.html.eex:58
 #: lib/companies_web/templates/company/show.html.eex:36
 msgid "Add a job"
-msgstr ""
+msgstr "Добавить вакансию"
 
 #, elixir-format
 #: lib/companies_web/templates/layout/account.html.eex:5
 msgid "Approvals"
-msgstr ""
+msgstr "Подтверждения"
 
 #, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:77
 #: lib/companies_web/templates/job/form.html.eex:45
 #: lib/companies_web/templates/job/show.html.eex:23
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #, elixir-format
 #: lib/companies_web/templates/company/card.html.eex:18
 #: lib/companies_web/templates/job/show.html.eex:22
 msgid "Edit"
-msgstr ""
+msgstr "Редактировать"
 
 #, elixir-format
 #: lib/companies_web/templates/company/edit.html.eex:4
 msgid "Edit Company"
-msgstr ""
+msgstr "Редактировать компанию"
 
 #, elixir-format
 #: lib/companies_web/templates/job/edit.html.eex:4
 msgid "Edit Job"
-msgstr ""
+msgstr "Редактировать вакансию"
 
 #, elixir-format
 #: lib/companies_web/templates/company/hiring.html.eex:4
 msgid "Hiring"
-msgstr ""
+msgstr "Нанимают"
 
 #, elixir-format
 #: lib/companies_web/templates/company/card.html.eex:5
 msgid "Hiring!"
-msgstr ""
+msgstr "Работа!"
 
 #, elixir-format
 #: lib/companies_web/templates/error/404_page.html.eex:3
 msgid "Looks like you are lost"
-msgstr ""
+msgstr "Похоже, что вы заблудились"
 
 #, elixir-format
 #: lib/companies_web/templates/layout/footer.html.eex:17
 msgid "Made possible with support from"
-msgstr ""
+msgstr "Стало возможным с помощью "
 
 #, elixir-format
 #: lib/companies_web/templates/company/new.html.eex:4
 msgid "New Company"
-msgstr ""
+msgstr "Создать компанию"
 
 #, elixir-format
 #: lib/companies_web/templates/job/new.html.eex:4
 msgid "New Job"
-msgstr ""
+msgstr "Создать вакансию"
 
 #, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:4
 #: lib/companies_web/templates/job/form.html.eex:4
 msgid "Oops, something went wrong! Please check the errors below."
-msgstr ""
+msgstr "Что-то пошло не так! Проверьте ошибки в форме ниже."
 
 #, elixir-format
 #: lib/companies_web/templates/company/recent.html.eex:37
@@ -95,119 +95,119 @@ msgstr "Последние добавленные"
 #: lib/companies_web/templates/company/form.html.eex:74
 #: lib/companies_web/templates/job/form.html.eex:42
 msgid "Save"
-msgstr ""
+msgstr "Сохранить"
 
 #, elixir-format
 #: lib/companies_web/templates/job/show.html.eex:1
 msgid "Show Job"
-msgstr ""
+msgstr "Показать вакансию"
 
 #, elixir-format
 #: lib/companies_web/templates/layout/account.html.eex:23
 msgid "Sign in"
-msgstr ""
+msgstr "Войти"
 
 #, elixir-format
 #: lib/companies_web/templates/company/recent.html.eex:23
 msgid "Sign in & list free"
-msgstr ""
+msgstr "Войти и добавить компанию бесплатно"
 
 #, elixir-format
 #: lib/companies_web/templates/layout/account.html.eex:14
 msgid "Sign out"
-msgstr ""
+msgstr "Выйти"
 
 #, elixir-format
 #: lib/companies_web/templates/job/show.html.eex:6
 msgid "Title:"
-msgstr ""
+msgstr "Залоговок:"
 
 #, elixir-format
 #: lib/companies_web/templates/job/show.html.eex:11
 msgid "Url:"
-msgstr ""
+msgstr "Адрес:"
 
 #, elixir-format
 #: lib/companies_web/templates/company/recent.html.eex:9
 msgid "With <span class='has-text-weight-semibold'>%{companies_count}</span> and counting..."
-msgstr ""
+msgstr "Уже <span class='has-text-weight-semibold'>%{companies_count}</span> и продолжаем искать..."
 
 #, elixir-format
 #: lib/companies_web/templates/layout/footer.html.eex:8
 msgid "is maintained by"
-msgstr ""
+msgstr "поддерживается"
 
 #, elixir-format
 #: lib/companies_web/helpers/site_helpers.ex:12
 msgid "A collection of companies using Elixir in production."
-msgstr ""
+msgstr "Компании, использующие Elixir в реальных проектах."
 
 #, elixir-format
 #: lib/companies_web/templates/layout/navbar.html.eex:17
 msgid "Home"
-msgstr ""
+msgstr "Главная"
 
 #, elixir-format
 #: lib/companies_web/templates/layout/footer.html.eex:14
 msgid " and a team of contributors!"
-msgstr ""
+msgstr " и командой добровольцев."
 
 #, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:65
 msgid "Blog website"
-msgstr ""
+msgstr "Адрес блога"
 
 #, elixir-format
 #: lib/companies_web/templates/job/form.html.eex:9
 #: lib/companies_web/templates/job/index.html.eex:37
 msgid "Company"
-msgstr ""
+msgstr "Компания"
 
 #, elixir-format
 #: lib/companies_web/templates/company/card.html.eex:21
 msgid "Delete"
-msgstr ""
+msgstr "Удалить"
 
 #, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:26
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 #, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:9
 #: lib/companies_web/templates/company/index.html.eex:20
 msgid "Industry"
-msgstr ""
+msgstr "Отрасль"
 
 #, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:45
 msgid "Location"
-msgstr ""
+msgstr "Расположение"
 
 #, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:18
 msgid "Name"
-msgstr ""
+msgstr "Название"
 
 #, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:54
 msgid "Optional fields"
-msgstr ""
+msgstr "Опциональные поля"
 
 #, elixir-format
 #: lib/companies_web/templates/job/index.html.eex:36
 msgid "Title"
-msgstr ""
+msgstr "Заголовок"
 
 #, elixir-format
 #: lib/companies_web/templates/job/form.html.eex:23
 msgid "Url"
-msgstr ""
+msgstr "Адрес"
 
 #, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:37
 msgid "Website"
-msgstr ""
+msgstr "Сайт"
 
 #, elixir-format
 #: lib/companies_web/views/admin/pending_change_view.ex:11
@@ -223,29 +223,29 @@ msgstr ""
 #, elixir-format
 #: lib/companies_web/templates/company/recent.html.eex:46
 msgid "Browse full list"
-msgstr ""
+msgstr "Показать полный список"
 
 #, elixir-format
 #: lib/companies_web/templates/company/index.html.eex:4
 #: lib/companies_web/templates/layout/navbar.html.eex:18
 msgid "Companies"
-msgstr ""
+msgstr "Компании"
 
 #, elixir-format
 #: lib/companies_web/templates/job/form.html.eex:15
 msgid "Job Title"
-msgstr ""
+msgstr "Заголовок вакансии"
 
 #, elixir-format
 #: lib/companies_web/templates/job/index.html.eex:3
 #: lib/companies_web/templates/layout/navbar.html.eex:19
 msgid "Jobs"
-msgstr ""
+msgstr "Вакансии"
 
 #, elixir-format
 #: lib/companies_web/templates/job/index.html.eex:38
 msgid "Last update"
-msgstr ""
+msgstr "Последнее обновление"
 
 #, elixir-format
 #: lib/companies_web/views/admin/pending_change_view.ex:10
@@ -273,45 +273,45 @@ msgstr ""
 #: lib/companies_web/templates/job/index.html.eex:35
 #: lib/companies_web/templates/job/show.html.eex:16
 msgid "Remote"
-msgstr ""
+msgstr "Удалённо"
 
 #, elixir-format
 #: lib/companies_web/templates/company/index.html.eex:38
 #: lib/companies_web/templates/job/index.html.eex:26
 msgid "Search"
-msgstr ""
+msgstr "Поиск"
 
 #, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:32
 msgid "Styling with Markdown is supported"
-msgstr ""
+msgstr "Поддерживается Markdown форматирование"
 
 #, elixir-format
 #: lib/companies_web/templates/job/form.html.eex:35
 msgid "This is a remote job"
-msgstr ""
+msgstr "Это удалённая работа"
 
 #, elixir-format
 #: lib/companies_web/templates/job/index.html.eex:40
 msgid "Actions"
-msgstr ""
+msgstr "Действия"
 
 #, elixir-format
 #: lib/companies_web/templates/company/index.html.eex:54
 msgid "Next"
-msgstr ""
+msgstr "Следующая"
 
 #, elixir-format
 #: lib/companies_web/templates/company/index.html.eex:54
 msgid "Previous"
-msgstr ""
+msgstr "Предыдущая"
 
 #, elixir-format
 #: lib/companies_web/templates/job/index.html.eex:20
 msgid "Show only remote jobs"
-msgstr ""
+msgstr "Только удалённые вакансии"
 
 #, elixir-format
 #: lib/companies_web/templates/company/index.html.eex:10
 msgid "Text"
-msgstr ""
+msgstr "Текст"
