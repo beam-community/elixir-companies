@@ -23,6 +23,11 @@ defmodule CompaniesWeb.ConnCase do
 
       # The default endpoint for testing
       @endpoint CompaniesWeb.Endpoint
+
+      import Ecto
+      import Ecto.Changeset
+      import Ecto.Query
+      import Companies.Factory
     end
   end
 
