@@ -18,6 +18,8 @@
     <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
   </head>
   <body>
+    <div id="overlay">
+    </div>
     <div id="wrapper">
       <%= render "navbar.html", conn: @conn %>
       <%= render @view_module, @view_template, assigns %>

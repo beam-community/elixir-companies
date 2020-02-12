@@ -104,11 +104,19 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   var $companyTogglers = document.querySelectorAll(".toggle-company-actions");
+  var $overlay = document.getElementById("overlay");
+  $overlay.addEventListener("click", () => {
+    $companyTogglers.forEach((toggler) => {
+      toggler.parentElement.classList.toggle("show")
+    })
+    $overlay.style.display = "none"
+  })
 
   if ($companyTogglers) {
     $companyTogglers.forEach(function(toggler) {
       toggler.addEventListener("click", function() {
         toggler.parentElement.classList.toggle("show");
+        $overlay.style.display = "block"
       });
     });
   }
