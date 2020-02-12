@@ -6,63 +6,70 @@
 <% end %>
 
 <section class="section">
-<div class="navbar">
-  <div class="field is-grouped navbar-end">
-      <p class="control">
-        <%= link to: Routes.pending_change_path(@conn, :index, locale(@conn)), class: "navbar-item button" do %>
-          <span><%= gettext("Pending Changes") %></span>
+  <div class="tabs is-centered">
+    <ul>
+      <li class="<%= active_tab?(@conn.params, :pending) %>">
+        <%= link to: Routes.pending_change_path(@conn, :index, locale(@conn))do %>
+        <span class="icon is-small">
+          <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+        </span>
+        <span><%= gettext("Pending Changes") %></span>
         <% end %>
-      </p>
-      <p class="control">
-        <%= link to: Routes.pending_change_path(@conn, :index, locale(@conn), approved: true), class: "navbar-item button" do %>
+      </li>
+      <li class="<%= active_tab?(@conn.params, :approved) %>">
+        <%= link to: Routes.pending_change_path(@conn, :index, locale(@conn), approved: true) do %>
+          <span class="icon is-small">
+            <i class="fas fa-check-circle" aria-hidden="true"></i>
+          </span>
           <span><%= gettext("Approved Changes") %></span>
         <% end %>
-      </p>
-      <p class="control">
-        <%= link to: Routes.pending_change_path(@conn, :index, locale(@conn), approved: false), class: "navbar-item button" do %>
+      </li>
+      <li class="<%= active_tab?(@conn.params, :unapproved) %>">
+        <%= link to: Routes.pending_change_path(@conn, :index, locale(@conn), approved: false) do %>
+          <span class="icon is-small">
+            <i class="fas fa-times-circle" aria-hidden="true"></i>
+          </span>
           <span><%= gettext("Rejected Changes") %></span>
         <% end %>
-      </p>
+      </li>
+    </ul>
   </div>
-  </div>
-  <div class="container">
-    <div class="content">
-      <h1 class="title is-3 fancy">
-        <%= pending_changes_title(@conn) %>
-      </h1>
-      <table class="table">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Action</th>
-            <th>Resource</th>
-            <th>Note</th>
-            <th>Reviewer</th>
-            <th>Created</th>
-          </tr>
-        </thead>
-        <%= for pending_change <- @pending_changes do %>
-        <tr>
-          <td>
-            <%= link to: Routes.pending_change_path(@conn, :show, locale(@conn), pending_change) do %>
-              <i class="fas fa-eye"></i>
-            <% end %>
-          </td>
-          <td><%= pending_change.action %></td>
-          <td><%= pending_change.resource %></td>
-          <td><%= pending_change.note %></td>
-          <td>
-            <%= if pending_change.reviewer do %>
-              <%= github_user_link pending_change.reviewer  %>
-            <% end %>
-          </td>
-          <td><%= pending_change.inserted_at %></td>
-        </tr>
-        <% end %>
-      </table>
+  <div class="row">
+    <div class="container">
+      <div class="content">
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Action</th>
+              <th>Resource</th>
+              <th>Note</th>
+              <th>Reviewer</th>
+              <th>Created</th>
+            </tr>
+          </thead>
+          <%= for pending_change <- @pending_changes do %>
+            <tr>
+              <td>
+                <%= link to: Routes.pending_change_path(@conn, :show, locale(@conn), pending_change) do %>
+                  <i class="fas fa-eye"></i>
+                <% end %>
+              </td>
+              <td><%= pending_change.action %></td>
+              <td><%= pending_change.resource %></td>
+              <td><%= pending_change.note %></td>
+              <td>
+                <%= if pending_change.reviewer do %>
+                  <%= github_user_link pending_change.reviewer  %>
+                <% end %>
+              </td>
+              <td><%= pending_change.inserted_at %></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
     </div>
-  </div>
 
-  <%= pagination_links(@pending_changes, [next: "Next", previous: "Previous"] ++ query_params(@conn)) %>
+    <%= pagination_links(@pending_changes, [next: "Next", previous: "Previous"] ++ query_params(@conn)) %>
 
 </section>
