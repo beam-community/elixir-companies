@@ -26,7 +26,7 @@
           <div class="field is-grouped is-grouped-centered">
             <div class="control is-expanded">
               <label class="label">Note</label>
-              <input class="input" name="note" type="text">
+              <input class="input" name="note" type="text" required>
             </div>
           </div>
 
