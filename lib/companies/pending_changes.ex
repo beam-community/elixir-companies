@@ -107,6 +107,9 @@ defmodule Companies.PendingChanges do
     %{}
   end
 
+  defp determine_changes(changes, :create, _resource), do: changes
+  defp determine_changes(changes, _, resource), do: Map.put(changes, "id", resource.id)
+
   defp drop_ecto_fields(schema) do
     schema
     |> Map.from_struct()
@@ -141,7 +144,7 @@ defmodule Companies.PendingChanges do
   defp insert_change(%{data: resource, params: changes}, action, %{id: user_id} = user) do
     params = %{
       action: to_string(action),
-      changes: changes,
+      changes: determine_changes(changes, action, resource),
       resource: struct_to_string(resource),
       user_id: user_id
     }
