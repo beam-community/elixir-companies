@@ -25,4 +25,15 @@ defmodule CompaniesWeb.Admin.PendingChangeView do
 
   def pending_approval?(%{approved: nil}), do: true
   def pending_approval?(_), do: false
+
+  def active_tab?(params, page) do
+    case current_page_from_params(params) == page do
+      true -> "is-active"
+      false -> ""
+    end
+  end
+
+  defp current_page_from_params(%{"approved" => "true"}), do: :approved
+  defp current_page_from_params(%{"approved" => "false"}), do: :unapproved
+  defp current_page_from_params(_), do: :pending
 end
