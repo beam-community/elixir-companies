@@ -7,6 +7,15 @@ defmodule Companies.Accounts do
 
   alias Companies.{Repo, Schema.User}
 
+  def for_hire(params) do
+    page = Map.get(params, "page", "1")
+
+    (u in User)
+    |> from()
+    |> where([u], u.looking_for_job == true)
+    |> Repo.paginate(page: page)
+  end
+
   @doc """
   Gets a single user.
 

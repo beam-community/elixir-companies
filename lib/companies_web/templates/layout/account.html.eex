@@ -10,6 +10,14 @@
     </p>
   <% end %>
   <p class="control">
+    <%= link to: Routes.user_path(@conn, :profile, locale(@conn)), class: "navbar-item button" do %>
+      <span><%= gettext("Profile") %></span>
+      <span class="icon">
+        <i class="fas fa-user-circle"></i>
+      </span>
+    <% end %>
+  </p>
+  <p class="control">
     <%= link to: Routes.auth_path(@conn, :signout), class: "navbar-item button" do %>
       <span><%= gettext("Sign out") %></span>
       <span class="icon">

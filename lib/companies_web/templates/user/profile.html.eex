@@ -1,0 +1,14 @@
+<section class="section">
+  <div class="container">
+    <div class="content is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
+      <h1 class="title is-3 fancy"><%= @user.nickname %></h1>
+      <div class="content company-info has-text-left">
+        <p class="is-size-7">
+        <span class="icon purple"><i class="fas fa-fw fa-cogs"></i></span>
+        <%= @user.email %>
+          <br>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
