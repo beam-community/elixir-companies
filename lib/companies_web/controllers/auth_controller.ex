@@ -18,7 +18,7 @@ defmodule CompaniesWeb.AuthController do
   def signout(conn, _params) do
     conn
     |> configure_session(drop: true)
-    |> redirect(to: Routes.company_path(conn, :recent))
+    |> redirect(to: Routes.company_path(conn, :recent, locale(conn)))
   end
 
   defp signin(conn, user_params) do
