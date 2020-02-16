@@ -31,7 +31,6 @@ defmodule Companies.Schema.User do
   end
 
   def profile_changeset(user, attrs) do
-    user
-    |> cast(attrs, [:interests, :cv_url, :looking_for_job])
+    cast(user, attrs, [:interests, :cv_url, :looking_for_job])
   end
 end
