@@ -17,6 +17,11 @@
         <i class="far fa-file"></i>
       </span>
     <% end %>
+    <%= link to: "https://github.com/#{@user.nickname}", target: "_blank" do %>
+      <span class="icon purple">
+        <i class="fab fa-github"></i>
+      </span>
+    <% end %>
     </p>
   </div>
 </div>
