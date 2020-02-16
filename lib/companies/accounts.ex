@@ -74,8 +74,6 @@ defmodule Companies.Accounts do
   end
 
   def update(%User{} = user, attrs) do
-    IO.inspect(attrs)
-
     user
     |> User.profile_changeset(attrs)
     |> IO.inspect()
