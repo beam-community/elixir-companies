@@ -76,7 +76,6 @@ defmodule Companies.Accounts do
   def update(%User{} = user, attrs) do
     user
     |> User.profile_changeset(attrs)
-    |> IO.inspect()
     |> Repo.update()
   end
 
