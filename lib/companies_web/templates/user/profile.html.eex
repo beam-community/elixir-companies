@@ -1,13 +1,94 @@
 <section class="section">
-  <div class="container">
-    <div class="content is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
-      <h1 class="title is-3 fancy"><%= @user.nickname %></h1>
+  <div class="columns">
+    <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-fullhd">
+      <figure class="has-image-centered image is-flex is-128x128">
+        <img class="is-rounded" src="<%= @user.image %>" />
+      </figure>
+      <br>
+      <%= if current_user(@conn) == @user do %>
+      <div class="container has-text-centered">
+        <%= link gettext("Edit Profile"), to: Routes.user_path(@conn, :edit, locale(@conn), @user), class: "button is-link" %>
+      </div>
+      <% else %>
+        <%= link gettext("Contact Developer"), to: "mailto: #{@user.email}", class: "button is-link"%>
+      <% end %>
+      <p class="is-size-5">
+      </p>
+    </div>
+    <div class="column is-full-mobile is-half-tablet is-two-thirds-desktop is-three-quarters-fullhd">
+      <h1 class="title is-3 fancy"><%= @user.name %> aka <%= @user.nickname %></h1>
       <div class="content company-info has-text-left">
-        <p class="is-size-7">
-        <span class="icon purple"><i class="fas fa-fw fa-cogs"></i></span>
-        <%= @user.email %>
+        <p class="is-size-5">
+          <span class="icon purple">
+            <i class="fab fa-github"></i>
+          </span>
+          <%= link @user.nickname, to: "https://github.com/#{@user.nickname}", target: "_blank" %>
           <br>
         </p>
+        <p class="is-size-5">
+          <span class="icon purple">
+            <i class="fas fa-at"></i>
+          </span>
+          <%= @user.email %>
+          <br>
+        </p>
+        <%= if @user.bio do %>
+        <p class="is-size-5">
+          <span class="icon purple">
+            <i class="fas fa-info"></i>
+          </span>
+          <%= @user.bio %>
+          <br>
+        </p>
+        <% end %>
+        <%= if @user.description do %>
+        <p class="is-size-5">
+          <span class="icon purple">
+            <i class="fas fa-info"></i>
+          </span>
+          <%= @user.description %>
+        </p>
+        <% end %>
+        <%= if @user.description do %>
+        <p class="is-size-5">
+          <span class="icon purple">
+            <i class="fas fa-info"></i>
+          </span>
+          <%= @user.description %>
+        </p>
+        <% end %>
+        <%= if @user.location do %>
+        <p class="is-size-5">
+          <span class="icon purple">
+            <i class="fas fa-map-marker-alt"></i>
+          </span>
+          <%= @user.location %>
+        </p>
+        <% end %>
+        <%= if @user.interests do %>
+        <p class="is-size-5">
+          <span class="icon purple">
+            <i class="fas fa-heart"></i>
+          </span>
+          <%= @user.interests %>
+        </p>
+        <% end %>
+        <%= if @user.cv_url do %>
+        <p class="is-size-5">
+          <span class="icon purple">
+            <i class="far fa-file"></i>
+          </span>
+          <%= @user.cv_url %>
+        </p>
+        <% end %>
+        <%= if @user.looking_for_job == true do %>
+        <p class="is-size-5">
+          <span class="icon purple">
+            <i class="fab fa-hire-a-helper"></i>
+          </span>
+          Available for hire
+        </p>
+        <% end %>
       </div>
     </div>
   </div>

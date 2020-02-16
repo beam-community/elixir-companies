@@ -51,8 +51,15 @@ defmodule Companies.Accounts do
   def create(attrs \\ %{}) do
     %User{}
     |> User.changeset(attrs)
-    |> Repo.insert(on_conflict: {:replace, [:token]}, conflict_target: :email)
+    |> Repo.insert(
+      on_conflict: {:replace, [:token, :name, :nickname, :image, :description, :bio, :location]},
+      conflict_target: :email
+    )
     |> maintainer_status()
+  end
+
+  def change(%User{} = user) do
+    User.profile_changeset(user, %{})
   end
 
   @doc """
@@ -67,8 +74,11 @@ defmodule Companies.Accounts do
   end
 
   def update(%User{} = user, attrs) do
+    IO.inspect(attrs)
+
     user
-    |> User.changeset(attrs)
+    |> User.profile_changeset(attrs)
+    |> IO.inspect()
     |> Repo.update()
   end
 

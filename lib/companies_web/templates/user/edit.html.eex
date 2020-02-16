@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="columns is-centered">
+    <div class="column is-half">
+      <h1 class="has-text-centered title"><%= gettext("Edit Profile") %></h1>
+      <%= render "form.html", Map.put(assigns, :action, Routes.user_path(@conn, :update, locale(@conn), @user)) %>
+    </div>
+  </div>
+</div>

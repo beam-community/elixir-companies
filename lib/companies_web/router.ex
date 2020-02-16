@@ -55,6 +55,9 @@ defmodule CompaniesWeb.Router do
 
       resources "/companies", CompanyController, except: [:index, :show]
       resources "/jobs", JobController, except: [:index, :show]
+      # get "/users/:id/edit", UserController, :edit
+      # post "/users/:id", UserController, :update
+      resources "/users", UserController, only: [:edit, :update]
     end
 
     get "/", CompanyController, :recent
