@@ -60,9 +60,9 @@ defmodule CompaniesWeb.Router do
 
     get "/", CompanyController, :recent
     resources "/companies", CompanyController, only: [:index, :show]
-    get "/for_hire", UserController, :for_hire
     get "/jobs", JobController, :index
     get "/profile", UserController, :profile
+    get "/for_hire", UserController, :for_hire
 
     scope "/admin", Admin do
       pipe_through [:admin]
