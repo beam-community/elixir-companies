@@ -6,8 +6,6 @@ defmodule CompaniesWeb.AuthController do
   plug Ueberauth
 
   def callback(%{assigns: %{ueberauth_auth: auth}} = conn, _params) do
-    IO.inspect(auth)
-
     user_params = %{
       email: auth.info.email,
       nickname: auth.info.nickname,
