@@ -41,7 +41,14 @@ defmodule Companies.Factory do
   def user_factory do
     %User{
       email: sequence(:email, &"user-#{&1}@example.com"),
-      token: "abc1234"
+      token: "abc1234",
+      name: "test name",
+      bio: "test bio",
+      description: "test description",
+      location: "test location",
+      interests: "test interests",
+      cv_url: "test cv url",
+      looking_for_job: false
     }
   end
 
