@@ -13,7 +13,11 @@ jobs:
     name: Elixir
     services:
       db:
-        image: postgres
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: postgres
+        image: postgres:11
         ports: ['5432:5432']
         options: >-
           --health-cmd pg_isready
