@@ -76,7 +76,7 @@
           <span class="icon purple">
             <i class="far fa-file"></i>
           </span>
-          <%= @user.cv_url %>
+          <%= link gettext("Check my CV"), to: url_with_scheme(@user.cv_url), target: "_blank" %>
         </p>
         <% end %>
         <%= if @user.looking_for_job == true do %>
