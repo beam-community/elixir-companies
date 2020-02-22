@@ -9,7 +9,12 @@ defmodule CompaniesWeb.AuthController do
     user_params = %{
       email: auth.info.email,
       nickname: auth.info.nickname,
-      token: auth.credentials.token
+      token: auth.credentials.token,
+      name: auth.info.name,
+      image: auth.info.image,
+      description: auth.info.description,
+      bio: auth.extra.raw_info.user["bio"],
+      location: auth.info.location
     }
 
     signin(conn, user_params)

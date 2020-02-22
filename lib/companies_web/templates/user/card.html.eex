@@ -1,0 +1,27 @@
+<div class="company box %>">
+  <div class="content has-text-centered">
+    <figure class="has-image-centered image is-flex is-256x256">
+      <%= link to: Routes.user_path(@conn, :profile, locale(@conn)) do %>
+        <img class="is-rounded" src="<%= @user.image %>" />
+      <% end%>
+    </figure>
+      <%= link @user.name, to: Routes.user_path(@conn, :profile, locale(@conn)) %>
+    <p class="title is-5 thin">
+      <%= link to: "mailto: #{@user.email}" do %>
+        <span class="icon purple">
+          <i class="fas fa-at"></i>
+        </span>
+      <% end %>
+    <%= link to: @user.cv_url, target: "_blank" do %>
+      <span class="icon purple">
+        <i class="far fa-file"></i>
+      </span>
+    <% end %>
+    <%= link to: "https://github.com/#{@user.nickname}", target: "_blank" do %>
+      <span class="icon purple">
+        <i class="fab fa-github"></i>
+      </span>
+    <% end %>
+    </p>
+  </div>
+</div>

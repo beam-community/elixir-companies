@@ -7,6 +7,15 @@ defmodule Companies.Accounts do
 
   alias Companies.{Repo, Schema.User}
 
+  def for_hire(params) do
+    page = Map.get(params, "page", "1")
+
+    (u in User)
+    |> from()
+    |> where([u], u.looking_for_job == true)
+    |> Repo.paginate(page: page)
+  end
+
   @doc """
   Gets a single user.
 
@@ -42,8 +51,15 @@ defmodule Companies.Accounts do
   def create(attrs \\ %{}) do
     %User{}
     |> User.changeset(attrs)
-    |> Repo.insert(on_conflict: {:replace, [:token]}, conflict_target: :email)
+    |> Repo.insert(
+      on_conflict: {:replace, [:token, :name, :nickname, :image, :description, :bio, :location]},
+      conflict_target: :email
+    )
     |> maintainer_status()
+  end
+
+  def change(%User{} = user) do
+    User.profile_changeset(user, %{})
   end
 
   @doc """
@@ -59,7 +75,7 @@ defmodule Companies.Accounts do
 
   def update(%User{} = user, attrs) do
     user
-    |> User.changeset(attrs)
+    |> User.profile_changeset(attrs)
     |> Repo.update()
   end
 

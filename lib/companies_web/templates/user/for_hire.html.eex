@@ -1,0 +1,16 @@
+<section class="section">
+  <div class="container">
+
+    <h1 class="title is-3 fancy"><%= gettext("Developers") %></h1>
+    <div class="content">
+      <div class="columns is-mobile is-multiline">
+        <%= for user <- @users do %>
+          <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
+            <%= render "card.html", user: user, conn: @conn %>
+          </div>
+        <% end %>
+      </div> <!-- /columns -->
+    </div> <!-- /content -->
+    <%= pagination_links(@users, [next: gettext("Next") , previous: gettext("Previous")] ++ query_params(@conn)) %>
+  </div> <!-- /container -->
+</section>
