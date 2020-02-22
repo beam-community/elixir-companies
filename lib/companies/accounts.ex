@@ -17,10 +17,7 @@ defmodule Companies.Accounts do
   end
 
   def get_developer_profile(id) do
-    (u in User)
-    |> from()
-    |> where([u], u.id == ^id and u.looking_for_job == true)
-    |> Repo.one()
+    Repo.get_by(User, id: id, looking_for_job: true)
   end
 
   @doc """
