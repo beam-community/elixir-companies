@@ -145,4 +145,11 @@ defmodule Companies.CompaniesTest do
                |> Companies.update(%{name: nil}, user)
     end
   end
+
+  describe "change/1" do
+    test "creates a changeset for company details" do
+      company = insert(:company)
+      assert %Ecto.Changeset{data: ^company} = Companies.change(company)
+    end
+  end
 end
