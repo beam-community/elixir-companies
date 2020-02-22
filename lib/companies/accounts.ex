@@ -16,6 +16,10 @@ defmodule Companies.Accounts do
     |> Repo.paginate(page: page)
   end
 
+  def get_developer_profile(id) do
+    Repo.get_by(User, id: id, looking_for_job: true)
+  end
+
   @doc """
   Gets a single user.
 

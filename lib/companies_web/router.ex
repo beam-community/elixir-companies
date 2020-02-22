@@ -63,6 +63,7 @@ defmodule CompaniesWeb.Router do
     get "/jobs", JobController, :index
     get "/profile", UserController, :profile
     get "/for_hire", UserController, :for_hire
+    get "/users/:id", UserController, :show
 
     scope "/admin", Admin do
       pipe_through [:admin]

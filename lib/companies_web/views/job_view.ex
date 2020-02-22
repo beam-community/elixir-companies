@@ -2,6 +2,7 @@ defmodule CompaniesWeb.JobView do
   use CompaniesWeb, :view
 
   import Scrivener.HTML
+  import Companies.URLSchemer
 
   def companies_for_select(companies) do
     Enum.map(companies, fn company ->
@@ -26,8 +27,4 @@ defmodule CompaniesWeb.JobView do
 
   def remote_ribbon(%{remote: true}), do: "has-ribbon"
   def remote_ribbon(_), do: ""
-
-  def url_with_scheme("http://" <> _ = url), do: url
-  def url_with_scheme("https://" <> _ = url), do: url
-  def url_with_scheme(url, scheme \\ "https"), do: "#{scheme}://#{url}"
 end

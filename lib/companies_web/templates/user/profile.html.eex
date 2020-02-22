@@ -5,15 +5,13 @@
         <img class="is-rounded" src="<%= @user.image %>" />
       </figure>
       <br>
-      <%= if current_user(@conn) == @user do %>
       <div class="container has-text-centered">
+      <%= if current_user(@conn) == @user do %>
         <%= link gettext("Edit Profile"), to: Routes.user_path(@conn, :edit, locale(@conn), @user), class: "button is-link" %>
-      </div>
       <% else %>
         <%= link gettext("Contact Developer"), to: "mailto: #{@user.email}", class: "button is-link"%>
       <% end %>
-      <p class="is-size-5">
-      </p>
+      </div>
     </div>
     <div class="column is-full-mobile is-half-tablet is-two-thirds-desktop is-three-quarters-fullhd">
       <h1 class="title is-3 fancy"><%= @user.name %> aka <%= @user.nickname %></h1>
@@ -78,7 +76,7 @@
           <span class="icon purple">
             <i class="far fa-file"></i>
           </span>
-          <%= @user.cv_url %>
+          <%= link gettext("Check my CV"), to: url_with_scheme(@user.cv_url), target: "_blank" %>
         </p>
         <% end %>
         <%= if @user.looking_for_job == true do %>
