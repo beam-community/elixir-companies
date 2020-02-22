@@ -8,6 +8,18 @@ defmodule CompaniesWeb.UserController do
     render(conn, "for_hire.html", users: users)
   end
 
+  def show(conn, %{"id" => id}) do
+    user = Accounts.get_developer_profile(id)
+
+    case user do
+      nil ->
+        redirect(conn, to: Routes.user_path(conn, :for_hire, locale(conn)))
+
+      user ->
+        render(conn, "profile.html", user: user)
+    end
+  end
+
   def profile(conn, _) do
     user = current_user(conn)
 
