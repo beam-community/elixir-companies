@@ -5,7 +5,7 @@
         <img class="is-rounded" src="<%= @user.image %>" />
       </figure>
       <br>
-      <div class="container has-text-centered">
+      <div class="has-text-centered">
       <%= if current_user(@conn) == @user do %>
         <%= link gettext("Edit Profile"), to: Routes.user_path(@conn, :edit, locale(@conn), @user), class: "button is-link" %>
       <% else %>
