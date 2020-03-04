@@ -101,6 +101,30 @@ defmodule Companies.Companies do
   end
 
   @doc """
+  Gets a single company.
+
+  Raises `Ecto.NoResultsError` if the Company does not exist.
+
+  ## Examples
+
+  iex> get!("Valid name")
+  %Company{}
+
+  iex> get!("Invalid name")
+  ** (Ecto.NoResultsError)
+
+  """
+  def get_by_name!(name, opts \\ []) do
+    preloads = Keyword.get(opts, :preloads, [])
+
+    from(c in Company)
+    |> preload(^preloads)
+    |> from()
+    |> where([c], is_nil(c.removed_pending_change_id))
+    |> Repo.get_by!(name: name)
+  end
+
+  @doc """
   Submits a new company for approval.
 
   ## Examples

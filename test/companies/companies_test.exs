@@ -85,6 +85,35 @@ defmodule Companies.CompaniesTest do
     end
   end
 
+  describe "get_by_name!/2" do
+    test "retrieves a company by it's name" do
+      %{name: name} = insert(:company, name: "ZULU")
+
+      assert %{name: ^name} = Companies.get_by_name!(name)
+    end
+
+    test "preloads given associations" do
+      company = insert(:company, name: "ZULU")
+
+      assert %{jobs: []} = Companies.get_by_name!(company.name, preloads: [:jobs])
+    end
+
+    test "raises for unknown name" do
+      assert_raise Ecto.NoResultsError, fn ->
+        Companies.get_by_name!("NONAME", preloads: [:jobs])
+      end
+    end
+
+    test "raises for multiple companies with same name" do
+      insert(:company, name: "ZULU")
+      insert(:company, name: "ZULU")
+
+      assert_raise Ecto.MultipleResultsError, fn ->
+        Companies.get_by_name!("ZULU", preloads: [:jobs])
+      end
+    end
+  end
+
   describe "get!/1" do
     test "retrieves by id" do
       %{id: company_id} = insert(:company)

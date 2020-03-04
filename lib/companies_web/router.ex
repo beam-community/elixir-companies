@@ -59,7 +59,8 @@ defmodule CompaniesWeb.Router do
     end
 
     get "/", CompanyController, :recent
-    resources "/companies", CompanyController, only: [:index, :show]
+    resources "/companies", CompanyController, only: [:index]
+    resources "/companies", CompanyController, only: [:show], param: "name"
     get "/jobs", JobController, :index
     get "/profile", UserController, :profile
     get "/for_hire", UserController, :for_hire

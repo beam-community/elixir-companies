@@ -37,8 +37,8 @@ defmodule CompaniesWeb.CompanyController do
     end
   end
 
-  def show(conn, %{"id" => id}) do
-    company = Companies.get!(id, preloads: [:jobs, :industry])
+  def show(conn, %{"name" => name}) do
+    company = Companies.get_by_name!(name, preloads: [:jobs, :industry])
     render(conn, "show.html", company: company)
   end
 
