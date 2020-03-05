@@ -107,21 +107,21 @@ defmodule Companies.Companies do
 
   ## Examples
 
-  iex> get!("Valid name")
+  iex> get!("Valid slug")
   %Company{}
 
-  iex> get!("Invalid name")
+  iex> get!("Invalid slug")
   ** (Ecto.NoResultsError)
 
   """
-  def get_by_name!(name, opts \\ []) do
+  def get_by_slug!(slug, opts \\ []) do
     preloads = Keyword.get(opts, :preloads, [])
 
     from(c in Company)
     |> preload(^preloads)
     |> from()
     |> where([c], is_nil(c.removed_pending_change_id))
-    |> Repo.get_by!(name: name)
+    |> Repo.get_by!(slug: slug)
   end
 
   @doc """

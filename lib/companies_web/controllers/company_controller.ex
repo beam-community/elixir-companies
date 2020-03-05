@@ -37,20 +37,20 @@ defmodule CompaniesWeb.CompanyController do
     end
   end
 
-  def show(conn, %{"name" => name}) do
-    company = Companies.get_by_name!(name, preloads: [:jobs, :industry])
+  def show(conn, %{"slug" => slug}) do
+    company = Companies.get_by_slug!(slug, preloads: [:jobs, :industry])
     render(conn, "show.html", company: company)
   end
 
-  def edit(conn, %{"id" => id}) do
-    company = Companies.get!(id)
+  def edit(conn, %{"slug" => slug}) do
+    company = Companies.get_by_slug!(slug)
     changeset = Companies.change(company)
     industries = Industries.all()
     render(conn, "edit.html", company: company, changeset: changeset, industries: industries)
   end
 
-  def update(conn, %{"id" => id, "company" => company_params}) do
-    company = Companies.get!(id)
+  def update(conn, %{"slug" => slug, "company" => company_params}) do
+    company = Companies.get_by_slug!(slug)
 
     case Companies.update(company, company_params, current_user(conn)) do
       {:ok, _company} ->
@@ -64,8 +64,8 @@ defmodule CompaniesWeb.CompanyController do
     end
   end
 
-  def delete(conn, %{"id" => id}) do
-    company = Companies.get!(id)
+  def delete(conn, %{"slug" => slug}) do
+    company = Companies.get_by_slug!(slug)
     {:ok, _company} = Companies.delete(company, current_user(conn))
 
     conn

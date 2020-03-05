@@ -174,6 +174,7 @@ technology_consulting = Repo.insert!(%Industry{name: "Technology Consulting"})
 plataformatec =
   Repo.insert!(%Company{
     name: "Plataformatec",
+    slug: "plataformatec",
     description: """
     Project inception, coaching, tailored projects, general consulting. Sponsor of Elixir, employer to Elixir's BDFL.
     """,

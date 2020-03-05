@@ -10,6 +10,7 @@ defmodule Companies.Factory do
       description: "A test company",
       industry: insert(:industry),
       name: sequence(:name, &"Test Company #{&1}"),
+      slug: sequence(:slug, &"test-company-#{&1}"),
       url: "www.example.com"
     }
   end

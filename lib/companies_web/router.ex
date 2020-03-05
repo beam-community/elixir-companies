@@ -53,14 +53,13 @@ defmodule CompaniesWeb.Router do
     scope "/" do
       pipe_through [:auth]
 
-      resources "/companies", CompanyController, except: [:index, :show]
+      resources "/companies", CompanyController, except: [:index, :show], param: "slug"
       resources "/jobs", JobController, except: [:index, :show]
       resources "/users", UserController, only: [:edit, :update]
     end
 
     get "/", CompanyController, :recent
-    resources "/companies", CompanyController, only: [:index]
-    resources "/companies", CompanyController, only: [:show], param: "name"
+    resources "/companies", CompanyController, only: [:index, :show], param: "slug"
     get "/jobs", JobController, :index
     get "/profile", UserController, :profile
     get "/for_hire", UserController, :for_hire

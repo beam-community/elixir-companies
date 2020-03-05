@@ -85,31 +85,22 @@ defmodule Companies.CompaniesTest do
     end
   end
 
-  describe "get_by_name!/2" do
+  describe "get_by_slug!/2" do
     test "retrieves a company by it's name" do
-      %{name: name} = insert(:company, name: "ZULU")
+      %{id: id, slug: slug} = insert(:company, name: "ZULU")
 
-      assert %{name: ^name} = Companies.get_by_name!(name)
+      assert %{id: ^id} = Companies.get_by_slug!(slug)
     end
 
     test "preloads given associations" do
       company = insert(:company, name: "ZULU")
 
-      assert %{jobs: []} = Companies.get_by_name!(company.name, preloads: [:jobs])
+      assert %{jobs: []} = Companies.get_by_slug!(company.slug, preloads: [:jobs])
     end
 
-    test "raises for unknown name" do
+    test "raises for unknown slug" do
       assert_raise Ecto.NoResultsError, fn ->
-        Companies.get_by_name!("NONAME", preloads: [:jobs])
-      end
-    end
-
-    test "raises for multiple companies with same name" do
-      insert(:company, name: "ZULU")
-      insert(:company, name: "ZULU")
-
-      assert_raise Ecto.MultipleResultsError, fn ->
-        Companies.get_by_name!("ZULU", preloads: [:jobs])
+        Companies.get_by_slug!("invalid-slug", preloads: [:jobs])
       end
     end
   end

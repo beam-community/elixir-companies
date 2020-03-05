@@ -7,7 +7,7 @@
     </div>
   <% end %>
   <div class="content has-text-centered">
-    <p class="title is-4 thin"><%= link to: Routes.company_path(@conn, :show, locale(@conn), @company.name) do %><%= @company.name %><% end %></p>
+    <p class="title is-4 thin"><%= link to: Routes.company_path(@conn, :show, locale(@conn), @company) do %><%= @company.name %><% end %></p>
     <%= if signed_in?(@conn) do %>
       <div class="company-actions-wrapper">
         <div class="toggle-company-actions">
