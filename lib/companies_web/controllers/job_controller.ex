@@ -32,11 +32,6 @@ defmodule CompaniesWeb.JobController do
     end
   end
 
-  def show(conn, %{"id" => id}) do
-    job = Jobs.get!(id)
-    render(conn, "show.html", job: job)
-  end
-
   def edit(conn, %{"id" => id}) do
     job = Jobs.get!(id)
     company = Companies.get!(job.company_id)
