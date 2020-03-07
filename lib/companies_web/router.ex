@@ -68,7 +68,7 @@ defmodule CompaniesWeb.Router do
     scope "/admin", Admin do
       pipe_through [:admin]
 
-      resources "/changes", PendingChangeController
+      resources "/changes", PendingChangeController, only: [:index, :show, :update]
     end
   end
 
