@@ -122,11 +122,6 @@ msgid "Title:"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/job/show.html.eex:11
-msgid "Url:"
-msgstr ""
-
-#, elixir-format
 #: lib/companies_web/templates/company/recent.html.eex:9
 msgid "With <span class='has-text-weight-semibold'>%{companies_count}</span> and counting..."
 msgstr ""
