@@ -200,7 +200,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/companies_web/templates/job/form.html.eex:23
-msgid "Url"
+msgid "URL"
 msgstr ""
 
 #, elixir-format

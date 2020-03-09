@@ -20,7 +20,7 @@
   </div>
 
   <div class="field">
-    <%= label f, :url, gettext("Url"), class: "field" %>
+    <%= label f, :url, gettext("URL"), class: "field" %>
     <div class="control">
       <%= text_input f, :url, class: input_class(@changeset, :url) %>
       <%= error_tag f, :url %>
