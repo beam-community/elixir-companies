@@ -123,11 +123,6 @@ msgid "Title:"
 msgstr "Τίτλος:"
 
 #, elixir-format
-#: lib/companies_web/templates/job/show.html.eex:11
-msgid "Url:"
-msgstr "Σύνδεσμος:"
-
-#, elixir-format
 #: lib/companies_web/templates/company/recent.html.eex:9
 msgid "With <span class='has-text-weight-semibold'>%{companies_count}</span> and counting..."
 msgstr "%{companies_count} εταιρείες και συνεχίζουμε..."
@@ -201,7 +196,7 @@ msgstr "Τίτλος"
 
 #, elixir-format
 #: lib/companies_web/templates/job/form.html.eex:23
-msgid "Url"
+msgid "URL"
 msgstr "Σύνδεσμος"
 
 #, elixir-format

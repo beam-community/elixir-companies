@@ -14,7 +14,7 @@
   </div>
 
   <div class="field">
-    <%= label f, :cv_url, gettext("CV Url"), class: "field" %>
+    <%= label f, :cv_url, gettext("CV URL"), class: "field" %>
     <div class="control">
       <%= text_input f, :cv_url, class: "input" %>
       <%= error_tag f, :cv_url %>
