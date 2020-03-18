@@ -26,14 +26,18 @@ defmodule Companies.Schema.Company do
 
   @doc false
   def changeset(company, attrs) do
-    attrs = Map.merge(attrs, slug_map(attrs))
-
     company
     |> cast(attrs, [:name, :description, :url, :github, :location, :blog, :industry_id, :slug])
     |> validate_required([:name, :description, :url, :industry_id])
+    |> generate_slug()
+    |> unique_constraint(:slug, message: "Company slug already exists")
   end
 
-  defp slug_map(%{"name" => name}) do
+  defp generate_slug(%Ecto.Changeset{data: %{id: id}} = changeset) when not is_nil(id) do
+    changeset
+  end
+
+  defp generate_slug(%Ecto.Changeset{changes: %{name: name}} = changeset) do
     slug =
       name
       |> String.replace(~r/['’]s/u, "s")
@@ -41,8 +45,8 @@ defmodule Companies.Schema.Company do
       |> String.replace(~r/([^a-z0-9가-힣])+/, "-")
       |> String.replace(" ", "-")
 
-    %{"slug" => slug}
+    put_change(changeset, :slug, slug)
   end
 
-  defp slug_map(_attrs), do: %{}
+  defp generate_slug(changeset), do: changeset
 end
