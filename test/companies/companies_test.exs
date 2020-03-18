@@ -66,41 +66,22 @@ defmodule Companies.CompaniesTest do
   end
 
   describe "get!/2" do
-    test "retrieves a company by id" do
-      %{id: id} = insert(:company, name: "ZULU")
+    test "retrieves a company by given key" do
+      %{id: id, slug: slug} = insert(:company, name: "ZULU")
 
-      assert %{id: ^id} = Companies.get!(id)
+      assert %{id: ^id} = Companies.get!("#{id}")
+      assert %{id: ^id} = Companies.get!(slug)
     end
 
     test "preloads given associations" do
       company = insert(:company, name: "ZULU")
 
-      assert %{jobs: []} = Companies.get!(company.id, preloads: [:jobs])
+      assert %{jobs: []} = Companies.get!("#{company.id}", preloads: [:jobs])
     end
 
     test "raises for unknown id" do
       assert_raise Ecto.NoResultsError, fn ->
-        Companies.get!(1000, preloads: [:jobs])
-      end
-    end
-  end
-
-  describe "get_by_slug!/2" do
-    test "retrieves a company by it's name" do
-      %{id: id, slug: slug} = insert(:company, name: "ZULU")
-
-      assert %{id: ^id} = Companies.get_by_slug!(slug)
-    end
-
-    test "preloads given associations" do
-      company = insert(:company, name: "ZULU")
-
-      assert %{jobs: []} = Companies.get_by_slug!(company.slug, preloads: [:jobs])
-    end
-
-    test "raises for unknown slug" do
-      assert_raise Ecto.NoResultsError, fn ->
-        Companies.get_by_slug!("invalid-slug", preloads: [:jobs])
+        Companies.get!("#{1000}", preloads: [:jobs])
       end
     end
   end
@@ -109,13 +90,13 @@ defmodule Companies.CompaniesTest do
     test "retrieves by id" do
       %{id: company_id} = insert(:company)
 
-      assert %{id: ^company_id} = Companies.get!(company_id)
+      assert %{id: ^company_id} = Companies.get!("#{company_id}")
     end
 
     test "does not retrieve deleted record" do
       company = insert(:company, %{removed_pending_change: build(:pending_change)})
 
-      assert_raise Ecto.NoResultsError, fn -> Companies.get!(company.id) end
+      assert_raise Ecto.NoResultsError, fn -> Companies.get!("#{company.id}") end
     end
   end
 

@@ -90,38 +90,18 @@ defmodule Companies.Companies do
   ** (Ecto.NoResultsError)
 
   """
-  def get!(id, opts \\ []) do
+  def get!(key, opts \\ []) do
     preloads = Keyword.get(opts, :preloads, [])
 
-    from(c in Company)
-    |> preload(^preloads)
-    |> from()
-    |> where([c], is_nil(c.removed_pending_change_id))
-    |> Repo.get!(id)
-  end
+    query = from(c in Company) |> preload(^preloads) |> from() |> where([c], is_nil(c.removed_pending_change_id))
 
-  @doc """
-  Gets a single company.
+    final_query =
+      case Integer.parse(key) do
+        :error -> where(query, [c], c.slug == ^key)
+        {int_id, _remainder} -> where(query, [c], c.id == ^int_id or c.slug == ^key)
+      end
 
-  Raises `Ecto.NoResultsError` if the Company does not exist.
-
-  ## Examples
-
-  iex> get!("Valid slug")
-  %Company{}
-
-  iex> get!("Invalid slug")
-  ** (Ecto.NoResultsError)
-
-  """
-  def get_by_slug!(slug, opts \\ []) do
-    preloads = Keyword.get(opts, :preloads, [])
-
-    from(c in Company)
-    |> preload(^preloads)
-    |> from()
-    |> where([c], is_nil(c.removed_pending_change_id))
-    |> Repo.get_by!(slug: slug)
+    Repo.one!(final_query)
   end
 
   @doc """
