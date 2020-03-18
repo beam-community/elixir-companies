@@ -6,6 +6,6 @@ defmodule Companies.Repo.Migrations.AddSlugToCompanies do
       add :slug, :string
     end
 
-    create index(:companies, [:slug], unique: true)
+    create unique_index(:companies, [:slug])
   end
 end
