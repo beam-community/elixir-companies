@@ -98,7 +98,7 @@ defmodule Companies.PendingChanges do
 
     module
     |> Repo.get(id)
-    |> Repo.preload(:removed_pending_change)
+    |> Repo.preload(removed_pending_change: [:user, :reviewer])
     |> drop_ecto_fields()
     |> drop_nulls()
   end

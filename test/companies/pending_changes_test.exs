@@ -5,7 +5,7 @@ defmodule Companies.PendingChangesTest do
   import Companies.Factory
   import ExUnit.CaptureLog
 
-  alias Companies.Schema.{Company, PendingChange}
+  alias Companies.Schema.{Company, PendingChange, User}
   alias Companies.{Companies, PendingChanges}
 
   @email_subject_approval "Your Elixir Companies change was approved"
@@ -114,6 +114,22 @@ defmodule Companies.PendingChangesTest do
     test "retrieves a pending change by id" do
       %{id: id} = insert(:pending_change)
       assert %{id: ^id} = PendingChanges.get(id)
+    end
+
+    test "retrieves a pending change by id, including removed pending changes" do
+      %{id: company_id} = insert(:company)
+
+      %{id: delete_change_id} =
+        insert(:pending_change, %{action: "delete", changes: %{id: company_id, name: "elixir-companies"}})
+
+      PendingChanges.approve(delete_change_id, @note, insert(:maintainer), true)
+      %{id: id} = insert(:pending_change, %{action: "update", changes: %{id: company_id, name: "updated"}})
+
+      %{original: %{removed_pending_change: removed_pending_change}} = PendingChanges.get(id)
+
+      assert %{id: ^delete_change_id} = removed_pending_change
+      assert %User{} = removed_pending_change.user
+      assert %User{} = removed_pending_change.reviewer
     end
   end
 end

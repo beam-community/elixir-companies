@@ -4,6 +4,22 @@ defmodule Companies.Schema.User do
   use Ecto.Schema
   import Ecto.Changeset
 
+  @derive {Jason.Encoder,
+           only: [
+             :email,
+             :email_notifications,
+             :token,
+             :nickname,
+             :name,
+             :image,
+             :description,
+             :bio,
+             :location,
+             :interests,
+             :cv_url,
+             :looking_for_job,
+             :maintainer
+           ]}
   schema "users" do
     field :email, :string
     field :email_notifications, :boolean
