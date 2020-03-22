@@ -7,6 +7,8 @@ defmodule Companies.Schema.PendingChange do
 
   alias Companies.Schema.User
 
+  @derive {Jason.Encoder,
+           only: [:action, :approved, :changes, :note, :resource, :original, :user, :user_id, :reviewer, :reviewer_id]}
   schema "pending_changes" do
     field :action, :string
     field :approved, :boolean
