@@ -19,6 +19,7 @@ defmodule Companies.Factory do
       title: "Job",
       url: "www.example.com/joblisting",
       remote: false,
+      expired: false,
       company: insert(:company)
     }
   end

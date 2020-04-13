@@ -10,6 +10,7 @@ defmodule Companies.Schema.Job do
     field :title, :string
     field :url, :string
     field :remote, :boolean
+    field :expired, :boolean
 
     belongs_to :company, Company
     # Optional reference to the change that removed the resource
@@ -21,7 +22,7 @@ defmodule Companies.Schema.Job do
   @doc false
   def changeset(job, attrs) do
     job
-    |> cast(attrs, [:title, :url, :company_id, :remote])
+    |> cast(attrs, [:title, :url, :company_id, :remote, :expired])
     |> validate_required([:title, :url, :company_id, :remote])
   end
 end
