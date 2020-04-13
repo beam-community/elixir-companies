@@ -1,4 +1,6 @@
 defmodule Mix.Tasks.ExpireJobs do
+  @moduledoc false
+
   use Mix.Task
   alias Companies.{Repo, Schema.Job}
   import Ecto.Query, warn: false
