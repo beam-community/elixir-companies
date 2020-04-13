@@ -2,15 +2,14 @@ defmodule Mix.Tasks.ExpireJobs do
   @moduledoc false
 
   use Mix.Task
-  alias Companies.{Repo, Schema.Job}
+
   import Ecto.Query, warn: false
+
+  alias Companies.{Repo, Schema.Job}
 
   @shortdoc "Expires all jobs that haven't been updated for a month."
   def run(_) do
-    [:postgrex, :ecto]
-    |> Enum.each(&Application.ensure_all_started/1)
-
-    Repo.start_link()
+    Application.ensure_all_started(:companies)
 
     jobs_query = from j in Job, where: j.updated_at < ago(1, "month")
 
