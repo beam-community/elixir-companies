@@ -4,7 +4,7 @@ defmodule Companies.Companies do
   import Ecto.Query, warn: false
 
   alias Companies.{PendingChanges, Repo}
-  alias Companies.Schema.Company
+  alias Companies.Schema.{Company, Job}
 
   @doc """
   Returns the list of paginated companies.
@@ -20,12 +20,14 @@ defmodule Companies.Companies do
     page = Map.get(params, "page", "1")
     order = Map.get(params, :order, :name)
 
+    job_query = from j in Job, where: [expired: false]
+
     (c in Company)
     |> from()
     |> predicates(params)
     |> order_by(^order)
     |> where([c, _i, _j], is_nil(c.removed_pending_change_id))
-    |> preload([:industry, :jobs])
+    |> preload([:industry, jobs: ^job_query])
     |> Repo.paginate(page: page)
   end
 

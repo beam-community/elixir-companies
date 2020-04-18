@@ -24,6 +24,13 @@
         </div>
         <%= if pending_approval?(@pending_change) do %>
           <%= form_tag(Routes.pending_change_path(@conn, :update, locale(@conn), @pending_change.id), method: "PATCH") do %>
+            <%= if @pending_change.resource == "job" && @pending_change.action == "create" do %>
+            <div class="field is-grouped is-grouped-centered">
+              <p>
+                <strong>Warning:</strong> We should never add job listings that are linking to generic listing pages, only a url with the specific job listing should be accepted!
+              </p>
+            </div>
+            <% end %>
             <div class="field is-grouped is-grouped-centered">
               <div class="control is-expanded">
                 <label class="label">Note</label>

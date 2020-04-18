@@ -22,6 +22,7 @@ defmodule Companies.Jobs do
 
     query =
       from j in Job,
+        where: [expired: false],
         join: c in assoc(j, :company),
         where: is_nil(j.removed_pending_change_id),
         where: is_nil(c.removed_pending_change_id),
