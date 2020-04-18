@@ -14,7 +14,7 @@ config :companies, Companies.Repo,
   username: "postgres",
   password: "postgres",
   database: "companies_test",
-  hostname: "localhost",
+  hostname: Map.get(System.get_env(), "DB_HOST", "localhost"),
   pool: Ecto.Adapters.SQL.Sandbox
 
 config :companies, Notify.Mailer, adapter: Bamboo.TestAdapter

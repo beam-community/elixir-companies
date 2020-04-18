@@ -1,0 +1,82 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+  push:
+    branches:
+      - 'master'
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+
+    container:
+      image: elixir:1.10-alpine
+
+    services:
+      db:
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        image: postgres:11
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v1
+
+      - name: Install Dependencies
+        run: |
+          apk add --no-cache gcc g++ git imagemagick libmcrypt-dev make musl-dev
+          mix local.rebar --force
+          mix local.hex --force
+          mix deps.get
+
+      - name: Run Tests
+        run: mix test
+        env:
+          DB_HOST: db
+
+  Format:
+    runs-on: ubuntu-latest
+
+    container:
+      image: elixir:1.10-alpine
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v1
+
+      - name: Install Dependencies
+        run: |
+          apk add --no-cache gcc g++ git libmcrypt-dev make musl-dev
+          mix local.rebar --force
+          mix local.hex --force
+          mix deps.get
+
+      - name: Run Formatter
+        run: mix format --check-formatted
+
+  Credo:
+    runs-on: ubuntu-latest
+
+    container:
+      image: elixir:1.10-alpine
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v1
+
+      - name: Install Dependencies
+        run: |
+          apk add --no-cache gcc g++ git libmcrypt-dev make musl-dev
+          mix local.rebar --force
+          mix local.hex --force
+          mix deps.get
+
+      - name: Run Credo
+        run: mix credo
