@@ -6,6 +6,7 @@ defmodule Companies.Schema.User do
 
   @derive {Jason.Encoder,
            only: [
+             :admin,
              :email,
              :email_notifications,
              :token,
@@ -17,10 +18,10 @@ defmodule Companies.Schema.User do
              :location,
              :interests,
              :cv_url,
-             :looking_for_job,
-             :maintainer
+             :looking_for_job
            ]}
   schema "users" do
+    field :admin, :boolean, default: false
     field :email, :string
     field :email_notifications, :boolean
     field :token, :string
@@ -33,8 +34,6 @@ defmodule Companies.Schema.User do
     field :interests, :string
     field :cv_url, :string
     field :looking_for_job, :boolean
-
-    field :maintainer, :boolean, default: false, virtual: true
 
     timestamps()
   end

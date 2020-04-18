@@ -19,7 +19,7 @@ defmodule CompaniesWeb.Router do
   end
 
   pipeline :admin do
-    plug CompaniesWeb.Plugs.Authorize, maintainer: true
+    plug CompaniesWeb.Plugs.Authorize, admin: true
   end
 
   pipeline :set_locale do
