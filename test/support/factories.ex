@@ -53,7 +53,7 @@ defmodule Companies.Factory do
     }
   end
 
-  def maintainer_factory do
-    %{build(:user) | maintainer: true}
+  def admin_factory do
+    %{build(:user) | admin: true}
   end
 end

@@ -1,6 +1,6 @@
 defmodule CompaniesWeb.Plugs.Authorize do
   @moduledoc """
-  A simple plug to prevent users without maintainer status from continuing
+  A simple plug to prevent users without admin status from continuing
   """
 
   import CompaniesWeb.LocaleHelpers, only: [locale: 1]
@@ -11,7 +11,7 @@ defmodule CompaniesWeb.Plugs.Authorize do
 
   def init(opts), do: opts
 
-  def call(%{assigns: %{current_user: %{maintainer: true}}} = conn, maintainer: true) do
+  def call(%{assigns: %{current_user: %{admin: true}}} = conn, admin: true) do
     conn
   end
 

@@ -35,9 +35,7 @@ defmodule Companies.Accounts do
 
   """
   def get!(id) do
-    User
-    |> Repo.get!(id)
-    |> maintainer_status()
+    Repo.get!(User, id)
   end
 
   @doc """
@@ -59,7 +57,6 @@ defmodule Companies.Accounts do
       on_conflict: {:replace, [:token, :name, :nickname, :image, :description, :bio, :location]},
       conflict_target: :email
     )
-    |> maintainer_status()
   end
 
   def change(%User{} = user) do
@@ -74,30 +71,11 @@ defmodule Companies.Accounts do
 
     query
     |> Repo.one()
-    |> maintainer_status()
   end
 
   def update(%User{} = user, attrs) do
     user
     |> User.profile_changeset(attrs)
     |> Repo.update()
-  end
-
-  defp maintainer_status({:error, reason}) do
-    {:error, reason}
-  end
-
-  defp maintainer_status({:ok, user}) do
-    {:ok, maintainer_status(user)}
-  end
-
-  defp maintainer_status(%{nickname: nickname} = user) do
-    %{user | maintainer: nickname in maintainers()}
-  end
-
-  defp maintainers do
-    :companies
-    |> Application.get_env(:site_data)
-    |> Map.get(:maintainers)
   end
 end

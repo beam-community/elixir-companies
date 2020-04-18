@@ -3,7 +3,7 @@ defmodule CompaniesWeb.UserHelpers do
 
   def admin_session?(conn) do
     case current_user(conn) do
-      %{maintainer: true} -> true
+      %{admin: true} -> true
       _ -> false
     end
   end

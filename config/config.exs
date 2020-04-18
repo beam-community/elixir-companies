@@ -27,13 +27,7 @@ config :phoenix, :json_library, Jason
 config :companies,
   notifier: Notify.Console,
   site_data: %{
-    name: "Elixir Companies",
-    maintainers: [
-      "doomspork",
-      "gemantzu",
-      "tajchumber",
-      "maartenvanvliet"
-    ]
+    name: "Elixir Companies"
   },
   results_per_page: 16
 
