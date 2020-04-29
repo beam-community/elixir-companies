@@ -14,7 +14,7 @@ config :companies, CompaniesWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "cnFp+p3HcWa0ZaS5YhEfuJlU2PIxvUinNThsTSXm4ZE2M7D/zYzpfIJGMVNLHtqv",
   render_errors: [view: CompaniesWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Companies.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub_server: Companies.PubSub
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -48,8 +48,6 @@ config :ueberauth, Ueberauth.Strategy.Github.OAuth,
 config :scrivener_html,
   routes_helper: CompaniesWeb.Router.Helpers,
   view_style: :bulma
-
-config :companies, CompaniesWeb.Endpoint, instrumenters: [Appsignal.Phoenix.Instrumenter]
 
 config :phoenix, :template_engines,
   eex: Appsignal.Phoenix.Template.EExEngine,

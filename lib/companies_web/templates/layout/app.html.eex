@@ -22,7 +22,7 @@
     </div>
     <div id="wrapper">
       <%= render "navbar.html", conn: @conn %>
-      <%= render @view_module, @view_template, assigns %>
+      <%= @inner_content %>
     </div>
     <%= render "footer.html", conn: @conn %>
     <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
