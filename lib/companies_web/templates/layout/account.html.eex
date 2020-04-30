@@ -18,6 +18,14 @@
     <% end %>
   </p>
   <p class="control">
+    <%= link to: Routes.live_dashboard_path(@conn, :home), class: "navbar-item button" do %>
+      <span><%= gettext("Dashboard") %></span>
+      <span class="icon">
+        <i class="fas fa-tachometer-alt"></i>
+      </span>
+    <% end %>
+  </p>
+  <p class="control">
     <%= link to: Routes.auth_path(@conn, :signout), class: "navbar-item button" do %>
       <span><%= gettext("Sign out") %></span>
       <span class="icon">
