@@ -1,5 +1,6 @@
 defmodule CompaniesWeb.Router do
   use CompaniesWeb, :router
+  import Phoenix.LiveDashboard.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -32,6 +33,12 @@ defmodule CompaniesWeb.Router do
 
       forward "/sent_emails", Bamboo.SentEmailViewerPlug
     end
+  end
+
+  scope "/dashboard", CompaniesWeb do
+    pipe_through [:browser, :auth]
+
+    live_dashboard "/"
   end
 
   scope "/", CompaniesWeb do

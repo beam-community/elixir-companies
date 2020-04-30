@@ -14,7 +14,8 @@ config :companies, CompaniesWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "cnFp+p3HcWa0ZaS5YhEfuJlU2PIxvUinNThsTSXm4ZE2M7D/zYzpfIJGMVNLHtqv",
   render_errors: [view: CompaniesWeb.ErrorView, accepts: ~w(html json)],
-  pubsub_server: Companies.PubSub
+  pubsub_server: Companies.PubSub,
+  live_view: [signing_salt: "IJL0bF+zIE2Ax4MFSi16HqrurNFhiYlD"]
 
 # Configures Elixir's Logger
 config :logger, :console,

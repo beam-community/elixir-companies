@@ -10,10 +10,18 @@
     </p>
   <% end %>
   <p class="control">
-    <%= link to: Routes.user_path(@conn, :profile, locale(@conn)), class: "navbar-item button" do %>
+    <%= link to: Routes.live_dashboard_path(@conn, :home), class: "navbar-item button" do %>
       <span><%= gettext("Profile") %></span>
       <span class="icon">
         <i class="fas fa-user-circle"></i>
+      </span>
+    <% end %>
+  </p>
+  <p class="control">
+    <%= link to: "/dashboard", class: "navbar-item button" do %>
+      <span><%= gettext("Dashboard") %></span>
+      <span class="icon">
+        <i class="fas fa-tachometer-alt"></i>
       </span>
     <% end %>
   </p>
