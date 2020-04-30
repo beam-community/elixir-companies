@@ -10,6 +10,8 @@ defmodule Companies.Application do
     children = [
       # Start the Ecto repository
       Companies.Repo,
+      # Start the PubSub system
+      {Phoenix.PubSub, name: Companies.PubSub},
       # Start the endpoint when the application starts
       CompaniesWeb.Endpoint,
       {Task.Supervisor, name: Companies.TaskSupervisor}
