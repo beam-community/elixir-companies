@@ -1,4 +1,8 @@
 defmodule CompaniesWeb.Telemetry do
+  @moduledoc """
+  The Telemetry module configures metrics for LiveDashboard.
+  """
+
   use Supervisor
   import Telemetry.Metrics
 
