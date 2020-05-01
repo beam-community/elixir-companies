@@ -26,6 +26,10 @@ defmodule CompaniesWeb.Endpoint do
     plug Phoenix.CodeReloader
   end
 
+  plug Phoenix.LiveDashboard.RequestLogger,
+    param_key: "request_logger",
+    cookie_key: "request_logger"
+
   plug Plug.RequestId
   plug Plug.Logger
 

@@ -22,7 +22,7 @@ defmodule Companies.MixProject do
   def application do
     [
       mod: {Companies.Application, []},
-      extra_applications: [:appsignal, :logger, :runtime_tools]
+      extra_applications: [:appsignal, :logger, :runtime_tools, :os_mon]
     ]
   end
 
@@ -60,7 +60,9 @@ defmodule Companies.MixProject do
       {:excoveralls, "~> 0.12", only: :test},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:earmark, "~> 1.4"},
-      {:credo, "~> 1.4.0", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.4.0", only: [:dev, :test], runtime: false},
+      {:telemetry_poller, "~> 0.4"},
+      {:telemetry_metrics, "~> 0.4"}
     ]
   end
 
