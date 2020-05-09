@@ -21,6 +21,7 @@ defmodule CompaniesWeb do
     quote do
       use Phoenix.Controller, namespace: CompaniesWeb
 
+      import Phoenix.LiveView.Controller
       import Plug.Conn
       import CompaniesWeb.Gettext
       import CompaniesWeb.UserHelpers
@@ -47,6 +48,7 @@ defmodule CompaniesWeb do
       import CompaniesWeb.SiteHelpers
       import CompaniesWeb.UserHelpers
       import CompaniesWeb.LocaleHelpers
+      import Phoenix.LiveView.Helpers
 
       alias CompaniesWeb.Router.Helpers, as: Routes
     end
@@ -57,6 +59,7 @@ defmodule CompaniesWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
+      import Phoenix.LiveView.Router
     end
   end
 
