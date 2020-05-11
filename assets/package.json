@@ -12,6 +12,7 @@
     "node-sass": "^4.10.0",
     "phoenix": "file:../deps/phoenix",
     "phoenix_html": "file:../deps/phoenix_html",
+    "phoenix_live_view": "file:../deps/phoenix_live_view",
     "sass-loader": "^7.1.0"
   },
   "devDependencies": {

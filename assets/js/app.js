@@ -11,6 +11,8 @@ import css from "../css/app.scss";
 //
 import "phoenix_html";
 import * as jsDiff from "diff";
+import { Socket } from "phoenix";
+import LiveSocket from "phoenix_live_view";
 
 // Import local files
 //
@@ -134,3 +136,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
+let csrfToken = document
+  .querySelector("meta[name='csrf-token']")
+  .getAttribute("content");
+let liveSocket = new LiveSocket("/live", Socket, {
+  params: { _csrf_token: csrfToken },
+});
+
+liveSocket.connect();

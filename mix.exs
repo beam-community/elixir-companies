@@ -62,7 +62,11 @@ defmodule Companies.MixProject do
       {:earmark, "~> 1.4"},
       {:credo, "~> 1.4.0", only: [:dev, :test], runtime: false},
       {:telemetry_poller, "~> 0.4"},
-      {:telemetry_metrics, "~> 0.4"}
+      {:telemetry_metrics, "~> 0.4"},
+
+      # Live view
+      {:phoenix_live_view, "~> 0.12"},
+      {:floki, ">= 0.0.0", only: :test}
     ]
   end
 
