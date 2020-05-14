@@ -13,13 +13,25 @@ import "phoenix_html";
 import * as jsDiff from "diff";
 import { Socket } from "phoenix";
 import LiveSocket from "phoenix_live_view";
-
+import InfiniteScroll from "./infinite_scroll";
 // Import local files
 //
 // Local files can be imported directly using relative paths, for example:
 // import socket from "./socket"
 
 document.addEventListener("DOMContentLoaded", function() {
+  let csrfToken = document
+    .querySelector("meta[name='csrf-token']")
+    .getAttribute("content");
+  let liveSocket = new LiveSocket("/live", Socket, {
+    params: {
+      _csrf_token: csrfToken,
+    },
+    hooks: { InfiniteScroll: InfiniteScroll },
+  });
+
+  liveSocket.connect();
+
   // Get all "navbar-burger" elements
   var $navbarBurgers = Array.prototype.slice.call(
     document.querySelectorAll(".navbar-burger"),
@@ -89,11 +101,11 @@ document.addEventListener("DOMContentLoaded", function() {
     diff.forEach(function(part) {
       var backgroundColor;
       if (part.added) {
-        backgroundColor = "#acf2bd"
+        backgroundColor = "#acf2bd";
       } else if (part.removed) {
-        backgroundColor = "#fdb8c0"
+        backgroundColor = "#fdb8c0";
       } else {
-        backgroundColor = "inherit"
+        backgroundColor = "inherit";
       }
 
       var span = document.createElement("span");
@@ -109,16 +121,16 @@ document.addEventListener("DOMContentLoaded", function() {
   var $overlay = document.getElementById("overlay");
   $overlay.addEventListener("click", () => {
     $companyTogglers.forEach((toggler) => {
-      toggler.parentElement.classList.toggle("show")
-    })
-    $overlay.style.display = "none"
-  })
+      toggler.parentElement.classList.toggle("show");
+    });
+    $overlay.style.display = "none";
+  });
 
   if ($companyTogglers) {
     $companyTogglers.forEach(function(toggler) {
       toggler.addEventListener("click", function() {
         toggler.parentElement.classList.toggle("show");
-        $overlay.style.display = "block"
+        $overlay.style.display = "block";
       });
     });
   }
@@ -136,12 +148,3 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
-
-let csrfToken = document
-  .querySelector("meta[name='csrf-token']")
-  .getAttribute("content");
-let liveSocket = new LiveSocket("/live", Socket, {
-  params: { _csrf_token: csrfToken },
-});
-
-liveSocket.connect();
