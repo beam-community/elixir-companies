@@ -1,4 +1,5 @@
 defmodule CompaniesWeb.CompanyLive do
+  @moduledoc false
   use Phoenix.LiveView, layout: {CompaniesWeb.LayoutView, "live.html"}
 
   alias CompaniesWeb.CompanyView
