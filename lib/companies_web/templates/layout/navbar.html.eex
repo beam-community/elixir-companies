@@ -15,7 +15,7 @@
     <div class="navbar-menu" id="navMain">
       <div class="navbar-start">
         <%= link gettext("Home"), to: Routes.company_path(@conn, :recent, locale(@conn)), class: "navbar-item" %>
-        <%= link gettext("Companies"), to: Routes.company_path(@conn, :index, locale(@conn)), class: "navbar-item" %>
+        <%= link gettext("Companies"), to: Routes.live_path(@conn, CompaniesWeb.CompanyLive, locale(@conn)), class: "navbar-item" %>
         <%= link gettext("Jobs"), to: Routes.job_path(@conn, :index, locale(@conn)), class: "navbar-item" %>
         <%= link gettext("Developers"), to: Routes.user_path(@conn, :for_hire, locale(@conn)), class: "navbar-item" %>
       </div>

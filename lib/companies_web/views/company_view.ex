@@ -1,7 +1,6 @@
 defmodule CompaniesWeb.CompanyView do
   use CompaniesWeb, :view
 
-  import Scrivener.HTML
   import Companies.URLSchemer
 
   def hiring?(%{jobs: jobs}), do: length(jobs) > 0
