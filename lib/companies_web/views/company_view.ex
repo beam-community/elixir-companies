@@ -28,4 +28,15 @@ defmodule CompaniesWeb.CompanyView do
     |> HtmlSanitizeEx.markdown_html()
     |> Phoenix.HTML.raw()
   end
+
+  def selected(_, ""), do: ""
+  def selected(_, nil), do: ""
+
+  def selected(value, industry_id) do
+    if value == String.to_integer(industry_id) do
+      "selected"
+    else
+      ""
+    end
+  end
 end
