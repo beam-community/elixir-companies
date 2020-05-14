@@ -39,6 +39,28 @@ defmodule Companies.Accounts do
   end
 
   @doc """
+  Gets a single user.
+
+  Returns nil if the User does not exist.
+
+  ## Examples
+
+      iex> get!(123)
+      %User{}
+
+      iex> get!(456)
+      nil
+
+  """
+  def get(nil) do
+    nil
+  end
+
+  def get(id) do
+    Repo.get(User, id)
+  end
+
+  @doc """
   Creates a user.
 
   ## Examples
