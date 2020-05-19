@@ -38,7 +38,10 @@ defmodule CompaniesWeb.Router do
 
   scope "/dashboard", CompaniesWeb do
     pipe_through [:browser, :auth]
-    live_dashboard "/", metrics: CompaniesWeb.Telemetry
+
+    live_dashboard "/",
+      metrics: CompaniesWeb.Telemetry,
+      historical_data: CompaniesWeb.RepoMetricsHistory.signatures()
   end
 
   scope "/", CompaniesWeb do
