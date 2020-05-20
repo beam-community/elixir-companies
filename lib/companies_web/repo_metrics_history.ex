@@ -65,17 +65,18 @@ defmodule CompaniesWeb.RepoMetricsHistory do
   def handle_cast(:emit_telemetry, %{history: history, current: current}) do
     time = System.system_time(:second)
 
-    for {key, value} <- current do
-      :telemetry.execute(@historic_metrics, %{key => value})
+    for {key, {value, metadata}} <- current do
+      :telemetry.execute(@historic_metrics, %{key => value}, metadata)
     end
 
     {:noreply, %{history: CircularBuffer.insert(history, {time, current}), current: %{}}}
   end
 
-  def handle_cast({:telemetry_metric, metric_map, _metadata, _config}, %{current: current} = state) do
+  def handle_cast({:telemetry_metric, metric_map, metadata, _config}, %{current: current} = state) do
     updated_current =
       for {key, value} <- metric_map, reduce: current do
-        acc -> Map.put_new(acc, key, 0) |> update_in([key], &IO.inspect(&1 + value, label: :inspect_value))
+        acc ->
+          Map.put_new(acc, key, {0, %{}}) |> update_in([key], &{elem(&1, 0) + value, Map.merge(elem(&1, 1), metadata)})
       end
 
     {:noreply, %{state | current: updated_current}}
