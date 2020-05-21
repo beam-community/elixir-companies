@@ -2,12 +2,12 @@ defmodule CompaniesWeb.RepoMetricsHistory do
   use GenServer
 
   @telemetry_event [:companies, :repo, :query]
-  @historic_metrics [:repo, :metrics]
+  @historic_metric [:ecto, :dashboard, :query]
   @history_buffer_size 500
 
   def signatures do
     %{
-      @historic_metrics => {__MODULE__, :data, []}
+      @historic_metric => {__MODULE__, :data, []}
     }
   end
 
@@ -18,11 +18,11 @@ defmodule CompaniesWeb.RepoMetricsHistory do
   end
 
   def init(_state) do
-    {:ok, %{history: CircularBuffer.new(@history_buffer_size), current: %{}}}
+    {:ok, %{history: CircularBuffer.new(@history_buffer_size)}}
   end
 
   def data(%{event_name: event_name} = metric) do
-    if List.starts_with?(event_name, @historic_metrics) do
+    if List.starts_with?(event_name, @historic_metric) do
       GenServer.call(__MODULE__, {:data, metric})
     else
       []
@@ -38,47 +38,26 @@ defmodule CompaniesWeb.RepoMetricsHistory do
     )
   end
 
-  def handle_event(@telemetry_event, map, metadata, config) do
-    GenServer.cast(__MODULE__, {:telemetry_metric, map, metadata, config})
+  def handle_event(@telemetry_event, metric_map, metadata, config) do
+    GenServer.cast(__MODULE__, {:telemetry_metric, metric_map, metadata, config})
   end
 
-  def emit do
-    GenServer.cast(__MODULE__, :emit_telemetry)
+  def handle_call({:data, _metric}, _from, %{history: history}) do
+    {:reply, CircularBuffer.to_list(history), %{history: history}}
   end
 
-  def handle_call({:raw_data, _metric}, _from, %{history: history} = state) do
-    {:reply, history, state}
-  end
-
-  def handle_call({:data, metric}, _from, %{history: history} = state) do
-    local_metric = List.last(metric.name)
-
-    reply =
-      for {time, time_metrics} <- history,
-          {^local_metric, data} <- time_metrics do
-        {nil, data, time}
-      end
-
-    {:reply, reply, state}
-  end
-
-  def handle_cast(:emit_telemetry, %{history: history, current: current}) do
+  def handle_cast({:telemetry_metric, metric_map, metadata, _config}, %{history: history}) do
     time = System.system_time(:second)
+    :telemetry.execute(@historic_metric, metric_map, metadata)
 
-    for {key, {value, metadata}} <- current do
-      :telemetry.execute(@historic_metrics, %{key => value}, metadata)
-    end
+    new_history = CircularBuffer.insert(history, %{data: metric_map, time: time, metadata: pruned_metadata(metadata)})
 
-    {:noreply, %{history: CircularBuffer.insert(history, {time, current}), current: %{}}}
+    {:noreply, %{history: new_history}}
   end
 
-  def handle_cast({:telemetry_metric, metric_map, metadata, _config}, %{current: current} = state) do
-    updated_current =
-      for {key, value} <- metric_map, reduce: current do
-        acc ->
-          Map.put_new(acc, key, {0, %{}}) |> update_in([key], &{elem(&1, 0) + value, Map.merge(elem(&1, 1), metadata)})
-      end
-
-    {:noreply, %{state | current: updated_current}}
+  defp pruned_metadata(metadata) do
+    # for now keep it all, reminder to either keep or drop selected fields based on dashboard usage to conserve memory,
+    # ideally via some published source of truth hook from dahsboard module to ensure correctness
+    metadata
   end
 end

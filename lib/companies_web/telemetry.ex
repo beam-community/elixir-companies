@@ -37,11 +37,11 @@ defmodule CompaniesWeb.Telemetry do
       summary("companies.repo.query.idle_time", unit: {:native, :millisecond}),
 
       # Database Time Metrics with History
-      summary("repo.metrics.query.total_time", unit: {:native, :millisecond}),
-      summary("repo.metrics.query.decode_time", unit: {:native, :millisecond}),
-      summary("repo.metrics.query.query_time", unit: {:native, :millisecond}),
-      summary("repo.metrics.query.queue_time", unit: {:native, :millisecond}),
-      summary("repo.metrics.query.idle_time", unit: {:native, :millisecond}),
+      summary("ecto.dashboard.query.total_time", unit: {:native, :millisecond}),
+      summary("ecto.dashboard.query.decode_time", unit: {:native, :millisecond}),
+      summary("ecto.dashboard.query.query_time", unit: {:native, :millisecond}),
+      summary("ecto.dashboard.query.queue_time", unit: {:native, :millisecond}),
+      summary("ecto.dashboard.query.idle_time", unit: {:native, :millisecond}),
 
       # VM Metrics
       summary("vm.memory.total", unit: {:byte, :kilobyte}),
@@ -52,6 +52,6 @@ defmodule CompaniesWeb.Telemetry do
   end
 
   defp periodic_measurements do
-    [{CompaniesWeb.RepoMetricsHistory, :emit, []}]
+    []
   end
 end
