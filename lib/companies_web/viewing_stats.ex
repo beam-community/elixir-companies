@@ -1,4 +1,9 @@
 defmodule CompaniesWeb.ViewingStats do
+  @moduledoc """
+  GenServer to handle aggregating simple app stats and history for telemetry_poller
+  to pass on to LiveDashboard.
+  """
+
   use GenServer
 
   @telemetry_event [:page_views, :count_events]

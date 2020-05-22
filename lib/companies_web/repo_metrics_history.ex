@@ -1,4 +1,9 @@
 defmodule CompaniesWeb.RepoMetricsHistory do
+  @moduledoc """
+  GenServer to handle historical data for Ecto queries and rebroadcast to
+  LiveDashboard under seperate history-focused telemetry namespace.
+  """
+
   use GenServer
 
   @telemetry_event [:companies, :repo, :query]
