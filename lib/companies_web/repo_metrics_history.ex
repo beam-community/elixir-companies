@@ -31,7 +31,7 @@ defmodule CompaniesWeb.RepoMetricsHistory do
 
   def setup_handlers do
     :telemetry.attach(
-      "aggregation-handler-generic",
+      "aggregation-handler-#{__MODULE__}",
       @telemetry_event,
       &__MODULE__.handle_event/4,
       nil

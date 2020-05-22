@@ -12,6 +12,7 @@ defmodule Companies.Application do
       Companies.Repo,
       CompaniesWeb.Telemetry,
       CompaniesWeb.RepoMetricsHistory,
+      CompaniesWeb.ViewingStats,
       # Start the PubSub system
       {Phoenix.PubSub, name: Companies.PubSub},
       # Start the endpoint when the application starts
@@ -27,6 +28,7 @@ defmodule Companies.Application do
     )
 
     CompaniesWeb.RepoMetricsHistory.setup_handlers()
+    CompaniesWeb.ViewingStats.setup_handlers()
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options

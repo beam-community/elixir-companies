@@ -2,10 +2,12 @@ defmodule CompaniesWeb.JobController do
   use CompaniesWeb, :controller
 
   alias Companies.{Companies, Jobs, Schema.Job}
+  import CompaniesWeb.ViewingStats, only: [telemetry_event: 0]
   plug :load_companies when action in [:new, :edit, :create, :update]
 
   def index(conn, params) do
     jobs = Jobs.all(params)
+    :telemetry.execute(telemetry_event(), %{job_index: 1})
     render(conn, "index.html", jobs: jobs)
   end
 
@@ -18,6 +20,8 @@ defmodule CompaniesWeb.JobController do
   def create(conn, %{"job" => params}) do
     case Jobs.create(params, current_user(conn)) do
       {:ok, _job} ->
+        :telemetry.execute(telemetry_event(), %{job_create: 1})
+
         conn
         |> put_flash(:info, "Thank you! Your listing will be review and should appear on the site shortly.")
         |> redirect(to: Routes.company_path(conn, :recent, locale(conn)))
