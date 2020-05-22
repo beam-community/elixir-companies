@@ -68,9 +68,9 @@ defmodule CompaniesWeb.CompanyLive do
       page: 1,
       total_pages: companies.total_pages,
       text: params["search"]["text"],
-      industry_id: params["search"]["industry_id"]
+      industry_id: params["search"]["industry_id"],
+      update: "replace"
     )
-    |> assign(update: "replace")
   end
 
   defp last_page?(assigns) do
