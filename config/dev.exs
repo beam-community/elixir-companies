@@ -56,6 +56,9 @@ config :companies, CompaniesWeb.Endpoint,
     ]
   ]
 
+# Do not run appsignal in local dev
+config :appsignal, :config, active: false
+
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
 

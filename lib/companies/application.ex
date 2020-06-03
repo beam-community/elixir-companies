@@ -10,6 +10,9 @@ defmodule Companies.Application do
     children = [
       # Start the Ecto repository
       Companies.Repo,
+      CompaniesWeb.Telemetry,
+      CompaniesWeb.RepoMetricsHistory,
+      CompaniesWeb.ViewingStats,
       # Start the PubSub system
       {Phoenix.PubSub, name: Companies.PubSub},
       # Start the endpoint when the application starts
@@ -23,6 +26,9 @@ defmodule Companies.Application do
       &Appsignal.Ecto.handle_event/4,
       nil
     )
+
+    CompaniesWeb.RepoMetricsHistory.setup_handlers()
+    CompaniesWeb.ViewingStats.setup_handlers()
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
