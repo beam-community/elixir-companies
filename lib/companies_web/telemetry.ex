@@ -36,13 +36,6 @@ defmodule CompaniesWeb.Telemetry do
       summary("companies.repo.query.queue_time", unit: {:native, :millisecond}),
       summary("companies.repo.query.idle_time", unit: {:native, :millisecond}),
 
-      # Database Time Metrics with History
-      summary("ecto.dashboard.query.total_time", unit: {:native, :millisecond}),
-      summary("ecto.dashboard.query.decode_time", unit: {:native, :millisecond}),
-      summary("ecto.dashboard.query.query_time", unit: {:native, :millisecond}),
-      summary("ecto.dashboard.query.queue_time", unit: {:native, :millisecond}),
-      summary("ecto.dashboard.query.idle_time", unit: {:native, :millisecond}),
-
       # Page view stats
       summary("page_views.companies_web.company_index"),
       summary("page_views.companies_web.company_show"),

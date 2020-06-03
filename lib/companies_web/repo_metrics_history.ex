@@ -7,12 +7,11 @@ defmodule CompaniesWeb.RepoMetricsHistory do
   use GenServer
 
   @telemetry_event [:companies, :repo, :query]
-  @historic_metric [:ecto, :dashboard, :query]
   @history_buffer_size 500
 
   def signatures do
     %{
-      @historic_metric => {__MODULE__, :data, []}
+      @telemetry_event => {__MODULE__, :data, []}
     }
   end
 
@@ -27,7 +26,7 @@ defmodule CompaniesWeb.RepoMetricsHistory do
   end
 
   def data(%{event_name: event_name} = metric) do
-    if List.starts_with?(event_name, @historic_metric) do
+    if List.starts_with?(event_name, @telemetry_event) do
       GenServer.call(__MODULE__, {:data, metric})
     else
       []
@@ -53,7 +52,6 @@ defmodule CompaniesWeb.RepoMetricsHistory do
 
   def handle_cast({:telemetry_metric, metric_map, metadata, _config}, %{history: history}) do
     time = System.system_time(:microsecond)
-    :telemetry.execute(@historic_metric, metric_map, metadata)
 
     new_history = CircularBuffer.insert(history, %{data: metric_map, time: time, metadata: pruned_metadata(metadata)})
 
