@@ -67,7 +67,7 @@ defmodule Companies.MixProject do
       {:telemetry_metrics, "~> 0.4"},
 
       # Live view
-      {:phoenix_live_view, "~> 0.12"},
+      {:phoenix_live_view, "~> 0.13"},
       {:floki, ">= 0.0.0", only: :test}
     ]
   end

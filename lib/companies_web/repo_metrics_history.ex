@@ -52,7 +52,7 @@ defmodule CompaniesWeb.RepoMetricsHistory do
   end
 
   def handle_cast({:telemetry_metric, metric_map, metadata, _config}, %{history: history}) do
-    time = System.system_time(:second)
+    time = System.system_time(:microsecond)
     :telemetry.execute(@historic_metric, metric_map, metadata)
 
     new_history = CircularBuffer.insert(history, %{data: metric_map, time: time, metadata: pruned_metadata(metadata)})
