@@ -6,10 +6,10 @@ defmodule CompaniesWeb.HistoricalData do
   it's own signatures/0 method as the other modules here do, and be added the the
   list of signatures below.
   """
-  alias CompaniesWeb.{RepoMetricsHistory, ViewingStats}
+  alias CompaniesWeb.{RepoMetricsHistory, VMHistory, ViewingStats}
 
   def signatures do
-    for module <- [RepoMetricsHistory, ViewingStats], reduce: %{} do
+    for module <- [RepoMetricsHistory, VMHistory, ViewingStats], reduce: %{} do
       acc -> Map.merge(acc, apply(module, :signatures, []))
     end
   end
