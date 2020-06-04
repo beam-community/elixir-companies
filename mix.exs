@@ -47,7 +47,7 @@ defmodule Companies.MixProject do
       {:phoenix_html, "~> 2.14"},
       {:phoenix_live_dashboard,
        git: "https://github.com/bglusman/phoenix_live_dashboard.git", branch: "historical_data"},
-      {:circular_buffer, "~> 0.2"},
+      {:circular_buffer, git: "https://github.com/keathley/circular_buffer.git"},
       {:phoenix_pubsub, "~> 2.0"},
       {:plug_cowboy, "~> 2.2"},
       {:postgrex, ">= 0.0.0"},
@@ -67,7 +67,7 @@ defmodule Companies.MixProject do
       {:telemetry_metrics, "~> 0.4"},
 
       # Live view
-      {:phoenix_live_view, "~> 0.12"},
+      {:phoenix_live_view, "~> 0.13"},
       {:floki, ">= 0.0.0", only: :test}
     ]
   end

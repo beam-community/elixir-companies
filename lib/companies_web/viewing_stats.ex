@@ -68,7 +68,7 @@ defmodule CompaniesWeb.ViewingStats do
   end
 
   def handle_cast(:emit_telemetry, %{history: history, current: current}) do
-    time = System.system_time(:second)
+    time = System.system_time(:microsecond)
 
     for {key, value} <- current do
       :telemetry.execute(@historic_metrics, %{key => value})
