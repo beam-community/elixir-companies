@@ -1,4 +1,8 @@
 defmodule CompaniesWeb.VMHistory do
+  @moduledoc """
+  GenServer to handle historical data for VM Metrics panel
+  """
+
   use GenServer
 
   @run_queue_event [:vm, :total_run_queue_lengths]
