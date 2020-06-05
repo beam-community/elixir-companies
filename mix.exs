@@ -5,7 +5,7 @@ defmodule Companies.MixProject do
     [
       app: :companies,
       version: "0.1.0",
-      elixir: "~> 1.7",
+      elixir: "~> 1.10",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -45,7 +45,9 @@ defmodule Companies.MixProject do
       {:phoenix, "~> 1.5.1", override: true},
       {:phoenix_ecto, "~> 4.1"},
       {:phoenix_html, "~> 2.14"},
-      {:phoenix_live_dashboard, "~> 0.2"},
+      {:phoenix_live_dashboard,
+       git: "https://github.com/bglusman/phoenix_live_dashboard.git", branch: "historical_data"},
+      {:circular_buffer, git: "https://github.com/keathley/circular_buffer.git"},
       {:phoenix_pubsub, "~> 2.0"},
       {:plug_cowboy, "~> 2.2"},
       {:postgrex, ">= 0.0.0"},
@@ -65,7 +67,7 @@ defmodule Companies.MixProject do
       {:telemetry_metrics, "~> 0.4"},
 
       # Live view
-      {:phoenix_live_view, "~> 0.12"},
+      {:phoenix_live_view, "~> 0.13"},
       {:floki, ">= 0.0.0", only: :test}
     ]
   end
