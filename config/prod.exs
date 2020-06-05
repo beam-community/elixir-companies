@@ -13,7 +13,15 @@ config :companies, CompaniesWeb.Endpoint,
   http: [:inet6, port: System.get_env("PORT") || 4000],
   url: [scheme: "https", host: "elixir-companies.com"],
   cache_static_manifest: "priv/static/cache_manifest.json",
-  secret_key_base: System.get_env("SECRET_KEY_BASE")
+  secret_key_base: System.get_env("SECRET_KEY_BASE"),
+  https: [
+    port: 443,
+    cipher_suite: :strong,
+    otp_app: :companies,
+    keyfile: System.get_env("COMPANIES_SSL_KEY_PATH"),
+    certfile: System.get_env("COMPANIES_SSL_CERT_PATH")
+  ],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]]
 
 config :companies, :notifier, Notify.Slack
 
