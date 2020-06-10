@@ -1,4 +1,7 @@
 defmodule CompaniesWeb.PhoenixHistory do
+  @moduledoc """
+  GenServer to handle historical data for Phoenix telemetry
+  """
   use GenServer
 
   @endpoint_event [:phoenix, :endpoint, :stop]
