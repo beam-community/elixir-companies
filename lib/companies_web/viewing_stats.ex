@@ -7,14 +7,7 @@ defmodule CompaniesWeb.ViewingStats do
   use GenServer
 
   @telemetry_event [:page_views, :count_events]
-  @historic_metrics [:page_views, :companies_web]
-  @history_buffer_size 500
-
-  def signatures do
-    %{
-      @historic_metrics => {__MODULE__, :data, []}
-    }
-  end
+  @aggregate_telemetry [:page_views, :companies_web]
 
   def telemetry_event, do: @telemetry_event
 
@@ -23,15 +16,7 @@ defmodule CompaniesWeb.ViewingStats do
   end
 
   def init(_state) do
-    {:ok, %{history: CircularBuffer.new(@history_buffer_size), current: %{}}}
-  end
-
-  def data(%{event_name: event_name} = metric) do
-    if List.starts_with?(event_name, @historic_metrics) do
-      GenServer.call(__MODULE__, {:data, metric})
-    else
-      []
-    end
+    {:ok, %{}}
   end
 
   def setup_handlers do
@@ -51,38 +36,20 @@ defmodule CompaniesWeb.ViewingStats do
     GenServer.cast(__MODULE__, :emit_telemetry)
   end
 
-  def handle_call({:raw_data, _metric}, _from, %{history: history} = state) do
-    {:reply, history, state}
-  end
-
-  def handle_call({:data, metric}, _from, %{history: history} = state) do
-    local_metric = List.last(metric.name)
-
-    reply =
-      for {time, time_metrics} <- history,
-          {^local_metric, data} <- time_metrics do
-        %{data: %{local_metric => data}, time: time}
-      end
-
-    {:reply, reply, state}
-  end
-
-  def handle_cast(:emit_telemetry, %{history: history, current: current}) do
-    time = System.system_time(:microsecond)
-
-    for {key, value} <- current do
-      :telemetry.execute(@historic_metrics, %{key => value})
+  def handle_cast(:emit_telemetry, state) do
+    for {key, value} <- state do
+      :telemetry.execute(@aggregate_telemetry, %{key => value})
     end
 
-    {:noreply, %{history: CircularBuffer.insert(history, {time, current}), current: %{}}}
+    {:noreply, %{}}
   end
 
-  def handle_cast({:telemetry_metric, metric_map, _metadata, _config}, %{current: current} = state) do
-    updated_current =
-      for {key, value} <- metric_map, reduce: current do
+  def handle_cast({:telemetry_metric, metric_map, _metadata, _config}, state) do
+    updated_state =
+      for {key, value} <- metric_map, reduce: state do
         acc -> Map.put_new(acc, key, 0) |> update_in([key], &(&1 + value))
       end
 
-    {:noreply, %{state | current: updated_current}}
+    {:noreply, updated_state}
   end
 end
