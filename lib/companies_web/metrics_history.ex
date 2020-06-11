@@ -20,18 +20,6 @@ defmodule CompaniesWeb.MetricsHistory do
     {:ok, %{}}
   end
 
-  def handle_cast({:metrics, metrics}, _state) do
-    {:noreply,
-     for metric <- metrics, reduce: %{} do
-       acc ->
-         key_metrics = Map.get(acc, event(metric.name), [])
-         metric_map = %{metric: metric, history: CircularBuffer.new(@history_buffer_size)}
-         attach_handler(metric, length(key_metrics))
-
-         Map.merge(acc, %{event(metric.name) => [metric_map | key_metrics]})
-     end}
-  end
-
   defp attach_handler(%{name: name_list} = metric, id) do
     :telemetry.attach(
       "#{inspect(name_list)}-history-#{id}",
@@ -47,6 +35,18 @@ defmodule CompaniesWeb.MetricsHistory do
 
   def handle_event(event_name, data, metadata, metric) do
     GenServer.cast(__MODULE__, {:telemetry_metric, event_name, data, metadata, metric})
+  end
+
+  def handle_cast({:metrics, metrics}, _state) do
+    {:noreply,
+     for metric <- metrics, reduce: %{} do
+       acc ->
+         key_metrics = Map.get(acc, event(metric.name), [])
+         metric_map = %{metric: metric, history: CircularBuffer.new(@history_buffer_size)}
+         attach_handler(metric, length(key_metrics))
+
+         Map.merge(acc, %{event(metric.name) => [metric_map | key_metrics]})
+     end}
   end
 
   def handle_cast({:telemetry_metric, event_name, data, metadata, metric}, state) do
