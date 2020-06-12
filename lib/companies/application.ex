@@ -16,11 +16,7 @@ defmodule Companies.Application do
       # Start the endpoint when the application starts
       CompaniesWeb.Endpoint,
       {Task.Supervisor, name: Companies.TaskSupervisor},
-      CompaniesWeb.ViewingStats,
-      %{
-        id: CompaniesWeb.MetricsHistory,
-        start: {CompaniesWeb.MetricsHistory, :start_link, [CompaniesWeb.Telemetry.metrics()]}
-      }
+      CompaniesWeb.ViewingStats
     ]
 
     :telemetry.attach(
