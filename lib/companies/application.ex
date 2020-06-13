@@ -15,8 +15,8 @@ defmodule Companies.Application do
       {Phoenix.PubSub, name: Companies.PubSub},
       # Start the endpoint when the application starts
       CompaniesWeb.Endpoint,
-      {Task.Supervisor, name: Companies.TaskSupervisor}
-      | CompaniesWeb.HistoricalData.modules()
+      {Task.Supervisor, name: Companies.TaskSupervisor},
+      CompaniesWeb.ViewingStats
     ]
 
     :telemetry.attach(
@@ -26,9 +26,7 @@ defmodule Companies.Application do
       nil
     )
 
-    for module <- CompaniesWeb.HistoricalData.modules() do
-      module.setup_handlers()
-    end
+    CompaniesWeb.ViewingStats.setup_handlers()
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
