@@ -11,14 +11,12 @@ defmodule Companies.Application do
       # Start the Ecto repository
       Companies.Repo,
       CompaniesWeb.Telemetry,
-      CompaniesWeb.RepoMetricsHistory,
-      CompaniesWeb.VMHistory,
-      CompaniesWeb.ViewingStats,
       # Start the PubSub system
       {Phoenix.PubSub, name: Companies.PubSub},
       # Start the endpoint when the application starts
       CompaniesWeb.Endpoint,
-      {Task.Supervisor, name: Companies.TaskSupervisor}
+      {Task.Supervisor, name: Companies.TaskSupervisor},
+      CompaniesWeb.ViewingStats
     ]
 
     :telemetry.attach(
@@ -28,8 +26,6 @@ defmodule Companies.Application do
       nil
     )
 
-    CompaniesWeb.RepoMetricsHistory.setup_handlers()
-    CompaniesWeb.VMHistory.setup_handlers()
     CompaniesWeb.ViewingStats.setup_handlers()
 
     # See https://hexdocs.pm/elixir/Supervisor.html
