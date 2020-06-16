@@ -8,7 +8,7 @@ defmodule CompaniesWeb.UserHelpers do
     end
   end
 
-  def current_user(%{assigns: %Phoenix.LiveView.Socket.AssignsNotInSocket{}}), do: false
+  def current_user(%{assigns: %Phoenix.LiveView.Socket.AssignsNotInSocket{}}), do: nil
 
   def current_user(conn) do
     conn.assigns[:current_user]
