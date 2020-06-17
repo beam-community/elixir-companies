@@ -3,14 +3,14 @@
 
     <h1 class="title is-3 fancy"><%= gettext("Companies") %></h1>
     <div class="tabs is-centered">
-      <%= form_tag "/companies", method: "get" do %>
+      <%= form_tag "#", method: "get", phx_submit: :search  %>
         <div class="columns is-desktop">
           <div class="column">
             <div class="field">
               <label class="field" for="search[text]"><%= gettext("Text") %></label>
               <div class="control">
                 <div class="text">
-                  <input name="search[text]" id="search[text]" class="input" type="text" value=""/>
+                  <input name="search[text]" id="search[text]" class="input" type="text" value="<%= @text %>"/>
                 </div>
               </div>
             </div>
@@ -22,9 +22,9 @@
                 <div class="select">
                   <select id="search[industry_id]" name="search[industry_id]">
                     <option value=""></option>
-                    <%= for industry <- @industries do %>
-                      <option value="<%= elem(industry, 1) %>">
-                        <%= elem(industry, 0) %>
+                    <%= for {name, value} <- @industries do %>
+                      <option value="<%= value %>" <%= selected(value, @industry_id) %>>
+                        <%= name %>
                       </option>
                     <% end %>
                   </select>
@@ -39,18 +39,17 @@
             </div>
           </div>
         </div>
-      <% end %>
+      </form>
     </div>
     <div class="content">
-      <div class="columns is-mobile is-multiline">
+      <div id="company-index" class="columns is-mobile is-multiline" phx-update="<%= @update %>" data-page="<%= @page %>" phx-hook="InfiniteScroll">
         <%= for company <- @companies do %>
-          <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
-            <%= render "card.html", company: company, conn: @conn %>
+          <div id="company-<%= company.id %>" class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
+            <%= render "card.html", company: company, conn: @socket, user_id: @user_id %>
           </div>
         <% end %>
       </div> <!-- /columns -->
     </div> <!-- /content -->
 
-    <%= pagination_links(@companies, [next: gettext("Next") , previous: gettext("Previous")] ++ query_params(@conn)) %>
   </div> <!-- /container -->
 </section>

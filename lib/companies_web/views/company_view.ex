@@ -1,7 +1,6 @@
 defmodule CompaniesWeb.CompanyView do
   use CompaniesWeb, :view
 
-  import Scrivener.HTML
   import Companies.URLSchemer
 
   def hiring?(%{jobs: jobs}), do: length(jobs) > 0
@@ -28,5 +27,16 @@ defmodule CompaniesWeb.CompanyView do
     |> Earmark.as_html!()
     |> HtmlSanitizeEx.markdown_html()
     |> Phoenix.HTML.raw()
+  end
+
+  def selected(_, ""), do: ""
+  def selected(_, nil), do: ""
+
+  def selected(value, industry_id) do
+    if value == String.to_integer(industry_id) do
+      "selected"
+    else
+      ""
+    end
   end
 end
