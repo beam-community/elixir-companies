@@ -41,7 +41,7 @@ defmodule CompaniesWeb.Router do
 
     live_dashboard "/",
       metrics: CompaniesWeb.Telemetry,
-      historical_data: {LiveDashboardHistory, :data, [__MODULE__]}
+      metrics_history: {LiveDashboardHistory, :data, [__MODULE__]}
   end
 
   scope "/", CompaniesWeb do
