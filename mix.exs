@@ -45,9 +45,9 @@ defmodule Companies.MixProject do
       {:phoenix, "~> 1.5.1", override: true},
       {:phoenix_ecto, "~> 4.1"},
       {:phoenix_html, "~> 2.14"},
-      {:live_dashboard_history, git: "https://github.com/bglusman/live_dashboard_history.git"},
+      {:live_dashboard_history, "~> 0.1"},
       {:phoenix_pubsub, "~> 2.0"},
-      {:plug_cowboy, "~> 2.2"},
+      {:plug_cowboy, "~> 2.3"},
       {:postgrex, ">= 0.0.0"},
       {:scrivener_ecto, "~> 2.3"},
       {:scrivener_html, "~> 1.8"},
@@ -65,7 +65,7 @@ defmodule Companies.MixProject do
       {:telemetry_metrics, "~> 0.4"},
 
       # Live view
-      {:phoenix_live_view, "~> 0.13"},
+      {:phoenix_live_view, "~> 0.14"},
       {:floki, ">= 0.0.0", only: :test}
     ]
   end
