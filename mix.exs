@@ -42,7 +42,7 @@ defmodule Companies.MixProject do
       {:html_sanitize_ex, "~> 1.4.0"},
       {:httpoison, "~> 1.6"},
       {:jason, "~> 1.1"},
-      {:phoenix, "~> 1.5.1", override: true},
+      {:phoenix, "~> 1.5.3", override: true},
       {:phoenix_ecto, "~> 4.1"},
       {:phoenix_html, "~> 2.14"},
       {:live_dashboard_history, "~> 0.1"},
