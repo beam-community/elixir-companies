@@ -7,6 +7,10 @@ defmodule Companies.Accounts do
 
   alias Companies.{Repo, Schema.User}
 
+  def list_users do
+    Repo.all(User)
+  end
+
   def for_hire(params) do
     page = Map.get(params, "page", "1")
 
@@ -98,6 +102,12 @@ defmodule Companies.Accounts do
   def update(%User{} = user, attrs) do
     user
     |> User.profile_changeset(attrs)
+    |> Repo.update()
+  end
+
+  def toggle_admin(%User{admin: admin} = user) do
+    user
+    |> User.admin_changeset(%{admin: !admin})
     |> Repo.update()
   end
 end

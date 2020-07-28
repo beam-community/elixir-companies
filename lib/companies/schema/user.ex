@@ -48,4 +48,8 @@ defmodule Companies.Schema.User do
   def profile_changeset(user, attrs) do
     cast(user, attrs, [:interests, :cv_url, :looking_for_job])
   end
+
+  def admin_changeset(user, attrs) do
+    cast(user, attrs, [:admin])
+  end
 end
