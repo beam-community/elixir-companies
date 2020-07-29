@@ -38,7 +38,14 @@
                   <nav class="level is-mobile">
                     <div class="level-left">
                       <%= gettext("Admin Status") %>: <%= user.admin %> &nbsp;
-                      <%= link to: "#", phx_click: :toggle_admin, phx_value_id: user.id, class: "level-item", aria: [label: "retweet"], title: "Toggle admin status" do %>
+
+                      <%= link to: "#",
+                          phx_click: :toggle_admin,
+                          phx_value_id: user.id,
+                          class: "level-item",
+                          aria: [label: "retweet"],
+                          title: "Toggle admin status" do %>
+
                         <span class="icon is-small">
                           <i class="fas fa-retweet" aria-hidden="true"></i>
                         </span>
