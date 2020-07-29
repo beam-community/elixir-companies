@@ -53,12 +53,12 @@ defmodule Companies.AccountsTest do
 
   describe "list_users/0" do
     test "returns an empty list if no user exists" do
-      assert [] == Accounts.list_users()
+      assert %{entries: []} = Accounts.list_users()
     end
 
     test "returns a list of users" do
       %{id: id} = insert(:user)
-      assert [%Companies.Schema.User{id: ^id}] = Accounts.list_users()
+      assert %{entries: [%Companies.Schema.User{id: ^id}]} = Accounts.list_users()
     end
   end
 

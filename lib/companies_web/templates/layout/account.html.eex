@@ -11,7 +11,7 @@
       </div>
       <div class="dropdown-menu" id="dropdown-menu4" role="menu">
         <div class="dropdown-content">
-          <%= link gettext("Users"), to: Routes.user_path(@conn, :index, locale(@conn)), class: "navbar-item" %>
+          <%= link gettext("Users"), to: Routes.live_path(@conn, CompaniesWeb.Admin.UserLive, locale(@conn)), class: "navbar-item" %>
           <%= link gettext("Approvals"), to: Routes.pending_change_path(@conn, :index, locale(@conn)), class: "navbar-item" %>
         </div>
       </div>
