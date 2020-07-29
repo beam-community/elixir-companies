@@ -50,8 +50,6 @@ defmodule CompaniesWeb.Admin.UserLive do
         nil
     end
 
-    IO.inspect(assigns)
-
     socket = assign(socket, :users, Accounts.list_users(%{}))
 
     {:noreply, socket}
