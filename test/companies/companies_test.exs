@@ -53,6 +53,42 @@ defmodule Companies.CompaniesTest do
       assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " alpha"}})
       assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " alpha "}})
     end
+
+    test "filters companies by text (by location)" do
+      insert(:company, name: "ZULU", location: "Australia")
+      insert(:company, name: "BETA", location: "Brazil")
+      insert(:company, name: "ALPHA", location: "Australia")
+
+      assert %{entries: [%{name: "ALPHA"}, %{name: "ZULU"}]} = Companies.all(%{"search" => %{"text" => "aust"}})
+      assert %{entries: [%{name: "BETA"}]} = Companies.all(%{"search" => %{"text" => "zil"}})
+      assert %{entries: []} = Companies.all(%{"search" => %{"text" => "cana"}})
+    end
+
+    test "trims leading and trailing whitespace on text search (by location)" do
+      insert(:company, name: "ZULU", location: "Canada")
+      insert(:company, name: "BETA", location: "Brazil")
+      insert(:company, name: "ALPHA", location: "Australia")
+
+      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => "aus "}})
+      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " australia"}})
+      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " lia "}})
+    end
+
+    test "filters companies by text (by name and location)" do
+      insert(:company, name: "AUSTO", location: "Canada")
+      insert(:company, name: "ALPHA", location: "Australia")
+
+      assert %{entries: [%{name: "ALPHA"}, %{name: "AUSTO"}]} = Companies.all(%{"search" => %{"text" => "aust"}})
+    end
+
+    test "trims leading and trailing whitespace on text search (by name and location)" do
+      insert(:company, name: "AUSTO", location: "Canada")
+      insert(:company, name: "ALPHA", location: "Australia")
+
+      assert %{entries: [%{name: "ALPHA"}, %{name: "AUSTO"}]} = Companies.all(%{"search" => %{"text" => "aust "}})
+      assert %{entries: [%{name: "ALPHA"}, %{name: "AUSTO"}]} = Companies.all(%{"search" => %{"text" => " aust"}})
+      assert %{entries: [%{name: "ALPHA"}, %{name: "AUSTO"}]} = Companies.all(%{"search" => %{"text" => " aust "}})
+    end
   end
 
   describe "recent/1" do

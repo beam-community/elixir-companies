@@ -57,7 +57,7 @@ defmodule Companies.Companies do
   defp query_predicates({"text", text}, query) do
     text = String.trim(text)
 
-    from c in query, where: ilike(c.name, ^"%#{text}%")
+    from c in query, where: ilike(c.name, ^"%#{text}%") or ilike(c.location, ^"%#{text}%")
   end
 
   defp query_predicates(nil, query), do: query
