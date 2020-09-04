@@ -9,7 +9,7 @@
     "bulma": "jgthms/bulma#master",
     "bulma-extensions": "^3.0.0",
     "diff": "^4.0.1",
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.13.1",
     "phoenix": "file:../deps/phoenix",
     "phoenix_html": "file:../deps/phoenix_html",
     "phoenix_live_view": "file:../deps/phoenix_live_view",
