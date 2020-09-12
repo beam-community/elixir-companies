@@ -50,4 +50,28 @@ defmodule Companies.AccountsTest do
       assert {:ok, %Companies.Schema.User{looking_for_job: true}} = Accounts.update(user, %{looking_for_job: true})
     end
   end
+
+  describe "list_users/0" do
+    test "returns an empty list if no user exists" do
+      assert %{entries: []} = Accounts.list_users()
+    end
+
+    test "returns a list of users" do
+      %{id: id} = insert(:user)
+      assert %{entries: [%Companies.Schema.User{id: ^id}]} = Accounts.list_users()
+    end
+  end
+
+  describe "toggle_admin/1" do
+    test "given a simple user, gets converted to an admin" do
+      user = insert(:user)
+      assert user.admin == false
+      assert {:ok, %Companies.Schema.User{admin: true}} = Accounts.toggle_admin(user)
+    end
+
+    test "given an admin, gets converted to a simple user" do
+      user = insert(:user, admin: true)
+      assert {:ok, %Companies.Schema.User{admin: false}} = Accounts.toggle_admin(user)
+    end
+  end
 end

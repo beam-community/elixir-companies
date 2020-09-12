@@ -3,7 +3,7 @@
 
     <h1 class="title is-3 fancy"><%= gettext("Companies") %></h1>
     <div class="tabs is-centered">
-      <%= form_tag "#", method: "get", phx_submit: :search  %>
+      <%= form_tag "#", method: "get", phx_change: :search  %>
         <div class="columns is-desktop">
           <div class="column is-one-third-desktop">
             <div class="field">
@@ -30,12 +30,6 @@
                   </select>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="field">
-              <br/>
-              <%= submit gettext("Search"), class: "button is-link" %>
             </div>
           </div>
         </div>

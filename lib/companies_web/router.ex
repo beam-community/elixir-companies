@@ -81,6 +81,9 @@ defmodule CompaniesWeb.Router do
       pipe_through [:admin]
 
       resources "/changes", PendingChangeController, only: [:index, :show, :update]
+      # resources "/users", UserController, only: [:index]
+      get "/users/:id/toggle_admin", UserController, :toggle_admin
+      live "/users", UserLive
     end
   end
 

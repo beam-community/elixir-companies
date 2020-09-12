@@ -7,6 +7,16 @@ defmodule Companies.Accounts do
 
   alias Companies.{Repo, Schema.User}
 
+  def list_users(params \\ %{}) do
+    page = Map.get(params, "page", "1")
+
+    (u in User)
+    |> from()
+    |> order_by(:nickname)
+    |> predicates(params)
+    |> Repo.paginate(page: page)
+  end
+
   def for_hire(params) do
     page = Map.get(params, "page", "1")
 
@@ -100,4 +110,32 @@ defmodule Companies.Accounts do
     |> User.profile_changeset(attrs)
     |> Repo.update()
   end
+
+  def toggle_admin(%User{admin: admin} = user) do
+    user
+    |> User.admin_changeset(%{admin: !admin})
+    |> Repo.update()
+  end
+
+  def predicates(query, %{"search" => search_params}) do
+    Enum.reduce(search_params, query, &query_predicates/2)
+  end
+
+  def predicates(query, _) do
+    query
+  end
+
+  defp query_predicates({_, ""}, query), do: query
+
+  defp query_predicates({"text", text}, query) do
+    text = String.trim(text)
+
+    from u in query, where: ilike(u.nickname, ^"%#{text}%") or ilike(u.email, ^"%#{text}%")
+  end
+
+  defp query_predicates({"admin_only", "on"}, query) do
+    from u in query, where: u.admin == true
+  end
+
+  defp query_predicates(nil, query), do: query
 end
