@@ -60,7 +60,10 @@ config :live_dashboard_history, LiveDashboardHistory,
   router: CompaniesWeb.Router,
   metrics: CompaniesWeb.Telemetry,
   buffer_size: 500
-
+  #
+config :companies, Companies.Repo,
+  ssl: true,
+  pool_size: 10
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
