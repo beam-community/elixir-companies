@@ -30,15 +30,6 @@
           <%= @user.email %>
           <br>
         </p>
-        <%= if @user.bio do %>
-        <p class="is-size-5">
-          <span class="icon purple">
-            <i class="far fa-address-card"></i>
-          </span>
-          <%= @user.bio %>
-          <br>
-        </p>
-        <% end %>
         <%= if @user.description do %>
         <p class="is-size-5">
           <span class="icon purple">
