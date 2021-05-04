@@ -22,30 +22,28 @@ msgid "Add a job"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/layout/account.html.eex:5
+#: lib/companies_web/templates/layout/account.html.eex:15
 msgid "Approvals"
 msgstr ""
 
 #, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:77
-#: lib/companies_web/templates/job/form.html.eex:45
-#: lib/companies_web/templates/job/show.html.eex:23
+#: lib/companies_web/templates/job/form.html.eex:45 lib/companies_web/templates/user/form.html.eex:38
 msgid "Back"
 msgstr ""
 
 #, elixir-format
 #: lib/companies_web/templates/company/card.html.eex:18
-#: lib/companies_web/templates/job/show.html.eex:22
 msgid "Edit"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/company/edit.html.eex:4
+#: lib/companies_web/templates/company/edit.html.eex:5
 msgid "Edit Company"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/job/edit.html.eex:4
+#: lib/companies_web/templates/job/edit.html.eex:5
 msgid "Edit Job"
 msgstr ""
 
@@ -65,23 +63,23 @@ msgid "Looks like you are lost"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/layout/footer.html.eex:17
+#: lib/companies_web/templates/layout/footer.html.eex:10
 msgid "Made possible with support from"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/company/new.html.eex:4
+#: lib/companies_web/templates/company/new.html.eex:5
 msgid "New Company"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/job/new.html.eex:4
+#: lib/companies_web/templates/job/new.html.eex:5
 msgid "New Job"
 msgstr ""
 
 #, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:4
-#: lib/companies_web/templates/job/form.html.eex:4
+#: lib/companies_web/templates/job/form.html.eex:4 lib/companies_web/templates/user/form.html.eex:4
 msgid "Oops, something went wrong! Please check the errors below."
 msgstr ""
 
@@ -92,17 +90,12 @@ msgstr ""
 
 #, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:74
-#: lib/companies_web/templates/job/form.html.eex:42
+#: lib/companies_web/templates/job/form.html.eex:42 lib/companies_web/templates/user/form.html.eex:35
 msgid "Save"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/job/show.html.eex:1
-msgid "Show Job"
-msgstr ""
-
-#, elixir-format
-#: lib/companies_web/templates/layout/account.html.eex:23
+#: lib/companies_web/templates/layout/account.html.eex:47
 msgid "Sign in"
 msgstr ""
 
@@ -112,13 +105,8 @@ msgid "Sign in & list free"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/layout/account.html.eex:14
+#: lib/companies_web/templates/layout/account.html.eex:38
 msgid "Sign out"
-msgstr ""
-
-#, elixir-format
-#: lib/companies_web/templates/job/show.html.eex:6
-msgid "Title:"
 msgstr ""
 
 #, elixir-format
@@ -127,23 +115,13 @@ msgid "With <span class='has-text-weight-semibold'>%{companies_count}</span> and
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/layout/footer.html.eex:8
-msgid "is maintained by"
-msgstr ""
-
-#, elixir-format
-#: lib/companies_web/helpers/site_helpers.ex:12
+#: lib/companies_web/helpers/site_helpers.ex:10
 msgid "A collection of companies using Elixir in production."
 msgstr ""
 
 #, elixir-format
 #: lib/companies_web/templates/layout/navbar.html.eex:17
 msgid "Home"
-msgstr ""
-
-#, elixir-format
-#: lib/companies_web/templates/layout/footer.html.eex:14
-msgid " and a team of contributors!"
 msgstr ""
 
 #, elixir-format
@@ -169,7 +147,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:9
-#: lib/companies_web/templates/company/index.html.eex:20
+#: lib/companies_web/templates/company/index.html.leex:20
 msgid "Industry"
 msgstr ""
 
@@ -204,13 +182,13 @@ msgid "Website"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/views/admin/pending_change_view.ex:11
+#: lib/companies_web/views/admin/pending_change_view.ex:19
 msgid "Approved Change"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/admin/pending_change/index.html.eex:18
-#: lib/companies_web/views/admin/pending_change_view.ex:14
+#: lib/companies_web/templates/admin/pending_change/index.html.eex:24
+#: lib/companies_web/views/admin/pending_change_view.ex:22
 msgid "Approved Changes"
 msgstr ""
 
@@ -220,7 +198,7 @@ msgid "Browse full list"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/company/index.html.eex:4
+#: lib/companies_web/templates/company/index.html.leex:4
 #: lib/companies_web/templates/layout/navbar.html.eex:18
 msgid "Companies"
 msgstr ""
@@ -242,35 +220,33 @@ msgid "Last update"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/views/admin/pending_change_view.ex:10
+#: lib/companies_web/views/admin/pending_change_view.ex:18
 msgid "Pending Change"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/admin/pending_change/index.html.eex:13
-#: lib/companies_web/views/admin/pending_change_view.ex:16
+#: lib/companies_web/templates/admin/pending_change/index.html.eex:16
+#: lib/companies_web/views/admin/pending_change_view.ex:24
 msgid "Pending Changes"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/views/admin/pending_change_view.ex:12
+#: lib/companies_web/views/admin/pending_change_view.ex:20
 msgid "Rejected Change"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/admin/pending_change/index.html.eex:23
-#: lib/companies_web/views/admin/pending_change_view.ex:15
+#: lib/companies_web/templates/admin/pending_change/index.html.eex:32
+#: lib/companies_web/views/admin/pending_change_view.ex:23
 msgid "Rejected Changes"
 msgstr ""
 
 #, elixir-format
 #: lib/companies_web/templates/job/index.html.eex:35
-#: lib/companies_web/templates/job/show.html.eex:16
 msgid "Remote"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/company/index.html.eex:38
 #: lib/companies_web/templates/job/index.html.eex:26
 msgid "Search"
 msgstr ""
@@ -291,12 +267,14 @@ msgid "Actions"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/company/index.html.eex:54
+#: lib/companies_web/templates/job/index.html.eex:51
+#: lib/companies_web/templates/user/for_hire.html.eex:14
 msgid "Next"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/company/index.html.eex:54
+#: lib/companies_web/templates/job/index.html.eex:51
+#: lib/companies_web/templates/user/for_hire.html.eex:14
 msgid "Previous"
 msgstr ""
 
@@ -306,6 +284,84 @@ msgid "Show only remote jobs"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/company/index.html.eex:10
+#: lib/companies_web/templates/company/index.html.leex:10
 msgid "Text"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/layout/account.html.eex:6
+msgid "Admin"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/admin/user/index.html.leex:40
+msgid "Admin Status"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/user/form.html.eex:17
+msgid "CV URL"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/user/profile.html.eex:71
+msgid "Check my CV"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/user/profile.html.eex:12
+msgid "Contact Developer"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/layout/account.html.eex:30
+msgid "Dashboard"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/layout/navbar.html.eex:20
+#: lib/companies_web/templates/user/for_hire.html.eex:4
+msgid "Developers"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/user/edit.html.eex:5
+#: lib/companies_web/templates/user/profile.html.eex:10
+msgid "Edit Profile"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/user/form.html.eex:9
+msgid "Interests"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/user/form.html.eex:29
+msgid "Looking for a job"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/layout/account.html.eex:22
+msgid "Profile"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/admin/user/index.html.leex:20
+msgid "Show only admins"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/admin/user/index.html.leex:3
+#: lib/companies_web/templates/layout/account.html.eex:14
+msgid "Users"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/controllers/admin/user_controller.ex:17
+msgid "You can't change your own admin status"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/new.html.eex:6
+msgid "Your company will appear in the list once your submission has been validated by the site admins."
 msgstr ""
