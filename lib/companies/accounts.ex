@@ -86,7 +86,7 @@ defmodule Companies.Accounts do
     %User{}
     |> User.changeset(attrs)
     |> Repo.insert(
-      on_conflict: {:replace, [:token, :name, :nickname, :image, :description, :bio, :location]},
+      on_conflict: {:replace, [:token, :name, :nickname, :image, :description, :location]},
       conflict_target: :email
     )
   end

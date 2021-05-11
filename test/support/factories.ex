@@ -44,7 +44,6 @@ defmodule Companies.Factory do
       email: sequence(:email, &"user-#{&1}@example.com"),
       token: "abc1234",
       name: "test name",
-      bio: "test bio",
       description: "test description",
       location: "test location",
       interests: "test interests",
