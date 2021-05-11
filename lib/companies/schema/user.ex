@@ -14,7 +14,6 @@ defmodule Companies.Schema.User do
              :name,
              :image,
              :description,
-             :bio,
              :location,
              :interests,
              :cv_url,
@@ -29,7 +28,6 @@ defmodule Companies.Schema.User do
     field :name, :string
     field :image, :string
     field :description, :string
-    field :bio, :string
     field :location, :string
     field :interests, :string
     field :cv_url, :string
@@ -41,7 +39,7 @@ defmodule Companies.Schema.User do
   @doc false
   def changeset(user, attrs) do
     user
-    |> cast(attrs, [:email, :email_notifications, :nickname, :token, :name, :image, :description, :bio, :location])
+    |> cast(attrs, [:email, :email_notifications, :nickname, :token, :name, :image, :description, :location])
     |> validate_required([:email, :nickname, :token])
   end
 

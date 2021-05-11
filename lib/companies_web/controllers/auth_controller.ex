@@ -13,7 +13,6 @@ defmodule CompaniesWeb.AuthController do
       name: auth.info.name,
       image: auth.info.image,
       description: auth.info.description,
-      bio: auth.extra.raw_info.user["bio"],
       location: auth.info.location
     }
 
