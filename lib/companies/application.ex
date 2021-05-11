@@ -8,14 +8,11 @@ defmodule Companies.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      # Start the Ecto repository
-      Companies.Repo,
       CompaniesWeb.Telemetry,
       # Start the PubSub system
       {Phoenix.PubSub, name: Companies.PubSub},
       # Start the endpoint when the application starts
       CompaniesWeb.Endpoint,
-      {Task.Supervisor, name: Companies.TaskSupervisor},
       CompaniesWeb.ViewingStats
     ]
 

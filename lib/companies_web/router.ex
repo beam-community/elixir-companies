@@ -12,42 +12,8 @@ defmodule CompaniesWeb.Router do
     plug CompaniesWeb.Plugs.Session
   end
 
-  pipeline :api do
-    plug :accepts, ["json"]
-  end
-
-  pipeline :auth do
-    plug CompaniesWeb.Plugs.Authorize
-  end
-
-  pipeline :admin do
-    plug CompaniesWeb.Plugs.Authorize, admin: true
-  end
-
   pipeline :set_locale do
     plug SetLocale, gettext: CompaniesWeb.Gettext, default_locale: "en"
-  end
-
-  if Mix.env() == :dev do
-    scope "/" do
-      pipe_through [:browser]
-
-      forward "/sent_emails", Bamboo.SentEmailViewerPlug
-    end
-  end
-
-  scope "/dashboard", CompaniesWeb do
-    pipe_through [:browser, :auth]
-
-    live_dashboard "/",
-      metrics: CompaniesWeb.Telemetry,
-      metrics_history: {LiveDashboardHistory, :metrics_history, [__MODULE__]}
-  end
-
-  scope "/", CompaniesWeb do
-    pipe_through [:api]
-
-    post "/sendgrid", SendGridController, :create
   end
 
   scope "/", CompaniesWeb do
@@ -60,14 +26,6 @@ defmodule CompaniesWeb.Router do
   scope "/:locale/", CompaniesWeb do
     pipe_through [:browser, :set_locale]
 
-    scope "/" do
-      pipe_through [:auth]
-
-      resources "/companies", CompanyController, except: [:index, :show]
-      resources "/jobs", JobController, except: [:index, :show]
-      resources "/users", UserController, only: [:edit, :update]
-    end
-
     get "/", CompanyController, :recent
     live "/companies", CompanyLive
     resources "/companies", CompanyController, only: [:show]
@@ -76,22 +34,5 @@ defmodule CompaniesWeb.Router do
     get "/profile", UserController, :profile
     get "/for_hire", UserController, :for_hire
     get "/users/:id", UserController, :show
-
-    scope "/admin", Admin do
-      pipe_through [:admin]
-
-      resources "/changes", PendingChangeController, only: [:index, :show, :update]
-      # resources "/users", UserController, only: [:index]
-      get "/users/:id/toggle_admin", UserController, :toggle_admin
-      live "/users", UserLive
-    end
-  end
-
-  scope "/auth", CompaniesWeb do
-    pipe_through [:browser]
-
-    get "/signout", AuthController, :signout
-    get "/github", AuthController, :request
-    get "/github/callback", AuthController, :callback
   end
 end

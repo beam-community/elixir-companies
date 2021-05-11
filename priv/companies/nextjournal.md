@@ -1,0 +1,14 @@
+%{
+  blog: "",
+  date_added: ~D[2019-02-24],
+  github: "",
+  industries: ["Research"],
+  locations: [""],
+  name: "nextjournal",
+  old_id: 179,
+  url: "https://nextjournal.com"
+}
+
+---
+
+([GitHub](https://github.com/nextjournal)) - An evolving platform for computer-aided research. Elixir is used for developing the backend of the platform.

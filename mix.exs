@@ -36,37 +36,31 @@ defmodule Companies.MixProject do
   defp deps do
     [
       {:appsignal, "~> 1.13"},
-      {:bamboo, "~> 1.4"},
-      {:ecto_sql, "~> 3.4"},
+      {:earmark, "~> 1.4"},
       {:gettext, "~> 0.17"},
       {:html_sanitize_ex, "~> 1.4.0"},
       {:httpoison, "~> 1.6"},
       {:jason, "~> 1.1"},
+      {:live_dashboard_history, "~> 0.1"},
       {:phoenix, "~> 1.5.3", override: true},
       {:phoenix_ecto, "~> 4.1"},
       {:phoenix_html, "~> 2.14"},
-      {:live_dashboard_history, "~> 0.1"},
+      {:phoenix_live_view, "~> 0.14"},
       {:phoenix_pubsub, "~> 2.0"},
       {:plug_cowboy, "~> 2.3"},
       {:postgrex, ">= 0.0.0"},
-      {:scrivener_ecto, "~> 2.3"},
-      {:scrivener_html, "~> 1.8"},
       {:set_locale, "~> 0.2.8"},
+      {:telemetry_metrics, "~> 0.4"},
+      {:telemetry_poller, "~> 0.4"},
       {:timex, "~> 3.6.1"},
-      {:ueberauth, "~> 0.6.3"},
-      {:ueberauth_github, "~> 0.8.0"},
+
+      # Test & Dev dependencies
       {:bypass, "~> 1.0", only: :test},
+      {:credo, "~> 1.4.0", only: [:dev, :test], runtime: false},
       {:ex_machina, "~> 2.4", only: :test},
       {:excoveralls, "~> 0.12", only: :test},
-      {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:earmark, "~> 1.4"},
-      {:credo, "~> 1.4.0", only: [:dev, :test], runtime: false},
-      {:telemetry_poller, "~> 0.4"},
-      {:telemetry_metrics, "~> 0.4"},
-
-      # Live view
-      {:phoenix_live_view, "~> 0.14"},
-      {:floki, ">= 0.0.0", only: :test}
+      {:floki, ">= 0.0.0", only: :test},
+      {:phoenix_live_reload, "~> 1.2", only: :dev}
     ]
   end
 

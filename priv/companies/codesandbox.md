@@ -1,0 +1,14 @@
+%{
+  blog: "",
+  date_added: ~D[2019-02-24],
+  github: "https://github.com/CompuIves/codesandbox-client",
+  industries: ["Computer Software"],
+  locations: [""],
+  name: "CodeSandbox",
+  old_id: 312,
+  url: "https://codesandbox.io/"
+}
+
+---
+
+Online Code Editor Tailored for Web Application Development

@@ -1,10 +1,19 @@
 defmodule Companies.Companies do
   @moduledoc false
 
-  import Ecto.Query, warn: false
+  use NimblePublisher,
+    build: Companies.Company,
+    from: "priv/companies/*.md",
+    as: :companies,
+    highlighters: [:makeup_elixir, :makeup_erlang]
 
-  alias Companies.{PendingChanges, Repo}
-  alias Companies.Schema.{Company, Job}
+  @by_slug Enum.reduce(@companies, %{}, &(Map.put(&2, &1.slug, &1)))
+  @by_legacy_id @companies |> Enum.reject(&is_nil(&1.old_id)) |> Enum.into(%{}, &({&1.old_id, &1}))
+  @by_industries Enum.reduce(@companies, %{}, fn company, acc ->
+    Enum.reduce(company.industries, acc, fn industry, acc2 ->
+      Map.update(acc2, industry, [company], &([company | &1]))
+    end)
+  end)
 
   @doc """
   Returns the list of paginated companies.
@@ -16,51 +25,24 @@ defmodule Companies.Companies do
 
   """
 
-  def all(params \\ %{}) do
-    page = Map.get(params, "page", "1")
-    order = Map.get(params, :order, :name)
-
-    job_query = from j in Job, where: [expired: false]
-
-    (c in Company)
-    |> from()
-    |> predicates(params)
-    |> order_by(^order)
-    |> where([c, _i, _j], is_nil(c.removed_pending_change_id))
-    |> preload([:industry, jobs: ^job_query])
-    |> Repo.paginate(page: page)
+  def all do
+    @companies
   end
 
   @doc """
-  Simply calls `all/1` with a two level order, so that even in the slight chance we have
-  two companies with the exact same time of insertion, they will be ordered with
-  id next.
+  Returns 10 random companies
+
+  ## Examples
+
+  iex> random()
+  [%Company{}, ...]
+
   """
-  def recent do
-    all(%{order: [desc: :inserted_at, desc: :id]})
+  def random do
+    @companies
+    |> Enum.shuffle()
+    |> Enum.random(10)
   end
-
-  def predicates(query, %{"search" => search_params}) do
-    Enum.reduce(search_params, query, &query_predicates/2)
-  end
-
-  def predicates(query, _) do
-    query
-  end
-
-  defp query_predicates({_, ""}, query), do: query
-
-  defp query_predicates({"industry_id", industry_id}, query) when not is_nil(industry_id) do
-    from c in query, where: c.industry_id == ^industry_id
-  end
-
-  defp query_predicates({"text", text}, query) do
-    text = String.trim(text)
-
-    from c in query, where: ilike(c.name, ^"%#{text}%") or ilike(c.location, ^"%#{text}%")
-  end
-
-  defp query_predicates(nil, query), do: query
 
   @doc """
   Returns the total company count
@@ -71,12 +53,7 @@ defmodule Companies.Companies do
   23
 
   """
-  def count do
-    from(c in Company)
-    |> where([c], is_nil(c.removed_pending_change_id))
-    |> select([c], count(c.id))
-    |> Repo.one()
-  end
+  def count, do: length(@companies)
 
   @doc """
   Gets a single company.
@@ -88,83 +65,19 @@ defmodule Companies.Companies do
   iex> get!(123)
   %Company{}
 
+  iex> get!("company")
+  %Company{}
+
   iex> get!(456)
-  ** (Ecto.NoResultsError)
+  nil
 
   """
-  def get!(id, opts \\ []) do
-    preloads = Keyword.get(opts, :preloads, [])
-
-    from(c in Company)
-    |> preload(^preloads)
-    |> from()
-    |> where([c], is_nil(c.removed_pending_change_id))
-    |> Repo.get!(id)
-  end
-
-  @doc """
-  Submits a new company for approval.
-
-  ## Examples
-
-  iex> create(%{field: value}, current_user())
-  :ok
-
-  iex> create(%{field: bad_value}, current_user())
-  {:error, %Ecto.Changeset{}}
-
-  """
-  @spec create(map(), map()) :: {:ok, Ecto.Schema.t()} | {:error, Ecto.Changeset.t()}
-  def create(attrs, user) do
-    %Company{}
-    |> Company.changeset(attrs)
-    |> PendingChanges.create(:create, user)
-  end
-
-  @doc """
-  Updates a company.
-
-  ## Examples
-
-  iex> update(company, %{field: new_value})
-  {:ok, %Company{}}
-
-  iex> update(company, %{field: bad_value})
-  {:error, %Ecto.Changeset{}}
-
-  """
-  def update(%Company{} = company, attrs, user) do
-    company
-    |> Company.changeset(attrs)
-    |> PendingChanges.create(:update, user)
-  end
-
-  @doc """
-  Deletes a Company.
-
-  ## Examples
-
-  iex> delete(company)
-  {:ok, %Company{}}
-
-  iex> delete(company)
-  {:error, %Ecto.Changeset{}}
-
-  """
-  def delete(%Company{} = company, user) do
-    PendingChanges.create(company, :delete, user)
-  end
-
-  @doc """
-  Returns an `%Ecto.Changeset{}` for tracking company changes.
-
-  ## Examples
-
-  iex> change(company)
-  %Ecto.Changeset{source: %Company{}}
-
-  """
-  def change(%Company{} = company) do
-    Company.changeset(company, %{})
+  def get!(id_or_slug) do
+    with true <- Regex.match?(~r/\d*/, id_or_slug),
+         {id, _} <- Integer.parse(id_or_slug) do
+      Map.get(@by_legacy_id, id)
+    else
+      _ -> Map.get(by_slug, id_or_slug)
+    end
   end
 end
