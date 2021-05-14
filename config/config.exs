@@ -26,45 +26,19 @@ config :logger, :console,
 config :phoenix, :json_library, Jason
 
 config :companies,
-  notifier: Notify.Console,
   site_data: %{
     name: "Elixir Companies"
   },
   results_per_page: 16
 
-config :oauth2,
-  serializers: %{
-    "application/json" => Jason
-  }
-
-config :ueberauth, Ueberauth,
-  providers: [
-    github: {Ueberauth.Strategy.Github, [default_scope: "user:email", send_redirect_uri: false]}
-  ]
-
-config :ueberauth, Ueberauth.Strategy.Github.OAuth,
-  client_id: System.get_env("GITHUB_CLIENT_ID"),
-  client_secret: System.get_env("GITHUB_CLIENT_SECRET")
-
-config :scrivener_html,
-  routes_helper: CompaniesWeb.Router.Helpers,
-  view_style: :bulma
-
 config :phoenix, :template_engines,
   eex: Appsignal.Phoenix.Template.EExEngine,
   exs: Appsignal.Phoenix.Template.ExsEngine
-
-config :companies, Notify.Mailer, adapter: Bamboo.LocalAdapter
 
 config :live_dashboard_history, LiveDashboardHistory,
   router: CompaniesWeb.Router,
   metrics: CompaniesWeb.Telemetry,
   buffer_size: 500
-
-#
-config :companies, Companies.Repo,
-  ssl: true,
-  pool_size: 10
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

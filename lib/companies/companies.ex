@@ -38,10 +38,12 @@ defmodule Companies.Companies do
   [%Company{}, ...]
 
   """
-  def random do
-    @companies
+  def random(num \\ 1) do
+    :random.seed(:os.timestamp)
+
+    all()
     |> Enum.shuffle()
-    |> Enum.random(10)
+    |> Enum.take(num)
   end
 
   @doc """
@@ -53,7 +55,7 @@ defmodule Companies.Companies do
   23
 
   """
-  def count, do: length(@companies)
+  def count, do: length(all())
 
   @doc """
   Gets a single company.
@@ -77,7 +79,7 @@ defmodule Companies.Companies do
          {id, _} <- Integer.parse(id_or_slug) do
       Map.get(@by_legacy_id, id)
     else
-      _ -> Map.get(by_slug, id_or_slug)
+      _ -> Map.get(@by_slug, id_or_slug)
     end
   end
 end

@@ -1,0 +1,123 @@
+<div class="lg:relative">
+  <div class="w-full pt-16 pb-20 mx-auto text-center max-w-7xl lg:py-48 lg:text-left">
+    <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
+      <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
+        <span class="block text-gray-600">Elixir Companies</span>
+        <span class="block text-brand-purple">your source</span>
+      </h1>
+      <p class="max-w-md mx-auto mt-3 text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
+      The complete directory of companies using Elixir. Now including Elixir jobs and a directory of experienced Elixir developers for hire.
+      </p>
+      <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
+        <div class="shadow rounded-md">
+          <a href="#" class="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white border border-transparent bg-brand-purple rounded-md hover:bg-gray-400 md:py-4 md:text-lg md:px-10">
+            Browse Companies
+          </a>
+        </div>
+        <div class="mt-3 shadow rounded-md sm:mt-0 sm:ml-3">
+          <a href="#" class="flex items-center justify-center w-full px-8 py-3 text-base font-medium bg-white border border-transparent text-brand-purple rounded-md hover:bg-gray-200 md:py-4 md:text-lg md:px-10">
+            Explore Jobs
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
+    <img class="absolute inset-0 object-cover w-full h-full p-10" src="<%= Routes.static_path(@socket, "/images/undraw_programmer_imem.svg") %>" alt="">
+  </div>
+</div>
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="pt-12 sm:pt-16">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-extrabold text-brand-purple sm:text-4xl">
+        Trusted by companies big and small
+      </h2>
+      <p class="mt-3 text-xl text-gray-500 sm:mt-4">
+      From fledgling start-ups to internationally recognized corporations.
+      </p>
+    </div>
+  </div>
+  <div class="pb-12 mt-10 sm:pb-16">
+    <div class="relative">
+      <div class="absolute inset-0 h-1/2 bg-gray-50"></div>
+      <div class="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <dl class="bg-white rounded-lg shadow-lg sm:grid sm:grid-cols-3">
+            <div class="flex flex-col p-6 text-center border-b border-gray-100 sm:border-0 sm:border-r">
+              <dt class="order-2 mt-2 text-lg font-medium text-gray-500 leading-6">
+                Companies
+              </dt>
+              <dd class="order-1 text-5xl font-extrabold text-brand-purple">
+                <%= @count %>
+              </dd>
+            </div>
+            <div class="flex flex-col p-6 text-center border-t border-gray-100 sm:border-0 sm:border-l">
+              <dt class="order-2 mt-2 text-lg font-medium text-gray-500 leading-6">
+                Countries
+              </dt>
+              <dd class="order-1 text-5xl font-extrabold text-brand-purple">
+                23
+              </dd>
+            </div>
+            <div class="flex flex-col p-6 text-center border-t border-b border-gray-100 sm:border-0 sm:border-l sm:border-r">
+              <dt class="order-2 mt-2 text-lg font-medium text-gray-500 leading-6">
+                Language
+              </dt>
+              <dd class="order-1 text-5xl font-extrabold text-brand-purple">
+                1
+              </dd>
+            </div>
+
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="w-2/3 mx-auto xl:w-1/2 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
+  <%= for company <- @companies do %>
+  <div class="flex w-auto h-16 group">
+    <div class="flex-shrink-0 mr-4">
+      <%= if rem(:rand.uniform(10), 2) == 0 do %>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-full text-gray-300 group-hover:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      </svg>
+    <% else %>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-full text-brand-purple group-hover:text-brand-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+      <p class="ml-2 -mt-2"><%= gettext("Hiring") %><p>
+    <% end %>
+    </div>
+    <div>
+      <h4 class="text-xl font-bold group-hover:text-brand-pink"><%= company.name %></h4>
+      <p class="mt-1"><%= raw company.industries %></p>
+    </div>
+  </div>
+  <% end %>
+  <!-- More people... -->
+</div>
+
+<div class="pt-16 lg:py-24">
+  <div class="pb-16 bg-brand-purple lg:pb-0 lg:z-10 lg:relative">
+    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
+      <div class="relative lg:-my-8">
+        <div aria-hidden="true" class="absolute inset-x-0 top-0 bg-white h-1/2 lg:hidden"></div>
+        <div class="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
+          <div class="overflow-hidden bg-white shadow-xl aspect-w-10 aspect-h-6 rounded-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
+            <img class="object-cover lg:h-full lg:w-full" src="<%= Routes.static_path(@socket, "/images/undraw_dev_productivity_umsq.svg") %>" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
+        <div class="max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 lg:px-0 lg:py-20 lg:max-w-none">
+          <%= live_component(@socket, CompaniesWeb.TestimonialComponent, testimonial: @testimonial) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

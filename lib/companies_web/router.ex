@@ -9,7 +9,6 @@ defmodule CompaniesWeb.Router do
     plug :protect_from_forgery
     plug :put_secure_browser_headers
     plug :put_root_layout, {CompaniesWeb.LayoutView, :root}
-    plug CompaniesWeb.Plugs.Session
   end
 
   pipeline :set_locale do
@@ -26,13 +25,13 @@ defmodule CompaniesWeb.Router do
   scope "/:locale/", CompaniesWeb do
     pipe_through [:browser, :set_locale]
 
-    get "/", CompanyController, :recent
+    live "/", PageLive
     live "/companies", CompanyLive
     resources "/companies", CompanyController, only: [:show]
 
-    get "/jobs", JobController, :index
-    get "/profile", UserController, :profile
-    get "/for_hire", UserController, :for_hire
-    get "/users/:id", UserController, :show
+  #  get "/jobs", JobController, :index
+  #  get "/profile", UserController, :profile
+  #  get "/for_hire", UserController, :for_hire
+  #  get "/users/:id", UserController, :show
   end
 end

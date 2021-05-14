@@ -1,150 +1,36 @@
 // We need to import the CSS so that webpack will load it.
 // The MiniCssExtractPlugin is used to separate it out into
 // its own CSS file.
-import css from "../css/app.scss";
+import "../css/app.css"
 
 // webpack automatically bundles all modules in your
 // entry points. Those entry points can be configured
 // in "webpack.config.js".
 //
-// Import dependencies
+// Import deps with the dep name or local files with a relative path, for example:
 //
-import "phoenix_html";
-import * as jsDiff from "diff";
-import { Socket } from "phoenix";
-import LiveSocket from "phoenix_live_view";
-import InfiniteScroll from "./infinite_scroll";
-// Import local files
+//     import {Socket} from "phoenix"
+//     import socket from "./socket"
 //
-// Local files can be imported directly using relative paths, for example:
-// import socket from "./socket"
+import "phoenix_html"
+import {Socket} from "phoenix"
+import {LiveSocket} from "phoenix_live_view"
 
-document.addEventListener("DOMContentLoaded", function() {
-  let csrfToken = document
-    .querySelector("meta[name='csrf-token']")
-    .getAttribute("content");
-  let liveSocket = new LiveSocket("/live", Socket, {
-    params: {
-      _csrf_token: csrfToken,
-    },
-    hooks: { InfiniteScroll: InfiniteScroll },
-  });
+let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 
-  liveSocket.connect();
-
-  // Get all "navbar-burger" elements
-  var $navbarBurgers = Array.prototype.slice.call(
-    document.querySelectorAll(".navbar-burger"),
-    0
-  );
-
-  // Check if there are any navbar burgers
-  if ($navbarBurgers.length > 0) {
-    // Add a click event on each of them
-    $navbarBurgers.forEach(function($el) {
-      $el.addEventListener("click", function() {
-        // Get the target from the "data-target" attribute
-        var target = $el.dataset.target;
-        var $target = document.getElementById(target);
-
-        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
-        $el.classList.toggle("is-active");
-        $target.classList.toggle("is-active");
-      });
-    });
-  }
-
-  var toggleTabs = function(show, hide) {
-    document.querySelector(".tabs " + show).classList.add("is-active");
-    hide.forEach(function(clz) {
-      document.querySelector(".tabs " + clz).classList.remove("is-active");
-    });
-  };
-
-  var toggleCode = function(show, hide) {
-    document.querySelector(".box " + show).classList.remove("is-hidden");
-    hide.forEach(function(clz) {
-      document.querySelector(".box " + clz).classList.add("is-hidden");
-    });
-  };
-
-  var changeTab = function(e) {
-    switch (e.target.innerHTML.toLowerCase()) {
-      case "diff":
-        toggleTabs(".diff", [".original", ".changes"]);
-        toggleCode(".diff", [".original", ".changes"]);
-        break;
-      case "original":
-        toggleTabs(".original", [".diff", ".changes"]);
-        toggleCode(".original", [".diff", ".changes"]);
-        break;
-      case "changes":
-        toggleTabs(".changes", [".original", ".diff"]);
-        toggleCode(".changes", [".original", ".diff"]);
-        break;
+let liveSocket = new LiveSocket("/live", Socket, {
+  params: {_csrf_token: csrfToken},
+  dom: {
+    onBeforeElUpdated(from, to){
+      if(from.__x){ window.Alpine.clone(from.__x, to) }
     }
-  };
-
-  var $diff = document.querySelector(".box .diff pre");
-
-  if ($diff) {
-    var tabLinks = document.querySelectorAll(".tabs a");
-    tabLinks.forEach(function(tab) {
-      tab.addEventListener("click", changeTab);
-    });
-
-    var original = document.querySelector(".box .original pre").innerHTML,
-      changes = document.querySelector(".box .changes pre").innerHTML,
-      diff = jsDiff.diffChars(original, changes),
-      fragment = document.createDocumentFragment();
-
-    diff.forEach(function(part) {
-      var backgroundColor;
-      if (part.added) {
-        backgroundColor = "#acf2bd";
-      } else if (part.removed) {
-        backgroundColor = "#fdb8c0";
-      } else {
-        backgroundColor = "inherit";
-      }
-
-      var span = document.createElement("span");
-      span.style.backgroundColor = backgroundColor;
-      span.appendChild(document.createTextNode(part.value));
-      fragment.appendChild(span);
-    });
-
-    $diff.appendChild(fragment);
   }
+})
 
-  var $companyTogglers = document.querySelectorAll(".toggle-company-actions");
-  var $overlay = document.getElementById("overlay");
-  $overlay.addEventListener("click", () => {
-    $companyTogglers.forEach((toggler) => {
-      toggler.parentElement.classList.toggle("show");
-    });
-    $overlay.style.display = "none";
-  });
+// connect if there are any LiveViews on the page
+liveSocket.connect()
 
-  if ($companyTogglers) {
-    $companyTogglers.forEach(function(toggler) {
-      toggler.addEventListener("click", function() {
-        toggler.parentElement.classList.toggle("show");
-        $overlay.style.display = "block";
-      });
-    });
-  }
-
-  var $localeItems = document.querySelectorAll(".locales .dropdown-item");
-
-  if ($localeItems) {
-    $localeItems.forEach(function(toggler) {
-      toggler.addEventListener("click", function(event) {
-        event.preventDefault();
-        var parts = window.location.href.split("/");
-        parts[3] = toggler.dataset.locale;
-        window.location = parts.join("/");
-      });
-    });
-  }
-});
+// expose liveSocket on window for web console debug logs and latency simulation:
+// >> liveSocket.enableDebug()
+// >> liveSocket.enableLatencySim(1000)
+window.liveSocket = liveSocket

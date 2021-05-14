@@ -4,8 +4,6 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title><%= site_title() %></title>
-
     <link rel="apple-touch-icon" sizes="180x180" href="<%= Routes.static_path(@conn, "/images/favicon/apple-touch-icon.png") %>">
     <link rel="icon" type="image/png" sizes="32x32" href="<%= Routes.static_path(@conn, "/images/favicon/favicon-32x32.png") %>">
     <link rel="icon" type="image/png" sizes="16x16" href="<%= Routes.static_path(@conn, "/images/favicon/favicon-16x16.png") %>">
@@ -14,17 +12,16 @@
     <meta name="msapplication-TileColor" content="#7C6E8A">
     <meta name="theme-color" content="#7C6E8A">
     <%= csrf_meta_tag() %>
-    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <%= live_title_tag assigns[:page_title] || "Who's using Elixir in Production", suffix: " · Elixir Companies" %>
+    <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <script defer phx-track-static type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
   </head>
   <body>
-    <div id="overlay">
-    </div>
-    <div id="wrapper">
-      <%= render "navbar.html", conn: @conn %>
+    <%= render "_navbar.html", conn: @conn %>
+    <main class="lg:relative">
       <%= @inner_content %>
-    </div>
-    <%= render "footer.html", conn: @conn %>
-    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    </main>
+    <%= render "_footer.html", conn: @conn %>
   </body>
 </html>

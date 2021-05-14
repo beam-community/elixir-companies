@@ -8,13 +8,3 @@ config :companies, CompaniesWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :info
-
-# Configure your database
-config :companies, Companies.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "companies_test",
-  hostname: Map.get(System.get_env(), "DB_HOST", "localhost"),
-  pool: Ecto.Adapters.SQL.Sandbox
-
-config :companies, Notify.Mailer, adapter: Bamboo.TestAdapter
