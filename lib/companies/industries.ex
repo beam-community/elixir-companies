@@ -19,18 +19,20 @@ defmodule Companies.Industries do
   """
   def all do
     query =
-      from i in Industry,
+      from(i in Industry,
         where: is_nil(i.removed_pending_change_id),
         order_by: i.name
+      )
 
     Repo.all(query)
   end
 
   def for_select do
     query =
-      from i in Industry,
+      from(i in Industry,
         order_by: i.name,
         select: {i.name, i.id}
+      )
 
     Repo.all(query)
   end

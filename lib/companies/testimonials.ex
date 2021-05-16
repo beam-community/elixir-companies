@@ -1,17 +1,18 @@
 defmodule Companies.Testimonials do
-  @moduledoc false
+  @moduledoc """
+  Load our testimonials files and make them accessible to the UI
+  """
 
-  use NimblePublisher,
-    build: Companies.Testimonial,
-    from: "priv/testimonials/*.md",
-    as: :testimonials
-
+  @testimonials (for file <- Path.wildcard("priv/testimonials/*.exs") do
+                   {attrs, _bindings} = Code.eval_file(file)
+                   Companies.Testimonial.build(file, attrs)
+                 end)
 
   @doc """
   Return a random testimonial from our collection
   """
   def random do
-    :random.seed(:os.timestamp)
+    :random.seed(:os.timestamp())
     Enum.random(@testimonials)
   end
 end

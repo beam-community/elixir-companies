@@ -1,10 +1,9 @@
 defmodule Companies.Company do
   @moduledoc false
 
-  @enforce_keys [:blog, :date_added, :industries, :github, :locations, :name, :url]
   defstruct [
     :blog,
-    :body,
+    :description,
     :date_added,
     :github,
     :industries,
@@ -12,11 +11,12 @@ defmodule Companies.Company do
     :old_id,
     :name,
     :slug,
-    :url
+    :url,
+    jobs: []
   ]
 
-  def build(filename, attrs, body) do
-    slug = Path.basename(filename, ".md")
-    struct!(__MODULE__, [body: body, slug: slug] ++ Map.to_list(attrs))
+  def build(filename, attrs) do
+    slug = Path.basename(filename, ".exs")
+    struct!(__MODULE__, Map.put(attrs, :slug, slug))
   end
 end

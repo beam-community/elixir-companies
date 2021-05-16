@@ -1,19 +1,19 @@
 defmodule Companies.Companies do
   @moduledoc false
 
-  use NimblePublisher,
-    build: Companies.Company,
-    from: "priv/companies/*.md",
-    as: :companies,
-    highlighters: [:makeup_elixir, :makeup_erlang]
-
-  @by_slug Enum.reduce(@companies, %{}, &(Map.put(&2, &1.slug, &1)))
-  @by_legacy_id @companies |> Enum.reject(&is_nil(&1.old_id)) |> Enum.into(%{}, &({&1.old_id, &1}))
-  @by_industries Enum.reduce(@companies, %{}, fn company, acc ->
-    Enum.reduce(company.industries, acc, fn industry, acc2 ->
-      Map.update(acc2, industry, [company], &([company | &1]))
-    end)
+  @companies (for file <- Path.wildcard("priv/companies/*.exs") do
+    {attrs, _bindings} = Code.eval_file(file)
+    Companies.Company.build(file, attrs)
   end)
+
+  @by_slug Enum.reduce(@companies, %{}, &Map.put(&2, &1.slug, &1))
+  @by_legacy_id @companies |> Enum.reject(&is_nil(&1.old_id)) |> Enum.into(%{}, &{&1.old_id, &1})
+  @by_industries Enum.reduce(@companies, %{}, fn company, acc ->
+                   Enum.reduce(company.industries, acc, fn industry, acc2 ->
+                     Map.update(acc2, industry, [company], &[company | &1])
+                   end)
+                 end)
+  @by_hiring @companies |> Enum.reject(&(length(&1.jobs) == 0)) |> Enum.into([], &(&1))
 
   @doc """
   Returns the list of paginated companies.
@@ -29,6 +29,10 @@ defmodule Companies.Companies do
     @companies
   end
 
+  def hiring do
+    @by_hiring
+  end
+
   @doc """
   Returns 10 random companies
 
@@ -39,7 +43,7 @@ defmodule Companies.Companies do
 
   """
   def random(num \\ 1) do
-    :random.seed(:os.timestamp)
+    :random.seed(:os.timestamp())
 
     all()
     |> Enum.shuffle()

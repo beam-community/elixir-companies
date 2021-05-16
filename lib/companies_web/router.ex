@@ -29,9 +29,9 @@ defmodule CompaniesWeb.Router do
     live "/companies", CompanyLive
     resources "/companies", CompanyController, only: [:show]
 
-  #  get "/jobs", JobController, :index
-  #  get "/profile", UserController, :profile
-  #  get "/for_hire", UserController, :for_hire
-  #  get "/users/:id", UserController, :show
+    #  get "/jobs", JobController, :index
+    #  get "/profile", UserController, :profile
+    #  get "/for_hire", UserController, :for_hire
+    #  get "/users/:id", UserController, :show
   end
 end
