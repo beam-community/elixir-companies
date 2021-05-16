@@ -8,6 +8,19 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      keyframes: {
+        fade: {
+          '0%': {
+            opacity: '0'
+          },
+          '100%': {
+            opacity: '1'
+          },
+        }
+      },
+      animation: {
+        fade: 'fade 1s ease-in',
+      },
       colors: {
         'brand-purple': '#63487f',
         'brand-pink': '#fe6886'

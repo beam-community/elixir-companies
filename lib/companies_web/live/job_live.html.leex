@@ -1,0 +1,32 @@
+<div class="px-10 lg:relative">
+  <div class="pt-12 sm:pt-16">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-extrabold text-brand-purple sm:text-4xl">
+          Elixir Jobs
+        </h2>
+        <p class="mt-3 text-xl text-gray-500 sm:mt-4">
+        Work for some of the cutting edge companies who've adopted Elixir.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full py-20 mx-auto text-center max-w-7xl lg:text-left">
+    <%= for company <- @hiring do %>
+      <div class="pb-10">
+        <div class="pb-5">
+          <%= link(company.name, to: "#", class: "text-3xl font-extrabold text-brand-purple hover:text-brand-pink") %>
+        </div>
+
+        <div class="ml-4 overflow-hidden bg-white shadow sm:rounded-md">
+          <ul class="divide-y divide-gray-200">
+            <%= for job <- company.jobs do %>
+              <%= live_component(@socket, CompaniesWeb.JobComponent, company: company, job: job) %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

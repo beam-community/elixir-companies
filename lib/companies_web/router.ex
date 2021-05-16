@@ -1,6 +1,5 @@
 defmodule CompaniesWeb.Router do
   use CompaniesWeb, :router
-  import Phoenix.LiveDashboard.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -25,11 +24,12 @@ defmodule CompaniesWeb.Router do
   scope "/:locale/", CompaniesWeb do
     pipe_through [:browser, :set_locale]
 
-    live "/", PageLive
+    live "/", PageLive, :index
+    live "/jobs", JobLive, :index
+
     live "/companies", CompanyLive
     resources "/companies", CompanyController, only: [:show]
 
-    #  get "/jobs", JobController, :index
     #  get "/profile", UserController, :profile
     #  get "/for_hire", UserController, :for_hire
     #  get "/users/:id", UserController, :show

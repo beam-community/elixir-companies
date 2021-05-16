@@ -35,7 +35,7 @@
         Trusted by companies big and small
       </h2>
       <p class="mt-3 text-xl text-gray-500 sm:mt-4">
-      From fledgling start-ups to internationally recognized corporations.
+      from fledgling start-ups to internationally recognized corporations.
       </p>
     </div>
   </div>
@@ -77,16 +77,26 @@
   </div>
 </div>
 
+<div>
+  <div class="px-4 pb-16 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
+    <p class="mt-3 text-xl text-gray-500 sm:mt-4">
+    <%= gettext("A preview of the companies using Elixir and BEAM") %>
+    </p>
+  </div>
+</div>
+
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="w-2/3 mx-auto xl:w-1/2 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
-  <%= for company <- @companies do %>
-  <div class="flex w-auto h-16 group">
+  <%= for {company, index} <- Enum.with_index(@companies) do %>
+    <div id="<%= company.old_id %>" class="flex w-auto h-16 group <%= if index == 0, do: "animate-fade", else: "" %>">
     <div class="flex-shrink-0 mr-4">
-      <%= if rem(:rand.uniform(10), 2) == 0 do %>
+      <%= if length(company.jobs) == 0 do %>
+      <!-- Heroicon name: solid/building -->
       <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-full text-gray-300 group-hover:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
       </svg>
     <% else %>
+      <!-- Heroicon name: solid/briefcase -->
       <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-full text-brand-purple group-hover:text-brand-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
       </svg>
@@ -99,7 +109,19 @@
     </div>
   </div>
   <% end %>
-  <!-- More people... -->
+</div>
+
+<div>
+  <div class="px-4 py-16 mx-auto text-center max-w-7xl sm:px-6 lg:py-16 lg:px-8">
+    <h2 class="text-3xl font-extrabold tracking-tight text-brand-gray sm:text-4xl">
+      <span class="block">Keep Browsing</span>
+    </h2>
+    <div class="flex justify-center mt-8">
+      <div class="shadow rounded-md">
+        <%= link("Browse Complete List", to: "#", class: "font-extrabold items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-purple hover:text-white") %>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="pt-16 lg:py-24">

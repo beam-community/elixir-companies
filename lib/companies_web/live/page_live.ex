@@ -4,7 +4,7 @@ defmodule CompaniesWeb.PageLive do
 
   alias Companies.{Companies, Testimonials}
 
-  @ten_seconds 5_000
+  @five_seconds 5_000
 
   @impl true
   def mount(_params, _session, socket) do
@@ -14,16 +14,18 @@ defmodule CompaniesWeb.PageLive do
       |> assign(:testimonial, Testimonials.random())
       |> assign(:count, Companies.count())
 
-    if connected?(socket), do: Process.send_after(self(), :update, @ten_seconds)
+    if connected?(socket) do
+      Process.send_after(self(), :companies, @five_seconds)
+    end
 
     {:ok, socket}
   end
 
   @impl true
-  def handle_info(:update, socket) do
-    Process.send_after(self(), :update, @ten_seconds)
+  def handle_info(:companies, socket) do
+    Process.send_after(self(), :companies, @five_seconds)
     [addition] = Companies.random()
     companies = Enum.slice([addition | socket.assigns.companies], 0..11)
-    {:noreply, assign(socket, companies: companies, testimonial: Testimonials.random())}
+    {:noreply, assign(socket, companies: companies)}
   end
 end

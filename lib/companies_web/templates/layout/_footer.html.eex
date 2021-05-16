@@ -3,9 +3,7 @@
   <div class="px-4 py-12 mx-auto overflow-hidden max-w-7xl sm:px-6 lg:px-8">
     <nav class="flex flex-wrap justify-center -mx-5 -my-2" aria-label="Footer">
       <div class="px-5 py-2">
-        <a href="#" class="text-base text-gray-700 hover:text-brand-purple">
-          Home
-        </a>
+        <%= link(gettext("Home"), to: Routes.page_path(@conn, :index, current_locale()), class: "text-base text-gray-700 hover:text-brand-purple") %>
       </div>
 
       <div class="px-5 py-2">
@@ -15,9 +13,7 @@
       </div>
 
       <div class="px-5 py-2">
-        <a href="#" class="text-base text-gray-700 hover:text-brand-purple">
-          Jobs
-        </a>
+        <%= link(gettext("Jobs"), to: Routes.job_path(@conn, :index, current_locale()), class: "text-base text-gray-700 hover:text-brand-purple") %>
       </div>
 
       <div class="px-5 py-2">
@@ -27,8 +23,14 @@
       </div>
 
       <div class="px-5 py-2">
-        <a href="https://elixirschool.com" class="text-base text-gray-700 hover:text-brand-purple">
+        <a href="https://elixirschool.com" target="_blank" class="text-base text-gray-700 hover:text-brand-purple">
           Learn Elixir
+        </a>
+      </div>
+
+      <div class="px-5 py-2">
+        <a href="https://github.com/beam-community/elixir-companies" target="_blank" class="text-base text-gray-700 hover:text-brand-purple">
+          Source Code
         </a>
       </div>
     </nav>

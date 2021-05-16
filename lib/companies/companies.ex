@@ -2,9 +2,9 @@ defmodule Companies.Companies do
   @moduledoc false
 
   @companies (for file <- Path.wildcard("priv/companies/*.exs") do
-    {attrs, _bindings} = Code.eval_file(file)
-    Companies.Company.build(file, attrs)
-  end)
+                {attrs, _bindings} = Code.eval_file(file)
+                Companies.Company.build(file, attrs)
+              end)
 
   @by_slug Enum.reduce(@companies, %{}, &Map.put(&2, &1.slug, &1))
   @by_legacy_id @companies |> Enum.reject(&is_nil(&1.old_id)) |> Enum.into(%{}, &{&1.old_id, &1})
@@ -13,7 +13,7 @@ defmodule Companies.Companies do
                      Map.update(acc2, industry, [company], &[company | &1])
                    end)
                  end)
-  @by_hiring @companies |> Enum.reject(&(length(&1.jobs) == 0)) |> Enum.into([], &(&1))
+  @by_hiring @companies |> Enum.reject(&(length(&1.jobs) == 0)) |> Enum.into([], & &1)
 
   @doc """
   Returns the list of paginated companies.
@@ -30,7 +30,7 @@ defmodule Companies.Companies do
   end
 
   def hiring do
-    @by_hiring
+    Enum.shuffle(@by_hiring)
   end
 
   @doc """

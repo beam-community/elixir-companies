@@ -4,12 +4,14 @@ defmodule Companies.Testimonial do
   defstruct [
     :body,
     :github,
+    :id,
     :job_title,
     :name,
     :twitter
   ]
 
-  def build(_filename, attrs) do
-    struct!(__MODULE__, attrs)
+  def build(filename, attrs) do
+    slug = Path.basename(filename, ".exs")
+    struct!(__MODULE__, Map.put(attrs, :id, slug))
   end
 end
