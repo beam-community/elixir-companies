@@ -90,8 +90,9 @@ defmodule CompaniesWeb do
       import CompaniesWeb.ErrorHelpers
       import CompaniesWeb.Gettext
       import CompaniesWeb.SiteHelpers
-      import CompaniesWeb.UserHelpers
       import CompaniesWeb.LocaleHelpers
+      import CompaniesWeb.HTMLHelpers
+
       alias CompaniesWeb.Router.Helpers, as: Routes
     end
   end

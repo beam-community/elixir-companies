@@ -24,8 +24,15 @@ defmodule CompaniesWeb.PageLive do
   @impl true
   def handle_info(:companies, socket) do
     Process.send_after(self(), :companies, @five_seconds)
+    {:noreply, assign_random_company(socket)}
+  end
+
+  defp assign_random_company(socket) do
+    current = socket.assigns.companies
     [addition] = Companies.random()
-    companies = Enum.slice([addition | socket.assigns.companies], 0..11)
-    {:noreply, assign(socket, companies: companies)}
+
+    if addition in current, do: assign_random_company(socket)
+
+    assign(socket, companies: Enum.slice([addition | socket.assigns.companies], 0..11))
   end
 end

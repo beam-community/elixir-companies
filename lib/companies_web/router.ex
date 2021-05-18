@@ -26,12 +26,11 @@ defmodule CompaniesWeb.Router do
 
     live "/", PageLive, :index
     live "/jobs", JobLive, :index
+    live "/for_hire", ForHireLive, :index
 
     live "/companies", CompanyLive
     resources "/companies", CompanyController, only: [:show]
 
-    #  get "/profile", UserController, :profile
-    #  get "/for_hire", UserController, :for_hire
     #  get "/users/:id", UserController, :show
   end
 end

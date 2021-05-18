@@ -17,9 +17,7 @@
       </div>
 
       <div class="px-5 py-2">
-        <a href="#" class="text-base text-gray-700 hover:text-brand-purple">
-          Developers for Hire
-        </a>
+        <%= link(gettext("Developers For Hire"), to: Routes.for_hire_path(@conn, :index, current_locale()), class: "text-base text-gray-700 hover:text-brand-purple") %>
       </div>
 
       <div class="px-5 py-2">

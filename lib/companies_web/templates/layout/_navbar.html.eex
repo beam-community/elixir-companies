@@ -29,9 +29,7 @@
 
           <%= link(gettext("Jobs"), to: Routes.job_path(@conn, :index, current_locale()), class: "text-base font-medium text-gray-700 hover:text-brand-purple") %>
 
-          <a href="#" class="text-base font-medium text-gray-700 hover:text-brand-purple">
-            Developers For Hire
-          </a>
+          <%= link(gettext("Developers For Hire"), to: Routes.for_hire_path(@conn, :index, current_locale()), class: "text-base font-medium text-gray-700 hover:text-brand-purple") %>
         </nav>
         <div class="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
         </div>
@@ -75,10 +73,7 @@
 
               <%= link(gettext("Jobs"), to: Routes.job_path(@conn, :index, current_locale()), class: "text-base font-medium text-gray-700 hover:text-brand-purple") %>
 
-              <a href="#" class="text-base font-medium text-gray-700 hover:text-brand-purple">
-                Developers For Hire
-              </a>
-
+              <%= link(gettext("Developers For Hire"), to: Routes.for_hire_path(@conn, :index, current_locale()), class: "text-base font-medium text-gray-700 hover:text-brand-purple") %>
             </nav>
           </div>
         </div>
