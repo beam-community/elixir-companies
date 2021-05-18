@@ -1,6 +1,8 @@
 defmodule Companies.Companies do
   @moduledoc false
 
+  alias Companies.Company
+
   @companies (for file <- Path.wildcard("priv/companies/*.exs") do
                 {attrs, _bindings} = Code.eval_file(file)
                 Companies.Company.build(file, attrs)
@@ -75,15 +77,22 @@ defmodule Companies.Companies do
   %Company{}
 
   iex> get!(456)
-  nil
+  (Companies.NotFoundError)
 
   """
-  def get!(id_or_slug) do
+  def get!(slug) do
+    with nil <- Map.get(@by_slug, slug) do
+      raise(Companies.NotFoundError)
+    end
+  end
+
+  def get_by_legacy_id(id_or_slug) do
     with true <- Regex.match?(~r/\d*/, id_or_slug),
-         {id, _} <- Integer.parse(id_or_slug) do
-      Map.get(@by_legacy_id, id)
+         {id, _} = Integer.parse(id_or_slug),
+         %Company{} = company <- Map.get(@by_legacy_id, id) do
+      company
     else
-      _ -> Map.get(@by_slug, id_or_slug)
+      _ -> nil
     end
   end
 end
