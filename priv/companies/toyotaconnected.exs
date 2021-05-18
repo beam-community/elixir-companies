@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-06-07],
-  github: "",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["Nagoya, Japan"],
   name: "Toyota Connected",
   old_id: 382,

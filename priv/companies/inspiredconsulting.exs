@@ -1,8 +1,7 @@
 %{
   blog: "https://inspired.consulting/blog",
   date_added: ~D[2021-03-10],
-  github: "",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Cologne, Germany"],
   name: "inspired consulting",
   old_id: 666,

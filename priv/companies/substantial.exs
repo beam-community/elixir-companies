@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
-  industries: ["Technology Consulting"],
-  locations: [""],
+  industries: ["Consulting"],
   name: "Substantial",
   old_id: 33,
   url: "https://substantial.com/",

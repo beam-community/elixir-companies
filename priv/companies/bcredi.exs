@@ -1,8 +1,7 @@
 %{
   blog: "https://medium.com/@bcredi",
   date_added: ~D[2019-10-03],
-  github: "",
-  industries: ["Financial Services"],
+  industries: ["Finance"],
   locations: ["Curitiba, Brazil"],
   name: "BCredi",
   old_id: 470,

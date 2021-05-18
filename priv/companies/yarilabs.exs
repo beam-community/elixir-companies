@@ -2,7 +2,7 @@
   blog: "https://medium.com/yarilabs",
   date_added: ~D[2020-09-18],
   github: "https://github.com/realyarilabs",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["London"],
   name: "Yari Labs",
   old_id: 628,

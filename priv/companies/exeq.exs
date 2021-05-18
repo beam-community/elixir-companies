@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/exeqapp",
-  industries: ["Financial Technology"],
-  locations: [""],
+  industries: ["Fintech"],
   name: "Exeq",
   old_id: 328,
   url: "https://exeq.com",

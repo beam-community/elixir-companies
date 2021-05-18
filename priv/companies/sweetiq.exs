@@ -1,7 +1,6 @@
 %{
   blog: "https://sweetiq.com/blog/",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Marketing/Advertising/Sales"],
   locations: ["Montreal, Canada"],
   name: "SweetIQ",

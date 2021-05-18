@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/fontstore",
   industries: ["E-Commerce"],
-  locations: [""],
   name: "Fontstore",
   old_id: 320,
   url: "https://www.fontstore.com",

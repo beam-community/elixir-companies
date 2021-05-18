@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/isotope11",
-  industries: ["Technology Consulting"],
-  locations: [""],
+  industries: ["Consulting"],
   name: "Isotope11",
   old_id: 249,
   url: "http://www.isotope11.com/",

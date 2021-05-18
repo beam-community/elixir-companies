@@ -1,7 +1,6 @@
 %{
   blog: "https://medium.com/ride-health",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Healthcare"],
   locations: ["New York, NY"],
   name: "Ride Health",

@@ -2,7 +2,7 @@
   blog: "https://joshmartin.ch/logbuch/",
   date_added: ~D[2019-11-22],
   github: "https://github.com/jshmrtn/",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["St. Gallen, Switzerland"],
   name: "JOSHMARTIN GmbH",
   old_id: 481,

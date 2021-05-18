@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/zipbooks",
-  industries: ["Financial Technology"],
+  industries: ["Fintech"],
   locations: ["Utah, USA"],
   name: "ZipBooks",
   old_id: 244,

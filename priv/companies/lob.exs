@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/lob",
-  industries: ["Enterprise Software"],
-  locations: [""],
+  industries: ["Software"],
   name: "Lob",
   old_id: 26,
   url: "https://lob.com",

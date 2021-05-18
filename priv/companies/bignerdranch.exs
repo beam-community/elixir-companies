@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/bignerdranch",
-  industries: ["Technology Consulting"],
-  locations: [""],
+  industries: ["Consulting"],
   name: "Big Nerd Ranch",
   old_id: 184,
   url: "http://www.bignerdranch.com",

@@ -2,7 +2,7 @@
   blog: "https://code.tubitv.com",
   date_added: ~D[2019-05-01],
   github: "https://github.com/Tubitv",
-  industries: ["Internet"],
+  industries: ["Entertainment"],
   locations: ["San Francisco"],
   name: "Tubi",
   old_id: 368,

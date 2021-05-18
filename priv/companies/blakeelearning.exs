@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Education"],
-  locations: [""],
   name: "Blake eLearning",
   old_id: 197,
   url: "http://readingeggs.com",

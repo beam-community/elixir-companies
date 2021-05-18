@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2021-03-10],
-  github: "",
   industries: ["Food/Beverages"],
   locations: ["Dubai, United Arab Emirates"],
   name: "Opaala",

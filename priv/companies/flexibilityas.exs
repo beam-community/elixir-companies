@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2021-03-21],
-  github: "",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Europe (Remote)"],
   name: "Flexibility AS",
   old_id: 716,

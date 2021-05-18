@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-04-26],
-  github: "",
   industries: ["Online Publishing"],
   locations: ["Rotterdam, The Netherlands"],
   name: "Fotomat",

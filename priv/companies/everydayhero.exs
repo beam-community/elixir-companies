@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Non-Profit/Volunteering"],
-  locations: [""],
   name: "Everyday Hero",
   old_id: 313,
   url: "https://www.everydayhero.com",

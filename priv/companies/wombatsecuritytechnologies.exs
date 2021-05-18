@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Security"],
-  locations: [""],
   name: "Wombat Security Technologies",
   old_id: 299,
   url: "https://www.wombatsecurity.com/",

@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-11-06],
-  github: "",
-  industries: ["Financial Technology"],
+  industries: ["Fintech"],
   locations: ["Lviv, Ukraine"],
   name: "Teamvoy",
   old_id: 479,

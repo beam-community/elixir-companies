@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/postmates",
   industries: ["E-Commerce"],
-  locations: [""],
   name: "Postmates",
   old_id: 280,
   url: "http://postmates.com",

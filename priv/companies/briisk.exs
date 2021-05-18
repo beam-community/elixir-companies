@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/briisk",
-  industries: ["Technology Consulting"],
-  locations: [""],
+  industries: ["Consulting"],
   name: "Briisk",
   old_id: 285,
   url: "https://briisk.co",

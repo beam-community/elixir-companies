@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2020-11-17],
-  github: "",
   industries: ["Apparel/Fashion"],
   locations: ["US/Canada"],
   name: "The House of Buzz",

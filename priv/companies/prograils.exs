@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/prograils",
-  industries: ["Technology Consulting"],
-  locations: [""],
+  industries: ["Consulting"],
   name: "Prograils",
   old_id: 15,
   url: "https://prograils.com",

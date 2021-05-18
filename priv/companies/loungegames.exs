@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2020-09-18],
-  github: "",
   industries: ["Computer Games"],
   locations: ["Bengaluru, India"],
   name: "Lounge Games",

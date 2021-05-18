@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
-  industries: ["Technology Consulting"],
-  locations: [""],
+  industries: ["Consulting"],
   name: "Digital Natives Budapest",
   old_id: 25,
   url: "http://www.digitalnatives.hu/",

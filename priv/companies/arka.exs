@@ -1,7 +1,6 @@
 %{
   blog: "https://www.arka.com/blog",
   date_added: ~D[2021-03-10],
-  github: "",
   industries: ["Packaging/Containers"],
   locations: ["1 Bluxome St., 305, SF CA 94107"],
   name: "Arka",

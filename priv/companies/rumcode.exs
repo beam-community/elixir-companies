@@ -1,8 +1,7 @@
 %{
   blog: "https://medium.com/rum-code",
   date_added: ~D[2020-10-14],
-  github: "",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Shawinigan, Quebec, Canada"],
   name: "Rum&Code",
   old_id: 634,

@@ -2,7 +2,7 @@
   blog: "https://medium.com/magnetis-backstage",
   date_added: ~D[2019-10-27],
   github: "https://github.com/magnetis",
-  industries: ["Financial Technology"],
+  industries: ["Fintech"],
   locations: ["Sao Paulo, Brazil"],
   name: "Magnetis",
   old_id: 476,

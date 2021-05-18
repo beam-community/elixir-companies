@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-09-24],
-  github: "",
   industries: ["Education Technology"],
   locations: ["Kuala Lumpur"],
   name: "Mindvalley",

@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2020-06-11],
-  github: "",
   industries: ["Advertising"],
   locations: ["New York, NY"],
   name: "AppMonet",

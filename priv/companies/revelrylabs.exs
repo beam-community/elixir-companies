@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/revelrylabs",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["New Orleans, LA, USA"],
   name: "Revelry Labs",
   old_id: 65,

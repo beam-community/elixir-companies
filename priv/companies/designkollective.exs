@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-07-17],
-  github: "",
   industries: ["E-Commerce"],
-  locations: [""],
   name: "Design Kollective",
   old_id: 403,
   url: "https://designkollective.com",

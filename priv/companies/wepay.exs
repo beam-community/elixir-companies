@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/wepay",
-  industries: ["Financial Technology"],
+  industries: ["Fintech"],
   locations: ["Redwood City, CA, USA"],
   name: "WePay",
   old_id: 226,

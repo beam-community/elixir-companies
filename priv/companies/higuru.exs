@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2021-05-11],
-  github: "",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Cape Town, South Africa"],
   name: "hi.guru",
   old_id: 735,

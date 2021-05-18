@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/stampery",
-  industries: ["Enterprise Software"],
-  locations: [""],
+  industries: ["Software"],
   name: "Stampery",
   old_id: 130,
   url: "https://stampery.com",

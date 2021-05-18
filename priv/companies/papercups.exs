@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2020-09-18],
   github: "github.com/papercups-io",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["Remote"],
   name: "Papercups",
   old_id: 627,

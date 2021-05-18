@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-03-18],
   github: "https://github.com/LittleKidogo",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["Earth"],
   name: "Little Kidogo",
   old_id: 342,

@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/Babylonpartners",
   industries: ["Healthcare"],
-  locations: [""],
   name: "babylon health",
   old_id: 110,
   url: "https://www.babylonhealth.com",

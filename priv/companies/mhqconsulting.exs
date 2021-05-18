@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-06-21],
-  github: "",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["Lucena City, Philippines"],
   name: "MHQ Consulting",
   old_id: 392,

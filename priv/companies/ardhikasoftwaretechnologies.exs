@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2020-03-24],
-  github: "",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Chennai, India"],
   name: "Ardhika Software Technologies",
   old_id: 540,

@@ -2,7 +2,7 @@
   blog: "https://medium.com/pipefy",
   date_added: ~D[2019-06-07],
   github: "https://github.com/pipefy/",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["Curitiba-PR (Brazil) (allows remote)"],
   name: "Pipefy",
   old_id: 380,

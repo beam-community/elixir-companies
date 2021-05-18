@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-08-04],
-  github: "",
   industries: ["Human Resources"],
   locations: ["Barcelona"],
   name: "SanerJobs",

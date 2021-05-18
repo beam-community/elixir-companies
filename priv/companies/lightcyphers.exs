@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-03-29],
   github: "https://github.com/lightcyphers/",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Chișinău, Moldova Republic of"],
   name: "Lightcyphers",
   old_id: 356,

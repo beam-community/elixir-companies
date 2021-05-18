@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2020-11-24],
   github: "https://github.com/Driftrock/",
   industries: ["Marketing/Advertising/Sales"],

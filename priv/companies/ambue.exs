@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2020-10-20],
   github: "https://github.com/ambue",
   industries: ["Environmental Services"],

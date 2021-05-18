@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2020-07-23],
-  github: "",
   industries: ["Gaming"],
   locations: ["Denton, TX"],
   name: "Reaper Miniatures",

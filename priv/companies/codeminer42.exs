@@ -1,8 +1,7 @@
 %{
   blog: "https://blog.codeminer42.com",
   date_added: ~D[2020-06-01],
-  github: "",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Brazil"],
   name: "CodeMiner 42",
   old_id: 592,

@@ -2,7 +2,7 @@
   blog: "https://sourcelevel.io/blog",
   date_added: ~D[2020-02-22],
   github: "https://github.com/sourcelevel",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["São Paulo, Brazil"],
   name: "SourceLevel",
   old_id: 502,

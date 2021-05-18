@@ -1,7 +1,6 @@
 %{
   blog: "https://engine.expert360.com",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Marketplaces"],
   locations: ["Sydney, Australia"],
   name: "Expert360",

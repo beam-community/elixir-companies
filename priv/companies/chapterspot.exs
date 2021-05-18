@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2020-05-19],
-  github: "",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["HQ: New Orleans, LA -- Remote Team"],
   name: "ChapterSpot",
   old_id: 582,

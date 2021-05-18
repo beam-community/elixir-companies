@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2020-06-05],
   github: "https://github.com/orgs/IT-CTI",
   industries: ["Telecommunications"],

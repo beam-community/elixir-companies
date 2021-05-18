@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/timberio",
-  industries: ["Computer Software"],
-  locations: [""],
+  industries: ["Software"],
   name: "Timber",
   old_id: 170,
   url: "https://timber.io",

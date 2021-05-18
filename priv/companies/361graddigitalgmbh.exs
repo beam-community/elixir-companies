@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-05-29],
   github: "https://github.com/361GRAD/",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["Stuttgart"],
   name: "361 GRAD DIGITAL GmbH",
   old_id: 377,

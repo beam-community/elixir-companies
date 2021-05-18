@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/corvusinsurance",
   industries: ["Insurance"],
-  locations: [""],
   name: "Corvus Insurance",
   old_id: 164,
   url: "https://www.corvusinsurance.com",

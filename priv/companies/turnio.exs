@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2019-03-29],
   github: "Turnhub",
   industries: ["Healthcare"],

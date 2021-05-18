@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/C-S-D",
   industries: ["Non-Profit/Volunteering"],
-  locations: [""],
   name: "Communication Service for the Deaf",
   old_id: 193,
   url: "https://www.csd.org/",

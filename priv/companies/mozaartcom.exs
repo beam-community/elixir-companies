@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2019-09-10],
   github: "https://github.com/J-I-B/mozaart/tree/master",
   industries: ["Music"],

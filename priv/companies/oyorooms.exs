@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Hospitality"],
-  locations: [""],
   name: "Oyorooms",
   old_id: 178,
   url: "https://www.oyorooms.com",

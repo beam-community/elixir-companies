@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2020-06-29],
-  github: "",
-  industries: ["Financial Technology"],
+  industries: ["Fintech"],
   locations: ["Europe & Africa"],
   name: "Salt Pay",
   old_id: 602,

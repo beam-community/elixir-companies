@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/quero-edu",
   industries: ["Education"],
-  locations: [""],
   name: "Quero Education",
   old_id: 131,
   url: "http://quero.education/en",

@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2020-01-30],
-  github: "",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["Lviv, Ukraine"],
   name: "StrongSD",
   old_id: 496,

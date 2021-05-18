@@ -1,10 +1,8 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/stride-nyc",
-  industries: ["Technology Consulting"],
-  locations: [""],
-  name: "Stride Technology Consulting",
+  industries: ["Consulting"],
+  name: "Stride Consulting",
   old_id: 211,
   url: "http://www.stridenyc.com/",
   description: """

@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/TeachersPayTeachers",
   industries: ["Marketplaces"],
-  locations: [""],
   name: "Teachers Pay Teachers",
   old_id: 265,
   url: "https://www.teacherspayteachers.com/",

@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2021-03-18],
-  github: "",
   industries: ["Gaming"],
   locations: ["Hong Kong"],
   name: "FourFats",

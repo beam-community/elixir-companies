@@ -1,8 +1,7 @@
 %{
   blog: "https://www.equalture.com/blog",
   date_added: ~D[2019-07-23],
-  github: "",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["Rotterdam, The Netherlands"],
   name: "Equalture",
   old_id: 412,

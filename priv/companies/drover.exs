@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2020-03-07],
-  github: "",
   industries: ["Transportation"],
   locations: ["London, UK"],
   name: "Drover",

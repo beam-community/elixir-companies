@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-07-29],
-  github: "",
   industries: ["Transportation"],
   locations: ["Chile"],
   name: "Recorrido.com",

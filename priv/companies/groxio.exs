@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2020-09-29],
   github: "https://github.com/groxio-learning",
   industries: ["Education"],

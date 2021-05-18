@@ -2,7 +2,7 @@
   blog: "https://jetruby.com/blog/",
   date_added: ~D[2019-09-30],
   github: "https://github.com/jetruby",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["San Francisco, USA | Lviv, Ukraine | Kransnodar, Russia"],
   name: "JetRuby Agency",
   old_id: 468,

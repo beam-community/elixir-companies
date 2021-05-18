@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2021-03-10],
   github: "https://github.com/diodechain/",
   industries: ["Blockchain & Fintech"],

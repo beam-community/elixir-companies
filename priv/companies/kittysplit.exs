@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
-  industries: ["Financial Technology"],
-  locations: [""],
+  industries: ["Fintech"],
   name: "Kittysplit",
   old_id: 200,
   url: "https://kittysplit.com",

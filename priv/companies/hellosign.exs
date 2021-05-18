@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/HelloFax",
   industries: ["Legal Services"],
-  locations: [""],
   name: "Hello Sign",
   old_id: 329,
   url: "https://www.hellosign.com",

@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/seeraerospace",
-  industries: ["Enterprise Software"],
+  industries: ["Software"],
   locations: ["New York, NY. USA"],
   name: "Seer Aerospace",
   old_id: 144,

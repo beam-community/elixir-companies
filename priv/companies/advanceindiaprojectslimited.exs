@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2021-03-10],
-  github: "",
   industries: ["Printing"],
   locations: ["Gurugram, Haryana"],
   name: "Advance India Projects Limited",

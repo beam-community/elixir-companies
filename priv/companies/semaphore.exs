@@ -2,7 +2,7 @@
   blog: "https://semaphoreci.com/blog",
   date_added: ~D[2019-03-24],
   github: "semaphoreci",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["Distributed"],
   name: "Semaphore",
   old_id: 353,

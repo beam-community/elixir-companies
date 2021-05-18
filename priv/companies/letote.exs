@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/LeToteTeam",
   industries: ["E-Commerce"],
-  locations: [""],
   name: "LETOTE",
   old_id: 90,
   url: "https://letote.com",

@@ -2,7 +2,7 @@
   blog: "https://www.theguild.nl",
   date_added: ~D[2019-02-24],
   github: "https://github.com/kabisa",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Amsterdam, The Netherlands"],
   name: "Kabisa",
   old_id: 190,

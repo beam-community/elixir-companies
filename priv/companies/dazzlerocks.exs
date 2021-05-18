@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-06-25],
-  github: "",
   industries: ["Gaming"],
   locations: ["Helsinki, Finland"],
   name: "Dazzle Rocks",

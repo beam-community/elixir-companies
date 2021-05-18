@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Remote / Baltimore, MD USA / Santiago de Chile"],
   name: "Celeste Computing",
   old_id: 185,

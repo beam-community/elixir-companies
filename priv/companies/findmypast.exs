@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/findmypast",
   industries: ["Family"],
-  locations: [""],
   name: "Findmypast",
   old_id: 258,
   url: "http://www.findmypast.co.uk/",

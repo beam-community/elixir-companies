@@ -2,7 +2,7 @@
   blog: "https://blog.testdouble.com/",
   date_added: ~D[2021-03-10],
   github: "https://github.com/testdouble",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Columbus, OH"],
   name: "Test Double",
   old_id: 672,

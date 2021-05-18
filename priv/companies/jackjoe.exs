@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-03-02],
-  github: "",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Belgium"],
   name: "Jack + Joe",
   old_id: 338,

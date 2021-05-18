@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-25],
   github: "https://github.com/smartlogic",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Baltimore, MD, USA"],
   name: "SmartLogic",
   old_id: 6,

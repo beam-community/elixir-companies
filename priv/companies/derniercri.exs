@@ -2,7 +2,7 @@
   blog: "https://blog.derniercri.io/",
   date_added: ~D[2020-09-10],
   github: "https://github.com/derniercri",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Lille, France"],
   name: "Dernier Cri",
   old_id: 625,

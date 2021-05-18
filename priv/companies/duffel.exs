@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2020-04-03],
   github: "https://github.com/duffel",
   industries: ["Airlines/Aviation"],

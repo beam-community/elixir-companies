@@ -1,8 +1,7 @@
 %{
   blog: "https://blog.remote.com",
   date_added: ~D[2020-07-01],
-  github: "",
-  industries: ["Human Resources/HR"],
+  industries: ["Human Resources"],
   locations: ["Remote"],
   name: "Remote",
   old_id: 604,

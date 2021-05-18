@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Navigation"],
-  locations: [""],
   name: "Rose Point Navigation Systems",
   old_id: 132,
   url: "http://www.rosepointnav.com/",

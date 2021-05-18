@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2020-05-28],
   github: "https://github.com/gearflowdev",
   industries: ["Construction"],

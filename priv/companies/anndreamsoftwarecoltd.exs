@@ -2,7 +2,7 @@
   blog: "https://medium.com/@anndream.com",
   date_added: ~D[2019-03-01],
   github: "https://github.com/anndream/",
-  industries: ["Enterprise Software"],
+  industries: ["Software"],
   locations: ["Thailand"],
   name: "Anndream Software Co,Ltd.",
   old_id: 336,

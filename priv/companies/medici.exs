@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-05-01],
-  github: "",
   industries: ["Healthcare"],
   locations: ["Austin, Texas"],
   name: "Medici",

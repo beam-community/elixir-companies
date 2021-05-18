@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/circlefin",
-  industries: ["Financial Technology"],
-  locations: [""],
+  industries: ["Fintech"],
   name: "Circle",
   old_id: 155,
   url: "https://www.circle.com/",

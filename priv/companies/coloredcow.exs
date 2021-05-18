@@ -2,7 +2,7 @@
   blog: "https://coloredcow.com/services/elixir/",
   date_added: ~D[2021-03-10],
   github: "https://github.com/coloredcow",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["Gurugram & Tehri, India"],
   name: "ColoredCow",
   old_id: 654,

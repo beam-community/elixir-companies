@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/livehelpnow",
   industries: ["Customer Service"],
-  locations: [""],
   name: "LiveHelpNow",
   old_id: 5,
   url: "https://www.livehelpnow.net",

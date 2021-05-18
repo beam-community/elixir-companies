@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-07-23],
-  github: "",
   industries: ["Education"],
   locations: ["Hong Kong"],
   name: "The University of Hong Kong",

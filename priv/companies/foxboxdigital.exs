@@ -2,7 +2,7 @@
   blog: "https://foxbox.com/blog",
   date_added: ~D[2020-01-30],
   github: "https://github.com/foxbox-digital",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Chicago"],
   name: "Foxbox Digital",
   old_id: 494,

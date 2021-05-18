@@ -2,7 +2,7 @@
   blog: "https://blog.seniverse.com/",
   date_added: ~D[2019-07-17],
   github: "https://github.com/seniverse",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Beijing, China"],
   name: "Seniverse",
   old_id: 405,

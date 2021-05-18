@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2019-03-18],
   github: "https://github.com/BikeBandit",
   industries: ["E-Commerce"],

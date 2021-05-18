@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/zenaton",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Paris, FR"],
   name: "Zenaton",
   old_id: 186,

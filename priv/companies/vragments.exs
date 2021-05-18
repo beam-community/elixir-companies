@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/vragments",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Berlin, Germany"],
   name: "Vragments",
   old_id: 87,

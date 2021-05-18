@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Research"],
-  locations: [""],
   name: "nextjournal",
   old_id: 179,
   url: "https://nextjournal.com",

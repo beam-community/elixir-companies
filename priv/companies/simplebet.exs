@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2020-06-03],
-  github: "",
   industries: ["Gambling/Casinos"],
   locations: ["NYC"],
   name: "SimpleBet",

@@ -1,7 +1,6 @@
 %{
   blog: "https://getlowdown.com/blog/",
   date_added: ~D[2021-03-10],
-  github: "",
   industries: ["Information Services"],
   locations: ["Belfast"],
   name: "Lowdown",

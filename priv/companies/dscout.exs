@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2019-10-13],
   github: "dscout",
   industries: ["Research"],

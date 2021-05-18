@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/customerlobby",
   industries: ["Customer Service"],
-  locations: [""],
   name: "Customer Lobby",
   old_id: 287,
   url: "https://www.customerlobby.com",

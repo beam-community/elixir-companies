@@ -1,8 +1,7 @@
 %{
   blog: "https://shorelinesoftware.com/tag/blog/",
   date_added: ~D[2019-04-09],
-  github: "",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["Redwood City"],
   name: "Shoreline Software",
   old_id: 361,

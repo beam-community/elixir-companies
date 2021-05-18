@@ -1,7 +1,6 @@
 %{
   blog: "https://rtoadvisors.com.au/articles",
   date_added: ~D[2020-02-25],
-  github: "",
   industries: ["Education Management"],
   locations: ["Brisbane"],
   name: "RTO Advisors",

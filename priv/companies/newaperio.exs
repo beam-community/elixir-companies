@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/newaperio",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Baton Rouge, LA, USA"],
   name: "NewAperio",
   old_id: 159,

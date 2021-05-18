@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2019-04-22],
   github: "https://github.com/functionaryco",
   industries: ["Publishing"],

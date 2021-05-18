@@ -2,7 +2,7 @@
   blog: "https://500.co/blog/",
   date_added: ~D[2019-05-15],
   github: "https://github.com/500Startups",
-  industries: ["Financial Services"],
+  industries: ["Finance"],
   locations: ["San Francisco, CA"],
   name: "500 Startups",
   old_id: 376,

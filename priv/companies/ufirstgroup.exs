@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2020-07-23],
   github: "https://github.com/ufirstgroup/",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["Zürich, Switzerland / Valencia, Spain"],
   name: "UFirstGroup",
   old_id: 620,

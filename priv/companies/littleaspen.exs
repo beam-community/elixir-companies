@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2020-05-25],
-  github: "",
   industries: ["Enterprise SaaS"],
   locations: ["Chicago, US"],
   name: "Little Aspen",

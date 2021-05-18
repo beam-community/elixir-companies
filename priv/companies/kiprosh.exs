@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "http://github.com/kiprosh",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Mumbai, India and Chicago, USA"],
   name: "Kiprosh",
   old_id: 189,

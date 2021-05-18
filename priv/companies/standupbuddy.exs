@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2021-04-08],
-  github: "",
-  industries: ["Information Technology/IT"],
-  locations: [""],
+  industries: ["Information Technology"],
   name: "StandupBuddy",
   old_id: 725,
   url: "https://standupbuddy.app",

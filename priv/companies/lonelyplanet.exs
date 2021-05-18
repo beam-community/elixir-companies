@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/lonelyplanet",
   industries: ["Leisure/Travel"],
-  locations: [""],
   name: "Lonely Planet",
   old_id: 272,
   url: "http://www.lonelyplanet.com",

@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Customer Service"],
-  locations: [""],
   name: "HiOperator",
   old_id: 161,
   url: "https://www.hioperator.com",

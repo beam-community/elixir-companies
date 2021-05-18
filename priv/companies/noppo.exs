@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2020-07-22],
-  github: "",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["The Netherlands"],
   name: "Noppo",
   old_id: 613,

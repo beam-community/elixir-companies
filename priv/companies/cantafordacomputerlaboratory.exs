@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-06-07],
   github: "https://github.com/RichMorin",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["San Francisco Bay Area, CA, USA or remote"],
   name: "Canta Forda Computer Laboratory",
   old_id: 381,

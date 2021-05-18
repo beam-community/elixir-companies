@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2021-03-10],
-  github: "",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["Zwolle, The Netherlands"],
   name: "Retrosync",
   old_id: 669,

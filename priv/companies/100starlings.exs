@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/100Starlings",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Remote"],
   name: "100Starlings",
   old_id: 151,

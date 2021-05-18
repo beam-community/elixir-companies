@@ -1,7 +1,6 @@
 %{
   blog: "https://www.seeyoudoc.com/blogs",
   date_added: ~D[2019-05-13],
-  github: "",
   industries: ["Healthcare"],
   locations: ["Manila, Philippines"],
   name: "SeeYouDoc",

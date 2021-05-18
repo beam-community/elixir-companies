@@ -2,7 +2,7 @@
   blog: "https://blog.pragtechnologies.com/",
   date_added: ~D[2019-05-13],
   github: "https://github.com/ngdelcastillo",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Manila, Philippines"],
   name: "Pragtechnologies",
   old_id: 372,

@@ -1,8 +1,7 @@
 %{
   blog: "https://medium.com/asolvi",
   date_added: ~D[2019-08-20],
-  github: "",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Norway, Sweden, UK"],
   name: "Asolvi",
   old_id: 422,

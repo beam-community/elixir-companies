@@ -1,8 +1,7 @@
 %{
   blog: "https://blog.fixfinder.com",
   date_added: ~D[2020-10-20],
-  github: "",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["Sacramento, CA"],
   name: "FixFinder",
   old_id: 642,

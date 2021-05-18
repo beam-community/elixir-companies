@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-10-12],
-  github: "",
   industries: ["Gaming"],
   locations: ["Russia, Kaliningrad"],
   name: "Panzerdog Oy",

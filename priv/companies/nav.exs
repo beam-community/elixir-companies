@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/creditera",
-  industries: ["Financial Technology"],
-  locations: [""],
+  industries: ["Fintech"],
   name: "Nav",
   old_id: 266,
   url: "https://nav.com",

@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/QuiqUpLTD",
   industries: ["E-Commerce"],
-  locations: [""],
   name: "Quiqup",
   old_id: 286,
   url: "https://quiqup.com",

@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/frameio",
-  industries: ["Computer Software"],
-  locations: [""],
+  industries: ["Software"],
   name: "Frame",
   old_id: 253,
   url: "https://frame.io/",

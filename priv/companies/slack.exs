@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Communication"],
-  locations: [""],
   name: "Slack",
   old_id: 230,
   url: "https://slack.com",

@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2020-06-10],
-  github: "",
   industries: ["Other Industry"],
-  locations: [""],
   name: "Tripping.com",
   old_id: 597,
   url: "https://www.tripping.com/",

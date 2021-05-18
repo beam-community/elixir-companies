@@ -2,7 +2,7 @@
   blog: "https://medium.com/sumup-engineering",
   date_added: ~D[2019-03-29],
   github: "https://twitter.com/@SumUpEng",
-  industries: ["Financial Technology"],
+  industries: ["Fintech"],
   locations: ["Berlin, Germany "],
   name: "SumUp",
   old_id: 355,

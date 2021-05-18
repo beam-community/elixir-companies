@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2020-03-24],
   github: "https://github.com/redclawtech",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Florida, Remote"],
   name: "RedClaw Technologies",
   old_id: 541,

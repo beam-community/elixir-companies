@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2020-10-14],
-  github: "",
   industries: ["Health/Fitness"],
   locations: ["USA"],
   name: "Ubindi",

@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2020-01-06],
   github: "https://github.com/old-reliable",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Oxford, UK (HQ) but company is distributed"],
   name: "Old Reliable Tech Ltd",
   old_id: 492,

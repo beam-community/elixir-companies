@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-06-28],
   github: "https://github.com/digitalorigin",
-  industries: ["Financial Technology"],
+  industries: ["Fintech"],
   locations: ["Madrid, Spain | Barcelona, Spain"],
   name: "Pagantis",
   old_id: 396,

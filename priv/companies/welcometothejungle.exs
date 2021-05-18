@@ -2,7 +2,7 @@
   blog: "https://medium.com/wttj-tech",
   date_added: ~D[2019-05-13],
   github: "https://github.com/WTTJ",
-  industries: ["Human Resources/HR"],
+  industries: ["Human Resources"],
   locations: ["Paris"],
   name: "Welcome to the Jungle",
   old_id: 375,

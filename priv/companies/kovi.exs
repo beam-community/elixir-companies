@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2019-05-01],
   github: "https://github.com/kovihq",
   industries: ["Automotive"],

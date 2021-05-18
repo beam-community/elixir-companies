@@ -1,7 +1,6 @@
 %{
   blog: "https://blog.forzafootball.com",
   date_added: ~D[2021-03-10],
-  github: "",
   industries: ["Information Services"],
   locations: ["Sweden, Gothenburg"],
   name: "Forza Football",

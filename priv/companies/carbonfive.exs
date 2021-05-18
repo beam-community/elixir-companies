@@ -1,9 +1,7 @@
 %{
   blog: "http://blog.carbonfive.com",
   date_added: ~D[2019-02-24],
-  github: "",
-  industries: ["Technology Consulting"],
-  locations: [""],
+  industries: ["Consulting"],
   name: "Carbon Five",
   old_id: 306,
   url: "http://carbonfive.com",

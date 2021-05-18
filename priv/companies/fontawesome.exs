@@ -2,7 +2,7 @@
   blog: "https://blog.fontawesome.com",
   date_added: ~D[2019-06-25],
   github: "https://github.com/FortAwesome",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["Bentonville, AR"],
   name: "Font Awesome",
   old_id: 395,

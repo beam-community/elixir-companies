@@ -3,7 +3,6 @@
   date_added: ~D[2019-02-24],
   github: "https://github.com/Coffee-Meets-Bagel",
   industries: ["Dating"],
-  locations: [""],
   name: "Coffee Meets Bagel",
   old_id: 61,
   url: "https://coffeemeetsbagel.com/",

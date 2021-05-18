@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/dubbersoftware/",
   industries: ["Communication"],
-  locations: [""],
   name: "Dubber",
   old_id: 74,
   url: "https://www.dubber.net",

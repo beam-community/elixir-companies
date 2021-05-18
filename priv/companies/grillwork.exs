@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Burlington, VT, USA"],
   name: "GrillWork",
   old_id: 140,

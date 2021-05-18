@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2021-04-08],
-  github: "",
   industries: ["Human Resources"],
   locations: ["UK"],
   name: "DevITjobs.uk",

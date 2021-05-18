@@ -2,7 +2,7 @@
   blog: "https://vendorful.com/blog/",
   date_added: ~D[2020-01-30],
   github: "https://github.com/BoringButGreat/",
-  industries: ["Enterprise SaaS"],
+  industries: ["Software"],
   locations: ["New York, NY"],
   name: "Vendorful, Inc.",
   old_id: 495,

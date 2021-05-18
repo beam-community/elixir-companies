@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-11-28],
-  github: "",
   industries: ["Social Network"],
   locations: ["Tokyo, Japan"],
   name: "Coregenik",

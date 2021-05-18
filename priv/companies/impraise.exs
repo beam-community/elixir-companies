@@ -2,7 +2,7 @@
   blog: "https://medium.com/impraise-design-engineering",
   date_added: ~D[2019-08-04],
   github: "@impraise",
-  industries: ["Human Resources/HR"],
+  industries: ["Human Resources"],
   locations: ["Amsterdam, Netherlands"],
   name: "Impraise",
   old_id: 419,

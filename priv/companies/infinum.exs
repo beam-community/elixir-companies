@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/infinum/",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["San Francisco, CA, USA"],
   name: "Infinum",
   old_id: 84,

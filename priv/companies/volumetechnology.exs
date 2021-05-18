@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2021-04-08],
-  github: "",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["United States"],
   name: "Volume Technology",
   old_id: 718,

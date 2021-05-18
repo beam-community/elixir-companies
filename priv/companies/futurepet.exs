@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/futurepet",
   industries: ["Healthcare"],
-  locations: [""],
   name: "Future Pet",
   old_id: 79,
   url: "https://futurepet.care",

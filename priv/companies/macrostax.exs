@@ -1,7 +1,6 @@
 %{
   blog: "https://www.macrostax.com/blog/",
   date_added: ~D[2020-09-29],
-  github: "",
   industries: ["Health/Fitness"],
   locations: ["Boulder, CO"],
   name: "Macrostax",

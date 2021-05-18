@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-03-18],
-  github: "",
-  industries: ["Human Resources/HR"],
+  industries: ["Human Resources"],
   locations: ["Melbourne, Australia"],
   name: "Dossy",
   old_id: 343,

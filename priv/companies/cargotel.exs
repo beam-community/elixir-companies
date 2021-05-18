@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Logistics"],
   locations: ["Baltimore, MD, USA"],
   name: "CargoTel",

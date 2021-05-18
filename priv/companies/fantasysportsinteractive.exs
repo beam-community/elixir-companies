@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2020-06-01],
-  github: "",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["UK"],
   name: "Fantasy Sports Interactive",
   old_id: 593,

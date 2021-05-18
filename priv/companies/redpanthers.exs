@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "http://github.com/redpanthers",
-  industries: ["Technology Consulting"],
-  locations: [""],
+  industries: ["Consulting"],
   name: "Red Panthers",
   old_id: 324,
   url: "http://redpanthers.co",

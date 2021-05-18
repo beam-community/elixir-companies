@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-03-18],
-  github: "",
   industries: ["Healthcare"],
   locations: ["Accra, Ghana"],
   name: "MedTrack",

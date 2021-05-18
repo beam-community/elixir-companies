@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-09-10],
-  github: "",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["London"],
   name: "Piqax Technology LTD",
   old_id: 429,

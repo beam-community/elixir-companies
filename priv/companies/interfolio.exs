@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-09-25],
-  github: "",
   industries: ["Education Technology"],
   locations: ["Greenville, SC"],
   name: "Interfolio",

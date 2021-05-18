@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2020-11-17],
-  github: "",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["New York"],
   name: "Frame.io",
   old_id: 644,

@@ -1,8 +1,7 @@
 %{
   blog: "http://verycreatives.com/blog",
   date_added: ~D[2020-07-23],
-  github: "",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Hungary"],
   name: "VeryCreatives",
   old_id: 618,

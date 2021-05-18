@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-12-09],
-  github: "",
   industries: ["Apparel/Fashion"],
   locations: ["Switzerland"],
   name: "VIU Eyewear",

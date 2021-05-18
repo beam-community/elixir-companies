@@ -2,7 +2,7 @@
   blog: "http://developer.x-plane.com/blog/",
   date_added: ~D[2021-03-10],
   github: "https://github.com/X-Plane",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["Distributed"],
   name: "Laminar Research",
   old_id: 663,

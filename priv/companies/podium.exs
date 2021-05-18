@@ -2,7 +2,7 @@
   blog: "https://medium.com/podium-engineering",
   date_added: ~D[2019-08-22],
   github: "https://www.github.com/podium",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["Lehi/Utah & São Paulo/Brazil"],
   name: "Podium",
   old_id: 424,

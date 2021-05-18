@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/PagerDuty",
-  industries: ["Enterprise Software"],
-  locations: [""],
+  industries: ["Software"],
   name: "PagerDuty",
   old_id: 298,
   url: "http://pagerduty.com",

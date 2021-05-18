@@ -1,8 +1,7 @@
 %{
   blog: "https://blog.craftingsoftware.com/",
   date_added: ~D[2021-03-10],
-  github: "",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["Romania"],
   name: "CraftingSoftware",
   old_id: 676,

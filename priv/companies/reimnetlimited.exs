@@ -1,8 +1,7 @@
 %{
   blog: "blog.reimnet.com",
   date_added: ~D[2019-03-18],
-  github: "",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Abuja, Nigeria"],
   name: "REIMNET LIMITED",
   old_id: 350,

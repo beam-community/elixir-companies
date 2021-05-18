@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2020-02-29],
   github: "http://github.com/payout-one/",
-  industries: ["Financial Services"],
+  industries: ["Finance"],
   locations: ["Slovakia"],
   name: "Payout",
   old_id: 505,

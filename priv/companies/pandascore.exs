@@ -2,7 +2,7 @@
   blog: "https://medium.com/pandascore-stories",
   date_added: ~D[2019-02-24],
   github: "https://github.com/PandaScore",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Paris, France"],
   name: "PandaScore",
   old_id: 255,

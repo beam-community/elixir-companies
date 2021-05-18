@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/geeksoftteam",
-  industries: ["Financial Services"],
+  industries: ["Finance"],
   locations: ["Warsaw, Poland"],
   name: "Geek Soft",
   old_id: 327,

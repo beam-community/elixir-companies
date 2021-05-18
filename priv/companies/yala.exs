@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Social Network"],
-  locations: [""],
   name: "Yala",
   old_id: 47,
   url: "https://yalabot.com/",

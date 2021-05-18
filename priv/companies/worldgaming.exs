@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-04-22],
-  github: "",
   industries: ["Gaming"],
   locations: ["Toronto, Canada"],
   name: "WorldGaming",

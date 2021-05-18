@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2019-09-13],
   github: "https://github.com/ourway",
   industries: ["Telecommunications"],

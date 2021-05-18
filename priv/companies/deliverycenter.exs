@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2020-08-04],
-  github: "",
   industries: ["Logistics"],
   locations: ["Curitiba, Brazil"],
   name: "Delivery Center",

@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2020-07-21],
-  github: "",
   industries: ["Beauty/Wellness"],
   locations: ["United States"],
   name: "Papa Inc.",

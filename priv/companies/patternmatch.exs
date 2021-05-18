@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/patternmatch/",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Cracow, Poland"],
   name: "Pattern Match",
   old_id: 243,

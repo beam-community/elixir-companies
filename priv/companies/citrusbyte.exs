@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-25],
   github: "https://github.com/citrusbyte",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Los Angeles, CA"],
   name: "Citrusbyte",
   old_id: 331,

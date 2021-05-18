@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/chaince",
-  industries: ["Financial Services"],
+  industries: ["Finance"],
   locations: ["Hong Kong S.A.R., China"],
   name: "Chaince",
   old_id: 315,

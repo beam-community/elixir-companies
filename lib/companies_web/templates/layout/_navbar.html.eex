@@ -23,9 +23,7 @@
         <nav class="hidden md:flex space-x-10">
           <%= link(gettext("Home"), to: Routes.page_path(@conn, :index, current_locale()), class: "text-base font-medium text-gray-700 hover:text-brand-purple") %>
 
-          <a href="#" class="text-base font-medium text-gray-700 hover:text-brand-purple">
-            Companies
-          </a>
+          <%= link(gettext("Companies"), to: Routes.company_path(@conn, :index, current_locale()), class: "text-base font-medium text-gray-700 hover:text-brand-purple") %>
 
           <%= link(gettext("Jobs"), to: Routes.job_path(@conn, :index, current_locale()), class: "text-base font-medium text-gray-700 hover:text-brand-purple") %>
 

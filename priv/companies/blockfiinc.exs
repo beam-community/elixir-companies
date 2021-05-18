@@ -1,8 +1,7 @@
 %{
   blog: "https://blockfi.com/blog/",
   date_added: ~D[2019-07-25],
-  github: "",
-  industries: ["Financial Technology"],
+  industries: ["Fintech"],
   locations: ["New York,  NY"],
   name: "BlockFi, Inc.",
   old_id: 414,

@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/heetch",
   industries: ["Transportation"],
-  locations: [""],
   name: "Heetch",
   old_id: 293,
   url: "https://www.heetch.com",

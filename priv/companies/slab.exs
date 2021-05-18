@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/slab/",
-  industries: ["Enterprise Software"],
+  industries: ["Software"],
   locations: ["San Francisco, CA, USA"],
   name: "Slab",
   old_id: 240,

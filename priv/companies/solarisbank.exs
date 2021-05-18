@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/solarisbank",
-  industries: ["Financial Technology"],
+  industries: ["Fintech"],
   locations: ["Berlin, Germany"],
   name: "solarisBank",
   old_id: 135,

@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-25],
   github: "https://github.com/weareyipyip",
   industries: ["Mobile App & Game Development"],

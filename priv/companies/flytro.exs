@@ -1,7 +1,6 @@
 %{
   blog: "https://flytro.com/blog/",
   date_added: ~D[2019-09-03],
-  github: "",
   industries: ["Gaming"],
   locations: ["Spain"],
   name: "Flytro",

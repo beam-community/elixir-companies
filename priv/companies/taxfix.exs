@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-05-02],
   github: "https://github.com/taxfix",
-  industries: ["Financial Technology"],
+  industries: ["Fintech"],
   locations: ["Berlin, Germany"],
   name: "Taxfix",
   old_id: 371,

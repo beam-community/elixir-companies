@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/mirego",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Quebec, Canada"],
   name: "Mirego",
   old_id: 102,

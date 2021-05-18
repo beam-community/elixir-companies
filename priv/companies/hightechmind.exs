@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2020-05-19],
-  github: "",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["Netherlands"],
   name: "High Tech Mind",
   old_id: 581,

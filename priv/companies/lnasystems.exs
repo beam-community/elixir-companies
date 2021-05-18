@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-06-20],
   github: "lnasystems",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Brazil"],
   name: "LNA Systems",
   old_id: 390,

@@ -2,7 +2,7 @@
   blog: "https://medium.com/comadre",
   date_added: ~D[2021-03-13],
   github: "https://github.com/comadre-tech",
-  industries: ["Financial Technology"],
+  industries: ["Fintech"],
   locations: ["São Paulo, Brazil"],
   name: "Comadre",
   old_id: 679,

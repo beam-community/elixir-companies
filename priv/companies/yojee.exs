@@ -1,7 +1,6 @@
 %{
   blog: "https://yojee.com/company/blog/",
   date_added: ~D[2019-06-21],
-  github: "",
   industries: ["Logistics"],
   locations: ["Singapore"],
   name: "Yojee",

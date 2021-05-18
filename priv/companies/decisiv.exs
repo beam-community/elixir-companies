@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "http://github.com/decisiv",
   industries: ["Service Relationship Management"],

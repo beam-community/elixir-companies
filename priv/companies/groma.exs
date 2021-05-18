@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
-  industries: ["Enterprise Software"],
-  locations: [""],
+  industries: ["Software"],
   name: "Groma",
   old_id: 71,
   url: "https://www.groma.si/en",

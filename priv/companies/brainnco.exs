@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2020-03-24],
   github: "https://github.com/brainn-co",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["30 Fradique Coutinho St.  São Paulo, Brazil"],
   name: "Brainn.co",
   old_id: 542,

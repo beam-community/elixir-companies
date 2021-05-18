@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/wistia",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["Cambridge, MA, USA"],
   name: "Wistia",
   old_id: 148,

@@ -2,7 +2,7 @@
   blog: "https://blog.10pines.com/",
   date_added: ~D[2019-02-24],
   github: "https://github.com/10pines",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Buenos Aires, Argentina"],
   name: "10Pines",
   old_id: 268,

@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/TheClubHQ",
   industries: ["Hospitality"],
-  locations: [""],
   name: "The.Club",
   old_id: 101,
   url: "https://the.club",

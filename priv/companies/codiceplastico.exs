@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/codiceplastico",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Brescia, Italy"],
   name: "CodicePlastico",
   old_id: 235,

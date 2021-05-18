@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/kontomatik",
-  industries: ["Financial Technology"],
-  locations: [""],
+  industries: ["Fintech"],
   name: "Kontomatik",
   old_id: 210,
   url: "https://kontomatik.com",

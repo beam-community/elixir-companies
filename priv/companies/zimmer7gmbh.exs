@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-05-13],
-  github: "",
   industries: ["Internet"],
   locations: ["Mannheim, Germany"],
   name: "zimmer7 GmbH",

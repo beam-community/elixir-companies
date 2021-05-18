@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/DefactoSoftware",
   industries: ["Education"],
-  locations: [""],
   name: "Defacto",
   old_id: 283,
   url: "https://en.defacto.nl",

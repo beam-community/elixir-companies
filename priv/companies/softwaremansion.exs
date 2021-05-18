@@ -2,7 +2,7 @@
   blog: "https://blog.swmansion.com/",
   date_added: ~D[2021-04-08],
   github: "https://github.com/software-mansion/",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["Kraków, Poland"],
   name: "Software Mansion",
   old_id: 720,

@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-06-16],
-  github: "",
   industries: ["Transportation"],
   locations: ["Singapore"],
   name: "Swat Mobile",

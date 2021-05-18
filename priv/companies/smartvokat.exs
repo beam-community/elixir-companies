@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2020-10-14],
-  github: "",
-  industries: ["Information Technology/IT"],
-  locations: ["Germany & remote"],
+  industries: ["Information Technology"],
+  locations: ["Germany", "Remote"],
   name: "smartvokat",
   old_id: 636,
   url: "https://www.smartvokat.com",

@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Consumer Electronics"],
   locations: ["Aurora, IL, USA and Atlanta, GA, USA"],
   name: "FirstAlert",

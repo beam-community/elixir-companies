@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Performance Management"],
-  locations: [""],
   name: "Steer",
   old_id: 82,
   url: "https://www.newsteer.com/",

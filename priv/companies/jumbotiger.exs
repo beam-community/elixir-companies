@@ -1,7 +1,6 @@
 %{
   blog: "https://blog.jumbotiger.com/",
   date_added: ~D[2021-03-10],
-  github: "",
   industries: ["Real Estate"],
   locations: ["India"],
   name: "JumboTiger",

@@ -2,7 +2,7 @@
   blog: "https://www.invozone.com/blog/",
   date_added: ~D[2020-05-03],
   github: "https://github.com/InvoZone",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Kuala Lumpur, Malaysia"],
   name: "InvoZone",
   old_id: 547,

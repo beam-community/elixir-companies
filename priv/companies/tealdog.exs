@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2020-05-03],
-  github: "",
   industries: ["Management Consulting"],
   locations: ["Distributed"],
   name: "TealDog",

@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
-  industries: ["Financial Technology"],
+  industries: ["Fintech"],
   locations: ["Paris, France"],
   name: "Margo Bank",
   old_id: 138,

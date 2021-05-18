@@ -2,7 +2,7 @@
   blog: "https://medium.com/madeawkward",
   date_added: ~D[2019-04-27],
   github: "https://github.com/awkward",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Rotterdam, Netherlands"],
   name: "Awkward",
   old_id: 367,

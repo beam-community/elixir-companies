@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2019-08-20],
   github: "https://github.com/trykno",
   industries: ["Security"],

@@ -2,7 +2,7 @@
   blog: "https://www.wyeworks.com/blog/",
   date_added: ~D[2019-04-01],
   github: "https://github.com/wyeworks",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Uruguay"],
   name: "WyeWorks",
   old_id: 358,

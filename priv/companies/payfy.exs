@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2021-03-21],
-  github: "",
-  industries: ["Financial Technology"],
+  industries: ["Fintech"],
   locations: ["Florianópois"],
   name: "payfy",
   old_id: 717,

@@ -2,7 +2,7 @@
   blog: "https://fiqus.com/blog/",
   date_added: ~D[2019-02-24],
   github: "https://github.com/fiqus",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Buenos Aires, Argentina and Villa La Angostura, Argentina"],
   name: "Fiqus",
   old_id: 149,

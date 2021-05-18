@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2020-09-02],
-  github: "",
   industries: ["Events Services"],
   locations: ["Colorado"],
   name: "The Live Calendar",

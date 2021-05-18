@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2021-03-10],
-  github: "",
   industries: ["Enterprise SaaS"],
   locations: ["Trondheim, Norway"],
   name: "Metaito",

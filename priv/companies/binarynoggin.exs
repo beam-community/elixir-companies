@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-03-02],
   github: "https://github.com/BinaryNoggin",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Kansas City, MO"],
   name: "Binary Noggin",
   old_id: 339,

@@ -1,8 +1,7 @@
 %{
   blog: "https://blog.botcity.com.do",
   date_added: ~D[2021-04-15],
-  github: "",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Santo Domingo, DR. Distributed."],
   name: "Botcity",
   old_id: 727,

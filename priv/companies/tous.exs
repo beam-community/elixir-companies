@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-11-02],
-  github: "",
   industries: ["Retail Industry"],
   locations: ["Barcelona, Catalonia (SPAIN)"],
   name: "TOUS",

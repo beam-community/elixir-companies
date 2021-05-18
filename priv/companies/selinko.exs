@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2020-07-22],
-  github: "",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["Belgium"],
   name: "Selinko",
   old_id: 612,

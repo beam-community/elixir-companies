@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-06-16],
-  github: "",
   industries: ["Telecommunications"],
   locations: ["Doncaster, United Kingdom (Remote work a possibility)"],
   name: "Meetupcall",

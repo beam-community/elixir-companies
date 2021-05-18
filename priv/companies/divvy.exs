@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
-  industries: ["Financial Services"],
+  industries: ["Finance"],
   locations: ["Lehi, UT, USA"],
   name: "Divvy",
   old_id: 160,

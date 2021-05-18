@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2020-01-23],
-  github: "",
   industries: ["Healthcare"],
   locations: ["Nashville, TN, USA"],
   name: "Aspire Health",

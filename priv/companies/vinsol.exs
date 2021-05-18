@@ -1,9 +1,7 @@
 %{
   blog: "http://vinsol.com/blog",
   date_added: ~D[2019-02-24],
-  github: "",
-  industries: ["Technology Consulting"],
-  locations: [""],
+  industries: ["Consulting"],
   name: "Vinsol",
   old_id: 219,
   url: "http://vinsol.com",

@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2020-06-17],
   github: "https://github.com/fremantle-industries",
-  industries: ["Financial Technology"],
+  industries: ["Fintech"],
   locations: ["Perth, Western Australia"],
   name: "Fremantle Industries",
   old_id: 600,

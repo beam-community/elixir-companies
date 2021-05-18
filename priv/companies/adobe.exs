@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/adobe",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["San Jose, CA, USA"],
   name: "Adobe",
   old_id: 290,

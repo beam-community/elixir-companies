@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-12-27],
   github: "https://github.com/joydrive/",
   industries: ["Automotive"],
-  locations: [""],
   name: "Joydrive",
   old_id: 490,
   url: "https://joydrive.com",

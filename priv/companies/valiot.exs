@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-03-02],
   github: "valiot",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Monterrey, México"],
   name: "Valiot",
   old_id: 341,

@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-04-03],
-  github: "",
   industries: ["Accounting"],
   locations: ["Uruguay"],
   name: "YoCalculo",

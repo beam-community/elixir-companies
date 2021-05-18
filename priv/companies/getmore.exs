@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2020-05-19],
   github: "https://github.com/getmorebrasil",
   industries: ["Enterprise SaaS"],

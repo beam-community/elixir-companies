@@ -2,7 +2,7 @@
   blog: "https://elixirator.com/blog/",
   date_added: ~D[2020-03-31],
   github: "https://github.com/elixirator",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Remote "],
   name: "Elixirator",
   old_id: 543,

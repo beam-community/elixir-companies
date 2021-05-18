@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/team-alembic",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Sydney, Australia"],
   name: "Alembic",
   old_id: 213,

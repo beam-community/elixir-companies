@@ -2,7 +2,7 @@
   blog: "https://subvisual.com/blog/",
   date_added: ~D[2020-07-23],
   github: "https://github.com/subvisual",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Braga, Portugal & Boston, USA"],
   name: "Subvisual",
   old_id: 617,

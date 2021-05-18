@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-07-17],
-  github: "",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["Uppsala, Sweden"],
   name: "Caspeco",
   old_id: 410,

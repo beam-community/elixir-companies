@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2020-10-20],
-  github: "",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Nairobi, Kenya"],
   name: "Value Chain Factory",
   old_id: 641,

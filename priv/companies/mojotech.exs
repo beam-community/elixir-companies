@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/mojotech",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Providence, RI, USA"],
   name: "MojoTech",
   old_id: 202,

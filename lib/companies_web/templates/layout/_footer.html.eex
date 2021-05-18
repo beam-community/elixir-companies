@@ -7,9 +7,7 @@
       </div>
 
       <div class="px-5 py-2">
-        <a href="#" class="text-base text-gray-700 hover:text-brand-purple">
-          Companies
-        </a>
+        <%= link(gettext("Companies"), to: Routes.company_path(@conn, :index, current_locale()), class: "text-base text-gray-700 hover:text-brand-purple") %>
       </div>
 
       <div class="px-5 py-2">

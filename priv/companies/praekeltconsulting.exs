@@ -2,7 +2,7 @@
   blog: "https://www.praekelt.org/",
   date_added: ~D[2020-07-21],
   github: "https://github.com/praekelt",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Cape Town and Johannesburg - South Africa"],
   name: "Praekelt Consulting",
   old_id: 609,

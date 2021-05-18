@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-06-20],
-  github: "",
   industries: ["Human Resources"],
   locations: ["Brooklyn, NY"],
   name: "Gustav",

@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-10-12],
-  github: "",
-  industries: ["Financial Technology"],
+  industries: ["Fintech"],
   locations: ["Phoenix, AZ"],
   name: "Openforce",
   old_id: 474,

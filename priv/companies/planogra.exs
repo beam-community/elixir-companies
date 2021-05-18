@@ -2,7 +2,7 @@
   blog: "https://youtube.com/c/plangora",
   date_added: ~D[2021-04-08],
   github: "https://github.com/plangora",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["Hong Kong SAR"],
   name: "Planogra",
   old_id: 723,

@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-12-27],
-  github: "",
-  industries: ["Computer Software/Engineering"],
+  industries: ["Software"],
   locations: ["Santa Maria, Brazil"],
   name: "glabs digital",
   old_id: 489,

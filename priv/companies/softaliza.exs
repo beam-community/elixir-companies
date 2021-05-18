@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-12-12],
-  github: "",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["Santa Maria, Brazil"],
   name: "Softaliza",
   old_id: 485,

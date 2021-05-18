@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/coletiv",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Porto, Portugal"],
   name: "Coletiv",
   old_id: 288,

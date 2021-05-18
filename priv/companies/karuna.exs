@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2021-03-10],
-  github: "",
-  industries: ["Financial Services"],
+  industries: ["Finance"],
   locations: ["Russia, Saint-Petersburg"],
   name: "Karuna",
   old_id: 659,

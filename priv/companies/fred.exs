@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Communication"],
-  locations: [""],
   name: "Fred",
   old_id: 228,
   url: "http://fredapp.com.br",

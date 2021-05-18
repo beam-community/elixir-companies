@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Real Estate"],
-  locations: [""],
   name: "Housing",
   old_id: 238,
   url: "https://housing.com/",

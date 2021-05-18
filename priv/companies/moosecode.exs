@@ -2,7 +2,7 @@
   blog: "https://moosecode.nl/blog",
   date_added: ~D[2020-02-12],
   github: "https://github.com/moosecodebv",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Amsterdam, Netherlands"],
   name: "Moose Code",
   old_id: 500,

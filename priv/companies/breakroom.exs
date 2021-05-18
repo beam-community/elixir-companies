@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2020-05-12],
   github: "breakroom",
   industries: ["Information Services"],

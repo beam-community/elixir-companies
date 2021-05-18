@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/kmonline",
-  industries: ["Financial Services"],
+  industries: ["Finance"],
   locations: ["Florianópolis, Brazil"],
   name: "KM Online",
   old_id: 233,

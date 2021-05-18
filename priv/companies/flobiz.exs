@@ -1,8 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-09-23],
   github: "https://github.com/team-flobiz",
-  industries: ["Financial Technology"],
+  industries: ["Fintech"],
   locations: ["Bangalore"],
   name: "FloBiz",
   old_id: 432,

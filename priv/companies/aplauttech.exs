@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2020-07-15],
-  github: "",
   industries: ["Consumer Services"],
   locations: ["Moscow"],
   name: "Aplaut Tech",

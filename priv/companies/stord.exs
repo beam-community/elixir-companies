@@ -1,7 +1,6 @@
 %{
   blog: "https://www.stord.engineering/",
   date_added: ~D[2020-11-17],
-  github: "",
   industries: ["Logistics"],
   locations: ["Atlanta, GA, USA"],
   name: "Stord",

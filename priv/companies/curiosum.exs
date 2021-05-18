@@ -2,7 +2,7 @@
   blog: "https://curiosum.dev/blog",
   date_added: ~D[2020-07-01],
   github: "https://github.com/curiosum-dev",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["Poland"],
   name: "Curiosum",
   old_id: 603,

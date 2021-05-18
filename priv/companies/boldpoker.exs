@@ -1,9 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Gaming"],
-  locations: [""],
   name: "Bold Poker",
   old_id: 300,
   url: "https://boldpoker.net",

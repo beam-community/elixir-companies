@@ -1,7 +1,6 @@
 %{
   blog: "http://blog.nightwatch.io",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["SEO"],
   locations: ["Remote"],
   name: "Nightwatch",

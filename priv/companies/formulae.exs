@@ -2,7 +2,7 @@
   blog: "https://medium.com/formulae",
   date_added: ~D[2019-02-24],
   github: "https://github.com/formulaeio",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Pune, India"],
   name: "Formulae",
   old_id: 120,

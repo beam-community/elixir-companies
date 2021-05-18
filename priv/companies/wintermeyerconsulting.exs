@@ -2,7 +2,7 @@
   blog: "https://medium.com/@wintermeyer",
   date_added: ~D[2019-02-25],
   github: "https://twitter.com/wintermeyer",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Germany"],
   name: "Wintermeyer Consulting",
   old_id: 333,

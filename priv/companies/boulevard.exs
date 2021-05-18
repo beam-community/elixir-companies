@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2019-06-16],
   github: "https://github.com/boulevard",
   industries: ["Service Relationship Management"],

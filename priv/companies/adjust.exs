@@ -2,7 +2,7 @@
   blog: "big-elephants.com",
   date_added: ~D[2019-02-24],
   github: "https://github.com/adjust",
-  industries: ["Enterprise Software"],
+  industries: ["Software"],
   locations: ["Berlin, Germany"],
   name: "Adjust",
   old_id: 196,

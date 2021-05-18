@@ -2,7 +2,7 @@
   blog: "https://blog.deemoney.com",
   date_added: ~D[2020-06-23],
   github: "https://github.com/dee-money",
-  industries: ["Financial Services"],
+  industries: ["Finance"],
   locations: ["Bangkok, Thailand"],
   name: "DeeMoney",
   old_id: 601,

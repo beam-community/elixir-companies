@@ -2,7 +2,7 @@
   blog: "https://plausible.io/blog",
   date_added: ~D[2019-11-05],
   github: "https://drawdata.xyz/",
-  industries: ["Computer Software"],
+  industries: ["Software"],
   locations: ["London, UK"],
   name: "Plausible Insights",
   old_id: 478,

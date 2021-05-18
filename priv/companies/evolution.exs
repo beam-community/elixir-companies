@@ -3,7 +3,6 @@
   date_added: ~D[2021-04-28],
   github: "https://github.com/evolution-gaming",
   industries: ["Gambling/Casinos"],
-  locations: [""],
   name: "Evolution",
   old_id: 731,
   url: "www.evolution.com",

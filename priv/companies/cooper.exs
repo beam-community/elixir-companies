@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2021-04-15],
-  github: "",
   industries: ["Social Network"],
   locations: ["Amsterdam, the Netherlands"],
   name: "Cooper",

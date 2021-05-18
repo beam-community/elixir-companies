@@ -1,5 +1,4 @@
 %{
-  blog: "",
   date_added: ~D[2021-04-09],
   github: "https://github.com/RatioPBC/",
   industries: ["Information Services"],
@@ -8,6 +7,6 @@
   old_id: 726,
   url: "https://ratiopbc.com",
   description: """
-  Ratio is a technology consulting company that builds modern, performant, resilient software that helps government and healthcare organizations improve the health and well-being of the communities they serve.
+  Ratio is a Consulting company that builds modern, performant, resilient software that helps government and healthcare organizations improve the health and well-being of the communities they serve.
   """
 }

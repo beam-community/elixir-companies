@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2021-04-27],
-  github: "",
   industries: ["Healthcare"],
   locations: ["Derby, UK"],
   name: "Alertive ",

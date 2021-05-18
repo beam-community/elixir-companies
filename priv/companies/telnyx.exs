@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/team-telnyx",
   industries: ["Telecommunications"],
-  locations: [""],
   name: "Telnyx",
   old_id: 308,
   url: "https://telnyx.com/",

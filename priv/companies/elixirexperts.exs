@@ -1,8 +1,6 @@
 %{
-  blog: "",
   date_added: ~D[2021-03-10],
-  github: "",
-  industries: ["Information Technology/IT"],
+  industries: ["Information Technology"],
   locations: ["EU,USA,IN,AU"],
   name: "Elixir Experts",
   old_id: 652,

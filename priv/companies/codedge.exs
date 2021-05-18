@@ -2,7 +2,7 @@
   blog: "https://blog.codedge.io",
   date_added: ~D[2019-02-24],
   github: "https://github.com/codedge-llc",
-  industries: ["Technology Consulting"],
+  industries: ["Consulting"],
   locations: ["Dallas, TX, USA"],
   name: "Codedge",
   old_id: 99,

@@ -1,7 +1,5 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
-  github: "",
   industries: ["Real Estate"],
   locations: ["São Paulo, BR"],
   name: "YouProp",

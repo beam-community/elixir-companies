@@ -1,9 +1,7 @@
 %{
-  blog: "",
   date_added: ~D[2019-02-24],
   github: "https://github.com/sayrhino",
   industries: ["Real Estate"],
-  locations: [""],
   name: "Rhino",
   old_id: 323,
   url: "https://www.sayrhino.com",
