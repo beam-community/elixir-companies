@@ -7,12 +7,12 @@ defmodule Companies.Company do
     :date_added,
     :github,
     :industries,
-    :locations,
     :old_id,
     :name,
     :slug,
     :url,
-    jobs: []
+    jobs: [],
+    locations: []
   ]
 
   def build(filename, attrs) do

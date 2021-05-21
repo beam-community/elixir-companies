@@ -31,7 +31,7 @@ defmodule CompaniesWeb.CompanyComponent do
           <dt class="sr-only">Contact Information</dt>
           <dd class="mt-3">
             <div class="flex justify-center space-x-6">
-              <%= if @company.blog && @company.blog != "" do %>
+              <%= if @company.blog do %>
                 <a href="<%= @company.blog %>" target="_blank" class="text-gray-400 hover:text-gray-500">
                   <span class="sr-only">Blog</span>
                   <!-- heroicons outline/book-open -->

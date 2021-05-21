@@ -36,6 +36,13 @@ defmodule Companies.Companies do
   end
 
   @doc """
+  Returns a list of industries currently assigned to companies
+  """
+  def industries do
+    Map.keys(@by_industries)
+  end
+
+  @doc """
   Returns 10 random companies
 
   ## Examples

@@ -3,7 +3,7 @@ defmodule CompaniesWeb.CompanyLive do
 
   alias Companies.Companies
 
-  @page_size 20
+  @page_size 40
 
   def mount(params, _session, socket) do
     page =
