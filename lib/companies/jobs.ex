@@ -5,7 +5,7 @@ defmodule Companies.Jobs do
 
   import Ecto.Query, warn: false
 
-  alias Companies.{Repo, PendingChanges}
+  alias Companies.Repo
   alias Companies.Schema.Job
 
   @doc """
@@ -24,7 +24,7 @@ defmodule Companies.Jobs do
       from j in Job,
         where: [expired: false],
         join: c in assoc(j, :company),
-        where: is_nil(j.removed_pending_change_id),
+        where: is_nil(j.deleted_at),
         where: is_nil(c.deleted_at),
         preload: [company: c],
         order_by: [desc: :updated_at]
@@ -52,7 +52,7 @@ defmodule Companies.Jobs do
     query =
       from j in Job,
         join: c in assoc(j, :company),
-        where: is_nil(j.removed_pending_change_id),
+        where: is_nil(j.deleted_at),
         where: is_nil(c.deleted_at),
         where: j.id == ^id,
         preload: [company: c],
@@ -73,11 +73,11 @@ defmodule Companies.Jobs do
       {:error, %Ecto.Changeset{}}
 
   """
-  @spec create(map(), map()) :: {:ok, Ecto.Schema.t()} | {:error, Ecto.Changeset.t()}
-  def create(attrs, user) do
+  @spec create(map()) :: {:ok, Ecto.Schema.t()} | {:error, Ecto.Changeset.t()}
+  def create(attrs) do
     %Job{}
     |> Job.changeset(attrs)
-    |> PendingChanges.create(:create, user)
+    |> Repo.insert()
   end
 
   @doc """
@@ -92,10 +92,10 @@ defmodule Companies.Jobs do
       {:error, %Ecto.Changeset{}}
 
   """
-  def update(%Job{} = job, attrs, user) do
+  def update(%Job{} = job, attrs) do
     job
     |> Job.changeset(attrs)
-    |> PendingChanges.create(:update, user)
+    |> Repo.update()
   end
 
   @doc """
@@ -110,8 +110,10 @@ defmodule Companies.Jobs do
       {:error, %Ecto.Changeset{}}
 
   """
-  def delete(%Job{} = job, user) do
-    PendingChanges.create(job, :delete, user)
+  def delete(%Job{} = job) do
+    job
+    |> Job.changeset(%{deleted_at: DateTime.utc_now()})
+    |> Repo.update()
   end
 
   @doc """

@@ -21,7 +21,7 @@ defmodule Companies.Companies do
     page = Map.get(params, "page", "1")
     order = Map.get(params, :order, :name)
 
-    job_query = from j in Job, where: [expired: false]
+    job_query = from j in Job, where: is_nil(j.deleted_at) and j.expired == false
 
     (c in Company)
     |> from()

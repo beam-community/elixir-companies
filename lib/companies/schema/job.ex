@@ -4,17 +4,16 @@ defmodule Companies.Schema.Job do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias Companies.Schema.{Company, PendingChange}
+  alias Companies.Schema.Company
 
   schema "jobs" do
     field :title, :string
     field :url, :string
     field :remote, :boolean
     field :expired, :boolean
+    field :deleted_at, :utc_datetime
 
     belongs_to :company, Company
-    # Optional reference to the change that removed the resource
-    belongs_to :removed_pending_change, PendingChange
 
     timestamps()
   end
@@ -22,7 +21,7 @@ defmodule Companies.Schema.Job do
   @doc false
   def changeset(job, attrs) do
     job
-    |> cast(attrs, [:title, :url, :company_id, :remote, :expired])
+    |> cast(attrs, [:title, :url, :company_id, :remote, :expired, :deleted_at])
     |> validate_required([:title, :url, :company_id, :remote])
   end
 end

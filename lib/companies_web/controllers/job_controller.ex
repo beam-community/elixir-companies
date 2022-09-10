@@ -18,7 +18,7 @@ defmodule CompaniesWeb.JobController do
   end
 
   def create(conn, %{"job" => params}) do
-    case Jobs.create(params, current_user(conn)) do
+    case Jobs.create(params) do
       {:ok, _job} ->
         :telemetry.execute(telemetry_event(), %{job_create: 1})
 
@@ -46,7 +46,7 @@ defmodule CompaniesWeb.JobController do
   def update(conn, %{"id" => id, "job" => job_params}) do
     job = Jobs.get!(id)
 
-    case Jobs.update(job, job_params, current_user(conn)) do
+    case Jobs.update(job, job_params) do
       {:ok, _job} ->
         conn
         |> put_flash(:info, "Thank you. Your requested changes are pending approval.")
@@ -59,7 +59,7 @@ defmodule CompaniesWeb.JobController do
 
   def delete(conn, %{"id" => id}) do
     job = Jobs.get!(id)
-    {:ok, _job} = Jobs.delete(job, current_user(conn))
+    {:ok, _job} = Jobs.delete(job)
 
     conn
     |> put_flash(:info, "Thank you. Your delete request is pending approval.")

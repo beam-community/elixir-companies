@@ -36,7 +36,7 @@ defmodule Companies.JobsTest do
     end
 
     test "does not retrieve deleted records" do
-      %{id: deleted_id} = insert(:job, %{removed_pending_change: build(:pending_change)})
+      %{id: deleted_id} = insert(:job, %{deleted_at: DateTime.utc_now()})
       insert_list(2, :job)
 
       refute deleted_id in Enum.map(Jobs.all(), & &1.id)
@@ -59,47 +59,47 @@ defmodule Companies.JobsTest do
     end
 
     test "does not retrieve deleted record" do
-      job = insert(:job, %{removed_pending_change: build(:pending_change)})
+      job = insert(:job, %{deleted_at: DateTime.utc_now()})
 
       assert_raise Ecto.NoResultsError, fn -> Jobs.get!(job.id) end
     end
   end
 
   describe "create/2" do
-    test "creates a pending change for a new job when changes are valid", %{user: user} do
-      assert {:ok, %{action: "create", resource: "job"}} =
+    test "creates a pending change for a new job when changes are valid" do
+      assert {:ok, %{}} =
                :job
                |> params_for()
-               |> Jobs.create(user)
+               |> Jobs.create()
     end
 
-    test "returns an error for invalid changes", %{user: user} do
-      assert {:error, _changeset} = Jobs.create(%{}, user)
+    test "returns an error for invalid changes" do
+      assert {:error, _changeset} = Jobs.create(%{})
     end
   end
 
   describe "delete/2" do
-    test "creates a pending change for deleting a job", %{user: user} do
-      assert {:ok, %{action: "delete", resource: "job"}} =
+    test "creates a pending change for deleting a job" do
+      assert {:ok, %{}} =
                :job
                |> insert()
-               |> Jobs.delete(user)
+               |> Jobs.delete()
     end
   end
 
   describe "update/3" do
-    test "creates a pending change for job updates when changes are valid", %{user: user} do
-      assert {:ok, %{action: "update", resource: "job"}} =
+    test "creates a pending change for job updates when changes are valid" do
+      assert {:ok, %{}} =
                :job
                |> insert()
-               |> Jobs.update(%{title: "updated"}, user)
+               |> Jobs.update(%{title: "updated"})
     end
 
-    test "returns an error for invalid changes", %{user: user} do
+    test "returns an error for invalid changes" do
       assert {:error, _changeset} =
                :job
                |> insert()
-               |> Jobs.update(%{title: nil}, user)
+               |> Jobs.update(%{title: nil})
     end
   end
 end
