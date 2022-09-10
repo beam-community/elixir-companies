@@ -1,4 +1,4 @@
-defmodule Companies.Repo.Migrations.FillsInDeletedAt do
+defmodule Companies.Repo.Migrations.FillsInDeletedAtCompanies do
   use Ecto.Migration
 
   def up do
