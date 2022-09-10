@@ -3,7 +3,10 @@ defmodule Companies.Factory do
 
   use ExMachina.Ecto, repo: Companies.Repo
 
-  alias Companies.Schema.{Company, Industry, Job, PendingChange, User}
+  alias Companies.Schema.Company
+  alias Companies.Schema.Industry
+  alias Companies.Schema.Job
+  alias Companies.Schema.User
 
   def company_factory do
     %Company{
@@ -27,15 +30,6 @@ defmodule Companies.Factory do
   def industry_factory do
     %Industry{
       name: sequence(:name, &"Test Industry #{&1}")
-    }
-  end
-
-  def pending_change_factory do
-    %PendingChange{
-      action: "create",
-      changes: params_for(:company),
-      resource: "company",
-      user: insert(:user)
     }
   end
 
