@@ -4,14 +4,13 @@ defmodule Companies.Schema.Industry do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias Companies.Schema.{Company, PendingChange}
+  alias Companies.Schema.Company
 
   schema "industries" do
     field :name, :string
+    field :deleted_at, :utc_datetime
 
     has_many :companies, Company
-    # Optional reference to the change that removed the resource
-    belongs_to :removed_pending_change, PendingChange
 
     timestamps()
   end
@@ -19,7 +18,7 @@ defmodule Companies.Schema.Industry do
   @doc false
   def changeset(industry, attrs) do
     industry
-    |> cast(attrs, [:name])
+    |> cast(attrs, [:name, :deleted_at])
     |> validate_required([:name])
   end
 end

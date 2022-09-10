@@ -20,7 +20,7 @@ defmodule Companies.Industries do
   def all do
     query =
       from i in Industry,
-        where: is_nil(i.removed_pending_change_id),
+        where: is_nil(i.deleted_at),
         order_by: i.name
 
     Repo.all(query)
@@ -29,6 +29,7 @@ defmodule Companies.Industries do
   def for_select do
     query =
       from i in Industry,
+        where: is_nil(i.deleted_at),
         order_by: i.name,
         select: {i.name, i.id}
 
