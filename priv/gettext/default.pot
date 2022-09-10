@@ -22,11 +22,6 @@ msgid "Add a job"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/layout/account.html.eex:15
-msgid "Approvals"
-msgstr ""
-
-#, elixir-format
 #: lib/companies_web/templates/company/form.html.eex:77
 #: lib/companies_web/templates/job/form.html.eex:45 lib/companies_web/templates/user/form.html.eex:38
 msgid "Back"
@@ -95,7 +90,7 @@ msgid "Save"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/layout/account.html.eex:47
+#: lib/companies_web/templates/layout/account.html.eex:46
 msgid "Sign in"
 msgstr ""
 
@@ -105,7 +100,7 @@ msgid "Sign in & list free"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/layout/account.html.eex:38
+#: lib/companies_web/templates/layout/account.html.eex:37
 msgid "Sign out"
 msgstr ""
 
@@ -182,17 +177,6 @@ msgid "Website"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/views/admin/pending_change_view.ex:19
-msgid "Approved Change"
-msgstr ""
-
-#, elixir-format
-#: lib/companies_web/templates/admin/pending_change/index.html.eex:24
-#: lib/companies_web/views/admin/pending_change_view.ex:22
-msgid "Approved Changes"
-msgstr ""
-
-#, elixir-format
 #: lib/companies_web/templates/company/recent.html.eex:46
 msgid "Browse full list"
 msgstr ""
@@ -217,28 +201,6 @@ msgstr ""
 #, elixir-format
 #: lib/companies_web/templates/job/index.html.eex:38
 msgid "Last update"
-msgstr ""
-
-#, elixir-format
-#: lib/companies_web/views/admin/pending_change_view.ex:18
-msgid "Pending Change"
-msgstr ""
-
-#, elixir-format
-#: lib/companies_web/templates/admin/pending_change/index.html.eex:16
-#: lib/companies_web/views/admin/pending_change_view.ex:24
-msgid "Pending Changes"
-msgstr ""
-
-#, elixir-format
-#: lib/companies_web/views/admin/pending_change_view.ex:20
-msgid "Rejected Change"
-msgstr ""
-
-#, elixir-format
-#: lib/companies_web/templates/admin/pending_change/index.html.eex:32
-#: lib/companies_web/views/admin/pending_change_view.ex:23
-msgid "Rejected Changes"
 msgstr ""
 
 #, elixir-format
@@ -304,7 +266,7 @@ msgid "CV URL"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/user/profile.html.eex:71
+#: lib/companies_web/templates/user/profile.html.eex:62
 msgid "Check my CV"
 msgstr ""
 
@@ -314,7 +276,7 @@ msgid "Contact Developer"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/layout/account.html.eex:30
+#: lib/companies_web/templates/layout/account.html.eex:29
 msgid "Dashboard"
 msgstr ""
 
@@ -341,7 +303,7 @@ msgid "Looking for a job"
 msgstr ""
 
 #, elixir-format
-#: lib/companies_web/templates/layout/account.html.eex:22
+#: lib/companies_web/templates/layout/account.html.eex:21
 msgid "Profile"
 msgstr ""
 
@@ -364,4 +326,15 @@ msgstr ""
 #, elixir-format
 #: lib/companies_web/templates/company/new.html.eex:6
 msgid "Your company will appear in the list once your submission has been validated by the site admins."
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/card.html.eex:20
+msgid "Are you sure you want to delete this company?"
+msgstr ""
+
+#, elixir-format
+#: lib/companies_web/templates/company/card.html.eex:72
+#: lib/companies_web/templates/job/job.html.eex:20
+msgid "Are you sure you want to delete this job?"
 msgstr ""
