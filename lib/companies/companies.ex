@@ -3,8 +3,9 @@ defmodule Companies.Companies do
 
   import Ecto.Query, warn: false
 
-  alias Companies.{PendingChanges, Repo}
-  alias Companies.Schema.{Company, Job}
+  alias Companies.Repo
+  alias Companies.Schema.Company
+  alias Companies.Schema.Job
 
   @doc """
   Returns the list of paginated companies.
@@ -26,7 +27,7 @@ defmodule Companies.Companies do
     |> from()
     |> predicates(params)
     |> order_by(^order)
-    |> where([c, _i, _j], is_nil(c.removed_pending_change_id))
+    |> where([c, _i, _j], is_nil(c.deleted_at))
     |> preload([:industry, jobs: ^job_query])
     |> Repo.paginate(page: page)
   end
@@ -73,7 +74,7 @@ defmodule Companies.Companies do
   """
   def count do
     from(c in Company)
-    |> where([c], is_nil(c.removed_pending_change_id))
+    |> where([c], is_nil(c.deleted_at))
     |> select([c], count(c.id))
     |> Repo.one()
   end
@@ -98,7 +99,7 @@ defmodule Companies.Companies do
     from(c in Company)
     |> preload(^preloads)
     |> from()
-    |> where([c], is_nil(c.removed_pending_change_id))
+    |> where([c], is_nil(c.deleted_at))
     |> Repo.get!(id)
   end
 
@@ -114,11 +115,11 @@ defmodule Companies.Companies do
   {:error, %Ecto.Changeset{}}
 
   """
-  @spec create(map(), map()) :: {:ok, Ecto.Schema.t()} | {:error, Ecto.Changeset.t()}
-  def create(attrs, user) do
+  @spec create(map()) :: {:ok, Ecto.Schema.t()} | {:error, Ecto.Changeset.t()}
+  def create(attrs) do
     %Company{}
     |> Company.changeset(attrs)
-    |> PendingChanges.create(:create, user)
+    |> Repo.insert()
   end
 
   @doc """
@@ -133,10 +134,10 @@ defmodule Companies.Companies do
   {:error, %Ecto.Changeset{}}
 
   """
-  def update(%Company{} = company, attrs, user) do
+  def update(%Company{} = company, attrs) do
     company
     |> Company.changeset(attrs)
-    |> PendingChanges.create(:update, user)
+    |> Repo.update()
   end
 
   @doc """
@@ -151,8 +152,10 @@ defmodule Companies.Companies do
   {:error, %Ecto.Changeset{}}
 
   """
-  def delete(%Company{} = company, user) do
-    PendingChanges.create(company, :delete, user)
+  def delete(%Company{} = company) do
+    company
+    |> Company.changeset(%{deleted_at: DateTime.utc_now()})
+    |> Repo.update()
   end
 
   @doc """

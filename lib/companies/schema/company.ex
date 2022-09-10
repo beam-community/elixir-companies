@@ -13,6 +13,7 @@ defmodule Companies.Schema.Company do
     field :location, :string
     field :name, :string
     field :url, :string
+    field :deleted_at, :utc_datetime
 
     belongs_to :industry, Industry
     has_many :jobs, Job, defaults: [removed_pending_change_id: nil]
@@ -25,7 +26,7 @@ defmodule Companies.Schema.Company do
   @doc false
   def changeset(company, attrs) do
     company
-    |> cast(attrs, [:name, :description, :url, :github, :location, :blog, :industry_id])
+    |> cast(attrs, [:name, :description, :url, :github, :location, :blog, :industry_id, :deleted_at])
     |> validate_required([:name, :description, :url, :industry_id])
   end
 end

@@ -27,7 +27,7 @@ defmodule CompaniesWeb.CompanyController do
   end
 
   def create(conn, %{"company" => params}) do
-    case Companies.create(params, current_user(conn)) do
+    case Companies.create(params) do
       {:ok, _company} ->
         conn
         |> put_flash(:info, "Thank you! Your change will be reviewed and should be available on the site shortly.")
@@ -55,7 +55,7 @@ defmodule CompaniesWeb.CompanyController do
   def update(conn, %{"id" => id, "company" => company_params}) do
     company = Companies.get!(id)
 
-    case Companies.update(company, company_params, current_user(conn)) do
+    case Companies.update(company, company_params) do
       {:ok, _company} ->
         conn
         |> put_flash(:info, "Thank you. Your requested changes are pending approval.")
@@ -69,7 +69,7 @@ defmodule CompaniesWeb.CompanyController do
 
   def delete(conn, %{"id" => id}) do
     company = Companies.get!(id)
-    {:ok, _company} = Companies.delete(company, current_user(conn))
+    {:ok, _company} = Companies.delete(company)
 
     conn
     |> put_flash(:info, "Thank you. Your delete request is pending approval.")
