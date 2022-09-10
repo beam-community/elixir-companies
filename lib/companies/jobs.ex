@@ -25,7 +25,7 @@ defmodule Companies.Jobs do
         where: [expired: false],
         join: c in assoc(j, :company),
         where: is_nil(j.removed_pending_change_id),
-        where: is_nil(c.removed_pending_change_id),
+        where: is_nil(c.deleted_at),
         preload: [company: c],
         order_by: [desc: :updated_at]
 
@@ -53,7 +53,7 @@ defmodule Companies.Jobs do
       from j in Job,
         join: c in assoc(j, :company),
         where: is_nil(j.removed_pending_change_id),
-        where: is_nil(c.removed_pending_change_id),
+        where: is_nil(c.deleted_at),
         where: j.id == ^id,
         preload: [company: c],
         order_by: [desc: :updated_at]

@@ -4,7 +4,8 @@ defmodule Companies.Schema.Company do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias Companies.Schema.{Industry, Job, PendingChange}
+  alias Companies.Schema.Industry
+  alias Companies.Schema.Job
 
   schema "companies" do
     field :blog, :string
@@ -17,8 +18,6 @@ defmodule Companies.Schema.Company do
 
     belongs_to :industry, Industry
     has_many :jobs, Job, defaults: [removed_pending_change_id: nil]
-    # Optional reference to the change that removed the resource
-    belongs_to :removed_pending_change, PendingChange
 
     timestamps()
   end

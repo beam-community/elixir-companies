@@ -30,7 +30,7 @@ defmodule Companies.CompaniesTest do
     end
 
     test "does not retrieve deleted records" do
-      insert(:company, %{removed_pending_change: build(:pending_change)})
+      insert(:company, %{deleted_at: DateTime.utc_now()})
       insert(:company)
 
       assert %{page_number: 1, page_size: 16, total_entries: 1, total_pages: 1} = Companies.all()
@@ -129,7 +129,7 @@ defmodule Companies.CompaniesTest do
     end
 
     test "does not retrieve deleted record" do
-      company = insert(:company, %{removed_pending_change: build(:pending_change)})
+      company = insert(:company, %{deleted_at: DateTime.utc_now()})
 
       assert_raise Ecto.NoResultsError, fn -> Companies.get!(company.id) end
     end
@@ -138,47 +138,49 @@ defmodule Companies.CompaniesTest do
   describe "count/0" do
     test "calculates non-deleted companies" do
       insert_list(2, :company)
-      insert(:company, %{removed_pending_change: build(:pending_change)})
+      insert(:company, %{deleted_at: DateTime.utc_now()})
 
       assert 2 == Companies.count()
     end
   end
 
   describe "create/2" do
-    test "creates a pending change for a new company when changes are valid", %{user: user} do
-      assert {:ok, %{action: "create", resource: "company"}} =
+    test "creates a company" do
+      assert {:ok, %{}} =
                :company
                |> params_for()
-               |> Companies.create(user)
+               |> Companies.create()
     end
 
-    test "returns an error for invalid changes", %{user: user} do
-      assert {:error, _changeset} = Companies.create(%{name: "invalid"}, user)
+    test "returns an error for invalid changes" do
+      assert {:error, _changeset} = Companies.create(%{name: "invalid"})
     end
   end
 
   describe "delete/2" do
-    test "creates a pending change for deleting a company", %{user: user} do
-      assert {:ok, %{action: "delete", resource: "company"}} =
+    test "soft deletes an existing company" do
+      assert {:ok, %{deleted_at: dt}} =
                :company
                |> insert()
-               |> Companies.delete(user)
+               |> Companies.delete()
+
+      refute is_nil(dt)
     end
   end
 
   describe "update/3" do
-    test "creates a pending change for company updates when changes are valid", %{user: user} do
-      assert {:ok, %{action: "update", resource: "company"}} =
+    test "creates a pending change for company updates when changes are valid" do
+      assert {:ok, %{}} =
                :company
                |> insert()
-               |> Companies.update(%{name: "updated"}, user)
+               |> Companies.update(%{name: "updated"})
     end
 
-    test "returns an error for invalid changes", %{user: user} do
+    test "returns an error for invalid changes" do
       assert {:error, _changeset} =
                :company
                |> insert()
-               |> Companies.update(%{name: nil}, user)
+               |> Companies.update(%{name: nil})
     end
   end
 

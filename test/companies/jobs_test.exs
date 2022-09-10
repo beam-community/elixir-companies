@@ -43,7 +43,7 @@ defmodule Companies.JobsTest do
     end
 
     test "does not include jobs from deleted companies" do
-      company = insert(:company, removed_pending_change: build(:pending_change))
+      company = insert(:company, deleted_at: DateTime.utc_now())
       %{id: deleted_id} = insert(:job, company: company)
       insert_list(2, :job)
 
