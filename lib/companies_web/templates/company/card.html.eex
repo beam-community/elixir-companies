@@ -8,21 +8,6 @@
   <% end %>
   <div class="content has-text-centered">
     <p class="title is-4 thin"><%= link to: Routes.company_path(@conn, :show, locale(@conn), @company) do %><%= @company.name %><% end %></p>
-    <%= if signed_in?(@conn) do %>
-      <div class="company-actions-wrapper">
-        <div class="toggle-company-actions">
-          <i class="fas fa-ellipsis-v"></i>
-        </div>
-        <div class="company-actions">
-          <%= link to: Routes.company_path(@conn, :edit, locale(@conn), @company) do %>
-            <span class="icon"><i class="fas fa-edit"></i></span> <%= gettext("Edit") %>
-          <% end %>
-          <%= link to: Routes.company_path(@conn, :delete, locale(@conn), @company), method: :delete do %>
-            <span class="icon"><i class="fas fa-trash-alt"></i></span> <%= gettext("Delete") %>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
   </div>
   <div class="content company-info has-text-left">
     <p class="is-size-7">
@@ -50,32 +35,6 @@
     <%= if @company.location do %>
       <span class="icon purple"><i class="fas fa-fw fa-location-arrow"></i></span> <%= @company.location %><br>
     <% end %>
-
-    <%= link to: Routes.job_path(@conn, :new, locale(@conn), company_id: @company.id) do %>
-      <span class="icon purple" >
-        <i class="fas fa-plus" ></i>
-      </span>
-        <%= gettext("Add a job") %>
-      <% end %>
-      <br/>
-      <%= for job <- @company.jobs do %>
-        <span class="icon purple"><i class="fas fa-briefcase"></i></span>
-        <%= link job.title, to: url_with_scheme(job.url), target: :blank %>
-        <%= if job.remote do %>&nbsp;(remote)<% end %>
-        <%= if signed_in?(@conn) do %>
-        &nbsp;
-        [
-        <%= link to: Routes.job_path(@conn, :edit, locale(@conn), job) do %>
-          <span class="icon purple"><i class="fas fa-edit"></i></span>
-        <% end %>
-        ,
-        <%= link to: Routes.job_path(@conn, :delete, locale(@conn), job), method: :delete do %>
-          <span class="icon purple"><i class="fas fa-trash-alt"></i></span>
-        <% end %>
-        ]
-        <% end %>
-        <br>
-      <% end %>
     </p>
   </div>
   <div class="content company-description is-size-7 has-text-centered">

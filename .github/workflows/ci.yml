@@ -1,82 +1,136 @@
+---
 name: Continuous Integration
 
 on:
   pull_request:
-    types: [opened, reopened, synchronize]
+    types:
+      - opened
+      - reopened
+      - synchronize
   push:
     branches:
-      - 'master'
+      - main
+
+env:
+  CACHE_VERSION: v1
+  ELIXIR_VERSION: '1.14.1'
+  MIX_ENV: test
+  OTP_VERSION: '25'
+
+concurrency:
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
 jobs:
-  Test:
+  Build:
     runs-on: ubuntu-latest
 
-    container:
-      image: elixir:1.10-alpine
-
-    services:
-      db:
-        env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-        image: postgres:11
-        ports: ['5432:5432']
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v1
-
-      - name: Install Dependencies
-        run: |
-          apk add --no-cache gcc g++ git imagemagick libmcrypt-dev make musl-dev
-          mix local.rebar --force
-          mix local.hex --force
-          mix deps.get
-
-      - name: Run Tests
-        run: mix test
-        env:
-          DB_HOST: db
-
-  Format:
-    runs-on: ubuntu-latest
-
-    container:
-      image: elixir:1.10-alpine
-
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v1
-
-      - name: Install Dependencies
-        run: |
-          apk add --no-cache gcc g++ git libmcrypt-dev make musl-dev
-          mix local.rebar --force
-          mix local.hex --force
-          mix deps.get
-
-      - name: Run Formatter
-        run: mix format --check-formatted
+      - uses: actions/checkout@v3
+      - uses: docker/setup-buildx-action@v1
+      - uses: docker/build-push-action@v3
 
   Credo:
     runs-on: ubuntu-latest
 
-    container:
-      image: elixir:1.10-alpine
+    steps:
+      - uses: actions/checkout@v3
+      - id: beam
+        uses: erlef/setup-beam@v1
+        with:
+          otp-version: ${{ env.OTP_VERSION }}
+          elixir-version: ${{ env.ELIXIR_VERSION }}
+      - id: cache
+        uses: actions/cache@v3
+        with:
+          key: |
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-credo-${{ hashFiles('mix.lock') }}-${{ github.ref }}
+          restore-keys: |
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-credo-${{ hashFiles('mix.lock') }}-${{ format('refs/heads/{0}', github.event.repository.default_branch) }}
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-credo-
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-
+          path: |
+            _build
+            deps
+      - if: steps.cache.outputs.cache-hit != 'true'
+        run: mix deps.get
+      - run: mix credo
+
+  Dialyzer:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v1
+      - uses: actions/checkout@v3
+      - id: beam
+        uses: erlef/setup-beam@v1
+        with:
+          otp-version: ${{ env.OTP_VERSION }}
+          elixir-version: ${{ env.ELIXIR_VERSION }}
+      - id: cache
+        uses: actions/cache@v3
+        with:
+          key: |
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-dialyzer-${{ hashFiles('mix.lock') }}-${{ github.ref }}
+          restore-keys: |
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-dialyzer-${{ hashFiles('mix.lock') }}-${{ format('refs/heads/{0}', github.event.repository.default_branch) }}
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-dialyzer-
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-
+          path: |
+            _build
+            deps
+      - if: steps.cache.outputs.cache-hit != 'true'
+        run: mix deps.get
+      - run: mix dialyzer
 
-      - name: Install Dependencies
-        run: |
-          apk add --no-cache gcc g++ git libmcrypt-dev make musl-dev
-          mix local.rebar --force
-          mix local.hex --force
-          mix deps.get
+  Format:
+    runs-on: ubuntu-latest
 
-      - name: Run Credo
-        run: mix credo
+    steps:
+      - uses: actions/checkout@v3
+      - id: beam
+        uses: erlef/setup-beam@v1
+        with:
+          otp-version: ${{ env.OTP_VERSION }}
+          elixir-version: ${{ env.ELIXIR_VERSION }}
+      - id: cache
+        uses: actions/cache@v3
+        with:
+          key: |
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-format-${{ hashFiles('mix.lock') }}-${{ github.ref }}
+          restore-keys: |
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-format-${{ hashFiles('mix.lock') }}-${{ format('refs/heads/{0}', github.event.repository.default_branch) }}
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-format-
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-
+          path: |
+            _build
+            deps
+      - if: steps.cache.outputs.cache-hit != 'true'
+        run: mix deps.get
+      - run: mix format --check-formatted
+
+  Test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - id: beam
+        uses: erlef/setup-beam@v1
+        with:
+          otp-version: ${{ env.OTP_VERSION }}
+          elixir-version: ${{ env.ELIXIR_VERSION }}
+      - id: cache
+        uses: actions/cache@v3
+        with:
+          key: |
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-test-${{ hashFiles('mix.lock') }}-${{ github.ref }}
+          restore-keys: |
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-test-${{ hashFiles('mix.lock') }}-${{ format('refs/heads/{0}', github.event.repository.default_branch) }}
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-test-
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-
+          path: |
+            _build
+            deps
+      - if: steps.cache.outputs.cache-hit != 'true'
+        run: mix deps.get
+      - run: mix compile --warnings-as-errors
+      - run: mix test

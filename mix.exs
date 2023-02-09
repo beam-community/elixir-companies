@@ -5,9 +5,9 @@ defmodule Companies.MixProject do
     [
       app: :companies,
       version: "0.1.0",
-      elixir: "~> 1.10",
+      elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
-      compilers: [:phoenix, :gettext] ++ Mix.compilers(),
+      compilers: [:phoenix] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [coveralls: :test, "coveralls.html": :test],
@@ -35,38 +35,30 @@ defmodule Companies.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:appsignal, "~> 1.13"},
-      {:bamboo, "~> 1.4"},
-      {:ecto_sql, "~> 3.4"},
-      {:gettext, "~> 0.17"},
-      {:html_sanitize_ex, "~> 1.4.0"},
+      {:appsignal_phoenix, "~> 2.0"},
+      {:earmark, "~> 1.4"},
+      {:gettext, "~> 0.22"},
+      {:html_sanitize_ex, "~> 1.4"},
       {:httpoison, "~> 1.6"},
       {:jason, "~> 1.1"},
-      {:phoenix, "~> 1.5.3", override: true},
-      {:phoenix_ecto, "~> 4.1"},
-      {:phoenix_html, "~> 2.14"},
       {:live_dashboard_history, "~> 0.1"},
-      {:phoenix_pubsub, "~> 2.0"},
-      {:plug_cowboy, "~> 2.3"},
-      {:postgrex, ">= 0.0.0"},
-      {:scrivener_ecto, "~> 2.3"},
-      {:scrivener_html, "~> 1.8"},
-      {:set_locale, "~> 0.2.8"},
+      {:nimble_publisher, "~> 0.1.3"},
+      {:phoenix, "~> 1.5"},
+      {:phoenix_html, "~> 3.2", override: true},
+      {:phoenix_live_view, "~> 0.18"},
+      {:phoenix_pubsub, "~> 2.1"},
+      {:plug_cowboy, "~> 2.6"},
+      {:set_locale, "~> 0.2"},
+      {:telemetry_metrics, "~> 0.6"},
+      {:telemetry_poller, "~> 1.0"},
       {:timex, "~> 3.6.1"},
-      {:ueberauth, "~> 0.6.3"},
-      {:ueberauth_github, "~> 0.8.0"},
-      {:bypass, "~> 1.0", only: :test},
-      {:ex_machina, "~> 2.4", only: :test},
-      {:excoveralls, "~> 0.12", only: :test},
-      {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:earmark, "~> 1.4"},
-      {:credo, "~> 1.4.0", only: [:dev, :test], runtime: false},
-      {:telemetry_poller, "~> 0.4"},
-      {:telemetry_metrics, "~> 0.4"},
 
-      # Live view
-      {:phoenix_live_view, "~> 0.14"},
-      {:floki, ">= 0.0.0", only: :test}
+      # Dev & Test
+      {:credo, "~> 1.6.4", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
+      {:excoveralls, "~> 0.12", only: :test},
+      {:floki, ">= 0.0.0", only: :test},
+      {:phoenix_live_reload, "~> 1.2", only: :dev}
     ]
   end
 
@@ -78,14 +70,10 @@ defmodule Companies.MixProject do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
-      "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
-      "ecto.reset": ["ecto.drop", "ecto.setup"],
+      setup: ["deps.get", "cmd --cd assets npm install"],
       test: [
         "format --check-formatted --check-equivalent --dry-run",
         "compile --warnings-as-errors",
-        "ecto.drop --quiet",
-        "ecto.create --quiet",
-        "ecto.migrate --quiet",
         "test"
       ]
     ]
