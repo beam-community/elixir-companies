@@ -18,7 +18,7 @@ defmodule Companies.CompaniesTest do
       assert 2 == length(entries)
       assert [%{name: "ALPHA"}, %{name: "ZULU"}] = entries
     end
-
+@
     test "filters companies by industry" do
       alpha = insert(:company, name: "ALPHA")
       zulu = insert(:company, name: "ZULU")

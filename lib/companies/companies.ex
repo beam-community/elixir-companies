@@ -1,10 +1,17 @@
 defmodule Companies.Companies do
   @moduledoc false
 
-  import Ecto.Query, warn: false
+  use NimblePublisher,
+    as: :companies,
+    build: Companies.Schema.Company,
+    from: Application.app_dir(:companies, "priv/companies/**/*.exs"),
+    highlighters: [],
+    parser: Companies.Parser
 
-  alias Companies.{PendingChanges, Repo}
-  alias Companies.Schema.{Company, Job}
+  alias Companies.Helpers
+  alias Companies.Schema.Company
+
+  def companies, do: @companies
 
   @doc """
   Returns the list of paginated companies.
@@ -17,18 +24,10 @@ defmodule Companies.Companies do
   """
 
   def all(params \\ %{}) do
-    page = Map.get(params, "page", "1")
-    order = Map.get(params, :order, :name)
-
-    job_query = from j in Job, where: [expired: false]
-
-    (c in Company)
-    |> from()
-    |> predicates(params)
-    |> order_by(^order)
-    |> where([c, _i, _j], is_nil(c.removed_pending_change_id))
-    |> preload([:industry, jobs: ^job_query])
-    |> Repo.paginate(page: page)
+    companies()
+    |> Helpers.searched_list(params)
+    |> Helpers.sorted_list(params)
+    |> Helpers.paginated_list(params)
   end
 
   @doc """
@@ -37,30 +36,8 @@ defmodule Companies.Companies do
   id next.
   """
   def recent do
-    all(%{order: [desc: :inserted_at, desc: :id]})
+    all()
   end
-
-  def predicates(query, %{"search" => search_params}) do
-    Enum.reduce(search_params, query, &query_predicates/2)
-  end
-
-  def predicates(query, _) do
-    query
-  end
-
-  defp query_predicates({_, ""}, query), do: query
-
-  defp query_predicates({"industry_id", industry_id}, query) when not is_nil(industry_id) do
-    from c in query, where: c.industry_id == ^industry_id
-  end
-
-  defp query_predicates({"text", text}, query) do
-    text = String.trim(text)
-
-    from c in query, where: ilike(c.name, ^"%#{text}%") or ilike(c.location, ^"%#{text}%")
-  end
-
-  defp query_predicates(nil, query), do: query
 
   @doc """
   Returns the total company count
@@ -72,10 +49,7 @@ defmodule Companies.Companies do
 
   """
   def count do
-    from(c in Company)
-    |> where([c], is_nil(c.removed_pending_change_id))
-    |> select([c], count(c.id))
-    |> Repo.one()
+    length(@companies)
   end
 
   @doc """
@@ -92,79 +66,11 @@ defmodule Companies.Companies do
   ** (Ecto.NoResultsError)
 
   """
-  def get!(id, opts \\ []) do
-    preloads = Keyword.get(opts, :preloads, [])
-
-    from(c in Company)
-    |> preload(^preloads)
-    |> from()
-    |> where([c], is_nil(c.removed_pending_change_id))
-    |> Repo.get!(id)
-  end
-
-  @doc """
-  Submits a new company for approval.
-
-  ## Examples
-
-  iex> create(%{field: value}, current_user())
-  :ok
-
-  iex> create(%{field: bad_value}, current_user())
-  {:error, %Ecto.Changeset{}}
-
-  """
-  @spec create(map(), map()) :: {:ok, Ecto.Schema.t()} | {:error, Ecto.Changeset.t()}
-  def create(attrs, user) do
+  def get!(_id, _opts \\ []) do
     %Company{}
-    |> Company.changeset(attrs)
-    |> PendingChanges.create(:create, user)
   end
 
-  @doc """
-  Updates a company.
-
-  ## Examples
-
-  iex> update(company, %{field: new_value})
-  {:ok, %Company{}}
-
-  iex> update(company, %{field: bad_value})
-  {:error, %Ecto.Changeset{}}
-
-  """
-  def update(%Company{} = company, attrs, user) do
-    company
-    |> Company.changeset(attrs)
-    |> PendingChanges.create(:update, user)
-  end
-
-  @doc """
-  Deletes a Company.
-
-  ## Examples
-
-  iex> delete(company)
-  {:ok, %Company{}}
-
-  iex> delete(company)
-  {:error, %Ecto.Changeset{}}
-
-  """
-  def delete(%Company{} = company, user) do
-    PendingChanges.create(company, :delete, user)
-  end
-
-  @doc """
-  Returns an `%Ecto.Changeset{}` for tracking company changes.
-
-  ## Examples
-
-  iex> change(company)
-  %Ecto.Changeset{source: %Company{}}
-
-  """
-  def change(%Company{} = company) do
-    Company.changeset(company, %{})
+  def get(_id, _opts \\ []) do
+    {:ok, %Company{}}
   end
 end

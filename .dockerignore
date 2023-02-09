@@ -1,0 +1,101 @@
+# flyctl launch added from .gitignore
+# Created by https://www.gitignore.io/api/elixir,osx,vim,linux
+# Edit at https://www.gitignore.io/?templates=elixir,osx,vim,linux
+
+### Elixir ###
+_build
+cover
+deps
+doc
+.fetch
+**/erl_crash.dump
+**/*.ez
+**/*.beam
+config/*.secret.exs
+**/.elixir_ls
+
+### Elixir Patch ###
+
+### Linux ###
+**/*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+**/.fuse_hidden*
+
+# KDE directory preferences
+**/.directory
+
+# Linux trash folder which might appear on any partition or disk
+**/.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+**/.nfs*
+
+### OSX ###
+# General
+**/.DS_Store
+**/.AppleDouble
+**/.LSOverride
+
+# Icon must end with two \r
+**/Icon
+
+# Thumbnails
+**/._*
+
+# Files that might appear in the root of a volume
+**/.DocumentRevisions-V100
+**/.fseventsd
+**/.Spotlight-V100
+**/.TemporaryItems
+**/.Trashes
+**/.VolumeIcon.icns
+**/.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+**/.AppleDB
+**/.AppleDesktop
+**/Network Trash Folder
+**/Temporary Items
+**/.apdisk
+
+### Vim ###
+# Swap
+**/[._]*.s[a-v][a-z]
+**/[._]*.sw[a-p]
+**/[._]s[a-rt-v][a-z]
+**/[._]ss[a-gi-z]
+**/[._]sw[a-p]
+
+# Session
+**/Session.vim
+
+# Temporary
+**/.netrwhist
+# Auto-generated tag files
+**/tags
+# Persistent undo
+**/[._]*.un~
+
+assets/node_modules
+priv/static
+# End of https://www.gitignore.io/api/elixir,osx,vim,linux
+
+# flyctl launch added from deps/earmark/lib/tools/.gitignore
+# The directory Mix will write compiled artifacts to.
+deps/earmark/lib/tools/_build
+
+# If you run "mix test --cover", coverage assets end up here.
+deps/earmark/lib/tools/cover
+
+# The directory Mix downloads your dependencies sources to.
+deps/earmark/lib/tools/deps
+
+# Where 3rd-party dependencies like ExDoc output generated docs.
+deps/earmark/lib/tools/doc
+
+# If the VM crashes, it generates a dump, let's ignore it too.
+deps/earmark/lib/tools/**/erl_crash.dump
+
+# Also ignore archive artifacts (built via "mix archive.build").
+deps/earmark/lib/tools/**/*.ez

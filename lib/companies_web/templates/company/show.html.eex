@@ -28,32 +28,6 @@
         <%= if @company.location do %>
           <span class="icon purple"><i class="fas fa-fw fa-location-arrow"></i></span> <%= @company.location %><br>
         <% end %>
-
-        <%= link to: Routes.job_path(@conn, :new, locale(@conn), company_id: @company.id) do %>
-          <span class="icon purple" >
-            <i class="fas fa-plus" ></i>
-          </span>
-            <%= gettext("Add a job") %>
-          <% end %>
-          <br/>
-          <%= for job <- @company.jobs do %>
-            <span class="icon purple"><i class="fas fa-briefcase"></i></span>
-            <%= link job.title, to: url_with_scheme(job.url), target: :blank %>
-            <%= if job.remote do %>&nbsp;(remote)<% end %>
-            <%= if signed_in?(@conn) do %>
-            &nbsp;
-            [
-            <%= link to: Routes.job_path(@conn, :edit, locale(@conn), job) do %>
-              <span class="icon purple"><i class="fas fa-edit"></i></span>
-            <% end %>
-            ,
-            <%= link to: Routes.job_path(@conn, :delete, locale(@conn), job), method: :delete do %>
-              <span class="icon purple"><i class="fas fa-trash-alt"></i></span>
-            <% end %>
-            ]
-            <% end %>
-            <br>
-          <% end %>
         </p>
       </div>
         <div class="content company-description is-size-5">

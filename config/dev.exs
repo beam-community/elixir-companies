@@ -1,4 +1,4 @@
-use Mix.Config
+import Config
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
@@ -68,11 +68,3 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
-
-# Configure your database
-config :companies, Companies.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "companies_dev",
-  hostname: "localhost",
-  pool_size: 10

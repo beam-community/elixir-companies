@@ -8,8 +8,6 @@ defmodule Companies.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      # Start the Ecto repository
-      Companies.Repo,
       CompaniesWeb.Telemetry,
       # Start the PubSub system
       {Phoenix.PubSub, name: Companies.PubSub},
@@ -18,13 +16,6 @@ defmodule Companies.Application do
       {Task.Supervisor, name: Companies.TaskSupervisor},
       CompaniesWeb.ViewingStats
     ]
-
-    :telemetry.attach(
-      "elixir-companies-ecto",
-      [:companies, :repo, :query],
-      &Appsignal.Ecto.handle_event/4,
-      nil
-    )
 
     CompaniesWeb.ViewingStats.setup_handlers()
 

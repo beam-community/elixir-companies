@@ -1,4 +1,4 @@
-use Mix.Config
+import Config
 
 # For production, don't forget to configure the url host
 # to something meaningful, Phoenix uses this information
@@ -14,12 +14,6 @@ config :companies, CompaniesWeb.Endpoint,
   url: [scheme: "https", host: "elixir-companies.com"],
   cache_static_manifest: "priv/static/cache_manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
-
-config :companies, :notifier, Notify.Slack
-
-config :companies, Notify.Mailer,
-  adapter: Bamboo.SendGridAdapter,
-  api_key: System.get_env("SENDGRID_API_KEY")
 
 # Do not print debug messages in production
 config :logger, level: :info

@@ -1,31 +1,23 @@
 defmodule Companies.Schema.Company do
   @moduledoc false
 
-  use Ecto.Schema
-  import Ecto.Changeset
+  #@enforce_keys [:industries, :last_changed_on, :location, :name, :website]
 
-  alias Companies.Schema.{Industry, Job, PendingChange}
+  defstruct [
+    :blog,
+    :description,
+    :github,
+    :id,
+    :industries,
+    :jobs,
+    :last_changed_on,
+    :location,
+    :name,
+    :website,
+  ]
 
-  schema "companies" do
-    field :blog, :string
-    field :description, :string
-    field :github, :string
-    field :location, :string
-    field :name, :string
-    field :url, :string
-
-    belongs_to :industry, Industry
-    has_many :jobs, Job, defaults: [removed_pending_change_id: nil]
-    # Optional reference to the change that removed the resource
-    belongs_to :removed_pending_change, PendingChange
-
-    timestamps()
+  def build(_filename, attrs, _body) do
+    struct!(__MODULE__, Map.to_list(attrs) )
   end
 
-  @doc false
-  def changeset(company, attrs) do
-    company
-    |> cast(attrs, [:name, :description, :url, :github, :location, :blog, :industry_id])
-    |> validate_required([:name, :description, :url, :industry_id])
-  end
 end

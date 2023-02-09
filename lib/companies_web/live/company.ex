@@ -1,11 +1,9 @@
 defmodule CompaniesWeb.CompanyLive do
   @moduledoc false
-  use Phoenix.LiveView, layout: {CompaniesWeb.LayoutView, "live.html"}
+  use Phoenix.LiveView, layout: {CompaniesWeb.LayoutView, :live}
 
   alias CompaniesWeb.CompanyView
-  alias Companies.Accounts
-  alias Companies.Industries
-  alias Companies.Companies
+  alias Companies.{Companies, Industries}
 
   alias CompaniesWeb.Router.Helpers, as: Routes
 
@@ -13,14 +11,12 @@ defmodule CompaniesWeb.CompanyLive do
     Phoenix.View.render(CompanyView, "index.html", assigns)
   end
 
-  def mount(params, session, socket) do
+  def mount(params, _session, socket) do
     industries = Industries.for_select()
 
     socket =
       socket
-      |> assign_new(:current_user, fn -> Accounts.get(session["user_id"]) end)
       |> assign(
-        user_id: session["user_id"],
         industries: industries,
         locale: params["locale"]
       )
