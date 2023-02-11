@@ -3,7 +3,7 @@ defmodule Companies.Repo.Migrations.UserEmailSettings do
 
   def change do
     alter table(:users) do
-      add :email_notifications, :boolean, default: true
+      add(:email_notifications, :boolean, default: true)
     end
   end
 end

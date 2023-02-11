@@ -3,7 +3,7 @@ defmodule Companies.Repo.Migrations.RemoveUserBio do
 
   def change do
     alter table(:users) do
-      remove :bio
+      remove(:bio)
     end
   end
 end

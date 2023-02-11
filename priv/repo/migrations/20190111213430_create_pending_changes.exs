@@ -3,12 +3,12 @@ defmodule Companies.Repo.Migrations.CreatePendingChanges do
 
   def change do
     create table(:pending_changes) do
-      add :action, :string, null: false
-      add :approved, :boolean, default: false, null: false
-      add :changes, :map, null: false
-      add :note, :string
-      add :resource, :string, null: false
-      add :user_id, references(:users), null: false
+      add(:action, :string, null: false)
+      add(:approved, :boolean, default: false, null: false)
+      add(:changes, :map, null: false)
+      add(:note, :string)
+      add(:resource, :string, null: false)
+      add(:user_id, references(:users), null: false)
 
       timestamps()
     end

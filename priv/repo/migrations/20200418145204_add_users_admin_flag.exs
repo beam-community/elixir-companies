@@ -3,7 +3,7 @@ defmodule Companies.Repo.Migrations.AddUsersAdminFlag do
 
   def change do
     alter table(:users) do
-      add :admin, :boolean, default: false
+      add(:admin, :boolean, default: false)
     end
   end
 end
