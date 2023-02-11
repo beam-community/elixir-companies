@@ -10,7 +10,12 @@ defmodule Companies.Helpers do
 
   def paginated_list(list, params) do
     {page, size} = pagination_params(params)
-    Enum.slice(list, page * size - size, size)
+    entries = Enum.slice(list, page * size - size, size)
+
+    total_entries = length(list)
+    total_pages = total_entries / size
+
+    %{entries: entries, page_number: page, page_size: size, total_entries: total_entries, total_pages: total_pages}
   end
 
   defp pagination_params(params) do

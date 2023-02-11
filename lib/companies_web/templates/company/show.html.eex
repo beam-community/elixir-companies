@@ -7,9 +7,9 @@
         <span class="icon purple"><i class="fas fa-fw fa-cogs"></i></span>
         <%= industry_name(@company) %><br>
 
-        <%= if @company.url do %>
+        <%= if @company.website do %>
           <span class="icon purple"><i class="fas fa-fw fa-globe"></i></span>
-          <%= link link_title(@company.url), to: url_with_scheme(@company.url), target: :blank %>
+          <%= link link_title(@company.website), to: url_with_scheme(@company.website), target: :blank %>
           <br>
         <% end %>
 
@@ -26,7 +26,7 @@
         <% end %>
 
         <%= if @company.location do %>
-          <span class="icon purple"><i class="fas fa-fw fa-location-arrow"></i></span> <%= @company.location %><br>
+          <span class="icon purple"><i class="fas fa-fw fa-location-arrow"></i></span> <%= @company.location.country %><br>
         <% end %>
         </p>
       </div>

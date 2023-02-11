@@ -1,6 +1,6 @@
 %{
-  industries: [],
-  website: "https://www.adobe.com/",
+  industry: "Software", 
+  website: "https://www.adobe.com",
   github: "https://github.com/adobe",
   location: %{
     city: "San Jose",

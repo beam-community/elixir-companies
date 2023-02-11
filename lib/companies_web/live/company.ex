@@ -44,11 +44,11 @@ defmodule CompaniesWeb.CompanyLive do
     if last_page?(assigns) do
       {:noreply, socket}
     else
-      companies = Companies.all(%{"page" => page})
+      %{entries: entries} = Companies.all(%{"page" => page})
 
       {:noreply,
        socket
-       |> assign(companies: companies)
+       |> assign(companies: entries)
        |> assign(page: page)
        |> assign(update: "append")
        |> push_patch(to: Routes.live_path(socket, CompaniesWeb.CompanyLive, assigns.locale))}
@@ -56,13 +56,13 @@ defmodule CompaniesWeb.CompanyLive do
   end
 
   defp search(socket, params) do
-    companies = Companies.all(params)
+    results = Companies.all(params)
 
     socket
     |> assign(
-      companies: companies,
+      companies: results.entries,
       page: 1,
-      total_pages: companies.total_pages,
+      total_pages: results.total_pages,
       text: params["search"]["text"],
       industry_id: params["search"]["industry_id"],
       update: "replace"

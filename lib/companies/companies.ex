@@ -49,7 +49,7 @@ defmodule Companies.Companies do
 
   """
   def count do
-    length(@companies)
+    length(companies())
   end
 
   @doc """
@@ -66,11 +66,11 @@ defmodule Companies.Companies do
   ** (Ecto.NoResultsError)
 
   """
-  def get!(_id, _opts \\ []) do
-    %Company{}
+  def get!(id, _opts \\ []) do
+    Enum.find(companies(), &(&1.id == id))
   end
 
-  def get(_id, _opts \\ []) do
+  def get(id, _opts \\ []) do
     {:ok, %Company{}}
   end
 end

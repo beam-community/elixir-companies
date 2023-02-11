@@ -1,14 +1,14 @@
 defmodule Companies.Schema.Company do
   @moduledoc false
 
-  # @enforce_keys [:industries, :last_changed_on, :location, :name, :website]
+  # @enforce_keys [:industry, :last_changed_on, :location, :name, :website]
 
   defstruct [
     :blog,
     :description,
     :github,
     :id,
-    :industries,
+    :industry,
     :jobs,
     :last_changed_on,
     :location,
