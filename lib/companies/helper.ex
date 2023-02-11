@@ -1,4 +1,8 @@
 defmodule Companies.Helpers do
+  @moduledoc """
+  Helpers for working with our data sets
+  """
+
   def searched_list(list, _params) do
     list
   end
