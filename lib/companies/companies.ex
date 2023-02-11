@@ -69,8 +69,4 @@ defmodule Companies.Companies do
   def get!(id, _opts \\ []) do
     Enum.find(companies(), &(&1.id == id))
   end
-
-  def get(id, _opts \\ []) do
-    {:ok, %Company{}}
-  end
 end

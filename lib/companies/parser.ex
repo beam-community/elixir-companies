@@ -1,7 +1,9 @@
 defmodule Companies.Parser do
-  def parse(path, contents) do
-    dbg(path)
+  @moduledoc """
+  Custom NimblePublisher Parser for support *.exs files
+  """
 
+  def parse(path, contents) do
     id =
       path
       |> Path.rootname()
