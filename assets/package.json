@@ -9,10 +9,10 @@
     "bulma": "jgthms/bulma#master",
     "bulma-extensions": "^3.0.0",
     "diff": "^4.0.1",
-    "node-sass": "^4.10.0",
     "phoenix": "file:../deps/phoenix",
     "phoenix_html": "file:../deps/phoenix_html",
     "phoenix_live_view": "file:../deps/phoenix_live_view",
+    "sass": "^1.58.0",
     "sass-loader": "^7.1.0"
   },
   "devDependencies": {
