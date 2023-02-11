@@ -12,14 +12,14 @@ import css from "../css/app.scss";
 import "phoenix_html";
 import * as jsDiff from "diff";
 import { Socket } from "phoenix";
-import LiveSocket from "phoenix_live_view";
+import { LiveSocket } from "phoenix_live_view";
 import InfiniteScroll from "./infinite_scroll";
 // Import local files
 //
 // Local files can be imported directly using relative paths, for example:
 // import socket from "./socket"
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   let csrfToken = document
     .querySelector("meta[name='csrf-token']")
     .getAttribute("content");
@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", function() {
   // Check if there are any navbar burgers
   if ($navbarBurgers.length > 0) {
     // Add a click event on each of them
-    $navbarBurgers.forEach(function($el) {
-      $el.addEventListener("click", function() {
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener("click", function () {
         // Get the target from the "data-target" attribute
         var target = $el.dataset.target;
         var $target = document.getElementById(target);
@@ -54,21 +54,21 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  var toggleTabs = function(show, hide) {
+  var toggleTabs = function (show, hide) {
     document.querySelector(".tabs " + show).classList.add("is-active");
-    hide.forEach(function(clz) {
+    hide.forEach(function (clz) {
       document.querySelector(".tabs " + clz).classList.remove("is-active");
     });
   };
 
-  var toggleCode = function(show, hide) {
+  var toggleCode = function (show, hide) {
     document.querySelector(".box " + show).classList.remove("is-hidden");
-    hide.forEach(function(clz) {
+    hide.forEach(function (clz) {
       document.querySelector(".box " + clz).classList.add("is-hidden");
     });
   };
 
-  var changeTab = function(e) {
+  var changeTab = function (e) {
     switch (e.target.innerHTML.toLowerCase()) {
       case "diff":
         toggleTabs(".diff", [".original", ".changes"]);
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   if ($diff) {
     var tabLinks = document.querySelectorAll(".tabs a");
-    tabLinks.forEach(function(tab) {
+    tabLinks.forEach(function (tab) {
       tab.addEventListener("click", changeTab);
     });
 
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
       diff = jsDiff.diffChars(original, changes),
       fragment = document.createDocumentFragment();
 
-    diff.forEach(function(part) {
+    diff.forEach(function (part) {
       var backgroundColor;
       if (part.added) {
         backgroundColor = "#acf2bd";
@@ -127,8 +127,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   if ($companyTogglers) {
-    $companyTogglers.forEach(function(toggler) {
-      toggler.addEventListener("click", function() {
+    $companyTogglers.forEach(function (toggler) {
+      toggler.addEventListener("click", function () {
         toggler.parentElement.classList.toggle("show");
         $overlay.style.display = "block";
       });
@@ -138,8 +138,8 @@ document.addEventListener("DOMContentLoaded", function() {
   var $localeItems = document.querySelectorAll(".locales .dropdown-item");
 
   if ($localeItems) {
-    $localeItems.forEach(function(toggler) {
-      toggler.addEventListener("click", function(event) {
+    $localeItems.forEach(function (toggler) {
+      toggler.addEventListener("click", function (event) {
         event.preventDefault();
         var parts = window.location.href.split("/");
         parts[3] = toggler.dataset.locale;
