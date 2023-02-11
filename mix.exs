@@ -12,7 +12,11 @@ defmodule Companies.MixProject do
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [coveralls: :test, "coveralls.html": :test],
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      releases: releases(),
+      dialyzer: [
+        plt_add_apps: [:mix, :ex_unit]
+      ]
     ]
   end
 
@@ -23,6 +27,15 @@ defmodule Companies.MixProject do
     [
       mod: {Companies.Application, []},
       extra_applications: [:appsignal, :logger, :runtime_tools, :os_mon]
+    ]
+  end
+
+  def releases do
+    [
+      school_house: [
+        include_executables_for: [:unix],
+        cookie: "elixir-companies"
+      ]
     ]
   end
 
@@ -41,6 +54,7 @@ defmodule Companies.MixProject do
       {:html_sanitize_ex, "~> 1.4"},
       {:httpoison, "~> 1.6"},
       {:jason, "~> 1.1"},
+      {:libcluster, "~> 3.3"},
       {:live_dashboard_history, "~> 0.1"},
       {:nimble_publisher, "~> 0.1.3"},
       {:phoenix, "~> 1.5"},
@@ -56,6 +70,7 @@ defmodule Companies.MixProject do
       # Dev & Test
       {:credo, "~> 1.6.4", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
+      {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
       {:excoveralls, "~> 0.12", only: :test},
       {:floki, ">= 0.0.0", only: :test},
       {:phoenix_live_reload, "~> 1.2", only: :dev}
@@ -72,9 +87,16 @@ defmodule Companies.MixProject do
     [
       setup: ["deps.get", "cmd --cd assets npm install"],
       test: [
-        "format --check-formatted --check-equivalent --dry-run",
+        "format --check-formatted --dry-run",
         "compile --warnings-as-errors",
         "test"
+      ],
+      checks: ["format", "credo", "dialyzer"],
+      "assets.deploy": [
+        "cmd --cd assets npm run deploy",
+        "esbuild default --minify",
+        "cmd cp -r assets/static priv",
+        "phx.digest"
       ]
     ]
   end
