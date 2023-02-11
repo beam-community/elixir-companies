@@ -3,16 +3,16 @@ defmodule Companies.Parser do
     dbg(path)
 
     id =
-      path 
+      path
       |> Path.rootname()
       |> Path.split()
       |> List.last()
 
-    attrs = 
-    contents
-    |> Code.eval_string()
-    |> elem(0)
-    |> Map.put(:id, id)
+    attrs =
+      contents
+      |> Code.eval_string()
+      |> elem(0)
+      |> Map.put(:id, id)
 
     {attrs, ""}
   end

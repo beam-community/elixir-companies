@@ -3,7 +3,7 @@ defmodule Companies.Repo.Migrations.AddReviewerToPendingChange do
 
   def change do
     alter table(:pending_changes) do
-      add :reviewer_id, references(:users)
+      add(:reviewer_id, references(:users))
     end
   end
 end

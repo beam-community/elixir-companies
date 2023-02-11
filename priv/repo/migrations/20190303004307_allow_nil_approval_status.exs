@@ -3,7 +3,7 @@ defmodule Companies.Repo.Migrations.AllowNilApprovalStatus do
 
   def change do
     alter table(:pending_changes) do
-      modify :approved, :boolean, default: nil, null: true
+      modify(:approved, :boolean, default: nil, null: true)
     end
   end
 end

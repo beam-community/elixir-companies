@@ -1,7 +1,7 @@
 defmodule Companies.Schema.Company do
   @moduledoc false
 
-  #@enforce_keys [:industries, :last_changed_on, :location, :name, :website]
+  # @enforce_keys [:industries, :last_changed_on, :location, :name, :website]
 
   defstruct [
     :blog,
@@ -13,11 +13,10 @@ defmodule Companies.Schema.Company do
     :last_changed_on,
     :location,
     :name,
-    :website,
+    :website
   ]
 
   def build(_filename, attrs, _body) do
-    struct!(__MODULE__, Map.to_list(attrs) )
+    struct!(__MODULE__, Map.to_list(attrs))
   end
-
 end
