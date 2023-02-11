@@ -20,6 +20,8 @@ defmodule CompaniesWeb.ConnCase do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
+      import CompaniesWeb.ConnCase
+
       alias CompaniesWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
