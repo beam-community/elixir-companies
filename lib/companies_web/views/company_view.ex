@@ -3,17 +3,17 @@ defmodule CompaniesWeb.CompanyView do
 
   import Companies.URLSchemer
 
-  def hiring?(%{jobs: jobs}), do: length(jobs) > 0
+  def hiring?(_), do: false
 
   def hiring_ribbon(company), do: if(hiring?(company), do: "has-ribbon", else: "")
 
-  def industry_name(%{industry: %{name: industry_name}}), do: industry_name
+  def industry_name(%{industry: industry}), do: industry
 
   def link_title(url) do
     Regex.replace(~r/(http:\/\/|https:\/\/|www.)/i, url, "")
   end
 
-  def render("url.html", %{url: nil}), do: ""
+  def render("website.html", %{website: nil}), do: ""
   def render("blog.html", %{blog: nil}), do: ""
   def render("github.html", %{github: nil}), do: ""
   def render("location.html", %{location: nil}), do: ""
@@ -24,9 +24,6 @@ defmodule CompaniesWeb.CompanyView do
 
   def markdown_format(markdown) do
     markdown
-    |> Earmark.as_html!()
-    |> HtmlSanitizeEx.markdown_html()
-    |> Phoenix.HTML.raw()
   end
 
   def selected(_, ""), do: ""

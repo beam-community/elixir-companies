@@ -39,7 +39,7 @@
       <div id="company-index" class="columns is-mobile is-multiline" phx-update="<%= @update %>" data-page="<%= @page %>" phx-hook="InfiniteScroll">
         <%= for company <- @companies do %>
           <div id="company-<%= company.id %>" class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
-            <%= render "card.html", company: company, conn: @socket, user_id: @user_id %>
+            <%= render "card.html", company: company, conn: @socket %>
           </div>
         <% end %>
       </div> <!-- /columns -->
