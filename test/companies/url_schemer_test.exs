@@ -1,5 +1,5 @@
 defmodule Companies.URLSchemerTest do
-  use Companies.DataCase
+  use ExUnit.Case
 
   alias Companies.URLSchemer
 

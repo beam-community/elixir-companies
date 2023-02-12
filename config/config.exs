@@ -27,7 +27,7 @@ config :companies,
   site_data: %{
     name: "Elixir Companies"
   },
-  results_per_page: 16
+  companies_directory: "./priv/companies/**/*.exs"
 
 config :phoenix, :template_engines,
   eex: Appsignal.Phoenix.Template.EExEngine,

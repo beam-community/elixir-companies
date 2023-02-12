@@ -4,12 +4,11 @@ defmodule Companies.Companies do
   use NimblePublisher,
     as: :companies,
     build: Companies.Schema.Company,
-    from: Application.app_dir(:companies, "priv/companies/**/*.exs"),
+    from: Application.compile_env!(:companies, :companies_directory),
     highlighters: [],
     parser: Companies.Parser
 
   alias Companies.Helpers
-  alias Companies.Schema.Company
 
   def companies, do: @companies
 
@@ -35,6 +34,7 @@ defmodule Companies.Companies do
   two companies with the exact same time of insertion, they will be ordered with
   id next.
   """
+
   def recent do
     all()
   end
