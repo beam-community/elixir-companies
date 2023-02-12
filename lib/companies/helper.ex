@@ -3,6 +3,8 @@ defmodule Companies.Helpers do
   Helpers for working with our data sets
   """
 
+  @default_page_size "16"
+
   def searched_list(list, _params) do
     list
   end
@@ -17,14 +19,14 @@ defmodule Companies.Helpers do
     entries = Enum.slice(list, page * size - size, size)
 
     total_entries = length(list)
-    total_pages = total_entries / size
+    total_pages = ceil(total_entries / size)
 
     %{entries: entries, page_number: page, page_size: size, total_entries: total_entries, total_pages: total_pages}
   end
 
   defp pagination_params(params) do
     page = Map.get(params, "page", "1")
-    size = Map.get(params, "size", "50")
+    size = Map.get(params, "size", @default_page_size)
 
     {String.to_integer(page), String.to_integer(size)}
   end

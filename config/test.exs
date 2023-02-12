@@ -8,3 +8,6 @@ config :companies, CompaniesWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :info
+
+config :companies,
+  companies_directory: "./test/support/companies/**/*.exs"

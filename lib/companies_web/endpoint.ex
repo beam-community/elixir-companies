@@ -1,6 +1,5 @@
 defmodule CompaniesWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :companies
-  use Appsignal.Phoenix
 
   @session_options [store: :cookie, key: "_companies_key", signing_salt: "7TewWYSt"]
 
