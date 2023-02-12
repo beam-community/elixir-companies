@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Language: el\n"
-"Plural-Forms: nplurals=2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, elixir-format
 #: lib/companies_web/templates/company/recent.html.eex:19
