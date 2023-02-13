@@ -57,7 +57,7 @@ defmodule Companies.MixProject do
       {:libcluster, "~> 3.3"},
       {:live_dashboard_history, "~> 0.1"},
       {:nimble_publisher, "~> 0.1.3"},
-      {:phoenix, "~> 1.5"},
+      {:phoenix, "~> 1.6"},
       {:phoenix_html, "~> 3.2", override: true},
       {:phoenix_live_view, "~> 0.18"},
       {:phoenix_pubsub, "~> 2.1"},
@@ -73,7 +73,8 @@ defmodule Companies.MixProject do
       {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
       {:excoveralls, "~> 0.12", only: :test},
       {:floki, ">= 0.0.0", only: :test},
-      {:phoenix_live_reload, "~> 1.2", only: :dev}
+      {:phoenix_live_reload, "~> 1.2", only: :dev},
+      {:dart_sass, "~> 0.5", runtime: Mix.env() == :dev}
     ]
   end
 
@@ -85,7 +86,7 @@ defmodule Companies.MixProject do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
-      setup: ["deps.get", "cmd --cd assets npm install"],
+      setup: ["deps.get"],
       test: [
         "format --check-formatted --dry-run",
         "compile --warnings-as-errors",
@@ -93,9 +94,8 @@ defmodule Companies.MixProject do
       ],
       checks: ["format", "credo", "dialyzer"],
       "assets.deploy": [
-        "cmd --cd assets npm run deploy",
         "esbuild default --minify",
-        "cmd cp -r assets/static priv",
+        "sass default --no-source-map --style=compressed",
         "phx.digest"
       ]
     ]

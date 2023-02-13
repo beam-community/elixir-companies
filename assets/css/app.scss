@@ -21,7 +21,7 @@ $primary: $link;
 $footer-background-color: $link;
 $footer-padding: 2rem 1.5rem 2rem;
 
-@import "bulma";
+@import "../node_modules/bulma/bulma.sass";
 @import "libs/_mixins";
 @import "libs/_ribbon";
 @import "errors";

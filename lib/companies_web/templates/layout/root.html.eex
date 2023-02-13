@@ -14,7 +14,7 @@
     <meta name="msapplication-TileColor" content="#7C6E8A">
     <meta name="theme-color" content="#7C6E8A">
     <%= csrf_meta_tag() %>
-    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <link phx-track-static rel="stylesheet" href=<%= Routes.static_path(@conn, "/assets/app.css")%>/>
     <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
   </head>
   <body>
@@ -25,6 +25,6 @@
       <%= @inner_content %>
     </div>
     <%= render "footer.html", conn: @conn %>
-    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <script defer phx-track-static type="text/javascript" href=<%= Routes.static_path(@conn, "/assets/app.js")%></script>
   </body>
 </html>
