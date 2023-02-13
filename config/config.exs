@@ -39,11 +39,25 @@ config :live_dashboard_history, LiveDashboardHistory,
   buffer_size: 500
 
 config :esbuild,
-  version: "0.12.18",
+  version: "0.16.4",
   default: [
-    args: ~w(js/app.js --bundle --target=es2016 --outdir=../priv/static/assets),
+    args: [
+      "js/app.js",
+      "--bundle",
+      "--target=es2016",
+      "--outdir=../priv/static/assets",
+      "--external:/fonts/*",
+      "--external:/images/*"
+    ],
     cd: Path.expand("../assets", __DIR__),
     env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
+  ]
+
+config :dart_sass,
+  version: "1.54.5",
+  default: [
+    args: ~w(css/app.scss ../priv/static/assets/app.css),
+    cd: Path.expand("../assets", __DIR__)
   ]
 
 # Import environment specific config. This must remain at the bottom
