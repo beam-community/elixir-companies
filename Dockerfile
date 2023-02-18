@@ -13,8 +13,8 @@
 #   - Ex: hexpm/elixir:1.14.1-erlang-25.0-debian-bullseye-20210902-slim
 #
 ARG ELIXIR_VERSION=1.14.3
-ARG OTP_VERSION=25.2
-ARG DEBIAN_VERSION=bullseye-20210902-slim
+ARG OTP_VERSION=25.2.3
+ARG DEBIAN_VERSION=bullseye-20230202-slim
 
 ARG BUILDER_IMAGE="hexpm/elixir:${ELIXIR_VERSION}-erlang-${OTP_VERSION}-debian-${DEBIAN_VERSION}"
 ARG RUNNER_IMAGE="debian:${DEBIAN_VERSION}"
@@ -87,7 +87,7 @@ RUN chown nobody /app
 ENV MIX_ENV="prod"
 
 # Only copy the final release from the build stage
-COPY --from=builder --chown=nobody:root /app/_build/${MIX_ENV}/rel/companies ./
+COPY --from=builder --chown=nobody:root /app/_build/${MIX_ENV}/rel/web_app ./
 
 USER nobody
 

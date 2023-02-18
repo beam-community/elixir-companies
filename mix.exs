@@ -32,7 +32,7 @@ defmodule Companies.MixProject do
 
   def releases do
     [
-      school_house: [
+      web_app: [
         include_executables_for: [:unix],
         cookie: "elixir-companies"
       ]
