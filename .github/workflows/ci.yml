@@ -13,9 +13,7 @@ on:
 
 env:
   CACHE_VERSION: v1
-  ELIXIR_VERSION: '1.14.3'
   MIX_ENV: test
-  OTP_VERSION: '25.2.3'
 
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
@@ -38,8 +36,8 @@ jobs:
       - id: beam
         uses: erlef/setup-beam@v1
         with:
-          otp-version: ${{ env.OTP_VERSION }}
-          elixir-version: ${{ env.ELIXIR_VERSION }}
+          version-file: .tool-versions
+          version-type: strict
       - id: cache
         uses: actions/cache@v3
         with:
@@ -64,8 +62,8 @@ jobs:
       - id: beam
         uses: erlef/setup-beam@v1
         with:
-          otp-version: ${{ env.OTP_VERSION }}
-          elixir-version: ${{ env.ELIXIR_VERSION }}
+          version-file: .tool-versions
+          version-type: strict
       - id: cache
         uses: actions/cache@v3
         with:
@@ -116,8 +114,8 @@ jobs:
       - id: beam
         uses: erlef/setup-beam@v1
         with:
-          otp-version: ${{ env.OTP_VERSION }}
-          elixir-version: ${{ env.ELIXIR_VERSION }}
+          version-file: .tool-versions
+          version-type: strict
       - id: cache
         uses: actions/cache@v3
         with:
