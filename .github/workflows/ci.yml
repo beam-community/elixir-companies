@@ -13,9 +13,9 @@ on:
 
 env:
   CACHE_VERSION: v1
-  ELIXIR_VERSION: '1.14.1'
+  ELIXIR_VERSION: '1.14.3'
   MIX_ENV: test
-  OTP_VERSION: '25'
+  OTP_VERSION: '25.2.3'
 
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
