@@ -29,7 +29,7 @@ if config_env() == :prod do
       transport_options: [socket_opts: [:inet6]]
     ],
     secret_key_base: secret_key_base,
-    url: [scheme: "https", host: "#{app_name}.fly.dev", port: 443],
+    url: [scheme: "https", host: host, port: 443],
     live_view: [signing_salt: live_view_salt],
     server: true
 
