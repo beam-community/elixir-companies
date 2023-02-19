@@ -91,6 +91,7 @@ jobs:
         uses: erlef/setup-beam@v1
         with:
           version-file: .tool-versions
+          version-type: strict
       - id: cache
         uses: actions/cache@v3
         with:
