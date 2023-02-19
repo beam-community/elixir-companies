@@ -32,7 +32,7 @@ defmodule Companies.MixProject do
 
   def releases do
     [
-      web_app: [
+      companies: [
         include_executables_for: [:unix],
         cookie: "elixir-companies"
       ]

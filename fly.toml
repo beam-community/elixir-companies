@@ -7,7 +7,7 @@ processes = []
 
 [env]
   PHX_HOST = "elixir-companies.fly.dev"
-  PORT = "8080"
+  PORT = 8080
 
 [experimental]
   auto_rollback = true
