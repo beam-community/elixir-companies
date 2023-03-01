@@ -78,7 +78,6 @@ config/*.secret.exs
 **/[._]*.un~
 
 assets/node_modules
-priv/static
 # End of https://www.gitignore.io/api/elixir,osx,vim,linux
 
 # flyctl launch added from deps/earmark/lib/tools/.gitignore
