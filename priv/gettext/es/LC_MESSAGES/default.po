@@ -1,0 +1,365 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: es\n"
+"Plural-Forms: nplurals=2\n"
+
+#: lib/companies_web/templates/company/recent.html.eex:19
+#, elixir-format
+msgid "Add a company"
+msgstr "Agregar una empresa"
+
+#: lib/companies_web/templates/company/card.html.eex:58
+#: lib/companies_web/templates/company/show.html.eex:36
+#, elixir-format
+msgid "Add a job"
+msgstr "Agregar un trabajo"
+
+#: lib/companies_web/templates/layout/account.html.eex:15
+#, elixir-format
+msgid "Approvals"
+msgstr "Aprobaciones"
+
+#: lib/companies_web/templates/company/form.html.eex:77
+#, elixir-format, elixir-autogen
+msgid "Back"
+msgstr "Atrás"
+
+#: lib/companies_web/templates/company/card.html.eex:18
+#, elixir-format
+msgid "Edit"
+msgstr "Editar"
+
+#: lib/companies_web/templates/company/edit.html.eex:5
+#, elixir-format, elixir-autogen
+msgid "Edit Company"
+msgstr "Editar empresa"
+
+#: lib/companies_web/templates/job/edit.html.eex:5
+#, elixir-format
+msgid "Edit Job"
+msgstr "Editar trabajo"
+
+#: lib/companies_web/templates/company/hiring.html.eex:4
+#, elixir-format, elixir-autogen
+msgid "Hiring"
+msgstr "Contratación"
+
+#: lib/companies_web/templates/company/card.html.eex:5
+#, elixir-format, elixir-autogen
+msgid "Hiring!"
+msgstr "Contratación!"
+
+#: lib/companies_web/templates/error/404_page.html.eex:3
+#, elixir-format, elixir-autogen
+msgid "Looks like you are lost"
+msgstr "Parece que estás perdido"
+
+#: lib/companies_web/templates/layout/footer.html.eex:10
+#, elixir-format, elixir-autogen
+msgid "Made possible with support from"
+msgstr "Hecho posible gracias al apoyo de"
+
+#: lib/companies_web/templates/company/new.html.eex:5
+#, elixir-format, elixir-autogen
+msgid "New Company"
+msgstr "Nueva empresa"
+
+#: lib/companies_web/templates/job/new.html.eex:5
+#, elixir-format
+msgid "New Job"
+msgstr "Nuevo trabajo"
+
+#: lib/companies_web/templates/company/form.html.eex:4
+#, elixir-format, elixir-autogen
+msgid "Oops, something went wrong! Please check the errors below."
+msgstr "¡Vaya, algo salió mal! Por favor, compruebe los errores abajo."
+
+#: lib/companies_web/templates/company/recent.html.eex:20
+#, elixir-format, elixir-autogen
+msgid "Recent Additions"
+msgstr "Agregados recientemente"
+
+#: lib/companies_web/templates/company/form.html.eex:74
+#, elixir-format, elixir-autogen
+msgid "Save"
+msgstr "Guardar"
+
+#: lib/companies_web/templates/layout/account.html.eex:47
+#, elixir-format
+msgid "Sign in"
+msgstr "Iniciar sesión"
+
+#: lib/companies_web/templates/company/recent.html.eex:23
+#, elixir-format
+msgid "Sign in & list free"
+msgstr "Iniciar sesión y liste gratis"
+
+#: lib/companies_web/templates/layout/account.html.eex:38
+#, elixir-format
+msgid "Sign out"
+msgstr "Cerrar sesión"
+
+#: lib/companies_web/templates/company/recent.html.eex:9
+#, elixir-format, elixir-autogen
+msgid "With <span class='has-text-weight-semibold'>%{companies_count}</span> and counting..."
+msgstr "Con <span class='has-text-weight-semibold'>%{companies_count}</span> y contando..."
+
+#: lib/companies_web/helpers/site_helpers.ex:10
+#, elixir-format, elixir-autogen
+msgid "A collection of companies using Elixir in production."
+msgstr "Una colección de empresas que usan Elixir en producción."
+
+#: lib/companies_web/templates/layout/navbar.html.eex:17
+#, elixir-format, elixir-autogen
+msgid "Home"
+msgstr "Inicio"
+
+#: lib/companies_web/templates/company/form.html.eex:65
+#, elixir-format, elixir-autogen
+msgid "Blog website"
+msgstr "Sitio web del blog"
+
+#: lib/companies_web/templates/job/form.html.eex:9
+#: lib/companies_web/templates/job/index.html.eex:37
+#, elixir-format
+msgid "Company"
+msgstr "Empresa"
+
+#: lib/companies_web/templates/company/card.html.eex:21
+#, elixir-format
+msgid "Delete"
+msgstr "Borrar"
+
+#: lib/companies_web/templates/company/form.html.eex:26
+#, elixir-format, elixir-autogen
+msgid "Description"
+msgstr "Descripción"
+
+#: lib/companies_web/templates/company/form.html.eex:9
+#: lib/companies_web/templates/company/index.html.leex:20
+#, elixir-format, elixir-autogen
+msgid "Industry"
+msgstr "Industria"
+
+#: lib/companies_web/templates/company/form.html.eex:45
+#, elixir-format, elixir-autogen
+msgid "Location"
+msgstr "Localización"
+
+#: lib/companies_web/templates/company/form.html.eex:18
+#, elixir-format, elixir-autogen
+msgid "Name"
+msgstr "Nombre"
+
+#: lib/companies_web/templates/company/form.html.eex:54
+#, elixir-format, elixir-autogen
+msgid "Optional fields"
+msgstr "Campo opcionales"
+
+#: lib/companies_web/templates/job/index.html.eex:36
+#, elixir-format
+msgid "Title"
+msgstr "Título"
+
+#: lib/companies_web/templates/job/form.html.eex:23
+#, elixir-format
+msgid "URL"
+msgstr "URL"
+
+#: lib/companies_web/templates/company/form.html.eex:37
+#, elixir-format, elixir-autogen
+msgid "Website"
+msgstr "Sitio web"
+
+#: lib/companies_web/views/admin/pending_change_view.ex:19
+#, elixir-format
+msgid "Approved Change"
+msgstr "Cambio aprobado"
+
+#: lib/companies_web/templates/admin/pending_change/index.html.eex:24
+#: lib/companies_web/views/admin/pending_change_view.ex:22
+#, elixir-format
+msgid "Approved Changes"
+msgstr "Cambios aprobados"
+
+#: lib/companies_web/templates/company/recent.html.eex:29
+#, elixir-format, elixir-autogen
+msgid "Browse full list"
+msgstr "Busque la lista completa"
+
+#: lib/companies_web/templates/company/index.html.leex:4
+#: lib/companies_web/templates/layout/navbar.html.eex:18
+#, elixir-format, elixir-autogen
+msgid "Companies"
+msgstr "Compañías"
+
+#: lib/companies_web/templates/job/form.html.eex:15
+#, elixir-format
+msgid "Job Title"
+msgstr "Título del trabajo"
+
+#: lib/companies_web/templates/job/index.html.eex:3
+#: lib/companies_web/templates/layout/navbar.html.eex:19
+#, elixir-format
+msgid "Jobs"
+msgstr "Trabajos"
+
+#: lib/companies_web/templates/job/index.html.eex:38
+#, elixir-format
+msgid "Last update"
+msgstr "Última actualización"
+
+#: lib/companies_web/views/admin/pending_change_view.ex:18
+#, elixir-format
+msgid "Pending Change"
+msgstr "Cambio pendiente"
+
+#: lib/companies_web/templates/admin/pending_change/index.html.eex:16
+#: lib/companies_web/views/admin/pending_change_view.ex:24
+#, elixir-format
+msgid "Pending Changes"
+msgstr "Cambios pendientes"
+
+#: lib/companies_web/views/admin/pending_change_view.ex:20
+#, elixir-format
+msgid "Rejected Change"
+msgstr "Cambio rechazado"
+
+#: lib/companies_web/templates/admin/pending_change/index.html.eex:32
+#: lib/companies_web/views/admin/pending_change_view.ex:23
+#, elixir-format
+msgid "Rejected Changes"
+msgstr "Cambios rechazados"
+
+#: lib/companies_web/templates/job/index.html.eex:35
+#, elixir-format
+msgid "Remote"
+msgstr "Remoto"
+
+#: lib/companies_web/templates/job/index.html.eex:26
+#, elixir-format
+msgid "Search"
+msgstr "Busqueda"
+
+#: lib/companies_web/templates/company/form.html.eex:32
+#, elixir-format, elixir-autogen
+msgid "Styling with Markdown is supported"
+msgstr "El estilo con Markdown es compatible"
+
+#: lib/companies_web/templates/job/form.html.eex:35
+#, elixir-format
+msgid "This is a remote job"
+msgstr "Este es un trabajo remoto"
+
+#: lib/companies_web/templates/job/index.html.eex:40
+#, elixir-format
+msgid "Actions"
+msgstr "Acciones"
+
+#: lib/companies_web/templates/job/index.html.eex:51
+#: lib/companies_web/templates/user/for_hire.html.eex:14
+#, elixir-format
+msgid "Next"
+msgstr "Siguiente"
+
+#: lib/companies_web/templates/job/index.html.eex:51
+#: lib/companies_web/templates/user/for_hire.html.eex:14
+#, elixir-format
+msgid "Previous"
+msgstr "Anterior"
+
+#: lib/companies_web/templates/job/index.html.eex:20
+#, elixir-format
+msgid "Show only remote jobs"
+msgstr "Mostrar solo trabajos remotos"
+
+#: lib/companies_web/templates/company/index.html.leex:10
+#, elixir-format, elixir-autogen
+msgid "Text"
+msgstr "Texto"
+
+#: lib/companies_web/templates/layout/account.html.eex:6
+#, elixir-format
+msgid "Admin"
+msgstr "Administrador"
+
+#: lib/companies_web/templates/admin/user/index.html.leex:40
+#, elixir-format
+msgid "Admin Status"
+msgstr "Estatus de administrador"
+
+#: lib/companies_web/templates/user/form.html.eex:17
+#, elixir-format
+msgid "CV URL"
+msgstr "URL del curriculum"
+
+#: lib/companies_web/templates/user/profile.html.eex:71
+#, elixir-format
+msgid "Check my CV"
+msgstr "Chequee mi curriculum"
+
+#: lib/companies_web/templates/user/profile.html.eex:12
+#, elixir-format
+msgid "Contact Developer"
+msgstr "Contactar al desarrollador"
+
+#: lib/companies_web/templates/layout/account.html.eex:30
+#, elixir-format
+msgid "Dashboard"
+msgstr "Tablero"
+
+#: lib/companies_web/templates/layout/navbar.html.eex:20
+#: lib/companies_web/templates/user/for_hire.html.eex:4
+#, elixir-format
+msgid "Developers"
+msgstr "Desarrolladores"
+
+#: lib/companies_web/templates/user/edit.html.eex:5
+#: lib/companies_web/templates/user/profile.html.eex:10
+#, elixir-format
+msgid "Edit Profile"
+msgstr "Editar perfil"
+
+#: lib/companies_web/templates/user/form.html.eex:9
+#, elixir-format
+msgid "Interests"
+msgstr "Intereses"
+
+#: lib/companies_web/templates/user/form.html.eex:29
+#, elixir-format
+msgid "Looking for a job"
+msgstr "En busca de un trabajo"
+
+#: lib/companies_web/templates/layout/account.html.eex:22
+#, elixir-format
+msgid "Profile"
+msgstr "Perfil"
+
+#: lib/companies_web/templates/admin/user/index.html.leex:20
+#, elixir-format
+msgid "Show only admins"
+msgstr "Mostrar solo administradores"
+
+#: lib/companies_web/templates/admin/user/index.html.leex:3
+#: lib/companies_web/templates/layout/account.html.eex:14
+#, elixir-format
+msgid "Users"
+msgstr "Usuarios"
+
+#: lib/companies_web/controllers/admin/user_controller.ex:17
+#, elixir-format
+msgid "You can't change your own admin status"
+msgstr "No puedes cambiar tu propio estatus de administrador"
+
+#: lib/companies_web/templates/company/new.html.eex:6
+#, elixir-format, elixir-autogen
+msgid "Your company will appear in the list once your submission has been validated by the site admins."
+msgstr "Tu empresa aparecerá en la lista una vez que tu envío haya sido validado por los administradores del sitio."
