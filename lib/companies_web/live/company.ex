@@ -44,7 +44,7 @@ defmodule CompaniesWeb.CompanyLive do
     if last_page?(assigns) do
       {:noreply, socket}
     else
-      %{entries: entries} = Companies.all(%{"page" => page})
+      %{entries: entries} = Companies.all(%{"page" => "#{page}"})
 
       {:noreply,
        socket
