@@ -1,5 +1,5 @@
 %{
-  industry: "Healthcare",
+  industry: "Health Care",
   website: "https://www.hotdoc.com.au",
   github: "",
   location: %{

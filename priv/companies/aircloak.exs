@@ -1,5 +1,5 @@
 %{
-  industry: "Business Intelligence",
+  industry: "Technology",
   website: "https://aircloak.com/",
   github: "https://github.com/Aircloak",
   location: %{

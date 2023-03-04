@@ -1,5 +1,5 @@
 %{
-  industry: "Financial Technology",
+  industry: "Financials",
   website: "https://exeq.com",
   github: "https://github.com/exeqapp",
   location: %{

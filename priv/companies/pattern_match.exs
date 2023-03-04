@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "https://pattern-match.com",
   github: "https://github.com/patternmatch/",
   location: %{

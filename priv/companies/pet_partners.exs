@@ -1,5 +1,5 @@
 %{
-  industry: "Healthcare",
+  industry: "Health Care",
   website: "http://petpartnersusa.com",
   github: "https://github.com/petpartnersllc",
   location: %{

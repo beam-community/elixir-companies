@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "http://cobenian.com",
   github: "https://github.com/Cobenian",
   location: %{

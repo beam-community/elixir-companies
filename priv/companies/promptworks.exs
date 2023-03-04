@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "https://www.promptworks.com",
   github: "https://github.com/promptworks/",
   location: %{

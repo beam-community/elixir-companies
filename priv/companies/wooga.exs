@@ -1,5 +1,5 @@
 %{
-  industry: "Gaming",
+  industry: "Technology",
   website: "https://www.wooga.com/",
   github: "https://github.com/wooga",
   location: %{

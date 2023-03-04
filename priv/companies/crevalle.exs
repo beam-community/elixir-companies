@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "http://crevalle.io",
   github: "https://github.com/crevalle",
   location: %{

@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "https://www.grok-interactive.com",
   github: "https://github.com/GrokInteractive",
   location: %{

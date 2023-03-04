@@ -1,5 +1,5 @@
 %{
-  industry: "Healthcare",
+  industry: "Health Care",
   website: "https://futurepet.care",
   github: "https://github.com/futurepet",
   location: %{

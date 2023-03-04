@@ -1,5 +1,5 @@
 %{
-  industry: "Enterprise Software",
+  industry: "Technology",
   website: "https://www.lexmark.com",
   github: "https://github.com/OpenAperture",
   location: %{

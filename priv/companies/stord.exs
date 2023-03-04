@@ -1,5 +1,5 @@
 %{
-  industry: "Software",
+  industry: "Technology",
   website: "https://stord.com",
   github: "https://github.com/stordco",
   location: %{

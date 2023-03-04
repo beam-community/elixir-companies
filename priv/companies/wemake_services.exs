@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "http://wemake.services/",
   github: "https://github.com/wemake-services",
   location: %{

@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "https://smartlogic.io/",
   github: "https://github.com/smartlogic",
   location: %{

@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "https://www.mirego.com",
   github: "https://github.com/mirego",
   location: %{

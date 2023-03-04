@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "https://edenlab.com.ua/",
   github: "https://github.com/edenlabllc/",
   location: %{

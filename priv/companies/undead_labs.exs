@@ -1,5 +1,5 @@
 %{
-  industry: "Gaming",
+  industry: "Technology",
   website: "http://undeadlabs.com/",
   github: "https://github.com/undeadlabs",
   location: %{

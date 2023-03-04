@@ -1,5 +1,5 @@
 %{
-  industry: "Gaming",
+  industry: "Technology",
   website: "https://boldpoker.net",
   github: "",
   location: %{

@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "https://prograils.com",
   github: "https://github.com/prograils",
   location: %{

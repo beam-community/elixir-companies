@@ -1,5 +1,5 @@
 %{
-  industry: "Healthcare",
+  industry: "Health Care",
   website: "https://caredox.com",
   github: "https://github.com/motherknows",
   location: %{

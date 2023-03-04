@@ -1,5 +1,5 @@
 %{
-  industry: "Financial Technology",
+  industry: "Financials",
   website: "https://go.wepay.com",
   github: "https://github.com/wepay",
   location: %{

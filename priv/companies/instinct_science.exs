@@ -1,5 +1,5 @@
 %{
-  industry: "Healthcare",
+  industry: "Health Care",
   website: "https://instinct.vet/",
   github: "https://github.com/instinctscience",
   location: %{

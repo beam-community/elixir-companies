@@ -1,5 +1,5 @@
 %{
-  industry: "Healthcare",
+  industry: "Health Care",
   website: "https://www.ecaresoft.com",
   github: "https://github.com/ecaresoft",
   location: %{

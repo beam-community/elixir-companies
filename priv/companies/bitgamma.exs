@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "http://bitgamma.com",
   github: "https://github.com/bitgamma",
   location: %{

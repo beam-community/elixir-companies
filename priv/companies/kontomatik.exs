@@ -1,5 +1,5 @@
 %{
-  industry: "Financial Technology",
+  industry: "Financials",
   website: "https://kontomatik.com",
   github: "https://github.com/kontomatik",
   location: %{

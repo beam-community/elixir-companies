@@ -1,5 +1,5 @@
 %{
-  industry: "Financial Technology",
+  industry: "Financials",
   website: "https://resuelve.mx",
   github: "https://github.com/resuelve",
   location: %{

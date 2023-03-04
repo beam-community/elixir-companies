@@ -1,5 +1,5 @@
 %{
-  industry: "Financial Technology",
+  industry: "Financials",
   website: "https://www.circle.com/",
   github: "https://github.com/circlefin",
   location: %{

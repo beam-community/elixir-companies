@@ -1,5 +1,5 @@
 %{
-  industry: "Computer Software",
+  industry: "Technology",
   website: "https://timber.io",
   github: "https://github.com/timberio",
   location: %{

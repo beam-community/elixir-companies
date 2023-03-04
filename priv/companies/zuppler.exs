@@ -1,5 +1,5 @@
 %{
-  industry: "Online Ordering",
+  industry: "Technology",
   website: "http://www.zupplerworks.com/",
   github: "https://github.com/zuppler",
   location: %{

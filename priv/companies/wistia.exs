@@ -1,5 +1,5 @@
 %{
-  industry: "Computer Software",
+  industry: "Technology",
   website: "https://www.wistia.com",
   github: "https://github.com/wistia",
   location: %{

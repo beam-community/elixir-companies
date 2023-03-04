@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "https://hashrocket.com",
   github: "https://github.com/hashrocket",
   location: %{

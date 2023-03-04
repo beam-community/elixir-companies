@@ -1,5 +1,5 @@
 %{
-  industry: "Health/Fitness",
+  industry: "Health Care",
   website: "https://www.bookwell.com.au",
   github: "https://github.com/bookwell",
   location: %{

@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "http://toyrocketscience.com",
   github: "https://github.com/trsc",
   location: %{

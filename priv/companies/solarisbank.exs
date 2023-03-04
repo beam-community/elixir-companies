@@ -1,5 +1,5 @@
 %{
-  industry: "Financial Technology",
+  industry: "Financials",
   website: "https://www.solarisbank.de/",
   github: "https://github.com/solarisbank",
   location: %{

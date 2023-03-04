@@ -1,5 +1,5 @@
 %{
-  industry: "Enterprise Software",
+  industry: "Technology",
   website: "http://pagerduty.com",
   github: "https://github.com/PagerDuty",
   location: %{
