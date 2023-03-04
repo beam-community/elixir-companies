@@ -13,7 +13,7 @@ defmodule CompaniesWeb.CompanyController do
 
   def index(conn, params) do
     %{entries: companies} = Companies.all(params)
-    industries = Industries.for_select()
+    industries = Industries.all()
 
     :telemetry.execute(telemetry_event(), %{company_index: 1})
 

@@ -34,6 +34,6 @@ defmodule Companies.Industries do
   end
 
   def for_select do
-    []
+    all()
   end
 end

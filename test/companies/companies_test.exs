@@ -11,29 +11,21 @@ defmodule Companies.CompaniesTest do
       assert 2 == length(entries)
       assert [%{name: "ALPHA"}, %{name: "ZULU"}] = entries
     end
+
+    test "filters companies by industry" do
+      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"industry" => "Technology"}})
+    end
+
+    test "filters companies by text" do
+      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => "lp"}})
+    end
+
+    test "trims leading and trailing whitespace on text search" do
+      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => "alpha "}})
+      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " alpha"}})
+      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " alpha "}})
+    end
   end
-
-  # @test "filters companies by industry" do
-  #  assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"industry_id" => alpha.industry_id}})
-  # end
-
-  #    test "filters companies by text" do
-  #      insert(:company, name: "ZULU")
-  #      insert(:company, name: "BETA")
-  #      insert(:company, name: "ALPHA")
-  #
-  #      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => "lp"}})
-  #    end
-
-  #    test "trims leading and trailing whitespace on text search" do
-  #      insert(:company, name: "ZULU")
-  #      insert(:company, name: "BETA")
-  #      insert(:company, name: "ALPHA")
-  #
-  #      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => "alpha "}})
-  #      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " alpha"}})
-  #      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " alpha "}})
-  #    end
 
   #    test "filters companies by text (by location)" do
   #      insert(:company, name: "ZULU", location: "Australia")

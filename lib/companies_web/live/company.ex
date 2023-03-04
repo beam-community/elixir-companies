@@ -64,7 +64,7 @@ defmodule CompaniesWeb.CompanyLive do
       page: 1,
       total_pages: results.total_pages,
       text: params["search"]["text"],
-      industry_id: params["search"]["industry_id"],
+      industry: params["search"]["industry"],
       update: "replace"
     )
   end

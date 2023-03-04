@@ -22,9 +22,9 @@
                 <div class="select">
                   <select id="search[industry_id]" name="search[industry_id]">
                     <option value=""></option>
-                    <%= for {name, value} <- @industries do %>
-                      <option value="<%= value %>" <%= selected(value, @industry_id) %>>
-                        <%= name %>
+                    <%= for industry <- @industries do %>
+                      <option value="<%= industry %>" <%= selected(industry, @industry) %>>
+                        <%= industry %>
                       </option>
                     <% end %>
                   </select>

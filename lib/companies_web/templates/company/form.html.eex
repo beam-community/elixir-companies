@@ -9,7 +9,7 @@
     <%= label f, :industry_id, gettext("Industry"), class: "field" %>
     <div class="control">
       <span class="select">
-        <%= select f, :industry_id, select_industries(@industries) %>
+        <%= select f, :industry, @industries %>
       </span>
     </div>
   </div>

@@ -5,9 +5,19 @@ defmodule Companies.Helpers do
 
   @default_page_size "16"
 
-  def searched_list(list, _params) do
+  def searched_list(list, params) do
+    {name, industry} = search_params(params)
+
     list
+    |> filter_by_industry(industry)
+    |> filter_by_name(name)
   end
+
+  defp filter_by_industry(list, nil), do: list
+  defp filter_by_industry(list, industry), do: Enum.filter(list, &(&1.industry == industry))
+
+  defp filter_by_name(list, nil), do: list
+  defp filter_by_name(list, pattern), do: Enum.filter(list, &Regex.match?(pattern, &1.name))
 
   def sorted_list(list, params) do
     {field, direction} = sorting_params(params)
@@ -29,6 +39,25 @@ defmodule Companies.Helpers do
     size = Map.get(params, "size", @default_page_size)
 
     {String.to_integer(page), String.to_integer(size)}
+  end
+
+  defp search_params(params) do
+    search_params = Map.get(params, "search", %{})
+    industry = Map.get(search_params, "industry", nil)
+
+    text =
+      search_params
+      |> Map.get("text", "")
+      |> String.trim()
+
+    name =
+      case Regex.compile(text, "i") do
+        {:ok, ~r//} -> nil
+        {:ok, regex} -> regex
+        _ -> nil
+      end
+
+    {name, industry}
   end
 
   defp sorting_params(params) do
