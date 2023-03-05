@@ -1,5 +1,5 @@
 %{
-  industry: "Software",
+  industry: "Technology",
   website: "https://www.alpha.com",
   github: "https://github.com/alpha",
   location: %{
