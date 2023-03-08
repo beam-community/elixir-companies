@@ -25,6 +25,6 @@
       <%= @inner_content %>
     </div>
     <%= render "footer.html", conn: @conn %>
-    <script defer phx-track-static type="text/javascript" href=<%= Routes.static_path(@conn, "/assets/app.js")%></script>
+    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/assets/app.js") %>"></script>
   </body>
 </html>
