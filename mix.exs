@@ -86,7 +86,7 @@ defmodule Companies.MixProject do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
-      setup: ["deps.get"],
+      setup: ["deps.get", "cmd --cd assets npm install"],
       test: [
         "format --check-formatted --dry-run",
         "compile --warnings-as-errors",
