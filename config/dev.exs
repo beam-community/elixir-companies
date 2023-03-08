@@ -16,7 +16,15 @@ config :companies, CompaniesWeb.Endpoint,
       DartSass,
       :install_and_run,
       [:default, ~w(--embed-source-map --source-map-urls=absolute --watch)]
-    }
+    },
+    node: [
+      "node_modules/webpack/bin/webpack.js",
+      "--mode",
+      "development",
+      "--watch",
+      "--watch-options-stdin",
+      cd: Path.expand("../assets", __DIR__)
+    ]
   ]
 
 # ## SSL Support
