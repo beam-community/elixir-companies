@@ -1,4 +1,4 @@
-const SCROLL_AT = 20;
+const SCROLL_AT = 95;
 
 const scrollAt = () => {
   const scrollTop =
