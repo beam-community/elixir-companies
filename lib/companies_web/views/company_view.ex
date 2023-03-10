@@ -24,6 +24,8 @@ defmodule CompaniesWeb.CompanyView do
 
   def markdown_format(markdown) do
     markdown
+    |> Earmark.as_html!()
+    |> Phoenix.HTML.raw()
   end
 
   def selected(_, ""), do: ""
