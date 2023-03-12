@@ -16,11 +16,11 @@ defmodule ElixirCompaniesWeb.CompanyLive.Index do
         locale: session["locale"],
         text: "",
         selected_industry: "",
-        page: "1",
+        page: 1,
         update: "append"
       )
 
-    {:ok, socket, temporary_assigns: [companies: []]}
+    {:ok, get_companies(socket), temporary_assigns: [companies: []]}
   end
 
   @impl Phoenix.LiveView
