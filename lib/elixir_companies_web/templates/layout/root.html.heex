@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title><%= site_title() %></title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href={Routes.static_path(@conn, "/images/favicon/apple-touch-icon.png")}>
+    <link rel="icon" type="image/png" sizes="32x32" href={Routes.static_path(@conn, "/images/favicon/favicon-32x32.png")}>
+    <link rel="icon" type="image/png" sizes="16x16" href={Routes.static_path(@conn, "/images/favicon/favicon-16x16.png")}>
+    <link rel="manifest" href={Routes.static_path(@conn, "/images/favicon/site.webmanifest")}>
+    <link rel="mask-icon" href={Routes.static_path(@conn, "/images/favicon/safari-pinned-tab.svg")} color="#7C6E8A">
+    <meta name="msapplication-TileColor" content="#7C6E8A">
+    <meta name="theme-color" content="#7C6E8A">
+    <%= csrf_meta_tag() %>
+    <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css")} />
+    <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
+  </head>
+  <body>
+    <div id="overlay">
+    </div>
+    <div id="wrapper">
+      <%= render "navbar.html", conn: @conn %>
+      <%= @inner_content %>
+    </div>
+    <%= render "footer.html", conn: @conn %>
+    <script type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
+  </body>
+</html>

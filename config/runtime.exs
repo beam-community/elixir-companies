@@ -23,7 +23,7 @@ if config_env() == :prod do
       app_name -> "#{app_name}.fly.dev"
     end
 
-  config :companies, CompaniesWeb.Endpoint,
+  config :companies, ElixirCompaniesWeb.Endpoint,
     http: [
       port: String.to_integer(System.get_env("PORT", "8080")),
       transport_options: [socket_opts: [:inet6]]

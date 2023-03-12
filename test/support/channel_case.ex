@@ -1,4 +1,4 @@
-defmodule CompaniesWeb.ChannelCase do
+defmodule ElixirCompaniesWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -19,10 +19,10 @@ defmodule CompaniesWeb.ChannelCase do
     quote do
       # Import conveniences for testing with channels
       import Phoenix.ChannelTest
-      import CompaniesWeb.ChannelCase
+      import ElixirCompaniesWeb.ChannelCase
 
       # The default endpoint for testing
-      @endpoint CompaniesWeb.Endpoint
+      @endpoint ElixirCompaniesWeb.Endpoint
     end
   end
 end

@@ -1,7 +1,7 @@
-defmodule Companies.URLSchemerTest do
+defmodule ElixirCompanies.URLSchemerTest do
   use ExUnit.Case
 
-  alias Companies.URLSchemer
+  alias ElixirCompanies.URLSchemer
 
   test "url_with_scheme/1 returns the same url if it already has http" do
     url = "http://test.com"

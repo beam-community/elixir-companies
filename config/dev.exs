@@ -6,7 +6,7 @@ import Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :companies, CompaniesWeb.Endpoint,
+config :companies, ElixirCompaniesWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -17,15 +17,8 @@ config :companies, CompaniesWeb.Endpoint,
       :install_and_run,
       [:default, ~w(--embed-source-map --source-map-urls=absolute --watch)]
     },
-    node: [
-      "node_modules/webpack/bin/webpack.js",
-      "--mode",
-      "development",
-      "--watch",
-      "--watch-options-stdin",
-      cd: Path.expand("../assets", __DIR__)
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
     ]
-  ]
 
 # ## SSL Support
 #
@@ -52,7 +45,7 @@ config :companies, CompaniesWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :companies, CompaniesWeb.Endpoint,
+config :companies, ElixirCompaniesWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},

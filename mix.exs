@@ -1,4 +1,4 @@
-defmodule Companies.MixProject do
+defmodule ElixirCompanies.MixProject do
   use Mix.Project
 
   def project do
@@ -7,7 +7,7 @@ defmodule Companies.MixProject do
       version: "0.1.0",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
-      compilers: [:phoenix] ++ Mix.compilers(),
+      compilers: Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [coveralls: :test, "coveralls.html": :test],
@@ -25,7 +25,7 @@ defmodule Companies.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Companies.Application, []},
+      mod: {ElixirCompanies.Application, []},
       extra_applications: [:appsignal, :logger, :runtime_tools, :os_mon]
     ]
   end
@@ -59,6 +59,7 @@ defmodule Companies.MixProject do
       {:nimble_publisher, "~> 0.1.3"},
       {:phoenix, "~> 1.6"},
       {:phoenix_html, "~> 3.2", override: true},
+      {:phoenix_view, "~> 2.0"},
       {:phoenix_live_view, "~> 0.18"},
       {:phoenix_pubsub, "~> 2.1"},
       {:plug_cowboy, "~> 2.6"},

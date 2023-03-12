@@ -1,5 +1,5 @@
-defmodule CompaniesWeb.CompanyControllerTest do
-  use CompaniesWeb.ConnCase
+defmodule ElixirCompaniesWeb.CompanyControllerTest do
+  use ElixirCompaniesWeb.ConnCase
 
   @moduletag capture_log: true
 

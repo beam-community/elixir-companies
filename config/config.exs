@@ -8,11 +8,11 @@
 import Config
 
 # Configures the endpoint
-config :companies, CompaniesWeb.Endpoint,
+config :companies, ElixirCompaniesWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "cnFp+p3HcWa0ZaS5YhEfuJlU2PIxvUinNThsTSXm4ZE2M7D/zYzpfIJGMVNLHtqv",
-  render_errors: [view: CompaniesWeb.ErrorView, accepts: ~w(html json)],
-  pubsub_server: Companies.PubSub,
+  render_errors: [view: ElixirCompaniesWeb.ErrorView, accepts: ~w(html json)],
+  pubsub_server: ElixirCompanies.PubSub,
   live_view: [signing_salt: "IJL0bF+zIE2Ax4MFSi16HqrurNFhiYlD"]
 
 # Configures Elixir's Logger
@@ -34,8 +34,8 @@ config :phoenix, :template_engines,
   exs: Appsignal.Phoenix.Template.ExsEngine
 
 config :live_dashboard_history, LiveDashboardHistory,
-  router: CompaniesWeb.Router,
-  metrics: CompaniesWeb.Telemetry,
+  router: ElixirCompaniesWeb.Router,
+  metrics: ElixirCompaniesWeb.Telemetry,
   buffer_size: 500
 
 config :esbuild,

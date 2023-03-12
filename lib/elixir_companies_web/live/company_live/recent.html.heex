@@ -1,0 +1,40 @@
+<section class="hero is-primary is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="content">
+        <h1 class="title is-4 thin">
+          <%= site_description() %>
+        </h1>
+        <p>
+          <%= raw gettext(
+            "With <span class='has-text-weight-semibold'>%{companies_count}</span> and counting...",
+            companies_count: @companies_count) %>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="content">
+      <h1 class="title is-3 fancy"><%= gettext("Recent Additions") %></h1>
+      <div class="columns is-mobile is-multiline">
+        <%= for company <- @recent_companies do %>
+          <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
+            <.live_component
+              id={"company-#{company.name}"}
+              module={ElixirCompaniesWeb.CompanyLive.CompanyComponent}
+              company={company}
+              locale={@locale}
+              />
+          </div>
+        <% end %>
+      </div> <!-- /columns -->
+      <div class="container has-text-centered">
+        <.link href={"/companies"} class="button is-link">
+          <%= gettext("Browse full list") %>
+        </.link>
+      </div>
+    </div> <!-- /content -->
+  </div> <!-- /container -->
+</section>

@@ -2,7 +2,7 @@ import Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :companies, CompaniesWeb.Endpoint,
+config :companies, ElixirCompaniesWeb.Endpoint,
   http: [port: 4001],
   server: false
 

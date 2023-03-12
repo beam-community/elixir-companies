@@ -1,0 +1,51 @@
+<div class={"company box #{hiring_ribbon(@company)}"}>
+  <%= if hiring?(@company) do %>
+    <div class="ribbon is-warning corner-top-left-ribbon">
+      <span>
+        <b><%= gettext("Hiring!") %></b>
+      </span>
+    </div>
+  <% end %>
+  <div class="content has-text-centered">
+    <p class="title is-4 thin">
+      <.link href={"/#{@locale}/companies/#{@company.name}"}>
+        <%= @company.name %>
+      </.link>
+    </p>
+  </div>
+  <div class="content company-info has-text-left">
+    <p class="is-size-7">
+    <span class="icon purple"><i class="fas fa-fw fa-cogs"></i></span>
+    <%= industry_name(@company) %><br>
+
+    <%= if @company.website do %>
+      <span class="icon purple"><i class="fas fa-fw fa-globe"></i></span>
+      <.link href={url_with_scheme(@company.website)} target="_blank">
+        <%= link_title(@company.website) %>
+      </.link>
+    <% end %>
+
+    <%= if @company.blog do %>
+      <span class="icon purple"><i class="fas fa-fw fa-lightbulb"></i></span>
+      <.link href={@company.blog} target="_blank">
+        <%= link_title(@company.blog) %>
+      </.link>
+      <br>
+    <% end %>
+
+    <%= if @company.github do %>
+      <span class="icon purple"><i class="fab fa-fw fa-github"></i></span>
+      <.link href={@company.github} target="_blank">GitHub</.link>
+      <br>
+    <% end %>
+
+    <!-- TODO: Support more robust addressing -->
+    <%= if @company.location do %>
+      <span class="icon purple"><i class="fas fa-fw fa-location-arrow"></i></span> <%= @company.location.country %><br>
+    <% end %>
+    </p>
+  </div>
+  <div class="content company-description is-size-7 has-text-centered">
+    <%= markdown_format(@company.description) %>
+  </div>
+</div>

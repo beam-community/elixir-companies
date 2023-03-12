@@ -1,4 +1,4 @@
-defmodule CompaniesWeb.ConnCase do
+defmodule ElixirCompaniesWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -20,12 +20,12 @@ defmodule CompaniesWeb.ConnCase do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import CompaniesWeb.ConnCase
+      import ElixirCompaniesWeb.ConnCase
 
-      alias CompaniesWeb.Router.Helpers, as: Routes
+      alias ElixirCompaniesWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint CompaniesWeb.Endpoint
+      @endpoint ElixirCompaniesWeb.Endpoint
     end
   end
 

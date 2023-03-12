@@ -1,0 +1,31 @@
+<nav id="navbar" class="navbar has-shadow is-spaced">
+  <div class="container">
+    <div class="navbar-brand">
+      <.link href="/" class="navbar-item">
+        <%= img_tag Routes.static_path(@conn, "/images/elixircompanies_logo.png"), alt: "Elixir Companies logo" %>
+        &nbsp;
+        <h1 class="title is-5"><%= site_title() %></h1>
+      </.link>
+      <div id="navbarBurger" class="navbar-burger burger" data-target="navMain">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div> <!-- /navbarbrand -->
+    <div class="navbar-menu" id="navMain">
+      <div class="navbar-start">
+        <.link href="/" class="navbar-item">
+          <%= gettext("Home") %>
+        </.link>
+        <.link href="/companies" class="navbar-item">
+          <%= gettext("Companies") %>
+        </.link>
+      </div>
+      <div class="navbar-end">
+        <div class="field is-grouped">
+          <%= render "locales.html", conn: @conn %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
