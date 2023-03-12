@@ -1,4 +1,5 @@
 defmodule ElixirCompaniesWeb.SetLocalePlug do
+  @moduledoc false
   import Plug.Conn
 
   def init(opts), do: opts
