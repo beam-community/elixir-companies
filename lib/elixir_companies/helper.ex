@@ -5,30 +5,28 @@ defmodule ElixirCompanies.Helpers do
 
   @default_page_size "16"
 
-  def searched_list(list, %{"search" => search_params}) do
-    IO.inspect(search_params)
-
+  def searched_list(list, search_params) do
     Enum.reduce(search_params, list, fn
-      {"industry", ""}, list ->
+      {:industry, ""}, list ->
         list
 
-      {"industry", searched_industry}, list ->
+      {:industry, searched_industry}, list ->
         Enum.filter(list, fn %{industry: industry} -> industry == searched_industry end)
 
-      {"text", ""}, list ->
+      {:text, ""}, list ->
         list
 
-      {"text", text}, list ->
-        Enum.filter(list, fn %{name: name, description: description} ->
-          in_modified_text?(text, name) or in_modified_text?(text, description)
+      {:text, text}, list ->
+        Enum.filter(list, fn company ->
+          company
+          |> company_values()
+          |> Enum.any?(&in_modified_text?(&1, text))
         end)
 
       _, list ->
         list
     end)
   end
-
-  def searched_list(list, _), do: list
 
   def sorted_list(list, params) do
     {field, direction} = sorting_params(params)
@@ -46,10 +44,10 @@ defmodule ElixirCompanies.Helpers do
   end
 
   defp pagination_params(params) do
-    page = Map.get(params, "page", "1")
-    size = Map.get(params, "size", @default_page_size)
+    page = Map.get(params, :page, 1)
+    size = Map.get(params, :size, @default_page_size)
 
-    {String.to_integer(page), String.to_integer(size)}
+    {page, String.to_integer(size)}
   end
 
   defp sorting_params(params) do
@@ -61,7 +59,11 @@ defmodule ElixirCompanies.Helpers do
   defp sorting_direction(%{"order" => "desc"}), do: :desc
   defp sorting_direction(_params), do: :asc
 
-  defp in_modified_text?(text, field) do
+  defp company_values(%{name: name, description: description, location: %{city: city, state: state, country: country}}) do
+    [name, description, city, state, country]
+  end
+
+  defp in_modified_text?(field, text) do
     text = String.downcase(text)
     field = String.downcase(field)
 

@@ -16,13 +16,6 @@ defmodule ElixirCompaniesWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", ElixirCompaniesWeb do
-    pipe_through :browser
-
-    # Never called, required for set_locale and `/` redirect
-    get "/", CompanyController, :dummy
-  end
-
   scope "/:locale/", ElixirCompaniesWeb do
     pipe_through :browser
 

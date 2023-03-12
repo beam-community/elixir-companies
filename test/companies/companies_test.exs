@@ -14,42 +14,21 @@ defmodule ElixirCompanies.CompaniesTest do
   end
 
   test "filters companies by industry" do
-    assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"industry_id" => alpha.industry_id}})
+    assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{industry: "Software"})
   end
 
   test "filters companies by text" do
-    assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => "lp"}})
-  end
-
-  test "trims leading and trailing whitespace on text search" do
-    assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => "alpha "}})
-    assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " alpha"}})
-    assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " alpha "}})
+    assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{text: "lp"})
   end
 
   test "filters companies by text (by location)" do
-    assert %{entries: [%{name: "ALPHA"}, %{name: "ZULU"}]} = Companies.all(%{"search" => %{"text" => "aust"}})
-    assert %{entries: [%{name: "BETA"}]} = Companies.all(%{"search" => %{"text" => "zil"}})
-    assert %{entries: []} = Companies.all(%{"search" => %{"text" => "cana"}})
-  end
-
-  test "trims leading and trailing whitespace on text search (by location)" do
-    assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => "aus "}})
-    assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " australia"}})
-    assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " lia "}})
+    assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{text: "GA"})
+    assert %{entries: [%{name: "ZULU"}]} = Companies.all(%{text: "San"})
+    assert %{entries: []} = Companies.all(%{text: "cana"})
   end
 
   test "filters companies by text (by name and location)" do
-    assert %{entries: [%{name: "ALPHA"}, %{name: "AUSTO"}]} = Companies.all(%{"search" => %{"text" => "aust"}})
-  end
-
-  test "trims leading and trailing whitespace on text search (by name and location)" do
-    insert(:company, name: "AUSTO", location: "Canada")
-    insert(:company, name: "ALPHA", location: "Australia")
-
-    assert %{entries: [%{name: "ALPHA"}, %{name: "AUSTO"}]} = Companies.all(%{"search" => %{"text" => "aust "}})
-    assert %{entries: [%{name: "ALPHA"}, %{name: "AUSTO"}]} = Companies.all(%{"search" => %{"text" => " aust"}})
-    assert %{entries: [%{name: "ALPHA"}, %{name: "AUSTO"}]} = Companies.all(%{"search" => %{"text" => " aust "}})
+    assert %{entries: [%{name: "ALPHA"}, %{name: "ZULU"}]} = Companies.all(%{text: "a"})
   end
 
   describe "recent/1" do

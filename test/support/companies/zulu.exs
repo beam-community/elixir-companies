@@ -1,8 +1,9 @@
 %{
-  industry: "Software",
+  industry: "Utilities",
   website: "https://www.zulu.com",
   github: "https://github.com/zulu",
   location: %{
+    city: "San Francisco",
     state: "CA",
     country: "US"
   },

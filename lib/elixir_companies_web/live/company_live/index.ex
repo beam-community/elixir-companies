@@ -6,57 +6,62 @@ defmodule ElixirCompaniesWeb.CompanyLive.Index do
   alias ElixirCompanies.Companies
   alias ElixirCompanies.Industries
 
-  def mount(params, session, socket) do
+  @impl Phoenix.LiveView
+  def mount(_params, session, socket) do
     industries = Industries.all()
 
     socket =
-      socket
-      |> assign(industries: industries, locale: session["locale"], text: "", selected_industry: "")
-      |> search(params)
+      assign(socket,
+        industries: industries,
+        locale: session["locale"],
+        text: "",
+        selected_industry: "",
+        page: "1",
+        update: "append"
+      )
 
-    {:ok, socket, temporary_assigns: [companies: nil]}
+    {:ok, socket, temporary_assigns: [companies: []]}
   end
 
+  @impl Phoenix.LiveView
   def handle_event("search", params, %{assigns: _assigns} = socket) do
-    socket =
-      socket
-      |> search(params)
+    text = params["search"]["text"]
+    selected_industry = params["search"]["industry"]
 
-    {:noreply, socket}
+    socket =
+      assign(socket,
+        page: 1,
+        text: text,
+        selected_industry: selected_industry,
+        update: "replace"
+      )
+
+    {:noreply, get_companies(socket)}
   end
 
   def handle_event("load_more", _, %{assigns: assigns} = socket) do
-    page = assigns.page + 1
-
     if last_page?(assigns) do
       {:noreply, socket}
     else
-      %{entries: entries} = Companies.all(%{"page" => "#{page}"})
+      socket = assign(socket, page: socket.assigns.page + 1, update: "append")
 
-      {:noreply,
-       socket
-       |> assign(companies: entries)
-       |> assign(page: page)
-       |> assign(update: "append")}
+      {:noreply, get_companies(socket)}
     end
   end
 
-  defp search(socket, params) do
-    results = Companies.all(params)
+  defp get_companies(socket) do
+    params = %{
+      page: socket.assigns.page,
+      text: socket.assigns.text,
+      industry: socket.assigns.selected_industry
+    }
 
-    socket
-    |> assign(
-      companies: results.entries,
-      page: 1,
-      text: params["search"]["text"],
-      selected_industry: params["search"]["industry"],
-      total_pages: results.total_pages,
-      update: "replace"
-    )
+    %{entries: companies, total_pages: total_pages} = Companies.all(params)
+
+    assign(socket, companies: companies, total_pages: total_pages)
   end
 
   defp last_page?(assigns), do: assigns.page >= assigns.total_pages
 
-  def selected_industry_text(industry, industry), do: "selected"
-  def selected_industry_text(_, _), do: ""
+  defp selected_industry_text(selected_industry, industry), do: selected_industry == industry
 end

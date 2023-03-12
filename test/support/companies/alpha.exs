@@ -3,6 +3,7 @@
   website: "https://www.alpha.com",
   github: "https://github.com/alpha",
   location: %{
+    city: "Atlanta",
     state: "GA",
     country: "US"
   },

@@ -18,7 +18,7 @@ config :companies, ElixirCompaniesWeb.Endpoint,
       [:default, ~w(--embed-source-map --source-map-urls=absolute --watch)]
     },
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
-    ]
+  ]
 
 # ## SSL Support
 #

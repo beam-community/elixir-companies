@@ -67,6 +67,6 @@ defmodule ElixirCompanies.Companies do
 
   """
   def get!(name, _opts \\ []) do
-    Enum.find(companies(), &(&1.name == name))
+    Enum.find(companies(), &(String.downcase(&1.name) == String.downcase(name)))
   end
 end
