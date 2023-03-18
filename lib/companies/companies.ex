@@ -67,6 +67,7 @@ defmodule Companies.Companies do
 
   """
   def get!(id, _opts \\ []) do
-    Enum.find(companies(), &(&1.id == id))
+    slug_id = Slug.slugify(id)
+    Enum.find(companies(), &(&1.id == slug_id))
   end
 end
