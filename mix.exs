@@ -63,6 +63,7 @@ defmodule Companies.MixProject do
       {:phoenix_pubsub, "~> 2.1"},
       {:plug_cowboy, "~> 2.6"},
       {:set_locale, "~> 0.2"},
+      {:slugify, "~> 1.3.1"},
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},
       {:timex, "~> 3.6.1"},

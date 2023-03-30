@@ -9,6 +9,7 @@ defmodule Companies.Parser do
       |> Path.rootname()
       |> Path.split()
       |> List.last()
+      |> Slug.slugify()
 
     attrs =
       contents
