@@ -10,8 +10,9 @@ defmodule Companies.Helpers do
   end
 
   def sorted_list(list, params) do
-    {field, direction} = sorting_params(params)
-    Enum.sort_by(list, &Map.get(&1, field), direction)
+    params
+    |> sorting_params()
+    |> sort_by(list)
   end
 
   def paginated_list(list, params) do
@@ -31,12 +32,16 @@ defmodule Companies.Helpers do
     {String.to_integer(page), String.to_integer(size)}
   end
 
+  defp sort_by({:last_changed_on, direction}, list), do: Enum.sort_by(list, & &1.last_changed_on, {direction, Date})
+  defp sort_by({field, direction}, list), do: Enum.sort_by(list, &Map.get(&1, field), direction)
+
   defp sorting_params(params) do
-    field = Map.get(params, "sort", "dated_added")
+    field = Map.get(params, "sort", "name")
+
     direction = sorting_direction(params)
-    {field, direction}
+    {String.to_existing_atom(field), direction}
   end
 
-  defp sorting_direction(%{"order" => "asc"}), do: :asc
-  defp sorting_direction(_params), do: :desc
+  defp sorting_direction(%{"order" => "desc"}), do: :desc
+  defp sorting_direction(_params), do: :asc
 end
