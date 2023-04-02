@@ -37,6 +37,6 @@ defmodule Companies.Helpers do
     {field, direction}
   end
 
-  defp sorting_direction(%{"order" => "desc"}), do: :desc
-  defp sorting_direction(_params), do: :asc
+  defp sorting_direction(%{"order" => "asc"}), do: :asc
+  defp sorting_direction(_params), do: :desc
 end
