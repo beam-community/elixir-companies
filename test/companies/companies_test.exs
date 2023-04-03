@@ -13,69 +13,10 @@ defmodule Companies.CompaniesTest do
     end
   end
 
-  # @test "filters companies by industry" do
-  #  assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"industry_id" => alpha.industry_id}})
-  # end
-
-  #    test "filters companies by text" do
-  #      insert(:company, name: "ZULU")
-  #      insert(:company, name: "BETA")
-  #      insert(:company, name: "ALPHA")
-  #
-  #      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => "lp"}})
-  #    end
-
-  #    test "trims leading and trailing whitespace on text search" do
-  #      insert(:company, name: "ZULU")
-  #      insert(:company, name: "BETA")
-  #      insert(:company, name: "ALPHA")
-  #
-  #      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => "alpha "}})
-  #      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " alpha"}})
-  #      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " alpha "}})
-  #    end
-
-  #    test "filters companies by text (by location)" do
-  #      insert(:company, name: "ZULU", location: "Australia")
-  #      insert(:company, name: "BETA", location: "Brazil")
-  #      insert(:company, name: "ALPHA", location: "Australia")
-  #
-  #      assert %{entries: [%{name: "ALPHA"}, %{name: "ZULU"}]} = Companies.all(%{"search" => %{"text" => "aust"}})
-  #      assert %{entries: [%{name: "BETA"}]} = Companies.all(%{"search" => %{"text" => "zil"}})
-  #      assert %{entries: []} = Companies.all(%{"search" => %{"text" => "cana"}})
-  #    end
-
-  #    test "trims leading and trailing whitespace on text search (by location)" do
-  #      insert(:company, name: "ZULU", location: "Canada")
-  #      insert(:company, name: "BETA", location: "Brazil")
-  #      insert(:company, name: "ALPHA", location: "Australia")
-  #
-  #      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => "aus "}})
-  #      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " australia"}})
-  #      assert %{entries: [%{name: "ALPHA"}]} = Companies.all(%{"search" => %{"text" => " lia "}})
-  #    end
-  #
-  #    test "filters companies by text (by name and location)" do
-  #      insert(:company, name: "AUSTO", location: "Canada")
-  #      insert(:company, name: "ALPHA", location: "Australia")
-  #
-  #      assert %{entries: [%{name: "ALPHA"}, %{name: "AUSTO"}]} = Companies.all(%{"search" => %{"text" => "aust"}})
-  #    end
-  #
-  #    test "trims leading and trailing whitespace on text search (by name and location)" do
-  #      insert(:company, name: "AUSTO", location: "Canada")
-  #      insert(:company, name: "ALPHA", location: "Australia")
-  #
-  #      assert %{entries: [%{name: "ALPHA"}, %{name: "AUSTO"}]} = Companies.all(%{"search" => %{"text" => "aust "}})
-  #      assert %{entries: [%{name: "ALPHA"}, %{name: "AUSTO"}]} = Companies.all(%{"search" => %{"text" => " aust"}})
-  #      assert %{entries: [%{name: "ALPHA"}, %{name: "AUSTO"}]} = Companies.all(%{"search" => %{"text" => " aust "}})
-  #    end
-  #  end
-
   describe "recent/1" do
     test "retrieves a paginated list of companies sorted by inserted datetime (desc)" do
       assert %{entries: entries} = Companies.recent()
-      assert [%{name: "ALPHA"}, %{name: "ZULU"}] = entries
+      assert [%{name: "ZULU"}, %{name: "ALPHA"}] = entries
     end
   end
 
@@ -84,9 +25,9 @@ defmodule Companies.CompaniesTest do
       assert %{name: "ZULU"} = Companies.get!("zulu")
     end
 
-    # test "does not retrieve deleted record" do
-    #  assert_raise Ecto.NoResultsError, fn -> Companies.get!(company.id) end
-    # end
+    test "returns nil if company is missing" do
+      refute Companies.get!("beta")
+    end
   end
 
   describe "count/0" do

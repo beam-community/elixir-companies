@@ -36,7 +36,7 @@ defmodule Companies.Companies do
   """
 
   def recent do
-    all()
+    all(%{"sort" => "last_changed_on", "order" => "desc"})
   end
 
   @doc """
