@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "https://revelry.co",
   github: "https://github.com/revelrylabs",
   location: %{

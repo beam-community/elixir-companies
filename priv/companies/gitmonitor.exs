@@ -1,5 +1,5 @@
 %{
-  industry: "Computer Software",
+  industry: "Technology",
   website: "https://gitmonitor.com",
   github: "",
   location: %{

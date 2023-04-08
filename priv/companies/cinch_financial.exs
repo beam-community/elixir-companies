@@ -1,5 +1,5 @@
 %{
-  industry: "Financial Technology",
+  industry: "Financials",
   website: "https://www.cinchfinancial.com/",
   github: "https://github.com/cinch-financial",
   location: %{

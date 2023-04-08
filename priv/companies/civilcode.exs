@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "http://www.civilcode.io",
   github: "https://github.com/civilcode",
   location: %{

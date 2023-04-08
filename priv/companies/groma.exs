@@ -1,5 +1,5 @@
 %{
-  industry: "Enterprise Software",
+  industry: "Technology",
   website: "https://www.groma.si/en",
   github: "",
   location: %{

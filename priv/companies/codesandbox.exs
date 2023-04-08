@@ -1,5 +1,5 @@
 %{
-  industry: "Computer Software",
+  industry: "Technology",
   website: "https://codesandbox.io/",
   github: "https://github.com/CompuIves/codesandbox-client",
   location: %{

@@ -1,5 +1,5 @@
 %{
-  industry: "Healthcare",
+  industry: "Health Care",
   website: "https://ride-health.com",
   github: "",
   location: %{

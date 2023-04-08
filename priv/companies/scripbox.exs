@@ -1,5 +1,5 @@
 %{
-  industry: "Financial Technology",
+  industry: "Financials",
   website: "https://scripbox.com",
   github: "https://github.com/scripbox",
   location: %{

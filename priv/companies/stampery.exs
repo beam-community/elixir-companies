@@ -1,5 +1,5 @@
 %{
-  industry: "Enterprise Software",
+  industry: "Technology",
   website: "https://stampery.com",
   github: "https://github.com/stampery",
   location: %{

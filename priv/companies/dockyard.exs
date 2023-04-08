@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "https://dockyard.com",
   github: "https://github.com/dockyard",
   location: %{

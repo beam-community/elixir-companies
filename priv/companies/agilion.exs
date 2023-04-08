@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "https://www.agilion.com",
   github: "https://github.com/agilionapps",
   location: %{

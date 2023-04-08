@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "https://echobind.com/",
   github: "https://github.com/echobind/",
   location: %{

@@ -1,5 +1,5 @@
 %{
-  industry: "Enterprise Software",
+  industry: "Technology",
   website: "https://pivotal.io",
   github: "https://github.com/pivotal",
   location: %{

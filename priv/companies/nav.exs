@@ -1,5 +1,5 @@
 %{
-  industry: "Financial Technology",
+  industry: "Financials",
   website: "https://nav.com",
   github: "https://github.com/creditera",
   location: %{

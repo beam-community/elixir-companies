@@ -1,5 +1,5 @@
 %{
-  industry: "Enterprise Software",
+  industry: "Technology",
   website: "https://seeraerospace.com",
   github: "https://github.com/seeraerospace",
   location: %{

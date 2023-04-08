@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "https://www.erlang-solutions.com",
   github: "",
   location: %{

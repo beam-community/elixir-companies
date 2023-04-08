@@ -1,5 +1,5 @@
 %{
-  industry: "Healthcare",
+  industry: "Health Care",
   website: "http://www.scriptdrop.co/",
   github: "https://github.com/ScriptDrop",
   location: %{

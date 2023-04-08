@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "http://www.stridenyc.com/",
   github: "https://github.com/stride-nyc",
   location: %{

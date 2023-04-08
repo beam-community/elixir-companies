@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "https://alembic.com.au",
   github: "https://github.com/team-alembic",
   location: %{

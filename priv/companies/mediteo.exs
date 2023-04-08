@@ -1,5 +1,5 @@
 %{
-  industry: "Healthcare",
+  industry: "Health Care",
   website: "https://www.mediteo.com",
   github: "https://github.com/mediteo",
   location: %{

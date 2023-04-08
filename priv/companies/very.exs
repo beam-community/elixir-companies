@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "https://www.verypossible.com",
   github: "http://github.com/verypossible",
   location: %{

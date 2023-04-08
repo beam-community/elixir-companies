@@ -1,5 +1,5 @@
 %{
-  industry: "Health/Fitness",
+  industry: "Health Care",
   website: "https://www.helijia.com/",
   github: "https://github.com/helijia-web",
   location: %{

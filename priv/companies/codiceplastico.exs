@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "http://www.codiceplastico.com",
   github: "https://github.com/codiceplastico",
   location: %{

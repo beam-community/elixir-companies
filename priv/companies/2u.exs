@@ -1,5 +1,5 @@
 %{
-  industry: "Education Technology",
+  industry: "Technology",
   website: "https://2u.com",
   github: "https://github.com/2uinc",
   location: %{

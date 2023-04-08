@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "http://formulae.io",
   github: "https://github.com/formulaeio",
   location: %{

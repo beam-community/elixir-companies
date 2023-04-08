@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "http://bitcrowd.net",
   github: "https://github.com/bitcrowd",
   location: %{

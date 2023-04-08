@@ -1,5 +1,5 @@
 %{
-  industry: "Financial Technology",
+  industry: "Financials",
   website: "https://planswell.com/",
   github: "https://github.com/planswell",
   location: %{

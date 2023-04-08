@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "http://godynamo.com",
   github: "https://github.com/DynamoMTL",
   location: %{

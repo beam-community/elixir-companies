@@ -1,5 +1,5 @@
 %{
-  industry: "Enterprise Software",
+  industry: "Technology",
   website: "https://lob.com",
   github: "https://github.com/lob",
   location: %{

@@ -1,5 +1,5 @@
 %{
-  industry: "Financial Technology",
+  industry: "Financials",
   website: "https://margo.com",
   github: "",
   location: %{

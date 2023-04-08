@@ -1,5 +1,5 @@
 %{
-  industry: "Technology Consulting",
+  industry: "Technology",
   website: "https://www.codedge.io/",
   github: "https://github.com/codedge-llc",
   location: %{

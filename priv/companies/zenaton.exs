@@ -1,5 +1,5 @@
 %{
-  industry: "Computer Software/Engineering",
+  industry: "Technology",
   website: "https://zenaton.com/",
   github: "https://github.com/zenaton",
   location: %{

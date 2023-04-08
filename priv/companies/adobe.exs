@@ -1,5 +1,5 @@
 %{
-  industry: "Computer Software",
+  industry: "Technology",
   website: "https://www.adobe.com/",
   github: "https://github.com/adobe",
   location: %{

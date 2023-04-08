@@ -1,5 +1,5 @@
 %{
-  industry: "Computer Software",
+  industry: "Technology",
   website: "https://frame.io/",
   github: "https://github.com/frameio",
   location: %{

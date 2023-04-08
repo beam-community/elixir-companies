@@ -1,5 +1,5 @@
 %{
-  industry: "Business Intelligence",
+  industry: "Technology",
   website: "https://tsc.ai",
   github: "https://github.com/thestakeholdercompany",
   location: %{

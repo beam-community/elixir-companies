@@ -1,5 +1,5 @@
 %{
-  industry: "Enterprise Software",
+  industry: "Technology",
   website: "https://puppetlabs.com",
   github: "https://github.com/puppetlabs",
   location: %{

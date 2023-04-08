@@ -1,5 +1,5 @@
 %{
-  industry: "Healthcare",
+  industry: "Health Care",
   website: "https://www.babylonhealth.com",
   github: "https://github.com/Babylonpartners",
   location: %{
