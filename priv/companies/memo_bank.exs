@@ -1,14 +1,14 @@
 %{
   industry: "Financial Technology",
-  website: "https://margo.com",
-  github: "",
+  website: "https://memo.bank",
+  github: "https://github.com/memobank/",
   location: %{
     city: "Paris",
     state: "",
     country: "France"
   },
-  name: "Margo Bank",
-  last_changed_on: ~D[2023-03-01],
+  name: "Memo Bank",
+  last_changed_on: ~D[2023-08-23],
   description: """
   A Bank for Small and Medium Businesses. Elixir is used for the Core Banking System (CBS). Based in Paris, France.
   """
