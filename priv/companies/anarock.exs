@@ -1,6 +1,6 @@
 %{
   industry: "Real Estate",
-  website: "https://www.anarock.com",
+  website: "https://anarock.com/",
   github: "https://github.com/anarock",
   location: %{
     city: "Mumbai",

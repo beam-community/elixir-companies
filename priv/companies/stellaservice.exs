@@ -1,6 +1,6 @@
 %{
   industry: "Customer Service",
-  website: "https://stellaservice.com",
+  website: "https://stellaconnect.com/",
   github: "https://github.com/stellaservice",
   location: %{
     city: "NYC",
