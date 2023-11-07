@@ -5,8 +5,18 @@ defmodule Companies.Helpers do
 
   @default_page_size "16"
 
-  def searched_list(list, _params) do
-    list
+  def searched_list(list, params) do
+    search_param = params["search"]["text"]
+
+    if search_param do
+      list
+      |> Enum.filter(
+        &(String.contains?(String.downcase(&1.name), String.downcase(search_param)) or
+            String.contains?(String.downcase(&1.industry), String.downcase(search_param)))
+      )
+    else
+      list
+    end
   end
 
   def sorted_list(list, params) do
