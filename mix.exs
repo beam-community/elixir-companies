@@ -76,7 +76,7 @@ defmodule Companies.MixProject do
       {:floki, ">= 0.0.0", only: :test},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:dart_sass, "~> 0.5", runtime: Mix.env() == :dev},
-      {:parallel_stream, "~> 1.1", only: :dev}
+      {:parallel_stream, "~> 1.1", only: [:dev, :test]}
     ]
   end
 

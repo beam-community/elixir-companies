@@ -52,13 +52,11 @@ defmodule Mix.Tasks.Test.Websites do
   end
 
   defp check_company_website(%{website: website} = company, opts) do
-    cond do
-      is_nil(website) or "" == website ->
-        Logger.info("#{company.name} has no website")
-        {:error, company, :no_website}
-
-      true ->
-        check_website(company, opts)
+    if is_nil(website) or "" == website do
+      Logger.info("#{company.name} has no website")
+      {:error, company, :no_website}
+    else
+      check_website(company, opts)
     end
   end
 
@@ -94,7 +92,7 @@ defmodule Mix.Tasks.Test.Websites do
   end
 
   defp maybe_get_last_activity(company, opts) do
-    if(company.github != "" && Keyword.has_key?(opts, :github_token)) do
+    if company.github != "" && Keyword.has_key?(opts, :github_token) do
       github_org = company.github |> String.trim_trailing("/") |> String.split("/") |> List.last()
 
       Logger.debug("Getting activity for #{github_org}")
