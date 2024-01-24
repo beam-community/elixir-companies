@@ -1,7 +1,7 @@
 %{
   industry: "Technology Consulting",
   website: "https://www.erlang-solutions.com",
-  github: "",
+  github: "https://github.com/esl",
   location: %{
     city: "",
     state: "",
