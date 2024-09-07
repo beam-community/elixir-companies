@@ -1,7 +1,7 @@
 defmodule CompaniesWeb.SiteHelpers do
   @moduledoc false
 
-  import CompaniesWeb.Gettext
+  use Gettext, backend: CompaniesWeb.Gettext
 
   def query_params(%{query_params: %{"type" => type}}), do: [type: type]
   def query_params(%{query_params: %{"approved" => approved}}), do: [approved: approved]

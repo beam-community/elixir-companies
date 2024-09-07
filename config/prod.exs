@@ -11,7 +11,7 @@ import Config
 # before starting your production server.
 config :companies, CompaniesWeb.Endpoint,
   http: [:inet6, port: System.get_env("PORT") || 8080],
-  url: [scheme: "https", host: "elixir-companies.com"],
+  url: [scheme: "https", host: "bego-elixir-companies.fly.dev"],
   cache_static_manifest: "priv/static/cache_manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
