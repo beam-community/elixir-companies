@@ -70,7 +70,7 @@ defmodule Companies.MixProject do
       {:timex, "~> 3.6.1"},
 
       # Dev & Test
-      {:credo, "~> 1.6.4", only: [:dev, :test], runtime: false},
+      {:credo, "~> 1.7.7", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
       {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
       {:excoveralls, "~> 0.12", only: :test},
