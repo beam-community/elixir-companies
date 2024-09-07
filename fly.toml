@@ -1,12 +1,12 @@
 # fly.toml file generated for elixir-companies on 2023-02-11T18:27:42-05:00
 
-app = "bego-elixir-companies"
+app = "elixir-companies"
 kill_signal = "SIGTERM"
 kill_timeout = 5
 processes = []
 
 [env]
-  PHX_HOST = "bego-elixir-companies.fly.dev"
+  PHX_HOST = "elixir-companies.fly.dev"
   PORT = 8080
 
 [experimental]
