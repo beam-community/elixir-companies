@@ -20,10 +20,10 @@ defmodule CompaniesWeb do
   def controller do
     quote do
       use Phoenix.Controller, namespace: CompaniesWeb
+      use Gettext, backend: CompaniesWeb.Gettext
 
       import Phoenix.LiveView.Controller
       import Plug.Conn
-      import CompaniesWeb.Gettext
       import CompaniesWeb.UserHelpers
       import CompaniesWeb.LocaleHelpers
 
@@ -42,9 +42,9 @@ defmodule CompaniesWeb do
 
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
+      use Gettext, backend: CompaniesWeb.Gettext
 
       import CompaniesWeb.ErrorHelpers
-      import CompaniesWeb.Gettext
       import CompaniesWeb.SiteHelpers
       import CompaniesWeb.UserHelpers
       import CompaniesWeb.LocaleHelpers
@@ -66,7 +66,7 @@ defmodule CompaniesWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import CompaniesWeb.Gettext
+      use Gettext, backend: CompaniesWeb.Gettext
     end
   end
 

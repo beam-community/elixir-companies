@@ -78,13 +78,13 @@ defmodule Mix.Tasks.Test.Websites do
         Logger.info("No issues detected")
 
       errors ->
-        Logger.warn("There where #{length(errors)} unreachable websites:")
+        Logger.warning("There where #{length(errors)} unreachable websites:")
 
         errors
         |> Enum.each(fn {company, reason} ->
           last_activity = maybe_get_last_activity(company, opts)
 
-          Logger.warn(
+          Logger.warning(
             "#{company.name} (#{company.website}, #{company.github}#{last_activity}) is unreachable because #{inspect(reason)}"
           )
         end)

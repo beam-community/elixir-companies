@@ -5,9 +5,9 @@ defmodule Companies.MixProject do
     [
       app: :companies,
       version: "0.1.0",
-      elixir: "~> 1.14",
+      elixir: "~> 1.17",
       elixirc_paths: elixirc_paths(Mix.env()),
-      compilers: [:phoenix] ++ Mix.compilers(),
+      compilers: Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [coveralls: :test, "coveralls.html": :test],
@@ -52,7 +52,7 @@ defmodule Companies.MixProject do
       {:earmark, "~> 1.4"},
       {:gettext, "~> 0.22"},
       {:html_sanitize_ex, "~> 1.4"},
-      {:httpoison, "~> 1.6"},
+      {:httpoison, "~> 2.0"},
       {:jason, "~> 1.1"},
       {:libcluster, "~> 3.3"},
       {:live_dashboard_history, "~> 0.1"},
@@ -61,6 +61,7 @@ defmodule Companies.MixProject do
       {:phoenix_html, "~> 3.2", override: true},
       {:phoenix_live_view, "~> 0.18"},
       {:phoenix_pubsub, "~> 2.1"},
+      {:phoenix_view, "~> 2.0"},
       {:plug_cowboy, "~> 2.6"},
       {:set_locale, "~> 0.2"},
       {:slugify, "~> 1.3.1"},
@@ -69,7 +70,7 @@ defmodule Companies.MixProject do
       {:timex, "~> 3.6.1"},
 
       # Dev & Test
-      {:credo, "~> 1.6.4", only: [:dev, :test], runtime: false},
+      {:credo, "~> 1.7.7", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
       {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
       {:excoveralls, "~> 0.12", only: :test},
