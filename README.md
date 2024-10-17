@@ -1,6 +1,6 @@
 ![Elixir Companies](https://user-images.githubusercontent.com/73386/33328317-e6e58c6e-d416-11e7-9a16-b60700db0a51.png)
 
-![](https://github.com/beam-community/elixir-companies/workflows/.github/workflows/elixir.yml/badge.svg?branch=master)
+![main branch badge](https://github.com/beam-community/elixir-companies/actions/workflows/ci.yml/badge.svg?branch=main)
 
 # Elixir Companies
 
@@ -44,6 +44,7 @@ _Note_: If for some reason you reset the database on your machine, you will see 
 ## Localization
 
 In order to add a new language to the available list of locales, you have to do the following:
+
 - `mix gettext.extract` in order to extract all the latest gettext msgids from the code
 - `mix gettext.merge --priv/gettext` in order to merge the latest msgids with the locales.
 - `mix gettext.merge --priv/gettext --locale locale_code` in order the generate the files for the new locale.
