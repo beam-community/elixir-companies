@@ -8,38 +8,62 @@ A [collection of companies using Elixir](https://elixir-companies.com/) in produ
 
 Proudly built with [Phoenix](https://phoenixframework.org).
 
-### Adding a new company to the list
+### Adding a new company be showcased
 
-- Sign with your GitHub account.
-- Click on `Add a company` button and you will be redirected to a form.
-- Fill all required data about the company and submit it.
+- Fork the repo
+- Use the helper Mix task to generate the file:
+  ```sh
+  mix create_company_file {{ your company name }}
+  ```
 
-After that, the admin needs to validate the request.
+**-- OR --**
 
-With everything OK the company will be approved and will appear in companies list.
+- Add your company information to a new `/priv/companies/{{company_name}}.exs` in the following format:
 
-### Adding a new job opportunity for a company
+  ```elixir
+  # Company file for Acme Corp
+  # Created on: 2024-01-01
 
-Once your company is available on the list, you are able to add a new Job opportunity for the given company.
+  %{
+    name: "Acme Corp",
+    website: "https://example.com/",
+    github: "https://github.com/example/acme-corp",
+    # reference lib/companies/industries.ex for a list of recommended industries to use here
+    industry: "Technology",
+    location: %{
+      city: "City",
+      state: "State",
+      country: "Country"
+    },
+    description: """
+    Description of Acme Corp goes here.
+    """,
+    last_changed_on: ~D[2024-01-01]
+  }
+  ```
 
-- Sign with your GitHub account.
-- Click on `+ Add a Job` link and you will be redirected to a form.
-- Fill all required data about the company and submit it.
+- Create a pull request adding the new company file
 
 ## Development
 
-1. Install dependencies with `mix deps.get`
-1. Create and migrate your database with `mix ecto.setup`
-1. Install Node.js dependencies with `cd assets && npm install`
+1. Install current elixir, erlang and nodejs versions
+
+   1. This project uses [asdf](https://asdf-vm.com/) to manage the language versions of the project.
+   1. Follow the instructions on [asdf#getting-started](https://asdf-vm.com/guide/getting-started.html) to install asdf.
+   1. Once complete, run the following command to install the language versions:
+
+      ```sh
+      asdf install
+      ```
+
+   **-- OR --**
+
+   1. If you manage your language versions differently, please reference [~/.tool-versions](.tool-versions) for the specific versions to run the project.
+
+1. Install elixir and nodejs dependencies with `mix setup`
 1. Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-_Note_: You need to set up a [GitHub Application](https://developer.github.com/) and ensure `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET` are available to your application. The GitHub application needs its callback set to `http://localhost:4000/auth/github/callback` and be given read-only access to the email addresses of the user.
-
-_Note_: You need to have Postgres version 9.5+, due to our use of certain features that are fairly new (JSONB Data Type + ON CONFLICT query).
-
-_Note_: If for some reason you reset the database on your machine, you will see an error as the browser has cookies for a user that does not exist in the database. You will need to clear the cookies and site data for the page on your browser and refresh the page to remove the error.
 
 ## Localization
 
