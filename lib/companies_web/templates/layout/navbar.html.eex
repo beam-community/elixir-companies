@@ -18,6 +18,7 @@
         <%= link gettext("Companies"), to: Routes.live_path(@conn, CompaniesWeb.CompanyLive, locale(@conn)), class: "navbar-item" %>
       </div>
       <div class="navbar-end">
+        <%= link gettext("Add a company"), to: "https://github.com/beam-community/elixir-companies?tab=readme-ov-file", class: "button is-link mr-2" %>
         <div class="field is-grouped">
           <%= render "locales.html", conn: @conn %>
         </div>
