@@ -6,7 +6,7 @@ defmodule Mix.Tasks.CreateCompanyFile do
   @shortdoc "Creates a company file in the priv/companies directory"
 
   @moduledoc """
-  Scaffold company file in desired format to render by UI
+  Generate company file in desired location and structure to render in UI
 
     $ mix create_company_file Acme Corp
     $ mix create_company_file "Acme Corp"
