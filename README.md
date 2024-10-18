@@ -10,21 +10,25 @@ Proudly built with [Phoenix](https://phoenixframework.org).
 
 ### Adding a new company to the list
 
-- Sign with your GitHub account.
-- Click on `Add a company` button and you will be redirected to a form.
-- Fill all required data about the company and submit it.
+Add your company information to a new `/priv/companies/{{company}}.exs` in the following format:
 
-After that, the admin needs to validate the request.
-
-With everything OK the company will be approved and will appear in companies list.
-
-### Adding a new job opportunity for a company
-
-Once your company is available on the list, you are able to add a new Job opportunity for the given company.
-
-- Sign with your GitHub account.
-- Click on `+ Add a Job` link and you will be redirected to a form.
-- Fill all required data about the company and submit it.
+```elixir
+%{
+  name: "Elixir Companies",
+  website: "https://elixir-companies.com/",
+  github: "https://github.com/beam-community/elixir-companies",
+  industry: "Technology",
+  location: %{
+    city: "Atlanta",
+    state: "GA",
+    country: "USA"
+  },
+  description: """
+  Elixir Companies showcases all the companies that utilize elixir in their technology stack.
+  """,
+  last_changed_on: ~D[2024-01-01]
+}
+```
 
 ## Development
 
