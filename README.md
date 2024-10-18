@@ -11,25 +11,36 @@ Proudly built with [Phoenix](https://phoenixframework.org).
 ### Adding a new company be showcased
 
 - Fork the repo
-- Add your company information to a new `/priv/companies/{{company}}.exs` in the following format:
+- Use the helper Mix task to generate the file:
+  ```sh
+  mix create_company_file {{ your company name }}
+  ```
 
-```elixir
-%{
-  name: "Elixir Companies",
-  website: "https://elixir-companies.com/",
-  github: "https://github.com/beam-community/elixir-companies",
-  industry: "Technology",
-  location: %{
-    city: "Atlanta",
-    state: "GA",
-    country: "USA"
-  },
-  description: """
-  Elixir Companies showcases all the companies that utilize elixir in their technology stack.
-  """,
-  last_changed_on: ~D[2024-01-01]
-}
-```
+**-- OR --**
+
+- Add your company information to a new `/priv/companies/{{company_name}}.exs` in the following format:
+
+  ```elixir
+  # Company file for Acme Corp
+  # Created on: 2024-01-01
+
+  %{
+    name: "Acme Corp",
+    website: "https://example.com/",
+    github: "https://github.com/example/acme-corp",
+    # reference lib/companies/industries.ex for a list of recommended industries to use here
+    industry: "Technology",
+    location: %{
+      city: "City",
+      state: "State",
+      country: "Country"
+    },
+    description: """
+    Description of Acme Corp goes here.
+    """,
+    last_changed_on: ~D[2024-01-01]
+  }
+  ```
 
 - Create a pull request adding the new company file
 
@@ -41,11 +52,11 @@ Proudly built with [Phoenix](https://phoenixframework.org).
    1. Follow the instructions on [asdf#getting-started](https://asdf-vm.com/guide/getting-started.html) to install asdf.
    1. Once complete, run the following command to install the language versions:
 
-   ```sh
-   asdf install
-   ```
+      ```sh
+      asdf install
+      ```
 
-   -- OR --
+   **-- OR --**
 
    1. If you manage your language versions differently, please reference [~/.tool-versions](.tool-versions) for the specific versions to run the project.
 
