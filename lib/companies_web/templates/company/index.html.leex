@@ -5,17 +5,17 @@
     <div class="tabs is-centered">
       <%= form_tag "#", method: "get", phx_change: :search  %>
         <div class="columns is-desktop">
-          <div class="column is-one-third-desktop">
+          <div class="column">
             <div class="field">
               <label class="field" for="search[text]"><%= gettext("Text") %></label>
               <div class="control">
                 <div class="text">
-                  <input name="search[text]" id="search[text]" class="input" type="text" placeholder="Name or location" value="<%= @text %>"/>
+                  <input name="search[text]" id="search[text]" class="input" type="text" placeholder="Name or Industry" value="<%= @text %>"/>
                 </div>
               </div>
             </div>
           </div>
-          <div class="column">
+          <!-- <div class="column">
             <div class="field">
               <label class="field" for="search[industry_id]"><%= gettext("Industry") %></label>
               <div class="control">
@@ -31,7 +31,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </form>
     </div>
