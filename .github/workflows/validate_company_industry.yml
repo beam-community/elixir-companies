@@ -1,0 +1,45 @@
+name: Validate Company Industry
+
+on:
+  pull_request:
+    paths:
+      - "priv/companies/*.exs" # only run on changes to company files
+
+jobs:
+  validate_struct:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - id: beam
+        uses: erlef/setup-beam@v1
+        with:
+          version-file: .tool-versions
+          version-type: strict
+      - id: cache
+        uses: actions/cache@v3
+        with:
+          key: |
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-credo-${{ hashFiles('mix.lock') }}-${{ github.ref }}
+          restore-keys: |
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-credo-${{ hashFiles('mix.lock') }}-${{ format('refs/heads/{0}', github.event.repository.default_branch) }}
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-credo-
+            ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-
+          path: |
+            _build
+            deps
+      - if: steps.cache.outputs.cache-hit != 'true'
+        run: mix deps.get
+
+      - name: Get changed files
+        id: changed_files
+        run: |
+          echo "::set-output name=files::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})"
+
+      - name: Run validation
+        run: |
+          for file in ${{ steps.changed_files.outputs.files }}; do
+            if [[ $file == *.exs ]]; then
+              mix validate_company_file $file
+            fi
+          done
