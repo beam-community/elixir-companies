@@ -2,8 +2,8 @@ defmodule Companies.Industries do
   @moduledoc """
   The Industries context.
 
-  Derived from the 11 sectors of the Stock Market
-  https://www.nasdaq.com/articles/the-11-sectors-of-the-stock-market-their-biggest-etfs-2021-05-30
+  Pulled from the Global Industry Classification Standard (GICS)
+  https://www.msci.com/our-solutions/indexes/gics
   """
 
   @industries [
@@ -14,9 +14,9 @@ defmodule Companies.Industries do
     "Financials",
     "Health Care",
     "Industrials",
+    "Information Technology",
     "Materials",
     "Real Estate",
-    "Technology",
     "Utilities"
   ]
 

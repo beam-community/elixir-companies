@@ -5,7 +5,7 @@ defmodule Schema.CompanyTest do
 
   describe "validate_industries/1" do
     test "returns bool" do
-      assert Company.validate_industries(%Company{industry: "Technology"})
+      assert Company.validate_industries(%Company{industry: "Information Technology"})
       refute Company.validate_industries(%Company{industry: "Non-existant"})
     end
   end
