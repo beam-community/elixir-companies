@@ -4,6 +4,16 @@ defmodule Mix.Tasks.ValidateCompanyFile do
   alias Companies.Industries
   alias Companies.Schema.Company
 
+  @moduledoc """
+  Validates a filepath to a company.
+
+      $ mix validate_company_file priv/companies/abc.exs
+
+  This is to help with data consistency.
+  """
+
+  @impl Mix.Task
+  @doc false
   def run([file_path]) do
     case File.read(file_path) do
       {:ok, content} ->
