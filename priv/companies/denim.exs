@@ -13,7 +13,7 @@
     country: "USA"
   },
   description: """
-  Denim is reimagining traditional freight factoring. Our platform enables clients to manage their financing options, monetize working capital, and automate your back-office operations. Fully remote team.
+  Denim is reimagining traditional freight factoring. Our platform enables clients to manage their financing options, monetize working capital, and automate your back-office operations. Fully remote team, entire backend is Elixir/Phoenix, lots of OTP and Commanded/CQRS patterns.
   """,
   last_changed_on: ~D[2024-10-28]
 }
