@@ -8,7 +8,7 @@
   # reference lib/companies/industries.ex for a list of recommended industries to use here
   industry: "Financials",
   location: %{
-    city: "New York City (and Remote)",
+    city: "New York",
     state: "NY",
     country: "USA"
   },
