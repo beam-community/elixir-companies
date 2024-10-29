@@ -71,13 +71,14 @@ defmodule Companies.MixProject do
 
       # Dev & Test
       {:credo, "~> 1.7.7", only: [:dev, :test], runtime: false},
+      {:dart_sass, "~> 0.5", runtime: Mix.env() == :dev},
       {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
+      {:ecto, "~> 3.12", only: [:dev, :test]},
       {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
       {:excoveralls, "~> 0.12", only: :test},
       {:floki, ">= 0.0.0", only: :test},
-      {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:dart_sass, "~> 0.5", runtime: Mix.env() == :dev},
-      {:parallel_stream, "~> 1.1", only: [:dev, :test]}
+      {:parallel_stream, "~> 1.1", only: [:dev, :test]},
+      {:phoenix_live_reload, "~> 1.2", only: :dev}
     ]
   end
 
