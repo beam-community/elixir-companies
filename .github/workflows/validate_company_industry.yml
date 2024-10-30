@@ -34,7 +34,7 @@ jobs:
       - name: Get changed files
         id: changed_files
         run: |
-          echo "files::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})" >> $GITHUB_OUTPUT
+          echo "files=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})" >> $GITHUB_OUTPUT
 
       - name: Run validation
         run: |
