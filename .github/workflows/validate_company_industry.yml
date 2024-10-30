@@ -33,19 +33,15 @@ jobs:
       - if: steps.cache.outputs.cache-hit != 'true'
         run: mix deps.get
 
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
+      # - name: Dump GitHub context
+      #   env:
+      #     GITHUB_CONTEXT: ${{ toJSON(github) }}
+      #   run: echo "$GITHUB_CONTEXT"
 
       - name: Get changed files
         id: changed_files
         run: |
-          changed_files=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
-          if [ $? -ne 0 ]; then
-            echo "Error: git diff failed. Please check the commit history." >&2
-            exit 1
-          fi
+          changed_files=$(git log --name-only $(git merge-base main HEAD)..HEAD | grep priv/companies/)
           echo "files=${changed_files}" >> $GITHUB_OUTPUT
 
       - name: Run validation
