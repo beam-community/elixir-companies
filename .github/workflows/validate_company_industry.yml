@@ -31,6 +31,11 @@ jobs:
       - if: steps.cache.outputs.cache-hit != 'true'
         run: mix deps.get
 
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CONTEXT"
+
       - name: Get changed files
         id: changed_files
         run: |
