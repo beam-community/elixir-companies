@@ -2,8 +2,6 @@ name: Validate Company Industry
 
 on:
   pull_request:
-    paths:
-      - "priv/companies/*.exs" # only run on changes to company files
 
 jobs:
   validate_struct:
@@ -11,14 +9,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      # - name: Take ownership of the checkout directory (Git CVE-2022-24765)
-      #   run: chown --recursive --reference=/ .
-
-      # - name: Allow for file ownership conflicts with Docker and GitHub Actions
-      #   run: git config --global --add safe.directory '*'
 
       - id: beam
         uses: erlef/setup-beam@v1
