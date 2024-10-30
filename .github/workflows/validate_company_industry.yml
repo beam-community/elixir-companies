@@ -41,9 +41,9 @@ jobs:
       - name: Get changed files
         id: changed_files
         run: |
-          set -e  # Exit immediately if any command fails
+          set -e
           changed_files=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
-          echo "files=$changed_files" >> $GITHUB_OUTPUT
+          echo "files=${changed_files}" >> $GITHUB_OUTPUT
 
       - name: Run validation
         run: |
