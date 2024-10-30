@@ -41,8 +41,11 @@ jobs:
       - name: Get changed files
         id: changed_files
         run: |
-          set -e
           changed_files=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
+          if [ $? -ne 0 ]; then
+            echo "Error: git diff failed. Please check the commit history." >&2
+            exit 1
+          fi
           echo "files=${changed_files}" >> $GITHUB_OUTPUT
 
       - name: Run validation
