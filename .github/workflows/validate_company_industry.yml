@@ -11,6 +11,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - id: beam
         uses: erlef/setup-beam@v1
         with:
@@ -39,7 +41,9 @@ jobs:
       - name: Get changed files
         id: changed_files
         run: |
-          echo "files=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})" >> $GITHUB_OUTPUT
+          set -e  # Exit immediately if any command fails
+          changed_files=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
+          echo "files=$changed_files" >> $GITHUB_OUTPUT
 
       - name: Run validation
         run: |
