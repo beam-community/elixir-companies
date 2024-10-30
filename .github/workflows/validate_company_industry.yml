@@ -14,11 +14,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Take ownership of the checkout directory (Git CVE-2022-24765)
-        run: chown --recursive --reference=/ .
+      # - name: Take ownership of the checkout directory (Git CVE-2022-24765)
+      #   run: chown --recursive --reference=/ .
 
-      - name: Allow for file ownership conflicts with Docker and GitHub Actions
-        run: git config --global --add safe.directory '*'
+      # - name: Allow for file ownership conflicts with Docker and GitHub Actions
+      #   run: git config --global --add safe.directory '*'
 
       - id: beam
         uses: erlef/setup-beam@v1
@@ -43,7 +43,7 @@ jobs:
       - name: Get changed files
         id: changed_files
         run: |
-          changed_files=$(git log --name-only $(git merge-base main HEAD)..HEAD | grep priv/companies/)
+          changed_files=$(git log --name-only $(git merge-base origin/main HEAD)..HEAD | grep priv/companies/)
           echo "files=${changed_files}" >> $GITHUB_OUTPUT
 
       - name: Run validation
