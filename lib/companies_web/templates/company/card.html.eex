@@ -12,7 +12,7 @@
   <div class="content company-info has-text-left">
     <p class="is-size-7">
     <span class="icon purple"><i class="fas fa-fw fa-cogs"></i></span>
-    <%= industry_name(@company) %><br>
+    <%= link industry_name(@company), to: Routes.live_path(@conn, CompaniesWeb.CompanyLive, locale(@conn), [_target: ["search", "text"], search: [text: industry_name(@company)]]) %><br>
 
     <%= if @company.website do %>
       <span class="icon purple"><i class="fas fa-fw fa-globe"></i></span>
