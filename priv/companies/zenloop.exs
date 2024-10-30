@@ -1,5 +1,5 @@
 %{
-  industry: "Customer Service",
+  industry: "Customer Service - test",
   website: "http://www.zenloop.com/",
   github: "https://github.com/zenloopGmbH/",
   location: %{
