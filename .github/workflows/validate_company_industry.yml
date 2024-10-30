@@ -39,7 +39,7 @@ jobs:
       - name: Get changed files
         id: changed_files
         run: |
-          echo "files=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }})" >> $GITHUB_OUTPUT
+          echo "files=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.head.sha }})" >> $GITHUB_OUTPUT
 
       - name: Run validation
         run: |
