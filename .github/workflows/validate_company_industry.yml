@@ -38,12 +38,16 @@ jobs:
         id: changed_files
         run: |
           changed_files=$(git log --name-only $(git merge-base origin/main HEAD)..HEAD | grep priv/companies/ | uniq)
-          echo "files=${changed_files}" >> $GITHUB_OUTPUT
+          # Convert newline-separated list to a comma-separated string
+          changed_files=$(echo "$changed_files" | tr '\n' ',')
+          # Remove the trailing comma before assigning to GITHUB_OUTPUT
+          echo "files=${changed_files%,}" >> $GITHUB_OUTPUT
 
-      - name: Run validation
+      - name: Validate Company
         run: |
-          for file in ${{ steps.changed_files.outputs.files }}; do
+          IFS=',' read -r -a files <<< "${{ steps.changed_files.outputs.files }}"
+          for file in "${files[@]}"; do
             if [[ $file == *.exs ]]; then
-              mix validate_company_file $file
+              mix validate_company_file "$file"
             fi
           done
