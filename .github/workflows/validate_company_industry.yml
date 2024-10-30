@@ -37,7 +37,7 @@ jobs:
       - name: Get changed files
         id: changed_files
         run: |
-          changed_files=$(git log --name-only $(git merge-base origin/main HEAD)..HEAD | grep priv/companies/)
+          changed_files=$(git log --name-only $(git merge-base origin/main HEAD)..HEAD | grep priv/companies/ | uniq)
           echo "files=${changed_files}" >> $GITHUB_OUTPUT
 
       - name: Run validation
