@@ -1,5 +1,5 @@
 %{
-  industry: "Financial Technology",
+  industry: "Financial Technology-test",
   website: "https://www.zipbooks.com",
   github: "https://github.com/zipbooks",
   location: %{
