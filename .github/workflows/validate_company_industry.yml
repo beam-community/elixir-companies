@@ -38,8 +38,7 @@ jobs:
         id: changed-company-files
         uses: tj-actions/changed-files@v45
         with:
-          files: |
-            priv/companies/**.exs
+          files: priv/companies/**.exs
         # id: changed_files
         # run: |
         #   changed_files=$(git log --name-only $(git merge-base origin/main HEAD)..HEAD | grep priv/companies/ | uniq)
@@ -51,9 +50,10 @@ jobs:
       - name: Validate Company
         if: steps.changed-company-files.outputs.any_changed == 'true'
         env:
-          ALL_CHANGED_FILES: ${{ steps.changed-markdown-files.outputs.all_changed_files }}
+          ALL_CHANGED_FILES: ${{ steps.changed-company-files.outputs.all_changed_files }}
         run: |
           for file in ${ALL_CHANGED_FILES}; do
+            echo "$file was changed"
             mix validate_company_file "$file"
           done
 
