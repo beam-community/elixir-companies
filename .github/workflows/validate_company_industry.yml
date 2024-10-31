@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+
       - id: beam
         uses: erlef/setup-beam@v1
         with:
@@ -31,15 +32,17 @@ jobs:
       - if: steps.cache.outputs.cache-hit != 'true'
         run: mix deps.get
 
-      - name: Get changed files
-        id: changed_files
-        run: |
-          echo "::set-output name=files::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})"
+      - name: Get changed company files
+        id: changed-company-files
+        uses: tj-actions/changed-files@v45
+        with:
+          files: priv/companies/**.exs
 
-      - name: Run validation
+      - name: Validate Company
+        if: steps.changed-company-files.outputs.any_changed == 'true'
+        env:
+          ALL_CHANGED_FILES: ${{ steps.changed-company-files.outputs.all_changed_files }}
         run: |
-          for file in ${{ steps.changed_files.outputs.files }}; do
-            if [[ $file == *.exs ]]; then
-              mix validate_company_file $file
-            fi
+          for file in ${ALL_CHANGED_FILES}; do
+            mix validate_company_file "$file"
           done
