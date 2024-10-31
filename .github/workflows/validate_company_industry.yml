@@ -2,8 +2,6 @@ name: Validate Company Industry
 
 on:
   pull_request:
-    paths:
-      - "priv/companies/*.exs" # only run on changes to company files
 
 jobs:
   validate:
