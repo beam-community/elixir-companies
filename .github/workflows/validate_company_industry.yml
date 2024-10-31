@@ -2,8 +2,8 @@ name: Validate Company Industry
 
 on:
   pull_request:
-    # paths:
-    #   - "priv/companies/*.exs" # only run on changes to company files
+    paths:
+      - "priv/companies/*.exs" # only run on changes to company files
 
 jobs:
   validate_struct:
@@ -11,8 +11,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        # with:
-        #   fetch-depth: 0
 
       - id: beam
         uses: erlef/setup-beam@v1
@@ -39,13 +37,6 @@ jobs:
         uses: tj-actions/changed-files@v45
         with:
           files: priv/companies/**.exs
-        # id: changed_files
-        # run: |
-        #   changed_files=$(git log --name-only $(git merge-base origin/main HEAD)..HEAD | grep priv/companies/ | uniq)
-        #   # Convert newline-separated list to a comma-separated string
-        #   changed_files=$(echo "$changed_files" | tr '\n' ',')
-        #   # Remove the trailing comma before assigning to GITHUB_OUTPUT
-        #   echo "files=${changed_files%,}" >> $GITHUB_OUTPUT
 
       - name: Validate Company
         if: steps.changed-company-files.outputs.any_changed == 'true'
@@ -53,14 +44,5 @@ jobs:
           ALL_CHANGED_FILES: ${{ steps.changed-company-files.outputs.all_changed_files }}
         run: |
           for file in ${ALL_CHANGED_FILES}; do
-            echo "$file was changed"
             mix validate_company_file "$file"
           done
-
-        # run: |
-        #   IFS=',' read -r -a files <<< "${{ steps.changed_files.outputs.files }}"
-        #   for file in "${files[@]}"; do
-        #     if [[ $file == *.exs ]]; then
-        #       mix validate_company_file "$file"
-        #     fi
-        #   done
