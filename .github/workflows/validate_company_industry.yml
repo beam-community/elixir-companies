@@ -2,6 +2,10 @@ name: Validate Company Industry
 
 on:
   pull_request:
+  push:
+    branches:
+      - main
+  merge_group:
 
 jobs:
   validate:
