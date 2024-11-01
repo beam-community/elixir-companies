@@ -6,7 +6,7 @@
   website: "https://uplearn.co.uk/",
   github: "https://gitlab.com/up-learn-uk",
   # reference lib/companies/industries.ex for a list of recommended industries to use here
-  industry: "Education",
+  industry: "Information Technology",
   location: %{
     city: "London",
     state: "London",
