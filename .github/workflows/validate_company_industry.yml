@@ -2,11 +2,10 @@ name: Validate Company Industry
 
 on:
   pull_request:
-    paths:
-      - "priv/companies/*.exs" # only run on changes to company files
 
 jobs:
-  validate_struct:
+  validate:
+    name: Validate Company Industry
     runs-on: ubuntu-latest
 
     steps:
@@ -38,7 +37,7 @@ jobs:
         with:
           files: priv/companies/**.exs
 
-      - name: Validate Company
+      - name: Run validate
         if: steps.changed-company-files.outputs.any_changed == 'true'
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-company-files.outputs.all_changed_files }}
