@@ -1,10 +1,4 @@
 defmodule Mix.Tasks.Test.Websites do
-  use Mix.Task
-
-  require Logger
-
-  @shortdoc "Checks company site reachability"
-
   @moduledoc """
   Checks if company websites are reachable.
 
@@ -17,8 +11,12 @@ defmodule Mix.Tasks.Test.Websites do
 
   Optionally a list of files can be passed - in that case only those files will be checked
   """
+  use Mix.Task
 
-  @impl true
+  require Logger
+
+  @shortdoc "Checks company site reachability"
+
   @doc false
   def run(args) do
     {opts, args} = OptionParser.parse!(args, strict: [num_workers: :integer, timeout: :integer, github_token: :string])
@@ -80,8 +78,7 @@ defmodule Mix.Tasks.Test.Websites do
       errors ->
         Logger.warning("There where #{length(errors)} unreachable websites:")
 
-        errors
-        |> Enum.each(fn {company, reason} ->
+        Enum.each(errors, fn {company, reason} ->
           last_activity = maybe_get_last_activity(company, opts)
 
           Logger.warning(
