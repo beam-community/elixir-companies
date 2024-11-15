@@ -1,10 +1,4 @@
-# lib/mix/tasks/create_company_file.ex
 defmodule Mix.Tasks.CreateCompanyFile do
-  use Mix.Task
-  require Logger
-
-  @shortdoc "Creates a company file in the priv/companies directory"
-
   @moduledoc """
   Generate company file in desired location and structure to render in UI
 
@@ -12,6 +6,10 @@ defmodule Mix.Tasks.CreateCompanyFile do
     $ mix create_company_file "Acme Corp"
     $ mix create_company_file Acme   Corp
   """
+  use Mix.Task
+  require Logger
+
+  @shortdoc "Creates a company file in the priv/companies directory"
 
   @impl Mix.Task
   @doc false

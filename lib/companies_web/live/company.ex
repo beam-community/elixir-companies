@@ -58,8 +58,7 @@ defmodule CompaniesWeb.CompanyLive do
   defp search(socket, params) do
     results = Companies.all(params)
 
-    socket
-    |> assign(
+    assign(socket,
       companies: results.entries,
       page: 1,
       total_pages: results.total_pages,

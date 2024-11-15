@@ -9,8 +9,8 @@ defmodule Companies.Helpers do
     search_param = params["search"]["text"]
 
     if search_param do
-      list
-      |> Enum.filter(
+      Enum.filter(
+        list,
         &(String.contains?(String.downcase(&1.name), String.downcase(search_param)) or
             String.contains?(String.downcase(&1.industry), String.downcase(search_param)))
       )

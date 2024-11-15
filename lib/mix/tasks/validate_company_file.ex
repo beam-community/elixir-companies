@@ -1,9 +1,4 @@
 defmodule Mix.Tasks.ValidateCompanyFile do
-  use Mix.Task
-
-  alias Companies.Industries
-  alias Companies.Schema.Company
-
   @moduledoc """
   Validates a filepath to a company.
 
@@ -11,6 +6,11 @@ defmodule Mix.Tasks.ValidateCompanyFile do
 
   This is to help with data consistency.
   """
+
+  use Mix.Task
+
+  alias Companies.Industries
+  alias Companies.Schema.Company
 
   @impl Mix.Task
   @doc false

@@ -1,8 +1,9 @@
 defmodule CompaniesWeb.CompanyController do
   use CompaniesWeb, :controller
 
-  alias Companies.{Companies, Industries}
   import CompaniesWeb.ViewingStats, only: [telemetry_event: 0]
+
+  alias Companies.{Companies, Industries}
 
   def recent(conn, _params) do
     companies_count = Companies.count()

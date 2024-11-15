@@ -25,7 +25,7 @@ if config_env() == :prod do
 
   config :companies, CompaniesWeb.Endpoint,
     http: [
-      port: String.to_integer(System.get_env("PORT", "8080")),
+      port: "PORT" |> System.get_env("8080") |> String.to_integer(),
       transport_options: [socket_opts: [:inet6]]
     ],
     secret_key_base: secret_key_base,

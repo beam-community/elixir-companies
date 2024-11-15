@@ -47,7 +47,7 @@ defmodule CompaniesWeb.ViewingStats do
   def handle_cast({:telemetry_metric, metric_map, _metadata, _config}, state) do
     updated_state =
       for {key, value} <- metric_map, reduce: state do
-        acc -> Map.put_new(acc, key, 0) |> update_in([key], &(&1 + value))
+        acc -> acc |> Map.put_new(key, 0) |> update_in([key], &(&1 + value))
       end
 
     {:noreply, updated_state}
