@@ -10,7 +10,7 @@
       country: "Brazil"
     },
     description: """
-    Pix infrastructure to evolve in real-time payments.
+    Trio is a financial institution specializing in instant payments in Brazil. All our products, from the banking core to the payment checkout, were developed using Elixir, Phoenix, and LiveView.
     """,
     last_changed_on: ~D[2024-11-15]
   }
