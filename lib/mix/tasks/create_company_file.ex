@@ -48,7 +48,7 @@ defmodule Mix.Tasks.CreateCompanyFile do
         website: "https://example.com/",
         github: "https://github.com/example/#{file_name}",
         # reference lib/companies/industries.ex for a list of recommended industries to use here
-        industry: "Technology",
+        industry: "Information Technology",
         location: %{
           city: "City",
           state: "State",

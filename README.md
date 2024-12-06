@@ -29,7 +29,7 @@ Proudly built with [Phoenix](https://phoenixframework.org).
     website: "https://example.com/",
     github: "https://github.com/example/acme-corp",
     # reference lib/companies/industries.ex for a list of recommended industries to use here
-    industry: "Technology",
+    industry: "Information Technology",
     location: %{
       city: "City",
       state: "State",
@@ -42,6 +42,7 @@ Proudly built with [Phoenix](https://phoenixframework.org).
   }
   ```
 
+- Run `mix validate_company_file priv/companies/your-new-file.exs` to validate the new company file.
 - Create a pull request adding the new company file
 
 ## Development
