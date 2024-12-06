@@ -42,6 +42,7 @@ Proudly built with [Phoenix](https://phoenixframework.org).
   }
   ```
 
+- Run `mix validate_company_file priv/companies/your-new-file.exs` to validate the new company file.
 - Create a pull request adding the new company file
 
 ## Development
