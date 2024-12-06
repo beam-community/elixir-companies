@@ -6,7 +6,7 @@
   website: "https://allaboard.eu/",
   github: "https://github.com/allaboard-dev",
   # reference lib/companies/industries.ex for a list of recommended industries to use here
-  industry: "Technology",
+  industry: "Information Technology",
   location: %{
     city: "Stockholm",
     state: "Stockholm",
