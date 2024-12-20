@@ -18,4 +18,5 @@
   maintainable solutions for modern web applications.
   """,
   last_changed_on: ~D[2024-12-20]
-} 
+}
+
