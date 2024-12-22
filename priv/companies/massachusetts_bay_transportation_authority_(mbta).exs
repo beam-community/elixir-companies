@@ -1,6 +1,6 @@
 %{
   industry: "Transportation",
-  website: "https://medium.com/mbta-tech",
+  website: "https://www.mbta.com/",
   github: "https://github.com/mbta",
   location: %{
     city: "Boston",

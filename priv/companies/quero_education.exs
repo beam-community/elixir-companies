@@ -1,6 +1,6 @@
 %{
   industry: "Education",
-  website: "http://quero.education/en",
+  website: "http://quero.education",
   github: "https://github.com/quero-edu",
   location: %{
     city: "",

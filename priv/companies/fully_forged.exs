@@ -1,6 +1,6 @@
 %{
   industry: "Technology Consulting",
-  website: "http://fullyforged.com",
+  website: "http://www.fullyforged.com",
   github: "",
   location: %{
     city: "",
