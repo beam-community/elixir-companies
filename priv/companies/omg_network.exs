@@ -1,5 +1,5 @@
 %{
-  industry: "Blockchain & Fintech",
+  industry: "Financials",
   website: "https://omg.network",
   github: "https://github.com/omgnetwork",
   location: %{
