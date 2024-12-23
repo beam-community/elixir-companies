@@ -10,6 +10,7 @@ defmodule Companies.Industries do
     "Communication Services",
     "Consumer Discretionary",
     "Consumer Staples",
+    "Education",
     "Energy",
     "Financials",
     "Health Care",
@@ -17,6 +18,7 @@ defmodule Companies.Industries do
     "Information Technology",
     "Materials",
     "Real Estate",
+    "Transportation",
     "Utilities"
   ]
 
