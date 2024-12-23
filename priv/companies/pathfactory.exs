@@ -1,5 +1,5 @@
 %{
-  industry: "Marketing/Sales",
+  industry: "Communication Services",
   website: "http://pathfactory.com",
   github: "https://github.com/buzzdata",
   location: %{

@@ -1,5 +1,5 @@
 %{
-  industry: "Home Services",
+  industry: "Real Estate",
   website: "https://www.househappy.com/",
   github: "https://github.com/househappy",
   location: %{
