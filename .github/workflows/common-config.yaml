@@ -32,12 +32,14 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version-file: .tool-versions
+          node-version: 20
 
       - name: Setup Elixir
         uses: stordco/actions-elixir/setup@v1
         with:
           github-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          elixir-version: "1.16"
+          otp-version: "26.0"
 
       - name: Sync
         uses: stordco/actions-sync@v1
