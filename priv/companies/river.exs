@@ -6,7 +6,7 @@
   website: "https://river.com",
   github: "https://github.com/RiverFinancial",
   # reference lib/companies/industries.ex for a list of recommended industries to use here
-  industry: "Financial Technology",
+  industry: "Financials",
   location: %{
     city: "Columbus",
     state: "Ohio",
