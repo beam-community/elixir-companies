@@ -13,7 +13,7 @@
     country: "Remote (USA/EU)"
   },
   description: """
-  Whatnot is the largest livestream shopping platform in North America and Europe to buy, sell, and discover the things you love. Elixir is powering our Live Stream auctions and chat.
+  Whatnot is the largest livestream shopping platform in North America and Europe to buy, sell, and discover the things you love. Elixir powers our live streams and chat.
   """,
   last_changed_on: ~D[2025-03-26]
 }
