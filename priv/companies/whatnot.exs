@@ -6,7 +6,7 @@
   website: "https://whatnot.com/",
   github: "https://github.com/whatnot-Inc",
   # reference lib/companies/industries.ex for a list of recommended industries to use here
-  industry: "Marketplace",
+  industry: "Information Technology",
   location: %{
     city: "",
     state: "",
