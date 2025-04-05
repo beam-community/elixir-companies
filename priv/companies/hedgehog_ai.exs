@@ -4,7 +4,7 @@
 %{
   name: "hedgehog_ai",
   website: "https://hedgehog.chat",
-  github: "https://github.com/hibernatus_hacker",
+  github: "https://github.com/hibernatus-hacker",
   # reference lib/companies/industries.ex for a list of recommended industries to use here
   industry: "Information Technology",
   location: %{
