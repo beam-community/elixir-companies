@@ -1,5 +1,5 @@
 %{
-  industry: "Marketing/Sales",
+  industry: "Communication Services",
   website: "https://www.keila.io/",
   github: "https://github.com/pentacent/keila",
   location: %{
