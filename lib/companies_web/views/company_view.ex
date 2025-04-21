@@ -1,6 +1,7 @@
 defmodule CompaniesWeb.CompanyView do
   use CompaniesWeb, :view
 
+  import Phoenix.HTML
   import Companies.URLSchemer
 
   def hiring?(_), do: false

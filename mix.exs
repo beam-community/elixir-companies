@@ -59,6 +59,7 @@ defmodule Companies.MixProject do
       {:nimble_publisher, "~> 1.1.1"},
       {:phoenix, "~> 1.6"},
       {:phoenix_html, "~> 4.2", override: true},
+      {:phoenix_html_helpers, "~> 1.0"},
       {:phoenix_live_view, "~> 1.0"},
       {:phoenix_pubsub, "~> 2.1"},
       {:phoenix_view, "~> 2.0"},
