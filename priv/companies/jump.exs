@@ -1,5 +1,5 @@
 %{
-  industry: "Financial Services",
+  industry: "Financials",
   website: "https://www.jumpapp.com/",
   github: "https://github.com/Jump-App",
   location: %{
