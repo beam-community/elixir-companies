@@ -1,6 +1,6 @@
 # Company file for Foxlabs De
 %{
-# reference lib/companies/industries.ex for a list of recommended industries to use here
+  # reference lib/companies/industries.ex for a list of recommended industries to use here
   industry: "Information Technology",
   website: "https://foxlabsdevelopers.com",
   github: "https://github.com/foxlabsdevelopers",
