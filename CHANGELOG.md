@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/beam-community/elixir-companies/compare/v1.0.0...v1.1.0) (2025-08-18)
+
+
+### Features
+
+* Add Foxlabs developers ([#765](https://github.com/beam-community/elixir-companies/issues/765)) ([3bed426](https://github.com/beam-community/elixir-companies/commit/3bed42626d256641f060c02aebf88a2dd45a8da7))
+* add TV Labs ([#766](https://github.com/beam-community/elixir-companies/issues/766)) ([c3b6953](https://github.com/beam-community/elixir-companies/commit/c3b6953f45387a565ebedfc4a703dff2a7acba34))
+
 ## 1.0.0 (2025-04-21)
 
 
