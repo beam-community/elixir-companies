@@ -1,6 +1,6 @@
 ![Elixir Companies](https://user-images.githubusercontent.com/73386/33328317-e6e58c6e-d416-11e7-9a16-b60700db0a51.png)
 
-![main branch badge](https://github.com/beam-community/elixir-companies/actions/workflows/ci.yml/badge.svg?branch=main)
+![main branch badge](https://github.com/beam-community/elixir-companies/actions/workflows/ci.yaml/badge.svg?branch=main)
 
 # Elixir Companies
 
