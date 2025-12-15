@@ -21,7 +21,7 @@ jobs:
           version-file: .tool-versions
           version-type: strict
       - id: cache
-        uses: actions/cache@v3
+        uses: actions/cache@v5
         with:
           key: |
             ${{ env.CACHE_VERSION }}-${{ steps.beam.outputs.elixir-version }}-${{ steps.beam.outputs.otp-version }}-credo-${{ hashFiles('mix.lock') }}-${{ github.ref }}
