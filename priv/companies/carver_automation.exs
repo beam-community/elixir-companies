@@ -13,7 +13,7 @@
     country: "US"
   },
   description: """
-  Makers of Open Source Network Management and Observability software
+  Makers of Open Source Network Management and Observability software, powered by elixir and the BEAM vm.
   """,
   last_changed_on: ~D[2025-12-28]
 }
