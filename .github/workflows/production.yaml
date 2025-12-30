@@ -3,10 +3,9 @@
 name: Production
 
 on:
-  release:
-    types:
-      - released
-      - prereleased
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 concurrency:
