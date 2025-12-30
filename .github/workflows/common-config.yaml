@@ -12,7 +12,7 @@ on:
     types:
       - common-config
   schedule:
-    - cron: "8 12 8 * *"
+    - cron: "0 0 1 * *"
   workflow_dispatch: {}
 
 concurrency:
@@ -38,8 +38,8 @@ jobs:
         uses: stordco/actions-elixir/setup@v1
         with:
           github-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-          elixir-version: "1.16"
-          otp-version: "26.0"
+          elixir-version: "1.19"
+          otp-version: "27.0"
 
       - name: Sync
         uses: beam-community/actions-sync@v1
@@ -50,5 +50,6 @@ jobs:
           pr-title: "chore: sync files with beam-community/common-config"
           pr-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           sync-auth: doomspork:${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-          sync-tree: release-please--branches--main
+          sync-tree: latest
           sync-repository: github.com/beam-community/common-config.git
+          config-file: .github/common-config.yaml
