@@ -42,7 +42,7 @@ jobs:
           otp-version: "26.0"
 
       - name: Sync
-        uses: stordco/actions-sync@v1
+        uses: beam-community/actions-sync@v1
         with:
           commit-message: "chore: sync files with beam-community/common-config"
           pr-enabled: true
