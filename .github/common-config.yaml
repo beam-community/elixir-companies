@@ -1,4 +1,4 @@
 ignore-files:
-  - .github/common-config.yml
+  - .github/common-config.yaml
   - .github/release-please-config.json
   - .github/workflows/release.yaml
