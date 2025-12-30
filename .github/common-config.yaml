@@ -2,3 +2,4 @@ ignore-files:
   - .github/common-config.yaml
   - .github/release-please-config.json
   - .github/workflows/release.yaml
+  - .github/workflows/production.yaml
