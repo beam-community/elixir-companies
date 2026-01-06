@@ -68,7 +68,7 @@ jobs:
 
       - id: outputs
         name: Get Outputs
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         env:
           BUILD_OUTPUT: ${{ steps.metadata.outputs.json }}
         with:
