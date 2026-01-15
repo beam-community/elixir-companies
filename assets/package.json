@@ -8,7 +8,7 @@
     "phoenix": "file:../deps/phoenix",
     "phoenix_html": "file:../deps/phoenix_html",
     "phoenix_live_view": "file:../deps/phoenix_live_view",
-    "diff": "^5.1.0"
+    "diff": "^8.0.3"
   },
   "devDependencies": {
     "esbuild": "^0.25.0",
