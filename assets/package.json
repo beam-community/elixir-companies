@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "esbuild": "^0.25.0",
-    "webpack": "5.94.0",
+    "webpack": "5.105.0",
     "webpack-cli": "5.0.1"
   }
 }
