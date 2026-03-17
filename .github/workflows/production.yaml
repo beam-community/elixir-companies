@@ -30,7 +30,7 @@ jobs:
 
       - id: metadata
         name: Get Metadata
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           flavor: |
             latest=auto
