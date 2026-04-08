@@ -1,84 +1,29 @@
-# Created by https://www.gitignore.io/api/elixir,osx,vim,linux
-# Edit at https://www.gitignore.io/?templates=elixir,osx,vim,linux
+# Astro
+dist/
+.astro/
+node_modules/
 
-### Elixir ###
-/_build
-/cover
-/deps
-/doc
-/.fetch
-erl_crash.dump
-*.ez
-*.beam
-/config/*.secret.exs
-.elixir_ls/
-
-### Elixir Patch ###
-
-### Linux ###
+# OS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
 *~
 
-# temporary files which can be created if a process still has a handle open of a deleted file
-.fuse_hidden*
-
-# KDE directory preferences
-.directory
-
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
-
-# .nfs files are created when an open file is removed but is still being accessed
-.nfs*
-
-### OSX ###
-# General
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Icon must end with two \r
-Icon
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-### Vim ###
-# Swap
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
 [._]*.s[a-v][a-z]
 [._]*.sw[a-p]
-[._]s[a-rt-v][a-z]
-[._]ss[a-gi-z]
-[._]sw[a-p]
-
-# Session
 Session.vim
-
-# Temporary
-.netrwhist
-# Auto-generated tag files
-tags
-# Persistent undo
 [._]*.un~
+tags
 
-/assets/node_modules/
-/priv/static/assets/
-/priv/static/robots-*
-/priv/static/robots.txt.gz
-/priv/static/cache_manifest.json
-# End of https://www.gitignore.io/api/elixir,osx,vim,linux
+# Env
+.env
+.env.*
+
+# Context (conductor)
+.context/

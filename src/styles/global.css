@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-gray-800 dark:text-gray-100 dark:bg-elixir-950 antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-semibold rounded-xl
+           hover:bg-accent-hover transition-all duration-200 shadow-lg shadow-accent/25
+           hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-elixir-800 text-elixir-700 dark:text-gray-200
+           font-semibold rounded-xl border-2 border-elixir-200 dark:border-elixir-600
+           hover:border-accent hover:text-accent transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white dark:bg-elixir-900 rounded-2xl shadow-md hover:shadow-xl
+           transition-all duration-300 hover:-translate-y-1 overflow-hidden;
+  }
+
+  .industry-tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium
+           bg-elixir-100 dark:bg-elixir-800 text-elixir-700 dark:text-elixir-200;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent via-purple-400 to-elixir-400;
+  }
+}

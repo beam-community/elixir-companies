@@ -1,0 +1,14 @@
+---
+name: "Botsquad"
+website: "https://www.botsquad.com"
+github: "https://github.com/botsqd"
+industry:
+  - "Communication Services"
+location:
+  city: "Amsterdam"
+  state: ""
+  country: "the Netherlands"
+lastChangedOn: 2023-03-01
+---
+
+Botsquad is a platform for building conversational apps and chatbots, running on the web, FB messenger, Slack, etc, using an Elixir-like DSL. Their backend is built exclusively with Elixir.

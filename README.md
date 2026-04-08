@@ -1,76 +1,81 @@
 ![Elixir Companies](https://user-images.githubusercontent.com/73386/33328317-e6e58c6e-d416-11e7-9a16-b60700db0a51.png)
 
-![main branch badge](https://github.com/beam-community/elixir-companies/actions/workflows/ci.yaml/badge.svg?branch=main)
-
 # Elixir Companies
 
-A [collection of companies using Elixir](https://elixir-companies.com/) in production.
+A [curated directory of companies using Elixir](https://elixir-companies.com/) in production.
 
-Proudly built with [Phoenix](https://phoenixframework.org).
+Built with [Astro](https://astro.build) and deployed to GitHub Pages.
 
-### Adding a new company be showcased
+## Adding a new company
 
-- Fork the repo
-- Use the helper Mix task to generate the file:
-  ```sh
-  mix create_company_file {{ your company name }}
-  ```
+1. Fork this repository
+2. Create a new file in `src/content/companies/` named `your-company.md`:
 
-**-- OR --**
+```markdown
+---
+name: "Your Company"
+website: "https://example.com"
+github: "https://github.com/your-org"
+industry: "Information Technology"
+location:
+  city: "City"
+  state: "State"
+  country: "Country"
+lastChangedOn: 2024-01-01
+---
 
-- Add your company information to a new `/priv/companies/{{company_name}}.exs` in the following format:
+A description of your company and how you use Elixir.
+```
 
-  ```elixir
-  # Company file for Acme Corp
-  # Created on: 2024-01-01
+3. Create a pull request
 
-  %{
-    name: "Acme Corp",
-    website: "https://example.com/",
-    github: "https://github.com/example/acme-corp",
-    # reference lib/companies/industries.ex for a list of recommended industries to use here
-    industry: "Information Technology",
-    location: %{
-      city: "City",
-      state: "State",
-      country: "Country"
-    },
-    description: """
-    Description of Acme Corp goes here.
-    """,
-    last_changed_on: ~D[2024-01-01]
-  }
-  ```
+### Available industries
 
-- Run `mix validate_company_file priv/companies/your-new-file.exs` to validate the new company file.
-- Create a pull request adding the new company file
+Based on the [Global Industry Classification Standard (GICS)](https://www.msci.com/our-solutions/indexes/gics):
+
+- Communication Services
+- Consumer Discretionary
+- Consumer Staples
+- Education
+- Energy
+- Financials
+- Health Care
+- Industrials
+- Information Technology
+- Materials
+- Real Estate
+- Transportation
+- Utilities
+
+### Optional fields
+
+You can also include these in the frontmatter:
+
+- `blog` - URL to the company blog
+- `jobs` - URL to the company careers page (displays a "Hiring" badge)
 
 ## Development
 
-1. Install current elixir, erlang and nodejs versions
+### Prerequisites
 
-   1. This project uses [asdf](https://asdf-vm.com/) to manage the language versions of the project.
-   1. Follow the instructions on [asdf#getting-started](https://asdf-vm.com/guide/getting-started.html) to install asdf.
-   1. Once complete, run the following command to install the language versions:
+- [Node.js](https://nodejs.org/) 20+
 
-      ```sh
-      asdf install
-      ```
+### Setup
 
-   **-- OR --**
+```sh
+npm install
+npm run dev
+```
 
-   1. If you manage your language versions differently, please reference [~/.tool-versions](.tool-versions) for the specific versions to run the project.
+Visit [localhost:4321](http://localhost:4321) in your browser.
 
-1. Install elixir and nodejs dependencies with `mix setup`
-1. Start Phoenix endpoint with `mix phx.server`
+### Build
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+```sh
+npm run build
+npm run preview
+```
 
-## Localization
+## License
 
-In order to add a new language to the available list of locales, you have to do the following:
-
-- `mix gettext.extract` in order to extract all the latest gettext msgids from the code
-- `mix gettext.merge --priv/gettext` in order to merge the latest msgids with the locales.
-- `mix gettext.merge --priv/gettext --locale locale_code` in order the generate the files for the new locale.
-- Edit the `default.po` and `errors.po` in the `priv/gettext/{locale_code}/LC_MESSAGES/` dir. You leave the msgids intact and only touch the msgstr fields, where you translate the text accordingly.
+See [LICENSE](LICENSE) for details.

@@ -1,0 +1,23 @@
+name: Validate Company Files
+
+on:
+  pull_request:
+    paths:
+      - 'src/content/companies/**'
+  push:
+    branches: [main]
+    paths:
+      - 'src/content/companies/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Validate company files (Astro build with Zod schema)
+        run: npm run build

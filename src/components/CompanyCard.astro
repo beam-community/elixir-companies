@@ -1,0 +1,75 @@
+---
+import { getIndustryColor, getIndustryIcon } from '../utils/industries';
+
+interface Props {
+  name: string;
+  slug: string;
+  industry: string[];
+  website: string;
+  github?: string;
+  location: { city: string; state: string; country: string };
+  description: string;
+  jobs?: string;
+}
+
+const { name, slug, industry, website, github, location, description, jobs } = Astro.props;
+
+const locationText = [location.city, location.state, location.country].filter(Boolean).join(', ') || 'Remote';
+const truncatedDesc = description.length > 150 ? description.slice(0, 150).trimEnd() + '...' : description;
+const primaryIndustry = industry[0];
+const primaryColor = getIndustryColor(primaryIndustry);
+const primaryIcon = getIndustryIcon(primaryIndustry);
+---
+
+<a href={`/companies/${slug}`} class="card block group relative">
+  {jobs && (
+    <div class="absolute top-3 right-3 z-10">
+      <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500 text-white shadow-lg shadow-emerald-500/30 animate-pulse">
+        Hiring
+      </span>
+    </div>
+  )}
+
+  <div class="p-6">
+    <div class="flex items-start justify-between gap-3 mb-3">
+      <h3 class="font-display font-bold text-lg text-gray-900 dark:text-white group-hover:text-accent transition-colors leading-tight">
+        {name}
+      </h3>
+    </div>
+
+    <div class="flex flex-wrap gap-1.5 mb-3">
+      <span class={`industry-tag inline-flex ${primaryColor}`}>
+        <span class="mr-1">{primaryIcon}</span>
+        {primaryIndustry}
+      </span>
+      {industry.slice(1).map((ind) => (
+        <span class={`industry-tag inline-flex text-[0.65rem] ${getIndustryColor(ind)}`}>
+          {ind}
+        </span>
+      ))}
+    </div>
+
+    <p class="text-sm text-gray-500 dark:text-gray-400 mb-3 line-clamp-3 leading-relaxed">
+      {truncatedDesc}
+    </p>
+
+    <div class="flex items-center gap-4 text-xs text-gray-400 dark:text-gray-500 mt-auto pt-3 border-t border-gray-100 dark:border-elixir-800">
+      <span class="flex items-center gap-1">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        {locationText}
+      </span>
+
+      {github && (
+        <span class="flex items-center gap-1">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          GitHub
+        </span>
+      )}
+    </div>
+  </div>
+</a>

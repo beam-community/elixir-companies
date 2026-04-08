@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+import { getIndustryColor, getIndustryIcon } from '../../utils/industries';
+import { toSlug } from '../../utils/slug';
+
+export async function getStaticPaths() {
+  const companies = await getCollection('companies');
+  return companies.map((company) => ({
+    params: { slug: toSlug(company.id) },
+    props: { company },
+  }));
+}
+
+const { company } = Astro.props;
+const { Content } = await render(company);
+
+const locationParts = [company.data.location.city, company.data.location.state, company.data.location.country].filter(Boolean);
+const locationText = locationParts.length > 0 ? locationParts.join(', ') : 'Remote';
+
+// Related companies (overlapping industry, max 4)
+const allCompanies = await getCollection('companies');
+const related = allCompanies
+  .filter((c) => c.id !== company.id && c.data.industry.some((ind) => company.data.industry.includes(ind)))
+  .slice(0, 4);
+---
+
+<BaseLayout title={`${company.data.name} | Elixir Companies`} description={`${company.data.name} - ${company.data.industry.join(', ')} company using Elixir in production.`}>
+  <section class="py-10 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Back link -->
+      <a
+        href="/companies"
+        class="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-accent transition-colors mb-8"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to companies
+      </a>
+
+      <!-- Company header -->
+      <div class="bg-white dark:bg-elixir-900 rounded-2xl shadow-lg p-8 md:p-10 mb-8">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+          <div>
+            <h1 class="font-display font-bold text-3xl md:text-4xl text-gray-900 dark:text-white mb-3">
+              {company.data.name}
+            </h1>
+            <div class="flex flex-wrap gap-2">
+              {company.data.industry.map((ind) => (
+                <span class={`inline-flex items-center gap-1 px-4 py-1.5 rounded-full text-sm font-medium ${getIndustryColor(ind)}`}>
+                  <span>{getIndustryIcon(ind)}</span>
+                  {ind}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {company.data.jobs && (
+            <span class="inline-flex items-center gap-1 px-4 py-2 rounded-full text-sm font-bold bg-emerald-500 text-white shadow-lg shadow-emerald-500/30">
+              Currently Hiring
+            </span>
+          )}
+        </div>
+
+        <!-- Meta info -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5 rounded-xl bg-gray-50 dark:bg-elixir-800 mb-8">
+          <div class="flex items-center gap-3">
+            <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-elixir-100 dark:bg-elixir-700">
+              <svg class="w-5 h-5 text-elixir-600 dark:text-elixir-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs text-gray-500 dark:text-gray-400">Location</div>
+              <div class="text-sm font-medium text-gray-900 dark:text-white">{locationText}</div>
+            </div>
+          </div>
+
+          {company.data.website && (
+            <div class="flex items-center gap-3">
+              <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-elixir-100 dark:bg-elixir-700">
+                <svg class="w-5 h-5 text-elixir-600 dark:text-elixir-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 dark:text-gray-400">Website</div>
+                <a href={company.data.website.startsWith('http') ? company.data.website : `https://${company.data.website}`} target="_blank" rel="noopener" class="text-sm font-medium text-accent hover:text-accent-hover transition-colors">
+                  {company.data.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                </a>
+              </div>
+            </div>
+          )}
+
+          {company.data.github && (
+            <div class="flex items-center gap-3">
+              <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-elixir-100 dark:bg-elixir-700">
+                <svg class="w-5 h-5 text-elixir-600 dark:text-elixir-300" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 dark:text-gray-400">GitHub</div>
+                <a href={company.data.github} target="_blank" rel="noopener" class="text-sm font-medium text-accent hover:text-accent-hover transition-colors">
+                  {company.data.github.replace('https://github.com/', '')}
+                </a>
+              </div>
+            </div>
+          )}
+
+          {company.data.blog && (
+            <div class="flex items-center gap-3">
+              <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-elixir-100 dark:bg-elixir-700">
+                <svg class="w-5 h-5 text-elixir-600 dark:text-elixir-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 dark:text-gray-400">Blog</div>
+                <a href={company.data.blog} target="_blank" rel="noopener" class="text-sm font-medium text-accent hover:text-accent-hover transition-colors">
+                  {company.data.blog.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                </a>
+              </div>
+            </div>
+          )}
+
+          {company.data.jobs && (
+            <div class="flex items-center gap-3">
+              <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900">
+                <svg class="w-5 h-5 text-emerald-600 dark:text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 dark:text-gray-400">Careers</div>
+                <a href={company.data.jobs} target="_blank" rel="noopener" class="text-sm font-medium text-emerald-600 hover:text-emerald-700 transition-colors">
+                  View open positions
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
+
+        <!-- Description -->
+        <div class="prose prose-gray dark:prose-invert max-w-none prose-a:text-accent hover:prose-a:text-accent-hover">
+          <Content />
+        </div>
+      </div>
+
+      <!-- Related companies -->
+      {related.length > 0 && (
+        <div>
+          <h2 class="font-display font-bold text-xl text-gray-900 dark:text-white mb-5">
+            Related Companies
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {related.map((rel) => {
+              const relLocation = [rel.data.location.city, rel.data.location.state, rel.data.location.country].filter(Boolean).join(', ') || 'Remote';
+              return (
+                <a href={`/companies/${toSlug(rel.id)}`} class="card block group p-5">
+                  <h3 class="font-display font-bold text-gray-900 dark:text-white group-hover:text-accent transition-colors mb-1">
+                    {rel.data.name}
+                  </h3>
+                  <p class="text-xs text-gray-400 dark:text-gray-500">{relLocation}</p>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>
