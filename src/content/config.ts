@@ -1,24 +1,5 @@
 import { defineCollection, z } from 'astro:content';
-
-const INDUSTRY_VALUES = [
-  'Agriculture & Food',
-  'Communication Services',
-  'Consumer Discretionary',
-  'Consumer Staples',
-  'Education',
-  'Energy',
-  'Financials',
-  'Government & Non-Profit',
-  'Health Care',
-  'Industrials',
-  'Information Technology',
-  'Materials',
-  'Media & Entertainment',
-  'Professional Services',
-  'Real Estate',
-  'Transportation',
-  'Utilities',
-] as const;
+import { INDUSTRY_VALUES } from '../utils/industries';
 
 const companies = defineCollection({
   type: 'content',

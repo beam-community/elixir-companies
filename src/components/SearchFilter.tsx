@@ -12,6 +12,18 @@ import { getIndustryColor, getIndustryIcon } from '../utils/industries';
 
 const PAGE_SIZE = 24;
 
+function IndustryTag({ industry, size = 'sm' }: { industry: string; size?: 'sm' | 'md' }) {
+  const sizeClass = size === 'md' ? 'px-4 py-1.5 text-sm' : 'px-3 py-1 text-xs';
+  return (
+    <span
+      class={`inline-flex items-center gap-1 rounded-full font-medium ${getIndustryColor(industry)} ${sizeClass}`}
+    >
+      <span>{getIndustryIcon(industry)}</span>
+      {industry}
+    </span>
+  );
+}
+
 function CompanyCardPreact({ company }: { company: CompanyData }) {
   const locationText =
     [company.location.city, company.location.state, company.location.country]
@@ -40,19 +52,9 @@ function CompanyCardPreact({ company }: { company: CompanyData }) {
           {company.name}
         </h3>
         <div class="flex flex-wrap gap-1.5 mb-3">
-          <span
-            class={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${getIndustryColor(company.industry[0])}`}
-          >
-            <span class="mr-1">{getIndustryIcon(company.industry[0])}</span>
-            {company.industry[0]}
-          </span>
-          {company.industry.length > 1 && (
-            <span
-              class={`inline-flex items-center px-2 py-1 rounded-full text-[0.65rem] font-medium ${getIndustryColor(company.industry[1])}`}
-            >
-              {company.industry[1]}
-            </span>
-          )}
+          {company.industry.map((ind) => (
+            <IndustryTag key={ind} industry={ind} />
+          ))}
         </div>
         <p class="text-sm text-gray-500 dark:text-gray-400 mb-3 leading-relaxed"
            style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>

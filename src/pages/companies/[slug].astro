@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import IndustryTag from '../../components/IndustryTag.astro';
 import { getCollection, render } from 'astro:content';
-import { getIndustryColor, getIndustryIcon } from '../../utils/industries';
 import { toSlug } from '../../utils/slug';
 
 export async function getStaticPaths() {
@@ -48,10 +48,7 @@ const related = allCompanies
             </h1>
             <div class="flex flex-wrap gap-2">
               {company.data.industry.map((ind) => (
-                <span class={`inline-flex items-center gap-1 px-4 py-1.5 rounded-full text-sm font-medium ${getIndustryColor(ind)}`}>
-                  <span>{getIndustryIcon(ind)}</span>
-                  {ind}
-                </span>
+                <IndustryTag industry={ind} size="md" />
               ))}
             </div>
           </div>

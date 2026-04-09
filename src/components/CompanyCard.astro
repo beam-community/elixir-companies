@@ -1,5 +1,5 @@
 ---
-import { getIndustryColor, getIndustryIcon } from '../utils/industries';
+import IndustryTag from './IndustryTag.astro';
 
 interface Props {
   name: string;
@@ -16,9 +16,6 @@ const { name, slug, industry, website, github, location, description, jobs } = A
 
 const locationText = [location.city, location.state, location.country].filter(Boolean).join(', ') || 'Remote';
 const truncatedDesc = description.length > 150 ? description.slice(0, 150).trimEnd() + '...' : description;
-const primaryIndustry = industry[0];
-const primaryColor = getIndustryColor(primaryIndustry);
-const primaryIcon = getIndustryIcon(primaryIndustry);
 ---
 
 <a href={`/companies/${slug}`} class="card block group relative">
@@ -38,14 +35,8 @@ const primaryIcon = getIndustryIcon(primaryIndustry);
     </div>
 
     <div class="flex flex-wrap gap-1.5 mb-3">
-      <span class={`industry-tag inline-flex ${primaryColor}`}>
-        <span class="mr-1">{primaryIcon}</span>
-        {primaryIndustry}
-      </span>
-      {industry.slice(1).map((ind) => (
-        <span class={`industry-tag inline-flex text-[0.65rem] ${getIndustryColor(ind)}`}>
-          {ind}
-        </span>
+      {industry.map((ind, i) => (
+        <IndustryTag industry={ind} size={i === 0 ? 'sm' : 'sm'} />
       ))}
     </div>
 

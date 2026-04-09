@@ -1,0 +1,18 @@
+---
+import { getIndustryColor, getIndustryIcon } from '../utils/industries';
+
+interface Props {
+  industry: string;
+  size?: 'sm' | 'md';
+}
+
+const { industry, size = 'sm' } = Astro.props;
+const icon = getIndustryIcon(industry);
+const color = getIndustryColor(industry);
+const sizeClass = size === 'md' ? 'px-4 py-1.5 text-sm' : 'px-3 py-1 text-xs';
+---
+
+<span class={`inline-flex items-center gap-1 rounded-full font-medium ${color} ${sizeClass}`}>
+  <span>{icon}</span>
+  {industry}
+</span>
