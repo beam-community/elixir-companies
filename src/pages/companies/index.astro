@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SearchFilter from '../../components/SearchFilter';
+import { getCollection } from 'astro:content';
+import type { CompanyData } from '../../utils/search';
+import { toSlug } from '../../utils/slug';
+
+const allCompanies = await getCollection('companies');
+
+// Serialize company data for the Preact island
+const companiesData: CompanyData[] = allCompanies.map((c) => ({
+  slug: toSlug(c.id),
+  name: c.data.name,
+  website: c.data.website,
+  github: c.data.github,
+  blog: c.data.blog,
+  jobs: c.data.jobs,
+  industry: c.data.industry,
+  location: c.data.location,
+  lastChangedOn: c.data.lastChangedOn.toISOString().split('T')[0],
+  description: c.body || '',
+}));
+---
+
+<BaseLayout title="Browse Companies | Elixir Companies" description="Browse and search through our directory of companies using Elixir in production.">
+  <section class="py-10 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <h1 class="font-display font-bold text-3xl md:text-4xl text-gray-900 dark:text-white">
+          All Companies
+        </h1>
+        <p class="text-gray-500 dark:text-gray-400 mt-2">
+          {allCompanies.length} companies using Elixir in production
+        </p>
+      </div>
+
+      <SearchFilter client:load companies={companiesData} />
+    </div>
+  </section>
+</BaseLayout>
