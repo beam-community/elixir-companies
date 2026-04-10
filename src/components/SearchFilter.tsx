@@ -30,10 +30,14 @@ function CompanyCardPreact({ company }: { company: CompanyData }) {
       .filter(Boolean)
       .join(', ') || 'Remote';
 
+  const plainDesc = company.description
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/[*_~`]/g, '')
+    .trim();
   const truncatedDesc =
-    company.description.length > 150
-      ? company.description.slice(0, 150).trimEnd() + '...'
-      : company.description;
+    plainDesc.length > 150
+      ? plainDesc.slice(0, 150).trimEnd() + '...'
+      : plainDesc;
 
   return (
     <a
