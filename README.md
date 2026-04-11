@@ -1,4 +1,4 @@
-![Elixir Companies](public/images/elixircompanies_readme_logo.png)
+<img src="public/images/elixircompanies_readme_logo.png" alt="Elixir Companies" width="200" />
 
 # Elixir Companies
 
