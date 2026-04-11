@@ -1,4 +1,4 @@
-![Elixir Companies](public/images/elixircompanies_logo.png)
+![Elixir Companies](public/images/elixircompanies_readme_logo.png)
 
 # Elixir Companies
 
