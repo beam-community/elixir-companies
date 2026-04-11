@@ -1,4 +1,6 @@
-![Elixir Companies](https://user-images.githubusercontent.com/73386/33328317-e6e58c6e-d416-11e7-9a16-b60700db0a51.png)
+<p align="center">
+  <img src="public/images/elixircompanies_readme_logo.png" alt="Elixir Companies" width="400" />
+</p>
 
 # Elixir Companies
 
