@@ -1,4 +1,6 @@
-<img src="public/images/elixircompanies_readme_logo.png" alt="Elixir Companies" width="200" />
+<p align="center">
+  <img src="public/images/elixircompanies_readme_logo.png" alt="Elixir Companies" width="200" />
+</p>
 
 # Elixir Companies
 
