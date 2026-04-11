@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/images/elixircompanies_readme_logo.png" alt="Elixir Companies" width="200" />
+  <img src="public/images/elixircompanies_readme_logo.png" alt="Elixir Companies" width="400" />
 </p>
 
 # Elixir Companies
