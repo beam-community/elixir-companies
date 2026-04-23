@@ -1,8 +1,9 @@
 import { defineCollection, z } from 'astro:content';
-import { INDUSTRY_VALUES } from '../utils/industries';
+import { glob } from 'astro/loaders';
+import { INDUSTRY_VALUES } from './utils/industries';
 
 const companies = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.md', base: './src/content/companies' }),
   schema: z.object({
     name: z.string(),
     website: z.string(),

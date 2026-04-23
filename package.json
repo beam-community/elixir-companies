@@ -10,12 +10,12 @@
     "convert": "node scripts/convert-exs-to-md.mjs"
   },
   "dependencies": {
-    "@astrojs/preact": "^4.0.0",
-    "astro": "^5.7.0",
+    "@astrojs/preact": "^5.0.0",
+    "astro": "^6.1.6",
     "preact": "^10.25.0"
   },
   "devDependencies": {
-    "@astrojs/tailwind": "^6.0.0",
+    "autoprefixer": "^10.4.0",
     "tailwindcss": "^3.4.0",
     "@tailwindcss/typography": "^0.5.0"
   }

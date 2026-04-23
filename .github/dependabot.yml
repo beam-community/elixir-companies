@@ -9,7 +9,7 @@ updates:
     cooldown:
       default-days: 7
 
-  - package-ecosystem: mix
+  - package-ecosystem: npm
     directory: "/"
     schedule:
       interval: weekly
