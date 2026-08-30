@@ -1,7 +1,8 @@
 ---
 name: "First Point"
 website: "https://firstpoint.com.tr"
-industry: "Information Technology"
+industry:
+  - "Information Technology"
 location:
   city: "Istanbul"
   country: "Turkey"
