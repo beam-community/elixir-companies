@@ -2,7 +2,8 @@
 name: "Astride"
 website: "https://astride.us"
 github: ""
-industry: "Information Technology"
+industry:
+  - "Information Technology"
 location:
   city: ""
   state: ""
