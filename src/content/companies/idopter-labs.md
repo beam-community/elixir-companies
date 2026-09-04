@@ -6,8 +6,8 @@ industry:
   - "Information Technology"
   - "Professional Services"
 location:
-  city: "Fortaleza"
-  state: "Ceará"
+  city: "Belém"
+  state: "Pará"
   country: "Brazil"
 lastChangedOn: 2026-09-04
 ---
