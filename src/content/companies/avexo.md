@@ -5,8 +5,8 @@ industry:
   - "Information Technology"
   - "Consumer Staples"
 location:
-  city: ""
-  state: ""
+  city: "Belém"
+  state: "Pará"
   country: "Brazil"
 lastChangedOn: 2026-09-04
 ---
