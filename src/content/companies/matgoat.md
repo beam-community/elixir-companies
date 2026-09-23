@@ -1,7 +1,7 @@
 ---
 name: "MatGoat"
 website: "https://matgoat.com"
-github: "https://github.com/organizations/MatGoatApp"
+github: "https://github.com/MatGoatApp"
 blog: https://matgoat.com/en/blog/
 industry:
   - "Information Technology"
