@@ -74,7 +74,7 @@ const details = [
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg>
         </a>
         {d.jobs && (
-          <a href={d.jobs} target="_blank" rel="noopener" class="inline-flex h-12 items-center rounded-[14px] border border-[#D9D3E2] px-5 text-[15px] font-semibold text-ink no-underline hover:border-elixir-600 hover:text-elixir-600">See open roles</a>
+          <a href={d.jobs} target="_blank" rel="noopener" class="inline-flex h-12 items-center rounded-[14px] border border-field px-5 text-[15px] font-semibold text-ink no-underline hover:border-link hover:text-link">See open roles</a>
         )}
       </div>
     </section>
@@ -84,7 +84,7 @@ const details = [
         <section class="card rounded-3xl p-7 md:p-9">
           <h2 class="mb-4 font-display text-[26px] font-bold tracking-[-0.015em]">About</h2>
           {company.body?.trim() ? (
-            <div class="prose max-w-none text-[17px] leading-[1.7] text-[#3A3346] prose-a:text-elixir-600">
+            <div class="prose max-w-none text-[17px] leading-[1.7] text-body prose-a:text-link">
               <Content />
             </div>
           ) : (
@@ -117,7 +117,7 @@ const details = [
             </div>
             <div class="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-3.5">
               {related.map((r) => (
-                <a href={`/companies/${toSlug(r.id)}`} class="card flex items-center gap-3 rounded-2xl p-[18px] text-ink no-underline hover:border-elixir-600 hover:text-ink">
+                <a href={`/companies/${toSlug(r.id)}`} class="card flex items-center gap-3 rounded-2xl p-[18px] text-ink no-underline hover:border-link hover:text-ink">
                   <span class="avatar h-10 w-10 rounded-xl">{r.data.name[0]}</span>
                   <span class="min-w-0">
                     <span class="block truncate font-semibold">{r.data.name}</span>
@@ -136,20 +136,20 @@ const details = [
           <dl class="m-0 grid grid-cols-[auto_1fr] gap-x-4 text-[15px]">
             {details.map((row) => (
               <Fragment>
-                <dt class="border-t border-[#EFEBF4] py-3 text-muted">{row.label}</dt>
-                <dd class:list={['m-0 break-words border-t border-[#EFEBF4] py-3 text-right', row.mono && 'font-mono text-sm']}>
+                <dt class="border-t border-line-soft py-3 text-muted">{row.label}</dt>
+                <dd class:list={['m-0 break-words border-t border-line-soft py-3 text-right', row.mono && 'font-mono text-sm']}>
                   {row.href ? <a href={row.href} target="_blank" rel="noopener">{row.value}</a> : row.value}
                 </dd>
               </Fragment>
             ))}
           </dl>
         </section>
-        <section class="rounded-3xl bg-elixir-50 p-7">
+        <section class="rounded-3xl bg-tint p-7">
           <h2 class="mb-2 font-display text-xl font-bold">Something out of date?</h2>
-          <p class="mb-[18px] text-[15px] leading-relaxed text-[#4A4358]">
-            This listing lives in <code class="rounded-md bg-white px-1.5 py-0.5 font-mono text-[13px]">{file}</code>. Edits are welcome.
+          <p class="mb-[18px] text-[15px] leading-relaxed text-body">
+            This listing lives in <code class="rounded-md bg-surface px-1.5 py-0.5 font-mono text-[13px]">{file}</code>. Edits are welcome.
           </p>
-          <a href={`${REPO}/edit/main/src/content/companies/${file}`} class="inline-flex h-11 items-center gap-2 rounded-xl border border-[#D9D3E2] bg-white px-4 text-sm font-semibold text-ink no-underline hover:border-elixir-600 hover:text-elixir-600">
+          <a href={`${REPO}/edit/main/src/content/companies/${file}`} class="inline-flex h-11 items-center gap-2 rounded-xl border border-field bg-surface px-4 text-sm font-semibold text-ink no-underline hover:border-link hover:text-link">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>
             Edit on GitHub
           </a>

@@ -40,7 +40,7 @@ function CompanyCard({ company }: { company: CompanyData }) {
         <span class="avatar h-12 w-12 text-xl">{company.name[0]}</span>
         <div class="min-w-0">
           <h3 class="font-display text-xl font-bold tracking-[-0.01em]">
-            <a href={href} class="text-ink no-underline hover:text-elixir-600">{company.name}</a>
+            <a href={href} class="text-ink no-underline hover:text-link">{company.name}</a>
           </h3>
           <div class="flex items-center gap-1 text-[13.5px] text-muted">
             <PinIcon />
@@ -48,7 +48,7 @@ function CompanyCard({ company }: { company: CompanyData }) {
           </div>
         </div>
       </div>
-      <p class="line-clamp-3 flex-1 text-[15px] leading-normal text-[#4A4358]">
+      <p class="line-clamp-3 flex-1 text-[15px] leading-normal text-body">
         {company.description || 'No description yet.'}
       </p>
       <div class="flex flex-wrap gap-1.5">
@@ -56,15 +56,15 @@ function CompanyCard({ company }: { company: CompanyData }) {
           <span key={ind} class="pill">{ind}</span>
         ))}
       </div>
-      <div class="mt-0.5 flex items-center gap-2 border-t border-[#EFEBF4] pt-3">
+      <div class="mt-0.5 flex items-center gap-2 border-t border-line-soft pt-3">
         <a href={href} class="flex-1 py-2.5 text-sm font-semibold no-underline">View profile →</a>
         {company.jobs && <span class="pill-hiring">Hiring</span>}
         {company.github && (
-          <a href={company.github} target="_blank" rel="noopener" aria-label={`${company.name} on GitHub`} class="inline-flex h-11 w-11 items-center justify-center rounded-[10px] text-muted hover:bg-elixir-50 hover:text-elixir-600">
+          <a href={company.github} target="_blank" rel="noopener" aria-label={`${company.name} on GitHub`} class="inline-flex h-11 w-11 items-center justify-center rounded-[10px] text-muted hover:bg-tint hover:text-link">
             <GithubIcon />
           </a>
         )}
-        <a href={company.website} target="_blank" rel="noopener" aria-label={`${company.name} website`} class="inline-flex h-11 w-11 items-center justify-center rounded-[10px] text-muted hover:bg-elixir-50 hover:text-elixir-600">
+        <a href={company.website} target="_blank" rel="noopener" aria-label={`${company.name} website`} class="inline-flex h-11 w-11 items-center justify-center rounded-[10px] text-muted hover:bg-tint hover:text-link">
           <GlobeIcon />
         </a>
       </div>
@@ -149,19 +149,19 @@ export default function SearchFilter({ companies, industries, countries }: Props
       aria-pressed={active}
       onClick={onClick}
       class={`flex min-h-11 w-full items-center justify-between gap-3 rounded-[10px] px-3 text-left text-[15px] transition ${
-        active ? 'bg-elixir-100 font-semibold text-elixir-800' : 'text-ink hover:bg-elixir-50'
+        active ? 'bg-tint-strong font-semibold text-link-hover' : 'text-ink hover:bg-tint'
       }`}
     >
       <span>{name}</span>
-      <span class={`font-mono text-[13px] ${active ? 'text-elixir-600' : 'text-muted'}`}>{count}</span>
+      <span class={`font-mono text-[13px] ${active ? 'text-link' : 'text-muted'}`}>{count}</span>
     </button>
   );
 
   return (
     <div>
       {/* Search sits in the dark header band on desktop and mobile alike. */}
-      <div class="-mt-[88px] mb-10 flex h-14 max-w-[640px] items-center gap-2.5 rounded-[14px] bg-white px-4 shadow-[0_16px_40px_rgba(28,14,43,0.18)]">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E5670" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <div class="-mt-[88px] mb-10 flex h-14 max-w-[640px] items-center gap-2.5 rounded-[14px] bg-surface px-4 ring-1 ring-plum-border/60 shadow-[0_16px_40px_rgba(28,14,43,0.18)]">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-muted" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <circle cx="11" cy="11" r="7" />
           <path d="m20 20-3.5-3.5" />
         </svg>
@@ -174,7 +174,7 @@ export default function SearchFilter({ companies, industries, countries }: Props
           placeholder="Try “LiveView”, “Berlin” or “fintech”"
           class="min-w-0 flex-1 border-0 bg-transparent text-base text-ink outline-none placeholder:text-muted"
         />
-        <kbd class="hidden rounded-md border border-[#D9D3E2] px-1.5 py-0.5 font-mono text-xs text-muted sm:inline">/</kbd>
+        <kbd class="hidden rounded-md border border-field px-1.5 py-0.5 font-mono text-xs text-muted sm:inline">/</kbd>
       </div>
 
       <div class="flex flex-wrap items-start gap-10">
@@ -192,7 +192,7 @@ export default function SearchFilter({ companies, industries, countries }: Props
             id="dir-country"
             value={country}
             onChange={(e) => update(setCountry)((e.target as HTMLSelectElement).value)}
-            class="h-11 w-full rounded-[10px] border border-[#D9D3E2] bg-white px-3 text-[15px] text-ink"
+            class="h-11 w-full rounded-[10px] border border-field bg-surface px-3 text-[15px] text-ink"
           >
             <option value="">All countries</option>
             {countries.map((c) => (
@@ -202,11 +202,11 @@ export default function SearchFilter({ companies, industries, countries }: Props
 
           <h2 class="mb-3 mt-8 font-mono text-xs font-medium uppercase tracking-[0.08em] text-muted">Show only</h2>
           <label class="flex min-h-11 items-center gap-2.5 text-[15px]">
-            <input type="checkbox" checked={onlyGithub} onChange={() => update(setOnlyGithub)(!onlyGithub)} class="h-[18px] w-[18px] accent-elixir-600" />
+            <input type="checkbox" checked={onlyGithub} onChange={() => update(setOnlyGithub)(!onlyGithub)} class="h-[18px] w-[18px] accent-link" />
             Has open source on GitHub
           </label>
           <label class="flex min-h-11 items-center gap-2.5 text-[15px]">
-            <input type="checkbox" checked={onlyHiring} onChange={() => update(setOnlyHiring)(!onlyHiring)} class="h-[18px] w-[18px] accent-elixir-600" />
+            <input type="checkbox" checked={onlyHiring} onChange={() => update(setOnlyHiring)(!onlyHiring)} class="h-[18px] w-[18px] accent-link" />
             Hiring (jobs link listed)
           </label>
         </aside>
@@ -217,7 +217,7 @@ export default function SearchFilter({ companies, industries, countries }: Props
               <strong class="text-ink">{isFiltered ? `${filtered.length} ${filtered.length === 1 ? 'match' : 'matches'}` : `${companies.length} companies`}</strong>
               {selected.length === 1 && ` in ${selected[0]}`}
               {isFiltered && (
-                <button type="button" onClick={clearFilters} class="ml-3 font-semibold text-elixir-600 hover:text-elixir-800">
+                <button type="button" onClick={clearFilters} class="ml-3 font-semibold text-link hover:text-link-hover">
                   Clear filters
                 </button>
               )}
@@ -228,7 +228,7 @@ export default function SearchFilter({ companies, industries, countries }: Props
                 id="sort"
                 value={sort}
                 onChange={(e) => update(setSort)((e.target as HTMLSelectElement).value as SortOption)}
-                class="h-11 rounded-[10px] border border-[#D9D3E2] bg-white px-3 text-sm text-ink"
+                class="h-11 rounded-[10px] border border-field bg-surface px-3 text-sm text-ink"
               >
                 <option value="name">Name A–Z</option>
                 <option value="recent">Recently updated</option>
@@ -243,10 +243,10 @@ export default function SearchFilter({ companies, industries, countries }: Props
               ))}
             </div>
           ) : (
-            <div class="rounded-[20px] border border-dashed border-[#D9D3E2] bg-white px-6 py-14 text-center">
+            <div class="rounded-[20px] border border-dashed border-field bg-surface px-6 py-14 text-center">
               <h3 class="mb-2 font-display text-2xl font-bold">No companies match yet</h3>
               <p class="mb-5 text-[15px] text-muted">Know one that should be here? Listings are one Markdown file away.</p>
-              <button type="button" onClick={clearFilters} class="h-11 rounded-xl border border-elixir-600 bg-white px-[18px] font-semibold text-elixir-600 hover:bg-elixir-50">
+              <button type="button" onClick={clearFilters} class="h-11 rounded-xl border border-link bg-surface px-[18px] font-semibold text-link hover:bg-tint">
                 Clear filters
               </button>
             </div>
@@ -254,7 +254,7 @@ export default function SearchFilter({ companies, industries, countries }: Props
 
           {displayed.length < filtered.length && (
             <div class="mt-10 text-center">
-              <button type="button" onClick={() => setPage(page + 1)} class="h-12 rounded-[14px] border border-[#D9D3E2] bg-white px-6 font-semibold text-ink hover:border-elixir-600 hover:text-elixir-600">
+              <button type="button" onClick={() => setPage(page + 1)} class="h-12 rounded-[14px] border border-field bg-surface px-6 font-semibold text-ink hover:border-link hover:text-link">
                 Show more ({filtered.length - displayed.length} remaining)
               </button>
             </div>

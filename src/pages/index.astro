@@ -99,8 +99,8 @@ const why = [
       </p>
       <form action="/companies" method="get" class="mt-9 flex max-w-[560px] flex-wrap gap-2.5" role="search">
         <label for="hero-search" class="sr-only">Search companies</label>
-        <div class="flex h-14 min-w-0 flex-[1_1_280px] items-center gap-2.5 rounded-[14px] bg-white px-4">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E5670" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+        <div class="flex h-14 min-w-0 flex-[1_1_280px] items-center gap-2.5 rounded-[14px] bg-surface px-4 ring-1 ring-plum-border/60">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-muted" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
           <input id="hero-search" name="q" type="search" placeholder="Search by name, industry or city" class="min-w-0 flex-1 border-0 bg-transparent text-base text-ink outline-none placeholder:text-muted" />
         </div>
         <button type="submit" class="btn-amber h-14 text-base">Browse all</button>
@@ -124,7 +124,7 @@ const why = [
         <pre class="m-0 overflow-x-auto whitespace-pre-wrap px-[22px] py-6 font-mono text-[14.5px] leading-[1.75] text-[#E9E1F5]" set:html={heroCode}></pre>
       </div>
       {latest && (
-        <a href={`/companies/${toSlug(latest.id)}`} class="absolute -bottom-7 left-0 flex items-center gap-3 rounded-2xl bg-white px-[18px] py-3.5 text-ink no-underline shadow-[0_16px_40px_rgba(28,14,43,0.35)] hover:text-ink md:-left-5">
+        <a href={`/companies/${toSlug(latest.id)}`} class="absolute -bottom-7 left-0 flex items-center gap-3 rounded-2xl bg-surface px-[18px] ring-1 ring-plum-border/60 py-3.5 text-ink no-underline shadow-[0_16px_40px_rgba(28,14,43,0.35)] hover:text-ink md:-left-5">
           <span class="h-2.5 w-2.5 rounded-full bg-[#2F9E6B]" aria-hidden="true"></span>
           <span>
             <span class="block text-[15px] font-semibold">Recently added: {latest.data.name}</span>
@@ -136,12 +136,12 @@ const why = [
   </div>
 
   <!-- In production at -->
-  <section class="border-b border-line bg-white">
+  <section class="border-b border-line bg-surface">
     <div class="container-page flex flex-wrap items-center gap-x-12 gap-y-6 py-10">
       <p class="m-0 font-mono text-xs uppercase tracking-[0.08em] text-muted">In production at</p>
       <div class="flex flex-[1_1_600px] flex-wrap items-center justify-between gap-x-9 gap-y-5">
         {showcase.map((s) => (
-          <a href={`/companies/${s.slug}`} class="font-display text-2xl font-bold tracking-[-0.01em] text-[#4A4358] no-underline hover:text-elixir-600">{s.name}</a>
+          <a href={`/companies/${s.slug}`} class="font-display text-2xl font-bold tracking-[-0.01em] text-body no-underline hover:text-link">{s.name}</a>
         ))}
       </div>
     </div>
@@ -159,8 +159,8 @@ const why = [
     <div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5">
       {why.map((w) => (
         <article class="card p-7">
-          <div class="flex h-12 w-12 items-center justify-center rounded-[14px] bg-elixir-100">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B2A86" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={w.icon} />
+          <div class="flex h-12 w-12 items-center justify-center rounded-[14px] bg-tint-strong">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-link" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={w.icon} />
           </div>
           <h3 class="mb-2.5 mt-5 font-display text-[22px] font-bold tracking-[-0.01em]">{w.title}</h3>
           <p class="text-[15.5px] leading-relaxed text-muted">{w.body}</p>
@@ -170,7 +170,7 @@ const why = [
   </section>
 
   <!-- Industries -->
-  <section id="industries" class="bg-elixir-50">
+  <section id="industries" class="bg-tint">
     <div class="container-page py-24">
       <div class="mb-10 flex flex-wrap items-end justify-between gap-5">
         <div>
@@ -181,9 +181,9 @@ const why = [
       </div>
       <div class="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-3.5">
         {industries.map(([name, count]) => (
-          <a href={`/companies?industry=${encodeURIComponent(name)}`} class="flex items-center justify-between gap-4 rounded-2xl border border-elixir-200 bg-white px-6 py-[22px] text-ink no-underline transition hover:border-elixir-600 hover:text-ink">
+          <a href={`/companies?industry=${encodeURIComponent(name)}`} class="flex items-center justify-between gap-4 rounded-2xl border border-tint-border bg-surface px-6 py-[22px] text-ink no-underline transition hover:border-link hover:text-ink">
             <span class="text-[17px] font-semibold">{name}</span>
-            <span class="rounded-full bg-elixir-100 px-2.5 py-1 font-mono text-sm text-elixir-600">{count}</span>
+            <span class="rounded-full bg-tint-strong px-2.5 py-1 font-mono text-sm text-link">{count}</span>
           </a>
         ))}
       </div>
@@ -197,7 +197,7 @@ const why = [
       <h2 class="h-section mb-11 max-w-[720px]">How companies actually use it.</h2>
       <div class="grid grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))] gap-5">
         {spotlight.map((s, i) => (
-          <article class:list={['flex flex-col justify-between gap-7 rounded-3xl p-9', i === 0 ? 'bg-plum text-plum-text' : 'border border-line bg-white']}>
+          <article class:list={['flex flex-col justify-between gap-7 rounded-3xl p-9', i === 0 ? 'bg-plum text-plum-text' : 'border border-line bg-surface']}>
             <p class:list={['font-display font-medium leading-[1.3] tracking-[-0.01em]', i === 0 ? 'text-[26px]' : 'text-[22px]']}>“{s.quote}”</p>
             <div class="flex items-center justify-between gap-3">
               <div>
@@ -220,7 +220,7 @@ const why = [
         <a href="/companies?sort=recent" class="py-3 text-[15px] font-semibold">See all</a>
       </div>
       {recent.map((c) => (
-        <a href={`/companies/${toSlug(c.id)}`} class="flex items-center gap-4 border-t border-[#EFEBF4] py-4 text-ink no-underline hover:text-ink">
+        <a href={`/companies/${toSlug(c.id)}`} class="flex items-center gap-4 border-t border-line-soft py-4 text-ink no-underline hover:text-ink">
           <span class="avatar h-11 w-11 rounded-xl text-lg">{c.data.name[0]}</span>
           <span class="min-w-0 flex-1">
             <span class="block text-base font-semibold">{c.data.name}</span>
@@ -237,8 +237,8 @@ const why = [
         {countries.map(([name, count]) => (
           <li class="flex items-center gap-3.5 py-2">
             <span class="w-[120px] shrink-0 text-[15px] font-medium">{name}</span>
-            <span class="h-2.5 flex-1 overflow-hidden rounded-full bg-elixir-100" aria-hidden="true">
-              <span class="block h-full rounded-full bg-elixir-600" style={`width:${Math.round((count / maxCountry) * 100)}%`}></span>
+            <span class="h-2.5 flex-1 overflow-hidden rounded-full bg-tint-strong" aria-hidden="true">
+              <span class="block h-full rounded-full bg-link" style={`width:${Math.round((count / maxCountry) * 100)}%`}></span>
             </span>
             <span class="w-8 shrink-0 text-right font-mono text-sm text-muted">{count}</span>
           </li>

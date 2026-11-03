@@ -41,6 +41,17 @@ const links = [
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/images/elixircompanies_logo.png" />
+
+    <!-- Runs before first paint so there is no flash of the wrong theme.
+         A saved choice wins; otherwise follow the system setting. -->
+    <script is:inline>
+      (() => {
+        let saved = null;
+        try { saved = localStorage.getItem('theme'); } catch {}
+        const dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', dark);
+      })();
+    </script>
   </head>
   <body class="flex min-h-screen flex-col">
     <header class="bg-plum text-plum-text">
@@ -51,16 +62,29 @@ const links = [
             <span class="font-display text-xl font-bold tracking-[-0.01em]">elixir companies</span>
           </a>
 
-          <button
-            id="menu-btn"
-            type="button"
-            class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-plum-soft hover:bg-plum-raised md:hidden"
-            aria-label="Toggle menu"
-            aria-expanded="false"
-            aria-controls="menu"
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
-          </button>
+          <div class="flex items-center gap-1 md:order-last">
+            <button
+              id="theme-btn"
+              type="button"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-plum-soft hover:bg-plum-raised hover:text-white"
+              aria-label="Switch to dark theme"
+              title="Switch to dark theme"
+            >
+              <!-- Moon in light mode, sun in dark mode -->
+              <svg class="dark:hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path></svg>
+              <svg class="hidden dark:block" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+            </button>
+            <button
+              id="menu-btn"
+              type="button"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-plum-soft hover:bg-plum-raised md:hidden"
+              aria-label="Toggle menu"
+              aria-expanded="false"
+              aria-controls="menu"
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+            </button>
+          </div>
 
           <div id="menu" class="hidden w-full flex-col gap-1 md:flex md:w-auto md:flex-row md:items-center">
             {links.map((l) => (
@@ -90,10 +114,10 @@ const links = [
       <slot />
     </main>
 
-    <footer class="border-t border-line bg-white">
+    <footer class="border-t border-line bg-surface">
       <div class="container-page flex flex-wrap items-center justify-between gap-5 py-10 text-sm text-muted">
         <div class="flex items-center gap-2.5">
-          <Logo size={20} fill="#5B2A86" />
+          <Logo size={20} fill="currentColor" class="text-link" />
           <span>A <a href="https://github.com/beam-community">beam-community</a> project · MIT licensed</span>
         </div>
         <div class="flex flex-wrap gap-x-5 gap-y-2">
@@ -111,6 +135,33 @@ const links = [
         const open = menu?.classList.toggle('hidden') === false;
         menu?.classList.toggle('flex', open);
         btn.setAttribute('aria-expanded', String(open));
+      });
+
+      // Theme toggle. Only a choice that differs from the system setting is saved,
+      // so flipping back to match the system returns to following it.
+      const root = document.documentElement;
+      const themeBtn = document.getElementById('theme-btn');
+      const system = matchMedia('(prefers-color-scheme: dark)');
+      const readSaved = () => {
+        try { return localStorage.getItem('theme'); } catch { return null; }
+      };
+      const apply = (dark: boolean) => {
+        root.classList.toggle('dark', dark);
+        const label = dark ? 'Switch to light theme' : 'Switch to dark theme';
+        themeBtn?.setAttribute('aria-label', label);
+        themeBtn?.setAttribute('title', label);
+      };
+      apply(root.classList.contains('dark'));
+      themeBtn?.addEventListener('click', () => {
+        const dark = !root.classList.contains('dark');
+        try {
+          if (dark === system.matches) localStorage.removeItem('theme');
+          else localStorage.setItem('theme', dark ? 'dark' : 'light');
+        } catch {}
+        apply(dark);
+      });
+      system.addEventListener('change', (e) => {
+        if (!readSaved()) apply(e.matches);
       });
     </script>
   </body>

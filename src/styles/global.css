@@ -5,6 +5,47 @@
 @tailwind utilities;
 
 @layer base {
+  /* RGB triplets so Tailwind opacity modifiers keep working. */
+  :root {
+    color-scheme: light;
+    --ground: 251 250 253;
+    --surface: 255 255 255;
+    --ink: 27 19 37;
+    --body: 74 67 88;
+    --muted: 94 86 112;
+    --line: 231 227 238;
+    --line-soft: 239 235 244;
+    --field: 217 211 226;
+    --tint: 243 239 248;
+    --tint-strong: 241 234 248;
+    --tint-border: 226 218 236;
+    --link: 91 42 134;
+    --link-hover: 61 26 94;
+    --pill: 74 33 112;
+    --hiring-bg: 227 244 236;
+    --hiring-text: 29 107 72;
+  }
+
+  .dark {
+    color-scheme: dark;
+    --ground: 18 10 28;
+    --surface: 30 21 42;
+    --ink: 243 238 249;
+    --body: 214 206 226;
+    --muted: 171 161 189;
+    --line: 50 39 67;
+    --line-soft: 42 32 57;
+    --field: 66 53 86;
+    --tint: 25 16 37;
+    --tint-strong: 48 32 72;
+    --tint-border: 57 43 79;
+    --link: 201 165 240;
+    --link-hover: 226 204 250;
+    --pill: 220 198 245;
+    --hiring-bg: 19 58 42;
+    --hiring-text: 127 216 174;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -14,11 +55,11 @@
   }
 
   a {
-    @apply text-elixir-600 hover:text-elixir-800;
+    @apply text-link hover:text-link-hover;
   }
 
   :focus-visible {
-    @apply outline outline-2 outline-offset-2 outline-elixir-600;
+    @apply outline outline-2 outline-offset-2 outline-link;
   }
 }
 
@@ -28,7 +69,7 @@
   }
 
   .eyebrow {
-    @apply font-mono text-[13px] uppercase tracking-[0.08em] text-elixir-600;
+    @apply font-mono text-[13px] uppercase tracking-[0.08em] text-link;
   }
 
   .h-section {
@@ -41,11 +82,11 @@
   }
 
   .card {
-    @apply rounded-[20px] border border-line bg-white;
+    @apply rounded-[20px] border border-line bg-surface;
   }
 
   .pill {
-    @apply inline-flex items-center rounded-full bg-elixir-100 px-2.5 py-1 text-[12.5px] font-medium text-elixir-700;
+    @apply inline-flex items-center rounded-full bg-tint-strong px-2.5 py-1 text-[12.5px] font-medium text-pill;
   }
 
   .pill-hiring {
@@ -53,7 +94,20 @@
   }
 
   .avatar {
-    @apply flex shrink-0 items-center justify-center rounded-[14px] bg-elixir-100 font-display font-extrabold text-elixir-600;
+    @apply flex shrink-0 items-center justify-center rounded-[14px] bg-tint-strong font-display font-extrabold text-link;
   }
 
+  /* Point the typography plugin at the theme tokens so descriptions follow light/dark. */
+  .prose {
+    --tw-prose-body: rgb(var(--body));
+    --tw-prose-headings: rgb(var(--ink));
+    --tw-prose-bold: rgb(var(--ink));
+    --tw-prose-links: rgb(var(--link));
+    --tw-prose-code: rgb(var(--ink));
+    --tw-prose-bullets: rgb(var(--muted));
+    --tw-prose-counters: rgb(var(--muted));
+    --tw-prose-quotes: rgb(var(--ink));
+    --tw-prose-quote-borders: rgb(var(--line));
+    --tw-prose-hr: rgb(var(--line));
+  }
 }
