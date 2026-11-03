@@ -4,37 +4,40 @@ import SearchFilter from '../../components/SearchFilter';
 import { getCollection } from 'astro:content';
 import type { CompanyData } from '../../utils/search';
 import { toSlug } from '../../utils/slug';
+import { absoluteUrl, countBy, formatLocation, normalizeCountry, plainDescription } from '../../utils/company';
 
-const allCompanies = await getCollection('companies');
+const companies = await getCollection('companies');
 
-// Serialize company data for the Preact island
-const companiesData: CompanyData[] = allCompanies.map((c) => ({
+const companiesData: CompanyData[] = companies.map((c) => ({
   slug: toSlug(c.id),
   name: c.data.name,
-  website: c.data.website,
+  website: absoluteUrl(c.data.website),
   github: c.data.github,
-  blog: c.data.blog,
   jobs: c.data.jobs,
   industry: c.data.industry,
-  location: c.data.location,
-  lastChangedOn: c.data.lastChangedOn.toISOString().split('T')[0],
-  description: c.body || '',
+  place: formatLocation(c.data.location),
+  country: normalizeCountry(c.data.location.country),
+  lastChangedOn: c.data.lastChangedOn.toISOString().slice(0, 10),
+  description: plainDescription(c.body ?? ''),
 }));
+
+const industries = countBy(companies, (c) => c.data.industry);
+const countries = countBy(companiesData, (c) => [c.country]).map(([name]) => name);
 ---
 
-<BaseLayout title="Browse Companies | Elixir Companies" description="Browse and search through our directory of companies using Elixir in production.">
-  <section class="py-10 md:py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="mb-8">
-        <h1 class="font-display font-bold text-3xl md:text-4xl text-gray-900 dark:text-white">
-          All Companies
-        </h1>
-        <p class="text-gray-500 dark:text-gray-400 mt-2">
-          {allCompanies.length} companies using Elixir in production
-        </p>
-      </div>
+<BaseLayout
+  title="Directory | Elixir Companies"
+  description={`Search ${companies.length} companies using Elixir in production, by industry, country and more.`}
+  active="directory"
+>
+  <div slot="hero" class="pb-[120px] pt-10">
+    <h1 class="font-display text-[clamp(36px,5vw,56px)] font-extrabold leading-[1.05] tracking-[-0.03em]">The directory</h1>
+    <p class="mt-3 text-lg text-plum-soft">
+      {companies.length} companies using Elixir in production, across {industries.length} industries.
+    </p>
+  </div>
 
-      <SearchFilter client:load companies={companiesData} />
-    </div>
-  </section>
+  <div class="container-page pb-24">
+    <SearchFilter client:load companies={companiesData} industries={industries} countries={countries} />
+  </div>
 </BaseLayout>

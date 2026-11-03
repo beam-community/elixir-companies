@@ -1,52 +1,45 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        elixir: {
-          50: '#f5f0f9',
-          100: '#ebe1f3',
-          200: '#d4c0e6',
-          300: '#b899d4',
-          400: '#9B8FB4',
-          500: '#7C6E8A',
-          600: '#6B5B7B',
-          700: '#4A365F',
-          800: '#3B2A4D',
-          900: '#2D1F3B',
-          950: '#1A1225',
+        // Core palette from the redesign canvas
+        ink: '#1B1325',
+        muted: '#5E5670',
+        line: '#E7E3EE',
+        ground: '#FBFAFD',
+        plum: {
+          DEFAULT: '#1C0E2B', // hero / dark surfaces
+          deep: '#120820',
+          raised: '#2E1A45',
+          border: '#4A3463',
+          text: '#F6F1FB',
+          soft: '#D9CFE8',
+          dim: '#C9BEDA',
         },
-        accent: {
-          DEFAULT: '#8B5CF6',
-          hover: '#7C3AED',
-          light: '#A78BFA',
+        elixir: {
+          50: '#F3EFF8',
+          100: '#F1EAF8',
+          200: '#E2DAEC',
+          600: '#5B2A86',
+          700: '#4A2170',
+          800: '#3D1A5E',
+        },
+        amber: {
+          DEFAULT: '#F4C152',
+        },
+        hiring: {
+          bg: '#E3F4EC',
+          text: '#1D6B48',
         },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
-      },
-      animation: {
-        'fade-in': 'fadeIn 0.5s ease-out',
-        'slide-up': 'slideUp 0.5s ease-out',
-        'count-up': 'countUp 2s ease-out',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        slideUp: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
+        display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [require('@tailwindcss/typography')],
 };

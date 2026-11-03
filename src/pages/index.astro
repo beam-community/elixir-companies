@@ -1,201 +1,271 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import CompanyCard from '../components/CompanyCard.astro';
 import { getCollection } from 'astro:content';
-import { getIndustryColor, getIndustryIcon } from '../utils/industries';
 import { toSlug } from '../utils/slug';
+import { countBy, formatLocation, normalizeCountry } from '../utils/company';
 
-const allCompanies = await getCollection('companies');
-const totalCount = allCompanies.length;
+const REPO = 'https://github.com/beam-community/elixir-companies';
 
-// Recently added companies (sorted by lastChangedOn descending)
-const recentCompanies = [...allCompanies]
-  .sort((a, b) => new Date(b.data.lastChangedOn).getTime() - new Date(a.data.lastChangedOn).getTime())
-  .slice(0, 8);
+const companies = await getCollection('companies');
+const total = companies.length;
+const bySlug = new Map(companies.map((c) => [toSlug(c.id), c]));
 
-// Stats
-const uniqueCountries = new Set(allCompanies.map(c => c.data.location.country).filter(Boolean));
-const uniqueIndustries = new Set(allCompanies.flatMap(c => c.data.industry).filter(Boolean));
+const industries = countBy(companies, (c) => c.data.industry);
+const countries = countBy(companies, (c) => [normalizeCountry(c.data.location.country)]).slice(0, 8);
+const maxCountry = countries[0]?.[1] ?? 1;
 
-// Industry breakdown for pills
-const industryCounts = allCompanies.reduce((acc, c) => {
-  for (const ind of c.data.industry) {
-    if (ind) acc[ind] = (acc[ind] || 0) + 1;
-  }
-  return acc;
-}, {} as Record<string, number>);
+const recent = [...companies]
+  .sort((a, b) => b.data.lastChangedOn.getTime() - a.data.lastChangedOn.getTime())
+  .slice(0, 4);
+const latest = recent[0];
 
-const sortedIndustries = Object.entries(industryCounts)
-  .sort((a, b) => b[1] - a[1]);
+const fmtDate = new Intl.DateTimeFormat('en', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+
+// Well-known names shown in the "In production at" strip; any slug that disappears is skipped.
+const showcase = ['discord', 'pinterest', 'adobe', 'brex', 'remote', 'felt', 'bleacher_report', 'moz']
+  .map((slug) => bySlug.get(slug) && { slug, name: bySlug.get(slug)!.data.name })
+  .filter(Boolean) as { slug: string; name: string }[];
+
+// Hero code card: a few real names, the rest counted.
+const heroNames = ['discord', 'pinterest', 'remote', latest && toSlug(latest.id)]
+  .filter((s, i, all): s is string => !!s && all.indexOf(s) === i && bySlug.has(s))
+  .slice(0, 4)
+  .map((s) => bySlug.get(s)!.data.name);
+
+const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const tok = (color: string, text: string) => `<span class="${color}">${esc(text)}</span>`;
+const heroCode = [
+  `${tok('text-[#C792EA]', 'children')} = [`,
+  ...heroNames.map((n) => `  {${tok('text-[#82AAFF]', 'Company')}, ${tok('text-amber', 'name:')} ${tok('text-[#A5E3A0]', `"${n}"`)}},`),
+  `  ${tok('text-[#8E80A6]', `# ...${total - heroNames.length} more`)}`,
+  ']',
+  '',
+  `${tok('text-[#82AAFF]', 'Supervisor')}.start_link(children,`,
+  `  ${tok('text-amber', 'strategy:')} ${tok('text-[#F78C6C]', ':one_for_one')})`,
+].join('\n');
+
+// Quotes are lifted verbatim from each company's own listing.
+const spotlight = [
+  { slug: 'brex', quote: 'We are 100% Elixir and we use it to build large-scale distributed systems.' },
+  { slug: 'treat_health', quote: 'The patient and doctor services run on Elixir and Phoenix LiveView, alongside React and native mobile apps.' },
+  { slug: 'felt', quote: 'A cloud-native geographic information system (GIS) platform for building maps, apps, and dashboards. Powered by Elixir and Phoenix.' },
+]
+  .filter((s) => bySlug.has(s.slug))
+  .map((s) => {
+    const c = bySlug.get(s.slug)!;
+    return { ...s, name: c.data.name, meta: [c.data.industry[0], c.data.location.city].filter(Boolean).join(' · ') };
+  });
+
+const popular = [
+  { label: 'Fintech', href: '/companies?industry=Financials' },
+  { label: 'Health care', href: '/companies?industry=Health%20Care' },
+  { label: 'Remote-first', href: '/companies?q=remote' },
+  { label: 'Consultancies', href: '/companies?industry=Professional%20Services' },
+];
+
+const why = [
+  {
+    title: 'Fault-tolerant by design',
+    body: 'Supervisors restart what fails, so one bad request never takes the whole system down.',
+    icon: '<path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6l-8-3Z"></path><path d="m9 12 2 2 4-4"></path>',
+  },
+  {
+    title: 'Concurrency that scales',
+    body: 'Millions of lightweight processes spread across every core, and across machines, without locks.',
+    icon: '<circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="m7.5 7.5 3 3M16.5 7.5l-3 3M7.5 16.5l3-3M16.5 16.5l-3-3"></path>',
+  },
+  {
+    title: 'Real-time, out of the box',
+    body: 'Phoenix Channels and LiveView ship interactive, live-updating apps with far less JavaScript.',
+    icon: '<path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"></path>',
+  },
+  {
+    title: 'A joy to maintain',
+    body: 'Immutable data, pattern matching and first-class tooling keep large codebases readable for years.',
+    icon: '<path d="m8 6-6 6 6 6M16 6l6 6-6 6"></path>',
+  },
+];
 ---
 
-<BaseLayout>
-  <!-- Hero -->
-  <section class="relative overflow-hidden bg-gradient-to-br from-elixir-700 via-elixir-800 to-elixir-950">
-    <!-- Grid pattern overlay -->
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>
-    </div>
-
-    <!-- Glowing orbs -->
-    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"></div>
-
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-      <div class="text-center">
-        <img src="/images/elixircompanies_logo.png" alt="Elixir Companies" class="h-40 w-auto mx-auto mb-8" />
-
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium mb-8">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          Community-driven & open source
+<BaseLayout active="home">
+  <div slot="hero" class="flex flex-wrap items-center gap-14 pb-24 pt-12 md:pt-[72px]">
+    <div class="min-w-0 flex-[1_1_480px]">
+      <p class="mb-5 font-mono text-[13px] uppercase tracking-[0.08em] text-plum-dim">The Elixir in production directory</p>
+      <h1 class="font-display text-[clamp(44px,6vw,76px)] font-extrabold leading-none tracking-[-0.03em]">
+        {total} companies run on Elixir. <span class="text-amber">Yours could be next.</span>
+      </h1>
+      <p class="mt-6 max-w-[560px] text-[19px] leading-relaxed text-plum-soft">
+        From chat at global scale to pharmacy point-of-sale in Belém, teams choose the BEAM for systems that stay up. Explore who's building with it, and how.
+      </p>
+      <form action="/companies" method="get" class="mt-9 flex max-w-[560px] flex-wrap gap-2.5" role="search">
+        <label for="hero-search" class="sr-only">Search companies</label>
+        <div class="flex h-14 min-w-0 flex-[1_1_280px] items-center gap-2.5 rounded-[14px] bg-white px-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E5670" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+          <input id="hero-search" name="q" type="search" placeholder="Search by name, industry or city" class="min-w-0 flex-1 border-0 bg-transparent text-base text-ink outline-none placeholder:text-muted" />
         </div>
-
-        <h1 class="font-display font-extrabold text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
-          Discover Companies<br />
-          <span class="gradient-text bg-gradient-to-r from-accent-light via-purple-300 to-pink-300">Powered by Elixir</span>
-        </h1>
-
-        <p class="text-xl md:text-2xl text-elixir-200 max-w-2xl mx-auto mb-10">
-          A curated directory of companies using Elixir in production, maintained by the community.
-        </p>
-
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-          <a href="/companies" class="btn-primary text-lg !px-8 !py-4">
-            Browse Companies
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </a>
-          <a
-            href="https://github.com/beam-community/elixir-companies"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-white border-2 border-white/30 rounded-xl hover:bg-white/10 transition-all"
-          >
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            Add Your Company
-          </a>
-        </div>
-
-        <!-- Stats -->
-        <div class="grid grid-cols-3 gap-4 max-w-lg mx-auto">
-          <div class="text-center">
-            <div class="font-display font-extrabold text-3xl md:text-4xl text-white">{totalCount}</div>
-            <div class="text-sm text-elixir-300 mt-1">Companies</div>
-          </div>
-          <div class="text-center">
-            <div class="font-display font-extrabold text-3xl md:text-4xl text-white">{uniqueIndustries.size}</div>
-            <div class="text-sm text-elixir-300 mt-1">Industries</div>
-          </div>
-          <div class="text-center">
-            <div class="font-display font-extrabold text-3xl md:text-4xl text-white">{uniqueCountries.size}</div>
-            <div class="text-sm text-elixir-300 mt-1">Countries</div>
-          </div>
-        </div>
+        <button type="submit" class="btn-amber h-14 text-base">Browse all</button>
+      </form>
+      <div class="mt-5 flex flex-wrap items-center gap-2 text-sm text-plum-dim">
+        <span>Popular:</span>
+        {popular.map((p) => (
+          <a href={p.href} class="rounded-full border border-plum-border px-3 py-1.5 text-plum-text no-underline hover:border-plum-dim hover:text-white">{p.label}</a>
+        ))}
       </div>
     </div>
 
-    <!-- Wave divider -->
-    <div class="absolute bottom-0 left-0 right-0">
-      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
-        <path d="M0 80h1440V40C1200 70 960 10 720 40S240 70 0 40v40z" class="fill-gray-50 dark:fill-elixir-950" />
-      </svg>
-    </div>
-  </section>
-
-  <!-- Recent Additions -->
-  <section class="py-16 md:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-end justify-between mb-10">
-        <div>
-          <h2 class="font-display font-bold text-3xl md:text-4xl text-gray-900 dark:text-white">
-            Recent Additions
-          </h2>
-          <p class="text-gray-500 dark:text-gray-400 mt-2">
-            The latest companies to join our directory
-          </p>
+    <div class="relative min-w-0 flex-[1_1_420px]">
+      <div class="overflow-hidden rounded-[20px] border border-[#3A2652] bg-plum-deep shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+        <div class="flex items-center gap-2 border-b border-[#2E1D44] px-[18px] py-3.5" aria-hidden="true">
+          <span class="h-2.5 w-2.5 rounded-full bg-[#3A2652]"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-[#3A2652]"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-[#3A2652]"></span>
+          <span class="ml-2.5 font-mono text-[13px] text-[#A99BBE]">lib/community/application.ex</span>
         </div>
-        <a href="/companies?sort=recent" class="hidden sm:flex items-center gap-1 text-accent hover:text-accent-hover font-medium text-sm transition-colors">
-          View all
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
+        <pre class="m-0 overflow-x-auto whitespace-pre-wrap px-[22px] py-6 font-mono text-[14.5px] leading-[1.75] text-[#E9E1F5]" set:html={heroCode}></pre>
+      </div>
+      {latest && (
+        <a href={`/companies/${toSlug(latest.id)}`} class="absolute -bottom-7 left-0 flex items-center gap-3 rounded-2xl bg-white px-[18px] py-3.5 text-ink no-underline shadow-[0_16px_40px_rgba(28,14,43,0.35)] hover:text-ink md:-left-5">
+          <span class="h-2.5 w-2.5 rounded-full bg-[#2F9E6B]" aria-hidden="true"></span>
+          <span>
+            <span class="block text-[15px] font-semibold">Recently added: {latest.data.name}</span>
+            {formatLocation(latest.data.location) && <span class="block text-[13px] text-muted">{formatLocation(latest.data.location)}</span>}
+          </span>
         </a>
-      </div>
+      )}
+    </div>
+  </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-        {recentCompanies.map((company) => (
-          <CompanyCard
-            name={company.data.name}
-            slug={toSlug(company.id)}
-            industry={company.data.industry}
-            website={company.data.website}
-            github={company.data.github}
-            location={company.data.location}
-            description={company.body || ''}
-            jobs={company.data.jobs}
-          />
+  <!-- In production at -->
+  <section class="border-b border-line bg-white">
+    <div class="container-page flex flex-wrap items-center gap-x-12 gap-y-6 py-10">
+      <p class="m-0 font-mono text-xs uppercase tracking-[0.08em] text-muted">In production at</p>
+      <div class="flex flex-[1_1_600px] flex-wrap items-center justify-between gap-x-9 gap-y-5">
+        {showcase.map((s) => (
+          <a href={`/companies/${s.slug}`} class="font-display text-2xl font-bold tracking-[-0.01em] text-[#4A4358] no-underline hover:text-elixir-600">{s.name}</a>
         ))}
-      </div>
-
-      <div class="text-center mt-10 sm:hidden">
-        <a href="/companies?sort=recent" class="btn-secondary">View all companies</a>
       </div>
     </div>
   </section>
 
-  <!-- Browse by Industry -->
-  <section class="py-16 md:py-24 bg-white dark:bg-elixir-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="font-display font-bold text-3xl md:text-4xl text-gray-900 dark:text-white">
-          Browse by Industry
-        </h2>
-        <p class="text-gray-500 dark:text-gray-400 mt-2">
-          Explore companies across different sectors
-        </p>
+  <!-- Why Elixir -->
+  <section id="why" class="container-page pb-24 pt-28">
+    <div class="mb-12 flex flex-wrap items-end justify-between gap-6">
+      <div class="max-w-[640px]">
+        <p class="eyebrow mb-3.5">Why teams pick Elixir</p>
+        <h2 class="font-display text-[clamp(34px,4vw,52px)] font-extrabold leading-[1.05] tracking-[-0.025em]">Built on 30+ years of telecom-grade engineering.</h2>
       </div>
+      <p class="max-w-[420px] text-[17px] leading-relaxed text-muted">Elixir runs on the Erlang VM, the BEAM, originally built to keep phone switches online. Modern syntax, battle-tested runtime.</p>
+    </div>
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5">
+      {why.map((w) => (
+        <article class="card p-7">
+          <div class="flex h-12 w-12 items-center justify-center rounded-[14px] bg-elixir-100">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B2A86" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={w.icon} />
+          </div>
+          <h3 class="mb-2.5 mt-5 font-display text-[22px] font-bold tracking-[-0.01em]">{w.title}</h3>
+          <p class="text-[15.5px] leading-relaxed text-muted">{w.body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
 
-      <div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-        {sortedIndustries.map(([industry, count]) => (
-          <a
-            href={`/companies?industry=${encodeURIComponent(industry)}`}
-            class={`inline-flex items-center gap-2 px-5 py-3 rounded-xl font-medium text-sm transition-all hover:-translate-y-0.5 hover:shadow-lg ${getIndustryColor(industry)}`}
-          >
-            <span>{getIndustryIcon(industry)}</span>
-            {industry}
-            <span class="opacity-60">({count})</span>
+  <!-- Industries -->
+  <section id="industries" class="bg-elixir-50">
+    <div class="container-page py-24">
+      <div class="mb-10 flex flex-wrap items-end justify-between gap-5">
+        <div>
+          <p class="eyebrow mb-3.5">Browse by industry</p>
+          <h2 class="h-section">Not just a startup language.</h2>
+        </div>
+        <a href="/companies" class="py-3 text-base font-semibold">All {industries.length} industries →</a>
+      </div>
+      <div class="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-3.5">
+        {industries.map(([name, count]) => (
+          <a href={`/companies?industry=${encodeURIComponent(name)}`} class="flex items-center justify-between gap-4 rounded-2xl border border-elixir-200 bg-white px-6 py-[22px] text-ink no-underline transition hover:border-elixir-600 hover:text-ink">
+            <span class="text-[17px] font-semibold">{name}</span>
+            <span class="rounded-full bg-elixir-100 px-2.5 py-1 font-mono text-sm text-elixir-600">{count}</span>
           </a>
         ))}
       </div>
+    </div>
+  </section>
+
+  <!-- Spotlight -->
+  {spotlight.length > 0 && (
+    <section class="container-page pb-24 pt-28">
+      <p class="eyebrow mb-3.5">In their words</p>
+      <h2 class="h-section mb-11 max-w-[720px]">How companies actually use it.</h2>
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))] gap-5">
+        {spotlight.map((s, i) => (
+          <article class:list={['flex flex-col justify-between gap-7 rounded-3xl p-9', i === 0 ? 'bg-plum text-plum-text' : 'border border-line bg-white']}>
+            <p class:list={['font-display font-medium leading-[1.3] tracking-[-0.01em]', i === 0 ? 'text-[26px]' : 'text-[22px]']}>“{s.quote}”</p>
+            <div class="flex items-center justify-between gap-3">
+              <div>
+                <div class="text-[17px] font-semibold">{s.name}</div>
+                <div class:list={['text-sm', i === 0 ? 'text-plum-dim' : 'text-muted']}>{s.meta}</div>
+              </div>
+              <a href={`/companies/${s.slug}`} class:list={['py-3 text-[15px] font-semibold', i === 0 && 'text-amber hover:text-amber']}>View profile →</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Recent + world -->
+  <section class="container-page flex flex-wrap gap-5 pb-28">
+    <div class="card min-w-0 flex-[1_1_520px] rounded-3xl p-9">
+      <div class="mb-5 flex items-baseline justify-between gap-3">
+        <h2 class="font-display text-[28px] font-bold tracking-[-0.02em]">Latest updates</h2>
+        <a href="/companies?sort=recent" class="py-3 text-[15px] font-semibold">See all</a>
+      </div>
+      {recent.map((c) => (
+        <a href={`/companies/${toSlug(c.id)}`} class="flex items-center gap-4 border-t border-[#EFEBF4] py-4 text-ink no-underline hover:text-ink">
+          <span class="avatar h-11 w-11 rounded-xl text-lg">{c.data.name[0]}</span>
+          <span class="min-w-0 flex-1">
+            <span class="block text-base font-semibold">{c.data.name}</span>
+            <span class="block truncate text-sm text-muted">{[c.data.industry[0], formatLocation(c.data.location)].filter(Boolean).join(' · ')}</span>
+          </span>
+          <time datetime={c.data.lastChangedOn.toISOString().slice(0, 10)} class="font-mono text-[13px] text-muted">{fmtDate.format(c.data.lastChangedOn)}</time>
+        </a>
+      ))}
+    </div>
+    <div class="card min-w-0 flex-[1_1_380px] rounded-3xl p-9">
+      <h2 class="mb-1.5 font-display text-[28px] font-bold tracking-[-0.02em]">Around the world</h2>
+      <p class="mb-6 text-[15px] text-muted">Listed companies by country</p>
+      <ul class="m-0 list-none p-0">
+        {countries.map(([name, count]) => (
+          <li class="flex items-center gap-3.5 py-2">
+            <span class="w-[120px] shrink-0 text-[15px] font-medium">{name}</span>
+            <span class="h-2.5 flex-1 overflow-hidden rounded-full bg-elixir-100" aria-hidden="true">
+              <span class="block h-full rounded-full bg-elixir-600" style={`width:${Math.round((count / maxCountry) * 100)}%`}></span>
+            </span>
+            <span class="w-8 shrink-0 text-right font-mono text-sm text-muted">{count}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="py-16 md:py-24">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div class="bg-gradient-to-br from-elixir-700 to-elixir-900 rounded-3xl p-10 md:p-16 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-          <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 30px 30px;"></div>
-        </div>
-        <div class="relative">
-          <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-4">
-            Is your company using Elixir?
-          </h2>
-          <p class="text-elixir-200 text-lg mb-8 max-w-xl mx-auto">
-            Join {totalCount} other companies in our directory. It's free, open source, and takes just a pull request.
-          </p>
-          <a
-            href="https://github.com/beam-community/elixir-companies"
-            target="_blank"
-            rel="noopener"
-            class="btn-primary text-lg !px-8 !py-4 !bg-white !text-elixir-700 hover:!bg-gray-100 !shadow-xl"
-          >
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            Add Your Company on GitHub
+  <section id="add" class="px-6 pb-28">
+    <div class="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-12 rounded-[32px] bg-elixir-600 px-8 py-16 text-white md:px-14">
+      <div class="min-w-0 flex-[1_1_420px]">
+        <h2 class="font-display text-[clamp(34px,4vw,52px)] font-extrabold leading-[1.02] tracking-[-0.025em]">Using Elixir? Get on the map.</h2>
+        <p class="mb-8 mt-4 max-w-[520px] text-lg leading-relaxed text-[#E6DAF3]">Every listing is a single Markdown file. Open a pull request and help show the world Elixir is ready for production.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href={`${REPO}/new/main/src/content/companies`} class="btn-amber h-[52px] text-base">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+            Add your company
           </a>
+          <a href={`${REPO}#adding-a-new-company`} class="inline-flex h-[52px] items-center rounded-[14px] border border-[#9C74C4] px-[22px] text-base font-semibold text-white no-underline hover:bg-elixir-700 hover:text-white">Read the guide</a>
         </div>
       </div>
+      <ol class="m-0 flex min-w-0 flex-[1_1_360px] list-none flex-col gap-3 p-0">
+        <li class="flex items-center gap-4 rounded-2xl bg-elixir-700 px-5 py-[18px]"><span class="font-mono text-sm text-amber">01</span><span>Fork the repository</span></li>
+        <li class="flex flex-wrap items-center gap-4 rounded-2xl bg-elixir-700 px-5 py-[18px]"><span class="font-mono text-sm text-amber">02</span><span>Add <code class="rounded-md bg-[#3A1959] px-1.5 py-0.5 font-mono text-sm">src/content/companies/you.md</code></span></li>
+        <li class="flex items-center gap-4 rounded-2xl bg-elixir-700 px-5 py-[18px]"><span class="font-mono text-sm text-amber">03</span><span>Open a pull request. That's it.</span></li>
+      </ol>
     </div>
   </section>
 </BaseLayout>

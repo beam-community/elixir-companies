@@ -1,0 +1,13 @@
+---
+interface Props {
+  size?: number;
+  fill?: string;
+  cutout?: string;
+}
+const { size = 28, fill = '#F4C152', cutout } = Astro.props;
+---
+
+<svg width={size} height={size} viewBox="0 0 28 28" aria-hidden="true">
+  <path d="M14 2C9 9 6 13.5 6 18a8 8 0 0 0 16 0c0-4.5-3-9-8-16Z" fill={fill}></path>
+  {cutout && <path d="M11 17c0 2.5 1.5 4 3.5 4.5" stroke={cutout} stroke-width="1.8" fill="none" stroke-linecap="round"></path>}
+</svg>

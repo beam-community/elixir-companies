@@ -1,340 +1,266 @@
-import { useState, useMemo, useCallback, useEffect } from 'preact/hooks';
+import { useState, useMemo, useEffect } from 'preact/hooks';
 import type { CompanyData, SortOption } from '../utils/search';
-import {
-  searchCompanies,
-  filterByIndustry,
-  filterByCountry,
-  sortCompanies,
-  getUniqueCountries,
-  getUniqueIndustries,
-} from '../utils/search';
-import { getIndustryColor, getIndustryIcon } from '../utils/industries';
+import { filterCompanies, sortCompanies } from '../utils/search';
 
 const PAGE_SIZE = 24;
 
-function IndustryTag({ industry, size = 'sm' }: { industry: string; size?: 'sm' | 'md' }) {
-  const sizeClass = size === 'md' ? 'px-4 py-1.5 text-sm' : 'px-3 py-1 text-xs';
-  return (
-    <span
-      class={`inline-flex items-center gap-1 rounded-full font-medium ${getIndustryColor(industry)} ${sizeClass}`}
-    >
-      <span>{getIndustryIcon(industry)}</span>
-      {industry}
-    </span>
-  );
+interface Props {
+  companies: CompanyData[];
+  /** [industry, count] sorted by count. */
+  industries: [string, number][];
+  /** Countries with at least one listing, sorted by count. */
+  countries: string[];
 }
 
-function CompanyCardPreact({ company }: { company: CompanyData }) {
-  const locationText =
-    [company.location.city, company.location.state, company.location.country]
-      .filter(Boolean)
-      .join(', ') || 'Remote';
+const PinIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+    <path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z" />
+    <circle cx="12" cy="9.5" r="2.5" />
+  </svg>
+);
 
-  const plainDesc = company.description
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-    .replace(/[*_~`]/g, '')
-    .trim();
-  const truncatedDesc =
-    plainDesc.length > 150
-      ? plainDesc.slice(0, 150).trimEnd() + '...'
-      : plainDesc;
+const GithubIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" />
+  </svg>
+);
 
+const GlobeIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="9" />
+    <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+  </svg>
+);
+
+function CompanyCard({ company }: { company: CompanyData }) {
+  const href = `/companies/${company.slug}`;
   return (
-    <a
-      href={`/companies/${company.slug}`}
-      class="card block group relative"
-    >
-      {company.jobs && (
-        <div class="absolute top-3 right-3 z-10">
-          <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500 text-white shadow-lg shadow-emerald-500/30">
-            Hiring
-          </span>
-        </div>
-      )}
-      <div class="p-6">
-        <h3 class="font-display font-bold text-lg text-gray-900 dark:text-white group-hover:text-accent transition-colors leading-tight mb-3">
-          {company.name}
-        </h3>
-        <div class="flex flex-wrap gap-1.5 mb-3">
-          {company.industry.map((ind) => (
-            <IndustryTag key={ind} industry={ind} />
-          ))}
-        </div>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3 leading-relaxed"
-           style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-          {truncatedDesc}
-        </p>
-        <div class="flex items-center gap-4 text-xs text-gray-400 dark:text-gray-500 mt-auto pt-3 border-t border-gray-100 dark:border-elixir-800">
-          <span class="flex items-center gap-1">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-              />
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-              />
-            </svg>
-            {locationText}
-          </span>
-          {company.github && (
-            <span class="flex items-center gap-1">
-              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-              </svg>
-              GitHub
-            </span>
-          )}
+    <article class="card flex flex-col gap-3.5 p-6">
+      <div class="flex items-center gap-3.5">
+        <span class="avatar h-12 w-12 text-xl">{company.name[0]}</span>
+        <div class="min-w-0">
+          <h3 class="font-display text-xl font-bold tracking-[-0.01em]">
+            <a href={href} class="text-ink no-underline hover:text-elixir-600">{company.name}</a>
+          </h3>
+          <div class="flex items-center gap-1 text-[13.5px] text-muted">
+            <PinIcon />
+            <span class="truncate">{company.place || 'Location not listed'}</span>
+          </div>
         </div>
       </div>
-    </a>
+      <p class="line-clamp-3 flex-1 text-[15px] leading-normal text-[#4A4358]">
+        {company.description || 'No description yet.'}
+      </p>
+      <div class="flex flex-wrap gap-1.5">
+        {company.industry.map((ind) => (
+          <span key={ind} class="pill">{ind}</span>
+        ))}
+      </div>
+      <div class="mt-0.5 flex items-center gap-2 border-t border-[#EFEBF4] pt-3">
+        <a href={href} class="flex-1 py-2.5 text-sm font-semibold no-underline">View profile →</a>
+        {company.jobs && <span class="pill-hiring">Hiring</span>}
+        {company.github && (
+          <a href={company.github} target="_blank" rel="noopener" aria-label={`${company.name} on GitHub`} class="inline-flex h-11 w-11 items-center justify-center rounded-[10px] text-muted hover:bg-elixir-50 hover:text-elixir-600">
+            <GithubIcon />
+          </a>
+        )}
+        <a href={company.website} target="_blank" rel="noopener" aria-label={`${company.name} website`} class="inline-flex h-11 w-11 items-center justify-center rounded-[10px] text-muted hover:bg-elixir-50 hover:text-elixir-600">
+          <GlobeIcon />
+        </a>
+      </div>
+    </article>
   );
 }
 
-export default function SearchFilter({
-  companies,
-}: {
-  companies: CompanyData[];
-}) {
+export default function SearchFilter({ companies, industries, countries }: Props) {
   const [query, setQuery] = useState('');
-  const [selectedIndustries, setSelectedIndustries] = useState<string[]>([]);
-  const [selectedCountry, setSelectedCountry] = useState('');
+  const [selected, setSelected] = useState<string[]>([]);
+  const [country, setCountry] = useState('');
+  const [onlyGithub, setOnlyGithub] = useState(false);
+  const [onlyHiring, setOnlyHiring] = useState(false);
   const [sort, setSort] = useState<SortOption>('name');
   const [page, setPage] = useState(1);
-  const [showFilters, setShowFilters] = useState(false);
 
-  const allIndustries = useMemo(() => getUniqueIndustries(companies), [companies]);
-  const allCountries = useMemo(() => getUniqueCountries(companies), [companies]);
-
-  // Read initial state from URL
+  // Read initial state from the URL (homepage links use ?industry=, ?q=, ?sort=).
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const q = params.get('q');
-    const ind = params.get('industry');
-    const country = params.get('country');
-    const s = params.get('sort');
-    if (q) setQuery(q);
-    if (ind) setSelectedIndustries(ind.split(','));
-    if (country) setSelectedCountry(country);
+    const p = new URLSearchParams(window.location.search);
+    setQuery(p.get('q') ?? '');
+    setSelected(p.get('industry')?.split(',').filter(Boolean) ?? []);
+    setCountry(p.get('country') ?? '');
+    setOnlyGithub(p.has('github'));
+    setOnlyHiring(p.has('hiring'));
+    const s = p.get('sort');
     if (s === 'name' || s === 'recent') setSort(s);
   }, []);
 
-  const filtered = useMemo(() => {
-    let result = searchCompanies(companies, query);
-    result = filterByIndustry(result, selectedIndustries);
-    result = filterByCountry(result, selectedCountry);
-    result = sortCompanies(result, sort);
-    return result;
-  }, [companies, query, selectedIndustries, selectedCountry, sort]);
-
-  const displayed = useMemo(
-    () => filtered.slice(0, page * PAGE_SIZE),
-    [filtered, page],
-  );
-  const hasMore = displayed.length < filtered.length;
-
-  // Sync state to URL
+  // "/" focuses search, like most directories.
   useEffect(() => {
-    const params = new URLSearchParams();
-    if (query) params.set('q', query);
-    if (selectedIndustries.length) params.set('industry', selectedIndustries.join(','));
-    if (selectedCountry) params.set('country', selectedCountry);
-    if (sort !== 'name') params.set('sort', sort);
-    const qs = params.toString();
-    const url = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
-    window.history.replaceState(null, '', url);
-  }, [query, selectedIndustries, selectedCountry, sort]);
-
-  const toggleIndustry = useCallback((industry: string) => {
-    setSelectedIndustries((prev) =>
-      prev.includes(industry)
-        ? prev.filter((i) => i !== industry)
-        : [...prev, industry],
-    );
-    setPage(1);
+    const onKey = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement;
+      if (e.key !== '/' || target.closest('input, textarea, select')) return;
+      e.preventDefault();
+      document.getElementById('dir-search')?.focus();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
   }, []);
 
-  const clearFilters = useCallback(() => {
+  // Keep the URL shareable.
+  useEffect(() => {
+    const p = new URLSearchParams();
+    if (query) p.set('q', query);
+    if (selected.length) p.set('industry', selected.join(','));
+    if (country) p.set('country', country);
+    if (onlyGithub) p.set('github', '');
+    if (onlyHiring) p.set('hiring', '');
+    if (sort !== 'name') p.set('sort', sort);
+    const qs = p.toString().replace(/=(?=&|$)/g, '');
+    window.history.replaceState(null, '', qs ? `${window.location.pathname}?${qs}` : window.location.pathname);
+  }, [query, selected, country, onlyGithub, onlyHiring, sort]);
+
+  const filtered = useMemo(
+    () => sortCompanies(filterCompanies(companies, { query, industries: selected, country, onlyGithub, onlyHiring }), sort),
+    [companies, query, selected, country, onlyGithub, onlyHiring, sort],
+  );
+  const displayed = filtered.slice(0, page * PAGE_SIZE);
+  const isFiltered = !!query || selected.length > 0 || !!country || onlyGithub || onlyHiring;
+
+  const update = <T,>(set: (v: T) => void) => (v: T) => {
+    set(v);
+    setPage(1);
+  };
+
+  const toggleIndustry = (ind: string) =>
+    update(setSelected)(selected.includes(ind) ? selected.filter((i) => i !== ind) : [...selected, ind]);
+
+  const clearFilters = () => {
     setQuery('');
-    setSelectedIndustries([]);
-    setSelectedCountry('');
-    setSort('name');
+    setSelected([]);
+    setCountry('');
+    setOnlyGithub(false);
+    setOnlyHiring(false);
     setPage(1);
-  }, []);
+  };
 
-  const activeFilterCount =
-    (query ? 1 : 0) + selectedIndustries.length + (selectedCountry ? 1 : 0);
+  const industryButton = (name: string, count: number, active: boolean, onClick: () => void) => (
+    <button
+      key={name}
+      type="button"
+      aria-pressed={active}
+      onClick={onClick}
+      class={`flex min-h-11 w-full items-center justify-between gap-3 rounded-[10px] px-3 text-left text-[15px] transition ${
+        active ? 'bg-elixir-100 font-semibold text-elixir-800' : 'text-ink hover:bg-elixir-50'
+      }`}
+    >
+      <span>{name}</span>
+      <span class={`font-mono text-[13px] ${active ? 'text-elixir-600' : 'text-muted'}`}>{count}</span>
+    </button>
+  );
 
   return (
     <div>
-      {/* Search bar */}
-      <div class="flex flex-col sm:flex-row gap-3 mb-6">
-        <div class="relative flex-1">
-          <svg
-            class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-          <input
-            type="text"
-            placeholder="Search companies, industries, locations..."
-            value={query}
-            onInput={(e) => {
-              setQuery((e.target as HTMLInputElement).value);
-              setPage(1);
-            }}
-            class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 dark:border-elixir-700 bg-white dark:bg-elixir-900 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-accent/50 focus:border-accent outline-none transition-all"
-          />
-        </div>
-
-        <div class="flex gap-2">
-          <button
-            onClick={() => setShowFilters(!showFilters)}
-            class={`flex items-center gap-2 px-4 py-3 rounded-xl border transition-all text-sm font-medium ${
-              showFilters || activeFilterCount > 0
-                ? 'border-accent bg-accent/10 text-accent'
-                : 'border-gray-200 dark:border-elixir-700 text-gray-600 dark:text-gray-300 hover:border-accent'
-            }`}
-          >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-            </svg>
-            Filters
-            {activeFilterCount > 0 && (
-              <span class="flex items-center justify-center w-5 h-5 rounded-full bg-accent text-white text-xs font-bold">
-                {activeFilterCount}
-              </span>
-            )}
-          </button>
-
-          <select
-            value={sort}
-            onChange={(e) => {
-              setSort((e.target as HTMLSelectElement).value as SortOption);
-              setPage(1);
-            }}
-            class="px-4 py-3 rounded-xl border border-gray-200 dark:border-elixir-700 bg-white dark:bg-elixir-900 text-gray-600 dark:text-gray-300 text-sm font-medium outline-none focus:ring-2 focus:ring-accent/50"
-          >
-            <option value="name">A - Z</option>
-            <option value="recent">Recently Added</option>
-          </select>
-        </div>
+      {/* Search sits in the dark header band on desktop and mobile alike. */}
+      <div class="-mt-[88px] mb-10 flex h-14 max-w-[640px] items-center gap-2.5 rounded-[14px] bg-white px-4 shadow-[0_16px_40px_rgba(28,14,43,0.18)]">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E5670" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-3.5-3.5" />
+        </svg>
+        <label for="dir-search" class="sr-only">Search companies</label>
+        <input
+          id="dir-search"
+          type="search"
+          value={query}
+          onInput={(e) => update(setQuery)((e.target as HTMLInputElement).value)}
+          placeholder="Try “LiveView”, “Berlin” or “fintech”"
+          class="min-w-0 flex-1 border-0 bg-transparent text-base text-ink outline-none placeholder:text-muted"
+        />
+        <kbd class="hidden rounded-md border border-[#D9D3E2] px-1.5 py-0.5 font-mono text-xs text-muted sm:inline">/</kbd>
       </div>
 
-      {/* Filters panel */}
-      {showFilters && (
-        <div class="mb-6 p-5 rounded-2xl bg-white dark:bg-elixir-900 border border-gray-200 dark:border-elixir-700 animate-fade-in">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="font-display font-semibold text-sm text-gray-900 dark:text-white">
-              Filter by Industry
-            </h3>
-            {activeFilterCount > 0 && (
-              <button
-                onClick={clearFilters}
-                class="text-xs text-accent hover:text-accent-hover font-medium"
-              >
-                Clear all
-              </button>
-            )}
-          </div>
-          <div class="flex flex-wrap gap-2 mb-4">
-            {allIndustries.map((industry) => (
-              <button
-                key={industry}
-                onClick={() => toggleIndustry(industry)}
-                class={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
-                  selectedIndustries.includes(industry)
-                    ? 'bg-accent text-white shadow-md shadow-accent/25'
-                    : 'bg-gray-100 dark:bg-elixir-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-elixir-700'
-                }`}
-              >
-                {getIndustryIcon(industry)} {industry}
-              </button>
-            ))}
+      <div class="flex flex-wrap items-start gap-10">
+        <aside class="max-w-full flex-[1_1_240px]">
+          <h2 class="mb-3 font-mono text-xs font-medium uppercase tracking-[0.08em] text-muted">Industry</h2>
+          <div class="flex flex-col gap-0.5">
+            {industryButton('All', companies.length, selected.length === 0, () => update(setSelected)([]))}
+            {industries.map(([name, count]) => industryButton(name, count, selected.includes(name), () => toggleIndustry(name)))}
           </div>
 
-          <h3 class="font-display font-semibold text-sm text-gray-900 dark:text-white mb-2">
-            Filter by Country
-          </h3>
+          <h2 class="mb-3 mt-8 font-mono text-xs font-medium uppercase tracking-[0.08em] text-muted">
+            <label for="dir-country">Country</label>
+          </h2>
           <select
-            value={selectedCountry}
-            onChange={(e) => {
-              setSelectedCountry((e.target as HTMLSelectElement).value);
-              setPage(1);
-            }}
-            class="w-full sm:w-64 px-3 py-2 rounded-lg border border-gray-200 dark:border-elixir-700 bg-white dark:bg-elixir-800 text-gray-600 dark:text-gray-300 text-sm outline-none"
+            id="dir-country"
+            value={country}
+            onChange={(e) => update(setCountry)((e.target as HTMLSelectElement).value)}
+            class="h-11 w-full rounded-[10px] border border-[#D9D3E2] bg-white px-3 text-[15px] text-ink"
           >
-            <option value="">All Countries</option>
-            {allCountries.map((country) => (
-              <option key={country} value={country}>
-                {country}
-              </option>
+            <option value="">All countries</option>
+            {countries.map((c) => (
+              <option key={c} value={c}>{c}</option>
             ))}
           </select>
-        </div>
-      )}
 
-      {/* Results count */}
-      <div class="flex items-center justify-between mb-6">
-        <p class="text-sm text-gray-500 dark:text-gray-400">
-          Showing{' '}
-          <span class="font-semibold text-gray-900 dark:text-white">
-            {displayed.length}
-          </span>{' '}
-          of{' '}
-          <span class="font-semibold text-gray-900 dark:text-white">
-            {filtered.length}
-          </span>{' '}
-          companies
-        </p>
+          <h2 class="mb-3 mt-8 font-mono text-xs font-medium uppercase tracking-[0.08em] text-muted">Show only</h2>
+          <label class="flex min-h-11 items-center gap-2.5 text-[15px]">
+            <input type="checkbox" checked={onlyGithub} onChange={() => update(setOnlyGithub)(!onlyGithub)} class="h-[18px] w-[18px] accent-elixir-600" />
+            Has open source on GitHub
+          </label>
+          <label class="flex min-h-11 items-center gap-2.5 text-[15px]">
+            <input type="checkbox" checked={onlyHiring} onChange={() => update(setOnlyHiring)(!onlyHiring)} class="h-[18px] w-[18px] accent-elixir-600" />
+            Hiring (jobs link listed)
+          </label>
+        </aside>
+
+        <section class="min-w-0 flex-[999_1_560px]" aria-label="Results">
+          <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
+            <p class="text-[15px] text-muted" aria-live="polite">
+              <strong class="text-ink">{isFiltered ? `${filtered.length} ${filtered.length === 1 ? 'match' : 'matches'}` : `${companies.length} companies`}</strong>
+              {selected.length === 1 && ` in ${selected[0]}`}
+              {isFiltered && (
+                <button type="button" onClick={clearFilters} class="ml-3 font-semibold text-elixir-600 hover:text-elixir-800">
+                  Clear filters
+                </button>
+              )}
+            </p>
+            <div class="flex items-center gap-2 text-sm text-muted">
+              <label for="sort">Sort</label>
+              <select
+                id="sort"
+                value={sort}
+                onChange={(e) => update(setSort)((e.target as HTMLSelectElement).value as SortOption)}
+                class="h-11 rounded-[10px] border border-[#D9D3E2] bg-white px-3 text-sm text-ink"
+              >
+                <option value="name">Name A–Z</option>
+                <option value="recent">Recently updated</option>
+              </select>
+            </div>
+          </div>
+
+          {displayed.length > 0 ? (
+            <div class="grid grid-cols-[repeat(auto-fill,minmax(min(280px,100%),1fr))] gap-4">
+              {displayed.map((c) => (
+                <CompanyCard key={c.slug} company={c} />
+              ))}
+            </div>
+          ) : (
+            <div class="rounded-[20px] border border-dashed border-[#D9D3E2] bg-white px-6 py-14 text-center">
+              <h3 class="mb-2 font-display text-2xl font-bold">No companies match yet</h3>
+              <p class="mb-5 text-[15px] text-muted">Know one that should be here? Listings are one Markdown file away.</p>
+              <button type="button" onClick={clearFilters} class="h-11 rounded-xl border border-elixir-600 bg-white px-[18px] font-semibold text-elixir-600 hover:bg-elixir-50">
+                Clear filters
+              </button>
+            </div>
+          )}
+
+          {displayed.length < filtered.length && (
+            <div class="mt-10 text-center">
+              <button type="button" onClick={() => setPage(page + 1)} class="h-12 rounded-[14px] border border-[#D9D3E2] bg-white px-6 font-semibold text-ink hover:border-elixir-600 hover:text-elixir-600">
+                Show more ({filtered.length - displayed.length} remaining)
+              </button>
+            </div>
+          )}
+        </section>
       </div>
-
-      {/* Results grid */}
-      {displayed.length > 0 ? (
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {displayed.map((company) => (
-            <CompanyCardPreact key={company.slug} company={company} />
-          ))}
-        </div>
-      ) : (
-        <div class="text-center py-16">
-          <div class="text-5xl mb-4">🔍</div>
-          <h3 class="font-display font-semibold text-lg text-gray-900 dark:text-white mb-2">
-            No companies found
-          </h3>
-          <p class="text-gray-500 dark:text-gray-400 mb-4">
-            Try adjusting your search or filters
-          </p>
-          <button onClick={clearFilters} class="btn-primary text-sm">
-            Clear all filters
-          </button>
-        </div>
-      )}
-
-      {/* Load more */}
-      {hasMore && (
-        <div class="text-center mt-8">
-          <button
-            onClick={() => setPage((p) => p + 1)}
-            class="btn-secondary"
-          >
-            Load More ({filtered.length - displayed.length} remaining)
-          </button>
-        </div>
-      )}
     </div>
   );
 }
