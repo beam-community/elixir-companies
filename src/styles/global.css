@@ -1,11 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+/* Dark mode is class-based: BaseLayout puts .dark on <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Theme-aware colours point at the variables below (light on :root, dark on .dark).
+   `inline` keeps the var() reference so utilities follow the active theme. */
+@theme inline {
+  --color-ground: rgb(var(--ground));
+  --color-surface: rgb(var(--surface));
+  --color-ink: rgb(var(--ink));
+  --color-body: rgb(var(--body));
+  --color-muted: rgb(var(--muted));
+  --color-line: rgb(var(--line));
+  --color-line-soft: rgb(var(--line-soft));
+  --color-field: rgb(var(--field));
+  --color-tint: rgb(var(--tint));
+  --color-tint-strong: rgb(var(--tint-strong));
+  --color-tint-border: rgb(var(--tint-border));
+  --color-link: rgb(var(--link));
+  --color-link-hover: rgb(var(--link-hover));
+  --color-pill: rgb(var(--pill));
+  --color-hiring-bg: rgb(var(--hiring-bg));
+  --color-hiring-text: rgb(var(--hiring-text));
+}
+
+/* Fixed in both themes: the plum header band and purple brand fills. */
+@theme {
+  --color-plum: #1c0e2b;
+  --color-plum-deep: #120820;
+  --color-plum-raised: #2e1a45;
+  --color-plum-border: #4a3463;
+  --color-plum-text: #f6f1fb;
+  --color-plum-soft: #d9cfe8;
+  --color-plum-dim: #c9beda;
+  --color-elixir-600: #5b2a86;
+  --color-elixir-700: #4a2170;
+  --color-amber: #f4c152;
+
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
 
 @layer base {
-  /* RGB triplets so Tailwind opacity modifiers keep working. */
+  /* Values are RGB triplets, wrapped in rgb() by the @theme block above. */
   :root {
     color-scheme: light;
     --ground: 251 250 253;
@@ -96,18 +137,19 @@
   .avatar {
     @apply flex shrink-0 items-center justify-center rounded-[14px] bg-tint-strong font-display font-extrabold text-link;
   }
+}
 
-  /* Point the typography plugin at the theme tokens so descriptions follow light/dark. */
-  .prose {
-    --tw-prose-body: rgb(var(--body));
-    --tw-prose-headings: rgb(var(--ink));
-    --tw-prose-bold: rgb(var(--ink));
-    --tw-prose-links: rgb(var(--link));
-    --tw-prose-code: rgb(var(--ink));
-    --tw-prose-bullets: rgb(var(--muted));
-    --tw-prose-counters: rgb(var(--muted));
-    --tw-prose-quotes: rgb(var(--ink));
-    --tw-prose-quote-borders: rgb(var(--line));
-    --tw-prose-hr: rgb(var(--line));
-  }
+/* Point the typography plugin at the theme tokens so descriptions follow light/dark.
+   Unlayered so it wins over the plugin's own defaults. */
+.prose {
+  --tw-prose-body: rgb(var(--body));
+  --tw-prose-headings: rgb(var(--ink));
+  --tw-prose-bold: rgb(var(--ink));
+  --tw-prose-links: rgb(var(--link));
+  --tw-prose-code: rgb(var(--ink));
+  --tw-prose-bullets: rgb(var(--muted));
+  --tw-prose-counters: rgb(var(--muted));
+  --tw-prose-quotes: rgb(var(--ink));
+  --tw-prose-quote-borders: rgb(var(--line));
+  --tw-prose-hr: rgb(var(--line));
 }
