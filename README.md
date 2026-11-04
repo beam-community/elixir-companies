@@ -60,7 +60,7 @@ You can also include these in the frontmatter:
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) 20+
+- [Node.js](https://nodejs.org/) 22.23.4+ (required by Astro 7)
 
 ### Setup
 
