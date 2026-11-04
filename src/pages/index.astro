@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { toSlug } from '../utils/slug';
 import { countBy, formatLocation, normalizeCountry } from '../utils/company';
+import { AGENT_PROMPT } from '../utils/agentPrompt';
 
 const REPO = 'https://github.com/beam-community/elixir-companies';
 
@@ -261,11 +262,39 @@ const why = [
           <a href={`${REPO}#adding-a-new-company`} class="inline-flex h-[52px] items-center rounded-[14px] border border-[#9C74C4] px-[22px] text-base font-semibold text-white no-underline hover:bg-elixir-700 hover:text-white">Read the guide</a>
         </div>
       </div>
-      <ol class="m-0 flex min-w-0 flex-[1_1_360px] list-none flex-col gap-3 p-0">
+      <div class="flex min-w-0 flex-[1_1_360px] flex-col gap-3">
+      <ol class="m-0 flex list-none flex-col gap-3 p-0">
         <li class="flex items-center gap-4 rounded-2xl bg-elixir-700 px-5 py-[18px]"><span class="font-mono text-sm text-amber">01</span><span>Fork the repository</span></li>
         <li class="flex flex-wrap items-center gap-4 rounded-2xl bg-elixir-700 px-5 py-[18px]"><span class="font-mono text-sm text-amber">02</span><span>Add <code class="rounded-md bg-[#3A1959] px-1.5 py-0.5 font-mono text-sm">src/content/companies/you.md</code></span></li>
         <li class="flex items-center gap-4 rounded-2xl bg-elixir-700 px-5 py-[18px]"><span class="font-mono text-sm text-amber">03</span><span>Open a pull request. That's it.</span></li>
       </ol>
+      <details class="group rounded-2xl border border-[#9C74C4] px-5 py-[14px]">
+        <summary class="flex cursor-pointer list-none flex-wrap items-center justify-between gap-3 [&::-webkit-details-marker]:hidden">
+          <span>Using an AI agent? <span class="text-[#E6DAF3]">Hand it this prompt.</span></span>
+          <span class="flex items-center gap-2">
+            <button type="button" id="copy-prompt" class="btn-amber h-9 px-4 text-sm">Copy prompt</button>
+            <span class="text-sm text-[#E6DAF3] underline underline-offset-2 group-open:hidden">View</span>
+            <span class="hidden text-sm text-[#E6DAF3] underline underline-offset-2 group-open:inline">Hide</span>
+          </span>
+        </summary>
+        <pre id="agent-prompt" class="mt-4 max-h-72 overflow-auto whitespace-pre-wrap rounded-xl bg-[#3A1959] p-4 font-mono text-[13px] leading-relaxed text-[#E6DAF3]">{AGENT_PROMPT}</pre>
+      </details>
+      </div>
     </div>
   </section>
+  <script>
+    const copyBtn = document.getElementById('copy-prompt');
+    copyBtn?.addEventListener('click', async (e) => {
+      // The button lives inside <summary>; don't toggle the details when copying.
+      e.preventDefault();
+      const text = document.getElementById('agent-prompt')?.textContent ?? '';
+      try {
+        await navigator.clipboard.writeText(text);
+        copyBtn.textContent = 'Copied!';
+      } catch {
+        copyBtn.textContent = 'Copy failed';
+      }
+      setTimeout(() => (copyBtn.textContent = 'Copy prompt'), 2000);
+    });
+  </script>
 </BaseLayout>

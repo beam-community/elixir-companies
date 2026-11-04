@@ -1,4 +1,4 @@
 ## New Company Prerequisites
 
-- [ ] Industry must be one of the 11 sectors of the [GICS](https://www.msci.com/our-solutions/indexes/gics).
+- [ ] Industry is 1 to 3 values from the [list of industries](https://github.com/beam-community/elixir-companies#industries).
 - [ ] The description makes some mention of Elixir usage.
