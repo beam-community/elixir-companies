@@ -3,170 +3,158 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import IndustryTag from '../../components/IndustryTag.astro';
 import { getCollection, render } from 'astro:content';
 import { toSlug } from '../../utils/slug';
+import { absoluteUrl, beamStack, displayUrl, formatLocation } from '../../utils/company';
 
 export async function getStaticPaths() {
   const companies = await getCollection('companies');
   return companies.map((company) => ({
     params: { slug: toSlug(company.id) },
-    props: { company },
+    props: { company, companies },
   }));
 }
 
-const { company } = Astro.props;
+const { company, companies } = Astro.props;
 const { Content } = await render(company);
+const d = company.data;
 
-const locationParts = [company.data.location.city, company.data.location.state, company.data.location.country].filter(Boolean);
-const locationText = locationParts.length > 0 ? locationParts.join(', ') : 'Remote';
+const REPO = 'https://github.com/beam-community/elixir-companies';
+const file = company.filePath?.split('/').pop() ?? `${company.id}.md`;
+const website = absoluteUrl(d.website);
+const place = formatLocation(d.location);
+const primary = d.industry[0];
+const stack = beamStack(company.body ?? '');
 
-// Related companies (overlapping industry, max 4)
-const allCompanies = await getCollection('companies');
-const related = allCompanies
-  .filter((c) => c.id !== company.id && c.data.industry.some((ind) => company.data.industry.includes(ind)))
-  .slice(0, 4);
+const sameIndustry = companies.filter((c) => c.id !== company.id && c.data.industry.includes(primary));
+const related = sameIndustry.slice(0, 3);
+
+const details = [
+  { label: 'Website', value: displayUrl(d.website), href: website },
+  d.github && { label: 'GitHub', value: d.github.replace(/^https?:\/\/github\.com\//, '').replace(/\/$/, ''), href: d.github },
+  d.blog && { label: 'Blog', value: displayUrl(d.blog), href: d.blog },
+  d.jobs && { label: 'Careers', value: 'Open roles', href: d.jobs },
+  place && { label: 'Location', value: place },
+  { label: 'Industry', value: d.industry.join(', ') },
+  { label: 'Updated', value: d.lastChangedOn.toISOString().slice(0, 10), mono: true },
+].filter(Boolean) as { label: string; value: string; href?: string; mono?: boolean }[];
 ---
 
-<BaseLayout title={`${company.data.name} | Elixir Companies`} description={`${company.data.name} - ${company.data.industry.join(', ')} company using Elixir in production.`}>
-  <section class="py-10 md:py-16">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Back link -->
-      <a
-        href="/companies"
-        class="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-accent transition-colors mb-8"
-      >
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
-        Back to companies
-      </a>
+<BaseLayout title={`${d.name} | Elixir Companies`} description={`${d.name}: ${d.industry.join(', ')} company using Elixir in production.`} active="directory">
+  <nav slot="hero" aria-label="Breadcrumb" class="pb-[120px] pt-6">
+    <ol class="m-0 flex list-none flex-wrap gap-2 p-0 text-sm text-plum-dim">
+      <li><a href="/companies" class="text-plum-soft hover:text-white">Directory</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href={`/companies?industry=${encodeURIComponent(primary)}`} class="text-plum-soft hover:text-white">{primary}</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-plum-text" aria-current="page">{d.name}</li>
+    </ol>
+  </nav>
 
-      <!-- Company header -->
-      <div class="bg-white dark:bg-elixir-900 rounded-2xl shadow-lg p-8 md:p-10 mb-8">
-        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
-          <div>
-            <h1 class="font-display font-bold text-3xl md:text-4xl text-gray-900 dark:text-white mb-3">
-              {company.data.name}
-            </h1>
-            <div class="flex flex-wrap gap-2">
-              {company.data.industry.map((ind) => (
-                <IndustryTag industry={ind} size="md" />
-              ))}
-            </div>
+  <div class="container-page -mt-24 pb-24">
+    <!-- Identity -->
+    <section class="card flex flex-wrap items-center justify-between gap-7 rounded-[28px] p-7 shadow-[0_20px_50px_rgba(28,14,43,0.08)] md:p-9">
+      <div class="flex min-w-0 flex-[1_1_480px] flex-wrap items-center gap-6">
+        <span class="flex h-[88px] w-[88px] shrink-0 items-center justify-center rounded-3xl bg-elixir-600 font-display text-[40px] font-extrabold text-white" aria-hidden="true">{d.name[0]}</span>
+        <div class="min-w-0">
+          <h1 class="font-display text-[clamp(34px,4vw,48px)] font-extrabold leading-[1.05] tracking-[-0.025em]">{d.name}</h1>
+          <div class="mt-2.5 flex flex-wrap items-center gap-x-4 gap-y-2 text-[15px] text-muted">
+            {place && (
+              <span class="inline-flex items-center gap-1.5">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
+                {place}
+              </span>
+            )}
+            {d.industry.map((ind) => <IndustryTag industry={ind} />)}
+            {d.jobs && <span class="pill-hiring">Hiring</span>}
           </div>
-
-          {company.data.jobs && (
-            <span class="inline-flex items-center gap-1 px-4 py-2 rounded-full text-sm font-bold bg-emerald-500 text-white shadow-lg shadow-emerald-500/30">
-              Currently Hiring
-            </span>
-          )}
-        </div>
-
-        <!-- Meta info -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5 rounded-xl bg-gray-50 dark:bg-elixir-800 mb-8">
-          <div class="flex items-center gap-3">
-            <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-elixir-100 dark:bg-elixir-700">
-              <svg class="w-5 h-5 text-elixir-600 dark:text-elixir-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
-            <div>
-              <div class="text-xs text-gray-500 dark:text-gray-400">Location</div>
-              <div class="text-sm font-medium text-gray-900 dark:text-white">{locationText}</div>
-            </div>
-          </div>
-
-          {company.data.website && (
-            <div class="flex items-center gap-3">
-              <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-elixir-100 dark:bg-elixir-700">
-                <svg class="w-5 h-5 text-elixir-600 dark:text-elixir-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                </svg>
-              </div>
-              <div>
-                <div class="text-xs text-gray-500 dark:text-gray-400">Website</div>
-                <a href={company.data.website.startsWith('http') ? company.data.website : `https://${company.data.website}`} target="_blank" rel="noopener" class="text-sm font-medium text-accent hover:text-accent-hover transition-colors">
-                  {company.data.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
-                </a>
-              </div>
-            </div>
-          )}
-
-          {company.data.github && (
-            <div class="flex items-center gap-3">
-              <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-elixir-100 dark:bg-elixir-700">
-                <svg class="w-5 h-5 text-elixir-600 dark:text-elixir-300" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                </svg>
-              </div>
-              <div>
-                <div class="text-xs text-gray-500 dark:text-gray-400">GitHub</div>
-                <a href={company.data.github} target="_blank" rel="noopener" class="text-sm font-medium text-accent hover:text-accent-hover transition-colors">
-                  {company.data.github.replace('https://github.com/', '')}
-                </a>
-              </div>
-            </div>
-          )}
-
-          {company.data.blog && (
-            <div class="flex items-center gap-3">
-              <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-elixir-100 dark:bg-elixir-700">
-                <svg class="w-5 h-5 text-elixir-600 dark:text-elixir-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                </svg>
-              </div>
-              <div>
-                <div class="text-xs text-gray-500 dark:text-gray-400">Blog</div>
-                <a href={company.data.blog} target="_blank" rel="noopener" class="text-sm font-medium text-accent hover:text-accent-hover transition-colors">
-                  {company.data.blog.replace(/^https?:\/\//, '').replace(/\/$/, '')}
-                </a>
-              </div>
-            </div>
-          )}
-
-          {company.data.jobs && (
-            <div class="flex items-center gap-3">
-              <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900">
-                <svg class="w-5 h-5 text-emerald-600 dark:text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div>
-                <div class="text-xs text-gray-500 dark:text-gray-400">Careers</div>
-                <a href={company.data.jobs} target="_blank" rel="noopener" class="text-sm font-medium text-emerald-600 hover:text-emerald-700 transition-colors">
-                  View open positions
-                </a>
-              </div>
-            </div>
-          )}
-        </div>
-
-        <!-- Description -->
-        <div class="prose prose-gray dark:prose-invert max-w-none prose-a:text-accent hover:prose-a:text-accent-hover">
-          <Content />
         </div>
       </div>
+      <div class="flex flex-wrap gap-2.5">
+        <a href={website} target="_blank" rel="noopener" class="inline-flex h-12 items-center gap-2 rounded-[14px] bg-elixir-600 px-5 text-[15px] font-semibold text-white no-underline hover:bg-elixir-700 hover:text-white">
+          Visit website
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg>
+        </a>
+        {d.jobs && (
+          <a href={d.jobs} target="_blank" rel="noopener" class="inline-flex h-12 items-center rounded-[14px] border border-field px-5 text-[15px] font-semibold text-ink no-underline hover:border-link hover:text-link">See open roles</a>
+        )}
+      </div>
+    </section>
 
-      <!-- Related companies -->
-      {related.length > 0 && (
-        <div>
-          <h2 class="font-display font-bold text-xl text-gray-900 dark:text-white mb-5">
-            Related Companies
-          </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {related.map((rel) => {
-              const relLocation = [rel.data.location.city, rel.data.location.state, rel.data.location.country].filter(Boolean).join(', ') || 'Remote';
-              return (
-                <a href={`/companies/${toSlug(rel.id)}`} class="card block group p-5">
-                  <h3 class="font-display font-bold text-gray-900 dark:text-white group-hover:text-accent transition-colors mb-1">
-                    {rel.data.name}
-                  </h3>
-                  <p class="text-xs text-gray-400 dark:text-gray-500">{relLocation}</p>
+    <div class="mt-6 flex flex-wrap items-start gap-6">
+      <div class="flex min-w-0 flex-[999_1_560px] flex-col gap-6">
+        <section class="card rounded-3xl p-7 md:p-9">
+          <h2 class="mb-4 font-display text-[26px] font-bold tracking-[-0.015em]">About</h2>
+          {company.body?.trim() ? (
+            <div class="prose max-w-none text-[17px] leading-[1.7] text-body prose-a:text-link">
+              <Content />
+            </div>
+          ) : (
+            <p class="text-[17px] text-muted">
+              No description yet. <a href={`${REPO}/edit/main/src/content/companies/${file}`}>Add one on GitHub</a>.
+            </p>
+          )}
+        </section>
+
+        {stack.length > 0 && (
+          <section class="rounded-3xl bg-plum p-7 text-plum-text md:p-9">
+            <p class="mb-2 font-mono text-xs uppercase tracking-[0.08em] text-plum-dim">How they use Elixir</p>
+            <h2 class="mb-6 font-display text-[26px] font-bold tracking-[-0.015em]">Their BEAM stack</h2>
+            <ul class="m-0 flex list-none flex-wrap gap-2.5 p-0">
+              {stack.map((t) => (
+                <li class="inline-flex items-center gap-2 rounded-xl bg-plum-raised px-3.5 py-2.5 text-[15px] font-medium">
+                  <span class="h-2 w-2 rounded-full bg-amber" aria-hidden="true"></span>{t}
+                </li>
+              ))}
+            </ul>
+            <p class="mt-5 text-sm text-plum-dim">Drawn from the company's listing.</p>
+          </section>
+        )}
+
+        {related.length > 0 && (
+          <section>
+            <div class="mb-4 mt-4 flex items-baseline justify-between gap-3">
+              <h2 class="font-display text-[26px] font-bold tracking-[-0.015em]">More in {primary}</h2>
+              <a href={`/companies?industry=${encodeURIComponent(primary)}`} class="py-3 text-[15px] font-semibold">All {sameIndustry.length + 1} →</a>
+            </div>
+            <div class="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-3.5">
+              {related.map((r) => (
+                <a href={`/companies/${toSlug(r.id)}`} class="card flex items-center gap-3 rounded-2xl p-[18px] text-ink no-underline hover:border-link hover:text-ink">
+                  <span class="avatar h-10 w-10 rounded-xl">{r.data.name[0]}</span>
+                  <span class="min-w-0">
+                    <span class="block truncate font-semibold">{r.data.name}</span>
+                    <span class="block truncate text-[13px] text-muted">{formatLocation(r.data.location) || r.data.industry[0]}</span>
+                  </span>
                 </a>
-              );
-            })}
-          </div>
-        </div>
-      )}
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
+
+      <aside class="flex min-w-0 flex-[1_1_300px] flex-col gap-6">
+        <section class="card rounded-3xl p-7">
+          <h2 class="mb-2 font-mono text-xs font-medium uppercase tracking-[0.08em] text-muted">Details</h2>
+          <dl class="m-0 grid grid-cols-[auto_1fr] gap-x-4 text-[15px]">
+            {details.map((row) => (
+              <Fragment>
+                <dt class="border-t border-line-soft py-3 text-muted">{row.label}</dt>
+                <dd class:list={['m-0 break-words border-t border-line-soft py-3 text-right', row.mono && 'font-mono text-sm']}>
+                  {row.href ? <a href={row.href} target="_blank" rel="noopener">{row.value}</a> : row.value}
+                </dd>
+              </Fragment>
+            ))}
+          </dl>
+        </section>
+        <section class="rounded-3xl bg-tint p-7">
+          <h2 class="mb-2 font-display text-xl font-bold">Something out of date?</h2>
+          <p class="mb-[18px] text-[15px] leading-relaxed text-body">
+            This listing lives in <code class="rounded-md bg-surface px-1.5 py-0.5 font-mono text-[13px]">{file}</code>. Edits are welcome.
+          </p>
+          <a href={`${REPO}/edit/main/src/content/companies/${file}`} class="inline-flex h-11 items-center gap-2 rounded-xl border border-field bg-surface px-4 text-sm font-semibold text-ink no-underline hover:border-link hover:text-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>
+            Edit on GitHub
+          </a>
+        </section>
+      </aside>
     </div>
-  </section>
+  </div>
 </BaseLayout>

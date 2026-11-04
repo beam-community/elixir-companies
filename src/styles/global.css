@@ -1,43 +1,155 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+/* Dark mode is class-based: BaseLayout puts .dark on <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Theme-aware colours point at the variables below (light on :root, dark on .dark).
+   `inline` keeps the var() reference so utilities follow the active theme. */
+@theme inline {
+  --color-ground: rgb(var(--ground));
+  --color-surface: rgb(var(--surface));
+  --color-ink: rgb(var(--ink));
+  --color-body: rgb(var(--body));
+  --color-muted: rgb(var(--muted));
+  --color-line: rgb(var(--line));
+  --color-line-soft: rgb(var(--line-soft));
+  --color-field: rgb(var(--field));
+  --color-tint: rgb(var(--tint));
+  --color-tint-strong: rgb(var(--tint-strong));
+  --color-tint-border: rgb(var(--tint-border));
+  --color-link: rgb(var(--link));
+  --color-link-hover: rgb(var(--link-hover));
+  --color-pill: rgb(var(--pill));
+  --color-hiring-bg: rgb(var(--hiring-bg));
+  --color-hiring-text: rgb(var(--hiring-text));
+}
+
+/* Fixed in both themes: the plum header band and purple brand fills. */
+@theme {
+  --color-plum: #1c0e2b;
+  --color-plum-deep: #120820;
+  --color-plum-raised: #2e1a45;
+  --color-plum-border: #4a3463;
+  --color-plum-text: #f6f1fb;
+  --color-plum-soft: #d9cfe8;
+  --color-plum-dim: #c9beda;
+  --color-elixir-600: #5b2a86;
+  --color-elixir-700: #4a2170;
+  --color-amber: #f4c152;
+
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
 
 @layer base {
+  /* Values are RGB triplets, wrapped in rgb() by the @theme block above. */
+  :root {
+    color-scheme: light;
+    --ground: 251 250 253;
+    --surface: 255 255 255;
+    --ink: 27 19 37;
+    --body: 74 67 88;
+    --muted: 94 86 112;
+    --line: 231 227 238;
+    --line-soft: 239 235 244;
+    --field: 217 211 226;
+    --tint: 243 239 248;
+    --tint-strong: 241 234 248;
+    --tint-border: 226 218 236;
+    --link: 91 42 134;
+    --link-hover: 61 26 94;
+    --pill: 74 33 112;
+    --hiring-bg: 227 244 236;
+    --hiring-text: 29 107 72;
+  }
+
+  .dark {
+    color-scheme: dark;
+    --ground: 18 10 28;
+    --surface: 30 21 42;
+    --ink: 243 238 249;
+    --body: 214 206 226;
+    --muted: 171 161 189;
+    --line: 50 39 67;
+    --line-soft: 42 32 57;
+    --field: 66 53 86;
+    --tint: 25 16 37;
+    --tint-strong: 48 32 72;
+    --tint-border: 57 43 79;
+    --link: 201 165 240;
+    --link-hover: 226 204 250;
+    --pill: 220 198 245;
+    --hiring-bg: 19 58 42;
+    --hiring-text: 127 216 174;
+  }
+
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply font-sans text-gray-800 dark:text-gray-100 dark:bg-elixir-950 antialiased;
+    @apply font-sans text-ink bg-ground antialiased;
+  }
+
+  a {
+    @apply text-link hover:text-link-hover;
+  }
+
+  :focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-link;
   }
 }
 
 @layer components {
-  .btn-primary {
-    @apply inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-semibold rounded-xl
-           hover:bg-accent-hover transition-all duration-200 shadow-lg shadow-accent/25
-           hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-0.5;
+  .container-page {
+    @apply mx-auto w-full max-w-[1200px] px-6;
   }
 
-  .btn-secondary {
-    @apply inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-elixir-800 text-elixir-700 dark:text-gray-200
-           font-semibold rounded-xl border-2 border-elixir-200 dark:border-elixir-600
-           hover:border-accent hover:text-accent transition-all duration-200;
+  .eyebrow {
+    @apply font-mono text-[13px] uppercase tracking-[0.08em] text-link;
+  }
+
+  .h-section {
+    @apply font-display font-extrabold tracking-[-0.025em] leading-[1.05] text-[clamp(32px,4vw,48px)];
+  }
+
+  .btn-amber {
+    @apply inline-flex items-center justify-center gap-2 rounded-[14px] bg-amber px-6 font-semibold text-plum
+           no-underline transition hover:brightness-95 hover:text-plum;
   }
 
   .card {
-    @apply bg-white dark:bg-elixir-900 rounded-2xl shadow-md hover:shadow-xl
-           transition-all duration-300 hover:-translate-y-1 overflow-hidden;
+    @apply rounded-[20px] border border-line bg-surface;
   }
 
-  .industry-tag {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium
-           bg-elixir-100 dark:bg-elixir-800 text-elixir-700 dark:text-elixir-200;
+  .pill {
+    @apply inline-flex items-center rounded-full bg-tint-strong px-2.5 py-1 text-[12.5px] font-medium text-pill;
   }
 
-  .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent via-purple-400 to-elixir-400;
+  .pill-hiring {
+    @apply inline-flex items-center rounded-full bg-hiring-bg px-2.5 py-1 text-[12.5px] font-semibold text-hiring-text;
   }
+
+  .avatar {
+    @apply flex shrink-0 items-center justify-center rounded-[14px] bg-tint-strong font-display font-extrabold text-link;
+  }
+}
+
+/* Point the typography plugin at the theme tokens so descriptions follow light/dark.
+   Unlayered so it wins over the plugin's own defaults. */
+.prose {
+  --tw-prose-body: rgb(var(--body));
+  --tw-prose-headings: rgb(var(--ink));
+  --tw-prose-bold: rgb(var(--ink));
+  --tw-prose-links: rgb(var(--link));
+  --tw-prose-code: rgb(var(--ink));
+  --tw-prose-bullets: rgb(var(--muted));
+  --tw-prose-counters: rgb(var(--muted));
+  --tw-prose-quotes: rgb(var(--ink));
+  --tw-prose-quote-borders: rgb(var(--line));
+  --tw-prose-hr: rgb(var(--line));
 }
