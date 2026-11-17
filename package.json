@@ -10,9 +10,9 @@
     "convert": "node scripts/convert-exs-to-md.mjs"
   },
   "dependencies": {
-    "@astrojs/preact": "^6.1.1",
-    "astro": "^7.4.5",
-    "preact": "^11.1.1"
+    "@astrojs/preact": "^6.1.2",
+    "astro": "^7.4.8",
+    "preact": "^11.2.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.20",
